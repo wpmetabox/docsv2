@@ -1,5 +1,5 @@
 ---
-title: MB Blocks - Creating Gutenberg Blocks With PHP
+title: MB Blocks
 ---
 
 With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process. Everything is just like [creating a simple meta box](https://docs.metabox.io/creating-meta-boxes/).
@@ -541,7 +541,7 @@ As you can see the InnerBlocks on the left, where the usual placeholder is displ
 
 ![inner blocks in action](https://i.imgur.com/GckMMnA.png)
 
-### Note: 
+### Note:
 
 I use [Wayfinder](https://wordpress.org/plugins/wayfinder/) plugin to show the block outline, which makes us easier to see which blocks are being edited.
 

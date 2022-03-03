@@ -75,6 +75,12 @@ const config = {
             position: 'left',
             label: 'References',
           },
+          {
+            type: 'doc',
+            docId: 'tutorials',
+            position: 'left',
+            label: 'Tutorials',
+          },
         ],
       },
       footer: {

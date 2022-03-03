@@ -1,5 +1,5 @@
 ---
-title: MB Views - Creating WordPress templates without touching theme files
+title: MB Views
 ---
 
 MB Views helps you to get Meta Box fields and build your templates in the front end fast and easily.
@@ -120,33 +120,33 @@ Here you see, the normal PHP function is prefixed by `mb.`, e.g. `get_post` beco
 
 ### Custom query
 
-Relate to the Main query above, if you use the function `get_posts()` or `get_post()`, it will return [post object](https://developer.wordpress.org/reference/classes/wp_post/). 
+Relate to the Main query above, if you use the function `get_posts()` or `get_post()`, it will return [post object](https://developer.wordpress.org/reference/classes/wp_post/).
 
 ```php
 WP_Post Object
 (
     [ID] =>
     [post_author] =>
-    [post_date] => 
-    [post_date_gmt] => 
-    [post_content] => 
-    [post_title] => 
-    [post_excerpt] => 
+    [post_date] =>
+    [post_date_gmt] =>
+    [post_content] =>
+    [post_title] =>
+    [post_excerpt] =>
     [post_status] =>
     [comment_status] =>
-    [ping_status] => 
-    [post_password] => 
+    [ping_status] =>
+    [post_password] =>
     [post_name] =>
-    [to_ping] => 
-    [pinged] => 
-    [post_modified] => 
+    [to_ping] =>
+    [pinged] =>
+    [post_modified] =>
     [post_modified_gmt] =>
-    [post_content_filtered] => 
-    [post_parent] => 
-    [guid] => 
+    [post_content_filtered] =>
+    [post_parent] =>
+    [guid] =>
     [menu_order] =>
     [post_type] =>
-    [post_mime_type] => 
+    [post_mime_type] =>
     [comment_count] =>
     [filter] =>
 )
@@ -159,14 +159,14 @@ These properties are different from the Post items in the Insert Field tab and y
 {% set args = { post_type: 'post', posts_per_page: -1 } %}
 {% set posts = mb.get_posts( args ) %}
 {% for post in posts %}
-    Post title: {{ post.post_title }} 
-    
+    Post title: {{ post.post_title }}
+
     Single image:
     {% set image = mb.rwmb_meta( 'single_image', '', post.ID ) %}
-    <img src="{{ image['full_url'] }} "> 
+    <img src="{{ image['full_url'] }} ">
 
     Post thumbnail: {{ mb.get_the_post_thumbnail( post.ID, 'thumbnail' ) }}
-{% endfor %}   
+{% endfor %}
 {% endraw %}
 ```
 
@@ -313,7 +313,7 @@ This filter allows you to add/change/remove data sent to Twig to render the view
 add_filter( 'mbv_data', function( $data, $twig ) {
     $data['custom_var1'] = 'Value 1';
     $data['custom_var2'] = 'Value 2';
-    
+
     return $data;
 }, 10, 2 );
 ```
@@ -380,7 +380,7 @@ add_filter( 'mbv_fs_paths', function( $paths ) {
 } );
 
 // Or shorter
-add_filter( 'mbv_fs_paths' , function( $paths ) { 
+add_filter( 'mbv_fs_paths' , function( $paths ) {
     return array_merge( $paths, [ get_template_directory() . '/views' ] );
 } );
 
@@ -391,7 +391,7 @@ add_filter( 'mbv_fs_paths' , fn( $paths ) => array_merge( $paths, [ get_template
 You can also register multiple paths, the plugin will try to load templates from these paths, in the registered order:
 
 ```php
-add_filter( 'mbv_fs_paths' , function( $paths ) { 
+add_filter( 'mbv_fs_paths' , function( $paths ) {
     return array_merge( $paths, [
         get_template_directory() . '/views',
         get_template_directory() . '/default',
@@ -405,7 +405,7 @@ Or you can use the filesystem loader to add paths:
 add_action( 'mbv_fs_loader_init', function( $fs_loader ) {
     // Add a path.
 	$fs_loader->addPath( get_template_directory() . '/views' );
-    
+
     // Prepent a path, which change the order of registered paths and thus the order to load template files.
     $fs_loader->prepend( get_template_directory() . '/default' );
 } );
@@ -441,7 +441,7 @@ To add a template with a namespace, use the code below:
 add_action( 'mbv_fs_loader_init', function( $fs_loader ) {
     // Add 'views/home' folder under the namespace 'home'
 	$fs_loader->addPath( get_template_directory() . '/views/home', 'home' );
-    
+
     // Add another namespace
     $fs_loader->addPath( get_template_directory() . '/views/default', 'default' );
 } );
