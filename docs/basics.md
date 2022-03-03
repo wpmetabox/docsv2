@@ -1,6 +1,6 @@
 ---
-title: Meta Box Overview
-slug: /
+id: basics
+title: Basics
 ---
 
 Meta Box is a framework that helps developers build custom meta boxes and custom fields in WordPress fast and easily. It has a wide range of field types, field settings and supports not only posts but also terms, users, comments, settings pages, and custom tables.

@@ -45,9 +45,33 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'index',
+            docId: 'basics',
             position: 'left',
-            label: 'Docs',
+            label: 'Basics',
+          },
+          {
+            type: 'doc',
+            docId: 'advanced',
+            position: 'left',
+            label: 'Advanced',
+          },
+          {
+            type: 'doc',
+            docId: 'fields',
+            position: 'left',
+            label: 'Fields',
+          },
+          {
+            type: 'doc',
+            docId: 'extensions',
+            position: 'left',
+            label: 'Extensions',
+          },
+          {
+            type: 'doc',
+            docId: 'references',
+            position: 'left',
+            label: 'References',
           },
         ],
       },
