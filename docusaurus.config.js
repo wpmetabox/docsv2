@@ -37,6 +37,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      hideableSidebar: true,
+      autoCollapseSidebarCategories: true,
       navbar: {
         logo: {
           alt: 'My Site Logo',
