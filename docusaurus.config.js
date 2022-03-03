@@ -10,11 +10,13 @@ const config = {
   tagline: 'Everything you need to know to use Meta Box plugins',
   url: 'https://docs.metabox.io',
   baseUrl: '/',
+  trailingSlash: true,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'wpmetabox', // Usually your GitHub org/user name.
   projectName: 'docsv2', // Usually your repo name.
+  titleDelimiter: '-',
 
   presets: [
     [
@@ -183,6 +185,12 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        appId: 'KYQL1Y1NMH',
+        apiKey: '408790cad2f67a05be94ae7b407d7c62',
+        indexName: 'metabox',
+        searchPagePath: false,
       },
     }),
 };
