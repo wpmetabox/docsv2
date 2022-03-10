@@ -60,7 +60,7 @@ So your sanitize callback might look like this:
 ```php
 function prefix_custom_sanitize_callback( $value, $field, $old_value, $object_id ) {
     // Do something with $value.
-    
+
     return $value;
 }
 ```
@@ -82,9 +82,13 @@ If you don't want to sanitize the input value for a specific field (we don't enc
 
 In this case, whatever users input will be saved.
 
-{% include alert.html type="info" content="If you're using [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/), please go to **Advanced** tab and add a custom attribute with name `sanitize_callback` and value `none`. See the screenshot below:" %}
+:::tip Disable sanitization in Meta Box Builder
 
-![adding sanitize callback to fields](https://imgur.com/9UyYN71.png)
+If you're using [Meta Box Builder](/extensions/meta-box-builder/), please go to **Advanced** tab and set **Custom sanitize callback** to `none`. See the screenshot below:
+
+![disable sanitization in the builder](https://i.imgur.com/hqzOpTt.png)
+
+:::
 
 ## Sanitize custom field types
 

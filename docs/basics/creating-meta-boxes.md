@@ -27,7 +27,11 @@ Enter the field group title in the **Title** box. The field group ID is then aut
 
 Select the fields you want to add to the field group by clicking the **+ Add Field** button. When clicking on a field, it will be automatically added to the list of fields in the field group.
 
-{% include alert.html content="To find a field type quickly, type its name in the input box above the field list. The plugin will filter the fields and show only matched fields." %}
+:::tip Quickly find a field type
+
+To find a field type quickly, type its name in the input box above the field list. The plugin will filter the fields and show only matched fields.
+
+:::
 
 While working on fields, you can:
 
@@ -111,13 +115,18 @@ Name|Description
 `class`|Custom CSS class for the field group wrapper. Optional.
 `fields`|Array of fields. See section below.
 
-{% include alert.html type="info" content="Because of some limitations in the media modal, only simple fields such as text, select, radio, checkbox work. Other fields that require custom JavaScript don't work, unfortunately." %}
+:::info Media modal limitation
+
+Because of some limitations in the media modal, only simple fields such as text, select, radio, checkbox work. Other fields that require custom JavaScript don't work, unfortunately.
+
+:::
 
 #### Contexts
 
 The plugin supports the following contexts (locations) where a field group can appear:
 
 Name|Description
+---|---
 `normal`|Below the post editor. This is the default value.
 `advanced`|Below the `normal` section.
 `side`|On the right sidebar.
@@ -130,7 +139,11 @@ This is the screenshot how field groups appear in `form_top` and `after_title` l
 
 ![meta box locations](https://i.imgur.com/kBKbS3wl.png)
 
-{% include alert.html type="warning" content="Gutenberg editor does NOT support extra contexts. Only normal, advanced, and side contexts are supported. If you use Gutenberg, use these contexts only." %}
+:::caution Contexts in Gutenberg
+
+Gutenberg editor does **not** support extra contexts. Only `normal`, and `side` contexts are supported. If you use Gutenberg for your post types, use these contexts only.
+
+:::
 
 #### Contexts not working
 
@@ -153,8 +166,6 @@ array(
 ),
 ```
 
-Meta Box supports more than 40 field types. All fields share some common settings like `id`, `type`, but also offer unique settings per field type. See [this guide](/field-settings/) for more details.
-
-{% include alert.html content="Field ID is used as the meta key and the field value is used as the meta value when saving into the post meta table." %}
+Meta Box supports more than 40 field types. All fields share some common settings like `id`, `type`, but also offer unique settings per field type. See [this guide](/basics/field-settings/) for more details.
 
 You can (should) add a prefix to field IDs to prevent from using the same ID with other scripts. If you want to hide the fields in the default WordPress **Custom Fields** meta box, use underscore (`_`) as the prefix.

@@ -26,7 +26,11 @@ function prefix_load_phone_type() {
 }
 ```
 
-{% include alert.html content="We use `init` action to make sure all Meta Box files are loaded and class `RWMB_Field` is defined." %}
+:::info Why init hook?
+
+We use `init` action to make sure all Meta Box files are loaded and class `RWMB_Field` is defined.
+
+:::
 
 ## Methods
 

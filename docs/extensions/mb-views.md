@@ -66,11 +66,9 @@ To insert a cloneable field, click on the field title, like inserting a normal f
 The plugin will generate a snippet for the field, like this:
 
 ```
-{% raw %}
 {% for clone in post.tickets %}
     Content here might be different depends on the field type
 {% endfor %}
-{% endraw %}
 ```
 
 This is a `for` loop, created by using Twig template engine. You'll find more details about it below. The content inside the `for` loop might be different depending on the field type.
@@ -81,7 +79,11 @@ Group fields are marked with an arrow on the left, just like the image above. Cl
 
 To insert a sub-field, click on the sub-field title, like inserting a normal field. Depending on the field type, it will open a popup for additional options or not.
 
-{% include alert.html type="warning" content="Important: if you have a cloneable group, before inserting sub-fields, you MUST insert the `for` loop for the group first. To insert the group, click on the group title. See the Cloneable Fields section above for details." %}
+:::caution Inserting sub-fields of cloneable groups
+
+If you have a cloneable group, before inserting sub-fields, you **must** insert the `for` loop for the group first. To insert the group, click on the group title. See the Cloneable Fields section above for details.
+
+:::
 
 ### Relationship fields
 
@@ -113,10 +115,8 @@ echo $post->post_title;
 With the `mb` proxy, you can call the `get_post()` function like this:
 
 ```html
-{% raw %}
 {% set post = mb.get_post( 123 ) %}
 {{ post.post_title }}
-{% endraw %}
 ```
 
 Here you see, the normal PHP function is prefixed by `mb.`, e.g. `get_post` becomes `mb.get_post`. So if you want to call a function `my_custom_function`, you need to write `mb.my_custom_function`. The parameters passed to the function remain the same.
@@ -158,7 +158,6 @@ WP_Post Object
 These properties are different from the Post items in the Insert Field tab and you can only use these properties to get the post information. For the post meta, you can use the helper function `rwmb_meta()` or WordPress functions to retrieve it.
 
 ```html
-{% raw %}
 {% set args = { post_type: 'post', posts_per_page: -1 } %}
 {% set posts = mb.get_posts( args ) %}
 {% for post in posts %}
@@ -170,18 +169,15 @@ These properties are different from the Post items in the Insert Field tab and y
 
     Post thumbnail: {{ mb.get_the_post_thumbnail( post.ID, 'thumbnail' ) }}
 {% endfor %}
-{% endraw %}
 ```
 
 In case you want to set arguments for functions, use the `set` syntax. Twig allows you to set complex variables, like [lists with keys and values](https://twig.symfony.com/doc/1.x/templates.html#literals) and then you can pass it to the function:
 
 ```html
-{% raw %}
 {% set my_var = ["first", "second"] %}
 {% set my_var = {first: "first value", second: "second value"}
 
 {% set value = mb.custom_function( my_var ) %}
-{% endraw %}
 ```
 
 ## Custom data
@@ -197,10 +193,8 @@ For example, you want to display user info in a view. While fetching custom user
 And in your view template, you can use this data directly like this:
 
 ```html
-{% raw %}
 <p><strong>Name:</strong> {{ name }}</p>
 <p><strong>Age:</strong> {{ age }}</p>
-{% endraw %}
 ```
 
 ## Locations
@@ -332,29 +326,25 @@ In some cases, when you need to set a condition for an HTML section or loop thro
 For example, if you want to output an image if the post doesn't have a featured image, then you can use the following snippet:
 
 ```
-{% raw %}
 {% if post.thumbnail.full %}
     <img src="{{ post.thumbnail.full.url }}">
 {% else %}
     <img src="https://via.placeholder.com/800x100">
 {% endif %}
-{% endraw %}
 ```
 
 If a field has multiple values, then you can use `for`-loop to render all the values, like this:
 
 ```
-{% raw %}
 {% for country in post.countries %}
     {{ country }}
 {% endfor %}
-{% endraw %}
 ```
 
 You can also use filter to transform the value, like this:
 
 ```
-{% raw %}{{ post.date | date( 'm/d/Y' ) }}{% endraw %}
+{{ post.date | date( 'm/d/Y' ) }}
 ```
 
 For details about using Twig, please see the [documentation](https://twig.symfony.com/doc/3.x/templates.html).
@@ -419,9 +409,7 @@ add_action( 'mbv_fs_loader_init', function( $fs_loader ) {
 You can include external views in your views using this snippet:
 
 ```
-{% raw %}
 {% include 'header.twig' %}
-{% endraw %}
 ```
 
 This snippet will load the `header.twig` template from the registered paths (in the examples above - the `views` directory in your theme). If you register multiple paths, then the plugin will search for the template in these paths and return the first found template file. So, pay attention to the order of registered paths.
@@ -453,7 +441,6 @@ add_action( 'mbv_fs_loader_init', function( $fs_loader ) {
 Usage:
 
 ```
-{% raw %}
 {% include '@home/header.twig' %}
 {% include '@default/header.twig' %}
 
@@ -461,5 +448,4 @@ Usage:
 
 [mbv name="@home/header.twig"]
 [mbv name="@default/header.twig"]
-{% endraw %}
 ```

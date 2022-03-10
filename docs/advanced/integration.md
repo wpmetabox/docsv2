@@ -59,8 +59,6 @@ Although this method works, it has some disadvantages compared to the 1st method
 - You have to **manually** update the included version of Meta Box when it's updated.
 - If users install Meta Box from wordpress.org or it's included in another plugin, your code **might be not compatible** with those versions.
 
-{% include alert.html type="warning" content="**Important:** This method is NOT recommended and is a bad practice. Use with your own risks. We recommend using TGM Activation Class for better compatibility." %}
-
 ## Using Composer
 
-Please [read this detailed guide](https://docs.metabox.io/composer/) for instructions.
+Please [read this detailed guide](/advanced/composer/) for instructions.

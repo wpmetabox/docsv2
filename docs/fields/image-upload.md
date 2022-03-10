@@ -2,6 +2,8 @@
 title: Image Upload
 ---
 
+import Image from '../_parts/_image.md';
+
 ## Overview
 
 The image upload field displays an inline upload area that you can drag and drop images into.
@@ -56,7 +58,7 @@ Similar to file field, this field saves multiple values (attachment IDs) in the 
 
 ## Template usage
 
-{% include fields/image-template-usage.html %}
+<Image />
 
 ## Filters
 

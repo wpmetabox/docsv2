@@ -49,9 +49,17 @@ $sql = "CREATE TABLE my_custom_table (
 )";
 ```
 
-{% include alert.html content="**Important:** Column key has to match your custom fields' IDs, one column per custom field. If you create a column to store a group, then the column key must be the top-level group ID. No need to create column for sub-fields." %}
+:::caution Column names and field IDs
 
-{% include alert.html content="Column data types are MySQL's. You can see the list of data types [here](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)." %}
+Column names have to match your custom fields' IDs, one column per custom field. If you create a column to store a group, then the column name must be the top-level group ID. **Don't** create columns for sub-fields.
+
+:::
+
+:::info Data types
+
+Column data types are MySQL's. You can see the list of data types [here](https://dev.mysql.com/doc/refman/8.0/en/data-types.html).
+
+:::
 
 Note that the **`ID` column is automatically created**. It's used to store the object ID for future reference. Object ID can be post ID, user ID or term ID, depends on what meta type the table is used for.
 
@@ -78,7 +86,11 @@ $sql = "CREATE TABLE my_custom_table (
 )";
 ```
 
-{% include alert.html content="BLOB and TEXT columns also can be indexed, but a fixed length must be given. Make sure you set the length when you want to index a text column." %}
+:::info Indexing BLOG & TEXT columns
+
+BLOB and TEXT columns also can be indexed, but a fixed length must be given. Make sure you set the length when you want to index a text column.
+
+:::
 
 ### Parameters
 
@@ -200,7 +212,11 @@ function your_prefix_register_meta_boxes( $meta_boxes ) {
 }
 ```
 
-{% include alert.html content="**Again:** Column key has to match your custom fields' IDs, one column per custom field. If you create a column to store a group, then the column key must be the top-level group ID. No need to create column for sub-fields." %}
+:::caution Column names and field IDs
+
+Again, column names have to match your custom fields' IDs, one column per custom field. If you create a column to store a group, then the column names must be the top-level group ID. No need to create column for sub-fields.
+
+:::
 
 Now you can go to edit post screen (or edit user profile if you use the meta box for user profile page) and save the post. You'll see the data is saved in the new custom table instead of meta tables.
 

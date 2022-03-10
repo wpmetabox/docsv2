@@ -2,6 +2,8 @@
 title: File
 ---
 
+import File from '../_parts/_file.md';
+
 ## Overview
 
 The file field creates a simple file upload with default UI like `<input type="file">`. Unlike other media fields, this field doesn't use Media Library UI to upload files.
@@ -71,7 +73,7 @@ To get the field data, you can use `get_post_meta()` to get file URL, or use `rw
 
 ## Template usage
 
-{% include fields/file-template-usage.html %}
+<File />
 
 ## Filters
 

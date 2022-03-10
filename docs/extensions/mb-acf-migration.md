@@ -35,7 +35,11 @@ MB ACF Migration tries to migrate all the following data from ACF to Meta Box. P
 
 ACF field groups are migrated to Meta Box's field groups, which requires [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). Most of the field group settings are the same as [in Meta Box](https://docs.metabox.io/creating-meta-boxes/).
 
-{% include alert.html type="warning" content="**We do not remove ACF field groups** after migration, for safety. Instead, we changed their status to 'Inactive'. You can remove them later after all the data is processed." %}
+:::caution
+
+**We do not remove ACF field groups** after migration, for safety. Instead, we changed their status to 'Inactive'. You can remove them later after all the data is processed.
+
+:::
 
 For **field group locations**, the basic rules are already supported in Meta Box and extensions. You might need extensions such as:
 
@@ -81,7 +85,11 @@ Group | Non-cloneable group. Requires [Meta Box Group](https://metabox.io/plugin
 Repeater | Cloneable group. Requires [Meta Box Group](https://metabox.io/plugins/meta-box-group/).
 Flexible content | Cloneable group with 2 sub-fields: a select field for selecting a layout, and a non-cloneable group for data. Requires [Meta Box Group](https://metabox.io/plugins/meta-box-group/) and [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/).
 
-{% include alert.html type="info" content="For these fields, as the data format is different, for the safety, we create a backup for each field value. The new field value is stored with the key `_acf_bak_{$field_id}`." %}
+:::info Field backup
+
+For these fields, as the data format is different, for the safety, we create a backup for each field value. The new field value is stored with the key `_acf_bak_{$field_id}`.
+
+:::
 
 However, the following field types are not supported, because there're no equivalent field types in Meta Box:
 - Link

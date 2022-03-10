@@ -114,7 +114,11 @@ Field Type | Description
 `video` | Upload or select a video from the Media Library using the WordPress media popup.
 `wysiwyg` | WordPress editor.
 
-{% include alert.html content="In addition to the above field types, you can also use HTML5 input types. See [this guide](/html5-input-types/) for details." %}
+:::info
+
+In addition to the above field types, you can also use HTML5 input types. See [this guide](/advanced/html5-input-types/) for details.
+
+:::
 
 ## Default value
 
@@ -130,7 +134,11 @@ When you edit an existing post that has a field group, then some fields might ha
 
 Besides all common settings, each field type can have its own settings. Please see more details for each field type on the left menu (section "Fields").
 
-{% include alert.html content="To save time read and write settings for fields, we've already prepared some code examples that you can get from [Meta Box Code Snippet Library](https://github.com/wpmetabox/library/)." %}
+:::tip
+
+To save time read and write settings for fields, we've already prepared some code examples that you can get from [Meta Box Code Snippet Library](https://github.com/wpmetabox/library/).
+
+:::
 
 ## Customize field settings
 

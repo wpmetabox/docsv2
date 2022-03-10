@@ -2,9 +2,11 @@
 title: MB Term Meta
 ---
 
+import Helpers from '../_parts/_helpers.md';
+
 MB Term Meta helps you to add custom fields to taxonomies.
 
-![category custom fields](https://i0.wp.com/metabox.io/wp-content/uploads/2016/01/term-meta.png?resize=768%2C576&ssl=1)
+![category custom fields](https://i.imgur.com/bSykYdo.png)
 
 ## Settings
 
@@ -76,7 +78,11 @@ echo $value;
 
 Other parameters are the same as for post. Please see [this documentation](/displaying-fields/) for details.
 
-{% include alert.html type="warning" content="It requires the extension version 1.1+ to use the helper function. If you're using an older version, please [update now](/extensions/update/)." %}
+:::caution
+
+It requires the extension version 1.1+ to use the helper function. If you're using an older version, please [update now](/extensions/update/).
+
+:::
 
 In case you use an older version than 1.1, you can get fiel value manually:
 
@@ -102,4 +108,4 @@ foreach ( $image_ids as $image_id ) {
 }
 ```
 
-{% include helpers.html %}
+<Helpers />

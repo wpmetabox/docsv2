@@ -2,6 +2,8 @@
 title: File Advanced
 ---
 
+import File from '../_parts/_file.md';
+
 ## Overview
 
 The file advanced field uses WordPress media popup for selecting / uploading files. You can also reorder files.
@@ -52,7 +54,7 @@ Similar to file field, this field saves multiple values (attachment IDs) in the 
 
 ## Template usage
 
-{% include fields/file-template-usage.html %}
+<File />
 
 ## Filters
 

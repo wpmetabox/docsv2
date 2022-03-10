@@ -2,6 +2,8 @@
 title: Image Advanced
 ---
 
+import Image from '../_parts/_image.md';
+
 ## Overview
 
 The image advanced field uses WordPress media popup for selecting / uploading images. You can also reorder images.
@@ -53,7 +55,7 @@ Similar to file field, this field saves multiple values (attachment IDs) in the 
 
 ## Template usage
 
-{% include fields/image-template-usage.html %}
+<Image />
 
 ## Filters
 

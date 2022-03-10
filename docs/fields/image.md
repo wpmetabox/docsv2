@@ -2,6 +2,8 @@
 title: Image
 ---
 
+import Image from '../_parts/_image.md';
+
 ## Overview
 
 The image field creates a simple image upload with default UI like `<input type="file">`. Unlike other media fields, this field doesn't use Media Library UI to upload images.
@@ -46,7 +48,7 @@ This field saves multiple values (attachment IDs) in the database. Each value (a
 
 ## Template usage
 
-{% include fields/image-template-usage.html %}
+<Image />
 
 ## Filters
 

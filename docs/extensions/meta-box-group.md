@@ -2,6 +2,8 @@
 title: Meta Box Group
 ---
 
+import Helpers from '../_parts/_helpers.md';
+
 **Meta Box Group** helps you to organize custom fields into repeatable and collapsible groups. You can use this extension to group similar fields into one group to create hierarchy. You can clone the whole group, or sub-group. There's no limitation on the nesting level.
 
 ![meta box group example](https://i1.wp.com/metabox.io/wp-content/uploads/2015/02/meta-box-group-example.png)
@@ -469,7 +471,7 @@ foreach ( $image_ids as $image_id ) {
 }
 ```
 
-{% include helpers.html %}
+<Helpers />
 
 ## Setting default group values
 

@@ -121,4 +121,8 @@ Here is the result:
 
 ![edit remove meta boxes](https://i.imgur.com/CxkIV6L.png)
 
-{% include alert.html content="It's recommended to set meta box ID to easier looping through all meta boxes." %}
+:::tip
+
+It's recommended to set meta box ID to easier looping through all meta boxes.
+
+:::

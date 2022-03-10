@@ -2,6 +2,8 @@
 title: MB Settings Page
 ---
 
+import Helpers from '../_parts/_helpers.md';
+
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
@@ -218,7 +220,11 @@ This screenshot shows the left tab navigation with icons:
 
 ![left tab navigation](https://i.imgur.com/QoaD4la.png)
 
-{% include alert.html type="warning" content="**Important:** When using tabs, you must define `tab` attribute for all meta boxes to make them appear in corresponding tabs. Missing `tab` attribute makes the meta boxes hidden." %}
+:::caution
+
+When using tabs, you must define `tab` attribute for all meta boxes to make them appear in corresponding tabs. Missing `tab` attribute makes the meta boxes hidden.
+
+:::
 
 ## Creating settings fields
 
@@ -492,7 +498,11 @@ Notes:
 
 Other parameters are the same as for posts. Please see [this documentation](/displaying-fields/) for details.
 
-{% include alert.html type="warning" content="It requires the extension version 1.2+ to use the helper function. If you're using an older version, please [update now](/extensions/update/)." %}
+:::caution
+
+It requires the extension version 1.2+ to use the helper function. If you're using an older version, please [update now](/extensions/update/).
+
+:::
 
 In case you use an older version than 1.2, you can get the settings manually:
 
@@ -516,4 +526,4 @@ foreach ( $image_ids as $image_id ) {
 }
 ```
 
-{% include helpers.html %}
+<Helpers />

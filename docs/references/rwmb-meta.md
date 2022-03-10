@@ -57,7 +57,11 @@ foreach ( $interests as $interest ) {
 }
 ```
 
-{% include alert.html type="warning" content="Depends on the field types, the returned value can be different. See more details in field types (on the left menu, section Fields)." %}
+:::info Returned value format
+
+Depends on the custom field types, the returned value can be different. Please refer to each field type in the [Fields](/fields/) section for more details.
+
+:::
 
 ## Undefined function error
 

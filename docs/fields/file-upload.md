@@ -2,6 +2,8 @@
 title: File Upload
 ---
 
+import File from '../_parts/_file.md';
+
 ## Overview
 
 The file upload field displays an inline upload area that you can drag and drop or select files to upload.
@@ -55,7 +57,7 @@ Similar to file field, this field saves multiple values (attachment IDs) in the 
 
 ## Template usage
 
-{% include fields/file-template-usage.html %}
+<File />
 
 ## Filters
 

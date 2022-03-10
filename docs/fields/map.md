@@ -28,9 +28,17 @@ Note that in order to make the map works, you need to create a [text field](/fie
 
 The `address_field` can be also a list of text input fields' IDs, separating by commas. For example: `street,city,state`. But in that case, there's no autocomplete for address. Instead of that, when you click the **Find Address** button (below the map), the field will search for the address combined from values of those fields and set the location for the map.
 
-{% include alert.html type="warning" content="Without a valid Google Maps API, the map won't show. [Get a key here](https://developers.google.com/maps/documentation/javascript/get-api-key)." %}
+:::caution
 
-{% include alert.html type="warning" content="Make sure you enabled the Geocoding API to make the autocomplete feature works!" %}
+Without a valid Google Maps API, the map won't show. [Get a key here](https://developers.google.com/maps/documentation/javascript/get-api-key).
+
+:::
+
+:::caution
+
+Make sure you enabled the **Geocoding API** to make the autocomplete feature works!
+
+:::
 
 ## Sample code
 

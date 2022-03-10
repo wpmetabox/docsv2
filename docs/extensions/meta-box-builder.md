@@ -25,7 +25,11 @@ On the add new field group screen, enter the field group title in the **Title** 
 
 Then select the fields you want to add to the field group by clicking the **+ Add Field** button. When click on a field, it will be automatically added to the list of fields in the field group. We'll see the settings of each fields in a section below.
 
-{% include alert.html content="To find a field type quickly, type its name in the input box above the field list. The plugin will filter the fields and show only matched fields." %}
+:::tip Quickly find a field type
+
+To find a field type quickly, type its name in the input box above the field list. The plugin will filter the fields and show only matched fields.
+
+:::
 
 While working on fields, you can:
 
@@ -84,7 +88,11 @@ There are several settings:
 
 Custom settings is a feature for both fields and field groups, which allows you to add extra settings for them in case the builder doesn't have. It's useful when you want to add your own settings or the settings the builder hasn't added yet (in this case, please let us know).
 
-{% include alert.html content="What describes in this section is applied also for similar key-value settings, including: choice field options, JavaScript options (date, datepicker, slider, ...), query args (post, taxonomy, taxonomy advanced, user) and custom HTML5 attributes." %}
+:::info Key-value settings
+
+What describes in this section is applied also for similar key-value settings, including: choice field options, JavaScript options (date, datepicker, slider, ...), query args (post, taxonomy, taxonomy advanced, user) and custom HTML5 attributes.
+
+:::
 
 To add custom settings, click on the Advanced tab for fields or go to the Settings tab for the field group. Then click **+ Add New** button and add new settings. Like this:
 
@@ -269,30 +277,26 @@ Note that the plugin supports Twig template engine to write block template code.
 
 For more convenient, the plugin supports the following variables:
 
-- `{% raw  %}{{ align }}{% endraw  %}`: block alignment (if the block supports it).
-- `{% raw  %}{{ anchor }}{% endraw  %}`: block anchor (if the block supports it).
-- `{% raw  %}{{ className }}{% endraw  %}`: custom CSS class name (if the block supports it).
-- `{% raw  %}{{ is_preview }}{% endraw  %}`: whether or not in preview mode.
-- `{% raw  %}{{ post_id }}{% endraw  %}`: the current post ID.
+- `{{ align }}`: block alignment (if the block supports it).
+- `{{ anchor }}`: block anchor (if the block supports it).
+- `{{ className }}`: custom CSS class name (if the block supports it).
+- `{{ is_preview }}`: whether or not in preview mode.
+- `{{ post_id }}`: the current post ID.
 
-To access the field value, you can use `{% raw  %}{{ field_id }}{% endraw  %}`, where `field_id` is the field ID. If the field returns an array (such as `single_image` field), you can access to field's attribute with `{% raw  %}{{ my_image.full_url }}{% endraw  %}`.
+To access the field value, you can use `{{ field_id }}`, where `field_id` is the field ID. If the field returns an array (such as `single_image` field), you can access to field's attribute with `{{ my_image.full_url }}`.
 
 Besides, the plugin also allows you to use any PHP/WordPress function via `mb.function()` where `function` is the function name. For example, the code below get the post object and output the post title:
 
 ```php
-{% raw  %}
 {% set post = mb.get_post( post_id ) %}
 {{ post.post_title }}
-{% endraw  %}
 ```
 
 Or this code will output the site title:
 
 ```php
-{% raw  %}
 {% set site_title = mb.get_bloginfo( 'name' ) %}
 {{ site_title }}
-{% endraw  %}
 ```
 
 ## Creating settings pages
@@ -423,15 +427,15 @@ As Meta Box allows you to [create your own field types](https://docs.metabox.io/
 To add UI for your custom field types, use the following hook:
 
 ```php
-add_filter( 'mbb_field_types', 'your_prefix_add_field_type' );
+use MBB\Control;
 
-function your_prefix_add_field_type( $field_types ) {
+add_filter( 'mbb_field_types', function ( $field_types ) {
 	$field_types['icon'] = [
 		'title'    => __( 'Icon', 'your-text-domain' ),
 		'category' => 'advanced',
 		'controls' => [
 			'name', 'id', 'type', 'label_description', 'desc',
-			\MBB\Control::Select( 'icon_type', [
+			Control::Select( 'icon_type', [
 				'label'   => __( 'Icon type', 'your-text-domain' ),
 				'options' => [
 					'dashicons'   => __( 'Dashicons', 'your-text-domain' ),
@@ -439,15 +443,15 @@ function your_prefix_add_field_type( $field_types ) {
 					'url'         => __( 'Custom URL', 'your-text-domain' ),
 				],
 			], 'dashicons' ),
-			\MBB\Control::Icon( 'icon', [
+			Control::Icon( 'icon', [
 				'label'      => __( 'Icon', 'your-text-domain' ),
 				'dependency' => 'icon_type:dashicons',
 			] ),
-			\MBB\Control::Input( 'icon_fa', [
+			Control::Input( 'icon_fa', [
 				'label'      => '<a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank" rel="noopenner noreferrer">' . __( 'FontAwesome icon class', 'your-text-domain' ) . '</a>',
 				'dependency' => 'icon_type:fontawesome',
 			] ),
-			\MBB\Control::Input( 'icon_url', [
+			Control::Input( 'icon_url', [
 				'label'      => __( 'Icon URL', 'your-text-domain' ),
 				'dependency' => 'icon_type:url',
 			] ),
@@ -457,7 +461,7 @@ function your_prefix_add_field_type( $field_types ) {
 	];
 
 	return $field_types;
-}
+} );
 ```
 
 This code creates a new field type `icon` under the category `advanced` with several controls. Here is how it looks when clicking **+ Add field** button:
@@ -468,7 +472,11 @@ And here is how it looks when reveal the field settings:
 
 ![custom field type settings](https://i.imgur.com/9uS9Lhh.png)
 
-{% include alert.html content="Note that this section describes how to create UI in the builder for your custom field types only. To make the new field works, please follow [this documentation](https://docs.metabox.io/custom-field-type/)." %}
+:::info
+
+Note that this section describes how to create UI in the builder for your custom field types only. To make the new field works, please follow [this documentation](/advanced/custom-field-type/).
+
+:::
 
 The filter `mbb_field_types` accepts only one paramerter, which is an associative array of registered field types. Each field type has the following parameters:
 
