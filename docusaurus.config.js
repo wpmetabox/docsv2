@@ -11,7 +11,7 @@ const config = {
   url: 'https://docs.metabox.io',
   baseUrl: '/',
   trailingSlash: true,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'wpmetabox', // Usually your GitHub org/user name.
