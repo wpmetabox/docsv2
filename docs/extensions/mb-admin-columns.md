@@ -2,7 +2,7 @@
 title: MB Admin Columns
 ---
 
-**MB Admin Columns** helps you display the custom fields' values in the table of the post list in **All Posts** screen in the **back end**. It works with any custom post types and supports for terms and users as well (requires [MB Term Meta](https://metabox.io/plugins/mb-term-meta/) and [MB User Meta](https://metabox.io/plugins/mb-user-meta/) correspondingly).
+**MB Admin Columns** helps you display the custom fields' values in the table of the post list in **All Posts** screen in the **back end**. It works with any custom post types and supports for terms and users as well (requires [MB Term Meta](/extensions/mb-term-meta/) and [MB User Meta](/extensions/mb-user-meta/) correspondingly).
 
 Showing fields' values in the post table give users a better overview of the posts without going to edit each post. It saves you time to verify / view the data.
 

@@ -96,8 +96,8 @@ As you see in the both methods above, you need to copy some code and paste into 
 
 But, if you prefer UI to create and manage custom meta boxes and custom fields or you don't want to touch code, you can just use our [Online Generator](https://metabox.io/online-generator/) or use one of the premium extensions below:
 
-- [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): Create and manage custom post types and custom taxonomies with nice UI
-- [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): Create and manage custom meta boxes and custom fields with drag and drop UI. It's similar to [Online Generator](https://metabox.io/online-generator/), but integrated right in the WordPress admin area. So you don't need to copy and paste any more.
+- [MB Custom Post Type](/extensions/mb-custom-post-type/): Create and manage custom post types and custom taxonomies with nice UI
+- [Meta Box Builder](/extensions/meta-box-builder/): Create and manage custom meta boxes and custom fields with drag and drop UI. It's similar to [Online Generator](/online-generator/), but integrated right in the WordPress admin area. So you don't need to copy and paste any more.
 
 ### More built-in demos
 

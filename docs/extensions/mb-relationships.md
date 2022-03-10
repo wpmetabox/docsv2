@@ -50,12 +50,12 @@ For each side, there are 3 tabs of settings:
 
 Name | Description
 ---|---
-Object type | What type of object you want to set. If you choose "Term" or "User", make sure you already activate [MB Term Meta](https://metabox.io/plugins/mb-term-meta/) or [MB User Meta](https://metabox.io/plugins/mb-user-meta/) extension.
+Object type | What type of object you want to set. If you choose "Term" or "User", make sure you already activate [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) extension.
 Post type | If you select object type = "Post", then the post type settings will appear to let you select the post type.
 Taxonomy | If you select object type = "Term", then the taxonomy settings will appear to let you select the taxonomy.
 Empty message | The custom message displayed when there are no connections. Leaving this setting blank will use the default message "No connections".
 Show as admin column | Show the connections in the admin list table of posts/terms or users. When you select this setting, the following settings will appear.
-Column position | Select the position of the admin column. You need to set it after/before or replace an existing column by selecting the option from the dropdown and select/enter the ID of the target column. Note that the plugin already prepares a list of common columns in WordPress, so you can just press the down arrow key to select them. If you create a [custom admin column](https://metabox.io/plugins/mb-admin-columns/), enter the column ID here.
+Column position | Select the position of the admin column. You need to set it after/before or replace an existing column by selecting the option from the dropdown and select/enter the ID of the target column. Note that the plugin already prepares a list of common columns in WordPress, so you can just press the down arrow key to select them. If you create a [custom admin column](/extensions/mb-admin-columns/), enter the column ID here.
 Column title | Custom admin column title. Leaving this setting blank will show the default title from the relationship meta box.
 Item link type | For each connected item, you can set how it shows in the admin column: with a link to the edit page, with a link to the view it on the frontend or without links.
 

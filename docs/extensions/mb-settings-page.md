@@ -376,7 +376,7 @@ What if you want the _section to be inside another panel_? Like inside another p
 
 At the moment, all Meta Box fields are supported in the Customizer, except [file](/fields/file/) and [image](/fields/image/) field types. But other upload field types such as [file_advanced](/fields/file-advanced/), [file_upload](/fields/file-upload/), [image_advanced](/fields/image-advanced/), [image_upload](/fields/image-upload/), [single_image](/fields/single-image/) still work very well. (The reason is that the Customizer doesn't handle file uploads and the submission is performed via Ajax)
 
-The good news is all the extensions such as [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), [Meta Box Tabs](https://metabox.io/plugins/meta-box-tabs/) are supported. That will help you create much better experiences for your users.
+The good news is all the extensions such as [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/), [Meta Box Tabs](/extensions/meta-box-tabs/) are supported. That will help you create much better experiences for your users.
 
 Known issues: because of the complexity, the `postMessage` transport for the Customizer is not supported yet. Your browser will refresh the whole page to see the updated settings.
 

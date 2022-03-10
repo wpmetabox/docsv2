@@ -244,7 +244,7 @@ And thanks to `map_meta_cap`, standard admin role is able to edit the posts type
 
 ### Block templates with MB Blocks
 
-Sometimes you want to load default blocks created by [MB Blocks](https://metabox.io/plugins/mb-blocks/) when creating a new post. Block templates allow to specify a default initial state for an editor session. Use the argument `template` when registering the post type:
+Sometimes you want to load default blocks created by [MB Blocks](/extensions/mb-blocks/) when creating a new post. Block templates allow to specify a default initial state for an editor session. Use the argument `template` when registering the post type:
 
 `'template'              => [
     ['meta-box/{$block_id}']

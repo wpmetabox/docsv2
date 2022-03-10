@@ -25,13 +25,13 @@ Name|Description
 `add_button`|The text for **Add more** clone button. Optional. Default "+ Add more".
 `clone_default`|Clone the default value of fields? `true` or `false` (default).
 `sort_clone`|Allow to drag-and-drop sort clones. `true` or `false` (default). See the following screenshot.
-`clone_as_multiple`| Whether to store cloned values in multiple rows in the database? [See this post](https://metabox.io/introducing-clone-as-multiple-feature/) for examples.
+`clone_as_multiple`| Whether to store cloned values in multiple rows in the database? See how [clone values are stored in the database](/database/) for details.
 
 ![sortable repeatable field](https://i.imgur.com/nNzWQgO.png)
 
 ## Default values
 
-When making a field cloneable, its data is an [array of cloned values](/database/#cloneable-fields). So, the `std` parameter (default value) should represent this structure, e.g. array of cloned values.
+When making a field cloneable, its data is an array of cloned values. So, the `std` parameter (default value) should represent this structure, e.g. array of cloned values.
 
 For example:
 

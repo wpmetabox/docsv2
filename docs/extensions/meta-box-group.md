@@ -10,7 +10,7 @@ import Helpers from '../_parts/_helpers.md';
 
 ## Tutorial
 
-If this is the first time you use [Meta Box Group](https://metabox.io/plugins/meta-box-group/), please follow the beginner tutorial here:
+If this is the first time you use [Meta Box Group](/extensions/meta-box-group/), please follow the beginner tutorial here:
 
 [How to Create a Group of Custom Fields with Meta Box Group](https://metabox.io/create-group-of-custom-fields-with-meta-box-group/)
 
@@ -410,7 +410,7 @@ foreach ( $sectors as $sector ) {
 
 If you want to output a group in a page builder like [Beaver Builder](https://metabox.io/recommends/beaver-builder/) or [Elementor](https://metabox.io/recommends/elementor/), please understand that there's no way to output each sub-field in a group as a element in these page builders.
 
-In order to display group value, the recommended way is creating [a view](https://metabox.io/plugins/mb-views/) or a shortcode to display the group. Then you can insert the view/shortcode anywhere with the page builder.
+In order to display group value, the recommended way is creating [a view](/extensions/mb-views/) or a shortcode to display the group. Then you can insert the view/shortcode anywhere with the page builder.
 
 Here is an example of a custom shortcode for a group with 3 fields: title (`text`), images (`image_advanced`) and description (`wysiwyg`). You can use it as a start:
 

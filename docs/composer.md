@@ -131,8 +131,3 @@ So, enjoy Composer and Meta Box! And share with us how you use them in your proj
 This video demonstrates how to install Meta Box extensions from wordpress.org. The approach is slightly different, but it shows you the idea of using Composer with Meta Box plugins.
 
 <LiteYouTubeEmbed id='khiCSMh3DY0' />
-
-## Futher reading
-
-- [Introducing Composer support for Meta Box extensions](https://metabox.io/introducing-composer-support-for-meta-box-extensions/)
-- [How to use Composer to install Meta Box extensions from WordPress.org](https://metabox.io/how-to-use-composer-to-install-meta-box-extensions-from-wordpress-org/)

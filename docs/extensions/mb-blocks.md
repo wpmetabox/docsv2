@@ -438,7 +438,7 @@ Sets the storage for the block fields. Default, it's `attributes`, which means s
 
 If you want to save the block fields into custom fields, set it to `post_meta`. Saving block fields in the custom fields make the block acts like a wrapper of custom fields. In this case, to prevent bugs, you *should* set `multiple` to `false` to prevent inserting the same block multiple times (see `supports` parameter above).
 
-If you want to save the block fields into custom tables, you need to activate the [MB Custom Table](https://metabox.io/plugins/mb-custom-table/) extension first. Then set `storage_type` and `table` as follows:
+If you want to save the block fields into custom tables, you need to activate the [MB Custom Table](/extensions/mb-custom-table/) extension first. Then set `storage_type` and `table` as follows:
 
 ```php
 'storage_type' => 'custom_table',
@@ -695,7 +695,7 @@ Sometimes you want to load default blocks when creating a new post. Block templa
 
 ## Block Data
 
-Unlike normal custom fields, Gutenberg blocks don't save value in the post meta (or [custom table](https://metabox.io/plugins/mb-custom-table/)). Each block created using MB Blocks is a *dynamic Gutenberg block*. And the block data is saved as a JSON string in the block content.
+Unlike normal custom fields, Gutenberg blocks don't save value in the post meta (or [custom table](/extensions/mb-custom-table/)). Each block created using MB Blocks is a *dynamic Gutenberg block*. And the block data is saved as a JSON string in the block content.
 
 If you view the post content via a tool like PHPMyAdmin, you'll see the block is stored as a string like this:
 

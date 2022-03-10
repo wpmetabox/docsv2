@@ -23,7 +23,7 @@ Attribute| Description
 `step` | Match the step increment
 `type` | Match the [input type](/html5-input-types/)
 
-To implement these validation rules for fields, you can use either [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) or code.
+To implement these validation rules for fields, you can use either [Meta Box Builder](/extensions/meta-box-builder/) or code.
 
 ### Using Meta Box Builder
 
@@ -54,7 +54,7 @@ To define validation rules with code, simply add pairs of `'key' => 'value'` rul
 
 For more advanced validation, including new rules and custom error messages, you might want to use the validation module, powered by the popular [jQuery validation plugin](https://jqueryvalidation.org/). It comes bundled with a useful set of validation methods and an API to write your own methods. All methods come with default error messages in English and translations into 37 other languages.
 
-Again, to implement these validation rules for fields, you can use either [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) or code.
+Again, to implement these validation rules for fields, you can use either [Meta Box Builder](/extensions/meta-box-builder/) or code.
 
 ### Using Meta Box Builder
 

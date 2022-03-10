@@ -15,7 +15,7 @@ You can also combine conditions. It works not only for meta boxes or custom fiel
 
 ### With Meta Box Builder
 
-If you are using [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) extension, you can set conditional logic for a specific field by going to the tab **Advanced** and add rules in the **Conditional Logic** section:
+If you are using [Meta Box Builder](/extensions/meta-box-builder/) extension, you can set conditional logic for a specific field by going to the tab **Advanced** and add rules in the **Conditional Logic** section:
 
 ![conditional logic in Meta Box Builder](https://i.imgur.com/xOPcH0N.png)
 
@@ -294,7 +294,7 @@ add_filter( 'rwmb_outside_conditions', function( $conditions ) {
 } );
 ```
 
-If you want to hide a tab created by [Meta Box Tabs](https://metabox.io/plugins/meta-box-tabs/), [see this](/hide-tabs-with-conditional-logic/).
+If you want to hide a tab created by [Meta Box Tabs](/extensions/meta-box-tabs/), [see this](/hide-tabs-with-conditional-logic/).
 
 ## Using with taxonomies
 

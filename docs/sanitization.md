@@ -14,9 +14,9 @@ To see the list of default sanitize callbacks, please [see the plugin source cod
 
 Quick notes:
 
-- `textarea`: the default callback is `wp_kses_post`. If you want to enter scripts and styles in a `textarea` field (like you make an option in [a settings page](https://metabox.io/plugins/mb-settings-page/) that allows users to enter Google Analytics code), then you need to use a custom sanitize callback.
+- `textarea`: the default callback is `wp_kses_post`. If you want to enter scripts and styles in a `textarea` field (like you make an option in [a settings page](/extensions/mb-settings-page/) that allows users to enter Google Analytics code), then you need to use a custom sanitize callback.
 - Choice fields (`select`, `radio`, `button_group`, etc.): a custom callback is used which validates the input to make sure it's a valid value (e.g. available in the field options).
-- [Group field](https://metabox.io/plugins/meta-box-group/) is not sanitized due to its complexity.
+- [Group field](/extensions/meta-box-group/) is not sanitized due to its complexity.
 
 ## Custom sanitize callback
 

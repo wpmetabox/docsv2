@@ -40,7 +40,7 @@ Except title and content, which are post fields, other items on this screen are 
 
 If the custom field has simple value (like a string), it will display fully here. If the custom field has structural value (array), it will display here as a JSON-encoded string. Using JSON allows you to see the values of each element in the array as well as the structure in general.
 
-Please note that the extension works well with [Meta Box Group](https://metabox.io/plugins/meta-box-group/) extension.
+Please note that the extension works well with [Meta Box Group](/extensions/meta-box-group/) extension.
 
 ## Restoring the revision
 
@@ -50,6 +50,6 @@ MB Revision will copy values of the custom fields from the revision to the paren
 
 ## Notes
 
-Because WordPress supports revision for posts and custom post types only, the extension doesn't work for [term meta](https://metabox.io/plugins/mb-term-meta/), [user meta](https://metabox.io/plugins/mb-user-meta/) or [settings pages](https://metabox.io/plugins/mb-settings-page/).
+Because WordPress supports revision for posts and custom post types only, the extension doesn't work for [term meta](/extensions/mb-term-meta/), [user meta](/extensions/mb-user-meta/) or [settings pages](/extensions/mb-settings-page/).
 
 Please make sure you either not define `WP_POST_REVISIONS` or set it to a proper value in `wp-config.php`. This constant disables or limits the number of revisions. Therefore, it might cause unexprected result. Please see [WordPress Codex](https://codex.wordpress.org/Revisions#Revision_Options) for more information.

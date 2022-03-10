@@ -37,8 +37,8 @@ To insert a field, click the **Insert Field** button. It will open a panel on th
 Fields are categorized into 4 tabs:
 
 - Post: contains all post fields and custom fields for posts.
-- Site: contains all site fields and settings fields (created by [MB Settings Page](https://metabox.io/plugins/mb-settings-page/) plugin).
-- User: contains all user fields and custom fields for users (created by [MB User Meta](https://metabox.io/plugins/mb-user-meta/) plugin).
+- Site: contains all site fields and settings fields (created by [MB Settings Page](/extensions/mb-settings-page/) plugin).
+- User: contains all user fields and custom fields for users (created by [MB User Meta](/extensions/mb-user-meta/) plugin).
 - Query: contains loop and pagination for archive pages.
 
 To insert a field, click on the field title to insert it. The field might have additional parameters (such as choose image size for image field). And in that case, the plugin will open a popup for you to enter or select options.
@@ -87,7 +87,7 @@ If you have a cloneable group, before inserting sub-fields, you **must** insert 
 
 ### Relationship fields
 
-Relationships created with [MB Relationships](https://metabox.io/plugins/mb-relationships/) extension can be inserted in the tab **Query**.
+Relationships created with [MB Relationships](/extensions/mb-relationships/) extension can be inserted in the tab **Query**.
 
 Once you registered a relationship, it will show 2 fields here: one for "from" side, and one for "to" side. Clicking a field will insert a loop of connected items, and inside the loop, you can insert post/term/user fields as usual.
 

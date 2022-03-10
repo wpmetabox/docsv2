@@ -17,7 +17,7 @@ See how the plugin works in this quick video:
 
 ## Getting custom fields' values in REST API responses
 
-After installing and activating the plugin, create some meta box for your [posts](/creating-meta-boxes/), [terms](/extensions/mb-term-meta/) or [users](/extensions/mb-user-meta/). Please note that if you're going to use term meta or user meta, you need to purchase [MB Term Meta](https://metabox.io/plugins/mb-term-meta/) or [MB User Meta](https://metabox.io/plugins/mb-user-meta/) accordingly.
+After installing and activating the plugin, create some meta box for your [posts](/creating-meta-boxes/), [terms](/extensions/mb-term-meta/) or [users](/extensions/mb-user-meta/). Please note that if you're going to use term meta or user meta, you need to purchase [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) accordingly.
 
 Then just go to edit your posts, terms or users and add some values to your custom fields as you usually do.
 

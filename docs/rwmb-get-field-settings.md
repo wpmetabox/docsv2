@@ -17,7 +17,7 @@ $field = rwmb_get_field_settings( $field_id );
 // Result: array( 'id' => 'field_id', 'name' => 'Field Name', 'type' => 'text, ... );
 ```
 
-However, if you create a custom field for [terms](https://metabox.io/plugins/mb-term-meta/), [users](https://metabox.io/plugins/mb-user-meta/) or [settings pages](https://metabox.io/plugins/mb-settings-page/), you will need to specify object type in the second parameter:
+However, if you create a custom field for [terms](/extensions/mb-term-meta/), [users](/extensions/mb-user-meta/) or [settings pages](/extensions/mb-settings-page/), you will need to specify object type in the second parameter:
 
 ```php
 $field = rwmb_get_field_settings( $field_id, array( 'object_type' => 'term' ) ); // or 'user', 'setting

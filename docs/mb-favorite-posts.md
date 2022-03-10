@@ -10,8 +10,6 @@ title: MB Favorite Posts
 
 **Note**: MB Favorite Posts plugin is only available for the [Lifetime Bundle](https://metabox.io/pricing/).
 
-For more information, please see the [solution page](https://metabox.io/plugins/mb-favorite-posts/).
-
 ## Installation
 
 First, you need to install and activate the Meta Box plugin from [wordpress.org](https://wordpress.org/plugins/meta-box/). Next, download MB Favorite Posts plugin from the [My Account](https://metabox.io/my-account/) page, then upload the <code>.zip</code> file from the **Admin Dashboard**. MB Favorite Posts and [other solutions](https://metabox.io/product-category/solutions/) are not included in Meta Box AIO, so you can install them independently without Meta Box AIO.
@@ -40,7 +38,7 @@ There are also options to let you specify where and when the button is displayed
 
 ### Dashboard Page and Register Page
 
-MB Favorite Posts are integrated with [MB User Profile](https://metabox.io/plugins/mb-user-profile/) to help users create the Dashboard page and the Register page automatically without coding.
+MB Favorite Posts are integrated with [MB User Profile](/extensions/mb-user-profile/) to help users create the Dashboard page and the Register page automatically without coding.
 
 The Dashboard page shows all the favorite posts of a user, and the Register page contains a form that users can sign up for accounts to use the Favorite Posts feature.
 

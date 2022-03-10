@@ -111,7 +111,6 @@ const sidebars = {
     'include-exclude-show-hide-conditional-logic',
     'using-two-date-formats',
     'hide-tabs-with-conditional-logic',
-    'create-columns-in-meta-box-builder',
     'save-wysiwyg-content-post-content',
     'using-custom-html-to-output-anything',
   ],

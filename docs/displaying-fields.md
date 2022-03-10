@@ -29,7 +29,7 @@ Here is a video tutorial on how to use Elementor to display Meta Box's fields:
 
 ## Using MB Views
 
-[MB Views](https://metabox.io/plugins/mb-views/) helps you to select fields and output them into an HTML template. You can also add your own CSS/JavaScript to style fields the way you want.
+[MB Views](/extensions/mb-views/) helps you to select fields and output them into an HTML template. You can also add your own CSS/JavaScript to style fields the way you want.
 
 With MB Views, you have full control of the HTML output and the location (on which page) that views render.
 

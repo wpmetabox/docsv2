@@ -57,4 +57,4 @@ You might want to modify the code if needed. After copying to your theme's `func
 
 It works as a static tool, meaning that it can't be put inside your WordPress admin. Instead, you have to copy the generated code and paste it into your theme's `functions.php` file.
 
-In case you want to use it inside your WordPress admin and have extra settings for fields or [premium extensions](https://metabox.io/plugins/), don’t forget to try [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/).
+In case you want to use it inside your WordPress admin and have extra settings for fields or [premium extensions](https://metabox.io/plugins/), don’t forget to try [Meta Box Builder](/extensions/meta-box-builder/).
