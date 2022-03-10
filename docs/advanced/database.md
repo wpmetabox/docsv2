@@ -2,39 +2,63 @@
 title: Database
 ---
 
-## Overview
-
 Wondering how the Meta Box plugin stores custom field value in the database? Understanding this can help you get the custom field value easily and understand the returned value from `get_post_meta` or [helper functions](/displaying-fields/).
 
-For all custom fields, the `id` is always the `meta_key` and the value is the `meta_value` in the `wp_postmeta` table. The sections below describe how the value is formatted.
+## How fields are saved in the database?
+
+- If you create a field for posts, terms, or users, the field `id` will be saved as the `meta_key` and the value will be saved as the `meta_value` in the meta table (`wp_postmeta`, `wp_termmeta` or `wp_usermeta` accordingly).
+- If you use [custom tables](/extensions/mb-custom-table/), the field value will be saved in the column with the name equal to the field `id`.
+- If you create a field for a [settings page](/extensions/mb-settings-page/), the whole data for the settings page will be saved as an array in an option in the format of `['field_id' => 'field_value']`.
+
+The sections below describe how field values are formatted.
 
 ## Non-cloneable fields
 
-For non-cloneable fields, the plugin stores field value in the data base in a WordPress-compatible way as following:
+For non-cloneable fields, the plugin stores field value in the database in a WordPress-compatible way as follows:
 
-- If field has single value, it will be saved in single row in the post meta table.
-- If field has multiple values (set by `'multiple' => true` like `select`, `checkbox_list`, `file`, `image`, etc.), each value will be saved in single row in the post meta table.
+- If a field has a single value, it will be saved in a single row in the post meta table.
+- If a field has multiple values (set by `'multiple' => true` like `select`, `checkbox_list`, `file`, `image`, etc.), each value will be saved in a single row in the post meta table.
 
 This way you can use `add_post_meta` or `update_post_meta` to update meta values and `get_post_meta` to retrieve them.
 
 ## Cloneable fields
 
-For cloneable fields, cloned values are stored as a serialized array in a single row in the post meta table.
+For cloneable fields, values are stored as a serialized array in a single row in the database, unless you set `'clone_as_multiple' => true` for the field.
 
-The plugin does not store cloned values in separated rows in the database because it's confusing that we don't know these are values of clones, or values of the field with `'multiple' => true`. To make it work for all field types and for consistency, storing cloned values in a single row of the database is a better choice.
+Using serialized data has some benefits:
 
-Due to this reason, you still can use `get_post_meta` function to retrieve field value from the database (WordPress automatically unserializes string and returns an array). You will get an array of all cloned values.
+- Works for all field types, including nested groups.
+- Works perfectly with the helper function or with WordPress's `get_post_meta` function (WordPress automatically unserializes string and returns an array).
+- Reduces the database size (number of rows), especially when you have nested groups of many fields.
 
-**Summary:**
+However, serialized data has a big disadvantage: **you can't query posts by serialized values**.
 
-Cloneable|Multiple|Custom Field Value
----|---|---
-N|N|Single row
-N|Y|Multiple rows
-Y|N|Serialized array `[value1, value2]` in a single row
-Y|Y|Serialized of 2-dimensional array `[[value11,value12], [value21, value22]]` in a single row
+For example, if you have a cloneable field `start_date` for the `event` post type, and you want to query events in May 2019 like this:
 
-{% include alert.html content="Since version 4.14.7, you are able to store cloned values in multiple rows in the database. See [this post](https://metabox.io/introducing-clone-as-multiple-feature/) for more details." %}
+```php
+$args = [
+	'post_type'  => 'event',
+	'meta_query' => [
+		[
+			'key'     => 'start_date', // This field is cloneable
+			'value'   => ['2019-05-01', '2019-05-31']
+			'compare' => 'BETWEEN',
+		],
+	],
+];
+$query = new WP_Query( $args );
+```
+
+Then it doesn't work.
+
+To solve this problem, you need to set `'clone_as_multiple' => true` in the field's settings array:
+
+```php
+'clone'             => true, // Enable clone
+'clone_as_multiple' => true, // Save clones as multiple rows
+```
+
+With that, Meta Box will **save cloneable values in multiple rows in the database**, where each row contains one value. That means if `start_date` has 2 values `['2019-05-01', '2019-04-30']`, it will be saved in 2 rows in the database, one for `2019-05-01` and one for `2019-04-30`. The data is **not serialized** anymore. And because of that, your above query will work!
 
 ## Field value
 
