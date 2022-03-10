@@ -1,5 +1,5 @@
 ---
-title: Cloning fields (Repeatable fields)
+title: Cloning fields
 ---
 
 The clone feature of the Meta Box plugin allows us to create multiple inputs from a text, textarea, select, ... fields without declaring many fields in the code.

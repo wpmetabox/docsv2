@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Meta Box Documentation',
-  tagline: 'Everything you need to know to use Meta Box plugins',
+  tagline: 'Everything you need to know to use Meta Box plugins to create professional websites on WordPress',
   url: 'https://docs.metabox.io',
   baseUrl: '/',
   trailingSlash: true,
@@ -41,51 +41,54 @@ const config = {
     ({
       hideableSidebar: true,
       autoCollapseSidebarCategories: true,
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
+      image: 'https://i.imgur.com/wnJtgSC.jpg',
       navbar: {
+        hideOnScroll: true,
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Meta Box Documentation',
           src: 'img/logo.svg',
+          srcDark: 'img/logo-white.svg',
         },
         items: [
           {
-            type: 'doc',
-            docId: 'overview',
+            to: 'category/getting-started',
+            position: 'left',
+            label: 'Getting Started',
+          },
+          {
+            to: 'category/basics',
             position: 'left',
             label: 'Basics',
           },
           {
-            type: 'doc',
-            docId: 'advanced',
+            to: 'category/advanced',
             position: 'left',
             label: 'Advanced',
           },
           {
-            type: 'doc',
-            docId: 'fields',
+            to: 'category/fields',
             position: 'left',
             label: 'Fields',
           },
           {
-            type: 'doc',
-            docId: 'extensions',
+            to: 'category/extensions',
             position: 'left',
             label: 'Extensions',
           },
           {
-            type: 'doc',
-            docId: 'references',
+            to: 'category/references',
             position: 'left',
             label: 'References',
-          },
-          {
-            type: 'doc',
-            docId: 'tutorials',
-            position: 'left',
-            label: 'Tutorials',
           },
         ],
       },
       footer: {
+        logo: {
+          src: 'img/logo-white.svg',
+        },
         style: 'dark',
         links: [
           {
@@ -180,12 +183,13 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Meta Box, a brand of <a href="https://elightup.com">eLightUp</a>`,
+        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://metabox.io">Meta Box</a>, a brand of <a href="https://elightup.com">eLightUp</a>.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['php'],
+        additionalLanguages: [ 'php' ],
+        defaultLanguage: 'php',
       },
       algolia: {
         appId: 'KYQL1Y1NMH',
