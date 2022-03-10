@@ -83,6 +83,16 @@ const config = {
             position: 'left',
             label: 'References',
           },
+          {
+            href: 'https://metabox.io/support/',
+            position: 'right',
+            label: 'Support',
+          },
+          {
+            href: 'https://www.facebook.com/groups/metaboxusers',
+            position: 'right',
+            className: 'facebook-link'
+          },
         ],
       },
       footer: {
@@ -101,10 +111,6 @@ const config = {
               {
                 label: 'Features',
                 href: 'https://metabox.io/features/',
-              },
-              {
-                label: 'Testimonials',
-                href: 'https://metabox.io/testimonials/',
               },
               {
                 label: 'Extensions',
@@ -133,31 +139,31 @@ const config = {
             items: [
               {
                 label: 'Meta Box Builder',
-                href: 'https://metabox.io/plugins/meta-box-builder/',
+                to: 'extensions/meta-box-builder',
               },
               {
                 label: 'Meta Box Group',
-                href: 'https://metabox.io/plugins/meta-box-group/',
+                to: 'extensions/meta-box-group',
               },
               {
                 label: 'MB Relationships',
-                href: 'https://metabox.io/plugins/mb-relationships/',
+                to: 'extensions/mb-relationships',
               },
               {
                 label: 'MB Custom Table',
-                href: 'https://metabox.io/plugins/mb-custom-table/',
+                to: 'extensions/mb-custom-table',
               },
               {
                 label: 'MB Custom Post Types',
-                href: 'https://metabox.io/plugins/custom-post-type/',
+                to: 'extensions/custom-post-type',
               },
               {
                 label: 'MB Frontend Submission',
-                href: 'https://metabox.io/plugins/mb-frontend-submission/',
+                to: 'extensions/mb-frontend-submission',
               },
               {
                 label: 'Meta Box Conditional Logic',
-                href: 'https://metabox.io/plugins/meta-box-conditional-logic/',
+                to: 'extensions/meta-box-conditional-logic',
               },
             ],
           },
@@ -165,7 +171,7 @@ const config = {
             title: 'Connect With Us',
             items: [
               {
-                label: 'Facebook Group',
+                label: 'Facebook',
                 href: 'https://facebook.com/wpmetabox',
               },
               {
