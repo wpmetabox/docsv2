@@ -2,6 +2,9 @@
 title: MB Blocks
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process. Everything is just like [creating a simple meta box](https://docs.metabox.io/creating-meta-boxes/).
 
 Here is a screenshot of a custom Gutenberg block (hero area) that's created using MB Blocks:
@@ -152,7 +155,7 @@ Where to show the block settings. If set to `side`, the block settings is displa
 
 See the short video below to understand.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FOw0bPG_jjw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='FOw0bPG_jjw' />
 
 ### `supports`
 
@@ -736,11 +739,11 @@ Note that: although you can access to the fields values via `$attributes['data]'
 
 **Create Custom Gutenberg Blocks With Meta Box (only PHP)**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PAisKy8eC2U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='PAisKy8eC2U' />
 
 **Build Gutenberg Blocks Visually With Meta Box Builder**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v3ke1DBlWuk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='v3ke1DBlWuk' />
 
 See more details on [using Meta Box Builder with MB Blocks](https://metabox.io/build-gutenberg-blocks-visually-with-meta-box-builder/).
 

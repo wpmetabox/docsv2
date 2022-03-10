@@ -2,6 +2,9 @@
 title: Composer
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 This documentation will show you how to install [Meta Box extensions](https://metabox.io/plugins) via Composer.
 
 If you haven't known about [Composer](https://getcomposer.org), then it is a package dependency manager for PHP. The core Meta Box plugin [already supports Composer](/composer/). And so do its extensions.
@@ -25,7 +28,7 @@ If your license has expired, please renew it. If you don't have any, then you ne
 
 The system automatically checks if your license is still active. If yes, then you'll granted access via Composer to Meta Box's packages. It also ensures you have access to only extensions you purchased.
 
-## Usage 
+## Usage
 
 To include extensions via Composer, simply add them as dependencies like this:
 
@@ -83,7 +86,7 @@ Now Meta Box extensions are available in your plugin/theme and you can start usi
 
 This video demonstrates how to install Meta Box extensions from wordpress.org. The approach is slightly different between premium and free extensions.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/khiCSMh3DY0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='khiCSMh3DY0' />
 
 ## Versions & Updates
 

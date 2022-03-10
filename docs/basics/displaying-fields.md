@@ -2,6 +2,9 @@
 title: Displaying fields
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 There are 4 ways to display a field created by Meta Box:
 
 - **Using a page builder**: which helps you to select and display fields visually anywhere on your site when the page builder is active.
@@ -22,7 +25,7 @@ For other page builders like Oxygen and Divi, you can use their existing module 
 
 Here is a video tutorial on how to use Elementor to display Meta Box's fields:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NzR9lii2S30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='NzR9lii2S30' />
 
 ## Using MB Views
 
@@ -32,7 +35,7 @@ With MB Views, you have full control of the HTML output and the location (on whi
 
 Here is a video tutorial on using MB Views:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4udvu8PqfkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='4udvu8PqfkE' />
 
 For more details on using MB Views, please see [this documentation](/extensions/mb-views/).
 
@@ -87,7 +90,7 @@ Besides `rwmb_meta`, Meta Box also provides 2 more helper functions that work wi
 
 In order to understand the usage of helper functions and the difference between them, please see this video tutorial:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NFZE4Sxi2p4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='NFZE4Sxi2p4' />
 
 ### Undefined function error
 

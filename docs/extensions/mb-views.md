@@ -2,6 +2,9 @@
 title: MB Views
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 MB Views helps you to get Meta Box fields and build your templates in the front end fast and easily.
 
 With MB Views, you can just select fields you want to show, fill in some parameters and done! The extension supports all custom fields built with Meta Box, and also post fields (such as post title and post content), site settings, user fields, and even query fields.
@@ -12,7 +15,7 @@ You can also customize all templates in WordPress, even for post types that don'
 
 In this video, we show you step-by-step how to use *MB Views* to create singular and archive templates for a custom post type. We also show you the basis of Twig and how to set location rules.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4udvu8PqfkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='4udvu8PqfkE' />
 
 ## Creating a view
 

@@ -2,6 +2,9 @@
 title: Meta Box Builder
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 Meta Box Builder creates an UI for you to add and manage your custom fields, [settings pages](#creating-settings-pages) or [relationships](#creating-relationships).
 
 ![meta box builder ui](https://i.imgur.com/DQBeWJN.png)
@@ -10,7 +13,7 @@ Meta Box Builder creates an UI for you to add and manage your custom fields, [se
 
 Here is a quick video showing how to use the Meta Box Builder to create custom fields in WordPress:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_DaFUt92kYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='_DaFUt92kYY' />
 
 ## Creating a field group
 
@@ -254,13 +257,13 @@ For detailed instruction, please see [this tutorial](https://metabox.io/export-i
 
 Video tutorial:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BGVY-5W6d7g?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='BGVY-5W6d7g' />
 
 ## Creating Gutenberg blocks
 
 Since v3.1.0, Meta Box Builder allows you to create Gutenberg blocks visually, without writing code. See this video tutorial on how to do that:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/v3ke1DBlWuk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='v3ke1DBlWuk' />
 
 Note that the plugin supports Twig template engine to write block template code. See [Twig documentation](https://twig.symfony.com/doc/1.x/templates.html) for how to use variables, conditions and functions.
 

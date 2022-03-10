@@ -2,6 +2,9 @@
 title: Creating a taxonomy
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 A taxonomy within WordPress is a way of grouping posts together. By default, a standard post will have two taxonomy types called Categories and Tags which are a handy way of ensuring related content on your website is easy for visitors to find. You can add more custom taxonomies if you like.
 
 Creating a custom post type is done by either of the following methods:
@@ -14,7 +17,7 @@ This documentation shows you how to create taxonomies with **MB Custom Post Type
 
 Here is a video tutorial on creating custom post types and custom taxonomies with MB Custom Post Types & Custom Taxonomies extension (text version below):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-oYrHGOri4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='-oYrHGOri4w' />
 
 To create a new custom taxonomy, go to **Meta Box &rarr; Taxonomies** and click **Add New**:
 

@@ -2,6 +2,9 @@
 title: MB Custom Table
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 **MB Custom Table** helps you to save custom fields' values to custom table instead of the default WordPress meta table. All custom fields for a post are saved in a single row, where and each column contains the value of a corresponding field.
 
 This reduces the number of rows in the database which can cause a performance issue when the data grows. And let you have all of your data in one place, so you can easily view, edit, import, export it.
@@ -10,7 +13,7 @@ This reduces the number of rows in the database which can cause a performance is
 
 ## Video tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/o8ICxe8nbrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='o8ICxe8nbrI' />
 
 ## Creating custom tables
 
@@ -433,7 +436,7 @@ function prefix_register_transaction_fields( $meta_boxes ) {
 
 After completing 3 steps, you'll see the Transactions menu on the left and you can add/edit/delete models easily as follows:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FenYCOFdCLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='FenYCOFdCLI' />
 
 ### Getting field values for models
 

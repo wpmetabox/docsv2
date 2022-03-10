@@ -2,6 +2,9 @@
 title: MB Settings Page
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 MB Settings Page helps you to create settings pages for your website. You can use it to create a theme options page, or a settings page for your plugin, or a custom settings page for clients' websites.
 
 Screenshots:
@@ -268,7 +271,7 @@ Note:
 
 This is a quick video that demonstrates how to use MB Settings Page to create custom panels, sections, and fields in the Customizer. You'll see how easy it is to turn a settings page into a Customizer panel.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LeV0CsiTe74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='LeV0CsiTe74' />
 
 ### Creating a Customizer panel
 

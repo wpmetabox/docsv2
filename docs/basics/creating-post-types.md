@@ -2,6 +2,9 @@
 title: Creating a post type
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 WordPress houses lots of different types of content and they are divided into something called **post types﻿**. Whilst there are already some built-in post types within WordPress (such as post, page, or attachment), you may want to create custom post types if you want to break things down into smaller categories. For example, if you want to have a section on Books or Events, it would be better suited to creating a custom post type for them.
 
 Creating a custom post type is done by either of the following methods:
@@ -14,7 +17,7 @@ This documentation shows you how to create post types with **MB Custom Post Type
 
 Here is a video tutorial on creating custom post types and custom taxonomies with MB Custom Post Types & Custom Taxonomies extension (text version below):
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-oYrHGOri4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='-oYrHGOri4w' />
 
 To create a new custom post type, go to **Meta Box &rarr; Post Types** and click **Add New**:
 

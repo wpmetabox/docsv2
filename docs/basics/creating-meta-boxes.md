@@ -2,6 +2,9 @@
 title: Creating a field group
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 Meta Box uses field groups to attach custom fields to posts, terms, or users. There are 3 ways to create a field group:
 
 - **Using Meta Box Builder**: it has a user-friendly UI and supports other extensions.
@@ -36,7 +39,7 @@ Each field settings are self-explained. We also add some tooltips next to the se
 
 To understand field types and settings for each type, please see this video below:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WWeaM5vIAwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='WWeaM5vIAwM' />
 
 ### Settings
 

@@ -2,6 +2,9 @@
 title: Composer
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 [Composer](https://getcomposer.org) is a package dependency manager for PHP. It's kind of [TGM Activation class](https://tgmpluginactivation.com) for WordPress, but works for any PHP package. Composer allows us to include other PHP libraries in our projects without conflict between them.
 
 Without Composer, if a project requires 2 libraries A and B, and both of them requires a library C, then C might be included twice. The scenario can get worse if A and B includes different version of C which can cause a conflict when loading the library. Composer helps us to avoid this issue.
@@ -119,7 +122,7 @@ So, enjoy Composer and Meta Box! And share with us how you use them in your proj
 
 This video demonstrates how to install Meta Box extensions from wordpress.org. The approach is slightly different, but it shows you the idea of using Composer with Meta Box plugins.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/khiCSMh3DY0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='khiCSMh3DY0' />
 
 ## Futher reading
 

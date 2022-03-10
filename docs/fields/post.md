@@ -2,6 +2,9 @@
 title: Post
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 ## Overview
 
 The post field allows you to select one or multiple post (or any custom post type) objects. This field has several settings that can be displayed as a: simple select dropdown, checkbox list, or beautiful select dropdown with select2 library.
@@ -108,7 +111,7 @@ Since version 5.2, Meta Box uses Ajax to increase the performance for the field 
 
 See this video for demonstration:
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe width="560" height="315" src="https://www.youtube.com/embed/2acm5gW59Mc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<LiteYouTubeEmbed id='2acm5gW59Mc' />
 
 This feature is _available only for fields that set `field_type` to `select_advanced`_. There are some extra parameters for you to disable or customize it.
 

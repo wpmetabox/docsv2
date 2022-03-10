@@ -2,6 +2,9 @@
 title: MB Rank Math
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 MB Rank Math helps you to add content of custom fields to Rank Math Content Analysis to have better SEO score.
 
 ![Meta Box - Rank Math Integration](https://i.imgur.com/tIyC0u9.jpg)
@@ -23,4 +26,4 @@ The plugin supports all types of fields, such as text, textarea and wysiwyg.
 
 This is the video tutorial:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I3ncHxLxwlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='I3ncHxLxwlM' />

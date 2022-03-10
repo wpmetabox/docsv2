@@ -2,11 +2,14 @@
 title: Quick start
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 ## Premium users
 
 If you're a premium user, then please follow this video tutorial to get started with Meta Box and extensions:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/M0nEF7b0woU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<LiteYouTubeEmbed id='M0nEF7b0woU' />
 
 ## Free users
 
