@@ -181,7 +181,7 @@ With this method, you're able to set the label for post fields, or change settin
 
 There are 2 ways to validate fields: on the front end with JavaScript and on the back end with PHP.
 
-For front-end validation with JavaScript, please see [this documentation](https://docs.metabox.io/validation/).
+For front-end validation with JavaScript, please see [this documentation](/validation/).
 
 To validate on the back end with PHP, please use the `rwmb_frontend_validate` filter as follows:
 

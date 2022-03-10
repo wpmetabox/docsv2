@@ -230,7 +230,7 @@ When using tabs, you must define `tab` attribute for all meta boxes to make them
 
 After creating a settings page, you need to create meta boxes and fields for it.
 
-Creating meta boxes and fields for settings pages is similar as for posts. [You can do it with UI using the Meta Box Builder extension or with code](https://docs.metabox.io/creating-meta-boxes/).
+Creating meta boxes and fields for settings pages is similar as for posts. [You can do it with UI using the Meta Box Builder extension or with code](/creating-meta-boxes/).
 
 If you use Meta Box Builder to create fields, make sure to select the correct settings page in the Location settings, under the Settings tab:
 
@@ -270,7 +270,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 Note:
 
 - You must set `settings_pages` to the ID of the settings page. If you want to add meta boxes to 2 or more settings pages, set it to an array of settings pages' IDs
-- [All fields settings](https://docs.metabox.io/field-settings/) are the same as for posts.
+- [All fields settings](/field-settings/) are the same as for posts.
 - The settings page uses 2 columns layout, which mimics the WordPress post screen, and the value for `context` has the same meaning.
 
 ## Creating Customizer settings
@@ -446,7 +446,7 @@ It will show a textarea field in your settings page like this:
 
 When you add it to your settings page, it will show all of your settings in JSON. And you can just copy it and save to to a file to backup the settings. To restore the settings, just paste the JSON again and click the Save Settings button.
 
-The backup field inherits from [`textarea`](https://docs.metabox.io/fields/textarea/) so you can customize it the way you want: change the field name, description, input size, etc. This field doesn't require an `ID`. And of course, you should have only one backup field on your settings page.
+The backup field inherits from [`textarea`](/fields/textarea/) so you can customize it the way you want: change the field name, description, input size, etc. This field doesn't require an `ID`. And of course, you should have only one backup field on your settings page.
 
 ## Hooks
 

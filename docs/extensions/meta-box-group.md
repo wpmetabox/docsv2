@@ -451,7 +451,7 @@ add_shortcode( 'my_group', function() {
 
 ### Sub-field values
 
-It's important to note that the helper function returns only raw array of sub-field values. It doesn't transform value to meaning full details like [rwmb_meta](https://docs.metabox.io/rwmb-meta/) function for specific fields. Specifically:
+It's important to note that the helper function returns only raw array of sub-field values. It doesn't transform value to meaning full details like [rwmb_meta](/rwmb-meta/) function for specific fields. Specifically:
 
 Sub-field type|Value
 ---|---
@@ -627,7 +627,7 @@ To change the clone button text, set use the `add_button` parameter like below:
 
 When clone a group, if the group has `clone_default` set to `true`, then all sub-fields will have their default values. The exception is if a sub-field is cloneable, then its `clone_default` will take the higher priority and comes to effect. In this case, the sub-field `clone_default` is used, no matter the settings of the outer group.
 
-Learn more about [`clone_default` parameter](https://docs.metabox.io/cloning-fields/).
+Learn more about [`clone_default` parameter](/cloning-fields/).
 
 ## Known issues
 

@@ -8,7 +8,7 @@ There are 2 ways of doing validation: via **input attributes** (mostly for basic
 
 ## Basic validation with input attributes
 
-Meta Box supports [custom attributes](https://docs.metabox.io/custom-attributes/) for all input fields. You can use these attributes to validate values of fields.
+Meta Box supports [custom attributes](/custom-attributes/) for all input fields. You can use these attributes to validate values of fields.
 
 These are the available attributes that you can use for validation:
 
@@ -21,7 +21,7 @@ Attribute| Description
 `pattern` | Match a regular expression
 `required` | Required
 `step` | Match the step increment
-`type` | Match the [input type](https://docs.metabox.io/html5-input-types/)
+`type` | Match the [input type](/html5-input-types/)
 
 To implement these validation rules for fields, you can use either [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) or code.
 
@@ -35,7 +35,7 @@ In the **Key** input box, you can select any rule from the dropdown (if you don'
 
 ### Using code
 
-To define validation rules with code, simply add pairs of `'key' => 'value'` rules for the [field settings](https://docs.metabox.io/field-settings/) array:
+To define validation rules with code, simply add pairs of `'key' => 'value'` rules for the [field settings](/field-settings/) array:
 
 ```php
 // This is an array settings of a text field.
@@ -43,7 +43,7 @@ To define validation rules with code, simply add pairs of `'key' => 'value'` rul
     'type' => 'text',
     'id'   => 'phone',
     'name' => 'Phone number',
-    
+
     // Attributes for validation.
     'required' => true,       // Make the field required.
     'pattern'  => '[0-9]{9}', // Must have 9 digits
@@ -66,7 +66,7 @@ For each rule, the list of types is available as a dropdown, so you can simply s
 
 ### Using code
 
-To define validation rules with code, you need to add a key `validation` to the [meta box settings](https://docs.metabox.io/creating-meta-boxes/). This key has a parameter `rules` for validation rules and `messages` for error messages.
+To define validation rules with code, you need to add a key `validation` to the [meta box settings](/creating-meta-boxes/). This key has a parameter `rules` for validation rules and `messages` for error messages.
 
 ```php
 // This is a part of the meta box settings

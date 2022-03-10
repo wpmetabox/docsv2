@@ -142,7 +142,7 @@ To save time read and write settings for fields, we've already prepared some cod
 
 ## Customize field settings
 
-Outside of the "Edit field group" UI, it is possible to modify a field's settings via the [rwmb_normalize_field](https://docs.metabox.io/filters/#rwmb_normalize_field) filter. This filter exposes the `$field` settings array for each field and allows customization to all settings.
+Outside of the "Edit field group" UI, it is possible to modify a field's settings via the [rwmb_normalize_field](/filters/#rwmb_normalize_field) filter. This filter exposes the `$field` settings array for each field and allows customization to all settings.
 
 This example shows how to modify a specific field (called `customer_name`) via this filter to customize settings unavailable to the UI.
 

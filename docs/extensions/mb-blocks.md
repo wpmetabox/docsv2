@@ -5,7 +5,7 @@ title: MB Blocks
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process. Everything is just like [creating a simple meta box](https://docs.metabox.io/creating-meta-boxes/).
+With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process. Everything is just like [creating a simple meta box](/creating-meta-boxes/).
 
 Here is a screenshot of a custom Gutenberg block (hero area) that's created using MB Blocks:
 
@@ -85,7 +85,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 } );
 ```
 
-You might notice that the syntax is very similar to [creating a custom meta box](https://docs.metabox.io/creating-meta-boxes/). You just need to define some settings and fields for the block.
+You might notice that the syntax is very similar to [creating a custom meta box](/creating-meta-boxes/). You just need to define some settings and fields for the block.
 
 The block settings are inherited from the Block JavaScript API with a few difference. See [Block Registration](https://developer.wordpress.org/block-editor/developers/block-api/block-registration/) page on the Gutenberg Handbook if you need more details.
 
@@ -475,7 +475,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 } );
 ```
 
-Each field is an array of its settings. See [this guide](https://docs.metabox.io/field-settings/) for details about field settings.
+Each field is an array of its settings. See [this guide](/field-settings/) for details about field settings.
 
 ## Nested blocks (InnerBlocks)
 

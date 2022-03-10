@@ -45,7 +45,7 @@ $args = [
 $meta_boxes = $meta_box_registry->get_by( $args );
 ```
 
-Here `$args` is an array of [meta box settings](https://docs.metabox.io/creating-meta-boxes/) that you use to filter the list of meta boxes.
+Here `$args` is an array of [meta box settings](/creating-meta-boxes/) that you use to filter the list of meta boxes.
 
 ### Field registry
 

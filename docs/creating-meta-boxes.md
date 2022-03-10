@@ -39,7 +39,7 @@ While working on fields, you can:
 - Reveal field settings by clicking anywhere in the field title bar.
 - Reorder fields by drag and drop fields to the new positions.
 
-Each field settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed. All field settings are divided into 2 tabs: General, Advanced. These settings are explained in detailed [here](https://docs.metabox.io/field-settings/). Some settings are for other extensions which are explained on each extension docs.
+Each field settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed. All field settings are divided into 2 tabs: General, Advanced. These settings are explained in detailed [here](/field-settings/). Some settings are for other extensions which are explained on each extension docs.
 
 To understand field types and settings for each type, please see this video below:
 

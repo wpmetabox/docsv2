@@ -14,8 +14,8 @@ Parameter|Description
 ---|---
 `$object_id`|Object (post, term, user) ID. If you need to set value for an option (using MB Settings Page), object ID is the option name.
 `$field_id`|Field ID.
-`$value`|Value. Should be compatible with field value format. See [database](https://docs.metabox.io/database/).
-`$args`|Extra arguments for some object types or storages. It works similarly in [rwmb_meta](https://docs.metabox.io/rwmb-meta/) function. Can be array or a string in format param1=value1&param2=value2.Optional.
+`$value`|Value. Should be compatible with field value format. See [database](/database/).
+`$args`|Extra arguments for some object types or storages. It works similarly in [rwmb_meta](/rwmb-meta/) function. Can be array or a string in format param1=value1&param2=value2.Optional.
 
 **Important Note**
 

@@ -92,7 +92,7 @@ If you're using [Meta Box Builder](/extensions/meta-box-builder/), please go to 
 
 ## Sanitize custom field types
 
-If you create [a custom field type](https://docs.metabox.io/custom-field-type/), then you need to implement a default sanitize callback for that type.
+If you create [a custom field type](/custom-field-type/), then you need to implement a default sanitize callback for that type.
 
 To do this, please set the `sanitize_callback` param for the field in the `normalize` method as follows:
 

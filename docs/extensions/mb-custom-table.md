@@ -231,7 +231,7 @@ echo $value;
 
 Also note that the call to the custom table will be cached, e.g. if you call the helper function several times for the same `$post_id`, it will only query once. This technique will improve the database performance.
 
-You can also use the [`[rwmb_meta]`](https://docs.metabox.io/shortcode/) shortcode to display a field value. You need to set the shortcode attributes similarly to the `rwmb_meta()` helper function:
+You can also use the [`[rwmb_meta]`](/shortcode/) shortcode to display a field value. You need to set the shortcode attributes similarly to the `rwmb_meta()` helper function:
 
 ```
 [rwmb_meta id="field_id" storage_type="custom_table" table="table_name"]

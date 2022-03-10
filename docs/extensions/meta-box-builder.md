@@ -41,7 +41,7 @@ When it's done, click button **Publish** to save the field group. You also can c
 
 ## Field settings
 
-When adding fields to a field group, each field has its own settings. The list of settings with detailed explaination is [here](https://docs.metabox.io/field-settings/). Meta Box Builder simply creates UI for them.
+When adding fields to a field group, each field has its own settings. The list of settings with detailed explaination is [here](/field-settings/). Meta Box Builder simply creates UI for them.
 
 To view and edit field settings, click anywhere in the field title bar:
 
@@ -53,10 +53,10 @@ All field settings are divided into 2 tabs: General, Advanced. The General tab h
 
 - Before & after: For entering custom HTML that outputed before and after the field.
 - Custom CSS class: if you need to cusomize the style of the field.
-- Custom sanitize callback: if you need [custom sanitization](https://docs.metabox.io/sanitization/).
+- Custom sanitize callback: if you need [custom sanitization](/sanitization/).
 - Save field value: if you don't want Meta Box to save the field value (which rarely happens) and you want to handle saving by yourself, then uncheck this checkbox.
-- Custom HTML5 attributes: helps you add [custom HTMl5 attributes](https://docs.metabox.io/custom-attributes/) to your input fields.
-- Validation: helps you to create [complex validation rules](https://docs.metabox.io/validation/).
+- Custom HTML5 attributes: helps you add [custom HTMl5 attributes](/custom-attributes/) to your input fields.
+- Validation: helps you to create [complex validation rules](/validation/).
 - Custom settings: if you want to add extra settings to the field. We'll cover it in a next section.
 - Conditional logic: if you install the [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), then this part is for creating rules with UI.
 
@@ -307,7 +307,7 @@ To start, go to **Meta Box > Settings Pages** and click **Add New**.
 
 ![create settings pages](https://i.imgur.com/LXHfSkP.png)
 
-Here you can enter all the settings for the settings page. All settings are self-explained. Please see the [documentation of MB Settings Page](https://docs.metabox.io/extensions/mb-settings-page/) to understand them.
+Here you can enter all the settings for the settings page. All settings are self-explained. Please see the [documentation of MB Settings Page](/extensions/mb-settings-page/) to understand them.
 
 ## Creating relationships
 
@@ -323,7 +323,7 @@ Here you can enter all the settings for each side of the relationship (**From** 
 - Meta Box: for extra meta box settings. These settings are the same as the field group settings when creating custom fields.
 - Field: for extra field settings. These settings are the same as the field settings (post, term or user depending on the object type).
 
-Please see the [documentation of MB Relationships](https://docs.metabox.io/extensions/mb-relationships/) to understand them.
+Please see the [documentation of MB Relationships](/extensions/mb-relationships/) to understand them.
 
 ## Extending the builder
 
@@ -422,7 +422,7 @@ The filter `mbb_settings_controls` accepts only one parameter - an array of cont
 
 ### Adding your own field types
 
-As Meta Box allows you to [create your own field types](https://docs.metabox.io/custom-field-type/), it's able to create UI for your custom field types.
+As Meta Box allows you to [create your own field types](/custom-field-type/), it's able to create UI for your custom field types.
 
 To add UI for your custom field types, use the following hook:
 

@@ -15,7 +15,7 @@ This is the walkthrough video created by David McCan that shows you how to migra
 
 ## Backup the database
 
-Before migrating data, make sure you have a backup of your database. During the migration process, because of the difference in [data format](https://docs.metabox.io/database/), the plugin will attempt to modify the existing data in custom fields created by ACF. We try to do it at a very minimum level and create a backup of fields for some specific cases, but it's still important to make a backup just in case something goes wrong.
+Before migrating data, make sure you have a backup of your database. During the migration process, because of the difference in [data format](/database/), the plugin will attempt to modify the existing data in custom fields created by ACF. We try to do it at a very minimum level and create a backup of fields for some specific cases, but it's still important to make a backup just in case something goes wrong.
 
 ## Migrate
 
@@ -33,7 +33,7 @@ MB ACF Migration tries to migrate all the following data from ACF to Meta Box. P
 
 ### Field groups
 
-ACF field groups are migrated to Meta Box's field groups, which requires [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). Most of the field group settings are the same as [in Meta Box](https://docs.metabox.io/creating-meta-boxes/).
+ACF field groups are migrated to Meta Box's field groups, which requires [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). Most of the field group settings are the same as [in Meta Box](/creating-meta-boxes/).
 
 :::caution
 

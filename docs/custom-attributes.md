@@ -11,11 +11,11 @@ Creating custom attributes is done by either of the following methods:
 
 ## Using Meta Box Builder
 
-To add custom attributes to the fields, click on the tab **Advanced** in each field and click **Add New** custom settings. Using [Dot notation](https://docs.metabox.io/extensions/meta-box-builder/#dot-notation) on the Builder documentation.
+To add custom attributes to the fields, click on the tab **Advanced** in each field and click **Add New** custom settings. Using [Dot notation](/extensions/meta-box-builder/#dot-notation) on the Builder documentation.
 
 ![create custom attributes](https://i.imgur.com/UIdseik.png)
 
-Add custom HTML5 attributes `data-*`, click **Add New** Custom HTML5 Attributes. Using [JSON notation](https://docs.metabox.io/extensions/meta-box-builder/#json-notation):
+Add custom HTML5 attributes `data-*`, click **Add New** Custom HTML5 Attributes. Using [JSON notation](/extensions/meta-box-builder/#json-notation):
 
 ![create custom HTML5 attributes](https://i.imgur.com/Hn14j8u.png)
 

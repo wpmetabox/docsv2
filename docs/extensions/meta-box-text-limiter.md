@@ -42,4 +42,4 @@ If you need to limit by words, just add `'limit_type' => 'word'`:
 
 That's all!
 
-Note that this extension works only with [text](https://docs.metabox.io/fields/text/) and [textarea](https://docs.metabox.io/fields/textarea/) fields.
+Note that this extension works only with [text](/fields/text/) and [textarea](/fields/textarea/) fields.

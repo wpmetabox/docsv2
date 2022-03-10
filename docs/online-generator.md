@@ -4,7 +4,7 @@ title: Online Generator
 
 [Online Generator](https://metabox.io/online-generator/) is a tool to help you create and set up custom fields using a simple, friendly user interface. With it, you can add fields, set options and generate needed code that's ready to copy and paste.
 
-Before using Online Generator, make sure you [installed and activated Meta Box plugin](https://docs.metabox.io/installation/).
+Before using Online Generator, make sure you [installed and activated Meta Box plugin](/installation/).
 
 ## Add fields
 
@@ -18,7 +18,7 @@ Once you add a new field, field settings panel will appear on the right, where y
 
 You can also toggle the field settings by clicking the field title bar.
 
-The field settings are different depending on the field type. See more details about [field settings](https://docs.metabox.io/field-settings/) or settings for specific field types from the left menu of this page.
+The field settings are different depending on the field type. See more details about [field settings](/field-settings/) or settings for specific field types from the left menu of this page.
 
 ## Remove, duplicate, reorder fields
 
@@ -43,7 +43,7 @@ Autosave|Auto save the custom fields' values (like post content and title)?
 Field ID prefix|Auto add a prefix to all field IDs to keep them separated from other field groups or other plugins.
 Text domain|Required for multilingual website. Used in the exported code only.
 
-See more about [meta box settings](https://docs.metabox.io/creating-meta-boxes/).
+See more about [meta box settings](/creating-meta-boxes/).
 
 ## Generate code
 
