@@ -59,6 +59,38 @@
 .hero.hero {
   background: url(https://i.imgur.com/unsLwpY.png);
   padding: 8rem 0;
+  overflow: visible;
+
+  --search-local-modal-width: 100%;
+}
+
+[data-theme='dark'] .hero {
+  --ifm-hero-text-color: #fff;
+}
+
+.hero .navbar__search {
+  width: 40rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--ifm-font-color-base);
+  text-align: left;
+}
+.hero .navbar__search > span {
+  width: 100%;
+}
+.hero .navbar__search-input {
+  width: 100%;
+  height: 3rem;
+  padding-left: 3rem;
+  background-position: 1.5rem center;
+}
+.hero .searchHintContainer_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
+  right: 1.5rem;
+}
+.hero .searchBar_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module .dropdownMenu_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
+  left: 0 !important;
+  right: 0 !important;
 }
 
 table {
