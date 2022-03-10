@@ -56,6 +56,11 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.hero.hero {
+  background: url(https://i.imgur.com/unsLwpY.png);
+  padding: 8rem 0;
+}
+
 table {
   font-size: 13px;
 }
