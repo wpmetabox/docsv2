@@ -374,7 +374,7 @@ What if you want the _section to be inside another panel_? Like inside another p
 
 ### Compatibility
 
-At the moment, all Meta Box fields are supported in the Customizer, except [file](https://docs.metabox.io/fields/file/) and [image](https://docs.metabox.io/fields/image/) field types. But other upload field types such as [file_advanced](https://docs.metabox.io/fields/file-advanced/), [file_upload](https://docs.metabox.io/fields/file-upload/), [image_advanced](https://docs.metabox.io/fields/image-advanced/), [image_upload](https://docs.metabox.io/fields/image-upload/), [single_image](https://docs.metabox.io/fields/single-image/) still work very well. (The reason is that the Customizer doesn't handle file uploads and the submission is performed via Ajax)
+At the moment, all Meta Box fields are supported in the Customizer, except [file](/fields/file/) and [image](/fields/image/) field types. But other upload field types such as [file_advanced](/fields/file-advanced/), [file_upload](/fields/file-upload/), [image_advanced](/fields/image-advanced/), [image_upload](/fields/image-upload/), [single_image](/fields/single-image/) still work very well. (The reason is that the Customizer doesn't handle file uploads and the submission is performed via Ajax)
 
 The good news is all the extensions such as [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), [Meta Box Tabs](https://metabox.io/plugins/meta-box-tabs/) are supported. That will help you create much better experiences for your users.
 
@@ -500,7 +500,7 @@ Other parameters are the same as for posts. Please see [this documentation](/dis
 
 :::caution
 
-It requires the extension version 1.2+ to use the helper function. If you're using an older version, please [update now](/extensions/update/).
+It requires the extension version 1.2+ to use the helper function. If you're using an older version, please [update now](/updates/).
 
 :::
 

@@ -291,7 +291,7 @@ This filter is used for changing the query args for getting posts in the dashboa
 ```php
 add_filter( 'mbfs_dashboard_query_args', function( $args ) {
     $args['cat'] = 1; // Get only posts in category ID = 1.
-    
+
     return $args;
 } );
 ```
@@ -432,7 +432,7 @@ $field   = apply_filters( 'rwmb_frontend_post_content', array(
 ) );
 ```
 
-Each post field is treated as a normal Meta Box field (see here for full list of [field attributes](/docs/field-settings/)).
+Each post field is treated as a normal Meta Box field (see here for full list of [field attributes](/field-settings/)).
 
 So, to make the post title required, you can do like this:
 

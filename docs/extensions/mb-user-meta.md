@@ -90,7 +90,7 @@ Other parameters are the same as for posts. Please see [this documentation](/dis
 
 :::caution
 
-It requires the extension version 1.1+ to use the helper function. If you're using an older version, please [update now](/extensions/update/).
+It requires the extension version 1.1+ to use the helper function. If you're using an older version, please [update now](/updates/).
 
 :::
 

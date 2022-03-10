@@ -61,4 +61,4 @@ Although this method works, it has some disadvantages compared to the 1st method
 
 ## Using Composer
 
-Please [read this detailed guide](/advanced/composer/) for instructions.
+Please [read this detailed guide](/composer/) for instructions.

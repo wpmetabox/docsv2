@@ -76,7 +76,7 @@ Custom CSS class | If you want to style your meta box, then enter a custom CSS c
 
 #### Field settings
 
-To select connected items, the plugin uses Meta Box's [post](https://docs.metabox.io/fields/post/), [taxonomy advanced](https://docs.metabox.io/fields/taxonomy-advanced/) or [user](https://docs.metabox.io/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
+To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/) or [user](/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
 
 ![field settings for a relationship side](https://i.imgur.com/o4Z6Iqu.png)
 

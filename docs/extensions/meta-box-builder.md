@@ -474,7 +474,7 @@ And here is how it looks when reveal the field settings:
 
 :::info
 
-Note that this section describes how to create UI in the builder for your custom field types only. To make the new field works, please follow [this documentation](/advanced/custom-field-type/).
+Note that this section describes how to create UI in the builder for your custom field types only. To make the new field works, please follow [this documentation](/custom-field-type/).
 
 :::
 

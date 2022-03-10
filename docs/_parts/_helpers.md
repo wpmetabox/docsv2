@@ -12,4 +12,4 @@ Field type|Helper function(s)
 `user`|[`get_userdata()`](https://developer.wordpress.org/reference/functions/get_userdata/)
 `post`|[`get_post()`](https://developer.wordpress.org/reference/functions/get_post/)
 
-Read more on [how field values are saved into the database](/advanced/database/).
+Read more on [how field values are saved into the database](/database/).

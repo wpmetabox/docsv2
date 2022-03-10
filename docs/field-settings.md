@@ -116,7 +116,7 @@ Field Type | Description
 
 :::info
 
-In addition to the above field types, you can also use HTML5 input types. See [this guide](/advanced/html5-input-types/) for details.
+In addition to the above field types, you can also use HTML5 input types. See [this guide](/html5-input-types/) for details.
 
 :::
 

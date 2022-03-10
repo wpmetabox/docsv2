@@ -13,7 +13,7 @@ If you're a premium user, then please follow this video tutorial to get started 
 
 ## Free users
 
-If you're a free user, please [install](/basics/installation/) the **free version** of Meta Box first. Notice that the plugin doesn't have any admin page for configuration or settings. Instead of that, it provides an API that you can use to speed up the process of creating meta boxes and custom fields.
+If you're a free user, please [install](/installation/) the **free version** of Meta Box first. Notice that the plugin doesn't have any admin page for configuration or settings. Instead of that, it provides an API that you can use to speed up the process of creating meta boxes and custom fields.
 
 :::caution Upgrade
 
