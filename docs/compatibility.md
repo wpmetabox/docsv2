@@ -1,8 +1,10 @@
 ---
-title: Plugins
+title: Compatibility
 ---
 
-## Page Builder plugins
+## Plugins
+
+### Page Builder plugins
 
 - Beaver Builder (via [Meta Box - Beaver Themer Integrator](https://metabox.io/plugins/meta-box-beaver-themer-integrator/))
 - Elementor (via [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/))
@@ -10,7 +12,7 @@ title: Plugins
 - Brizy (official support from Brizy)
 - Bricks (official support from Bricks)
 
-## Form plugins
+### Form plugins
 
 Meta Box has official support from these plugins:
 
@@ -19,7 +21,7 @@ Meta Box has official support from these plugins:
 - Bit Form
 - Piotnet Forms
 
-## Search and filter plugins
+### Search and filter plugins
 
 - FacetWP (via [Meta Box - FacetWP Integrator](https://metabox.io/plugins/meta-box-facetwp-integrator/))
 - FilterWP (official support from FilterWP)
@@ -27,7 +29,7 @@ Meta Box has official support from these plugins:
 - GridbuilderWP (official support from GridbuilderWP)
 - Piotnet Grid Builder (official support from Piotnet Grid Builder)
 
-## SEO plugins
+### SEO plugins
 
 - [Slim SEO](https://wpslimseo.com/)
 - All in One SEO Pack
@@ -36,7 +38,7 @@ Meta Box has official support from these plugins:
 - The SEO Framework
 - Yoast SEO
 
-## Optimization plugins
+### Optimization plugins
 
 - Asset CleanUp
 - Autoptimize
@@ -50,7 +52,7 @@ Meta Box has official support from these plugins:
 - WP Rocket
 - WP-Optimize
 
-## Security plugins
+### Security plugins
 
 - All In One WP Security & Firewall
 - Hide My WP Ghost
@@ -59,7 +61,7 @@ Meta Box has official support from these plugins:
 - Sucuri Security
 - Wordfence Security
 
-## Others
+### Others
 
 - [Auto Listings](https://wpautolistings.com/)
 - BlogVault
@@ -76,3 +78,46 @@ Meta Box has official support from these plugins:
 - WooCommerce
 - WPML
 - WPvivid
+
+## Themes
+
+- [GretaThemes](https://gretathemes.com/)
+- [FitWP](https://fitwp.com/)
+- 7Theme
+- aThemes
+- Bello (BoldThemes)
+- BeTheme
+- BIG Border
+- bkninja
+- BlossomThemes
+- Cyberchimps
+- Elegant Themes
+- FOEVIS
+- Grace Themes
+- MysteryThemes
+- Ninetheme
+- Oshine
+- Pixelgrade
+- Rara Themes
+- RealHomes
+- Shinetheme
+- TagDiv
+- Theme Rex
+- Themes21.net
+- Themeum
+- Themovation
+- Trucking
+- Zemez
+
+## Hostings
+
+- A2Hosting
+- Blue Host
+- Cloudways
+- DreamHost
+- Flywheel
+- Hawk Host
+- Hostinger
+- Kinsta
+- Liquid Web
+- [WPMU Dev](https://premium.wpmudev.org/hosting/)

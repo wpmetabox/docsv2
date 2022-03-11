@@ -15,6 +15,7 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --ifm-table-cell-padding: 6px 12px;
+  --ifm-menu-color-background-hover: var(--ifm-color-gray-200);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -94,5 +95,17 @@
 }
 
 table {
-  font-size: 13px;
+  font-size: 14px;
+}
+
+.menu__link,
+.menu__caret,
+.menu__list-item-collapsible {
+  /* font-size: 14px; */
+  outline: none;
+}
+
+.menu__caret:before,
+.menu__link--sublist:after {
+  background-size: 1.25rem 1.25rem;
 }

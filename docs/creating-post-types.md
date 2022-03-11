@@ -1,11 +1,11 @@
 ---
-title: Creating a post type
+title: Post types
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-WordPress houses lots of different types of content and they are divided into something called **post types﻿**. Whilst there are already some built-in post types within WordPress (such as post, page, or attachment), you may want to create custom post types if you want to break things down into smaller categories. For example, if you want to have a section on Books or Events, it would be better suited to creating a custom post type for them.
+WordPress houses lots of different types of content and they are divided into something called **post types**. Whilst there are already some built-in post types within WordPress (such as post, page, or attachment), you may want to create custom post types if you want to break things down into smaller categories. For example, if you want to have a section on Books or Events, it would be better suited to creating a custom post type for them.
 
 Creating a custom post type is done by either of the following methods:
 

@@ -1,5 +1,5 @@
 ---
-title: Custom field type
+title: Creating new field types
 ---
 
 ## Overview

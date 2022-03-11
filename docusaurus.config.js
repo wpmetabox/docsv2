@@ -26,7 +26,6 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl: 'https://github.com/wpmetabox/docsv2/tree/master/',
         },
         theme: {
@@ -71,19 +70,9 @@ const config = {
             label: 'Getting Started',
           },
           {
-            to: 'category/basics',
-            position: 'left',
-            label: 'Basics',
-          },
-          {
-            to: 'category/advanced',
-            position: 'left',
-            label: 'Advanced',
-          },
-          {
             to: 'category/fields',
             position: 'left',
-            label: 'Fields',
+            label: 'Field types',
           },
           {
             to: 'category/extensions',
@@ -91,9 +80,14 @@ const config = {
             label: 'Extensions',
           },
           {
-            to: 'category/references',
+            to: 'category/advanced',
             position: 'left',
-            label: 'References',
+            label: 'Advanced',
+          },
+          {
+            to: 'category/others',
+            position: 'left',
+            label: 'Others',
           },
           {
             href: 'https://metabox.io/support/',
