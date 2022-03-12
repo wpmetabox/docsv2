@@ -21,7 +21,7 @@ const sidebars = {
 				type: 'generated-index',
 			},
 			items: [
-				'why-meta-box',
+				'introduction',
 				'installation',
 				'creating-post-types',
 				'creating-taxonomies',
