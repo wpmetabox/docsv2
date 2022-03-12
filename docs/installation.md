@@ -5,10 +5,10 @@ title: Installation
 ## Requirements
 
 To run Meta Box, we recommend:
-- PHP 7.2 or greater
+- PHP 7.4 or greater
 - Latest version of WordPress
 
-While Meta Box also works with PHP 5.2 and older versions of WordPress, these versions have reached official End Of Life and as such may expose your site to security vulnerabilities.
+While Meta Box also works with PHP 5.6 and older versions of WordPress, these versions have reached the official End Of Life and as such may expose your site to security vulnerabilities.
 
 ## Installing Meta Box
 
@@ -20,11 +20,19 @@ Then click the button **Install** to install it. After that, click the button **
 
 ## Installing extensions
 
-Before installing extensions, make sure you installed and activated the Meta Box plugin, even if you use Meta Box AIO (which contains all extensions into a single plugin) or solutions.
+Before installing extensions, make sure you installed and activated the Meta Box plugin, even if you use Meta Box AIO, MB Core, or solutions.
 
-Meta Box extensions are normal WordPress plugin, you can install them like a normal WordPress plugin:
+Meta Box extensions are normal WordPress plugins, follow these steps to install them:
 
 - Go to [My Account](https://metabox.io/my-account/) and download the extensions you want to use.
 - Go to **Plugins**, click **Add new**, then click **Upload plugin**.
 - Choose the `.zip` file you downloaded and click **Install now**
-- After finishing upload, click **Activate** to finish.
+- After finishing the upload, click **Activate** to finish.
+
+## Next steps
+
+Now you have everything ready, you may be wondering what to learn next. We strongly recommend following step-by-step guides in the "Getting started" category.
+
+When you're familiar with Meta Box, you might want to go to the [Advanced](/category/advanced/) category. And if you need to know how a field or an extension work, please go to their docs under [Field types](/category/fields/) or [Extensions](/category/extensions/) categories. You can also search for the things you need, sometimes it helps you find the exact docs faster.
+
+For now, as most custom WordPress requires custom post types, let's [learn how to create them](/creating-post-types/).
