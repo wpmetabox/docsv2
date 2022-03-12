@@ -13,12 +13,6 @@ Besides, there are more than 100K packages for us to explore if we use Composer.
 
 Meta Box is totally compatible with Composer and you can use it as a library for your projects. As Meta Box is a WordPress-specific package, the "project" term here means a WordPress website, plugin or theme. This tutorial will show you how to use it for a plugin. The source code of the plugin is [available on Github](https://github.com/wpmetabox/mb-composer-example).
 
-:::caution For Extensions
-
-This guide is for the Meta Box core plugin. For Meta Box extensions, please see [this guide](/extensions/composer/).
-
-:::
-
 :::tip Boilerplate
 
 To make it easier for developers, I've created a `composer.json` file, which contains Meta Box plugin and all extensions. You can [grab it here](https://github.com/wpmetabox/library/blob/master/composer/composer.json) and remove the extensions you don't want to use.

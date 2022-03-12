@@ -23,9 +23,21 @@ const sidebars = {
 			items: [
 				'introduction',
 				'installation',
-				'creating-post-types',
-				'creating-taxonomies',
-				'creating-meta-boxes',
+				{
+					type: 'doc',
+					id: 'creating-post-types',
+					label: 'Post types',
+				},
+				{
+					type: 'doc',
+					id: 'creating-taxonomies',
+					label: 'Taxonomies',
+				},
+				{
+					type: 'doc',
+					id: 'creating-meta-boxes',
+					label: 'Custom fields',
+				},
 				{
 					type: 'category',
 					label: 'Displaying fields',

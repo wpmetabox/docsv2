@@ -161,7 +161,7 @@ const config = {
               },
               {
                 label: 'MB Custom Post Types',
-                to: 'extensions/custom-post-type',
+                to: 'extensions/mb-custom-post-type',
               },
               {
                 label: 'MB Frontend Submission',

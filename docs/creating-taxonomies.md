@@ -1,5 +1,5 @@
 ---
-title: Taxonomies
+title: Creating custom taxonomies
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
