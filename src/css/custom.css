@@ -98,12 +98,19 @@
 .markdown img {
   display: block;
   margin-inline: auto;
+  margin-bottom: var(--ifm-leading);
 }
 table {
   display: table;
   width: 100%;
   font-size: 14px;
   --ifm-table-cell-padding: 6px 12px;
+}
+code {
+  border: none;
+  background: none;
+  padding: 0;
+  --ifm-code-font-size: 14px;
 }
 .yt-lite {
   margin-bottom: var(--ifm-paragraph-margin-bottom);

@@ -23,7 +23,7 @@ Creating custom post types is done easily with the **MB Custom Post Types & Cust
 
 To create a new custom post type, go to **Meta Box » Post Types** and click **New Post Type**:
 
-![create a new custom post type](https://i.imgur.com/QwdI219.png)
+<img src="https://i.imgur.com/QwdI219.png" alt="create a new custom post type" width="300" height="405" loading="lazy" />
 
 And you'll see a screen to configure the post type:
 
@@ -170,7 +170,7 @@ If you're familiar with PHP, you might want to get the PHP code to register the 
 
 ### Video tutorial
 
-The video below shows you the steps and explains the settings for a custom post type:
+The video below shows you the steps and explains the settings for a custom post type (and also custom taxonomy):
 
 <LiteYouTubeEmbed id='-oYrHGOri4w' />
 

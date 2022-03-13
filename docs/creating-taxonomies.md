@@ -4,35 +4,48 @@ title: Creating custom taxonomies
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-A taxonomy within WordPress is a way of grouping posts together. By default, a standard post will have two taxonomy types called Categories and Tags which are a handy way of ensuring related content on your website is easy for visitors to find. You can add more custom taxonomies if you like.
+When having a lot of posts of a custom post type, you might want to categorize them. For example, categorize music albums by genre or artist. To categorize posts like that, you'll need custom taxonomies.
 
-Creating a custom post type is done by either of the following methods:
+## What are custom taxonomies?
 
-- **Using MB Custom Post Types & Custom Taxonomies**. This extension is already bundled in Meta Box AIO/MB Core, or you can install it for free from [WordPress.org](https://wordpress.org/plugins/mb-custom-post-type/).
-- **Using our Taxonomy Generator**.
-- **Using code** with the `register_taxonomy()` function.
+Taxonomies in WordPress is a mechanism for grouping posts, like category and tag. In the example above, "genre" and "artist" are custom taxonomies for the custom post type "music album".
 
-This documentation shows you how to create taxonomies with **MB Custom Post Types & Custom Taxonomies** extension, as it's the best way. To use the Taxonomy Generator, please follow [this guide](/taxonomy-generator/). To use the `register_taxonomy()`, please see [WordPress documentation](https://developer.wordpress.org/reference/functions/register_taxonomy/).
+## How to create a custom taxonomy?
 
-Here is a video tutorial on creating custom post types and custom taxonomies with MB Custom Post Types & Custom Taxonomies extension (text version below):
+Creating custom taxonomies is very similar to creating post types that we have seen [previously](/creating-post-types/). It's done easily by the same **MB Custom Post Types & Custom Taxonomies** extension, which is already bundled in Meta Box AIO, MB Core, or you can install it for free from [WordPress.org](https://wordpress.org/plugins/mb-custom-post-type/).
 
-<LiteYouTubeEmbed id='-oYrHGOri4w' />
+To create a new custom taxonomy, go to **Meta Box » Taxonomies** and click **Add New**:
 
-To create a new custom taxonomy, go to **Meta Box &rarr; Taxonomies** and click **Add New**:
+<img src="https://i.imgur.com/bwI5gXL.png" alt="create a new custom taxonomy" width="300" height="390" loading="lazy" />
+
+And you'll see a screen to configure the taxonomy:
 
 ![create taxonomies](https://i.imgur.com/yy7wy9w.png)
 
-The settings are divided into 4 tabs:
+In most cases, you only need to enter the plural name, singular name, and slug in the **General** tab and click the **Publish** button to register the taxonomy.
 
-- **General**: the taxonomy names and slug
-- **Labels**: all labels for the taxonomy
-- **Advanced**: advanced settings for the taxonomy such as public, menu settings, hierarchy, etc.
-- **Post types**: the post types that connect to the taxonomy
+:::caution Don't use WordPress reserved terms
 
-After done, click the **Publish** button to register the taxonomy. Or click the **Get PHP Code** button to get the PHP code that you can insert into your theme's `functions.php` file (or your plugin's file). After inserting, you can deactivate the extension to make your site a little bit faster.
+There is a complete set of [WordPress reserved terms](https://codex.wordpress.org/Reserved_Terms) that should **not** be used for the taxonomy slug as they may conflict with WordPress core functionality.
 
-## General settings
+:::
+
+### Taxonomy settings
+
+If you want to customize the taxonomy such as setting the hierarchy or showing it in the post type list table, please see the settings below.
+
+:::tip
+
+From our experience, the most important settings are in the **Advanced** tab.
+
+:::
+
+
+<Tabs>
+  <TabItem value="general" label="General" default>
 
 ![create taxonomies](https://i.imgur.com/yy7wy9w.png)
 
@@ -44,7 +57,9 @@ Slug | Taxonomy key, must not exceed 32 characters and may only contain lowercas
 
 When entering a singular name for the taxonomy, the slug is automatically generated. You can manually change the slug if necessary.
 
-## Label settings
+  </TabItem>
+
+  <TabItem value="labels" label="Labels" default>
 
 Labels are automatically generated from the taxonomy's plural and singular names.
 
@@ -74,7 +89,9 @@ Most used tab | Title for the Most Used tab. Default 'Most Used'.
 Back to items | Label displayed after a term has been updated.
 Menu name | Label for the tab in the admin menu.
 
-## Advanced settings
+  </TabItem>
+
+  <TabItem value="advanced" label="Advanced" default>
 
 ![ taxonomy advanced settings](https://i.imgur.com/dOCcR5d.png)
 
@@ -89,18 +106,38 @@ Show in menu | Whether to show the taxonomy in the admin menu. If true, the taxo
 Show in nav menus | Makes this taxonomy available for selection in navigation menus. If not set, the default is inherited from the public settings.
 Show on edit page | Whether to show the taxonomy meta box on the edit page.
 Show in REST | Whether to include the taxonomy in the REST API. Set this to true for the taxonomy to be available in the block editor.
-REST API base slug | To change the base URL of REST API route. Default is the taxonomy slug.
+REST API base slug | To change the base URL of the REST API route. Default is the taxonomy slug.
 Show tag cloud | Whether to list the taxonomy in the Tag Cloud Widget controls. Default is inherited from the show UI settings.
 Show in quick edit | Whether to show the taxonomy in the quick/bulk edit panel. Default is inherited from the show UI settings.
-Show admin column | Whether to display a column for the taxonomy on its post type listing screens. Default false.
+Show admin column | Whether to display a column for the taxonomy on its post type list table. Default false.
 Custom rewrite slug | Customize the permastruct slug. Default is the taxonomy slug.
 Prepended permalink structure | Should the permastruct be prepended. Default true. Example: if your permalink structure is `/blog/`, then your links will be: false -> `/news/`, true -> `/blog/news/`.
 Hierarchical URL | Either hierarchical rewrite tag or not. Default false.
 Query var | Sets the query var key (taxonomy slug) for this taxonomy.
 Sort | Whether terms in this taxonomy should be sorted.
 
-## Post types settings
+  </TabItem>
+
+  <TabItem value="post type" label="Post types" default>
 
 This is the list of post types that are connected with the taxonomy. Simply select the post types you want to connect to the taxonomy.
 
 ![post types settings](https://i.imgur.com/MQCmchM.png)
+
+  </TabItem>
+
+</Tabs>
+
+### Generate PHP code​
+
+If you're familiar with PHP, you might want to get the PHP code to register the taxonomy. To do that, click the **Get PHP Code** button and copy the generated code. Then can insert it into your theme's `functions.php` file (or your plugin's file). After inserting, you can deactivate the extension to make your site a little bit faster.
+
+### Video tutorial
+
+The video below shows you the steps and explains the settings for a custom taxonomy (with a custom post type):
+
+<LiteYouTubeEmbed id='-oYrHGOri4w' />
+
+## Next steps
+
+After creating a custom post type and some custom taxonomies, let's [add custom fields](/creating-meta-boxes/) to add more details for posts of that post type! That's the most important part of the whole process and is the heart of Meta Box.
