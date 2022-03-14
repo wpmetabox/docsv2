@@ -127,3 +127,11 @@ code {
 .tabs__item--active {
   background: var(--ifm-hover-overlay);
 }
+.faqLink {
+  color: var(--ifm-color-secondary-darkest);
+  font-size: 14px;
+  text-decoration: none;
+}
+.faqLink:hover {
+  text-decoration: none;
+}

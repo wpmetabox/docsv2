@@ -6,6 +6,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import FAQ from '@site/src/components/FAQ';
 
 When building a website, there may be sections on the website such as events and projects where the content and appearance are very different from posts and pages. That's when you need custom post types.
 
@@ -176,29 +177,29 @@ The video below shows you the steps and explains the settings for a custom post 
 
 ## FAQ
 
-<details>
-	<summary>Why do I see 404 errors (not found) for my custom post type?</summary>
+<FAQ question="Why do I see 404 errors (not found) for my custom post type?">
 
 The problem is that WordPress hasn't refreshed the rewrite rules for the custom post type. Please go to **Settings » Permalink** and re-save the settings.
-</details>
 
-<details>
-	<summary>How do I customize the permalink for custom post types?</summary>
+</FAQ>
+
+<FAQ question="How do I customize the permalink for custom post types?">
 
 Meta Box only supports changing the rewrite slug for custom post types. If you want more customization for the permalink, you'll need a plugin like [Custom Post Type Permalinks](https://wordpress.org/plugins/custom-post-type-permalinks/) or if you're a developer, you can follow [this guide](https://www.shibashake.com/wp/custom-post-type-permalinks-part-2).
-</details>
 
-<details>
-	<summary>How do I change a post type slug without losing posts?</summary>
+</FAQ>
+
+<FAQ question="How do I change a post type slug without losing posts?">
 
 After changing your post type slug, you can use the plugin [Post Type Switcher](https://wordpress.org/plugins/post-type-switcher/) to switch the posts from the old post type to the new one.
-</details>
 
-<details>
-	<summary>Will my posts be deleted if I remove a post type?</summary>
+</FAQ>
+
+<FAQ question="Will my posts be deleted if I remove a post type?">
 
 No, they're still in the database, but not visible. To show them again, simply create a post type with the old slug.
-</details>
+
+</FAQ>
 
 ## Next steps
 

@@ -6,6 +6,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import FAQ from '@site/src/components/FAQ';
 
 When having a lot of posts of a custom post type, you might want to categorize them. For example, categorize music albums by genre or artist. To categorize posts like that, you'll need custom taxonomies.
 
@@ -140,19 +141,19 @@ The video below shows you the steps and explains the settings for a custom taxon
 
 ## FAQ
 
-<details>
-	<summary>Can I change the back-end UI for selecting taxonomy to radio buttons?</summary>
+<FAQ question="Can I change the back-end UI for selecting taxonomy to radio buttons?">
 
 The default WordPress UI can't be changed to radio buttons. However, you can remove the default WordPress UI and create a [taxonomy field](/fields/taxonomy/) with Meta Box, which supports many ways to display and choose terms, including radio buttons. See this video for how to do that:
 
 <LiteYouTubeEmbed id='6KBmZX-c6MY' />
-</details>
 
-<details>
-	<summary>How do I add custom taxonomies to the permalink of custom post types?</summary>
+</FAQ>
+
+<FAQ question="How do I add custom taxonomies to the permalink of custom post types?">
 
 Meta Box only supports changing the rewrite slug for custom post types. If you want to add custom taxonomies to the permalink of custom post types, you'll need a plugin like [Custom Post Type Permalinks](https://wordpress.org/plugins/custom-post-type-permalinks/) or if you're a developer, you can follow [this guide](https://wordpress.stackexchange.com/q/94817/2051).
-</details>
+
+</FAQ>
 
 ## Next steps
 
