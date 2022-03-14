@@ -5,27 +5,50 @@ title: Creating custom fields
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Meta Box uses field groups to attach custom fields to posts, terms, or users. There are 3 ways to create a field group:
+After creating custom post types and custom taxonomies, you'll need to add more details to your posts. For example, you'll need "date" and "location" for the "event" post type. Such details are called custom fields and that's the main thing that Meta Box does for you.
 
-- **Using Meta Box Builder**: it has a user-friendly UI and supports other extensions.
-- **Using Online Generator**: the slim version of Meta Box Builder that supports only custom fields (no support for extensions) and export PHP code.
-- **Using code**
+![custom fields for the event post type in WordPress](https://i.imgur.com/TwDYnBQ.png)
 
-## Using Meta Box Builder
+## What are custom fields?
 
-Meta Box Builder creates a UI for you to add and manage your custom fields. It also integrates with other extensions to let you do many things without touching code.
+Custom fields, also called metadata, are arbitrary extra data attached to posts to provide more information about the posts.
 
-### Add a new field group
+Custom fields are a very important feature of WordPress. Without custom fields, WordPress can't be used as a CMS. You'll see custom fields everywhere, for example:
 
-Go to *Meta Box &rarr; Custom Fields*. Then click the **Add New** button.
+- On a hotel booking website: custom fields are used to add information for address, rating, or price
+- On an e-commerce website: they're used to add details for price, quantity, or size. FYI, WooCommerce uses custom fields to store these data.
 
-![creating a meta box (field group)](https://i.imgur.com/atmAw8E.png)
+## What can custom fields do for you?
 
-Enter the field group title in the **Title** box. The field group ID is then automatically generated. You can change the ID if you want, it's optional.
+Besides storing data, custom fields help you:
 
-### Fields
+- Creating a convenient form in the editing screen to let you (or your customers) enter data. Think about a form with text inputs, image upload, or editor. Without such forms, entering data is a disaster.
+- Showing more details for custom post types on the front end to make your custom post type page looks beautiful and not have the same look and feel as blog posts.
+- Searching and filtering posts by custom fields data. For example, you can search for products with a price < $1000.
 
-Select the fields you want to add to the field group by clicking the **+ Add Field** button. When clicking on a field, it will be automatically added to the list of fields in the field group.
+With Meta Box, working with custom fields is very easy. Let's start creating some custom fields!
+
+## How to create custom fields?
+
+To create custom fields, you'll need the **Meta Box Builder** extension. This premium extension is already bundled in Meta Box AIO and MB Core so you can use it right away.
+
+:::info
+
+If you're not a premium user, consider [purchasing a license](https://metabox.io/pricing/) to use this extension. This is a very powerful tool that helps you to work with custom fields in Meta Box via a user-friendly interface. However, you can absolutely do this with code. See the sections below for more information.
+
+:::
+
+Custom fields are organized in groups. Each group is displayed as a collapsible panel below the post editor.
+
+To create a field group, go to **Meta Box » Custom Fields** and click **Add New**:
+
+<img alt="create a new field group" src="https://i.imgur.com/iSmSksO.png" width="400" height="371" />
+
+You'll see a screen to add fields to the group:
+
+![adding custom fields to the group](https://i.imgur.com/CO4j4sa.png)
+
+Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. After that, a new field will appear in the field list. Clicking on the field will open the field settings panel where you can edit settings for the field such as title or default value. We'll cover them in details in the next section.
 
 :::tip Quickly find a field type
 
@@ -33,11 +56,25 @@ To find a field type quickly, type its name in the input box above the field lis
 
 :::
 
+When finishing adding fields, click the **Settings** tab and select the post type where the fields are displayed for. There are other settings that we'll cover in the next section.
+
+![selecting a post type for the field group](https://i.imgur.com/a39tyzd.png)
+
+After that click the **Publish** button to finish. Now you have some fields for your post type. In the example (with screenshots) above, I created 3 fields for the "event" post type: Date and time, Location, and Map. Now go to your post type and add a new post, you'll see the field group with custom fields displayed below the editor:
+
+![editing a post with custom fields](https://i.imgur.com/TwDYnBQ.png)
+
+Enter some data to the custom fields and save the post! Now your post has the details you want to add to.
+
+### Field actions
+
 While working on fields, you can:
 
 - Delete or duplicate a field by clicking the icons in the field title bar.
 - Reveal field settings by clicking anywhere in the field title bar.
 - Reorder fields by drag and drop fields to the new positions.
+
+### Field settings
 
 Each field settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed. All field settings are divided into 2 tabs: General, Advanced. These settings are explained in detailed [here](/field-settings/). Some settings are for other extensions which are explained on each extension docs.
 
