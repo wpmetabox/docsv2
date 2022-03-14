@@ -138,6 +138,22 @@ The video below shows you the steps and explains the settings for a custom taxon
 
 <LiteYouTubeEmbed id='-oYrHGOri4w' />
 
+## FAQ
+
+<details>
+	<summary>Can I change the back-end UI for selecting taxonomy to radio buttons?</summary>
+
+The default WordPress UI can't be changed to radio buttons. However, you can remove the default WordPress UI and create a [taxonomy field](/fields/taxonomy/) with Meta Box, which supports many ways to display and choose terms, including radio buttons. See this video for how to do that:
+
+<LiteYouTubeEmbed id='6KBmZX-c6MY' />
+</details>
+
+<details>
+	<summary>How do I add custom taxonomies to the permalink of custom post types?</summary>
+
+Meta Box only supports changing the rewrite slug for custom post types. If you want to add custom taxonomies to the permalink of custom post types, you'll need a plugin like [Custom Post Type Permalinks](https://wordpress.org/plugins/custom-post-type-permalinks/) or if you're a developer, you can follow [this guide](https://wordpress.stackexchange.com/q/94817/2051).
+</details>
+
 ## Next steps
 
 After creating a custom post type and some custom taxonomies, let's [add custom fields](/creating-meta-boxes/) to add more details for posts of that post type! That's the most important part of the whole process and is the heart of Meta Box.
