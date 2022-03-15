@@ -20,7 +20,7 @@ Creating custom taxonomies is very similar to creating post types that we have s
 
 To create a new custom taxonomy, go to **Meta Box » Taxonomies** and click **Add New**:
 
-<img src="https://i.imgur.com/bwI5gXL.png" alt="create a new custom taxonomy" width="300" height="390" loading="lazy" />
+![create a new custom taxonomy](https://i.imgur.com/bwI5gXL.png)
 
 And you'll see a screen to configure the taxonomy:
 

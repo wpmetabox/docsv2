@@ -24,7 +24,7 @@ Creating custom post types is done easily with the **MB Custom Post Types & Cust
 
 To create a new custom post type, go to **Meta Box » Post Types** and click **New Post Type**:
 
-<img src="https://i.imgur.com/QwdI219.png" alt="create a new custom post type" width="300" height="405" loading="lazy" />
+![create a new custom post type](https://i.imgur.com/QwdI219.png)
 
 And you'll see a screen to configure the post type:
 

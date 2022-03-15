@@ -4,6 +4,8 @@ title: Creating custom fields
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 After creating custom post types and custom taxonomies, you'll need to add more details to your posts. For example, you'll need "date" and "location" for the "event" post type. Such details are called custom fields and that's the main thing that Meta Box does for you.
 
@@ -13,20 +15,10 @@ After creating custom post types and custom taxonomies, you'll need to add more 
 
 Custom fields, also called metadata, are arbitrary extra data attached to posts to provide more information about the posts.
 
-Custom fields are a very important feature of WordPress. Without custom fields, WordPress can't be used as a CMS. You'll see custom fields everywhere, for example:
+Custom fields are a very important feature of WordPres and make WordPress a powerful CMS. You'll see custom fields everywhere, for example:
 
 - On a hotel booking website: custom fields are used to add information for address, rating, or price
 - On an e-commerce website: they're used to add details for price, quantity, or size. FYI, WooCommerce uses custom fields to store these data.
-
-## What can custom fields do for you?
-
-Besides storing data, custom fields help you:
-
-- Creating a convenient form in the editing screen to let you (or your customers) enter data. Think about a form with text inputs, image upload, or editor. Without such forms, entering data is a disaster.
-- Showing more details for custom post types on the front end to make your custom post type page looks beautiful and not have the same look and feel as blog posts.
-- Searching and filtering posts by custom fields data. For example, you can search for products with a price < $1000.
-
-With Meta Box, working with custom fields is very easy. Let's start creating some custom fields!
 
 ## How to create custom fields?
 
@@ -42,7 +34,7 @@ Custom fields are organized in groups. Each group is displayed as a collapsible 
 
 To create a field group, go to **Meta Box » Custom Fields** and click **Add New**:
 
-<img alt="create a new field group" src="https://i.imgur.com/iSmSksO.png" width="400" height="371" />
+![create a new field group](https://i.imgur.com/iSmSksO.png")
 
 You'll see a screen to add fields to the group:
 
@@ -73,6 +65,133 @@ While working on fields, you can:
 - Delete or duplicate a field by clicking the icons in the field title bar.
 - Reveal field settings by clicking anywhere in the field title bar.
 - Reorder fields by drag and drop fields to the new positions.
+
+### Field types
+
+When adding a field, you need to know what type it is and how it works. Understanding that helps you choose the right type of field and, therefore, the right type of data that you want to add to your posts.
+
+Below is the list of supported field types in alphabet order with a brief description. The field type key is used for reference in code. For how do they look like and how to use them, please see details in the [Fields](/category/fields/) menu.
+
+<Tabs>
+
+  <TabItem value="basic" label="Basic" default>
+
+These are the basic and most used field types that don't require any extra library. The UI of these fields is WordPress-native.
+
+Type | Key | Description
+--- | --- | ---
+Checkbox | `checkbox` | A simple checkbox, usually used for Yes/No question
+Checkbox list | `checkbox_list` | A list of checkboxes where you can select multiple choices
+Radio | `radio` | Radio input where you can select only one choice
+Select | `select` | Select dropdown where you can select one or multiple choice
+Text | `text` | A single-line text input
+Textarea | `textarea` | A paragraph text input
+
+  </TabItem>
+
+  <TabItem value="advanced" label="Advanced">
+
+These are the advanced field types that usually need an additional library to provide a user-friendly UI.
+
+Type | Key | Description
+--- | --- | ---
+Background | `background` | Set background properties
+Button | `button` | A simple button, usually used for JavaScript triggers
+Button group | `button_group` | Select one or multiple choices by enabling button(s) from a group
+Color picker | `color` | Color picker
+Custom HTML | `custom_html` | Output custom HTML content
+Date picker | `date` | Date picker
+Datetime picker | `datetime` | Date and time picker
+Hidden | `hidden` | For storing a default hidden value
+Image Select | `image_select` | Select a choice with images
+Key Value | `key_value` | Add an unlimited group of key-value pairs
+Google maps | `map` | Google Maps
+oEmbed | `oembed` | Input for media from Youtube, Vimeo, and all [supported sites](https://wordpress.org/support/article/embeds/) by WordPress
+Open Street Maps | `osm` | Open Street Maps
+Password | `password` | For entering a password
+Select advanced | `select_advanced` | Beautiful select dropdown using [select2](https://select2.github.io) library
+Slider | `slider` | jQuery UI slider
+Switch | `switch` | On/off switch with iOS style
+Time picker | `time` | Time picker
+WYSIWYG editor | `wysiwyg` | WordPress editor
+
+Besides, some field types that are rarely used and we would not recommend using them because their UI is not as good and native as other fields.
+
+Type | Key | Description
+--- | --- | ---
+Autocomplete | `autocomplete` | Text input that uses an autocomplete library to suggest user input. Not recommended. Use the Select or Select advanced field type instead.
+Fieldset text | `fieldset_text` | Group of text inputs. Not recommended. Use the Group field type instead.
+Text list | `text_list` | Group of text inputs. Similar to Fieldset text, but has a different UI. Not recommended. Use the Group field type instead.
+
+  </TabItem>
+
+  <TabItem value="html5" label="HTML5">
+
+:::caution
+
+These are field types that use the built-in browser UI without extra libraries. The UI might be different across operating systems and browsers. Please use with care.
+
+:::
+
+Type | Key | Description
+--- | --- | ---
+Datetime local | `datetime-local` | Date and time picker. Not recommended, use Datetime picker field type instead.
+Email | `email` | For entering an email address with browser validation
+Month | `month` | Month picker
+Number | `number` | For entering a number with browser validation
+Range | `range` | A slider for selecting a number
+Phone number | `tel` | For entering a formatted phone number
+URL | `url` | An input for URL with browser validation
+Week | `week` | Week picker
+
+  </TabItem>
+
+  <TabItem value="wordpress" label="WordPress">
+
+These are field types that help you select a WordPress object.
+
+Type | Key | Description
+--- | --- | ---
+Post | `post` | For selecting posts
+Sidebar | `sidebar` | For selecting sidebars
+Taxonomy | `taxonomy` | For selecting taxonomy terms. Doesn't save term IDs in post meta, but set post terms.
+Taxonomy advanced | `taxonomy_advanced` | For selecting taxonomy terms and saving term IDs in post meta as a comma-separated string. It doesn't set post terms.
+User | `user` | For selecting users
+
+  </TabItem>
+
+  <TabItem value="upload" label="Upload">
+
+These are field types that help you upload media files.
+
+Type | Key | Description
+--- | --- | ---
+File | `file` | Simple file upload with default UI like `<input type="file" />`. Not recommended. Use File advanced instead.
+File advanced | `file_advanced` | Multiple file uploads with WordPress media popup
+File input | `file_input` | A text input for entering a file URL with the ability to select a file from the Media Library
+File upload | `file_upload` | Multiple file uploads with a drag and drop area
+Image | `image` | Simple image upload with default UI like `<input type="file" />`. Not recommended. Use Image advanced instead.
+Image advanced | `image_advanced` | Multiple image uploads with WordPress media popup, usually used for a gallery
+Image upload | `image_upload` | Multiple image uploads with a drag and drop area
+Single image | `single_image` | Single image upload with WordPress media popup
+Video | `video` | Multiple video uploads with WordPress media popup
+
+  </TabItem>
+
+  <TabItem value="layout" label="Layout">
+
+These are field types that help you organize and improve the UI of the fields.
+
+Type | Key | Description
+--- | --- | ---
+Divider | `divider` | Simple horizontal line
+Heading | `heading` | Heading text
+Group | `group` | For creating nesting groups of fields. Requires [Meta Box Group](/extensions/meta-box-group/) extension.
+Tab | `tab` | For organizing fields in tabs. Requires [Meta Box Tabs](/extensions/meta-box-tabs/) extension.
+
+  </TabItem>
+
+</Tabs>
 
 ### Field settings
 

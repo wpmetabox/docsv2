@@ -102,7 +102,6 @@ const sidebars = {
 				'integration',
 				'database',
 				'custom-field-type',
-				'html5-input-types',
 				'composer',
 				'actions',
 				'filters',

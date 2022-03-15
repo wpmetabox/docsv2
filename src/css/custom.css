@@ -96,17 +96,12 @@
 
 /* Content */
 .markdown img {
+  max-height: 400px;
   display: block;
   margin-inline: auto;
   margin-bottom: var(--ifm-leading);
   box-shadow: 0 0 2px rgba(0,0,0,.3);
-  border-radius: .25rem;
-}
-table {
-  display: table;
-  width: 100%;
-  font-size: 14px;
-  --ifm-table-cell-padding: 6px 12px;
+  border-radius: var(--ifm-global-radius);
 }
 code {
   border: none;
@@ -117,16 +112,52 @@ code {
 .yt-lite {
   margin-bottom: var(--ifm-paragraph-margin-bottom);
 }
+
+/* Table */
+table {
+  display: table;
+  width: 100%;
+  font-size: 14px;
+  --ifm-table-cell-padding: 6px 12px;
+}
+table th,
+table td {
+  border: none;
+}
+table tr {
+  border-top: none;
+  border-bottom: var(--ifm-table-border-width) solid var(--ifm-table-border-color);
+}
+table th {
+  text-align: left;
+}
+
+/* Tabs */
+.tabs {
+  gap: .25rem;
+  z-index: 2;
+  margin-bottom: -3px;
+}
 .tabs__item {
   --ifm-tabs-padding-vertical: 8px;
-}
-.tabs__item:not(.tabs__item--active):hover {
-  background: none;
-  color: var(--ifm-tabs-color-active);
-}
-.tabs__item--active {
+  --ifm-tabs-color-active: #fff;
+
+  border-radius: var(--ifm-global-radius) var(--ifm-global-radius) 0 0;
+  border-bottom: none;
   background: var(--ifm-hover-overlay);
 }
+.tabs__item--active,
+.tabs__item--active:hover {
+  background: var(--ifm-tabs-color-active-border);
+}
+.tabs-container > div {
+  margin: 0 !important;
+  padding: 1rem;
+  border: 3px solid var(--ifm-hover-overlay);
+  z-index: 1;
+}
+
+/* FAQ */
 .faqLink {
   color: var(--ifm-color-secondary-darkest);
   font-size: 14px;
