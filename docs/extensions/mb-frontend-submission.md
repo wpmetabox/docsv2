@@ -532,6 +532,24 @@ function your_prefix_init_session() {
 
 The snippet above will set the cookie setting `samesite=None` and `Security=true`. Note that you can only use it on the sites that use HTTPS (connection security) and on Chrome and Firefox. It doesn't work on Safari because Safari is blocking third party cookies. Setting `samesite=None` also might be a security issue, so please be sure you really want to do that. For more details, please [see this article](https://web.dev/samesite-cookies-explained/).
 
+## FAQ
+
+<FAQ question="How to add more field groups (meta boxes) to the frontend submission form?">
+
+You can add more field group IDs to the attribute `id` of the form shortcode and separate them by commas.
+
+`[mb_frontend_form id="meta-box-id-1,meta-box-id-2,meta-box-id-3" post_fields="title,content"]`
+
+</FAQ>
+
+<FAQ question="How to add relationships to the frontend submission form?">
+
+Each relationship box has the ID `{$relationship_id}_relationships_from` and `{$relationship_id}_relationships_to`. You can include these IDs in the form shortcode to show it on the front end.
+
+`[mb_frontend_form id="meta-box-id-1,posts-to-page_relationships_from" post_fields="title,content"]`
+
+</FAQ>
+
 ## Notes
 
 ### Styling
