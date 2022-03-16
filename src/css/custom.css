@@ -95,13 +95,16 @@
 }
 
 /* Content */
+.markdown img,
+.medium-zoom-image--opened {
+  box-shadow: 0 0 2px rgba(0,0,0,.3);
+  border-radius: var(--ifm-global-radius);
+}
 .markdown img {
   max-height: 400px;
   display: block;
   margin-inline: auto;
   margin-bottom: var(--ifm-leading);
-  box-shadow: 0 0 2px rgba(0,0,0,.3);
-  border-radius: var(--ifm-global-radius);
 }
 code {
   border: none;

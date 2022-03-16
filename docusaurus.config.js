@@ -18,6 +18,10 @@ const config = {
   projectName: 'docsv2', // Usually your repo name.
   titleDelimiter: '-',
 
+  plugins: [
+    'plugin-image-zoom'
+  ],
+
   presets: [
     [
       'classic',
