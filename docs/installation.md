@@ -33,6 +33,6 @@ Meta Box extensions are normal WordPress plugins, follow these steps to install 
 
 Now you have everything ready, you may be wondering what to learn next. We strongly recommend following step-by-step guides in the "Getting started" category.
 
-When you're familiar with Meta Box, you might want to go to the [Advanced](/category/advanced/) category. And if you need to know how a field or an extension work, please go to their docs under [Field types](/category/fields/) or [Extensions](/category/extensions/) categories. You can also search for the things you need, sometimes it helps you find the exact docs faster.
+When you're familiar with Meta Box, you might want to go to the [Advanced](/category/advanced/) category. And if you need to know how a field or an extension work, please go to their docs under [Field types](/fields/) or [Extensions](/category/extensions/) categories. You can also search for the things you need, sometimes it helps you find the exact docs faster.
 
 For now, as most WordPress websites require custom post types, let's [learn how to create them](/creating-post-types/).

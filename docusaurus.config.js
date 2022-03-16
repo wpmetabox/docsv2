@@ -19,7 +19,7 @@ const config = {
   titleDelimiter: '-',
 
   plugins: [
-    'plugin-image-zoom'
+    // 'plugin-image-zoom'
   ],
 
   presets: [
@@ -74,7 +74,8 @@ const config = {
             label: 'Getting Started',
           },
           {
-            to: 'category/fields',
+            type: 'doc',
+            docId: 'fields',
             position: 'left',
             label: 'Field types',
           },

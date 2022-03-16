@@ -1,6 +1,6 @@
 ---
 title: Field settings
-displayed_sidebar: sidebar
+displayed_sidebar: general
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -14,7 +14,7 @@ Each field contains settings to determine where and how data is loaded and saved
 
 When adding a field, you need to know what type it is and how it works. Understanding that helps you choose the right type of field and, therefore, the right type of data that you want to add to your posts.
 
-Below is the list of supported field types in alphabet order with a brief description. The field type key is used for reference in code. For how do they look like and how to use them, please see details in the [Fields](/category/fields/) menu.
+Below is the list of supported field types in alphabet order with a brief description. The field type key is used for reference in code. For how do they look like and how to use them, please see details in the [Field types](/fields/) menu.
 
 <Tabs>
 
