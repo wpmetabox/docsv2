@@ -28,36 +28,7 @@ const sidebars = {
 					id: 'creating-meta-boxes',
 					label: 'Custom fields',
 				},
-				{
-					type: 'category',
-					label: 'Displaying fields',
-					link: {
-						type: 'doc',
-						id: 'displaying-fields',
-					},
-					items: [
-						{
-							type: 'doc',
-							id: 'display-fields-with-views',
-							label: 'With views',
-						},
-						{
-							type: 'doc',
-							id: 'display-fields-with-code',
-							label: 'With code',
-						},
-						{
-							type: 'doc',
-							id: 'display-fields-with-beaver-builder',
-							label: 'With Beaver Builder',
-						},
-						{
-							type: 'doc',
-							id: 'display-fields-with-elementor',
-							label: 'With Elementor',
-						},
-					],
-				}
+				'displaying-fields',
 			],
 		},
 		'fields',

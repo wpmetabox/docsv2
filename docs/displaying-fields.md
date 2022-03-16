@@ -4,142 +4,210 @@ title: Displaying fields
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import TabItem from '@theme/TabItem';
+import FAQ from '@site/src/components/FAQ';
 
-There are 4 ways to display a field created by Meta Box:
+After having all the data for custom fields, it's time to show them on the front end.
 
-- **Using a page builder**: which helps you to select and display fields visually anywhere on your site when the page builder is active.
-- **Using MB Views**: a powerful and flexible way to select and display fields with Twig (a template engine). It supports conditions, loops, and shortcode that can be embedded anywhere.
-- **Using code** via helper functions: the best way to display fields if you're familiar with editing theme/plugin PHP files.
-- **Using shortcode**
+We'll display the event details for the event post type that we created in the previous steps. We'll use the default theme Twenty Twenty-Two for our site. This is the single event page on the front end, and we'll display the event details below the event description:
 
-## Using a page builder
+![event page](https://i.imgur.com/rSPicJm.png)
 
-If you use a page builder like Elementor to build your website, then using it to display Meta Box fields is the most intuitive way. Meta Box integrates well with:
+## Displaying fields with MB Views
 
-- Elementor: via [our free integration extension](https://metabox.io/plugins/mb-elementor-integrator/)
-- Beaver Builder: via [our free integration extension](https://metabox.io/plugins/meta-box-beaver-themer-integrator/)
-- Brizy: official support by Brizy
-- Bricks: official support by Bricks
+[MB Views](/extensions/mb-views/) is an extension that offers a powerful and flexible way to select and display fields. Using MB Views to display fields is our recommended way.
 
-For other page builders like Oxygen and Divi, you can use their existing module to display custom fields to display Meta Box fields.
+:::info
 
-Here is a video tutorial on how to use Elementor to display Meta Box's fields:
-
-<LiteYouTubeEmbed id='NzR9lii2S30' />
-
-## Using MB Views
-
-[MB Views](/extensions/mb-views/) helps you to select fields and output them into an HTML template. You can also add your own CSS/JavaScript to style fields the way you want.
-
-With MB Views, you have full control of the HTML output and the location (on which page) that views render.
-
-Here is a video tutorial on using MB Views:
-
-<LiteYouTubeEmbed id='4udvu8PqfkE' />
-
-For more details on using MB Views, please see [this documentation](/extensions/mb-views/).
-
-## Using code
-
-To get custom field value in WordPress or display it in your theme, use the `rwmb_meta` helper function. Copy the following code and paste it in your theme's template file:
-
-```php
-$value = rwmb_meta( $field_id, $args = [], $post_id = null );
-echo $value;
-```
-
-You can put it in the theme `single.php` or `template-parts/content.php` file, depending on your [theme structure](https://developer.wordpress.org/themes/basics/template-files/).
-
-The function accepts 3 arguments:
-
-Name|Description
----|---
-`$field_id`|The custom field ID. Required.
-`$args`|Extra arguments for some custom field types (image, file, etc.). Optional. Can be array or a string in format `param1=value1&param2=value2`. See more details in the custom field types (on the left menu, section Fields). Optional.
-`$post_id`|Post ID that custom field gets from. Optional. If not present, the current post ID is used.
-
-Return value:
-
-- If the custom field has a single value (not `multiple` nor `clone`), then the function returns that value.
-- If the custom field has multiple values (`multiple` or `clone`), then the function returns an array of values.
-
-This is an example of how to display the date of birth (which is a `date` field):
-
-```php
-echo rwmb_meta( 'dob' );
-```
-
-This is an example how to display list of interests (a `checkbox_list` field):
-
-```php
-$interests = rwmb_meta( 'interests' );
-foreach ( $interests as $interest ) {
-    echo $interest;
-}
-```
-
-:::info Returned value format
-
-Depends on the custom field types, the returned value can be different. Please refer to each field type in the [Fields](/fields/) section for more details.
+MB Views is a premium extension and is available for [**Ultimate** and **Lifetime** licenses](https://metabox.io/pricing/) only (not the **Basic** license). It's already bundled in the Meta Box AIO so you can use it right away. If you don't own the right license, consider purchasing one. However, you can display fields code. See the sections below for more information.
 
 :::
 
-### Helper functions
+To begin, we need to create a "view". A "view" is a template where we show our fields. To create a view, go to **Meta Box » Views** and click **Add New** button:
 
-Besides `rwmb_meta`, Meta Box also provides 2 more helper functions that work with the custom field value:
+![create a new view](https://i.imgur.com/xpQtm46.png)
 
-- [rwmb_meta()](/rwmb-meta/)
-- [rwmb_the_value()](/rwmb-the-value/)
-- [rwmb_get_value()](/rwmb-get-value/)
+On the edit view screen, enter the view title. It's used for reference only and is not displayed on the front end. There are 2 sections that you need to pay attention to: the template for inserting fields and the settings.
 
-In order to understand the usage of helper functions and the difference between them, please see this video tutorial:
+### Inserting fields into the template
 
-<LiteYouTubeEmbed id='NFZE4Sxi2p4' />
+In the main area, you'll see an editor with 3 tabs:
 
-### Undefined function error
+- **Template**: for inserting (or entering) HTML and fields. Most of the time we'll work with this.
+- **CSS**: for entering custom CSS for the view
+- **JavaScript**: for entering custom JavaScript for the view
 
-If you're using `rwmb_meta` in your theme, there may be a situation when an admin accidentally deactivates the Meta Box plugin and you will see the error "Undefined function rwmb_meta..." and your site will be broken.
+To insert a field to the template, click the **Insert Field** button, which opens a panel with all the available fields:
 
-To prevent this problem, a simple fix for that is adding the following code into your theme's `functions.php` file:
+![insert a field in a view](https://i.imgur.com/JaL7jSk.png)
+
+You'll see other WordPress fields as well such as post title or post content. In our case, we only need to insert our custom fields, so click on **Date and time** field and you'll see a popup asking for the date format:
+
+![selecting a date format](https://i.imgur.com/OPXkorx.png)
+
+Simply choose a date format from the dropdown and click the **Insert** button to insert the field to the template. After that, you'll see the template now has the following text:
+
+```html
+{{ post.datetime | date( 'F j, Y' ) }}
+```
+
+That's **the value of the field** which will be displayed on the front end. However, displaying only text might be confusing, so we'll a label for it by adding the `<strong>Date and time:</strong>` before the text and wrap it in a paragraph (between `<p>` and `</p>` tags) to add some space. The template now looks like:
+
+```html
+<p>
+	<strong>Date and time:</strong> {{ post.datetime | date( 'F j, Y' ) }}
+</p>
+```
+
+![html in the view template](https://i.imgur.com/CUJaikq.png)
+
+:::tip
+
+You can use any HTML tags and/or WordPress shortcodes in the view template.
+
+:::
+
+Now repeat the process for other fields: location and map. For map, as it's displayed as a Open Street Maps, we'll need change the HTML a little bit to put it below the label:
+
+```html
+<p>
+	<strong>Date and time:</strong> {{ post.datetime | date( 'F j, Y' ) }}
+</p>
+
+<p>
+	<strong>Location:</strong> {{ post.location }}
+</p>
+
+<p>
+	<strong>Map:</strong>
+</p>
+
+{{ post.map.rendered }}
+```
+
+![template for the event post type](https://i.imgur.com/TeWN22i.png)
+
+### Settings
+
+Now you need to set up the view to display below the post content of the event page.
+
+- In the **Settings** box, select **Singular** for **Type**, which means the view will display on a singular page.
+- Then in the **Location**, select the **Event** and select **All** events.
+- Choose **Render for only the post content area**
+- And choose to render the view **After the post content**
+
+![view settings](https://i.imgur.com/yFB85Qx.png)
+
+Finally, click the **Publish** button to finish.
+
+Now go to the event page on the front end and you'll see the custom fields that we created:
+
+![view event details on the front end](https://i.imgur.com/iOAEwBT.png)
+
+### Video tutorial
+
+This is a video tutorial on using views to design the archive and single event page. It's more advanced and verbose than the text version above:
+
+<LiteYouTubeEmbed id='4udvu8PqfkE' />
+
+## Displaying fields with code
+
+If you're a developer and familiar with changing template file with PHP code, you can use Meta Box helper functions to display fields:
+
+- [`rwmb_get_value()`](/rwmb-get-value/): to get a field value as a variable
+- [`rwmb_the_field()`](/rwmb-the-value/): to display a field
+
+Open your template file for the single event content. Usually, it's `template-parts/content.php`, `single-event.php` or `single.php` file, depending on your theme structure. Then add the following code below the content area:
 
 ```php
-if ( ! function_exists( 'rwmb_meta' ) ) {
-    function rwmb_meta( $key, $args = [], $post_id = null ) {
+<?php
+/**
+ * Template part for displaying single post content
+ */
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <header class="entry-header alignwide">
+                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+        </header>
+
+        <div class="entry-content">
+                <?php the_content(); ?>
+
+                <p>
+                    <strong>Date and time:</strong> <?php rwmb_the_value( 'datetime' ) ?>
+                </p>
+                <p>
+                    <strong>Location:</strong> <?php rwmb_the_value( 'location' ) ?>
+                </p>
+                <p>
+                    <strong>Map:</strong>
+                </p>
+                <?php rwmb_the_value( 'map' ) ?>
+                ?>
+        </div>
+</article>
+```
+
+:::caution Block themes
+
+For block themes, everything is blocks and there's no PHP template files. In that case, please use MB Views as described above.
+
+:::
+
+Both functions accept the following parameters:
+
+Name|Description
+---|---
+`$field_id`|The field ID. Required.
+`$args`|Extra arguments for some field types (image, file, etc.). Can be array or a string in format `param1=value1&param2=value2`. See more details in field types. Optional.
+`$object_id`|Object ID that custom fields are got from. Optional. If not present, the current post ID is used.
+`$echo`|Echo the HTML output (`true` - default) or return it (`false`). Applied only for `rwmb_the_value()` function.
+
+
+## FAQ
+
+<FAQ question="Why does my site crash when I deactivate Meta Box?">
+
+If you're using our helper functions in your theme, then they become unavailable when Meta Box is deactivated. You can fix that by going to the admin area » Plugins and re-activate Meta Box.
+
+Alternatively, you can add the following code into your theme's `functions.php` file to make the error go away, however, the custom fields won't display, either.
+
+```php
+if ( ! function_exists( 'rwmb_the_value' ) ) {
+    function rwmb_the_value( $key, $args = [], $post_id = null ) {
+        return null;
+    }
+}
+if ( ! function_exists( 'rwmb_get_value' ) ) {
+    function rwmb_get_value( $key, $args = [], $post_id = null ) {
         return null;
     }
 }
 ```
 
-### Note
+</FAQ>
 
-The `rwmb_meta` function is a wrapper of `get_post_meta` with some additions to match [the way the plugin saves custom fields in the database](/database/). It also adds some additional information to the returned value (such as image info) to make it's easier for developers.
+<FAQ question="Can I use WordPress's get_post_meta() function to get custom field value?">
 
-However, you can always use `get_post_meta` to get the custom field value stored in the database. `print_r` might help you to see how the custom field value is formatted.
+Absolutely. Our helper function is just a wrapper of WordPress's `get_post_meta` function.
 
-If the helper functions don't return the correct value, then please check your code that registers meta boxes. Do you register meta boxes under some conditions like `is_admin()` or inside another hook? Do you put this snippet:
+</FAQ>
 
-```php
-add_filter( 'rwmb_meta_boxes', 'your_function' );
-```
+<FAQ question="Why don't I see values of custom fields?">
 
-right in your theme's `functions.php` file or in your plugin file without any condition?
+There are some cases where you register custom fields conditionally or only for the back end like you wrap the code under `is_admin()`. In that case, make sure you remove the condition and register custom fields for both the back end and front end.
 
-If you do, then please remove all the conditions. The conditions might prevent the plugin to get the field settings in the frontend. And in that case, it fallback to just `get_post_meta()`, which might return an unexpected value (single value for checkbox list, for example).
+</FAQ>
 
+## Next steps
 
-## Using our shortcode
+Now you know all the basics for working with custom fields in Meta Box. Depending on your needs, I'd suggest you take a look at:
 
-To make it easy for users to insert custom fields' values inside post content/widget or anywhere, Meta Box provides a shortcode to help you get and display field values.
+- [Advanced topics](/category/advanced/)
+- [Field types](/fields/)
+- And docs for [extensions](/category/extensions/)
 
-To display a field value for the curren post:
+If you have any questions, feel free to ask us in the [support forum](https://metabox.io/support/) or discuss in the [Facebook community group](https://www.facebook.com/groups/metaboxusers).
 
-```
-[rwmb_meta id="field_id"]
-```
-
-To display a field value for a specific post:
-
-[rwmb_meta id="field_id" object_id="123"]
-```
-
-The shortcode works similar to the `rwmb_meta` helper function above. For more details about the shortcode, please see [this documentation](/shortcode/).
+Thanks for using Meta Box and happy building websites!
