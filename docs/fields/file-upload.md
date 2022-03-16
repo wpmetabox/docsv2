@@ -83,3 +83,39 @@ function prefix_change_add_string() {
     return '+ New File';
 }
 ```
+## Bind events
+
+You can bind various events during uploading through data-uploader. Need to setTimeout the binding code.
+
+Filter|Description
+---|---|---
+`Init`|Fires when the current uploader has been initialized.
+`PostInit`|Fires after the init event incase you need to perform actions there.
+`Refresh`|Fires when the silverlight/flash or other shim needs to move.
+`Browse`|Fires when browse_button is clicked and browse dialog shows.
+`BeforeUpload`|Fires just before a file is uploaded. Can be used to cancel the upload for the specified file by returning false from the handler.
+`UploadFile`|Fires when a file is to be uploaded by the runtime.
+`UploadProgress`|Fires while a file is being uploaded. Use this event to update the current file upload progress.
+`BeforeChunkUpload`|Fires just before a chunk is uploaded. This event enables you to override settings on the uploader instance before the chunk is uploaded.
+`ChunkUploaded`|Fires when file chunk is uploaded.
+`FileUploaded`|Fires when a file is successfully uploaded.
+`UploadComplete`|Fires when all files in a queue are uploaded.
+`Error`|Fires when a error occurs.
+`Destroy`|Fires when destroy method is called.
+
+## Sample code
+
+```php
+jQuery( document ).ready( function( jQuery ){
+    setTimeout(function() {
+        var myUploader =  jQuery( 'input.rwmb-file_upload.rwmb-media' ).data('uploader');
+
+        myUploader.uploader.bind('FileUploaded', function(up, file, res)
+        {
+            console.log( 'File Uploaded' );
+        });
+
+    }, 1000);
+
+});
+```
