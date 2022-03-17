@@ -131,13 +131,16 @@ Read more about [rwmb_get_value()](/rwmb-get-value/).
 
 ### Outputting a map in a group
 
-If you have a map inside a cloneable/non-cloneable group, then the helper functions above doesn't work. In that case, you can use a helper function in the plugin to show the map.
+If you have a map inside a cloneable/non-cloneable group, then the helper functions above doesn't work. In that case, you can get the group ID first then pass the map ID and the API key to the helper function `RWMB_Map_Field::render_map()` to show the map.
 
 ```php
 $group_values = rwmb_meta( 'group_id' );
+$args = array(
+    'api_key' => 'your-API-key'
+);
 // If group is cloneable
 foreach ( $group_values as $group_value ) {
-    echo RWMB_Map_Field::render_map( $group_value['map_id'] );
+    echo RWMB_Map_Field::render_map( $group_value['map_id'], $args );
 }
 ```
 
