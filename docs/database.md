@@ -2,11 +2,12 @@
 title: Database
 ---
 
-Wondering how the Meta Box plugin stores custom field value in the database? Understanding this can help you get the custom field value easily and understand the returned value from `get_post_meta` or [helper functions](/displaying-fields/).
+Wondering how the Meta Box stores custom fields in the database? Understanding this can help you get the custom fields easily and understand the returned value from `get_post_meta` or helper functions.
 
 ## How fields are saved in the database?
 
-- If you create a field for posts, terms, or users, the field `id` will be saved as the `meta_key` and the value will be saved as the `meta_value` in the meta table (`wp_postmeta`, `wp_termmeta` or `wp_usermeta` accordingly).
+In general, each custom field is saved as **one row** in the database, where the field `id` will be the `meta_key` and the value will be the `meta_value` in the meta table. This is the same way that WordPress saves data with `add_post_meta` or `update_post_meta` function.
+
 - If you use [custom tables](/extensions/mb-custom-table/), the field value will be saved in the column with the name equal to the field `id`.
 - If you create a field for a [settings page](/extensions/mb-settings-page/), the whole data for the settings page will be saved as an array in an option in the format of `['field_id' => 'field_value']`.
 
@@ -23,7 +24,7 @@ This way you can use `add_post_meta` or `update_post_meta` to update meta values
 
 ## Cloneable fields
 
-For cloneable fields, values are stored as a serialized array in a single row in the database, unless you set `'clone_as_multiple' => true` for the field.
+For cloneable fields, values are stored as a serialized array in a single row in the database, unless you set `'clone_as_multiple' => true`.
 
 Using serialized data has some benefits:
 
@@ -51,24 +52,15 @@ $query = new WP_Query( $args );
 
 Then it doesn't work.
 
-To solve this problem, you need to set `'clone_as_multiple' => true` in the field's settings array:
+To solve this problem, you need to enable the **Clone as multiple** settings for the field.
 
-```php
-'clone'             => true, // Enable clone
-'clone_as_multiple' => true, // Save clones as multiple rows
-```
+With that, Meta Box will **save cloneable values in multiple rows in the database**, where each row contains one value. That means if `start_date` has 2 values `['2019-05-01', '2019-04-30']`, it will be saved in 2 rows in the database, one for `2019-05-01` and one for `2019-04-30`. The data is **not serialized** anymore. And thus, your above query will work!
 
-With that, Meta Box will **save cloneable values in multiple rows in the database**, where each row contains one value. That means if `start_date` has 2 values `['2019-05-01', '2019-04-30']`, it will be saved in 2 rows in the database, one for `2019-05-01` and one for `2019-04-30`. The data is **not serialized** anymore. And because of that, your above query will work!
+:::info
 
-## Field value
+Although you can use `get_post_meta` to retrieve meta value, it's recommended to [use helper functions](/displaying-fields/#displaying-fields-with-code) to get the value and display it in the frontend. The helper function takes care of all the logic above and returns to you the needed data in a correct format.
 
-For normal fields, the saved value in the database is the value entered or selected by users. But for some specific fields, the stored values is not as obvious as that (for example, `checkbox` saves the checked/unchecked status as `1` and `0`). Please see more details in each field in the left menu, section Fields.
-
-## Notes
-
-Although you can use `get_post_meta` to retrieve meta value, it's recommended to [use helper functions](/displaying-fields/) to get the value and display it in the frontend. The helper function takes care of all the logic above and returns to you the needed data in a correct format.
-
-To understand how the value is stored in the database, please use `print_r` function, like this:
+You can also use `print_r` function to show the value for debugging:
 
 ```php
 $value = get_post_meta( get_the_ID(), 'field_id', true ); // Last param should be 'false' if field is multiple
@@ -76,3 +68,4 @@ echo '<pre>';
 print_r( $value );
 echo '</pre>';
 ```
+:::

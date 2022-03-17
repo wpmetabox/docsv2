@@ -210,10 +210,10 @@ Absolutely. We have official support for [Beaver Builder](/extensions/mb-beaver-
 
 Now you know all the basics for working with custom fields in Meta Box. Depending on your needs, I'd suggest you take a look at:
 
-- [Advanced topics](/category/advanced/)
-- [Field types](/fields/)
-- And docs for [extensions](/category/extensions/)
+- [Advanced topics](/category/advanced/), or
+- Explore the [field type gallery](/fields/) to know which fields are suitable for your needs, or
+- Explore more features provided by [extensions](/category/extensions/)
 
-If you have any questions, feel free to ask us in the [support forum](https://metabox.io/support/) or discuss in the [Facebook community group](https://www.facebook.com/groups/metaboxusers).
+If you have any questions, feel free to ask in the [support forum](https://metabox.io/support/) or discuss in the [Facebook community group](https://www.facebook.com/groups/metaboxusers).
 
 Thanks for using Meta Box and happy building websites!
