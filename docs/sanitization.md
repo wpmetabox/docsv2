@@ -2,9 +2,11 @@
 title: Sanitization
 ---
 
+import FAQ from '@site/src/components/FAQ';
+
 To ensure the user input is safe to save to the database, Meta Box provides a mechanism to sanitize fields' values. The sanitization is automatically applied for all built-in field types. For some fields such as select or radio, Meta Box also validates the submitted value to ensure it's a valid value (e.g. available in the field options).
 
-The sanitization is applied for both single and cloneable fields. With cloneable fields, the sanitization is applied for each cloned value.
+The sanitization is applied for both single and cloneable fields. With cloneable fields, sanitization is applied for each cloned value.
 
 ## Default sanitize callbacks
 
@@ -12,17 +14,50 @@ We try to provide appropriate callbacks for built-in field types and use built-i
 
 To see the list of default sanitize callbacks, please [see the plugin source code](https://github.com/wpmetabox/meta-box/blob/master/inc/sanitizer.php#L50).
 
-Quick notes:
+:::caution
 
-- `textarea`: the default callback is `wp_kses_post`. If you want to enter scripts and styles in a `textarea` field (like you make an option in [a settings page](/extensions/mb-settings-page/) that allows users to enter Google Analytics code), then you need to use a custom sanitize callback.
-- Choice fields (`select`, `radio`, `button_group`, etc.): a custom callback is used which validates the input to make sure it's a valid value (e.g. available in the field options).
-- [Group field](/extensions/meta-box-group/) is not sanitized due to its complexity.
+- **Textarea field**: Meta Box **removes all scripts and iframes** from the value. If you want to enter scripts (like Google Analytics) or embed videos, then you need to disable sanitization. See below for details.
+- **Choice fields**: Meta Box validates the input to make sure it's in the field options.
+- **[Groups](/extensions/meta-box-group/)** are not sanitized due to their complexity.
+
+:::
+
+## Bypass the sanitization
+
+If you don't want to sanitize the input value for a specific field (we don't encourage this, obviously), then go to the **Advanced** tab and set **Custom sanitize callback** to "none":
+
+![disable sanitization](https://i.imgur.com/hqzOpTt.png)
+
+In this case, whatever users input will be saved.
+
+:::info
+
+You need the **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core, to follow this instruction. If you're not a premium user, consider [purchasing a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See the sections below for more information.
+
+:::
+
+If you use code, then set `'sanitize_callback' => 'none'` in the field settings:
+
+```php
+[
+    'type'              => 'text',
+    'id'                => 'amount',
+    'name'              => 'Amount',
+    // highlight-next-line
+    'sanitize_callback' => 'none',
+]
+```
+
 
 ## Custom sanitize callback
 
-To provide a custom sanitize callback for a field, please pass [a callback](https://secure.php.net/manual/en/language.types.callable.php) to the `sanitize_callback` parameter.
+To provide a custom sanitize callback for a field, please enter a function name to the **Custom sanitize callback** settings in the **Advanced** tab when editing a field.
 
-For example, the code below auto add a currency symbol "$" to a text field if it's missed:
+![custom sanitizate callback](https://i.imgur.com/NnS4XAC.png)
+
+And don't forget to define the function in your theme or plugin.
+
+The code below uses code to define a custom sanitize callback that auto add a currency symbol "$" to a text field if it's missed:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
@@ -33,120 +68,37 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
                 'type'              => 'text',
                 'id'                => 'amount',
                 'name'              => 'Amount',
-                'sanitize_callback' => 'prefix_sanitize_money_field',
+                // highlight-next-line
+                'sanitize_callback' => 'my_sanitize_money_field',
             ]
         ],
     ];
     return $meta_boxes;
 } );
 
-function prefix_sanitize_money_field( $value ) {
+// highlight-start
+function my_sanitize_money_field( $value, $field, $old_value, $object_id ) {
     if ( 0 !== strpos( $value, '$' ) ) {
         $value = '$' . $value;
     }
     return $value;
 }
+// highlight-end
 ```
 
 The sanitize callback is passed 4 parameters as follows:
 
-- `$value`: The submitted value
-- `$field`: The field settings
-- `$old_value`: The old value which is in the database
-- `$object_id`: The current object ID
+Parameter|Description
+---|---
+`$value` | The submitted value
+`$field` | The field settings
+`$old_value` | The old value which is in the database
+`$object_id` | The current object ID
 
-So your sanitize callback might look like this:
+## FAQ
 
-```php
-function prefix_custom_sanitize_callback( $value, $field, $old_value, $object_id ) {
-    // Do something with $value.
+<FAQ question="Why doesn't my textarea field save values?">
 
-    return $value;
-}
-```
+Probably you are trying to save a script like Google Analytics or an embeded video. Meta Box removes all these things during sanitization. To save them, please disable sanitization for the field. See the "Bypass the sanitization" section for details.
 
-If you don't need all parameters, you can just omit them from the function param list, like we did in the example with the money field above.
-
-## Bypass the sanitization
-
-If you don't want to sanitize the input value for a specific field (we don't encourage this, obviously), then simply set the `sanitize_callback` to `none`:
-
-```php
-[
-    'type'              => 'text',
-    'id'                => 'amount',
-    'name'              => 'Amount',
-    'sanitize_callback' => 'none',
-]
-```
-
-In this case, whatever users input will be saved.
-
-:::tip Disable sanitization in Meta Box Builder
-
-If you're using [Meta Box Builder](/extensions/meta-box-builder/), please go to **Advanced** tab and set **Custom sanitize callback** to `none`. See the screenshot below:
-
-![disable sanitization in the builder](https://i.imgur.com/hqzOpTt.png)
-
-:::
-
-## Sanitize custom field types
-
-If you create [a custom field type](/custom-field-type/), then you need to implement a default sanitize callback for that type.
-
-To do this, please set the `sanitize_callback` param for the field in the `normalize` method as follows:
-
-```php
-class RWMB_MyType_Field extends RWMB_Field {
-    public static function normalize( $field ) {
-        $field = wp_parse_args( $field, array(
-            'sanitize_callback' => [ __CLASS__, 'custom_sanitize' ],
-        ) );
-        $field = parent::normalize( $field );
-        return $field;
-    }
-
-    public static function custom_sanitize( $value, $field, $old_value, $object_id ) {
-        // Do something with $value.
-        return $value;
-    }
-}
-```
-
-Note that, the sanitize callback don't need to use all of the 4 passed parameters.
-
-This is an example of a custom `money` field, where the value must have "$" prefixed:
-
-```php
-class RWMB_Money_Field extends RWMB_Text_Field {
-    public static function normalize( $field ) {
-        $field = wp_parse_args( $field, array(
-            'sanitize_callback' => [ __CLASS__, 'custom_sanitize' ], // Specify a custom sanitize callback.
-        ) );
-        $field = parent::normalize( $field );
-        $field['attributes']['type'] = 'text'; // Set the `type` attribute to `text` to let users enter the data.
-        return $field;
-    }
-
-    public static function custom_sanitize( $value ) {
-        if ( 0 !== strpos( $value, '$' ) ) {
-            $value = '$' . $value;
-        }
-        return $value;
-    }
-}
-
-add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
-    $meta_boxes[] = [
-        'title' => 'Test Sanitization Money Field',
-        'fields' => [
-            [
-                'type' => 'money', // Set the field type to the custom 'money' type.
-                'id'   => 'amount',
-                'name' => 'Amount',
-            ]
-        ],
-    ];
-    return $meta_boxes;
-} );
-```
+</FAQ>
