@@ -550,6 +550,14 @@ Each relationship box has the ID `{$relationship_id}_relationships_from` and `{$
 
 </FAQ>
 
+<FAQ question="Why does frontend dashoard not display the post type?">
+
+You need to add the attribute `post_type` to the frontend submission shortcode
+
+`[mb_frontend_form id="meta-box-id" post_fields="title,content" post_type="post-type-slug"]`
+
+</FAQ>
+
 ## Notes
 
 ### Styling
