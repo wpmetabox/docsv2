@@ -71,7 +71,7 @@ const config = {
           {
             to: 'category/getting-started',
             position: 'left',
-            label: 'Getting Started',
+            label: 'Getting started',
           },
           {
             type: 'doc',

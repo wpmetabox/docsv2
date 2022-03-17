@@ -5,7 +5,7 @@ const sidebars = {
 	general: [
 		{
 			type: 'category',
-			label: 'Getting Started',
+			label: 'Getting started',
 			link: {
 				type: 'generated-index',
 				description: 'Learn about the most important Meta Box concepts through step-by-step guides. Highly recommended to go through everything from the start to the end.',

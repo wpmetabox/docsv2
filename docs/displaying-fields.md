@@ -200,6 +200,12 @@ There are some cases where you register custom fields conditionally or only for 
 
 </FAQ>
 
+<FAQ question="Can I use a page builder to show Meta Box fields?">
+
+Absolutely. We have official support for [Beaver Builder](/extensions/mb-beaver-themer-integrator/) and [Elementor](/extensions/mb-elementor/). Some page builders already have built-in support for Meta Box like Oxygen Builder, Bricks, and Brizy. See the [list of compatible plugins](/compatibility/) and refer to their docs for how to use them with Meta Box.
+
+</FAQ>
+
 ## Next steps
 
 Now you know all the basics for working with custom fields in Meta Box. Depending on your needs, I'd suggest you take a look at:
