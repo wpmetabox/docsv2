@@ -171,6 +171,9 @@ table th {
 .faqLink:hover {
   text-decoration: none;
 }
+summary {
+  font-weight: 700;
+}
 
 /* Fields thumbnails */
 .thumbs {
