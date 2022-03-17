@@ -20,11 +20,6 @@ const sidebars = {
 				},
 				{
 					type: 'doc',
-					id: 'creating-taxonomies',
-					label: 'Taxonomies',
-				},
-				{
-					type: 'doc',
 					id: 'creating-meta-boxes',
 					label: 'Custom fields',
 				},
