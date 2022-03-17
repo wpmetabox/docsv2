@@ -67,6 +67,7 @@ const sidebars = {
 			label: 'Tutorials',
 			items: [
 				'creating-fields-with-code',
+				'displaying-fields-with-code',
 			],
 		},
 		{

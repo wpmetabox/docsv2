@@ -51,16 +51,111 @@ Now go to your post type and add a new post, you'll see the field group with cus
 
 :::info Do you know?
 
-The technical name of field groups in WordPress is "meta box". You'll see them via WordPress functions like `add_meta_box` or `remove_meta_box`. That's why we name our brand **Meta Box**!
+The technical term of field groups in WordPress is "meta box". You'll see them via WordPress functions like `add_meta_box` or `remove_meta_box`. That's why we name our brand **Meta Box**!
 
 :::
 
 :::tip
 
-You can also [create custom fields with code](/creating-custom-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
+You can also [create custom fields with code](/creating-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
+
+:::
+
+## Displaying fields
+
+After having all the data for custom fields, it's time to show them on the front end.
+
+We'll display the event details for the event post type that we created in the previous steps. We'll use the default theme Twenty Twenty-Two for our site. This is the single event page on the front end, and we'll display the event details below the event description:
+
+![event page](https://i.imgur.com/rSPicJm.png)
+
+To do that, we'll use the [MB Views](/extensions/mb-views/) extension, which offers a powerful and flexible way to select and display fields.
+
+:::info
+
+MB Views is a premium extension and is available for [**Ultimate** and **Lifetime** licenses](https://metabox.io/pricing/) only (not the **Basic** license). It's already bundled in the Meta Box AIO so you can use it right away. If you don't own the right license, consider purchasing one.
+
+:::
+
+To begin, we need to create a "view". A "view" is a template where we show our fields. To create a view, go to **Meta Box » Views** and click **Add New** button.
+
+On the edit view screen, enter the view title. To insert a field to the template, click the **Insert Field** button, which opens a panel with all the available fields:
+
+![insert a field in a view](https://i.imgur.com/tUtIqmp.png)
+
+You'll see other WordPress fields as well such as post title or post content. In our case, we only need to insert our custom fields, so click on **Date and time** field and you'll see a popup asking for the date format:
+
+![selecting a date format](https://i.imgur.com/OPXkorx.png)
+
+Simply choose a date format from the dropdown and click the **Insert** button to insert the field to the template. After that, you'll see the template now has the following text:
+
+```html
+{{ post.datetime | date( 'F j, Y' ) }}
+```
+
+That's the value of the field which will be displayed on the front end. However, displaying only text might be confusing, so we'll a label for it by adding the `<strong>Date and time:</strong>` before the text and wrap it in a paragraph (between `<p>` and `</p>` tags) to add some space. The template now looks like:
+
+```html
+<p>
+	<strong>Date and time:</strong> {{ post.datetime | date( 'F j, Y' ) }}
+</p>
+```
+
+:::tip
+
+You can use any HTML tags and/or WordPress shortcodes in the view template.
+
+:::
+
+Now repeat the process for other fields: location and map. For map, as it's displayed as a Open Street Maps, we'll need change the HTML a little bit to put it below the label:
+
+```html
+<p>
+	<strong>Date and time:</strong> {{ post.datetime | date( 'F j, Y' ) }}
+</p>
+
+<p>
+	<strong>Location:</strong> {{ post.location }}
+</p>
+
+<p>
+	<strong>Map:</strong>
+</p>
+
+{{ post.map.rendered }}
+```
+
+![template for the event post type](https://i.imgur.com/TeWN22i.png)
+
+Now you need to set up the view to display below the post content of the event page.
+
+- In the **Settings** box, select **Singular** for **Type**, which means the view will display on a singular page.
+- Then in the **Location**, select the **Event** and select **All** events.
+- Choose **Render for only the post content area**
+- And choose to render the view **After the post content**
+
+![view settings](https://i.imgur.com/yFB85Qx.png)
+
+Finally, click the **Publish** button to finish.
+
+Now go to the event page on the front end and you'll see the custom fields that we created:
+
+![view event details on the front end](https://i.imgur.com/iOAEwBT.png)
+
+:::tip
+
+You can also [display custom fields with code](/displaying-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
 
 :::
 
 ## Next steps
 
-After having all the necessary data, we'll need to [show them on the front end](/displaying-fields/).
+Now you know all the basics for working with custom fields in Meta Box. Depending on your needs, I'd suggest you take a look at:
+
+- [Advanced topics](/category/advanced/), or
+- Explore the [field type gallery](/fields/) to know which fields are suitable for your needs, or
+- Explore more features provided by [extensions](/category/extensions/)
+
+If you have any questions, feel free to ask in the [support forum](https://metabox.io/support/) or discuss in the [Facebook community group](https://www.facebook.com/groups/metaboxusers).
+
+Thanks for using Meta Box and happy building websites!

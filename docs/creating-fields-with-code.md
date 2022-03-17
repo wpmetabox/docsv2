@@ -1,6 +1,5 @@
 ---
 title: Creating fields with code
-displayed_sidebar: general
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
