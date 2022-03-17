@@ -13,17 +13,8 @@ const sidebars = {
 			items: [
 				'introduction',
 				'installation',
-				{
-					type: 'doc',
-					id: 'creating-post-types',
-					label: 'Post types',
-				},
-				{
-					type: 'doc',
-					id: 'creating-meta-boxes',
-					label: 'Custom fields',
-				},
-				'displaying-fields',
+				'custom-post-types',
+				'custom-fields',
 			],
 		},
 		'fields',
@@ -69,6 +60,13 @@ const sidebars = {
 						'rwmb-get-registry',
 					],
 				}
+			],
+		},
+		{
+			type: 'category',
+			label: 'Tutorials',
+			items: [
+				'creating-fields-with-code',
 			],
 		},
 		{

@@ -5,25 +5,17 @@ title: Meta Box Builder
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Meta Box Builder creates an UI for you to add and manage your custom fields, [settings pages](#creating-settings-pages) or [relationships](#creating-relationships).
+This extension helps you create custom fields, settings pages, and relationships  with a user-friendly interface.
 
-![meta box builder ui](https://i.imgur.com/DQBeWJN.png)
+## Creating custom fields
 
-## Video tutorial
+Custom fields are organized in groups. Each group is displayed as a collapsible panel below the post editor.
 
-Here is a quick video showing how to use the Meta Box Builder to create custom fields in WordPress:
+To create a field group, go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen to add fields to the group:
 
-<LiteYouTubeEmbed id='_DaFUt92kYY' />
+![adding custom fields to the group](https://i.imgur.com/wjtQCmc.png)
 
-## Creating a field group
-
-To create a field group, go to *Meta Box &rarr; Custom Fields*. Then click the **Add New** button.
-
-![creating a meta box (field group)](https://i.imgur.com/atmAw8E.png)
-
-On the add new field group screen, enter the field group title in the **Title** box. The field group ID is then automatically generated. You can change the ID if you want, it's optional.
-
-Then select the fields you want to add to the field group by clicking the **+ Add Field** button. When click on a field, it will be automatically added to the list of fields in the field group. We'll see the settings of each fields in a section below.
+Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. After that, a new field will appear in the field list. Clicking on the field title bar will open the field settings panel where you can edit settings for the field such as title or default value.
 
 :::tip Quickly find a field type
 
@@ -31,13 +23,17 @@ To find a field type quickly, type its name in the input box above the field lis
 
 :::
 
-While working on fields, you can:
+:::tip
 
-- Delete or duplicate a field by clicking the icons in the field title bar.
-- Reveal field settings by clicking anywhere in the field title bar.
-- Reorder fields by drag and drop fields to the new positions.
+You can delete or duplicate a field by clicking the icons in the field title bar. To reorder fields, simply drag and drop them to the new positions.
 
-When it's done, click button **Publish** to save the field group. You also can click on **Save as Draft** link if you don't want to publish it, e.g. making it not available in the edit post screen.
+:::
+
+When finishing adding fields, click the **Settings** tab and select the location where the fields are displayed for.
+
+![selecting a post type for the field group](https://i.imgur.com/a39tyzd.png)
+
+After that click the **Publish** button to finish.
 
 ## Field settings
 
@@ -511,6 +507,12 @@ function your_prefix_parse_field_settings( $field_settings ) {
 	return $field_settings;
 }
 ```
+
+## Video tutorial
+
+Here is a quick video showing how to use the Meta Box Builder to create custom fields in WordPress:
+
+<LiteYouTubeEmbed id='_DaFUt92kYY' />
 
 ## Upgrade
 

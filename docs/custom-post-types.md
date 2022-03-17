@@ -1,5 +1,5 @@
 ---
-title: Creating custom post types
+title: Custom post types
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
