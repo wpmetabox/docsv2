@@ -12,7 +12,7 @@ The date field allows you to select a date via a friendly UI. This field uses jQ
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/creating-fields-with-code/#field-settings), this field has the following specific settings:
 
 Name | Description
 --- | ---

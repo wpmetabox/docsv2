@@ -270,7 +270,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 Note:
 
 - You must set `settings_pages` to the ID of the settings page. If you want to add meta boxes to 2 or more settings pages, set it to an array of settings pages' IDs
-- [All fields settings](/field-settings/) are the same as for posts.
+- [All fields settings](/creating-fields-with-code/#fields) are the same as for posts.
 - The settings page uses 2 columns layout, which mimics the WordPress post screen, and the value for `context` has the same meaning.
 
 ## Creating Customizer settings

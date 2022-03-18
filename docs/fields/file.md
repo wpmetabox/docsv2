@@ -14,7 +14,7 @@ The file field creates a simple file upload with default UI like `<input type="f
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/creating-fields-with-code/#field-settings), this field has the following specific settings:
 
 Name | Description
 --- | ---

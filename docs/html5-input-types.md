@@ -4,7 +4,7 @@ title: HTML5 Input Types
 
 ## Overview
 
-In addition to the [supported field types](/field-settings/), Meta Box also supports all HTML5 input types, such as `url` and `tel`. You can start using them without writing any extra code.
+In addition to the [supported field types](/fields/), Meta Box also supports all HTML5 input types, such as `url` and `tel`. You can start using them without writing any extra code.
 
 ## What is HTML5 input types?
 

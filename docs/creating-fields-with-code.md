@@ -225,11 +225,7 @@ Tab | `tab` | For organizing fields in tabs. Requires [Meta Box Tabs](/extension
 
 </Tabs>
 
-To understand field types, please see this video below:
-
-<LiteYouTubeEmbed id='WWeaM5vIAwM' />
-
-### Common field settings
+### Field settings
 
 Each field contains settings to determine where and how data is loaded and saved. All fields share some common settings, but also offer unique settings per field type. There are also settings from extensions which are explained on each extension docs.
 
@@ -298,6 +294,12 @@ Besides all common settings, each field type can have its own settings. Please s
 To save time read and write settings for fields, we've already prepared some code examples that you can get from [Meta Box Code Snippet Library](https://github.com/wpmetabox/library/).
 
 :::
+
+## Video tutorial
+
+This video shows you all the field types and field settings:
+
+<LiteYouTubeEmbed id='WWeaM5vIAwM' />
 
 ## FAQ
 

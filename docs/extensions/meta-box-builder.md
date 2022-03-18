@@ -37,7 +37,7 @@ After that click the **Publish** button to finish.
 
 ## Field settings
 
-When adding fields to a field group, each field has its own settings. The list of settings with detailed explaination is [here](/field-settings/). Meta Box Builder simply creates UI for them.
+When adding fields to a field group, each field has its own settings. The list of settings with detailed explanation is [here](/creating-fields-with-code/#field-settings). Meta Box Builder simply creates UI for them.
 
 To view and edit field settings, click anywhere in the field title bar:
 
@@ -525,4 +525,3 @@ If you don't see any field in field groups after upgrading, then the migration p
 - [How to Add and Configure Custom Fields Using Meta Box Builder](https://metabox.io/add-configure-custom-fields-meta-box-builder/)
 - [How to Export and Import Custom Fields with Meta Box Builder](https://metabox.io/export-import-custom-fields-meta-box-builder/)
 - [How to Easily Copy Custom Fields From One Site to Others with Meta Box Builder](https://metabox.io/copy-custom-fields-with-meta-box-builder/)
-- [Create Columns in Meta Box Builder](/create-columns-in-meta-box-builder/)

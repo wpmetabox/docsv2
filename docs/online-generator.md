@@ -18,8 +18,6 @@ Once you add a new field, field settings panel will appear on the right, where y
 
 You can also toggle the field settings by clicking the field title bar.
 
-The field settings are different depending on the field type. See more details about [field settings](/field-settings/) or settings for specific field types from the left menu of this page.
-
 ## Remove, duplicate, reorder fields
 
 On the title bar, there're 2 icons for removing and duplicated fields. When you hover the mouse over the field settings, you'll see move up and down buttons for reorder fields.

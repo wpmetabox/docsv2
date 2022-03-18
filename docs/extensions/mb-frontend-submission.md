@@ -175,7 +175,7 @@ Post excerpt|`post_excerpt`
 Post date|`post_date`
 Post thumbnail|`_thumbnail_id`
 
-With this method, you're able to set the label for post fields, or change settings (even field type) for them easily using any Meta Box [field settings](/field-settings).
+With this method, you're able to set the label for post fields, or change settings (even field type) for them easily using any [field settings](/creating-fields-with-code/#field-settings).
 
 ## Validation
 
@@ -432,7 +432,7 @@ $field   = apply_filters( 'rwmb_frontend_post_content', array(
 ) );
 ```
 
-Each post field is treated as a normal Meta Box field (see here for full list of [field attributes](/field-settings/)).
+Each post field is treated as a normal Meta Box field (see here for full list of [field settings](/creating-fields-with-code/#field-settings)).
 
 So, to make the post title required, you can do like this:
 

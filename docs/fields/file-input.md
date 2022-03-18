@@ -12,7 +12,7 @@ The file input field creates a simple text input for uploading a single file. Yo
 
 ## Settings
 
-This field doesn't have any specific settings. It only uses [common field settings](/field-settings/).
+This field doesn't have any specific settings. It only uses [common settings](/creating-fields-with-code/#field-settings).
 
 ## Data
 
