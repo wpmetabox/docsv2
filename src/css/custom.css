@@ -194,11 +194,11 @@ summary {
 .thumbs a {
   display: block;
   font-size: var(--ifm-h4-font-size);
-  color: var(--ifm-color-gray-900);
+  color: var(--ifm-color-emphasis-900);
   font-weight: 700;
-  border: 1px solid var(--ifm-color-secondary);
+  border: 1px solid var(--ifm-color-emphasis-400);
   border-radius: var(--ifm-global-radius);
-  transition: all .2s;
+  transition: all var(--ifm-transition-fast) ease;
 }
 .thumbs img {
   margin-bottom: 0;
@@ -209,15 +209,25 @@ summary {
 .thumb_text {
   display: block;
   padding: .5rem;
-  background: var(--ifm-color-secondary);
+  background: var(--ifm-color-emphasis-200);
   border-radius: 0 0 var(--ifm-global-radius) var(--ifm-global-radius);
-  transition: all .2s;
+  transition: all var(--ifm-transition-fast) ease;
 }
 .thumbs a:hover {
   text-decoration: none;
   border-color: var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-tl);
 }
 .thumbs a:hover .thumb_text {
   background: var(--ifm-color-primary);
   color: #fff;
+}
+[data-theme='dark'] .thumbs a {
+  border: none;
+}
+
+/* Card */
+.card.card {
+  box-shadow: none;
+  border-color: var(--ifm-color-emphasis-400);
 }
