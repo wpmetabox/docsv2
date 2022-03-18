@@ -10,7 +10,7 @@ There are 2 ways of doing validation: basic validation with input attributes and
 
 Meta Box supports [custom attributes](/custom-attributes/) for all input fields. You can use these attributes to validate the values of fields.
 
-:::info
+:::caution
 
 This type of validation uses browser validation, thus the UI and the error message depend on the browser (like language).
 
@@ -24,7 +24,7 @@ In the **Key** input box, you can select any rule from the dropdown (if you don'
 
 :::info
 
-You need the **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core, to follow this instruction. If you're not a premium user, consider [purchasing a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See the sections below for more information.
+You need the **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core, to follow this instruction. If you're not a premium user, consider [purchasing a license](https://metabox.io/pricing/) to use it.
 
 :::
 
