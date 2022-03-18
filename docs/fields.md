@@ -25,43 +25,49 @@ hide_table_of_contents: true
 
 <div className="thumbs thumbs-advanced">
 
-<!-- [![background](/thumbs/background.png) <span className="thumb_text">Background</span>](/fields/background/) -->
+[![autocomplete](/thumbs/autocomplete.png) <span className="thumb_text">Autocomplete</span>](/fields/autocomplete/)
+
+[![background](/thumbs/background.png) <span className="thumb_text">Background</span>](/fields/background/)
 
 [![button](/thumbs/button.png) <span className="thumb_text">Button</span>](/fields/button/)
 
 [![button group](/thumbs/button-group.png) <span className="thumb_text">Button Group</span>](/fields/button-group/)
 
-<!-- [![color](/thumbs/color.png) <span className="thumb_text">Color</span>](/fields/color/) -->
+[![color](/thumbs/color.png) <span className="thumb_text">Color</span>](/fields/color/)
 
-<!-- [![custom html](/thumbs/custom-html.png) <span className="thumb_text">Custom HTML</span>](/fields/custom-html/) -->
+[![custom html](/thumbs/custom-html.png) <span className="thumb_text">Custom HTML</span>](/fields/custom-html/)
 
-<!-- [![date](/thumbs/date.png) <span className="thumb_text">Date picker</span>](/fields/date/) -->
+[![date](/thumbs/date.png) <span className="thumb_text">Date picker</span>](/fields/date/)
 
-<!-- [![datetime](/thumbs/datetime.png) <span className="thumb_text">Datetime picker</span>](/fields/datetime/) -->
+[![datetime](/thumbs/datetime.png) <span className="thumb_text">Datetime picker</span>](/fields/datetime/)
+
+[![fieldset-text](/thumbs/fieldset-text.png) <span className="thumb_text">Fieldset text</span>](/fields/fieldset-text/)
 
 [![hidden](/thumbs/hidden.png) <span className="thumb_text">Hidden</span>](/fields/hidden/)
 
-<!-- [![image select](/thumbs/image-select.png) <span className="thumb_text">Image Select</span>](/fields/image-select/) -->
+[![image select](/thumbs/image-select.png) <span className="thumb_text">Image Select</span>](/fields/image-select/)
 
-<!-- [![key value](/thumbs/key-value.png) <span className="thumb_text">Key value</span>](/fields/key-value/) -->
+[![key value](/thumbs/key-value.png) <span className="thumb_text">Key value</span>](/fields/key-value/)
 
 <!-- [![map](/thumbs/map.png) <span className="thumb_text">Google Maps</span>](/fields/map/) -->
 
-<!-- [![oembed](/thumbs/oembed.png) <span className="thumb_text">oEmbed</span>](/fields/oembed/) -->
+[![oembed](/thumbs/oembed.png) <span className="thumb_text">oEmbed</span>](/fields/oembed/)
 
-<!-- [![osm](/thumbs/osm.png) <span className="thumb_text">Open Street Maps</span>](/fields/osm/) -->
+[![osm](/thumbs/osm.png) <span className="thumb_text">Open Street Maps</span>](/fields/osm/)
 
 [![password](/thumbs/password.png) <span className="thumb_text">Password</span>](/fields/password/)
 
 [![select-advanced](/thumbs/select-advanced.png) <span className="thumb_text">Select Advanced</span>](/fields/select-advanced/)
 
-<!-- [![slider](/thumbs/slider.png) <span className="thumb_text">Slider</span>](/fields/slider/) -->
+[![slider](/thumbs/slider.png) <span className="thumb_text">Slider</span>](/fields/slider/)
 
-<!-- [![switch](/thumbs/switch.png) <span className="thumb_text">Switch</span>](/fields/switch/) -->
+[![switch](/thumbs/switch.png) <span className="thumb_text">Switch</span>](/fields/switch/)
 
-<!-- [![time](/thumbs/time.png) <span className="thumb_text">Time picker</span>](/fields/time/) -->
+[![text-list](/thumbs/text-list.png) <span className="thumb_text">Text list</span>](/fields/text-list/)
 
-<!-- [![wysiwyg](/thumbs/wysiwyg.png) <span className="thumb_text">WYSIWYG editor</span>](/fields/wysiwyg/) -->
+[![time](/thumbs/time.png) <span className="thumb_text">Time picker</span>](/fields/time/)
+
+[![wysiwyg](/thumbs/wysiwyg.png) <span className="thumb_text">WYSIWYG editor</span>](/fields/wysiwyg/)
 
 </div>
 
@@ -87,9 +93,9 @@ hide_table_of_contents: true
 
 [![sidebar](/thumbs/sidebar.png) <span className="thumb_text">Sidebar</span>](/fields/sidebar/)
 
-<!-- [![taxonomy](/thumbs/taxonomy.png) <span className="thumb_text">Taxonomy</span>](/fields/taxonomy/) -->
+[![taxonomy](/thumbs/taxonomy.png) <span className="thumb_text">Taxonomy</span>](/fields/taxonomy/)
 
-<!-- [![taxonomy advanced](/thumbs/taxonomy-advanced.png) <span className="thumb_text">Taxonomy advanced</span>](/fields/taxonomy-advanced/) -->
+[![taxonomy advanced](/thumbs/taxonomy-advanced.png) <span className="thumb_text">Taxonomy advanced</span>](/fields/taxonomy-advanced/)
 
 [![user](/thumbs/user.png) <span className="thumb_text">User</span>](/fields/user/)
 
@@ -109,13 +115,13 @@ hide_table_of_contents: true
 
 [![image](/thumbs/image.png) <span className="thumb_text">Image</span>](/fields/image/)
 
-<!-- [![image advanced](/thumbs/image-advanced.png) <span className="thumb_text">Image advanced</span>](/fields/image-advanced/) -->
+[![image advanced](/thumbs/image-advanced.png) <span className="thumb_text">Image advanced</span>](/fields/image-advanced/)
 
-<!-- [![single image](/thumbs/single-image.png) <span className="thumb_text">Single image</span>](/fields/single-image/) -->
+[![single image](/thumbs/single-image.png) <span className="thumb_text">Single image</span>](/fields/single-image/)
 
 [![image upload](/thumbs/image-upload.png) <span className="thumb_text">Image upload</span>](/fields/image-upload/)
 
-<!-- [![video](/thumbs/video.png) <span className="thumb_text">Video</span>](/fields/video/) -->
+[![video](/thumbs/video.png) <span className="thumb_text">Video</span>](/fields/video/)
 
 </div>
 
