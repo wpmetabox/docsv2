@@ -55,17 +55,3 @@ Then it doesn't work.
 To solve this problem, you need to enable the **Clone as multiple** settings for the field.
 
 With that, Meta Box will **save cloneable values in multiple rows in the database**, where each row contains one value. That means if `start_date` has 2 values `['2019-05-01', '2019-04-30']`, it will be saved in 2 rows in the database, one for `2019-05-01` and one for `2019-04-30`. The data is **not serialized** anymore. And thus, your above query will work!
-
-:::info
-
-Although you can use `get_post_meta` to retrieve meta value, it's recommended to [use helper functions](/displaying-fields-with-code/) to get the value and display it in the frontend. The helper function takes care of all the logic above and returns to you the needed data in a correct format.
-
-You can also use `print_r` function to show the value for debugging:
-
-```php
-$value = get_post_meta( get_the_ID(), 'field_id', true ); // Last param should be 'false' if field is multiple
-echo '<pre>';
-print_r( $value );
-echo '</pre>';
-```
-:::
