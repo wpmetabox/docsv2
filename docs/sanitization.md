@@ -30,13 +30,13 @@ If you don't want to sanitize the input value for a specific field (we don't enc
 
 In this case, whatever users input will be saved.
 
-:::info
+:::info Not a premium user?
 
-You need the **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core, to follow this instruction. If you're not a premium user, consider [purchasing a license](https://metabox.io/pricing/) to use it.
+This instruction uses **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
 
 :::
 
-If you use code, then set `'sanitize_callback' => 'none'` in the field settings:
+If you use code, then set `'sanitize_callback' => 'none'` in the [field settings](/creating-fields-with-code/#field-settings):
 
 ```php
 [

@@ -22,9 +22,9 @@ When editing a field, switch to the **Advanced** tab, and scroll down to the **C
 
 In the **Key** input box, you can select any rule from the dropdown (if you don't see the dropdown, simply press the down arrow button), or enter the attribute name manually. And then enter the desired value in the **Value** input box.
 
-:::info
+:::info Not a premium user?
 
-You need the **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core, to follow this instruction. If you're not a premium user, consider [purchasing a license](https://metabox.io/pricing/) to use it.
+This instruction uses **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
 
 :::
 

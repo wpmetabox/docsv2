@@ -6,7 +6,7 @@ import FAQ from '@site/src/components/FAQ';
 
 The clone feature of Meta Box allows you to create multiple inputs from a text, textarea, select, ... fields without declaring many fields in the code. Combining clone with [groups](/extensions/meta-box-group/) gives you a flexible way to define repeatable content.
 
-:::info
+:::info Clone is a feature
 
 The difference between Meta Box and other plugins is that the clone feature can be applied to **all field types**. And **it's a feature, not a field type**.
 
@@ -18,9 +18,9 @@ When editing a field, simply check the checkbox **Cloneable**:
 
 ![enable clone feature](https://i.imgur.com/1QrOVGT.png)
 
-:::info
+:::info Not a premium user?
 
-You need the **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core, to follow this instruction. If you're not a premium user, consider [purchasing a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See the sections below for more information.
+This instruction uses **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
 
 :::
 
@@ -39,8 +39,6 @@ Add more text|`add_button`|The text for **Add more** clone button. Optional. Def
 Then click **Publish** or **Update** button to save the field group. Now go to your post and you'll see a **+ Add more** button below the field input. Clicking it allows you to enter more values:
 
 ![view clones in action](https://i.imgur.com/PM4Mbqb.png)
-
-## Cloning fields with code
 
 If you're a developer and want to use code, then you need to add the clone settings into the [field settings](/creating-fields-with-code/#fields):
 

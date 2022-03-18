@@ -71,7 +71,7 @@ To do that, we'll use the [MB Views](/extensions/mb-views/) extension, which off
 
 :::info Don't have a license?
 
-MB Views is a premium extension and is available for [**Ultimate** and **Lifetime** licenses](https://metabox.io/pricing/) only (not the **Basic** license). If you don't own the right license, consider purchasing one.
+MB Views is a premium extension and is available for [**Ultimate** and **Lifetime** licenses](https://metabox.io/pricing/) only (not the **Basic** license). If you don't own the right license, please purchase one.
 
 :::
 

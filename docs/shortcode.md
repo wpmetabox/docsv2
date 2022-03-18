@@ -19,7 +19,7 @@ Attribute|Description
 
 This shortcode works exactly like the [rwmb_the_value()](/rwmb-the-value/) function with the same parameters.
 
-:::tip
+:::tip Other attributes
 
 You can pass **other attributes** to the shortcode if you want. If you do so, those attributes will be passed to the [rwmb_the_value()](/rwmb-the-value/) function as the 2nd parameter.
 
