@@ -28,7 +28,7 @@ To create a new custom post type, go to **Meta Box » Post Types** and click **N
 
 There are several settings divided into tabs. In most cases, you only need to enter the plural name, singular name, and slug in the **General** tab and click the **Publish** button to register the post type.
 
-:::info
+:::info Settings
 
 To understand the settings in detail, please [see the docs](/extensions/mb-custom-post-type/#post-type-settings) for the MB Custom Post Types & Custom Taxonomies extension.
 
@@ -46,7 +46,7 @@ To create a new custom taxonomy, go to **Meta Box » Taxonomies** and click **Ad
 
 There are several settings divided into tabs. In most cases, you only need to enter the plural name, singular name, and slug in the **General** tab and click the **Publish** button to register the taxonomy.
 
-:::info
+:::info Settings
 
 To understand the settings in details, please [see the docs](/extensions/mb-custom-post-type/#taxonomy-settings) for the MB Custom Post Types & Custom Taxonomies extension.
 

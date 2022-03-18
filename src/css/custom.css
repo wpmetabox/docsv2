@@ -7,6 +7,8 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
+
+  /* Code */
   --ifm-code-font-size: var(--ifm-h5-font-size);
 }
 
@@ -86,7 +88,6 @@
 .menu__link,
 .menu__caret,
 .menu__list-item-collapsible {
-  font-size: var(--ifm-h5-font-size);
   outline: none;
 }
 .menu__caret:before,
@@ -233,6 +234,10 @@ summary {
 
 /* Alert */
 .admonition {
+  --ifm-color-info-dark: #3b82f6;
+  --ifm-color-warning-dark: #f59e0b;
+  --ifm-color-success-dark: #22c55e;
+
   --ifm-alert-background-color: var(--ifm-alert-border-color);
   --ifm-alert-foreground-color: #fff;
 }

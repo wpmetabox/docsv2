@@ -43,14 +43,12 @@ const sidebars = {
 				'validation',
 				'sanitization',
 				'integration',
-				'composer',
 				'database',
 				'custom-attributes',
-				'custom-field-type',
-				'actions',
-				'filters',
 				{
-					Functions: [
+					API: [
+						'actions',
+						'filters',
 						'rwmb-meta',
 						'rwmb-set-meta',
 						'rwmb-get-value',
@@ -59,15 +57,12 @@ const sidebars = {
 						'rwmb-get-field-settings',
 						'rwmb-get-registry',
 					],
+					'Developer guides': [
+						'creating-fields-with-code',
+						'displaying-fields-with-code',
+						'custom-field-type',
+					],
 				}
-			],
-		},
-		{
-			type: 'category',
-			label: 'Tutorials',
-			items: [
-				'creating-fields-with-code',
-				'displaying-fields-with-code',
 			],
 		},
 		{

@@ -25,9 +25,9 @@ Custom fields are a very important feature of WordPress and make WordPress a pow
 
 To create custom fields, you'll need the **Meta Box Builder** extension. This premium extension is already bundled in Meta Box AIO and MB Core so you can use it right away.
 
-:::info
+:::info Not a premium user?
 
-If you're not a premium user, consider [purchasing a license](https://metabox.io/pricing/) to use this extension. This is a very powerful tool that helps you to work with custom fields in Meta Box via a user-friendly interface.
+Please [purchase a license](https://metabox.io/pricing/) to use this extension. This is a very powerful tool that helps you to work with custom fields in Meta Box via a user-friendly interface.
 
 :::
 
@@ -71,9 +71,9 @@ We'll display the event details for the event post type that we created in the p
 
 To do that, we'll use the [MB Views](/extensions/mb-views/) extension, which offers a powerful and flexible way to select and display fields.
 
-:::info
+:::info Don't have a license?
 
-MB Views is a premium extension and is available for [**Ultimate** and **Lifetime** licenses](https://metabox.io/pricing/) only (not the **Basic** license). It's already bundled in the Meta Box AIO so you can use it right away. If you don't own the right license, consider purchasing one.
+MB Views is a premium extension and is available for [**Ultimate** and **Lifetime** licenses](https://metabox.io/pricing/) only (not the **Basic** license). If you don't own the right license, consider purchasing one.
 
 :::
 

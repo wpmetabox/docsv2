@@ -68,7 +68,7 @@ Name|Description
 
 :::info Media modal limitation
 
-Because of some limitations in the media modal, only simple fields such as text, select, radio, checkbox work. Other fields that require custom JavaScript don't work, unfortunately.
+Only simple fields such as text, select, radio, checkbox work in the media modal. Other fields that require custom JavaScript don't work.
 
 :::
 
@@ -88,7 +88,7 @@ Name|Description
 
 :::caution Gutenberg
 
-Gutenberg editor does **not** support extra contexts. Only `normal`, and `side` contexts are supported. If you use Gutenberg for your post types, use these contexts only.
+Gutenberg editor only supports `normal` and `side` contexts. Other extra contexts are not supported.
 
 :::
 
@@ -279,9 +279,9 @@ Custom settings | N/A | Custom field settings, useful when you want to add your 
 
 </Tabs>
 
-:::tip
+:::tip Field ID prefix
 
-You can (should) add a prefix to field IDs to prevent from using the same ID with other scripts. If you want to hide the fields in the default WordPress **Custom Fields** meta box, use underscore (`_`) as the prefix.
+You can add a prefix to field IDs to prevent from using the same ID with other scripts. If you want to hide the fields in the default WordPress **Custom Fields** meta box, use underscore (`_`) as the prefix.
 
 :::
 
@@ -289,7 +289,7 @@ You can (should) add a prefix to field IDs to prevent from using the same ID wit
 
 Besides all common settings, each field type can have its own settings. Please see more details for each field type on the left menu.
 
-:::tip
+:::tip Code examples
 
 To save time read and write settings for fields, we've already prepared some code examples that you can get from [Meta Box Code Snippet Library](https://github.com/wpmetabox/library/).
 
