@@ -206,7 +206,12 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} <a href="https://metabox.io">Meta Box</a>, a brand of <a href="https://elightup.com">eLightUp</a>.`,
       },
       prism: {
-        theme: lightCodeTheme,
+        theme: {
+          ...lightCodeTheme,
+          plain: {
+            backgroundColor: '#f2f5f8'
+          }
+        },
         darkTheme: darkCodeTheme,
         additionalLanguages: [ 'php' ],
         defaultLanguage: 'php',

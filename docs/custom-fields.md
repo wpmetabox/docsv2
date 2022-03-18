@@ -55,7 +55,7 @@ The technical term of field groups in WordPress is "meta box". You'll see them v
 
 :::
 
-:::tip
+:::tip For developers
 
 You can also [create custom fields with code](/creating-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
 
@@ -142,7 +142,7 @@ Now go to the event page on the front end and you'll see the custom fields that 
 
 ![view event details on the front end](https://i.imgur.com/iOAEwBT.png)
 
-:::tip
+:::tip For developers
 
 You can also [display custom fields with code](/displaying-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
 

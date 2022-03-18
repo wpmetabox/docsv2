@@ -227,6 +227,18 @@ summary {
 
 /* Card */
 .card.card {
-  box-shadow: none;
   border-color: var(--ifm-color-emphasis-400);
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* Alert */
+.admonition {
+  --ifm-alert-background-color: var(--ifm-alert-border-color);
+  --ifm-alert-foreground-color: #fff;
+}
+
+.admonition a {
+  --ifm-alert-border-color: #fff;
+  font-weight: 700;
+  font-style: italic;
 }
