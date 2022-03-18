@@ -167,14 +167,10 @@ These are field types that use the built-in browser UI without extra libraries. 
 
 Type | Key | Description
 --- | --- | ---
-Datetime local | `datetime-local` | Date and time picker. Not recommended, use Datetime picker field type instead.
 Email | `email` | For entering an email address with browser validation
-Month | `month` | Month picker
 Number | `number` | For entering a number with browser validation
 Range | `range` | A slider for selecting a number
-Phone number | `tel` | For entering a formatted phone number
 URL | `url` | An input for URL with browser validation
-Week | `week` | Week picker
 
   </TabItem>
 
