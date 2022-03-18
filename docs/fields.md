@@ -3,28 +3,36 @@ title: Field types
 hide_table_of_contents: true
 ---
 
-<div class="thumbs">
+## Basic
 
-[![button](/thumbs/button.png) <span class="thumb_text">Button</span>](/fields/button/)
+<div className="thumbs">
 
-[![button-group](/thumbs/button-group.png) <span class="thumb_text">Button Group</span>](/fields/button-group/)
+[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Checkbox</span>](/fields/checkbox/)
 
-[![checkbox](/thumbs/checkbox.png) <span class="thumb_text">Checkbox</span>](/fields/checkbox/)
+[![checkbox-list](/thumbs/checkbox-list.png) <span className="thumb_text">Checkbox List</span>](/fields/checkbox-list/)
 
-[![checkbox-list](/thumbs/checkbox-list.png) <span class="thumb_text">Checkbox List</span>](/fields/checkbox-list/)
+[![radio](/thumbs/radio.png) <span className="thumb_text">Radio</span>](/fields/radio/)
 
-[![hidden](/thumbs/hidden.png) <span class="thumb_text">Hidden</span>](/fields/hidden/)
+[![select](/thumbs/select.png) <span className="thumb_text">Select</span>](/fields/select/)
 
-[![password](/thumbs/password.png) <span class="thumb_text">Password</span>](/fields/password/)
+[![text](/thumbs/text.png) <span className="thumb_text">Text</span>](/fields/text/)
 
-[![radio](/thumbs/radio.png) <span class="thumb_text">Radio</span>](/fields/radio/)
+[![textarea](/thumbs/textarea.png) <span className="thumb_text">Textarea</span>](/fields/textarea/)
 
-[![select](/thumbs/select.png) <span class="thumb_text">Select</span>](/fields/select/)
+</div>
 
-[![select-advanced](/thumbs/select-advanced.png) <span class="thumb_text">Select Advanced</span>](/fields/select-advanced/)
+## Advanced
 
-[![text](/thumbs/text.png) <span class="thumb_text">Text</span>](/fields/text/)
+<div className="thumbs">
 
-[![textarea](/thumbs/textarea.png) <span class="thumb_text">Textarea</span>](/fields/textarea/)
+[![button](/thumbs/button.png) <span className="thumb_text">Button</span>](/fields/button/)
+
+[![button-group](/thumbs/button-group.png) <span className="thumb_text">Button Group</span>](/fields/button-group/)
+
+[![hidden](/thumbs/hidden.png) <span className="thumb_text">Hidden</span>](/fields/hidden/)
+
+[![password](/thumbs/password.png) <span className="thumb_text">Password</span>](/fields/password/)
+
+[![select-advanced](/thumbs/select-advanced.png) <span className="thumb_text">Select Advanced</span>](/fields/select-advanced/)
 
 </div>

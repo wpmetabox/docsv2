@@ -186,13 +186,12 @@ summary {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
-  text-align: center;
 }
 .thumbs p {
   margin-bottom: 0;
 }
 .thumbs a {
-  display: block;
+  display: inline-block;
   font-size: var(--ifm-h4-font-size);
   color: var(--ifm-color-emphasis-900);
   font-weight: 700;
@@ -204,9 +203,9 @@ summary {
   margin-bottom: 0;
   box-shadow: none;
   border-radius: var(--ifm-global-radius) var(--ifm-global-radius) 0 0;
-  width: 100%;
 }
 .thumb_text {
+  text-align: center;
   display: block;
   padding: .5rem;
   background: var(--ifm-color-emphasis-200);
