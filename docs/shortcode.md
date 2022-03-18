@@ -2,7 +2,7 @@
 title: Shortcode
 ---
 
-Besides [normal ways](/displaying-fields/) to display fields on the website, Meta Box also provides a simple shortcode `[rwmb_meta]` to help you show custom fields in the post content or widgets easily.
+Besides [normal ways](/custom-fields/#displaying-fields) to display fields on the website, Meta Box also provides a simple shortcode `[rwmb_meta]` to help you show custom fields in the post content or widgets easily.
 
 ```php
 [rwmb_meta id="field_id" object_id="15"]

@@ -230,7 +230,7 @@ When using tabs, you must define `tab` attribute for all meta boxes to make them
 
 After creating a settings page, you need to create meta boxes and fields for it.
 
-Creating meta boxes and fields for settings pages is similar as for posts. [You can do it with UI using the Meta Box Builder extension or with code](/creating-meta-boxes/).
+Creating meta boxes and fields for settings pages is similar as for posts. [You can do it with UI using the Meta Box Builder extension or with code](/creating-fields-with-code/).
 
 If you use Meta Box Builder to create fields, make sure to select the correct settings page in the Location settings, under the Settings tab:
 
@@ -496,7 +496,7 @@ Notes:
 - In the 2nd parameter, you need to pass `'object_type' => 'setting'` or `'object_type' => 'network_setting'`
 - In the last parameter, you need to pass the option name for the settings page
 
-Other parameters are the same as for posts. Please see [this documentation](/displaying-fields/) for details.
+Other parameters are the same as for posts. Please see [this documentation](/displaying-fields-with-code/) for details.
 
 :::caution
 

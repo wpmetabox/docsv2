@@ -43,8 +43,6 @@ Autosave|Auto save the custom fields' values (like post content and title)?
 Field ID prefix|Auto add a prefix to all field IDs to keep them separated from other field groups or other plugins.
 Text domain|Required for multilingual website. Used in the exported code only.
 
-See more about [meta box settings](/creating-meta-boxes/).
-
 ## Generate code
 
 After you finish configuring your custom fields and meta boxes, click the **Generate code** button to get the code for the meta box. Then copy and paste them into the theme's `function.php` file.

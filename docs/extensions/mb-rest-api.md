@@ -17,15 +17,13 @@ See how the plugin works in this quick video:
 
 ## Getting custom fields' values in REST API responses
 
-After installing and activating the plugin, create some meta box for your [posts](/creating-meta-boxes/), [terms](/extensions/mb-term-meta/) or [users](/extensions/mb-user-meta/). Please note that if you're going to use term meta or user meta, you need to purchase [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) accordingly.
-
-Then just go to edit your posts, terms or users and add some values to your custom fields as you usually do.
+After installing and activating the plugin, [create some custom fields](/custom-fields/). Then just go to edit your posts and add some values to your custom fields as you usually do.
 
 Now you can retrieve these values when viewing REST API responses. The plugin **automatically creates a new field `meta_box` in the response JSON array, which holds all custom fields' values**.
 
 For example:
 
-If you create a meta box for posts like this:
+If you create a field group for posts like this:
 
 ![meta box for posts](https://i.imgur.com/61eFQIf.png)
 

@@ -42,7 +42,7 @@ Then click **Publish** or **Update** button to save the field group. Now go to y
 
 ## Cloning fields with code
 
-If you're a developer and want to use code, then you need to add the clone settings into the [field settings](/field-settings/):
+If you're a developer and want to use code, then you need to add the clone settings into the [field settings](/creating-fields-with-code/#fields):
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {

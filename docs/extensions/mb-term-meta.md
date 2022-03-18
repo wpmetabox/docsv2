@@ -76,7 +76,7 @@ $value = rwmb_meta( $field_id, ['object_type' => 'term'], $term_id );
 echo $value;
 ```
 
-Other parameters are the same as for post. Please see [this documentation](/displaying-fields/) for details.
+Other parameters are the same as for post. Please see [this documentation](/displaying-fields-with-code/) for details.
 
 :::caution
 

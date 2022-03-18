@@ -35,4 +35,4 @@ Now you have everything ready, you may be wondering what to learn next. We stron
 
 When you're familiar with Meta Box, you might want to go to the [Advanced](/category/advanced/) category. And if you need to know how a field or an extension work, please go to their docs under [Field types](/fields/) or [Extensions](/category/extensions/) categories. You can also search for the things you need, sometimes it helps you find the exact docs faster.
 
-For now, as most WordPress websites require custom post types, let's [learn how to create them](/creating-post-types/).
+For now, as most WordPress websites require custom post types, let's [learn how to create them](/custom-post-types/).

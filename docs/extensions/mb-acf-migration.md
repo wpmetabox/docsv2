@@ -33,7 +33,7 @@ MB ACF Migration tries to migrate all the following data from ACF to Meta Box. P
 
 ### Field groups
 
-ACF field groups are migrated to Meta Box's field groups, which requires [Meta Box Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as [in Meta Box](/creating-meta-boxes/).
+ACF field groups are migrated to Meta Box's field groups, which requires [Meta Box Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
 
 :::caution
 

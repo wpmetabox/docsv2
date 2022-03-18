@@ -8,12 +8,38 @@ This page lists all filters for Meta Box plugin:
 
 ### `rwmb_meta_boxes`
 
-This is the most important filter of the plugin. It is used to add/remove/edit meta boxes. See [this documentation](/creating-meta-boxes/) for more details on how to use it.
-
-This filter has 1 parameter - array of meta boxes.
+This is the most important filter of the plugin. It is used to add/remove/edit field groups. This filter has 1 parameter - array of field groups.
 
 ```php
-apply_filters( 'rwmb_meta_boxes', [] );
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
+        'title'      => 'Event details',
+        'post_types' => 'event',
+        'fields'     => [
+            [
+                'name' => 'Date and time',
+                'id'   => 'datetime',
+                'type' => 'datetime',
+            ],
+            [
+                'name' => 'Location',
+                'id'   => 'location',
+                'type' => 'text',
+            ],
+            [
+                'name'          => 'Map',
+                'id'            => 'map',
+                'type'          => 'osm',
+                'address_field' => 'location',
+            ],
+        ],
+    ];
+
+    // Add more field groups if you want
+    // $meta_boxes[] = ...
+
+    return $meta_boxes;
+} );
 ```
 
 ### `rwmb_shortcode`

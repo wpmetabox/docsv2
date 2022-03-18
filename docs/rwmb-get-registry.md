@@ -21,7 +21,7 @@ Each registry has some methods as described below:
 
 ### Meta box registry
 
-Meta box registry is a storage of all meta box objects (instances of `RW_Meta_Box` class). The registry stores all meta box objects in a private array of the form meta_box_id => meta_box_object.
+Meta box registry is a storage of all meta box objects (instances of `RW_Meta_Box` class). The registry stores all meta box objects in a private array of the form `'id' => object`.
 
 To get all meta box objects, use this method:
 
@@ -32,7 +32,7 @@ $meta_boxes = $meta_box_registry->all();
 To get a specific meta box object by id, use this method:
 
 ```php
-$meta_box = $meta_box_registry->get( 'meta_box_id' );
+$meta_box = $meta_box_registry->get( 'id' );
 ```
 
 To get meta boxes by some attributes, use this method:
@@ -45,7 +45,7 @@ $args = [
 $meta_boxes = $meta_box_registry->get_by( $args );
 ```
 
-Here `$args` is an array of [meta box settings](/creating-meta-boxes/) that you use to filter the list of meta boxes.
+Here `$args` is an array of the [meta box settings](/creating-fields-with-code/#field-group-settings) that you use to filter the list of meta boxes.
 
 ### Field registry
 

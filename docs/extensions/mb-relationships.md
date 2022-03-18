@@ -61,7 +61,7 @@ Item link type | For each connected item, you can set how it shows in the admin 
 
 #### Meta box settings
 
-The plugin automatically creates meta boxes to let you select connected items. The meta box settings are very much like a [normal meta box](/creating-meta-boxes/) when you creating custom fields, but simpler.
+The plugin automatically creates meta boxes to let you select connected items. The meta box settings are very much like a [normal meta box](/creating-fields-with-code/#field-group-settings) when you creating custom fields, but simpler.
 
 ![meta box settings for a relationship side](https://i.imgur.com/x72aX91.png)
 
@@ -180,7 +180,7 @@ Name|Description
 `post_type`|The post type if the `object_type` is set to `post`. Default `post`. Optional.
 `taxonomy`|The taxonomy if the `object_type` is set to `term`.
 `empty_message`|The message displayed when there's no connections.
-`meta_box`|Meta box settings, has the [same settings as a normal meta box](/creating-meta-boxes/). Below are common settings you might want to change:
+`meta_box`|Meta box settings, has the [same settings as a normal meta box](/creating-fields-with-code/#field-group-settings). Below are common settings you might want to change:
 -- `title`|The meta box title. Default is "Connect To" for "from" side and "Connected From" for "to" side.
 `field`|Field settings, has the [same settings as a normal post/user/taxonomy field](/field-settings/) according to the object type. Below are common settings you might want to change:
 -- `name` | Field title.

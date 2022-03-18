@@ -4,7 +4,7 @@ title: Introduction
 
 ## What is Meta Box?
 
-When using WordPress as a CMS (not just for blogging), you'll need more than just posts and pages. For example, if you want to show events on your website, you'll need a content type called "event" with some fields to store event details such as date and location. In WordPress, we call them [custom post type](/creating-post-types/) and [custom field](/creating-meta-boxes/). To create custom post types and custom fields, you'll need a plugin like Meta Box.
+When using WordPress as a CMS (not just for blogging), you'll need more than just posts and pages. For example, if you want to show events on your website, you'll need a content type called "event" with some fields to store event details such as date and location. In WordPress, we call them [custom post type](/custom-post-types/) and [custom field](/custom-fields/). To create custom post types and custom fields, you'll need a plugin like Meta Box.
 
 Meta Box is a framework that helps you create custom post types and custom fields quickly and easily. A framework provides all the tools you need for managing data and building features for your WordPress websites, saving you time and allowing you to focus on business logic.
 

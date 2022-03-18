@@ -86,7 +86,7 @@ The code is very similar to getting post meta. The differences are:
 - In the 2nd parameter, you need to pass `'object_type' => 'user'`, and
 - In the last parameter, you need to pass the user ID
 
-Other parameters are the same as for posts. Please see [this documentation](/displaying-fields/) for details.
+Other parameters are the same as for posts. Please see [this documentation](/displaying-fields-with-code/) for details.
 
 :::caution
 

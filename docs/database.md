@@ -58,7 +58,7 @@ With that, Meta Box will **save cloneable values in multiple rows in the databas
 
 :::info
 
-Although you can use `get_post_meta` to retrieve meta value, it's recommended to [use helper functions](/displaying-fields/#displaying-fields-with-code) to get the value and display it in the frontend. The helper function takes care of all the logic above and returns to you the needed data in a correct format.
+Although you can use `get_post_meta` to retrieve meta value, it's recommended to [use helper functions](/displaying-fields-with-code/) to get the value and display it in the frontend. The helper function takes care of all the logic above and returns to you the needed data in a correct format.
 
 You can also use `print_r` function to show the value for debugging:
 

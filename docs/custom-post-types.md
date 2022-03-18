@@ -60,4 +60,4 @@ The video below shows you the steps and explains the settings for a custom post 
 
 ## Next steps
 
-After creating a custom post type, let's [add custom fields](/creating-meta-boxes/) to add more details for posts of that post type! That's the most important part of the whole process and is the heart of Meta Box.
+After creating a custom post type, let's [add custom fields](/custom-fields/) to add more details for posts of that post type! That's the most important part of the whole process and is the heart of Meta Box.

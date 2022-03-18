@@ -41,7 +41,7 @@ Attribute| Description
 `step` | Match the step increment. Enter `any` to accept any step.
 `type` | Mostly used as `url` or `email` to validate value as a valid URL or email
 
-If you prefer to [use code to define fields](/creating-meta-boxes/#creating-custom-fields-with-code), simply add pairs of `'key' => 'value'` rules for the [field settings](/field-settings/) array:
+If you prefer to [use code to create fields](/creating-fields-with-code/), simply add pairs of `'key' => 'value'` rules for the field settings array:
 
 ```php
 [
@@ -90,7 +90,7 @@ Name|Description
 `phoneUS` | Validate for valid US phone number
 `remote` | Requests a resource to check the element for validity. Value can be the URL of the resource to request for server-side validation (string) or options to fully customize the request, see [jQuery.ajax](https://api.jquery.com/jQuery.ajax). The server-side resource is called via jQuery.ajax and gets a key/value pair corresponding to the name of the validated element and its value as a GET parameter. The response is evaluated as JSON and must be `true` for valid elements, and can be any `false`, `undefined` or `null` for invalid elements, using the default message; or a string, eg. "That name is already taken, try peter123 instead" to display as the error message.
 
-If you prefer code, you need to add a key `validation` to the [meta box settings](http://localhost:3000/creating-meta-boxes/#creating-custom-fields-with-code). This key has a parameter `rules` for validation rules and `messages` for error messages.
+If you prefer code, you need to add a key `validation` to the [field group settings](/creating-fields-with-code/#field-group-settings). This key has a parameter `rules` for validation rules and `messages` for error messages.
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {

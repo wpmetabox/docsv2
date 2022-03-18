@@ -22,18 +22,18 @@ This shortcode will create a simple post form which has only 2 fields: post titl
 
 ### Advanced form
 
-If you want to add more fields to the post form (which are custom fields), then you need to [create a meta box first](/creating-meta-boxes/). That meta box should contains all the custom fields you want to add to the post.
+If you want to add more fields to the post form (which are custom fields), then you need to [create a field group](/custom-fields/#how-to-create-custom-fields) first. That field group should contains all the custom fields you want to add to the post.
 
 Then change the shortcode to:
 
 ```php
-[mb_frontend_form id="meta-box-id" post_fields="title,content"]
+[mb_frontend_form id="field-group-id" post_fields="title,content"]
 ```
 
 If you want to embed the form using code, please use the following code:
 
 ```php
-$form = '[mb_frontend_form id="meta-box-id" post_fields="title,content"]';
+$form = '[mb_frontend_form id="field-group-id" post_fields="title,content"]';
 echo do_shortcode( $form );
 ```
 
@@ -41,7 +41,7 @@ echo do_shortcode( $form );
 
 Attributes|Description
 ---|---
-`id`|Meta box ID(s). If multiple meta boxes, enter their IDs separated by commas.
+`id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas.
 `ajax`|Enable Ajax submission. `true` or `false` (default).
 `edit`|Allow users to edit the post after submitting. `true` or `false` (default).
 `allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).

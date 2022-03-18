@@ -5,7 +5,7 @@ title: MB Blocks
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process. Everything is just like [creating a simple meta box](/creating-meta-boxes/).
+With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process.
 
 Here is a screenshot of a custom Gutenberg block (hero area) that's created using MB Blocks:
 
@@ -19,7 +19,7 @@ The preview of the block is displayed in the main content area while the block c
 
 Creating a Gutenberg block with MB Blocks is similar to create a normal meta box. There are just a few different settings.
 
-Assumming we're creating a hero area block (like the screenshot above). Open your theme's `functions.php` file (or your plugin's PHP file) and add the following code:
+Assuming we're creating a hero area block (like the screenshot above). Open your theme's `functions.php` file (or your plugin's PHP file) and add the following code:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
@@ -85,7 +85,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 } );
 ```
 
-You might notice that the syntax is very similar to [creating a custom meta box](/creating-meta-boxes/). You just need to define some settings and fields for the block.
+You might notice that the syntax is very similar to [creating a field group](/creating-fields-with-code/). You just need to define some settings and fields for the block.
 
 The block settings are inherited from the Block JavaScript API with a few difference. See [Block Registration](https://developer.wordpress.org/block-editor/developers/block-api/block-registration/) page on the Gutenberg Handbook if you need more details.
 
