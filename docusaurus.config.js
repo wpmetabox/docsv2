@@ -19,7 +19,7 @@ const config = {
   titleDelimiter: '-',
 
   plugins: [
-    // 'plugin-image-zoom'
+    'docusaurus-plugin-image-zoom',
   ],
 
   presets: [
@@ -60,6 +60,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       image: 'https://i.imgur.com/wnJtgSC.jpg',
+      zoom: {
+        selector: '.markdown > p > img',
+      },
       navbar: {
         hideOnScroll: true,
         logo: {
