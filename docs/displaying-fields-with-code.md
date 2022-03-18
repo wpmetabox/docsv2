@@ -12,7 +12,12 @@ If you're a developer and familiar with changing template file with PHP code, yo
 - [`rwmb_get_value()`](/rwmb-get-value/): to get a field value as a variable
 - [`rwmb_the_field()`](/rwmb-the-value/): to display a field
 
-Open your template file for the single event content. Usually, it's `template-parts/content.php`, `single-event.php` or `single.php` file, depending on your theme structure. Then add the following code below the content area:
+In addition, we also provide [`rwmb_meta()`](/rwmb-meta/) function, which is a wrapper of the 2 functions above which:
+
+- Returns the HTML output for rich-content fields: `map`, `osm`, and `oembed`, same as `rwmb_the_value()`,
+- Returns the same value as `rwmb_get_value()` for other field types.
+
+Now open your template file for the single event content. Usually, it's `template-parts/content.php`, `single-event.php` or `single.php` file, depending on your theme structure. Then add the following code below the content area:
 
 ```php
 <?php
@@ -22,13 +27,14 @@ Open your template file for the single event content. Usually, it's `template-pa
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <header class="entry-header alignwide">
+        <header class="entry-header">
                 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </header>
 
         <div class="entry-content">
                 <?php the_content(); ?>
 
+                // highlight-start
                 <p>
                     <strong>Date and time:</strong> <?php rwmb_the_value( 'datetime' ) ?>
                 </p>
@@ -39,7 +45,7 @@ Open your template file for the single event content. Usually, it's `template-pa
                     <strong>Map:</strong>
                 </p>
                 <?php rwmb_the_value( 'map' ) ?>
-                ?>
+                // highlight-end
         </div>
 </article>
 ```
@@ -50,7 +56,7 @@ For block themes, everything is blocks and there's no PHP template files. In tha
 
 :::
 
-Both functions accept the following parameters:
+All functions accept the following parameters:
 
 Name|Description
 ---|---
@@ -75,6 +81,11 @@ if ( ! function_exists( 'rwmb_the_value' ) ) {
 }
 if ( ! function_exists( 'rwmb_get_value' ) ) {
     function rwmb_get_value( $key, $args = [], $post_id = null ) {
+        return null;
+    }
+}
+if ( ! function_exists( 'rwmb_meta' ) ) {
+    function rwmb_meta( $key, $args = [], $post_id = null ) {
         return null;
     }
 }

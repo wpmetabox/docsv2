@@ -30,7 +30,7 @@ There are several settings divided into tabs. In most cases, you only need to en
 
 :::info
 
-To understand the settings in detail, please [see the docs](/extensions/mb-custom-post-type/) for the MB Custom Post Types & Custom Taxonomies extension.
+To understand the settings in detail, please [see the docs](/extensions/mb-custom-post-type/#post-type-settings) for the MB Custom Post Types & Custom Taxonomies extension.
 
 :::
 
@@ -48,7 +48,7 @@ There are several settings divided into tabs. In most cases, you only need to en
 
 :::info
 
-To understand the settings in details, please [see the docs](/extensions/mb-custom-post-type/) for the MB Custom Post Types & Custom Taxonomies extension.
+To understand the settings in details, please [see the docs](/extensions/mb-custom-post-type/#taxonomy-settings) for the MB Custom Post Types & Custom Taxonomies extension.
 
 :::
 

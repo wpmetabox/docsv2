@@ -93,6 +93,12 @@
 .menu__link--sublist:after {
   background-size: 1.25rem 1.25rem;
 }
+.menu__caret {
+  margin: 0;
+}
+.menu__caret:hover {
+  background: none;
+}
 
 /* Content */
 .markdown img,

@@ -14,7 +14,7 @@ While Meta Box also works with PHP 5.6 and older versions of WordPress, these ve
 
 Meta Box is [available on WordPress.org](https://wordpress.org/plugins/meta-box/). To install it, go to **Plugins &rarr; Add New** and search for **Meta Box**.
 
-![install meta box plugin](https://i.imgur.com/Y6m8Dqq.png)
+![install meta box](https://i.imgur.com/vhlYMjJ.png)
 
 Then click the button **Install** to install it. After that, click the button **Activate** to activate the plugin.
 
@@ -35,8 +35,6 @@ Before installing extensions, make sure you installed and activated Meta Box, ev
 
 ## Next steps
 
-Now you have everything ready, you may be wondering what to learn next. We strongly recommend following step-by-step guides in the "Getting started" category.
+Now you have everything ready!
 
-When you're familiar with Meta Box, you might want to go to the [Advanced](/category/advanced/) category. And if you need to know how a field or an extension work, please go to their docs under [Field types](/fields/) or [Extensions](/category/extensions/) categories. You can also search for the things you need, sometimes it helps you find the exact docs faster.
-
-For now, as most WordPress websites require custom post types, let's [learn how to create them](/custom-post-types/).
+As most WordPress websites require custom post types, let's [learn how to create them](/custom-post-types/).
