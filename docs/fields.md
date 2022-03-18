@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 ## Basic
 
-<div className="thumbs">
+<div className="thumbs thumbs-basic">
 
 [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Checkbox</span>](/fields/checkbox/)
 
@@ -23,7 +23,7 @@ hide_table_of_contents: true
 
 ## Advanced
 
-<div className="thumbs">
+<div className="thumbs thumbs-advanced">
 
 [![button](/thumbs/button.png) <span className="thumb_text">Button</span>](/fields/button/)
 

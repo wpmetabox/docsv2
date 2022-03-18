@@ -10,8 +10,6 @@ import FAQ from '@site/src/components/FAQ';
 
 After creating custom post types and custom taxonomies, you'll need to add more details to your posts. For example, you'll need "date" and "location" for the "event" post type. Such details are called custom fields and that's the main thing that Meta Box does for you.
 
-![custom fields for the event post type in WordPress](https://i.imgur.com/TwDYnBQ.png)
-
 ## What are custom fields?
 
 Custom fields, also called metadata, are arbitrary extra data attached to posts to provide more information about the posts.
@@ -109,32 +107,11 @@ You can use any HTML tags and/or WordPress shortcodes in the view template.
 
 Now repeat the process for other fields: location and map. For map, as it's displayed as a Open Street Maps, we'll need change the HTML a little bit to put it below the label:
 
-```html
-<p>
-	<strong>Date and time:</strong> {{ post.datetime | date( 'F j, Y' ) }}
-</p>
-
-<p>
-	<strong>Location:</strong> {{ post.location }}
-</p>
-
-<p>
-	<strong>Map:</strong>
-</p>
-
-{{ post.map.rendered }}
-```
-
 ![template for the event post type](https://i.imgur.com/TeWN22i.png)
 
-Now you need to set up the view to display below the post content of the event page.
+Now you need to set up the view to display below the post content of the event page in the **Settings** box as follows:
 
-- In the **Settings** box, select **Singular** for **Type**, which means the view will display on a singular page.
-- Then in the **Location**, select the **Event** and select **All** events.
-- Choose **Render for only the post content area**
-- And choose to render the view **After the post content**
-
-![view settings](https://i.imgur.com/yFB85Qx.png)
+![view settings](https://i.imgur.com/U3kJnLe.png)
 
 Finally, click the **Publish** button to finish.
 
