@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 MB Rest API helps you retrieve and update custom fields via the WordPress REST API. It's very helpful if you develop an application that uses WordPress as a back end such as a mobile app. Or you need to integrate WordPress with another system.
 
-The extension works only with custom fields created by the Meta Box plugin and extensions. For custom custom fields or fields created by other plugins, please refer to [WordPress documentation](https://developer.wordpress.org/rest-api/).
+The extension works only with custom fields created by Meta Box and extensions. For custom custom fields or fields created by other plugins, please refer to [WordPress documentation](https://developer.wordpress.org/rest-api/).
 
 ## Video tutorial
 

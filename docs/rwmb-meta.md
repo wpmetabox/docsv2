@@ -65,7 +65,7 @@ Depends on the custom field types, the returned value can be different. Please r
 
 ## Undefined function error
 
-If you're using `rwmb_meta` in your theme, there may be a situation when an admin accidentally deactivate the Meta Box plugin and you will see error "Undefined function rwmb_meta..." and your site will be broken.
+If you're using `rwmb_meta` in your theme, there may be a situation when an admin accidentally deactivate Meta Box and you will see error "Undefined function rwmb_meta..." and your site will be broken.
 
 To prevent this problem, a simple fix for that is adding the following code into your theme's `functions.php` file:
 

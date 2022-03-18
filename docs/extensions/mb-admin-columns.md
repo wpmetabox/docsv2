@@ -141,7 +141,7 @@ Note that the `sort` parameter is used to sort displayed posts by altering the W
 
 ## Custom admin columns
 
-By default, the extension is made to work with fields created by the Meta Box plugin. However, there are situations where you want to make it work with non-custom fields by Meta Box. And that's totally possible. Follow the steps below (note that it requires some coding):
+By default, the extension is made to work with fields created by Meta Box. However, there are situations where you want to make it work with non-custom fields by Meta Box. And that's totally possible. Follow the steps below (note that it requires some coding):
 
 ### Creating custom class
 

@@ -10,7 +10,7 @@ MB Testimonials is a WordPress plugin that helps you add testimonials to your we
 
 ## Installation
 
-First, you need to install and activate the Meta Box plugin from [wordpress.org](https://wordpress.org/plugins/meta-box/). Next, download MB Favorite Posts plugin from the [My Account](https://metabox.io/my-account/) page, then upload the .zip file from the **Admin Dashboard**.
+First, you need to install and activate Meta Box from [wordpress.org](https://wordpress.org/plugins/meta-box/). Next, download MB Favorite Posts plugin from the [My Account](https://metabox.io/my-account/) page, then upload the .zip file from the **Admin Dashboard**.
 
 **Note**: MB Testimonials and [other solutions](https://metabox.io/product-category/solutions/) are not included in Meta Box AIO, so you can install them independently without Meta Box AIO.
 

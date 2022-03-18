@@ -107,7 +107,7 @@ The callback function accepts 2 parameters: the attribute value and the array of
 
 ## Post template files
 
-The plugin allows you to use a custom template files for post fields and the confirmation message (the fields defined by Meta Box is controlled by the Meta Box plugin and can't be changed).
+The plugin allows you to use a custom template files for post fields and the confirmation message.
 
 The plugin will look for a template file with the following order:
 

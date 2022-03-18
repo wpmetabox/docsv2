@@ -12,7 +12,7 @@ While Meta Box also works with PHP 5.6 and older versions of WordPress, these ve
 
 ## Installing Meta Box
 
-The Meta Box plugin is [available on wordpress.org](https://wordpress.org/plugins/meta-box/). To install it, go to **Plugins &rarr; Add New** and search for **Meta Box**.
+Meta Box is [available on WordPress.org](https://wordpress.org/plugins/meta-box/). To install it, go to **Plugins &rarr; Add New** and search for **Meta Box**.
 
 ![install meta box plugin](https://i.imgur.com/Y6m8Dqq.png)
 
@@ -20,14 +20,18 @@ Then click the button **Install** to install it. After that, click the button **
 
 ## Installing extensions
 
-Before installing extensions, make sure you installed and activated the Meta Box plugin, even if you use Meta Box AIO, MB Core, or solutions.
-
 Meta Box extensions are normal WordPress plugins, follow these steps to install them:
 
 - Go to [My Account](https://metabox.io/my-account/) and download the extensions you want to use.
 - Go to **Plugins**, click **Add new**, then click **Upload plugin**.
 - Choose the `.zip` file you downloaded and click **Install now**
 - After finishing the upload, click **Activate** to finish.
+
+:::caution
+
+Before installing extensions, make sure you installed and activated Meta Box, even if you use Meta Box AIO, MB Core, or solutions.
+
+:::
 
 ## Next steps
 

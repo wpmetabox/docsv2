@@ -51,7 +51,7 @@ public static function html( $meta, $field ) {
 
 Here we use new HTML5 input type `tel` with new attribute `pattern` to force users to enter correct phone number format `xxx-xxxx`.
 
-For this field, we don't need to handle saving or retrieving meta value or enqueueing scripts and styles. Everything is handled automatically by the Meta Box plugin.
+For this field, we don't need to handle saving or retrieving meta value or enqueueing scripts and styles. Everything is handled automatically by Meta Box.
 
 The complete code for this class is the following:
 
