@@ -1,4 +1,0 @@
----
-id: references
-title: References
----
