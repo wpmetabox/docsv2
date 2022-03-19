@@ -291,6 +291,68 @@ To save time read and write settings for fields, we've already prepared some cod
 
 :::
 
+### Shorthand syntax
+
+For **text** field type, you can omit the `type` settings, like this:
+
+```php
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
+        'title'      => 'Event details',
+        'post_types' => 'event',
+        'fields'     => [
+            [
+                'name' => 'Date and time',
+                'id'   => 'datetime',
+                'type' => 'datetime',
+            ],
+            // highlight-start
+            [
+                'name' => 'Location',
+                'id'   => 'location',
+            ],
+            // highlight-end
+            [
+                'name'          => 'Map',
+                'id'            => 'map',
+                'type'          => 'osm',
+                'address_field' => 'location',
+            ],
+        ],
+    ];
+
+    return $meta_boxes;
+} );
+```
+
+And if the `id` of the field can be auto-generated from the field name, you can omit it and **define the field as a simple string**:
+
+```php
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
+        'title'      => 'Event details',
+        'post_types' => 'event',
+        'fields'     => [
+            [
+                'name' => 'Date and time',
+                'id'   => 'datetime',
+                'type' => 'datetime',
+            ],
+            // highlight-next-line
+            'Location',
+            [
+                'name'          => 'Map',
+                'id'            => 'map',
+                'type'          => 'osm',
+                'address_field' => 'location',
+            ],
+        ],
+    ];
+
+    return $meta_boxes;
+} );
+```
+
 ## Video tutorial
 
 This video shows you all the field types and field settings:
