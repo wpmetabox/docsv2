@@ -4,7 +4,7 @@ title: Compatibility
 
 ## Plugins
 
-### Page Builder plugins
+### Page builder plugins
 
 - Beaver Builder (via [Meta Box - Beaver Themer Integrator](https://metabox.io/plugins/meta-box-beaver-themer-integrator/))
 - Elementor (via [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/))
@@ -32,11 +32,16 @@ Meta Box has official support from these plugins:
 ### SEO plugins
 
 - [Slim SEO](https://wpslimseo.com/)
-- All in One SEO Pack
-- Rank Math
-- SEOPress
-- The SEO Framework
-- Yoast SEO
+- Rank Math (via [MB Rank Math](https://metabox.io/plugins/mb-rank-math/) extension)
+- Yoast SEO (via [Meta Box for Yoast SEO](https://metabox.io/plugins/meta-box-yoast-seo/) extension)
+
+### Multilingual plugins
+
+Meta Box has a built-in integration for these multilingual plugins which allows you to translate values in custom fields.
+
+- WPML
+- Polylang
+
 
 ### Optimization plugins
 
@@ -51,15 +56,6 @@ Meta Box has official support from these plugins:
 - WP Fastest Cache
 - WP Rocket
 - WP-Optimize
-
-### Security plugins
-
-- All In One WP Security & Firewall
-- Hide My WP Ghost
-- iThemes Security
-- Shield Security
-- Sucuri Security
-- Wordfence Security
 
 ### Others
 
@@ -76,10 +72,11 @@ Meta Box has official support from these plugins:
 - SendSMS
 - SendX
 - WooCommerce
-- WPML
 - WPvivid
 
 ## Themes
+
+These are the theme shops that use Meta Box to provide extra functionality for their themes.
 
 - [GretaThemes](https://gretathemes.com/)
 - [FitWP](https://fitwp.com/)

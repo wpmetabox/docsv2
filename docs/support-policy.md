@@ -6,7 +6,7 @@ title: Support policy
 
 The official support channel is the [support forum](https://metabox.io/support/), which is public. Only premium users can open a new topic. For free plugins, we also support via [WordPress.org support forum](https://wordpress.org/support/plugin/meta-box/).
 
-Besides, there is a [Facebook group](https://www.facebook.com/groups/153766748574311), which is for community discussion, not for support.
+Besides, there is a [Facebook group](https://www.facebook.com/groups/metaboxusers), which is for community discussion, not for support.
 
 We do **not** support via email.
 
@@ -21,7 +21,7 @@ We do **not** support:
 - For plugins that officially support Meta Box, like Oxygen Builder, SearchWP, Admin Columns, ... please reach out to them if you have any issue with installation, configuration, compatibility, or usage.
 - For other plugins that don't have support for Meta Box, let us know so we can put it in our roadmap, or contact them to ask for Meta Box integration. Anyway, we don't promise or guarantee future integration.
 - Customization for your specific needs.
-- Custom development. We do custom development **as an outsourcing service**. If you need help, please [hire us].
+- Custom development. We do custom development **as an outsourcing service** and are [available for hire](https://metabox.io/contact/).
 
 
 ## Support time
