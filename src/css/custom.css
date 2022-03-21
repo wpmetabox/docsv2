@@ -136,6 +136,7 @@ table {
   width: 100%;
   font-size: var(--ifm-h5-font-size);
   --ifm-table-cell-padding: 6px 12px;
+  --ifm-code-font-size: 100%;
 }
 table th,
 table td {
