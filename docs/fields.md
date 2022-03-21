@@ -49,7 +49,7 @@ hide_table_of_contents: true
 
 [![key value](/thumbs/key-value.png) <span className="thumb_text">Key value</span>](/fields/key-value/)
 
-<!-- [![map](/thumbs/map.png) <span className="thumb_text">Google Maps</span>](/fields/map/) -->
+[![map](/thumbs/map.png) <span className="thumb_text">Google Maps</span>](/fields/map/)
 
 [![oembed](/thumbs/oembed.png) <span className="thumb_text">oEmbed</span>](/fields/oembed/)
 
