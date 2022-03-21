@@ -46,6 +46,11 @@ const sidebars = {
 				'database',
 				'custom-attributes',
 				{
+					'Developer guides': [
+						'creating-fields-with-code',
+						'displaying-fields-with-code',
+						'creating-new-field-types',
+					],
 					API: [
 						'actions',
 						'filters',
@@ -56,11 +61,6 @@ const sidebars = {
 						'rwmb-get-object-fields',
 						'rwmb-get-field-settings',
 						'rwmb-get-registry',
-					],
-					'Developer guides': [
-						'creating-fields-with-code',
-						'displaying-fields-with-code',
-						'custom-field-type',
 					],
 				}
 			],
