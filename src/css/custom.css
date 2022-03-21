@@ -9,7 +9,7 @@
   --ifm-color-primary-lightest: #3cad6e;
 
   /* Code */
-  --ifm-code-font-size: var(--ifm-h5-font-size);
+  --ifm-code-font-size: 87.5%;
 
   /* Custom colors: from Tailwind */
   --color-blue: #3b82f6;

@@ -2,9 +2,12 @@
 title: rwmb_set_meta
 ---
 
-`rwmb_set_meta` is a helper function that helps you to set meta value for an object.
+`rwmb_set_meta` is a helper function that helps you to set value for a field.
 
-To set meta value, use the following code:
+
+## Arguments
+
+This function accepts 4 parameters as follows:
 
 ```php
 rwmb_set_meta( $object_id, $field_id, $value, $args = [] );
@@ -15,9 +18,9 @@ Parameter|Description
 `$object_id`|Object (post, term, user) ID. If you need to set value for an option (using MB Settings Page), object ID is the option name.
 `$field_id`|Field ID.
 `$value`|Value. Should be compatible with field value format. See [database](/database/).
-`$args`|Extra arguments for some object types or storages. It works similarly in [rwmb_meta](/rwmb-meta/) function. Can be array or a string in format param1=value1&param2=value2.Optional.
+`$args`|Extra arguments for some object types or storages. It works similarly in [rwmb_meta](/rwmb-meta/) function. Can be array or a string in format param1=value1&param2=value2. Optional.
 
-**Important Note**
+:::caution
 
 This function works only when the field is already registered. In Meta Box, fields are registered at hook `init` with priority 20. So, you need to run this function after that:
 
@@ -26,10 +29,11 @@ add_action( 'init', function() {
 	rwmb_set_meta( 12, 'my_field', 'my_value' );
 }, 99 );
 ```
+:::
 
 ## Examples
 
-Setting a field value for a post:
+**Setting a field value for a post:**
 
 ```php
 add_action( 'init', function() {
@@ -40,7 +44,27 @@ add_action( 'init', function() {
 }, 99 );
 ```
 
-Setting a field value for a term:
+**Setting a cloneable group value for a post:**
+
+```php
+add_action( 'init', function() {
+	$post_id = 123;
+	$field_id = 'my_field';
+	$value = [
+		[
+			'name' => 'Andy',
+			'email' => 'andy@mail.com',
+		],
+		[
+			'name' => 'Bruce',
+			'email' => 'bruce@mail.com',
+		],
+	];
+	rwmb_set_meta( $post_id, $field_id, $value );
+}, 99 );
+```
+
+**Setting a field value for a term:**
 
 ```php
 add_action( 'init', function() {
@@ -51,7 +75,7 @@ add_action( 'init', function() {
 }, 99 );
 ```
 
-Setting a field value for a user:
+**Setting a field value for a user:**
 
 ```php
 add_action( 'init', function() {
@@ -62,7 +86,7 @@ add_action( 'init', function() {
 }, 99 );
 ```
 
-Setting a field value for a settings page:
+**Setting a field value for a settings page:**
 
 ```php
 add_action( 'init', function() {
@@ -73,7 +97,7 @@ add_action( 'init', function() {
 }, 99 );
 ```
 
-Setting a field value with custom table:
+**Setting a field value with custom table:**
 
 ```php
 add_action( 'init', function() {
