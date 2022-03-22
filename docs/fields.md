@@ -3,6 +3,8 @@ title: Field types
 hide_table_of_contents: true
 ---
 
+Learn about field types, what they are and when you should use them.
+
 ## Basic
 
 <div className="thumbs thumbs-basic">
