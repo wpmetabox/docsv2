@@ -16,7 +16,7 @@ Although the action name is `rwmb_before_save_post`, it applies to all object ty
 
 :::
 
-To run this action for a specific field group, you can use a variation of this action:
+To run this action for a specific field group, use a variation of this action:
 
 ```php
 do_action( "rwmb_{$field_group_id}_before_save_post", $object_id );

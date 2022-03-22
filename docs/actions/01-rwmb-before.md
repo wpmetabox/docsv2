@@ -10,7 +10,7 @@ do_action( 'rwmb_before', $meta_box );
 
 It takes 1 parameter: the instance of `RW_Meta_Box` class for the current field group.
 
-To run this action for a specific field group, you can use a variation of this action:
+To run this action for a specific field group, use a variation of this action:
 
 ```php
 do_action( "rwmb_before_{$field_group_id}", $meta_box );
