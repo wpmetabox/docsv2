@@ -4,72 +4,106 @@ title: Custom attributes
 
 With Meta Box, you can add custom attributes for inputs like text, URL, email field. This feature is very helpful if developers want to add HTML5 attributes or something like `data-*` attribute for their custom JavaScript code.
 
-Creating custom attributes is done by either of the following methods:
+## How to add custom attributes to fields
 
-- **Using Meta Box Builder extension**, which helps you create custom attributes with UI. This extension is already bundled in Meta Box AIO/MB Core.
-- **Using code**.
+To add custom attributes to the fields, click the **Advanced** tab in the field settings, and click the **Add New** button under **Custom HTML5 Attributes**:
 
-## Using Meta Box Builder
+![custom input attributes](https://i.imgur.com/IFiPfAr.png)
 
-To add custom attributes to the fields, click on the tab **Advanced** in each field and click **Add New** custom settings. Using [Dot notation](/extensions/meta-box-builder/#dot-notation) on the Builder documentation.
+Then simply add your attribute name and value.
 
-![create custom attributes](https://i.imgur.com/UIdseik.png)
+:::info Not a premium user?
 
-Add custom HTML5 attributes `data-*`, click **Add New** Custom HTML5 Attributes. Using [JSON notation](/extensions/meta-box-builder/#json-notation):
+This instruction uses **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
 
-![create custom HTML5 attributes](https://i.imgur.com/Hn14j8u.png)
+:::
 
-Create common attributes `disabled`, `required`, `readonly`, `maxlength` and `pattern`:
+Currently, this feature is supported in text, URL, email, checkbox, radio, date, time, datetime fields.
 
-![create common attributes](https://i.imgur.com/N2Zfh06.png)
 
-## Using code
+:::info Complex values
 
-To add custom attributes to the fields, just define them as a `'key' => 'value'` like this:
+By default, custom attributes accept strings as keys and values. If you want to enter complex values, like array, please use the [dot notation](/extensions/meta-box-builder/#dot-notation) or [JSON notation](/extensions/meta-box-builder/#json-notation).
+
+:::
+
+## Adding custom attributes with code
+
+Custom attributes are registered as an array `attributes` in the field settings, in format `'key' => 'value'` like this:
 
 ```php
 'fields' => [
     [
-        'name'       => __( 'Text', 'meta-box' ),
+        'name'       => 'Username',
         'id'         => 'text',
         'type'       => 'text',
+        // highlight-start
         'attributes' => [
-            'disabled'  => true,
+            'required'  => true,
             'minlength' => 10,
         ],
+        // highlight-end
     ],
 ],
 ```
 
-If you want to add custom `data-*` attribute, you can add like this:
+If you want to add a custom `data-*` attribute, you can add it like this:
 
 ```php
 'attributes' => [
+    // highlight-start
     // Simple value
     'data-option1'  => 'value1',
     // Array of values
-    'data-option2'  => json_encode( array( 'key1' => 'value1', 'key2' => 'value2' ) ),
+    'data-option2'  => json_encode( ['key1' => 'value1', 'key2' => 'value2'] ),
+    // highlight-end
 ],
 ```
 
-Currently, this feature is supported in field `text`, `url`, `email`, `checkbox`, `radio`, `date`, `time`, `datetime` field.
+### Common attributes
 
-Common attributes `disabled`, `required`, `readonly`, `maxlength` and `pattern` are also registered to be used as global parameters for fields, so you can use both these ways below as they are the same:
+There are several attributes that you can set under the `attributes` array, or directly in the field settings (e.g. outside the `attributes` array).
+
+So, you can write like this:
 
 ```php
-'attributes' => [
-    'disabled'  => true,
-    'required'  => true,
-    'readonly'  => true,
-    'maxlength' => 140,
-    'pattern'   => true,
+'fields' => [
+    [
+        'name'       => 'Username',
+        'id'         => 'text',
+        'type'       => 'text',
+        // highlight-start
+        'attributes' => [
+            'required'  => true,
+            'minlength' => 10,
+        ],
+        // highlight-end
+    ],
 ],
-
-// or simpler, e.g. without wrapping inside 'attributes'
-
-'disabled'  => true,
-'required'  => true,
-'readonly'  => true,
-'maxlength' => 140,
-'pattern'   => true,
 ```
+
+Or like this:
+
+```php
+'fields' => [
+    [
+        'name'       => 'Username',
+        'id'         => 'text',
+        'type'       => 'text',
+        // highlight-start
+        'required'  => true,
+        'minlength' => 10,
+        // highlight-end
+    ],
+],
+```
+
+Here is the list of common attributes:
+
+- disabled
+- required
+- autofocus
+- readonly
+- maxlength
+- minlength
+- pattern
