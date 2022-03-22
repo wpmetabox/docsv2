@@ -1,4 +1,0 @@
----
-id: advanced
-title: Advanced
----
