@@ -9,10 +9,10 @@ import FAQ from '@site/src/components/FAQ';
 
 If you're a developer and familiar with changing template file with PHP code, you can use Meta Box helper functions to display fields:
 
-- [`rwmb_get_value()`](/rwmb-get-value/): to get a field value as a variable
-- [`rwmb_the_field()`](/rwmb-the-value/): to display a field
+- [`rwmb_get_value()`](/functions/rwmb-get-value/): to get a field value as a variable
+- [`rwmb_the_field()`](/functions/rwmb-the-value/): to display a field
 
-In addition, we also provide [`rwmb_meta()`](/rwmb-meta/) function, which is a wrapper of the 2 functions above which:
+In addition, we also provide [`rwmb_meta()`](/functions/rwmb-meta/) function, which is a wrapper of the 2 functions above which:
 
 - Returns the HTML output for rich-content fields: `map`, `osm`, and `oembed`, same as `rwmb_the_value()`,
 - Returns the same value as `rwmb_get_value()` for other field types.
@@ -107,6 +107,6 @@ There are some cases where you register custom fields conditionally or only for 
 
 <FAQ question="Can I use a page builder to show Meta Box fields?">
 
-Absolutely. We have official support for [Beaver Builder](/extensions/mb-beaver-themer-integrator/) and [Elementor](/extensions/mb-elementor/). Some page builders already have built-in support for Meta Box like Oxygen Builder, Bricks, and Brizy. See the [list of compatible plugins](/compatibility/) and refer to their docs for how to use them with Meta Box.
+Absolutely. We have official support for Beaver Builder and Elementor. Some page builders already have built-in support for Meta Box like Oxygen Builder, Bricks, and Brizy. See the [list of compatible plugins](/compatibility/) and refer to their docs for how to use them with Meta Box.
 
 </FAQ>

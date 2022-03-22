@@ -192,7 +192,7 @@ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
 }
 ```
 
-If the field is neither cloneable nor multiple, e.g. it has single value, then the [rwmb_meta()](/rwmb-meta/) function returns the single term object:
+If the field is neither cloneable nor multiple, e.g. it has single value, then the [rwmb_meta()](/functions/rwmb-meta/) function returns the single term object:
 
 ```php
 $term = rwmb_meta( $field_id );
@@ -212,7 +212,7 @@ If you just want to output selected terms in an unordered list, use this code:
 rwmb_the_value( $field_id );
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).
 
 ## Filters
 

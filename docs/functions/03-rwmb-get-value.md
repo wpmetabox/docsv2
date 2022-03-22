@@ -183,6 +183,6 @@ If you format the options of your select field as:
 ],
 ```
 
-Then when using with this function, it returns the value "us", "uk", or "au". To get the label like "United States", please use the [rwmb_the_value()](/rwmb-the-value/) function.
+Then when using with this function, it returns the value "us", "uk", or "au". To get the label like "United States", please use the [rwmb_the_value()](/functions/rwmb-the-value/) function.
 
 </FAQ>

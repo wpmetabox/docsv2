@@ -1,4 +1,4 @@
-To get the uploaded files, use the helper function [rwmb_meta()](/rwmb-meta/):
+To get the uploaded files, use the helper function [rwmb_meta()](/functions/rwmb-meta/):
 
 ```php
 $files = rwmb_meta( 'field_id' );
@@ -30,7 +30,7 @@ $file = reset( $files );
 <a href="<?php echo $file['url']; ?>">Download File</a>
 ```
 
-If you only want to display uploaded files in an unordered list, you can just use the [rwmb_the_value()](/rwmb-the-value/):
+If you only want to display uploaded files in an unordered list, you can just use the [rwmb_the_value()](/functions/rwmb-the-value/):
 
 ```php
 rwmb_the_value( $field_id );
@@ -45,4 +45,4 @@ which outputs:
 </ul>
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

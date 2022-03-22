@@ -30,7 +30,7 @@ This field stores background properties in a serialized array in the post meta.
 
 ## Template usage
 
-To get the background properties, use the helper function [rwmb_meta()](/rwmb-meta/):
+To get the background properties, use the helper function [rwmb_meta()](/functions/rwmb-meta/):
 
 ```php
 $background = rwmb_meta( 'background' );
@@ -51,11 +51,11 @@ array(
 );
 ```
 
-If you want to **get the CSS for the background**, use the [rwmb_the_value()](/rwmb-the-value/):
+If you want to **get the CSS for the background**, use the [rwmb_the_value()](/functions/rwmb-the-value/):
 
 ```php
 $css = rwmb_the_value( $field_id, '', '', false );
 echo '<div style="', $css, '"></div>';
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

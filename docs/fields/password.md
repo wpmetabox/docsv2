@@ -48,4 +48,4 @@ if ( wp_check_password( 'password to check', $value ) ) {
 }
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/).

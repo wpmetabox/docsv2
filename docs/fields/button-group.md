@@ -52,7 +52,7 @@ If field is not multiple, to get the field value, use this code:
 $value = rwmb_meta( $field_id );
 echo $value;
 ```
-The [rwmb_meta()](/rwmb-meta/) function returns the saved value in the database (the value in the options array). If you want to display the label, use this code:
+The [rwmb_meta()](/functions/rwmb-meta/) function returns the saved value in the database (the value in the options array). If you want to display the label, use this code:
 
 ```php
 rwmb_the_value( $field_id );
@@ -67,4 +67,4 @@ foreach ( $values as $value ) {
 }
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

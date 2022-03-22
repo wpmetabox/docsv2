@@ -1,4 +1,4 @@
-To get the uploaded images, use the helper function [rwmb_meta()](/rwmb-meta/):
+To get the uploaded images, use the helper function [rwmb_meta()](/functions/rwmb-meta/):
 
 ```php
 $images = rwmb_meta( 'info', array( 'size' => 'thumbnail' ) );
@@ -45,7 +45,7 @@ $image = reset( $images );
 <img src="<?php echo $image['url']; ?>">
 ```
 
-If you only want to display uploaded images in an unordered list, you can just use the [rwmb_the_value()](/rwmb-the-value/):
+If you only want to display uploaded images in an unordered list, you can just use the [rwmb_the_value()](/functions/rwmb-the-value/):
 
 ```php
 rwmb_the_value( $field_id, array( 'size' => 'thumbnail' ) );
@@ -60,4 +60,4 @@ which outputs:
 </ul>
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

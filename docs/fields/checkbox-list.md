@@ -84,7 +84,7 @@ foreach ( $values as $clone ) {
 }
 ```
 
-The function [rwmb_meta()](/rwmb-meta/) only returns the value of the field, e.g. the key in the `options` array. To display the field label, use this code:
+The function [rwmb_meta()](/functions/rwmb-meta/) only returns the value of the field, e.g. the key in the `options` array. To display the field label, use this code:
 
 ```php
 rwmb_the_value( $field_id );
@@ -99,4 +99,4 @@ which outputs:
 </ul>
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

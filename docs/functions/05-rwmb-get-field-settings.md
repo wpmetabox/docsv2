@@ -39,7 +39,7 @@ $field = rwmb_get_field_settings( $field_id, $args, $object_id );
 Name|Description
 ---|---
 `$field_id`|The field ID. Required.
-`$args`|Extra arguments for some object types or storages. It works similarly in [rwmb_meta](/rwmb-meta/) function. Can be array or a string in format `param1=value1&param2=value2`. Optional.
+`$args`|Extra arguments for some object types or storages. It works similarly in [rwmb_meta](/functions/rwmb-meta/) function. Can be array or a string in format `param1=value1&param2=value2`. Optional.
 `$object_id`|Object ID that custom fields are get from. Optional. If not present, current post ID is used.
 
 ## Returned value

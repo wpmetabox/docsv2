@@ -222,7 +222,7 @@ Now you can go to edit post screen (or edit user profile if you use the meta box
 
 ## Getting field value
 
-Use the helper [rwmb_meta()](/rwmb-meta/) function to get a field value. The only difference is you need to specify the table name in the 2nd argument:
+Use the helper [rwmb_meta()](/functions/rwmb-meta/) function to get a field value. The only difference is you need to specify the table name in the 2nd argument:
 
 ```php
 $value = rwmb_meta( $field_id, ['storage_type' => 'custom_table', 'table' => $table_name] );

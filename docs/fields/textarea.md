@@ -46,4 +46,4 @@ foreach ( $values as $value ) {
 
 This field outputs exactly what you have entered. So be careful if you enter HTML.
 
-Read more about [rwmb_meta()](/rwmb-meta/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/).

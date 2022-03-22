@@ -477,7 +477,7 @@ By using Settings API, all the fields' values will be saved as an array in a sin
 
 ## Getting field value
 
-You're able to use helper function [rwmb_meta()](/rwmb-meta/) to get field value as follows:
+You're able to use helper function [rwmb_meta()](/functions/rwmb-meta/) to get field value as follows:
 
 ```php
 $value = rwmb_meta( $field_id, ['object_type' => 'setting'], $option_name );

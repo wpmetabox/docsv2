@@ -56,7 +56,7 @@ WordPress provides an identical way to store values in the meta tables for post 
 
 ## Getting field value
 
-You're able to use helper function [rwmb_meta()](/rwmb-meta/) to get field value for terms.
+You're able to use helper function [rwmb_meta()](/functions/rwmb-meta/) to get field value for terms.
 
 ```php
 $value = rwmb_meta( $field_id, ['object_type' => 'term'], $term_id );

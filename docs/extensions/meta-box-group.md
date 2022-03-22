@@ -451,7 +451,7 @@ add_shortcode( 'my_group', function() {
 
 ### Sub-field values
 
-It's important to note that the helper function returns only raw array of sub-field values. It doesn't transform value to meaning full details like [rwmb_meta](/rwmb-meta/) function for specific fields. Specifically:
+It's important to note that the helper function returns only raw array of sub-field values. It doesn't transform value to meaning full details like [rwmb_meta](/functions/rwmb-meta/) function for specific fields. Specifically:
 
 Sub-field type|Value
 ---|---

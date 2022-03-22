@@ -50,4 +50,4 @@ function prefix_enqueue_custom_style() {
 
 And in the `admin.css` you can put your custom styles.
 
-Read more about the [rwmb_enqueue_scripts](/actions/) hook.
+Read more about the [rwmb_enqueue_scripts](/actions/rwmb-enqueue-scripts/) hook.

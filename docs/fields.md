@@ -131,10 +131,10 @@ hide_table_of_contents: true
 
 [![divider](/thumbs/divider.png) <span className="thumb_text">Divider</span>](/fields/divider/)
 
-[![group](/thumbs/group.png) <span className="thumb_text">Group</span>](/fields/group/)
+[![group](/thumbs/group.png) <span className="thumb_text">Group</span>](/extensions/meta-box-group/)
 
 [![heading](/thumbs/heading.png) <span className="thumb_text">Heading</span>](/fields/heading/)
 
-[![tab](/thumbs/tab.png) <span className="thumb_text">Tab</span>](/fields/tab/)
+[![tab](/thumbs/tab.png) <span className="thumb_text">Tab</span>](/extensions/meta-box-tabs/)
 
 </div>

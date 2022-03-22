@@ -62,4 +62,4 @@ jQuery( function( $ ) {
 } );
 ```
 
-Read more about the [rwmb_enqueue_scripts](/actions/) hook.
+Read more about the [rwmb_enqueue_scripts](/actions/rwmb-enqueue-scripts/) hook.

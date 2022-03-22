@@ -208,7 +208,7 @@ If you just want to output selected posts in an unordered list, use this code:
 rwmb_the_value( $field_id );
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).
 
 ## Filters
 

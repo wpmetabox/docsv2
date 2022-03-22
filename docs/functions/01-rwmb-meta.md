@@ -6,11 +6,11 @@ import FAQ from '@site/src/components/FAQ';
 
 `rwmb_meta` is a helper function that helps you get a field value.
 
-It's actually a wrapper of [rwmb_get_value()](/rwmb-get-value/) and [rwmb_the_value()](/rwmb-the-value/) functions to make sure the returned value is always helpful to developers.
+It's actually a wrapper of [rwmb_get_value()](/functions/rwmb-get-value/) and [rwmb_the_value()](/functions/rwmb-the-value/) functions to make sure the returned value is always helpful to developers.
 
 More precisely:
-- If field type is either oEmbed, Google maps, or Open Street Maps, it's exactly the same as [rwmb_the_value()](/rwmb-the-value/), but returns the field HTML output.
-- For other field types, it's exactly the same as [rwmb_get_value()](/rwmb-get-value/).
+- If field type is either oEmbed, Google maps, or Open Street Maps, it's exactly the same as [rwmb_the_value()](/functions/rwmb-the-value/), but returns the field HTML output.
+- For other field types, it's exactly the same as [rwmb_get_value()](/functions/rwmb-get-value/).
 
 ## Arguments
 
@@ -198,6 +198,6 @@ If you format the options of your select field as:
 ],
 ```
 
-Then when using with this function, it returns the value "us", "uk", or "au". To get the label like "United States", please use the [rwmb_the_value()](/rwmb-the-value/) function.
+Then when using with this function, it returns the value "us", "uk", or "au". To get the label like "United States", please use the [rwmb_the_value()](/functions/rwmb-the-value/) function.
 
 </FAQ>

@@ -38,7 +38,7 @@ This field saves the media URL in the post meta.
 
 ## Template usage
 
-To output the media in the frontend, use the [rwmb_meta()](/rwmb-meta/) helper function:
+To output the media in the frontend, use the [rwmb_meta()](/functions/rwmb-meta/) helper function:
 
 ```php
 $media = rwmb_meta( $field_id );
@@ -54,7 +54,7 @@ $url = rwmb_get_value( $field_id );
 echo $url
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_get_value()](/rwmb-get-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_get_value()](/functions/rwmb-get-value/).
 
 ## Hooks
 

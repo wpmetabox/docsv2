@@ -113,7 +113,7 @@ Or simpler:
 rwmb_the_value( $field_id, array( 'format' => 'F j, Y @H:i' ) );
 ```
 
-The 2nd parameter of [rwmb_the_value()](/rwmb-the-value/) accepts and extra parameter `format` which specify the datetime format to output in the frontend.
+The 2nd parameter of [rwmb_the_value()](/functions/rwmb-the-value/) accepts and extra parameter `format` which specify the datetime format to output in the frontend.
 
 Note that saving in timestamp also allows you to query posts with a specific order by this field:
 
@@ -128,4 +128,4 @@ $query = new WP_Query( array(
 
 However, you still can sort posts by meta value if you set date format to something similar to `yy-mm-dd`. Anyway, querying posts by custom fields is [not recommended](https://metabox.io/custom-fields-vs-custom-taxonomies/).
 
-Read more about [rwmb_meta()](/rwmb-meta/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/).

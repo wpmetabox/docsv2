@@ -34,7 +34,7 @@ This field saves the image ID in the post meta.
 
 ## Template usage
 
-To get the uploaded image, use the helper function [rwmb_meta()](/rwmb-meta/):
+To get the uploaded image, use the helper function [rwmb_meta()](/functions/rwmb-meta/):
 
 ```php
 $image = rwmb_meta( 'info', array( 'size' => 'thumbnail' ) );
@@ -68,7 +68,7 @@ array(
 );
 ```
 
-If you only want to display the uploaded image, use the [rwmb_the_value()](/rwmb-the-value/):
+If you only want to display the uploaded image, use the [rwmb_the_value()](/functions/rwmb-the-value/):
 
 ```php
 rwmb_the_value( $field_id, array( 'size' => 'thumbnail' ) );
@@ -80,7 +80,7 @@ which outputs:
 <a href="link/to/full-size"><img src="link/to/image"></a>
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).
 
 ## Filters
 

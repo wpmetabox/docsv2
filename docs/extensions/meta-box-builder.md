@@ -418,7 +418,7 @@ The filter `mbb_settings_controls` accepts only one parameter - an array of cont
 
 ### Adding your own field types
 
-As Meta Box allows you to [create your own field types](/custom-field-type/), it's able to create UI for your custom field types.
+As Meta Box allows you to [create your own field types](/creating-new-field-types/), it's able to create UI for your custom field types.
 
 To add UI for your custom field types, use the following hook:
 
@@ -470,7 +470,7 @@ And here is how it looks when reveal the field settings:
 
 :::info
 
-Note that this section describes how to create UI in the builder for your custom field types only. To make the new field works, please follow [this documentation](/custom-field-type/).
+Note that this section describes how to create UI in the builder for your custom field types only. To make the new field works, please follow [this documentation](/creating-new-field-types/).
 
 :::
 

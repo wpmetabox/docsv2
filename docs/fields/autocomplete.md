@@ -112,4 +112,4 @@ foreach ( $values as $clone ) {
 
 The values got and displayed here are the options' values, not labels.
 
-Read more about [rwmb_meta()](/rwmb-meta/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/).

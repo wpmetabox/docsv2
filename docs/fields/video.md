@@ -46,7 +46,7 @@ Similar to file field, this field saves multiple values (video attachment IDs) i
 
 ## Template usage
 
-To get the uploaded videos, use the helper function [rwmb_meta()](/rwmb-meta/):
+To get the uploaded videos, use the helper function [rwmb_meta()](/functions/rwmb-meta/):
 
 ```php
 $videos = rwmb_meta( 'field_id' );
@@ -102,7 +102,7 @@ $video = reset( $videos );
 <video src="<?php echo $video['src']; ?>">
 ```
 
-If you only want to display uploaded videos in a player (with playlist), you can just use the [rwmb_the_value()](/rwmb-the-value/):
+If you only want to display uploaded videos in a player (with playlist), you can just use the [rwmb_the_value()](/functions/rwmb-the-value/):
 
 ```php
 rwmb_the_value( $field_id );
@@ -121,4 +121,4 @@ foreach ( $videos as $video ) {
 }
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/), [rwmb_the_value()](/rwmb-the-value/) and [wp_video_shortcode()](https://codex.wordpress.org/Function_Reference/wp_video_shortcode).
+Read more about [rwmb_meta()](/functions/rwmb-meta/), [rwmb_the_value()](/functions/rwmb-the-value/) and [wp_video_shortcode()](https://codex.wordpress.org/Function_Reference/wp_video_shortcode).

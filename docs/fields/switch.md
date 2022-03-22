@@ -69,4 +69,4 @@ rwmb_the_value( $field_id ); // echo 'On' or 'Off'
 
 When using `rwmb_the_value`, displaying the `on_label` or `off_label` depends on the field value. In case those labels are omited, it uses "On/Off" as the default text.
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

@@ -8,7 +8,7 @@ import FAQ from '@site/src/components/FAQ';
 
 It's very helpful in case you want to output a real Google maps or a player for oEmbed field.
 
-Unlike [rwmb_get_value()](/rwmb-get-value/), this function always outputs human-readable content. For example, for a checkbox list or a select field, it outputs the labels of the choices, not the values.
+Unlike [rwmb_get_value()](/functions/rwmb-get-value/), this function always outputs human-readable content. For example, for a checkbox list or a select field, it outputs the labels of the choices, not the values.
 
 ## Arguments
 
@@ -43,7 +43,7 @@ For **choice fields** (select, select advanced, checkbox list, radio, and button
 ],
 ```
 
-Then when using with this function, it outputs the label "United States" or "Australia" depending on its value. If you want to get the value "us", "uk", or "au", please use the [rwmb_get_value()](/rwmb-get-value/) function.
+Then when using with this function, it outputs the label "United States" or "Australia" depending on its value. If you want to get the value "us", "uk", or "au", please use the [rwmb_get_value()](/functions/rwmb-get-value/) function.
 
 ## Examples
 

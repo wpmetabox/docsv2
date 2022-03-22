@@ -96,4 +96,4 @@ foreach ( $values as $value ) {
 }
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/).

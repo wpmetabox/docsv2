@@ -273,7 +273,7 @@ This filter is used to modify the submitted user data before it's passed to the 
 $data = apply_filters( 'rwmb_profile_insert_user_data', $data, $config );
 ```
 
-Please note that this filter works only for default user fields such as user email or password. For changing custom fields data, please use [rwmb_{field_id}_value](/filters/#rwmb_field_id_value) filter.
+Please note that this filter works only for default user fields such as user email or password. For changing custom fields data, please use [rwmb_{$field_id}_value](/filters/rwmb-field-type-value/) filter.
 
 `rwmb_profile_update_user_data`
 
@@ -282,7 +282,7 @@ This filter is used to modify the submitted user data before it's passed to the 
 ```php
 $data = apply_filters( 'rwmb_profile_update_user_data', $data, $config );
 ```
-Please note that this filter works only for default user fields such as user email or password. For changing custom fields data, please use [rwmb_{field_id}_value](/filters/#rwmb_field_id_value) filter.
+Please note that this filter works only for default user fields such as user email or password. For changing custom fields data, please use [rwmb_{$field_id}_value](/filters/rwmb-field-type-value/) filter.
 
 ### Form fields filters
 

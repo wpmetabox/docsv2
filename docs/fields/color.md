@@ -50,7 +50,7 @@ $value = rwmb_meta( $field_id );
 echo $value;
 ```
 
-The [rwmb_meta()](/rwmb-meta/) function returns the color code. If you want to display the actual color, use this code:
+The [rwmb_meta()](/functions/rwmb-meta/) function returns the color code. If you want to display the actual color, use this code:
 
 ```php
 rwmb_the_value( $field_id );
@@ -60,4 +60,4 @@ which displays the color as a single dot like this:
 
 ![display color](https://i.imgur.com/gLAVBYS.png)
 
-Read more about [rwmb_meta()](/rwmb-meta/) and [rwmb_the_value()](/rwmb-the-value/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

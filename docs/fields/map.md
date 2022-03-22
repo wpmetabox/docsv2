@@ -74,7 +74,7 @@ This field saves the location in the following format `latitude,longitude,zoom`.
 
 ### Displaying the map
 
-To display `map` field in the frontend, we use the [rwmb_meta()](/rwmb-meta/) helper function, but we need to add more parameters:
+To display `map` field in the frontend, we use the [rwmb_meta()](/functions/rwmb-meta/) helper function, but we need to add more parameters:
 
 ```php
 $args = array(
@@ -114,7 +114,7 @@ $args = array(
 echo rwmb_meta( 'field_id', $args );
 ```
 
-Read more about [rwmb_meta()](/rwmb-meta/).
+Read more about [rwmb_meta()](/functions/rwmb-meta/).
 
 ### Getting field value
 
@@ -127,7 +127,7 @@ echo $location['longitude'];
 echo $location['zoom'];
 ```
 
-Read more about [rwmb_get_value()](/rwmb-get-value/).
+Read more about [rwmb_get_value()](/functions/rwmb-get-value/).
 
 ### Outputting a map in a group
 
