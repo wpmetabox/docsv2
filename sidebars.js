@@ -45,24 +45,51 @@ const sidebars = {
 				'integration',
 				'database',
 				'custom-attributes',
-				{
-					'Developer guides': [
-						'creating-fields-with-code',
-						'displaying-fields-with-code',
-						'creating-new-field-types',
-					],
-					API: [
-						'actions',
-						'filters',
-						'rwmb-meta',
-						'rwmb-set-meta',
-						'rwmb-get-value',
-						'rwmb-the-value',
-						'rwmb-get-object-fields',
-						'rwmb-get-field-settings',
-						'rwmb-get-registry',
-					],
-				}
+				[
+					{
+						type: 'category',
+						label: 'Developer guides',
+						link: {
+							type: 'generated-index',
+						},
+						items: [
+							'creating-fields-with-code',
+							'displaying-fields-with-code',
+							'creating-new-field-types',
+						],
+					},
+					{
+						type: 'category',
+						label: 'Actions',
+						link: {
+							type: 'generated-index',
+						},
+						items: [
+							'rwmb-before',
+							'rwmb-after',
+							'rwmb-before-save-post',
+							'rwmb-after-save-post',
+							'rwmb-after-save-field',
+							'rwmb-enqueue-scripts',
+						],
+					},
+					{
+						type: 'category',
+						label: 'Functions',
+						link: {
+							type: 'generated-index',
+						},
+						items: [
+							'rwmb-meta',
+							'rwmb-set-meta',
+							'rwmb-get-value',
+							'rwmb-the-value',
+							'rwmb-get-object-fields',
+							'rwmb-get-field-settings',
+							'rwmb-get-registry',
+						],
+					},
+				],
 			],
 		},
 		{
