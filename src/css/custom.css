@@ -54,7 +54,15 @@ html[data-theme='dark'] {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Navbar. */
+/* Navbar */
+.navbar__items:not(.navbar__items--right) .navbar__link {
+  font-size: var(--ifm-h5-font-size);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar__link--active {
+  color: var(--ifm-navbar-link-color);
+}
 .facebook-link:before {
   display: flex;
   content: '';
