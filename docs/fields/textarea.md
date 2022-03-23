@@ -12,7 +12,7 @@ The textarea field creates a simple textarea (multiline) input. You can use this
 
 ## Settings
 
-Besides the [common settings](/creating-fields-with-code/#field-settings), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings:
 
 Name | Description
 --- | ---

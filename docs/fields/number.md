@@ -12,7 +12,7 @@ The number field creates a simple HTML5 number input. You are able to enter numb
 
 ## Settings
 
-Besides the [common settings](/creating-fields-with-code/#field-settings), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings:
 
 Name | Description
 --- | ---

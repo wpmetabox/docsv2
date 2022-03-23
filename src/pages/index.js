@@ -63,6 +63,7 @@ export default function Home() {
               </header>
               <ul>
                 <li><a href="/creating-fields-with-code/">Creating fields with code</a></li>
+                <li><a href="/field-settings/">Field settings</a></li>
                 <li><a href="/displaying-fields-with-code/">Displaying fields with code</a></li>
                 <li><a href="/creating-new-field-types/">Creating new field types</a></li>
               </ul>

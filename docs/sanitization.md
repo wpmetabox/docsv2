@@ -36,7 +36,7 @@ This instruction uses **Meta Box Builder** extension, which is a premium extensi
 
 :::
 
-If you use code, then set `'sanitize_callback' => 'none'` in the [field settings](/creating-fields-with-code/#field-settings):
+If you use code, then set `'sanitize_callback' => 'none'` in the [field settings](/field-settings/):
 
 ```php
 [

@@ -70,6 +70,7 @@ const sidebars = {
 			},
 			items: [
 				'creating-fields-with-code',
+				'field-settings',
 				'displaying-fields-with-code',
 				'creating-new-field-types',
 			],

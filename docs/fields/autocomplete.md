@@ -2,19 +2,15 @@
 title: Autocomplete
 ---
 
-## Overview
-
 The autocomplete field creates a simple text input with autocomplete feature. You are able to select multiple values from the predefined list.
 
 This field uses jQuery UI library to perform the autocomplete action.
-
-## Screenshot
 
 ![autocomplete](https://i.imgur.com/zvZI8qs.png)
 
 ## Settings
 
-Besides the [common settings](/creating-fields-with-code/#field-settings), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings:
 
 Name | Description
 --- | ---

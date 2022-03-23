@@ -8,7 +8,7 @@ The hidden field creates a simple hidden input. It's usually used to store custo
 
 ## Settings
 
-This field doesn't have any specific settings. It only uses [common settings](/creating-fields-with-code/#field-settings).
+This field doesn't have any specific settings. It only uses [common settings](/field-settings/).
 
 To store the hidden value, put it in the `std` setting.
 

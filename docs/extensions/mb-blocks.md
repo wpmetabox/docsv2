@@ -475,7 +475,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 } );
 ```
 
-Each field is an array of its settings. See [this guide](/creating-fields-with-code/#field-settings) for details about field settings.
+Each field is an array of its settings. See [this guide](/field-settings/) for details about field settings.
 
 ## Nested blocks (InnerBlocks)
 

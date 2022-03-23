@@ -12,7 +12,7 @@ The background field allows you to set background properties for a post. You can
 
 ## Settings
 
-This field doesn't have any specific settings. It only uses  [common settings](/creating-fields-with-code/#field-settings).
+This field doesn't have any specific settings. It only uses  [common settings](/field-settings/).
 
 ## Sample code
 

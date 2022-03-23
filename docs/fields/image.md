@@ -16,7 +16,7 @@ This field is very similar to [file](/fields/file/). The only difference is that
 
 ## Settings
 
-Besides the [common settings](/creating-fields-with-code/#field-settings), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings:
 
 Name | Description
 --- | ---

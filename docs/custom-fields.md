@@ -37,6 +37,8 @@ To create a field group, go to **Meta Box » Custom Fields** and click **Add New
 
 Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. After that, a new field will appear in the field list. Clicking on the field title bar will open the field settings panel where you can edit settings for the field such as title or default value.
 
+Field settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed. To know more about field settings, please see [this docs](/field-settings/).
+
 When finishing adding fields, click the **Settings** tab and select the post type where the fields are displayed for.
 
 ![selecting a post type for the field group](https://i.imgur.com/a39tyzd.png)

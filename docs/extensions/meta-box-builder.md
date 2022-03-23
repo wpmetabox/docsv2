@@ -37,7 +37,7 @@ After that click the **Publish** button to finish.
 
 ## Field settings
 
-When adding fields to a field group, each field has its own settings. The list of settings with detailed explanation is [here](/creating-fields-with-code/#field-settings). Meta Box Builder simply creates UI for them.
+When adding fields to a field group, each field has its own settings. The list of settings with detailed explanation is [here](/field-settings/). Meta Box Builder simply creates UI for them.
 
 To view and edit field settings, click anywhere in the field title bar:
 
