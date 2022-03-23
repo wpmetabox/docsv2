@@ -5,7 +5,7 @@ const sidebars = {
 	general: [
 		{
 			type: 'category',
-			label: 'Getting started',
+			label: 'Getting Started',
 			link: {
 				type: 'generated-index',
 				description: 'Learn about the most important Meta Box concepts through step-by-step guides. Highly recommended to go through everything from the start to the end.',
@@ -19,7 +19,7 @@ const sidebars = {
 		},
 		{
 			type: 'category',
-			label: 'Field types',
+			label: 'Field Types',
 			link: {
 				type: 'doc',
 				id: 'fields',
@@ -64,7 +64,7 @@ const sidebars = {
 		},
 		{
 			type: 'category',
-			label: 'Guides',
+			label: 'Developer Guides',
 			link: {
 				type: 'generated-index',
 			},

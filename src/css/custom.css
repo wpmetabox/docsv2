@@ -212,7 +212,7 @@ summary {
   margin-bottom: 0;
 }
 .thumbs a {
-  display: inline-block;
+  display: block;
   font-size: var(--ifm-h4-font-size);
   color: #fff;
   font-weight: 700;
@@ -279,4 +279,70 @@ summary {
   --ifm-alert-border-color: #fff;
   font-weight: 700;
   font-style: italic;
+}
+
+/* Homepage */
+.boxes {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.boxWrapper {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.box {
+  --color: var(--color-blue);
+  font-size: var(--ifm-h4-font-size);
+  border: 1px solid var(--color);
+  border-radius: var(--ifm-global-radius);
+  transition: all var(--ifm-transition-fast) ease;
+}
+.box header {
+  color: #fff;
+  background: var(--color);
+  padding: .75rem 1.5rem;
+  font-size: var(--ifm-h5-font-size);
+  transition: all var(--ifm-transition-fast) ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box h2 {
+  text-transform: uppercase;
+  font-size: var(--ifm-h5-font-size);
+  margin: 0;
+}
+.box header a {
+  color: #fff;
+}
+.box ul {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  list-style: none;
+}
+.box li {
+  padding-left: 20px;
+  background: url(/static/img/bx-chevron-right.svg) left center/18px no-repeat;
+}
+.box-basic {
+  --color: var(--color-blue);
+}
+.box-fields {
+  --color: var(--color-green);
+}
+.box-extensions {
+  --color: var(--color-amber);
+}
+.box-advanced {
+  --color: var(--color-red);
+}
+.box-developer {
+  --color: var(--color-cyan);
+}
+.box-references {
+  --color: var(--color-pink);
+}
+.box-2 ul {
+  columns: 2;
 }

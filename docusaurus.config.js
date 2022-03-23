@@ -74,28 +74,18 @@ const config = {
           {
             to: 'category/getting-started',
             position: 'left',
-            label: 'Getting started',
+            label: 'Getting Started',
           },
           {
             type: 'doc',
             docId: 'fields',
             position: 'left',
-            label: 'Field types',
+            label: 'Field Types',
           },
           {
             to: 'category/extensions',
             position: 'left',
             label: 'Extensions',
-          },
-          {
-            to: 'category/advanced',
-            position: 'left',
-            label: 'Advanced',
-          },
-          {
-            to: 'category/others',
-            position: 'left',
-            label: 'Others',
           },
           {
             href: 'https://metabox.io/support/',
@@ -111,9 +101,10 @@ const config = {
       },
       footer: {
         logo: {
-          src: 'img/logo-white.svg',
+          src: 'img/logo.svg',
+          srcDark: 'img/logo-white.svg',
         },
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Meta Box',
