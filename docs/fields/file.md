@@ -4,11 +4,7 @@ title: File
 
 import File from '../_parts/_file.md';
 
-## Overview
-
 The file field creates a simple file upload with default UI like `<input type="file">`. Unlike other media fields, this field doesn't use Media Library UI to upload files.
-
-## Screenshot
 
 ![file upload](https://i.imgur.com/LIWgUZW.png)
 

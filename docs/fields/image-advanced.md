@@ -4,11 +4,7 @@ title: Image Advanced
 
 import Image from '../_parts/_image.md';
 
-## Overview
-
 The image advanced field uses WordPress media popup for selecting / uploading images. You can also reorder images.
-
-## Screenshot
 
 ![image advanced](https://i.imgur.com/tzksNdI.png)
 

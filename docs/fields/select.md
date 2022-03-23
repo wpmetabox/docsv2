@@ -2,11 +2,7 @@
 title: Select
 ---
 
-## Overview
-
 The select field creates a simple select dropdown. You are able to select one or multiple values from the predefined list.
-
-## Screenshot
 
 ![select](https://i.imgur.com/Bq0FGvM.png)
 

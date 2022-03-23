@@ -2,23 +2,9 @@
 title: Text
 ---
 
-## Overview
-
 The text field creates a simple text input. You are able to enter any content or select a value from a predefined list via `datalist` option.
 
-## Screenshots
-
-Default:
-
-![text](https://i.imgur.com/Khmq6nj.png)
-
-With datalist:
-
 ![text with datalist](https://i.imgur.com/WnedDrd.png)
-
-Cloneable:
-
-![text clone](https://i.imgur.com/5BTWfmN.png)
 
 ## Settings
 

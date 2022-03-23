@@ -2,13 +2,9 @@
 title: Slider
 ---
 
-## Overview
-
 The slider field creates a slider where you can select a number by dragging a control.
 
 This field uses jQuery UI library to create the UI.
-
-## Screenshot
 
 ![slider](https://i.imgur.com/voHxzpJ.png)
 

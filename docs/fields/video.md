@@ -2,11 +2,7 @@
 title: Video
 ---
 
-## Overview
-
 The video field uses WordPress media popup for selecting / uploading videos.
-
-## Screenshot
 
 ![video](https://i.imgur.com/M84bDrX.png)
 

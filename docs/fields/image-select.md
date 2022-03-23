@@ -2,11 +2,7 @@
 title: Image Select
 ---
 
-## Overview
-
 The image select field allows you to select a choice via images. It works similar to radio / checkbox field, but uses images for more user-friendly interface.
-
-## Screenshot
 
 ![image select](https://i.imgur.com/avEo6jC.png)
 

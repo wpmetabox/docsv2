@@ -2,8 +2,6 @@
 title: Open Street Map
 ---
 
-## Overview
-
 The `osm` field creates a [OpenStreetMap](https://openstreetmap.org) where you can select a location. This field is very similar to [map](/fields/map) field, and provides an alternative solution for displaying maps, since [Google requires developers to enter credit card ](https://metabox.io/meta-box-weekly-updates-july-2018/) details.
 
 This field supports all features that the [Google Maps](/fields/map) field has. It comes along with a text field for address input, which has the autocomplete feature. The data for address autocomplete is get from [Nominatum](https://wiki.openstreetmap.org/wiki/Nominatim) geocoding service.
@@ -11,8 +9,6 @@ This field supports all features that the [Google Maps](/fields/map) field has. 
 You also can pick a location simply by clicking on the map or drag and drop the marker. Note that when you drag and drop the marker, the location (latitude and longitude) is saved automatically in the field value.
 
 This field uses [Leaflet](https://leafletjs.com) library to render the map.
-
-## Screenshot
 
 ![map](https://i.imgur.com/jJXmxrw.png)
 

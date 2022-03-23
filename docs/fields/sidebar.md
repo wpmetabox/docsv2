@@ -2,8 +2,6 @@
 title: Sidebar
 ---
 
-## Overview
-
 The sidebar field allows you to select one or multiple sidebars. This field has several settings that can be displayed as a: simple select dropdown, checkbox list, or beautiful select dropdown with select2 library.
 
 ## Screenshots

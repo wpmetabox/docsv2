@@ -2,8 +2,6 @@
 title: Checkbox list
 ---
 
-## Overview
-
 The checkbox list field creates a list of tick-able checkboxes. You are able to select multiple choices from the predefined list.
 
 ## Screenshots

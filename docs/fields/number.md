@@ -2,11 +2,7 @@
 title: Number
 ---
 
-## Overview
-
 The number field creates a simple HTML5 number input. You are able to enter number or use the up/down arrow to change the number. It works with both integers and float numbers.
-
-## Screenshot
 
 ![number](https://i.imgur.com/ioHgKyI.png)
 

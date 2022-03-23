@@ -2,11 +2,7 @@
 title: Color
 ---
 
-## Overview
-
 The color field allows a color to be selected via a popup. This field uses built-in WordPress color picker (named [Iris](https://automattic.github.io/Iris/)) with an addition to select alpha channel for colors.
-
-## Screenshot
 
 ![color picker](https://i.imgur.com/a8IFYvx.png)
 

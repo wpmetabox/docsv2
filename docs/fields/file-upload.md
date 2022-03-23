@@ -4,13 +4,9 @@ title: File Upload
 
 import File from '../_parts/_file.md';
 
-## Overview
-
 The file upload field displays an inline upload area that you can drag and drop or select files to upload.
 
 Note that this field doesn't open the Media Library popup for selecting existing files. You can upload new files only.
-
-## Screenshot
 
 ![file upload](https://i.imgur.com/yGNNhOg.png)
 

@@ -2,11 +2,7 @@
 title: Checkbox
 ---
 
-## Overview
-
 The checkbox field creates a single checkbox.
-
-## Screenshot
 
 ![checkbox](https://i.imgur.com/gMkTEfB.png)
 

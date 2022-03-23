@@ -2,11 +2,7 @@
 title: oEmbed
 ---
 
-## Overview
-
 The oEmbed field creates a simple text input for entering media URL. This field offers live preview the media content. It supports [many media websites](https://codex.wordpress.org/Embeds).
-
-## Screenshot
 
 ![oembed](https://i.imgur.com/F64cxNe.png)
 

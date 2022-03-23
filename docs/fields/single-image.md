@@ -2,11 +2,7 @@
 title: Single image
 ---
 
-## Overview
-
 The single image field allows user to select or upload one image via the WordPress media library. It's similar to the [image_advanced](/fields/image-advanced/) field, but limit to select only one image.
-
-## Screenshot
 
 ![single image](https://i.imgur.com/c7Pa4eH.png)
 

@@ -2,8 +2,6 @@
 title: Hidden
 ---
 
-## Overview
-
 The hidden field creates a simple hidden input. It's usually used to store custom data that cannot be changed.
 
 ## Settings

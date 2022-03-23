@@ -5,8 +5,6 @@ title: Post
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-## Overview
-
 The post field allows you to select one or multiple post (or any custom post type) objects. This field has several settings that can be displayed as a: simple select dropdown, checkbox list, or beautiful select dropdown with select2 library.
 
 If the post type is hierarchical, you are able to display the field as a select or checkbox tree, e.g. showing childen posts when parent post is selected.

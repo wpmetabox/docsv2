@@ -2,8 +2,6 @@
 title: Radio
 ---
 
-## Overview
-
 The radio field creates a simple list of radio inputs where you are able to select a single choice from the predefined list.
 
 ## Screenshots

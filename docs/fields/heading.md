@@ -2,11 +2,7 @@
 title: Heading
 ---
 
-## Overview
-
 The heading field creates a simple `<h4>` heading, which has an optional description. It doesn't have any value and is usually used to separate fields into sections for better reading experience.
-
-## Screenshot
 
 ![heading](https://i.imgur.com/CrDtd5s.png)
 

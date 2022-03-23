@@ -2,11 +2,7 @@
 title: Button Group
 ---
 
-## Overview
-
 The button groups allows you to select one or more options by enabling buttons from a button group. This field is helpful when you want to display choices in the style of a toolbar.
-
-## Screenshot
 
 ![button group](https://i.imgur.com/gVAILxbl.png)
 

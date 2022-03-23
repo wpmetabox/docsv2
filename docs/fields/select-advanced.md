@@ -2,11 +2,7 @@
 title: Select Advanced
 ---
 
-## Overview
-
 The select advanced field creates a beautiful select dropdown using the [select2](https://select2.org/) library.
-
-## Screenshot
 
 ![select advanced](https://i.imgur.com/65OkGbt.png)
 

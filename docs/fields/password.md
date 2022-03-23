@@ -2,11 +2,7 @@
 title: Password
 ---
 
-## Overview
-
 The password field creates a simple password input. The password is encrypted by [wp_hash_password()](https://codex.wordpress.org/Function_Reference/wp_hash_password) before saving into the database to make sure it's safe.
-
-## Screenshot
 
 ![password](https://i.imgur.com/xozZVMx.png)
 

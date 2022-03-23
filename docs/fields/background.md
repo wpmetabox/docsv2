@@ -2,11 +2,7 @@
 title: Background
 ---
 
-## Overview
-
 The background field allows you to set background properties for a post. You can set background color, select an image and set other background settings.
-
-## Screenshot
 
 ![background](https://i.imgur.com/BKfxPaSl.png)
 

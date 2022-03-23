@@ -2,8 +2,6 @@
 title: Time
 ---
 
-## Overview
-
 The time field allows you to select a time via a friendly UI. This field uses jQuery UI time picker libraries.
 
 ## Screenshots

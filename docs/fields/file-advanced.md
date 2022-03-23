@@ -4,11 +4,7 @@ title: File Advanced
 
 import File from '../_parts/_file.md';
 
-## Overview
-
 The file advanced field uses WordPress media popup for selecting / uploading files. You can also reorder files.
-
-## Screenshot
 
 ![file advanced](https://i.imgur.com/mqR9Tue.png)
 

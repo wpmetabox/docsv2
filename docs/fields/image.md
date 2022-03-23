@@ -4,13 +4,9 @@ title: Image
 
 import Image from '../_parts/_image.md';
 
-## Overview
-
 The image field creates a simple image upload with default UI like `<input type="file">`. Unlike other media fields, this field doesn't use Media Library UI to upload images.
 
 This field is very similar to [file](/fields/file/). The only difference is that the file field allows to upload all file types while this field allows only images.
-
-## Screenshot
 
 ![image](https://i.imgur.com/8GFxWKP.png)
 

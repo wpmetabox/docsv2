@@ -2,11 +2,7 @@
 title: Textarea
 ---
 
-## Overview
-
 The textarea field creates a simple textarea (multiline) input. You can use this field for entering a paragraph of text or custom HTML.
-
-## Screenshot
 
 ![textarea](https://i.imgur.com/Wrg9ISA.png)
 

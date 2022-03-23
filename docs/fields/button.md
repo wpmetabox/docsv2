@@ -2,11 +2,7 @@
 title: Button
 ---
 
-## Overview
-
 The button field creates a simple button. It doesn't have any value. Usually this field is used to trigger custom JavaScript actions.
-
-## Screenshot
 
 ![button](https://i.imgur.com/9ciaST1.png)
 

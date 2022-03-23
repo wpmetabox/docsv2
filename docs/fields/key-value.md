@@ -2,11 +2,7 @@
 title: Key Value
 ---
 
-## Overview
-
 The key value field allows you to enter unlimited group of "key-value" pairs. It's usually used for a list of items.
-
-## Screenshot
 
 ![key value](https://i.imgur.com/yA7rRDR.png)
 

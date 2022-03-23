@@ -2,13 +2,9 @@
 title: Custom HTML
 ---
 
-## Overview
-
 The custom HTML field allows you to output anything. You can even use a PHP callback function to output the HTML.
 
 This field is usually used to display custom message/instruction to users. Sometimes, it's used with PHP callback to display more advanced content (such as content from a query).
-
-## Screenshot
 
 ![custom html](https://i.imgur.com/LO5Akul.png)
 

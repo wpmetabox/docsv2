@@ -2,11 +2,7 @@
 title: Switch
 ---
 
-## Overview
-
 The switch field shows a on/off switch for you to enable/disable something. It allows editor to select styles (rounded or square) and custom text/icon labels.
-
-## Screenshot
 
 ![switch](https://i.imgur.com/AVHMUdZl.png)
 

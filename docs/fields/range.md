@@ -2,13 +2,9 @@
 title: Range
 ---
 
-## Overview
-
 The range field creates a HTML5 range field where you can select a number by dragging a control.
 
 This field is very similar to the [number](/fields/number/) field. It just uses a different control to select a number instead of entering it.
-
-## Screenshot
 
 ![range](https://i.imgur.com/eAHeRJS.png)
 

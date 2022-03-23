@@ -4,13 +4,9 @@ title: Image Upload
 
 import Image from '../_parts/_image.md';
 
-## Overview
-
 The image upload field displays an inline upload area that you can drag and drop images into.
 
 This field is very similar to [image advanced](/fields/image-advanced/). The only difference is the image advanced shows a **+ Add Media** button instead of the inline upload area and this field does not allow to access the Media Library.
-
-## Screenshot
 
 ![image upload](https://i.imgur.com/Ev4iwoQ.png)
 

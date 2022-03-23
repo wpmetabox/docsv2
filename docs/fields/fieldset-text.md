@@ -2,11 +2,7 @@
 title: Fieldset Text
 ---
 
-## Overview
-
 The fieldset text create a set of text inputs. It's useful if you want to save related information.
-
-## Screenshot
 
 ![fielset text](https://i.imgur.com/qh3pfUd.png)
 
