@@ -101,10 +101,9 @@ const config = {
       },
       footer: {
         logo: {
-          src: 'img/logo.svg',
-          srcDark: 'img/logo-white.svg',
+          src: 'img/logo-white.svg',
         },
-        style: 'light',
+        style: 'dark',
         links: [
           {
             title: 'Meta Box',
@@ -203,7 +202,12 @@ const config = {
             backgroundColor: '#f2f5f8'
           }
         },
-        darkTheme: darkCodeTheme,
+        darkTheme: {
+          ...darkCodeTheme,
+          plain: {
+            backgroundColor: '#2c3e50'
+          }
+        },
         additionalLanguages: [ 'php' ],
         defaultLanguage: 'php',
       },

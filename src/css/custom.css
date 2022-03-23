@@ -18,10 +18,23 @@
   --color-red: #ef4444;
   --color-cyan: #06b6d4;
   --color-pink: #ec4899;
+
+  /* Meta Box blue shades */
+  --color-base: hsl(210, 29%, 24%);
+  --color-dark: hsl(210, 30%, 18%);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+html[data-theme='dark'] {
+  --ifm-navbar-background-color: var(--color-base);
+  --ifm-footer-background-color: var(--color-base);
+  --collapse-button-bg-color-dark: var(--color-base);
+  --ifm-background-color: var(--color-dark);
+  --ifm-navbar-search-input-background-color: var(--color-dark);
+
+  --ifm-color-emphasis-100: var(--color-base);
+  --ifm-color-emphasis-200: var(--color-base);
+
   --ifm-color-primary: #00b1b3;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -58,8 +71,8 @@
 
 /* Homepage: hero section */
 .hero.hero {
-  background: url(https://i.imgur.com/unsLwpY.png);
-  padding: 8rem 0;
+  background: var(--ifm-color-emphasis-100);
+  color: inherit;
   overflow: visible;
 
   --search-local-modal-width: 100%;
@@ -239,6 +252,7 @@ summary {
 }
 [data-theme='dark'] .thumbs a {
   border: none;
+  display: inline-block;
 }
 .thumbs-basic {
   --color: var(--color-blue);
@@ -345,4 +359,9 @@ summary {
 }
 .box-2 ul {
   columns: 2;
+}
+
+/* Footer */
+.footer--dark {
+  --ifm-footer-background-color: var(--color-base);
 }

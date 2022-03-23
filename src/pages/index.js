@@ -56,16 +56,15 @@ export default function Home() {
                 <li><a href="/fields/image-advanced/">Image advanced</a></li>
               </ul>
             </div>
-            <div className='box box-extensions'>
+            <div className='box box-developer'>
               <header>
-                <h2>Extensions</h2>
-                <a href='/category/extensions/'>View all &rarr;</a>
+                <h2>Developer Guides</h2>
+                <a href='/category/guides/'>View all &rarr;</a>
               </header>
               <ul>
-                <li><a href="/extensions/mb-relationships/">MB Relationships</a></li>
-                <li><a href="/extensions/mb-frontend-submission/">MB Frontend Submission</a></li>
-                <li><a href="/extensions/mb-settings-page/">MB Settings Page</a></li>
-                <li><a href="/extensions/mb-custom-table/">MB Custom Table</a></li>
+                <li><a href="/creating-fields-with-code/">Creating fields with code</a></li>
+                <li><a href="/displaying-fields-with-code/">Displaying fields with code</a></li>
+                <li><a href="/creating-new-field-types/">Creating new field types</a></li>
               </ul>
             </div>
             <div className='box box-advanced box-2'>
@@ -83,15 +82,16 @@ export default function Home() {
                 <li><a href="/custom-attributes/">Custom attributes</a></li>
               </ul>
             </div>
-            <div className='box box-developer'>
+            <div className='box box-extensions'>
               <header>
-                <h2>Developer Guides</h2>
-                <a href='/category/guides/'>View all &rarr;</a>
+                <h2>Extensions</h2>
+                <a href='/category/extensions/'>View all &rarr;</a>
               </header>
               <ul>
-                <li><a href="/creating-fields-with-code/">Creating fields with code</a></li>
-                <li><a href="/displaying-fields-with-code/">Displaying fields with code</a></li>
-                <li><a href="/creating-new-field-types/">Creating new field types</a></li>
+                <li><a href="/extensions/mb-relationships/">MB Relationships</a></li>
+                <li><a href="/extensions/mb-frontend-submission/">MB Frontend Submission</a></li>
+                <li><a href="/extensions/mb-settings-page/">MB Settings Page</a></li>
+                <li><a href="/extensions/mb-custom-table/">MB Custom Table</a></li>
               </ul>
             </div>
             <div className='box box-references box-2'>
