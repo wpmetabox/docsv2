@@ -6,6 +6,12 @@ The text field creates a simple text input. You are able to enter any content or
 
 ![text with datalist](https://i.imgur.com/WnedDrd.png)
 
+:::info Input types
+
+This docs is also used for URL and email field types as they share the same settings.
+
+:::
+
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings:

@@ -77,13 +77,13 @@ Learn about field types, what they are and when you should use them.
 
 <div className="thumbs thumbs-html5">
 
-[![email](/thumbs/email.png) <span className="thumb_text">Email</span>](/fields/email/)
+[![email](/thumbs/email.png) <span className="thumb_text">Email</span>](/fields/text/)
 
 [![number](/thumbs/number.png) <span className="thumb_text">Number</span>](/fields/number/)
 
 [![range](/thumbs/range.png) <span className="thumb_text">Range</span>](/fields/range/)
 
-[![url](/thumbs/url.png) <span className="thumb_text">URL</span>](/fields/url/)
+[![url](/thumbs/url.png) <span className="thumb_text">URL</span>](/fields/text/)
 
 </div>
 
