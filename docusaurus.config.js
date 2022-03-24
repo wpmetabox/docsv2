@@ -88,14 +88,15 @@ const config = {
             label: 'Extensions',
           },
           {
-            href: 'https://metabox.io/support/',
+            type: 'doc',
+            docId: 'support-policy',
             position: 'right',
             label: 'Support',
           },
           {
             href: 'https://www.facebook.com/groups/metaboxusers',
             position: 'right',
-            className: 'facebook-link'
+            label: 'Community',
           },
         ],
       },
@@ -111,18 +112,6 @@ const config = {
               {
                 label: 'Pricing',
                 href: 'https://metabox.io/pricing/',
-              },
-              {
-                label: 'Features',
-                href: 'https://metabox.io/features/',
-              },
-              {
-                label: 'Extensions',
-                href: 'https://metabox.io/plugins/',
-              },
-              {
-                label: 'Affiliate',
-                href: 'https://metabox.io/affiliate/',
               },
               {
                 label: 'FAQ',
@@ -142,10 +131,6 @@ const config = {
             title: 'Top Extensions',
             items: [
               {
-                label: 'Meta Box Builder',
-                to: 'extensions/meta-box-builder',
-              },
-              {
                 label: 'Meta Box Group',
                 to: 'extensions/meta-box-group',
               },
@@ -158,25 +143,34 @@ const config = {
                 to: 'extensions/mb-custom-table',
               },
               {
-                label: 'MB Custom Post Types',
-                to: 'extensions/mb-custom-post-type',
-              },
-              {
                 label: 'MB Frontend Submission',
                 to: 'extensions/mb-frontend-submission',
               },
+            ],
+          },
+          {
+            title: 'Online Tools',
+            items: [
               {
-                label: 'Meta Box Conditional Logic',
-                to: 'extensions/meta-box-conditional-logic',
+                label: 'Post Type Generator',
+                to: 'https://metabox.io/post-type-generator/',
               },
+              {
+                label: 'Taxonomy Generator',
+                to: 'https://metabox.io/taxonomy-generator/',
+              },
+              {
+                label: 'Online Generator',
+                to: 'https://metabox.io/online-generator/',
+              }
             ],
           },
           {
             title: 'Connect With Us',
             items: [
               {
-                label: 'Facebook',
-                href: 'https://facebook.com/wpmetabox',
+                label: 'Facebook Group',
+                href: 'https://www.facebook.com/groups/metaboxusers',
               },
               {
                 label: 'Twitter',
