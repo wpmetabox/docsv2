@@ -1,5 +1,6 @@
 ---
 title: Online Generator
+displayed_sidebar: general
 ---
 
 [Online Generator](https://metabox.io/online-generator/) is a tool to help you create and set up custom fields using a simple, friendly user interface. With it, you can add fields, set options and generate needed code that's ready to copy and paste.

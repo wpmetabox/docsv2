@@ -1,5 +1,6 @@
 ---
 title: Include Exclude vs Show Hide vs Conditional Logic
+displayed_sidebar: general
 ---
 
 We have 3 extensions that can help you control the visibility of a meta box for a certain post/page:

@@ -153,15 +153,15 @@ const config = {
             items: [
               {
                 label: 'Post Type Generator',
-                to: 'https://metabox.io/post-type-generator/',
+                to: 'post-type-generator/',
               },
               {
                 label: 'Taxonomy Generator',
-                to: 'https://metabox.io/taxonomy-generator/',
+                to: 'taxonomy-generator/',
               },
               {
                 label: 'Online Generator',
-                to: 'https://metabox.io/online-generator/',
+                to: 'online-generator/',
               }
             ],
           },

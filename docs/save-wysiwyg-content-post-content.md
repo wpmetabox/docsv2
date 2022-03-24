@@ -1,5 +1,6 @@
 ---
 title: Save WYSIWYG content as post content
+displayed_sidebar: general
 ---
 
 Sometimes you want to move the traditional editor for the post to another location, probably inside a meta box. It will keep everything more organized. For example, if you have an event post type, then you might have the following data:
@@ -37,10 +38,12 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
             // Register a wysiwyg field of which the content is saved as post content.
             [
                 'type' => 'wysiwyg',
-                'id'   => 'content', // This is a must!
-                'name' => 'Fake content',
-                'std'  => $post_content,
-                'save_field' => false, // This is a must!
+                'name'       => 'Fake content',
+                // highlight-start
+                'id'         => 'content',
+                'std'        => $post_content,
+                'save_field' => false,
+                // highlight-end
             ],
             // Custom style to overwrite the editor style set by WordPress.
             [
