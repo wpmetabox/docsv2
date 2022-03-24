@@ -123,19 +123,28 @@ $links = [
 ];
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HEADER, 1);
-curl_setopt($ch, CURLOPT_NOBODY, 1);
+curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+curl_setopt( $ch, CURLOPT_HEADER, 1 );
+curl_setopt( $ch, CURLOPT_NOBODY, 1 );
+// curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
 
-$domain = 'http://localhost:3000';
+// Able to pass host from the command line: php scripts/check-urls.php http://127.0.0.1:8989
+$domain = $argv[1] ?? 'http://localhost:3000';
+
 $count = 0;
 foreach ( $links as $link ) {
 	$url = $link ? "$domain/$link/" : $domain;
-	curl_setopt($ch, CURLOPT_URL, $url);
-	$output = curl_exec($ch);
-	$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-	if ( $httpcode != 200 ) {
-		echo $httpcode, ": $url \n";
+	curl_setopt( $ch, CURLOPT_URL, $url );
+	$output = curl_exec( $ch );
+	$http_code = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+
+	if ( $http_code == 301 ) {
+		$redirect_url = curl_getinfo( $ch, CURLINFO_REDIRECT_URL );
+
+		echo $http_code, ": $url => $redirect_url\n";
+		$count++;
+	} elseif ( $http_code != 200 ) {
+		echo $http_code, ": $url \n";
 		$count++;
 	}
 }
