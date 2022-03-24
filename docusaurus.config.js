@@ -83,7 +83,7 @@ const config = {
             label: 'Field Types',
           },
           {
-            to: 'category/extensions',
+            to: 'extensions',
             position: 'left',
             label: 'Extensions',
           },

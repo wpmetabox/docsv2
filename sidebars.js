@@ -35,8 +35,8 @@ const sidebars = {
 			type: 'category',
 			label: 'Extensions',
 			link: {
-				type: 'generated-index',
-				description: 'Learn about Meta Box extensions, what features they offer and how to use them.',
+				type: 'doc',
+				id: 'extensions',
 			},
 			items: [
 				{

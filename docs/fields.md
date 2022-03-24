@@ -7,7 +7,7 @@ Learn about field types, what they are and when you should use them.
 
 ## Basic
 
-<div className="thumbs thumbs-basic">
+<div className="thumbs color-blue">
 
 [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Checkbox</span>](/fields/checkbox/)
 
@@ -25,7 +25,7 @@ Learn about field types, what they are and when you should use them.
 
 ## Advanced
 
-<div className="thumbs thumbs-advanced">
+<div className="thumbs color-green">
 
 [![autocomplete](/thumbs/autocomplete.png) <span className="thumb_text">Autocomplete</span>](/fields/autocomplete/)
 
@@ -75,7 +75,7 @@ Learn about field types, what they are and when you should use them.
 
 ## HTML5
 
-<div className="thumbs thumbs-html5">
+<div className="thumbs color-amber">
 
 [![email](/thumbs/email.png) <span className="thumb_text">Email</span>](/fields/text/)
 
@@ -89,7 +89,7 @@ Learn about field types, what they are and when you should use them.
 
 ## WordPress
 
-<div className="thumbs thumbs-wordpress">
+<div className="thumbs color-red">
 
 [![post](/thumbs/post.png) <span className="thumb_text">Post</span>](/fields/post/)
 
@@ -105,7 +105,7 @@ Learn about field types, what they are and when you should use them.
 
 ## Upload
 
-<div className="thumbs thumbs-upload">
+<div className="thumbs color-cyan">
 
 [![file](/thumbs/file.png) <span className="thumb_text">File</span>](/fields/file/)
 
@@ -129,7 +129,7 @@ Learn about field types, what they are and when you should use them.
 
 ## Layout
 
-<div className="thumbs thumbs-layout">
+<div className="thumbs color-pink">
 
 [![divider](/thumbs/divider.png) <span className="thumb_text">Divider</span>](/fields/divider/)
 

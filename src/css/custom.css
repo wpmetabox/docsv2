@@ -46,6 +46,26 @@ html[data-theme='dark'] {
   --ifm-color-primary-lightest: #4fddbf;
 }
 
+/* Colors */
+.color-blue {
+  --color: var(--color-blue);
+}
+.color-green {
+  --color: var(--color-green);
+}
+.color-amber {
+  --color: var(--color-amber);
+}
+.color-red {
+  --color: var(--color-red);
+}
+.color-cyan {
+  --color: var(--color-cyan);
+}
+.color-pink {
+  --color: var(--color-pink);
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
@@ -256,7 +276,7 @@ summary {
 /* Field types thumbnails */
 .thumbs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
   gap: 2rem;
 }
 @media (max-width: 479px) {
@@ -297,24 +317,6 @@ summary {
 [data-theme='dark'] .thumbs a {
   border: none;
   display: inline-block;
-}
-.thumbs-basic {
-  --color: var(--color-blue);
-}
-.thumbs-advanced {
-  --color: var(--color-green);
-}
-.thumbs-html5 {
-  --color: var(--color-amber);
-}
-.thumbs-wordpress {
-  --color: var(--color-red);
-}
-.thumbs-upload {
-  --color: var(--color-cyan);
-}
-.thumbs-layout {
-  --color: var(--color-pink);
 }
 
 /* Card */

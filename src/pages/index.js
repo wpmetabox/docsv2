@@ -86,7 +86,7 @@ export default function Home() {
             <div className='box box-extensions'>
               <header>
                 <h2>Extensions</h2>
-                <a href='/category/extensions/'>View all &rarr;</a>
+                <a href='/extensions/'>View all &rarr;</a>
               </header>
               <ul>
                 <li><a href="/extensions/mb-relationships/">MB Relationships</a></li>
