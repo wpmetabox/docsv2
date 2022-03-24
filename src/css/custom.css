@@ -363,7 +363,6 @@ summary {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 .box {
-  --color: var(--color-blue);
   font-size: var(--ifm-h4-font-size);
   border: 1px solid var(--color);
   border-radius: var(--ifm-global-radius);
@@ -396,7 +395,7 @@ summary {
   padding-left: 20px;
   background: url(/static/img/bx-chevron-right.svg) left center/18px no-repeat;
 }
-.box-basic {
+.box-start {
   --color: var(--color-blue);
 }
 .box-fields {

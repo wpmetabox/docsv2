@@ -59,7 +59,7 @@ export default function Home() {
             <div className='box box-developer'>
               <header>
                 <h2>Developer Guides</h2>
-                <a href='/category/guides/'>View all &rarr;</a>
+                <a href='/category/developer-guides/'>View all &rarr;</a>
               </header>
               <ul>
                 <li><a href="/creating-fields-with-code/">Creating fields with code</a></li>
