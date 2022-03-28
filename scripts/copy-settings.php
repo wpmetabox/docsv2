@@ -1,6 +1,6 @@
 <?php
 $dir = dirname( __DIR__ ) . '/images';
-$des = dirname( __DIR__ ) . '/static/screenshots';
+$des = dirname( __DIR__ ) . '/static/settings';
 
 $categories = array_diff( scandir( $dir ), ['.', '..' ] );
 
