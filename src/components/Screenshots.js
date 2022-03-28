@@ -12,7 +12,7 @@ const Screenshots = ( { name = '', images = [] } ) => {
 				images.map( ( image, index ) => (
 					<figure key={ image }>
 						<img src={ image } alt={ `The ${ name } field interface` } />
-						<figcaption>The { name } field interface { showCount ? index : '' }</figcaption>
+						<figcaption>The { name } field interface { showCount ? index + 1 : '' }</figcaption>
 					</figure>
 				) )
 			}

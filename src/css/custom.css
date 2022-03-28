@@ -210,7 +210,8 @@ code {
 
 /* Field screenshots and settings in a gallery */
 .gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   margin-bottom: var(--ifm-paragraph-margin-bottom);
 }

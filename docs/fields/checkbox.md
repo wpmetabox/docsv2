@@ -2,23 +2,25 @@
 title: Checkbox
 ---
 
+import Screenshots from '@site/src/components/Screenshots';
+
 The checkbox field creates a single checkbox.
 
-![checkbox](https://i.imgur.com/gMkTEfB.png)
+<Screenshots name="checkbox" images='https://i.imgur.com/gMkTEfB.png' />
 
 ## Settings
 
 This field doesn't have any specific settings. It only uses [common settings](/field-settings/).
 
-## Sample code
+This is a sample field settings array for registering this field with code:
 
 ```php
-array(
+[
     'name' => 'Checkbox',
     'id'   => 'field_id',
     'type' => 'checkbox',
     'std'  => 1, // 0 or 1
-),
+],
 ```
 
 ## Data
@@ -27,26 +29,19 @@ This field saves the "checked" and "unchecked" values in the database as "1" or 
 
 ## Template usage
 
-To get the field value, use the following code:
+**Conditional check:**
 
 ```php
-$value = rwmb_meta( $field_id );
-// If field is checked.
+$value = rwmb_meta( 'my_field_id' );
 if ( $value ) {
     echo 'Checked';
-    // Do something.
-}
-// If field is unchecked.
-else {
+} else {
     echo 'Unchecked';
-    // Do something else.
 }
 ```
 
-Or if you only want to display "Yes/No":
+**Displaying "Yes/No":**
 
 ```php
-rwmb_the_value( $field_id ); // echo 'Yes' or 'No'.
+rwmb_the_value( 'my_field_id' );
 ```
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).
