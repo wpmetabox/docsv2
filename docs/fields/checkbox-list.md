@@ -9,9 +9,9 @@ The checkbox list field creates a list of tick-able checkboxes. You are able to 
 
 ## Screenshots
 
-<Screenshots name="checkbox-list" images={[
-    'https://i.imgur.com/XQDaCFO.png',
-    'https://i.imgur.com/0WuJEv6.png',
+<Screenshots name="checkbox-list" col1={[
+    ['https://i.imgur.com/XQDaCFO.png', 'Checkbox list vertical with Toggle All button'],
+    ['https://i.imgur.com/0WuJEv6.png', 'Checkbox list inline'],
 ]} />
 
 ## Settings

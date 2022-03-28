@@ -1,25 +1,42 @@
 import React from "react";
 
-const Screenshots = ( { name = '', images = [] } ) => {
-	if ( !Array.isArray( images ) ) {
-		images = [ images ];
+const Screenshots = ( { name = '', col1 = [], col2 = [] } ) => {
+	if ( !Array.isArray( col1 ) ) {
+		col1 = [ col1 ];
 	}
-	const showCount = images.length > 1;
+	if ( !Array.isArray( col2 ) ) {
+		col2 = [ col2 ];
+	}
+
+	const showCount = col1.length + col2.length > 1;
+	const desc = name.replace( '-', ' ' );
 
 	return (
 		<div className="gallery">
-			{
-				images.map( ( image, index ) => (
-					<figure key={ image }>
-						<img src={ image } alt={ `The ${ name } field interface` } />
-						<figcaption>The { name } field interface { showCount ? index + 1 : '' }</figcaption>
-					</figure>
-				) )
-			}
-			<figure>
-				<img src={ `/settings/${ name }.png` } alt={ `the ${ name } field settings` } />
-				<figcaption>The { name } field settings</figcaption>
-			</figure>
+			<div className="gallery_col1">
+				{
+					col1.map( ( [src, desc], index ) => (
+						<figure key={ src }>
+							<img src={ src } alt={ desc } />
+							<figcaption>{ desc }</figcaption>
+						</figure>
+					) )
+				}
+			</div>
+			<div className="gallery_col2">
+				{
+					col2.map( ( [src, desc], index ) => (
+						<figure key={ src }>
+							<img src={ src } alt={ desc } />
+							<figcaption>{ desc }</figcaption>
+						</figure>
+					) )
+				}
+				<figure>
+					<img src={ `/settings/${ name }.png` } alt={ `the ${ name } field settings` } />
+					<figcaption>The { desc } field settings</figcaption>
+				</figure>
+			</div>
 		</div>
 	);
 };
