@@ -24,7 +24,7 @@ Choices | `options` | List of choices, each per line. If you need to set values 
 Inline | `inline` | Display choices in a single line? `true` or `false`.
 Display "Toggle All" button | `select_all_none` | Display "Toggle All" button to quickly toggle choices.
 
-This is a sample field settings array for registering this field with code:
+This is a sample field settings array when creating this field with code:
 
 ```php
 [

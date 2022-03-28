@@ -6,13 +6,21 @@ import Screenshots from '@site/src/components/Screenshots';
 
 The checkbox field creates a single checkbox.
 
-<Screenshots name="checkbox" images='https://i.imgur.com/gMkTEfB.png' />
+## Screenshots
+
+<Screenshots name="checkbox" col1={[
+    ['https://i.imgur.com/gMkTEfB.png', 'The checkbox field interface'],
+]} />
 
 ## Settings
 
-This field doesn't have any specific settings. It only uses [common settings](/field-settings/).
+Besides the [common settings](/field-settings/), this field has the following specific settings:
 
-This is a sample field settings array for registering this field with code:
+Name | Key | Description
+--- | --- | ---
+Checked by default | `std` | Whether the checkbox is checked by default?
+
+This is a sample field settings array when creating this field with code:
 
 ```php
 [

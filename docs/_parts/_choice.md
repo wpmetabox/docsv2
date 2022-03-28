@@ -12,7 +12,7 @@ Note that this field stores the **values**, not labels.
 
 ## Template usage
 
-**Output list of choices (values):**
+**Displaying list of choices (values):**
 
 ```php
 <?php $values = rwmb_meta( 'my_field_id' ); ?>
@@ -23,7 +23,7 @@ Note that this field stores the **values**, not labels.
 </ul>
 ```
 
-**Display labels:**
+**Displaying labels:**
 
 ```php
 <p>Choices:</p>
@@ -36,7 +36,7 @@ Note that this field stores the **values**, not labels.
 
 :::
 
-**Display both values and labels:**
+**Displaying both values and labels:**
 
 ```php
 <?php
@@ -54,19 +54,26 @@ $values  = rwmb_meta( 'my_field_id' );
 </ul>
 ```
 
-**Display cloneable values:**
+**Displaying cloneable values:**
 
 ```php
-$values = rwmb_meta( $field_id );
-echo '<ul>';
-foreach ( $values as $clone ) {
-    echo '<li>';
-        echo '<ul>';
-        foreach ( $clone as $value ) {
-            echo "<li>$value</li>";
-        }
-        echo '</ul>';
-    echo '</li>';
-}
-echo '</ul>';
+<?php
+$field   = rwmb_get_field_settings( 'my_field_id' );
+$options = $field['options'];
+$values  = rwmb_meta( $field_id );
+?>
+<ul>
+    <?php foreach ( $values as $clone ) : ?>
+        <li>
+            <ul>
+                <?php foreach ( $clone as $value ) : ?>
+                    <li>
+                        Value: <?= $value ?><br>
+                        Label: <?= $options[ $value ] ?>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+        </li>
+    <?php endforeach ?>
+</ul>
 ```
