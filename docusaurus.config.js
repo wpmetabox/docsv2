@@ -61,7 +61,7 @@ const config = {
       },
       image: 'https://i.imgur.com/wnJtgSC.jpg',
       zoom: {
-        selector: '.markdown > p > img',
+        selector: '.markdown > p > img, figure img',
       },
       navbar: {
         hideOnScroll: true,
