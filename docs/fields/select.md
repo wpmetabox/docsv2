@@ -2,106 +2,164 @@
 title: Select
 ---
 
+import Screenshots from '@site/src/components/Screenshots';
+
 The select field creates a simple select dropdown. You are able to select one or multiple values from the predefined list.
 
-![select](https://i.imgur.com/Bq0FGvM.png)
+## Screenshots
+
+<Screenshots name="select" col1={[
+    ['/screenshots/select-1.png', 'The select field interface']
+]} />
 
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings:
 
-Name | Description
---- | ---
-`options` | Array of `'value' => 'Label'` pairs. They're used to display choices. `value` is stored in the custom field. Required.
-`multiple` | Whether to allow select multiple values? `true` or `false` (default).
-`placeholder` | The placeholder text.
-`select_all_none` | Display "Select All / None" button to fast toggle choices. Applied only when `multiple` is `true`.
-`flatten` | Display sub items without indentation. `true` or `false` (default).
+Name | Key | Description
+--- | --- | ---
+Choices | `options` | List of choices, each per line. If you need to set values and labels, use the format "value: Label" for each choice.<br />When using with code, this setting is an array of `'value' => 'Label'`.
+Multiple | `multiple` | Whether to allow select multiple values? `true` or `false` (default).
+Placeholder | `placeholder` | The placeholder text.
+Display "Toggle All" button | `select_all_none` | Display "Toggle All" button to quickly toggle choices. Applied only when "Multiple" is set.
+Flatten | `flatten` | Display sub items without indentation. `true` or `false` (default). See below to know how to define sub items.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name'            => 'Select',
-    'id'              => $prefix . 'select',
+    'id'              => 'select',
     'type'            => 'select',
-    // Array of 'value' => 'Label' pairs
-    'options'         => array(
+    'multiple'        => true,
+    'placeholder'     => 'Select an item',
+    'select_all_none' => true,
+    'options'         => [
         'java'       => 'Java',
         'javascript' => 'JavaScript',
         'php'        => 'PHP',
-        'csharp'     => 'C#',
-        'objectivec' => 'Objective-C',
         'kotlin'     => 'Kotlin',
         'swift'      => 'Swift',
-    ),
-    // Allow to select multiple value?
-    'multiple'        => true,
-    // Placeholder text
-    'placeholder'     => 'Select an Item',
-    // Display "Select All / None" button?
-    'select_all_none' => true,
-),
+    ],
+],
 ```
 
-Define list that includes sub-items:
+Besides the normal list of choices, you can define sub choices as follows:
 
 ```php
-'options' => array(
-        array( 'value' => 'monkeys', 'label' => 'Monkeys' ),
-        array( 'value' => 'king_kong', 'label' => 'King Kong', 'parent' => 'monkeys' ),
-        array( 'value' => 'curious_george', 'label' => 'Curious George', 'parent' => 'monkeys' ),
-        array( 'value' => 'donkeys', 'label' => 'Donkeys' ),
-        array( 'value' => 'eeyore', 'label' => 'Eeyore', 'parent' => 'donkeys' ),
-        array( 'value' => 'guss', 'label' => 'Gus', 'parent' => 'donkeys' ),
-    ),
-    // Show parent items and sub-items at same level
-    'flatten' => false,
+[
+    'name'        => 'Select',
+    'id'          => 'select',
+    'type'        => 'select',
+    'placeholder' => 'Select an Item',
+    // highlight-next-line
+    'flatten'     => false,
+    'options' => [
+        [
+            'value' => 'monkeys',
+            'label' => 'Monkeys',
+        ],
+        [
+            'value' => 'king_kong',
+            'label' => 'King Kong',
+            // highlight-next-line
+            'parent' => 'monkeys',
+        ],
+        [
+            'value' => 'curious_george',
+            'label' => 'Curious George',
+            // highlight-next-line
+            'parent' => 'monkeys',
+        ],
+        [
+            'value' => 'donkeys',
+            'label' => 'Donkeys',
+        ],
+        [
+            'value' => 'eeyore',
+            'label' => 'Eeyore',
+            // highlight-next-line
+            'parent' => 'donkeys',
+        ],
+        [
+            'value' => 'guss',
+            'label' => 'Gus',
+            // highlight-next-line
+            'parent' => 'donkeys',
+        ],
+    ],
+],
 ```
+
+Here is how it looks:
+
+![select with sub choices](/screenshots/select-2.png)
 
 ## Data
 
-If `multiple` is `false`, this field simply saves the selected value in the database. The saved value is the `value` in the `options` array (not label).
+If "Multiple" is not set, this field simply saves the selected value in the database.
 
-If `multiple` is `true`, this field saves multiple values in the database, where aech value is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with last parameter `false`).
+If "Multiple" is set, this field saves multiple values in the database. Each value is stored in a single row in the database with the same key (similar to what `add_post_meta` does with the last parameter `false`).
 
 If the field is cloneable, the value is stored as a serialized array in a single row in the database.
 
+:::caution
+
+Note that this field stores the **values**, not labels.
+
+:::
+
 ## Template usage
 
-If field is not multiple:
+**Displaying selected choice (value):**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<?php $values = rwmb_meta( 'my_field_id' ); ?>
+<p>Selected: <?= $value ?></p>
 ```
 
-If field is either multiple or cloneable:
+**Displaying selected label:**
 
 ```php
-$values = rwmb_meta( $field_id );
-foreach ( $values as $value ) {
-    echo $value;
-}
+<p>My choice: <?php rwmb_the_value( 'my_field_id' ) ?></p>
 ```
 
-If field is both multiple and cloneable:
+**Displaying list of multiple choices (values):**
 
 ```php
-$values = rwmb_meta( $field_id );
-foreach ( $values as $clone ) {
-    foreach ( $clone as $value ) {
-        echo $value;
-    }
-}
+<?php $values = rwmb_meta( 'my_field_id' ); ?>
+<ul>
+    <?php foreach ( $values as $value ) : ?>
+        <li><?= $value ?></li>
+    <?php endforeach ?>
+</ul>
 ```
 
-The function [rwmb_meta()](/functions/rwmb-meta/) only returns the value of the field, e.g. the key in the `options` array. To display the field label, use this code:
+**Displaying list of multiple choices (values and labels):**
 
 ```php
-rwmb_the_value( $field_id );
+<?php
+$field   = rwmb_get_field_settings( 'my_field_id' );
+$options = $field['options'];
+$values  = rwmb_meta( 'my_field_id' );
+?>
+<ul>
+    <?php foreach ( $values as $value ) : ?>
+        <li>
+            Value: <?= $value ?><br>
+            Label: <?= $options[ $value ] ?>
+        </li>
+    <?php endforeach ?>
+</ul>
 ```
 
-Depending on the value is a single value or an array (multiple or cloneable or both), this function outputs a simple string or an unordered list.
+**Displaying cloneable values:**
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).
+```php
+<?php $values = rwmb_meta( 'my_field_id' ); ?>
+<ul>
+    <?php foreach ( $values as $value ) : ?>
+        <li><?= $value ?></li>
+    <?php endforeach ?>
+</ul>
+```

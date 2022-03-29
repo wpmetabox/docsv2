@@ -2,45 +2,39 @@
 title: Radio
 ---
 
+import Screenshots from '@site/src/components/Screenshots';
+
 The radio field creates a simple list of radio inputs where you are able to select a single choice from the predefined list.
 
 ## Screenshots
 
-Inline:
-
-![inline radio](https://i.imgur.com/9jhT53g.png)
-
-Multiline:
-
-![multiline radio](https://i.imgur.com/9rMyxGQ.png)
+<Screenshots name="radio" col1={[
+    ['/screenshots/radio-1.png', 'Radio choices inline'],
+    ['/screenshots/radio-2.png', 'Radio choices on multiple lines'],
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the key is for use with code:
 
-Name | Description
---- | ---
-`options` | Array of `'value' => 'Label'` pairs. They're used to display choices to users. `value` is stored in the custom field. Required.
-`inline` | Whether to show all choices in the same line (`true` - default) or multiline (`false`).
+Name | Key | Description
+--- | --- | ---
+Choices | `options` | List of choices, each per line. If you need to set values and labels, use the format "value: Label" for each choice.<br />When using with code, this setting is an array of `'value' => 'Label'`.
+Inline | `inline` | Display choices on a single line? `true` or `false`.
 
-Note that the `multiple` setting is always set to `false` for this field.
-
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name'    => 'Radio',
     'id'      => 'radio',
     'type'    => 'radio',
-    // Array of 'value' => 'Label' pairs for radio options.
-    // Note: the 'value' is stored in meta field, not the 'Label'
-    'options' => array(
+    'inline'  => false,
+    'options' => [
         'value1' => 'Label1',
         'value2' => 'Label2',
-    ),
-    // Show choices in the same line?
-    'inline' => false,
-),
+    ],
+],
 ```
 
 ## Data
@@ -49,19 +43,36 @@ This field simply saves a single selected value in the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
+:::caution
+
+Note that this field stores the **values**, not labels.
+
+:::
+
 ## Template usage
 
-To get the field value, use this code:
+**Displaying selected choice (value):**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<?php $values = rwmb_meta( 'my_field_id' ); ?>
+<p>Selected: <?= $value ?></p>
 ```
 
-The [rwmb_meta()](/functions/rwmb-meta/) function returns the value saved in the database (the `value` in the `options` array). If you want to display the **label**, use this code:
+**Displaying selected label:**
 
 ```php
-rwmb_the_value( $field_id );
+<p>My choice: <?php rwmb_the_value( 'my_field_id' ) ?></p>
 ```
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).
+**Displaying both values and labels:**
+
+```php
+<?php
+$field   = rwmb_get_field_settings( 'my_field_id' );
+$options = $field['options'];
+$values  = rwmb_meta( 'my_field_id' );
+?>
+
+Value: <?= $value ?><br>
+Label: <?= $options[ $value ] ?>
+```

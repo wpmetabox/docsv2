@@ -9,12 +9,12 @@ The checkbox field creates a single checkbox.
 ## Screenshots
 
 <Screenshots name="checkbox" col1={[
-    ['https://i.imgur.com/gMkTEfB.png', 'The checkbox field interface'],
+    ['/screenshots/checkbox.png', 'The checkbox field interface'],
 ]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the key is for use with code:
 
 Name | Key | Description
 --- | --- | ---

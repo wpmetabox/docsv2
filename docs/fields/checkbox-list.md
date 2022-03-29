@@ -10,13 +10,13 @@ The checkbox list field creates a list of tick-able checkboxes. You are able to 
 ## Screenshots
 
 <Screenshots name="checkbox-list" col1={[
-    ['https://i.imgur.com/XQDaCFO.png', 'Checkbox list vertical with Toggle All button'],
-    ['https://i.imgur.com/0WuJEv6.png', 'Checkbox list inline'],
+    ['/screenshots/checkbox-list-1.png', 'Checkbox list vertical with "Toggle All" button'],
+    ['/screenshots/checkbox-list-2.png', 'Checkbox list inline'],
 ]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the key is for use with code:
 
 Name | Key | Description
 --- | --- | ---
@@ -28,9 +28,11 @@ This is a sample field settings array when creating this field with code:
 
 ```php
 [
-    'name'    => 'Checkbox list',
-    'id'      => 'field_id',
-    'type'    => 'checkbox_list',
+    'name'            => 'Checkbox list',
+    'id'              => 'field_id',
+    'type'            => 'checkbox_list',
+    'inline'          => true,
+    'select_all_none' => true,
     'options' => [
         'java'       => 'Java',
         'javascript' => 'JavaScript',
@@ -39,8 +41,6 @@ This is a sample field settings array when creating this field with code:
         'kotlin'     => 'Kotlin',
         'swift'      => 'Swift',
     ],
-    'inline'          => true,
-    'select_all_none' => true,
 ],
 ```
 
