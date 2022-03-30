@@ -15,7 +15,7 @@ The radio field creates a simple list of radio inputs where you are able to sele
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings, the key is for use with code:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
 Name | Key | Description
 --- | --- | ---
@@ -51,26 +51,26 @@ Note that this field stores the **values**, not labels.
 
 ## Template usage
 
-**Displaying selected choice (value):**
+**Displaying the selected value:**
 
 ```php
-<?php $values = rwmb_meta( 'my_field_id' ); ?>
+<?php $value = rwmb_meta( 'my_field_id' ); ?>
 <p>Selected: <?= $value ?></p>
 ```
 
-**Displaying selected label:**
+**Displaying the selected label:**
 
 ```php
 <p>My choice: <?php rwmb_the_value( 'my_field_id' ) ?></p>
 ```
 
-**Displaying both values and labels:**
+**Displaying both value and label:**
 
 ```php
 <?php
 $field   = rwmb_get_field_settings( 'my_field_id' );
 $options = $field['options'];
-$values  = rwmb_meta( 'my_field_id' );
+$value   = rwmb_meta( 'my_field_id' );
 ?>
 
 Value: <?= $value ?><br>

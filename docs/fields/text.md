@@ -2,9 +2,9 @@
 title: Text
 ---
 
-The text field creates a simple text input. You are able to enter any content or select a value from a predefined list via `datalist` option.
+import Screenshots from '@site/src/components/Screenshots';
 
-![text with datalist](https://i.imgur.com/WnedDrd.png)
+The text field creates a simple text input. You can enter any value or select a value from a predefined list.
 
 :::info Input types
 
@@ -12,56 +12,45 @@ This docs is also used for URL and email field types as they share the same sett
 
 :::
 
+## Screenshots
+
+<Screenshots name="select" col1={[
+    ['https://i.imgur.com/WnedDrd.png', 'The text field interface']
+]} />
+
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings:
 
-Name | Description
---- | ---
-`placeholder` | Placeholder for the input. Optional.
-`size` | Size of input box. Optional. Default 30.
-`prepend`|Prepend text for the input. The prepend text should be considered as an informative label. It's not saved in the database with the input value.
-`append`|Append text for the input. The append text should be considered as an informative label. It's not saved in the database with the input value.
-`datalist` | Predefined values that users can select from (users still can enter text if they want). Optional. This parameter has the following sub-parameters:
-|`id`: ID of the div that stores the options. Usually not used and auto-generated as `{$field['id']_list`. Useful if you have several text input with same datalist.
-|`options`: Array of predefined values to select from.
+Name | Key | Description
+--- | --- | ---
+Placeholder | `placeholder` | Placeholder for the input. Optional.
+Size of the input box | `size` | Size of the input box. Optional. Default 30. Without this setting, the input box is full-width.
+Prepend text | `prepend`|Prepend text for the input. The prepended text should be considered as an informative label. It's not saved in the database with the input value.
+Append text | `append`|Append text for the input. The appended text should be considered as an informative label. It's not saved in the database with the input value.
+Predefined values | `datalist` | Predefined values that users can select from (users still can enter text if they want). If you use code, this parameter has the following sub-parameters<br />- `id`: ID of the div that stores the options. Usually not used and auto-generated as `{$field['id']_list`. Useful if you have several inputs with same datalist.<br />- `options`: Array of predefined values to select from.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name'        => 'Text',
-    'label_description' => 'Label description',
     'id'          => 'text',
     'desc'        => 'Please enter some text above',
     'type'        => 'text',
-
-    // Default value (optional)
-    // 'std'         => 'Default text value',
-
-    // Cloneable (i.e. have multiple value)?
-    'clone'       => true,
-
-    // Placeholder
+    'std'         => 'Default text value',
     'placeholder' => 'Enter something here',
-
-    // Input size
-    'size'        => 30,
-
-    // Datalist
-    'datalist'    => array(
-        // Unique ID for datalist. Optional.
+    'datalist'    => [
         'id'      => 'text_datalist',
-        // List of predefined options
-        'options' => array(
+        'options' => [
             'What',
             'When',
             'Where',
             'Why',
             'Who',
-        ),
-    ),
-),
+        ],
+    ],
+],
 ```
 
 ## Data
@@ -72,20 +61,24 @@ If the field is cloneable, then the value is stored as a serialized array in a s
 
 ## Template usage
 
-If field is not cloneable:
+**Displaying the value:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<p>Entered: <?php rwmb_the_value( 'my_field_id' ) ?></p>
 ```
 
-If field is cloneable:
+**Getting the value:**
 
 ```php
-$values = rwmb_meta( $field_id );
-foreach ( $values as $value ) {
-    echo $value;
-}
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Entered: <?= $value ?></p>
 ```
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
+**Displaying cloneable values:**
+
+```php
+<?php $values = rwmb_meta( $field_id ) ?>
+<?php foreach ( $values as $value ) : ?>
+    <p><?= $value ?></p>
+<?php endforeach ?>
+```

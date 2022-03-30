@@ -2,44 +2,61 @@
 title: Textarea
 ---
 
-The textarea field creates a simple textarea (multiline) input. You can use this field for entering a paragraph of text or custom HTML.
+import Screenshots from '@site/src/components/Screenshots';
 
-![textarea](https://i.imgur.com/Wrg9ISA.png)
+The textarea field creates a simple textarea (multiline) input. You can use this field for entering a paragraph of text.
+
+## Screenshots
+
+<Screenshots name="select" col1={[
+    ['https://i.imgur.com/Wrg9ISA.png', 'The textarea field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`placeholder` | The placeholder text. Optional.
-`cols` | Number of columns. Optional. Default 60.
-`rows` | Number of rows. Optional. Default 4.
+Name | Key | Description
+--- | --- | ---
+Placeholder | `placeholder` | The placeholder text. Optional.
+Columns | `cols` | Number of columns. Optional. Default 60.
+Rows | `rows` | Number of rows. Optional. Default 4.
 
 ## Data
 
-This field simply saves a single entered value in the database. The value is saved as it is. So if you enter HTML, it will save exactly that HTML part.
+This field simply saves a single entered value in the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
+:::caution
+
+Meta Box **removes all scripts and iframes** from the value. If you want to enter scripts (like Google Analytics) or embed videos, then you need to [disable sanitization](/sanitization/#bypass-the-sanitization).
+
+:::
+
 ## Template usage
 
-If field is not cloneable:
+**Displaying the value:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<section>
+    <h2>About Us</h2>
+    <p><?php rwmb_the_value( 'my_field_id' ) ?></p>
+</section>
 ```
 
-If field is cloneable:
+**Auto adding paragraphs to the text:**
 
 ```php
-$values = rwmb_meta( $field_id );
-foreach ( $values as $value ) {
-    echo $value;
-}
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<?= wpautop( $value ) ?>
 ```
 
-This field outputs exactly what you have entered. So be careful if you enter HTML.
+**Displaying cloneable values:**
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
+```php
+<?php $values = rwmb_meta( $field_id ) ?>
+<?php foreach ( $values as $value ) : ?>
+    <p><?= $value ?></p>
+<?php endforeach ?>
+```

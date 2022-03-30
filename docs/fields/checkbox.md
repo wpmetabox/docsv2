@@ -14,7 +14,7 @@ The checkbox field creates a single checkbox.
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings, the key is for use with code:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
 Name | Key | Description
 --- | --- | ---

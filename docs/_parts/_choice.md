@@ -12,7 +12,7 @@ Note that this field stores the **values**, not labels.
 
 ## Template usage
 
-**Displaying list of choices (values):**
+**Displaying selected values:**
 
 ```php
 <?php $values = rwmb_meta( 'my_field_id' ); ?>
@@ -23,7 +23,7 @@ Note that this field stores the **values**, not labels.
 </ul>
 ```
 
-**Displaying labels:**
+**Displaying selected labels:**
 
 ```php
 <p>Choices:</p>
