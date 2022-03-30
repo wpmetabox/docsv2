@@ -2,40 +2,40 @@
 title: Custom HTML
 ---
 
+import Screenshots from '@site/src/components/Screenshots';
+
 The custom HTML field allows you to output anything. You can even use a PHP callback function to output the HTML.
 
-This field is usually used to display custom message/instruction to users. Sometimes, it's used with PHP callback to display more advanced content (such as content from a query).
+This field is usually used to display custom messages/instructions to users. Sometimes, it's used with PHP callback to display more advanced content (such as content from a query).
 
-![custom html](https://i.imgur.com/LO5Akul.png)
+## Screenshots
+
+<Screenshots name="custom-html" col1={[
+    ['https://i.imgur.com/LO5Akul.png', 'The custom HTML field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`std` | Custom HTML content.
-`callback` | PHP function that is called to show custom HTML content. Optional.
+Name | Key | Description
+--- | --- | ---
+Content | `std` | The custom HTML content.
+PHP Callback | `callback` | The PHP function that shows the custom HTML content. Optional.
 
-## Sample code
+This is a sample field settings array for registering this field with code:
 
 ```php
-array(
-    // Field name: usually not used
-
+[
     'type' => 'custom_html',
-    // HTML content
     'std'  => '<div class="alert alert-warning">This is a custom HTML content</div>',
-
-    // PHP function to show custom HTML
-    // 'callback' => 'display_warning',
-),
+],
 ```
 
 
 ## Styling
 
-Because this field is usually used to display custom content, it requires some CSS to make the content looks good. To enqueue a CSS file to the admin editing page, use the `rwmb_enqueue_scripts` hook:
+Because this field is usually used to display custom content, it requires some CSS to make the content looks good. To enqueue a CSS file to the admin editing page, use the [rwmb_enqueue_scripts](/actions/rwmb-enqueue-scripts/) hook:
 
 ```php
 add_action( 'rwmb_enqueue_scripts', 'prefix_enqueue_custom_style' );
@@ -45,5 +45,3 @@ function prefix_enqueue_custom_style() {
 ```
 
 And in the `admin.css` you can put your custom styles.
-
-Read more about the [rwmb_enqueue_scripts](/actions/rwmb-enqueue-scripts/) hook.

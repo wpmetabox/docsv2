@@ -2,46 +2,48 @@
 title: Date
 ---
 
-The date field allows you to select a date via a friendly UI. This field uses jQuery UI datepicker library to select a date.
+import Screenshots from '@site/src/components/Screenshots';
 
-![date picker](https://i.imgur.com/MxcgZJy.png)
+The date field allows you to select a date via a friendly UI. This field uses the jQuery UI datepicker library to select a date.
+
+## Screenshots
+
+<Screenshots name="date" col1={[
+    ['https://i.imgur.com/MxcgZJy.png', 'The date field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`size` | size of the input box. Optional. Default 10.
-`inline` | Whether to display the date picker inline with the edit, e.g. do not require to click the input field to trigger the date picker? `true` or `false` (default).
-`timestamp` | Whether to save the date in the Unix timestamp format (but still display in human-readable format)? `true` or `false` (default).
-`js_options`|Date picker options. [See here](http://api.jqueryui.com/datepicker).
-`save_format`|Custom PHP format for the datetime saved in the custom fields. See PHP’s function date() for the list of formats.
+Name | Key | Description
+--- | --- | ---
+Size of the input box | `size` | Size of the input box. Optional. Default 10. Without this setting, the input box is full-width.
+Inline | `inline` | Whether to display the date picker inline with the input and don't require to click to show the date picker? `true` or `false` (default).
+Save value as timestamp | `timestamp` | Whether to save the date in the Unix timestamp format (but still display in human-readable format)? `true` or `false` (default).
+Date picker options | `js_options`|Date picker options. [See here](http://api.jqueryui.com/datepicker).
+Save format | `save_format`|Custom PHP format for the datetime saved in the custom fields. [See here](https://www.php.net/manual/en/function.date.php).
 
-### Note
+:::caution Timezone and timestampt
 
-This field uses our JS library to get the current time of your computer and generates it to the timestamp value then the PHP code helps to save this value to the database. That means the Unix timestamp saved is the "timezone (UTC) + offset".
+This field gets the current time of your local computer and converts it to the timestamp value. So the Unix timestamp saved is the "timezone (UTC) + offset".
 
-## Sample code
+:::
+
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name'       => 'Date picker',
     'id'         => 'field_id',
     'type'       => 'date',
-
-    // Date picker options. See here http://api.jqueryui.com/datepicker
-    'js_options' => array(
+    'js_options' => [
         'dateFormat'      => 'yy-mm-dd',
         'showButtonPanel' => false,
-    ),
-
-    // Display inline?
-    'inline' => false,
-
-    // Save value as timestamp?
+    ],
+    'inline'    => false,
     'timestamp' => false,
-),
+],
 ```
 
 ## Data
@@ -50,66 +52,70 @@ If the `timestamp` is set to `true`, the field value is converted to Unix timest
 
 ## Saving dates in another format
 
-Meta Box already supports customizing the date format **displaying to users** via `js_options`. In some cases, you might want to display in one format and save in another format. It's now possible in Meta Box 4.16.
+Meta Box already supports customizing the date format **displaying to users** via `js_options`. For example, you can set it to `dd-mm-yy`.
 
-To specify a date format for **saving in the custom fields**, you need to set another attribute `save_format`. This attribute accepts a format string for **PHP** (not for JavaScript like the format displaying to users). So your field can be something like this:
+However, you might want to save the date in another format, like `Y-m-d`, which allows you to [sort or query posts](https://metabox.io/get-posts-by-custom-fields-in-wordpress/) by date. To do that, simply set the value of "Save format" to "Y-m-d".
+
+If you use code, then the field settings will look like this:
 
 ```php
-array(
-    'js_options' => array(
-        'dateFormat'      => 'dd-mm-yy',
-    ),
+[
+    'js_options' => [
+        'dateFormat' => 'dd-mm-yy',
+    ],
     'save_format' => 'Y-m-d',
-),
+],
 ```
 
-So when displaying to users, the date will have the format of `30-01-2019` and when saving to the database, it will have the format of `2019-01-30`.
-
-This is extremely useful when you want to [sort or query the posts](https://metabox.io/get-posts-by-custom-fields-in-wordpress/) based on date value.
-
-Also please note that this feature requires PHP 5.3+.
+So when displaying to users, the date will have the format of `30-01-2019`, and when saving to the database, it will have the format of `2019-01-30`.
 
 ## Template usage
 
-To get the field value, use the following code:
+**Displaying the value:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<p>Entered: <?php rwmb_the_value( 'my_field_id' ) ?></p>
 ```
 
-Or you can simply do like this:
+**Getting the value:**
 
 ```php
-rwmb_the_value( $field_id );
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Entered: <?= $value ?></p>
 ```
 
-If `timestamp` is `true`, then you can convert the value to different format, like this:
+**Converting timestamp to another format:**
+
+If you save the field value as a timestamp, then you can convert the value to different format, like this:
 
 ```php
-$value = rwmb_meta( $field_id );
-echo date( 'F j, Y', $value );
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Event date: <?= date( 'F j, Y', $value ) ?></p>
 ```
 
 Or simpler:
 
 ```php
-rwmb_the_value( $field_id, array( 'format' => 'F j, Y' ) );
+<p>Event date: <?php rwmb_the_value( 'my_field_id', ['format' => 'F j, Y'] ) ?></p>
 ```
 
-The 2nd parameter of [rwmb_the_value()](/functions/rwmb-the-value/) accepts and extra parameter `format` which specify the datetime format to output in the frontend.
+:::info
 
-Saving in timestamp also allows you to query posts with a specific order by this field:
+The 2nd parameter of [rwmb_the_value()](/functions/rwmb-the-value/) accepts and extra parameter "**format**" which specify the datetime format to output in the frontend.
+
+:::
+
+**Querying posts by date:**
+
+Saving values in timestamp allows you to query posts with a specific order by this field:
 
 ```php
-$query = new WP_Query( array(
-    'post_type' => 'post',
+$query = new WP_Query( [
+    'post_type' => 'event',
     'orderby'   => 'meta_value_num',
-    'meta_key'  => 'field_id',
+    'meta_key'  => 'my_field_id',
     'order'     => 'ASC',
-) );
+] );
 ```
 
 However, you still can sort posts by meta value if you set date format to something similar to `yy-mm-dd`. Anyway, querying posts by custom fields is [not recommended](https://metabox.io/custom-fields-vs-custom-taxonomies/).
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
