@@ -2,58 +2,63 @@
 title: Color
 ---
 
-The color field allows a color to be selected via a popup. This field uses built-in WordPress color picker (named [Iris](https://automattic.github.io/Iris/)) with an addition to select alpha channel for colors.
+import Screenshots from '@site/src/components/Screenshots';
 
-![color picker](https://i.imgur.com/a8IFYvx.png)
+The color field allows you to select a color. This field uses the built-in WordPress color picker with an extension to select the alpha channel for colors.
+
+## Screenshots
+
+<Screenshots name="color" col1={[
+    ['https://i.imgur.com/a8IFYvx.png', 'The color field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`alpha_channel` | Whether to add opacity to the color picker. `true` or `false` (default). Optional.
-`js_options` | Color picker options. [See here](https://automattic.github.io/Iris/).
+Name | Key | Description
+--- | --- | ---
+Allow to select opacity | `alpha_channel` | Whether to add opacity to the color picker. `true` or `false` (default). Optional.
+Color picker options | `js_options` | Extra color picker options. [See here](https://automattic.github.io/Iris/).
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name'          => 'Color picker',
     'id'            => 'field_id',
     'type'          => 'color',
-    // Add alpha channel?
     'alpha_channel' => true,
-    // Color picker options. See here: https://automattic.github.io/Iris/.
-    'js_options'    => array(
-        'palettes' => array( '#125', '#459', '#78b', '#ab0', '#de3', '#f0f' )
-    ),
-),
+    'js_options'    => [
+        'palettes' => ['#125', '#459', '#78b', '#ab0', '#de3', '#f0f'],
+    ],
+],
 ```
 
 ## Data
 
-This field simply saves a the hex value of the picked color in the database.
+This field saves the hex value of the picked color in the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
 ## Template usage
 
-To get the field value, use the following code:
+**Getting the value:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<div style="background-color: <?= $value ?>">
+    <h2>My section title</h2>
+    <p>My section content</p>
+</div>
 ```
 
-The [rwmb_meta()](/functions/rwmb-meta/) function returns the color code. If you want to display the actual color, use this code:
+**Displaying the selected color:**
 
 ```php
-rwmb_the_value( $field_id );
+<p>This is the color: <?php rwmb_the_value( 'my_field_id' ) ?></p>
 ```
 
 which displays the color as a single dot like this:
 
 ![display color](https://i.imgur.com/gLAVBYS.png)
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).
