@@ -11,27 +11,27 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Custom Post Types & Custom Taxonomies</span>](/extensions/mb-custom-post-type/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Builder</span>](/extensions/meta-box-builder/)
+[![builder](/extensions/builder.png) <span className="thumb_text">Meta Box Builder</span>](/extensions/meta-box-builder/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Views</span>](/extensions/mb-views/)
+[![views](/extensions/views.png) <span className="thumb_text">MB Views</span>](/extensions/mb-views/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Columns</span>](/extensions/meta-box-columns/)
+[![columns](/extensions/columns.png) <span className="thumb_text">Meta Box Columns</span>](/extensions/meta-box-columns/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Tabs</span>](/extensions/meta-box-tabs/)
+[![tabs](/extensions/tabs.png) <span className="thumb_text">Meta Box Tabs</span>](/extensions/meta-box-tabs/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Tooltip</span>](/extensions/meta-box-tooltip/)
+[![tooltip](/extensions/tooltip.png) <span className="thumb_text">Meta Box Tooltip</span>](/extensions/meta-box-tooltip/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Admin Columns</span>](/extensions/mb-admin-columns/)
+[![admin-columns](/extensions/admin-columns.png) <span className="thumb_text">MB Admin Columns</span>](/extensions/mb-admin-columns/)
 
 [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Conditional Logic</span>](/extensions/meta-box-conditional-logic/)
 
 [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Include Exclude</span>](/extensions/meta-box-include-exclude/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Show Hide</span>](/extensions/meta-box-show-hide/)
+[![show-hide](/extensions/show-hide.png) <span className="thumb_text">Meta Box Show Hide</span>](/extensions/meta-box-show-hide/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Text Limiter</span>](/extensions/meta-box-text-limiter/)
+[![text-limiter](/extensions/text-limiter.png) <span className="thumb_text">Meta Box Text Limiter</span>](/extensions/meta-box-text-limiter/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Template</span>](/extensions/meta-box-template/)
+[![template](/extensions/template.png) <span className="thumb_text">Meta Box Template</span>](/extensions/meta-box-template/)
 
 </div>
 
@@ -39,29 +39,29 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-green">
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Group</span>](/extensions/meta-box-group/)
+[![group](/extensions/group.png) <span className="thumb_text">Meta Box Group</span>](/extensions/meta-box-group/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Frontend Submission</span>](/extensions/mb-frontend-submission/)
+[![frontend-submission](/extensions/frontend-submission.png) <span className="thumb_text">MB Frontend Submission</span>](/extensions/mb-frontend-submission/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Settings Page</span>](/extensions/mb-settings-page/)
+[![settings-page](/extensions/settings-page.png) <span className="thumb_text">MB Settings Page</span>](/extensions/mb-settings-page/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Term Meta</span>](/extensions/mb-term-meta/)
+[![term-meta](/extensions/term-meta.png) <span className="thumb_text">MB Term Meta</span>](/extensions/mb-term-meta/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB User Meta</span>](/extensions/mb-user-meta/)
+[![user-meta](/extensions/user-meta.png) <span className="thumb_text">MB User Meta</span>](/extensions/mb-user-meta/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB User Profile</span>](/extensions/mb-user-profile/)
+[![user-profile](/extensions/user-profile.png) <span className="thumb_text">MB User Profile</span>](/extensions/mb-user-profile/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Blocks</span>](/extensions/mb-blocks/)
+[![blocks](/extensions/blocks.png) <span className="thumb_text">MB Blocks</span>](/extensions/mb-blocks/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Relationships</span>](/extensions/mb-relationships/)
+[![relationships](/extensions/relationships.png) <span className="thumb_text">MB Relationships</span>](/extensions/mb-relationships/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Custom Table</span>](/extensions/mb-custom-table/)
+[![custom-table](/extensions/custom-table.png) <span className="thumb_text">MB Custom Table</span>](/extensions/mb-custom-table/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Geolocation</span>](/extensions/meta-box-geolocation/)
+[![geolocation](/extensions/geolocation.png) <span className="thumb_text">Meta Box Geolocation</span>](/extensions/meta-box-geolocation/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB REST API</span>](/extensions/mb-rest-api/)
+[![rest-api](/extensions/rest-api.png) <span className="thumb_text">MB REST API</span>](/extensions/mb-rest-api/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Revision</span>](/extensions/mb-revision/)
+[![revision](/extensions/revision.png) <span className="thumb_text">MB Revision</span>](/extensions/mb-revision/)
 
 <!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Comment Meta</span>](/extensions/mb-comment-meta/) -->
 
@@ -71,17 +71,17 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-amber">
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB ACF Migration</span>](/extensions/mb-acf-migration/)
+[![acf](/extensions/acf.jpg) <span className="thumb_text">MB ACF Migration</span>](/extensions/mb-acf-migration/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Rank Math</span>](/extensions/mb-rank-math/)
+[![rankmath](/extensions/rankmath.jpg) <span className="thumb_text">MB Rank Math</span>](/extensions/mb-rank-math/)
 
-<!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box for Yoast SEO</span>](/extensions/meta-box-yoat-seo/) -->
+[![yoast-seo](/thumbs/checkbox.png) <span className="thumb_text">Meta Box for Yoast SEO</span>](/extensions/meta-box-yoat-seo/)
 
-<!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box - FacetWP Integrator</span>](/extensions/meta-box-facetwp-integrator/) -->
+<!-- [![facetwp](/extensions/facetwp.png) <span className="thumb_text">Meta Box - FacetWP Integrator</span>](/extensions/meta-box-facetwp-integrator/) -->
 
-<!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box - Elementor Integrator</span>](/extensions/mb-elementor-integrator/) -->
+<!-- [![elementor](/extensions/elementor.png) <span className="thumb_text">Meta Box - Elementor Integrator</span>](/extensions/mb-elementor-integrator/) -->
 
-<!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box - Beaver Themer Integrator</span>](/extensions/meta-box-beaver-themer-integrator/) -->
+<!-- [![beaver](/extensions/beaver.png) <span className="thumb_text">Meta Box - Beaver Themer Integrator</span>](/extensions/meta-box-beaver-themer-integrator/) -->
 
 </div>
 
@@ -89,11 +89,11 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-red">
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Favorite Posts</span>](/extensions/mb-favorite-posts/)
+[![favorite-posts](/extensions/favourite-posts.png) <span className="thumb_text">MB Favorite Posts</span>](/extensions/mb-favorite-posts/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Testimonials</span>](/extensions/mb-testimonials/)
+[![testimonials](/extensions/testimonials.png) <span className="thumb_text">MB Testimonials</span>](/extensions/mb-testimonials/)
 
-<!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB User Avatar</span>](/extensions/mb-user-avatar/) -->
+<!-- [![user-avatar](/extensions/user-avatar.png) <span className="thumb_text">MB User Avatar</span>](/extensions/mb-user-avatar/) -->
 
 </div>
 
@@ -101,7 +101,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-cyan">
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box AIO</span>](/extensions/meta-box-aio/)
+[![aio](/thumbs/checkbox.png) <span className="thumb_text">Meta Box AIO</span>](/extensions/meta-box-aio/)
 
 <!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Core</span>](/extensions/mb-core/) -->
 
