@@ -9,7 +9,11 @@ The autocomplete field creates a simple text input with autocomplete feature. Yo
 
 This field uses jQuery UI library to perform the autocomplete action.
 
-<Screenshots name="autocomplete" images='https://i.imgur.com/zvZI8qs.png' />
+## Screenshots
+
+<Screenshots name="autocomplete" col1={[
+    ['https://i.imgur.com/zvZI8qs.png', 'The autocomplete field interface']
+]} />
 
 ## Settings
 

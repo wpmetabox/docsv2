@@ -20,7 +20,7 @@ This docs is also used for URL and email field types as they share the same sett
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
 Name | Key | Description
 --- | --- | ---

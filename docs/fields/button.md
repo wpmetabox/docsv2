@@ -2,35 +2,37 @@
 title: Button
 ---
 
-The button field creates a simple button. It doesn't have any value. Usually this field is used to trigger custom JavaScript actions.
+import Screenshots from '@site/src/components/Screenshots';
 
-![button](https://i.imgur.com/9ciaST1.png)
+The button field creates a simple button. It doesn't have any value. Usually, this field is used to trigger custom JavaScript actions.
+
+## Screenshots
+
+<Screenshots name="button" col1={[
+    ['https://i.imgur.com/9ciaST1.png', 'The button field interface']
+]} />
 
 ## Settings
 
-This field doesn't have any specific settings. It only uses [common settings](/field-settings/). But there are important settings that you should pay attention to:
+This field doesn't have any specific settings. It only uses [common settings](/field-settings/). But there are important settings that you should pay attention to, the keys are for use with code:
 
-Name | Description
---- | ---
-`std` | Button text.
-`attributes` | Array of custom HTML attributes for button. [More info](/custom-attributes/).
+Name | Key | Description
+--- | --- | ---
+Default value | `std` | Button text.
+Custom HTML5 attributes | `attributes` | A list of custom HTML5 attributes for the button. [More info](/custom-attributes/).
 
-This field doesn't require the `id` attribute.
-
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'type'       => 'button',
     'name'       => 'Advanced Settings',
-    // Button text.
     'std'        => 'Toggle',
-    // Custom HTML attributes.
-    'attributes' => array(
+    'attributes' => [
         'data-section' => 'advanced-section',
         'class'        => 'js-toggle',
-    ),
-),
+    ],
+],
 ```
 
 ## Data
@@ -39,12 +41,12 @@ This field does not save any value in the database.
 
 ## Custom JavaScript
 
-As said above, this field is usually used for custom JavaScript actions. To enqueue a JavaScript file to the admin editing page, use the `rwmb_enqueue_scripts` hook:
+As said above, this field is usually used for custom JavaScript actions. To enqueue a JavaScript file to the admin editing page, use the [rwmb_enqueue_scripts](/actions/rwmb-enqueue-scripts/) hook:
 
 ```php
 add_action( 'rwmb_enqueue_scripts', 'prefix_enqueue_custom_script' );
 function prefix_enqueue_custom_script() {
-    wp_enqueue_script( 'script-id', get_template_directory_uri() . '/js/admin.js', array( 'jquery' ), '', true );
+    wp_enqueue_script( 'script-id', get_template_directory_uri() . '/js/admin.js', [ 'jquery' ], '', true );
 }
 ```
 
@@ -57,5 +59,3 @@ jQuery( function( $ ) {
     } );
 } );
 ```
-
-Read more about the [rwmb_enqueue_scripts](/actions/rwmb-enqueue-scripts/) hook.
