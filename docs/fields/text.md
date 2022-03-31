@@ -14,7 +14,7 @@ This docs is also used for URL and email field types as they share the same sett
 
 ## Screenshots
 
-<Screenshots name="select" col1={[
+<Screenshots name="text" col1={[
     ['https://i.imgur.com/WnedDrd.png', 'The text field interface']
 ]} />
 
@@ -55,7 +55,7 @@ This is a sample field settings array when creating this field with code:
 
 ## Data
 
-This field simply saves a single entered value in the database.
+This field simply saves the entered value into the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 

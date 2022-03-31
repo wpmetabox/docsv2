@@ -2,47 +2,71 @@
 title: Number
 ---
 
-The number field creates a simple HTML5 number input. You are able to enter number or use the up/down arrow to change the number. It works with both integers and float numbers.
+import Screenshots from '@site/src/components/Screenshots';
 
-![number](https://i.imgur.com/ioHgKyI.png)
+The number field creates a simple HTML5 number input. You can enter a number or use the up/down arrow to change the number. It works with both integers and float numbers.
+
+## Screenshots
+
+<Screenshots name="number" col1={[
+    ['https://i.imgur.com/ioHgKyI.png', 'The number field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+This field inherits all settings from the [text field](/fields/text/). Besides, it has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`step` | Set the increments at which a numeric value can be set. It can be the string `any` (for floating numbers) or a positive float number or integer. If this attribute is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum. Default is `1`. Optional.
-`min` | Minimum value. Optional.
-`max` | Maximum value. Optional.
-`placeholder` | Placeholder for the input field. Optional.
+Name | Key | Description
+--- | --- | ---
+Step | `step` | The increments for the value. Accepts an integer, a float number, or the string `any` (if you want to enter any value). Default is `1`. Optional.
+Min value | `min` | Minimum value. Optional.
+Max value | `max` | Maximum value. Optional.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name' => 'Number',
     'id'   => 'number',
     'type' => 'number',
-
     'min'  => 0,
-    'step' => 5,
-),
+    'step' => 0.5,
+],
 ```
 
 ## Data
 
-This field simply saves a single entered number in the database.
+This field simply saves the entered value into the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
 ## Template usage
 
-To get the field value, use the following code:
+**Displaying the value:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<p>Entered: <?php rwmb_the_value( 'my_field_id' ) ?></p>
 ```
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
+**Getting the value:**
+
+```php
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Entered: <?= $value ?></p>
+```
+
+**Formatting the value:**
+
+```php
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Entered: <?= number_format( $value ) ?></p>
+```
+
+**Displaying cloneable values:**
+
+```php
+<?php $values = rwmb_meta( $field_id ) ?>
+<?php foreach ( $values as $value ) : ?>
+    <p><?= $value ?></p>
+<?php endforeach ?>
+```

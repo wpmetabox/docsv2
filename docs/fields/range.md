@@ -2,49 +2,74 @@
 title: Range
 ---
 
-The range field creates a HTML5 range field where you can select a number by dragging a control.
+import Screenshots from '@site/src/components/Screenshots';
+
+The range field creates an HTML5 range field where you can select a number by dragging a control.
 
 This field is very similar to the [number](/fields/number/) field. It just uses a different control to select a number instead of entering it.
 
-![range](https://i.imgur.com/eAHeRJS.png)
+## Screenshots
+
+<Screenshots name="range" col1={[
+    ['https://i.imgur.com/eAHeRJS.png', 'The range field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`step` | Set the increments at which a numeric value can be set. Default is `1`. Optional.
-`min` | Minimum value. Optional.
-`max` | Maximum value. Optional.
+Name | Key | Description
+--- | --- | ---
+Step | `step` | The increments for the value. Accepts an integer, a float number, or the string `any` (if you want to enter any value). Default is `1`. Optional.
+Min value | `min` | Minimum value. Optional.
+Max value | `max` | Maximum value. Optional.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name' => 'Range',
     'id'   => 'range',
     'type' => 'range',
-
     'min'  => 0,
     'max'  => 60,
     'step' => 5,
-),
+],
 ```
 
 ## Data
 
-This field simply saves a single selected value in the database.
+This field simply saves the entered value into the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
 ## Template usage
 
-To get the field value, use the following code:
+**Displaying the value:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<p>Entered: <?php rwmb_the_value( 'my_field_id' ) ?></p>
 ```
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
+**Getting the value:**
+
+```php
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Entered: <?= $value ?></p>
+```
+
+**Formatting the value:**
+
+```php
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Entered: <?= number_format( $value ) ?></p>
+```
+
+**Displaying cloneable values:**
+
+```php
+<?php $values = rwmb_meta( $field_id ) ?>
+<?php foreach ( $values as $value ) : ?>
+    <p><?= $value ?></p>
+<?php endforeach ?>
+```

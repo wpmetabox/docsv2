@@ -24,7 +24,7 @@ Rows | `rows` | Number of rows. Optional. Default 4.
 
 ## Data
 
-This field simply saves a single entered value in the database.
+This field simply saves the entered value into the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
