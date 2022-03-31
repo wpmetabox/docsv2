@@ -2,64 +2,64 @@
 title: Google Maps
 ---
 
-The map field creates a Google Maps where you can select a location. This field comes along with a text field for address input, which has the autocomplete feature. The data for address autocomplete is get from Google Maps Geocode service.
+import Screenshots from '@site/src/components/Screenshots';
 
-You also can pick a location simply by clicking on the map or drag and drop the marker. Note that when you drag and drop the marker, the location (latitude and longitude) is saved automatically in the field value.
+This field creates a Google Maps where you can select a location. It requires a text field for address input, which has the autocomplete feature. The data for address autocomplete is gotten from Google Maps Geocode service.
 
-![google maps](https://i.imgur.com/zyKqRTD.png)
+You also can pick a location simply by clicking on the map or dragging and dropping the marker. When you do that, the coordinates are saved in the field value.
+
+## Screenshots
+
+<Screenshots name="map" col1={[
+    ['https://i.imgur.com/zyKqRTD.png', 'The Google Maps field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`std` | Default location of the map when loaded. Format `'53.346881,-6.258860'` (latitude, longitude). If missing, the field will show Dublin, Ireland.
-`api_key` | Google Maps API key. [Get here](https://developers.google.com/maps/documentation/javascript/get-api-key). Required.
-`language` | Google Maps language. Optional. Default is English. See [list of language code](https://developers.google.com/maps/faq#languagesupport).
-`region` | The region code, specified as a [country code top-level domain](https://en.wikipedia.org/wiki/Country_code_top-level_domain). This parameter returns autocompleted address results influenced by the region (typically the country) from the address field. [See here for more details](https://developers.google.com/maps/documentation/geocoding/intro#RegionCodes). Optional.
-`address_field` | The ID of address field. For multiple address fields, enter field IDs separated by comma. Required.
+Name | Key | Description
+--- | --- | ---
+Google Maps API key | `api_key` | Google Maps API key. [Get here](https://developers.google.com/maps/documentation/javascript/get-api-key). Required.
+Default location | `std` | Default location of the map when loaded. Format `'53.346881,-6.258860'` (latitude, longitude). If missing, the field will show Dublin, Ireland.
+Address field | `address_field` | The ID of the address field. For multiple address fields, enter field IDs separated by commas. Required.
+Language | `language` | Google Maps language. See [list of language code](https://developers.google.com/maps/faq#languagesupport).
+Region | `region` | The region code, specified as a [country code top-level domain](https://en.wikipedia.org/wiki/Country_code_top-level_domain). This parameter returns autocompleted address results influenced by the region (typically the country) from the address field. [See here for more details](https://developers.google.com/maps/documentation/geocoding/intro#RegionCodes).
 
-Note that in order to make the map works, you need to create a [text field](/fields/text/) for address and pass its ID to the map's `address_field`.
+:::caution Address field
 
-The `address_field` can be also a list of text input fields' IDs, separating by commas. For example: `street,city,state`. But in that case, there's no autocomplete for address. Instead of that, when you click the **Find Address** button (below the map), the field will search for the address combined from values of those fields and set the location for the map.
-
-:::caution
-
-Without a valid Google Maps API, the map won't show. [Get a key here](https://developers.google.com/maps/documentation/javascript/get-api-key).
+You're required to create a [text field](/fields/text/) for entering an address and pass its ID to the map's "Address field".
 
 :::
 
+The address field can be also a list of text input fields' IDs, separated by commas. For example: `street,city,state`. In that case, there's no autocomplete for address. Instead of that, when you click the **Find Address** button (below the map), the field will search for the address combined with the values of those fields and set the location for the map.
+
 :::caution
 
-Make sure you enabled the **Geocoding API** to make the autocomplete feature works!
+Make sure you enabled the **Geocoding API** to make the autocomplete feature work!
 
 :::
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
 // Address field.
-array(
-    'id'   => 'address',
+[
+    // highlight-next-line
+    'id'   => 'my_address',
     'name' => 'Address',
     'type' => 'text',
-),
+],
 // Map field.
-array(
+[
     'id'            => 'map',
     'name'          => 'Location',
     'type'          => 'map',
-
-    // Default location: 'latitude,longitude[,zoom]' (zoom is optional)
     'std'           => '-6.233406,-35.049906,15',
-
-    // Address field ID
-    'address_field' => 'address',
-
-    // Google API key
+    // highlight-next-line
+    'address_field' => 'my_address',
     'api_key'       => 'XXXXXXXXX',
-),
+],
 ```
 
 ## Data
@@ -68,12 +68,14 @@ This field saves the location in the following format `latitude,longitude,zoom`.
 
 ## Template usage
 
-### Displaying the map
+### Displaying maps
 
-To display `map` field in the frontend, we use the [rwmb_meta()](/functions/rwmb-meta/) helper function, but we need to add more parameters:
+To display the Google Maps on the frontend, use the [rwmb_the_value()](/functions/rwmb-the-value/) function, but we need to add more parameters:
 
 ```php
-$args = array(
+<h2>Google Maps</h2>
+<?php
+$args = [
     'width'        => '640px',
     'height'       => '480px',
     'zoom'         => 14,
@@ -81,8 +83,9 @@ $args = array(
     'marker_icon'  => 'https://url_to_icon.png',
     'marker_title' => 'Click me',
     'info_window'  => '<h3>Title</h3><p>Content</p>.',
-);
-echo rwmb_meta( 'field_id', $args );
+];
+rwmb_the_value( 'my_field_id', $args );
+?>
 ```
 
 Parameter | Description
@@ -99,18 +102,16 @@ Parameter | Description
 The code below shows how to use `js_options` for advanced control how the map is displayed:
 
 ```php
-$args = array(
+$args = [
     'width'      => '640px',
     'height'     => '480px',
-    'js_options' => array(
+    'js_options' => [
         'mapTypeId'   => 'HYBRID',
         'zoomControl' => false,
-    )
-);
-echo rwmb_meta( 'field_id', $args );
+    ],
+];
+rwmb_the_value( 'my_field_id', $args );
 ```
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
 
 ### Getting field value
 
@@ -127,29 +128,39 @@ Read more about [rwmb_get_value()](/functions/rwmb-get-value/).
 
 ### Outputting a map in a group
 
-If you have a map inside a cloneable/non-cloneable group, then the helper functions above doesn't work. In that case, you can use a helper function in the plugin to show the map.
+If you have a map inside a group, then the helper functions above don't work. In that case, you can use a helper function in the plugin to show the map.
 
 ```php
+$args = [
+    'width'      => '640px',
+    'height'     => '480px',
+    'js_options' => [
+        'mapTypeId'   => 'HYBRID',
+        'zoomControl' => false,
+    ],
+];
 $group_values = rwmb_meta( 'group_id' );
 // If group is cloneable
 foreach ( $group_values as $group_value ) {
-    echo RWMB_Map_Field::render_map( $group_value['map_id'] );
+    // highlight-next-line
+    echo RWMB_Map_Field::render_map( $group_value['map_id'], $args );
 }
 ```
 
 The helper function `RWMB_Map_Field::render_map` accepts 2 parameters:
 
 Name|Description
-`$location`|The location of the map center / marker, in format `latitude,longitude[,zoom]` (zoom is optional). It's the same format of the map field value.
-`$args`|Additional parameters for the map. The same as for helper function `rwmb_meta` above.
+---|---
+`$location`|The location of the map center / marker, in format `latitude,longitude[,zoom]` (zoom is optional). It's the same format as the map field value.
+`$args`|Additional parameters for the map. The same as for helper function `rwmb_the_value` above.
 
 ## Filters
 
-`rwmb_google_maps_url`
+### `rwmb_google_maps_url`
 
-This filter allows developers to add more libraries or change the Google Maps URL. It accepts single parameter - the URL of the Google Maps script and should return an URL.
+This filter allows developers to add more libraries or change the Google Maps URL. It accepts a single parameter - the URL of the Google Maps script and should return an URL.
 
-For example, the code below adds `geometry` library to the Google Maps script:
+For example, the code below adds "geometry" library to the Google Maps script:
 
 ```php
 add_filter( 'rwmb_google_maps_url', function ( $url ) {

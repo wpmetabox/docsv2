@@ -2,61 +2,60 @@
 title: oEmbed
 ---
 
-The oEmbed field creates a simple text input for entering media URL. This field offers live preview the media content. It supports [many media websites](https://codex.wordpress.org/Embeds).
+import Screenshots from '@site/src/components/Screenshots';
 
-![oembed](https://i.imgur.com/F64cxNe.png)
+The oEmbed field creates a simple text input for entering a media URL. This field offers a live preview of the media content. It supports [many media websites](https://codex.wordpress.org/Embeds).
+
+## Screenshots
+
+<Screenshots name="oEmbed" col1={[
+    ['https://i.imgur.com/F64cxNe.png', 'The oEmbed field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`size` | Input size. Default `30`. Optional.
-`not_available_string` | The text message displayed to users when the embed media is not available. Accepts HTML.
+Name | Key | Description
+--- | --- | ---
+Size of the input box | `size` | Size of the input box. Without this setting, the input box is full-width
+Not available text | `not_available_string` | The text message is displayed to users when the embed media is not available. Accepts HTML.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'id'    => 'oembed',
     'name'  => 'oEmbed(s)',
     'type'  => 'oembed',
-
-    // Input size
-    'size'  => 30,
-),
+],
 ```
 
 ## Data
 
-This field saves the media URL in the post meta.
+This field saves the media URL to the database.
 
 ## Template usage
 
-To output the media in the frontend, use the [rwmb_meta()](/functions/rwmb-meta/) helper function:
+**Displaying the embedded media:**
 
 ```php
-$media = rwmb_meta( $field_id );
-echo $value;
+<h3>Youtube video</h3>
+<?php rwmb_the_value( 'my_field_id' ) ?>
 ```
 
-This helper function will display the oembed content, e.g. if the value is a Youtube URL, it will display the full Youtube video player.
-
-In case you want to get the URL of the field, use this code:
+**Getting the URL:**
 
 ```php
-$url = rwmb_get_value( $field_id );
-echo $url
+$url = rwmb_get_value( 'my_field_id' );
+echo $url;
 ```
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_get_value()](/functions/rwmb-get-value/).
+## Filters
 
-## Hooks
+### `rwmb_oembed_not_available_string`
 
-The `oembed` field has one filter `rwmb_oembed_not_available_string`, which allows users to change the message for all oembed field when no embed is available.
-
-Use the filter as follows:
+To change the message for all oembed field when no embed is available:
 
 ```php
 add_filter( 'rwmb_oembed_not_available_string', function( $message ) {
@@ -65,7 +64,7 @@ add_filter( 'rwmb_oembed_not_available_string', function( $message ) {
 } );
 ```
 
-Developers also can hide the message with CSS, since it's wrapped into a `div.rwmb-oembed-not-available`. Simply put this code into your theme or in *Customize > Additional CSS*:
+You also can hide the message with CSS on the front end by putting this code into your theme or in *Customize > Additional CSS*:
 
 ```css
 .rwmb-oembed-not-available {

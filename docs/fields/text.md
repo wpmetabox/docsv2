@@ -25,7 +25,7 @@ Besides the [common settings](/field-settings/), this field has the following sp
 Name | Key | Description
 --- | --- | ---
 Placeholder | `placeholder` | Placeholder for the input. Optional.
-Size of the input box | `size` | Size of the input box. Optional. Default 30. Without this setting, the input box is full-width.
+Size of the input box | `size` | Size of the input box. Without this setting, the input box is full-width.
 Prepend text | `prepend`|Prepend text for the input. The prepended text should be considered as an informative label. It's not saved in the database with the input value.
 Append text | `append`|Append text for the input. The appended text should be considered as an informative label. It's not saved in the database with the input value.
 Predefined values | `datalist` | Predefined values that users can select from (users still can enter text if they want). If you use code, this parameter has the following sub-parameters<br />- `id`: ID of the div that stores the options. Usually not used and auto-generated as `{$field['id']_list`. Useful if you have several inputs with same datalist.<br />- `options`: Array of predefined values to select from.
