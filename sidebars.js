@@ -59,7 +59,6 @@ const sidebars = {
 				'cloning-fields',
 				'validation',
 				'sanitization',
-				'integration',
 				'database',
 				'custom-attributes',
 			],
@@ -70,12 +69,14 @@ const sidebars = {
 			collapsed: false,
 			link: {
 				type: 'generated-index',
+				description: 'Advanced topics that help you use and customize Meta Box to the fullest. Most of them requires working with code.',
 			},
 			items: [
 				'creating-fields-with-code',
 				'field-settings',
 				'displaying-fields-with-code',
 				'creating-new-field-types',
+				'integration',
 			],
 		},
 		{
