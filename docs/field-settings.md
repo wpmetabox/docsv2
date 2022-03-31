@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 Each field contains settings to determine where and how data is loaded and saved. All fields share some common settings, but also offer unique settings per field type. There are also settings from extensions which are explained on each extension docs.
 
-Below is the list of common field settings with a brief description. The key is used for reference in code.
+Below is the list of common field settings with a brief description. The keys are for reference in code.
 
 <Tabs>
 

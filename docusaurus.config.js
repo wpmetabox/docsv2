@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/palenight');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Meta Box Documentation',
-  tagline: 'Everything you need to know to use Meta Box plugins to create professional websites on WordPress',
+  tagline: 'How to use Meta Box to create pro websites on WordPress',
   url: 'https://docs.metabox.io',
   baseUrl: '/',
   trailingSlash: true,

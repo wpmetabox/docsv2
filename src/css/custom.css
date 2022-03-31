@@ -1,12 +1,16 @@
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #00b1b3;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: hsl(181, 100%, 35%);
+  --ifm-color-primary-dark: hsl(181, 100%, 30%);
+  --ifm-color-primary-darker: hsl(181, 100%, 25%);
+  --ifm-color-primary-darkest: hsl(181, 100%, 20%);
+  --ifm-color-primary-light: hsl(181, 100%, 50%);
+  --ifm-color-primary-lighter: hsl(181, 100%, 55%);
+  --ifm-color-primary-lightest: hsl(181, 100%, 60%);
+
+  /* Button */
+  --ifm-button-color: #fff;
+  --ifm-button-padding-vertical: .5rem;
 
   --ifm-toc-border-color: transparent;
 
@@ -36,14 +40,6 @@ html[data-theme='dark'] {
 
   --ifm-color-emphasis-100: var(--color-base);
   --ifm-color-emphasis-200: var(--color-base);
-
-  --ifm-color-primary: #00b1b3;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
 }
 
 /* Colors */
@@ -87,10 +83,13 @@ html[data-theme='dark'] {
 }
 
 /* Homepage: hero section */
-.hero.hero {
+.hero {
   background: var(--ifm-color-emphasis-100);
   color: inherit;
   overflow: visible;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 
   --search-local-modal-width: 100%;
 }
@@ -109,7 +108,7 @@ html[data-theme='dark'] {
   width: 100%;
 }
 .hero .navbar__search-input {
-  width: 100%;
+  width: 100% !important;
   height: 3rem;
   padding-left: 3rem;
   background-position: 1.5rem center;
@@ -120,6 +119,16 @@ html[data-theme='dark'] {
 .hero .searchBar_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module .dropdownMenu_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
   left: 0 !important;
   right: 0 !important;
+}
+.hero__title {
+  max-width: min(100%, 30ch);
+  margin-inline: auto;
+}
+.hero_popular {
+  margin-top: .5rem;
+}
+.hero_cta {
+  margin-bottom: 4rem;
 }
 
 /* Menu */

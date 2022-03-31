@@ -1,22 +1,8 @@
+import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import SearchBar from '@theme/SearchBar';
-import clsx from 'clsx';
 import React from 'react';
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={ clsx( 'hero hero--primary', styles.heroBanner ) }>
-      <div className="container">
-        <h1 className="hero__title">{ siteConfig.title }</h1>
-        <p className="hero__subtitle">{ siteConfig.tagline }</p>
-        <SearchBar />
-      </div>
-    </header>
-  );
-}
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -24,7 +10,21 @@ export default function Home() {
     <Layout
       title=""
       description={ siteConfig.tagline }>
-      <HomepageHeader />
+      <header className="hero">
+        <div className="container">
+          <h1 className="hero__title">Build professional WordPress sites with custom post types and custom fields</h1>
+          <p className="hero__subtitle">Quickly create forms and fields for your posts, user profiles, settings pages, and more.</p>
+          <div className="hero_cta">
+            <Link
+              className="button button--primary button--lg"
+              to="introduction">
+              Get Started
+            </Link>
+          </div>
+          <SearchBar />
+          <p className="hero_popular">Popular topics: <a href="/field-settings/">field settings</a>, <a href="/custom-fields/#displaying-fields">displaying fields</a>, <a href='/extensions/mb-blocks/'>blocks</a></p>
+        </div>
+      </header>
       <main>
         <section className='boxes'>
           <div className="container boxWrapper">
