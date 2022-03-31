@@ -2,23 +2,30 @@
 title: Select Advanced
 ---
 
+import Screenshots from '@site/src/components/Screenshots';
+import ChoiceSingle from '../_parts/_choice-single.md';
+
 The select advanced field creates a beautiful select dropdown using the [select2](https://select2.org/) library.
 
-![select advanced](https://i.imgur.com/65OkGbt.png)
+## Screenshots
+
+<Screenshots name="select-advanced" col1={[
+    ['https://i.imgur.com/65OkGbt.png', 'The select advanced field interface']
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`options` | Array of `'value' => 'Label'` pairs. They're used to display choices. `value` is stored in the custom field. Required.
-`multiple` | Whether to allow select multiple values? `true` or `false` (default).
-`placeholder` | The placeholder text.
-`select_all_none` | Display "Select All / None" button to fast toggle choices. Applied only when `multiple` is `true`.
-`js_options` | Array of options for `select2` library. [See here](https://select2.org/configuration).
+Name | Key | Description
+--- | --- | ---
+Choices | `options` | List of choices, each per line. If you need to set values and labels, use the format "value: Label" for each choice.<br />When using with code, this setting is an array of `'value' => 'Label'`.
+Multiple | `multiple` | Whether to allow select multiple values? `true` or `false` (default).
+Placeholder | `placeholder` | The placeholder text.
+Display "Toggle All" button | `select_all_none` | Display "Toggle All" button to quickly toggle choices. Applied only when "Multiple" is set.
+Select2 options | `js_options` | Options for `select2` library. [See here](https://select2.org/configuration).
 
-By default, Meta Box applies these default options for `js_options`:
+By default, Meta Box applies these default options for select2:
 
 Name | Value | Description
 --- | ---
@@ -26,79 +33,25 @@ Name | Value | Description
 `width` | `resolve` | Set width by element's width.
 `placeholder` | `$field['placeholder']` | Make `placeholder` works just like `select` field.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name'            => 'Select Advanced',
     'id'              => 'select_advanced',
     'type'            => 'select_advanced',
-    // Array of 'value' => 'Label' pairs
-    'options'         => array(
+    'options'         => [
         'java'       => 'Java',
         'javascript' => 'JavaScript',
         'php'        => 'PHP',
-        'csharp'     => 'C#',
-        'objectivec' => 'Objective-C',
         'kotlin'     => 'Kotlin',
         'swift'      => 'Swift',
-    ),
-    // Allow to select multiple value?
-    'multiple'        => false,
-    // Placeholder text
+    ],
     'placeholder'     => 'Select an Item',
-    // Display "Select All / None" button?
-    'select_all_none' => false,
-    // select2 configuration. See https://select2.org/configuration
-    'js_options'      => array(
+    'js_options'      => [
         'containerCssClass' => 'my-custom-class',
-    ),
-),
+    ],
+],
 ```
 
-## Data
-
-If `multiple` is `false`, this field simply saves the selected value in the database. The saved value is the `value` in the `options` array (not label).
-
-If `multiple` is `true`, this field saves multiple values in the database, where each value is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with last parameter `false`).
-
-If the field is cloneable, the value is stored as a serialized array in a single row in the database.
-
-## Template usage
-
-If field is not multiple:
-
-```php
-$value = rwmb_meta( $field_id );
-echo $value;
-```
-
-If field is either multiple or cloneable:
-
-```php
-$values = rwmb_meta( $field_id );
-foreach ( $values as $value ) {
-    echo $value;
-}
-```
-
-If field is both multiple and cloneable:
-
-```php
-$values = rwmb_meta( $field_id );
-foreach ( $values as $clone ) {
-    foreach ( $clone as $value ) {
-        echo $value;
-    }
-}
-```
-
-The function [rwmb_meta()](/functions/rwmb-meta/) only returns the value of the field, e.g. the key in the `options` array. To display the field label, use this code:
-
-```php
-rwmb_the_value( $field_id );
-```
-
-Depending on the value is a single value or an array (multiple or cloneable or both), this function outputs a simple string or an unordered list.
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).
+<ChoiceSingle />

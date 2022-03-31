@@ -1,76 +1,82 @@
 ---
-title: WYSIWYG
+title: WYSIWYG Editor
 ---
 
-The wysiwyg field creates an editor similar to the post content. You are able to enter any kind of content, insert media or custom HTML.
+import Screenshots from '@site/src/components/Screenshots';
 
-Note: wysiwyg stands for What You See Is What You Get, a general term of visual editor, where you see the formated content as you type.
+The WYSIWYG field creates an editor to enter rich content. You can enter headings, paragraphs, lists, and insert media.
 
-![wysiwyg editor](https://i.imgur.com/Y72Bcvw.png)
+:::tip Why WYSIWYG?
+
+"WYSIWYG" stands for **W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et, a general term of visual editor, where you see the formatted content as you type.
+
+:::
+
+## Screenshots
+
+<Screenshots name="wysiwyg" col1={[
+    ['https://i.imgur.com/Y72Bcvw.png', 'The WYSIWYG field interface'],
+]} />
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`raw` | If you want to save data in raw format, e.g. exactly the same as you enter in the editor without applying `wpautop()` function. Can be `true` or `false` (default). Optional.
-`options` | Array of editor settings, [see the list of settings here](https://developer.wordpress.org/reference/classes/_WP_Editors/parse_settings/).
+Name | Key | Description
+--- | --- | ---
+Save data in the raw format | `raw` | Whether to save content in the raw format without applying `wpautop()`. Can be `true` or `false` (default). Optional.
+Editor options | `options` | A list of editor options, [see here](https://developer.wordpress.org/reference/classes/_WP_Editors/parse_settings/).
 
-By default, the plugin uses 2 options:
+By default, the plugin uses 2 editor options:
 
 Name | Default Value | Description
---- | ---
+--- | --- | ---
 `editor_class` | `rwmb-wysiwyg` | Just to make CSS consistent with other fields
 `dfw` | `true` | Allow to use "Distraction Free Writing" mode (full-screen mode)
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name'    => 'WYSIWYG / Rich Text Editor',
     'id'      => 'field_id',
     'type'    => 'wysiwyg',
-
-    // Set the 'raw' parameter to TRUE to prevent data being passed through wpautop() on save
     'raw'     => false,
-
-    // Editor settings, see https://codex.wordpress.org/Function_Reference/wp_editor
-    'options' => array(
+    'options' => [
         'textarea_rows' => 4,
         'teeny'         => true,
-    ),
-),
+    ],
+],
 ```
 
 ## Data
 
-If `raw` is `true`, this field saves exactly what you enter to the database. Otherwise, it saves the value after applying `wpautop` function.
+If `raw` is `true`, this field saves exactly what you enter into the database. Otherwise, it saves the value after applying `wpautop` function.
 
 ## Template usage
 
-To output the field value, use this code:
+**Displaying the content:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<h2>Content</h2>
+<?php rwmb_the_value( 'my_field_id' ) ?>
 ```
+
+:::caution Content formatting
 
 Note that the helper function doesn't format the value of this field nor run shortcodes in the content. In case you want to make it behaves similar to the post content (e.g. format and shortcodes), use this code:
 
 ```php
-$value = rwmb_meta( $field_id );
+$value = rwmb_meta( 'my_field_id' );
 echo do_shortcode( wpautop( $value ) );
 ```
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
+:::
 
 ## Filters
 
-`rwmb_wysiwyg_settings`
+### `rwmb_wysiwyg_settings`
 
-This filter is used to changed the options for the editor (which is passed by `$field['option']`) and is applied to all `wysiwyg` fields.
+This filter is used to change the options for the editor (which is passed by `$field['option']`) and is applied to all `wysiwyg` fields.
 
-This filter accepts 1 param:
-
-- `$settings`: editor settings, which will be sent to [`wp_editor`](https://codex.wordpress.org/Function_Reference/wp_editor) function.
+This filter accepts 1 param - an array of editor settings.
