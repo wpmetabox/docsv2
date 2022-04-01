@@ -21,15 +21,15 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![tooltip](/extensions/tooltip.png) <span className="thumb_text">Meta Box Tooltip</span>](/extensions/meta-box-tooltip/)
 
-[![admin-columns](/extensions/admin-columns.png) <span className="thumb_text">MB Admin Columns</span>](/extensions/mb-admin-columns/)
+[![admin columns](/extensions/admin-columns.png) <span className="thumb_text">MB Admin Columns</span>](/extensions/mb-admin-columns/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Conditional Logic</span>](/extensions/meta-box-conditional-logic/)
+[![conditional logic](/extensions/conditional-logic.png) <span className="thumb_text">Meta Box Conditional Logic</span>](/extensions/meta-box-conditional-logic/)
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Include Exclude</span>](/extensions/meta-box-include-exclude/)
+[![include exclude](/extensions/include-exclude.png) <span className="thumb_text">Meta Box Include Exclude</span>](/extensions/meta-box-include-exclude/)
 
-[![show-hide](/extensions/show-hide.png) <span className="thumb_text">Meta Box Show Hide</span>](/extensions/meta-box-show-hide/)
+[![show hide](/extensions/show-hide.png) <span className="thumb_text">Meta Box Show Hide</span>](/extensions/meta-box-show-hide/)
 
-[![text-limiter](/extensions/text-limiter.png) <span className="thumb_text">Meta Box Text Limiter</span>](/extensions/meta-box-text-limiter/)
+[![text limiter](/extensions/text-limiter.png) <span className="thumb_text">Meta Box Text Limiter</span>](/extensions/meta-box-text-limiter/)
 
 [![template](/extensions/template.png) <span className="thumb_text">Meta Box Template</span>](/extensions/meta-box-template/)
 
@@ -41,15 +41,15 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![group](/extensions/group.png) <span className="thumb_text">Meta Box Group</span>](/extensions/meta-box-group/)
 
-[![frontend-submission](/extensions/frontend-submission.png) <span className="thumb_text">MB Frontend Submission</span>](/extensions/mb-frontend-submission/)
+[![frontend submission](/extensions/frontend-submission.png) <span className="thumb_text">MB Frontend Submission</span>](/extensions/mb-frontend-submission/)
 
-[![settings-page](/extensions/settings-page.png) <span className="thumb_text">MB Settings Page</span>](/extensions/mb-settings-page/)
+[![settings page](/extensions/settings-page.png) <span className="thumb_text">MB Settings Page</span>](/extensions/mb-settings-page/)
 
-[![term-meta](/extensions/term-meta.png) <span className="thumb_text">MB Term Meta</span>](/extensions/mb-term-meta/)
+[![term meta](/extensions/term-meta.png) <span className="thumb_text">MB Term Meta</span>](/extensions/mb-term-meta/)
 
-[![user-meta](/extensions/user-meta.png) <span className="thumb_text">MB User Meta</span>](/extensions/mb-user-meta/)
+[![user meta](/extensions/user-meta.png) <span className="thumb_text">MB User Meta</span>](/extensions/mb-user-meta/)
 
-[![user-profile](/extensions/user-profile.png) <span className="thumb_text">MB User Profile</span>](/extensions/mb-user-profile/)
+[![user profile](/extensions/user-profile.png) <span className="thumb_text">MB User Profile</span>](/extensions/mb-user-profile/)
 
 [![blocks](/extensions/blocks.png) <span className="thumb_text">MB Blocks</span>](/extensions/mb-blocks/)
 
@@ -59,7 +59,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![geolocation](/extensions/geolocation.png) <span className="thumb_text">Meta Box Geolocation</span>](/extensions/meta-box-geolocation/)
 
-[![rest-api](/extensions/rest-api.png) <span className="thumb_text">MB REST API</span>](/extensions/mb-rest-api/)
+[![rest api](/extensions/rest-api.png) <span className="thumb_text">MB REST API</span>](/extensions/mb-rest-api/)
 
 [![revision](/extensions/revision.png) <span className="thumb_text">MB Revision</span>](/extensions/mb-revision/)
 
@@ -71,11 +71,11 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-amber">
 
-[![acf](/extensions/acf.jpg) <span className="thumb_text">MB ACF Migration</span>](/extensions/mb-acf-migration/)
+[![acf](/extensions/acf.png) <span className="thumb_text">MB ACF Migration</span>](/extensions/mb-acf-migration/)
 
-[![rankmath](/extensions/rankmath.jpg) <span className="thumb_text">MB Rank Math</span>](/extensions/mb-rank-math/)
+[![rankmath](/extensions/rankmath.png) <span className="thumb_text">MB Rank Math</span>](/extensions/mb-rank-math/)
 
-[![yoast-seo](/thumbs/checkbox.png) <span className="thumb_text">Meta Box for Yoast SEO</span>](/extensions/meta-box-yoat-seo/)
+[![yoast seo](/extensions/yoast-seo.png) <span className="thumb_text">Meta Box for Yoast SEO</span>](/extensions/meta-box-yoat-seo/)
 
 <!-- [![facetwp](/extensions/facetwp.png) <span className="thumb_text">Meta Box - FacetWP Integrator</span>](/extensions/meta-box-facetwp-integrator/) -->
 
@@ -89,7 +89,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-red">
 
-[![favorite-posts](/extensions/favourite-posts.png) <span className="thumb_text">MB Favorite Posts</span>](/extensions/mb-favorite-posts/)
+[![favorite posts](/extensions/favourite-posts.png) <span className="thumb_text">MB Favorite Posts</span>](/extensions/mb-favorite-posts/)
 
 [![testimonials](/extensions/testimonials.png) <span className="thumb_text">MB Testimonials</span>](/extensions/mb-testimonials/)
 
