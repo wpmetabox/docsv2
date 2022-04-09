@@ -160,7 +160,7 @@ html[data-theme='dark'] {
   border-radius: 0;
 }
 .menu__list-item-collapsible > .menu__link {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ifm-font-color-base);
 }
 .menu__list-item.theme-doc-sidebar-item-category {
