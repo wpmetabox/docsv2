@@ -3,6 +3,7 @@ title: MB Term Meta
 ---
 
 import Helpers from '../_parts/_helpers.md';
+import FAQ from '@site/src/components/FAQ';
 
 MB Term Meta helps you to add custom fields to taxonomies.
 
@@ -109,3 +110,14 @@ foreach ( $image_ids as $image_id ) {
 ```
 
 <Helpers />
+
+## FAQ
+
+<FAQ question="How to output term meta in View?">
+
+You can use this code to output term meta in View
+
+`{% set custom_field = mb.rwmb_meta( 'field_id', { object_type: 'term' }, term_id ) %}
+{{ custom_field }}`
+
+</FAQ>
