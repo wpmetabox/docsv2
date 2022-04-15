@@ -236,5 +236,5 @@ Example: If you are using a field called `some_user` and you want to change the 
 function some_user_filter( $label, $field, $user ) {
     return $user->first_name ;
 }
-add_filter( 'rwmb_some_user_choice_label', 'some_user_filter', 10, 3);
+add_filter( 'rwmb_some_user_choice_label', 'some_user_filter', 10, 3 );
 ```
