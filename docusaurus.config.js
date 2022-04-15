@@ -88,8 +88,7 @@ const config = {
             label: 'Extensions',
           },
           {
-            type: 'doc',
-            docId: 'support-policy',
+            href: 'https://support.metabox.io',
             position: 'right',
             label: 'Support',
           },
