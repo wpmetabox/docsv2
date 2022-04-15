@@ -2,7 +2,7 @@
 title: Text List
 ---
 
-The text list field creates a a list of simple text inputs. You are able to select multiple values from the predefined list.
+The text list field creates a a list of simple text inputs. You can select multiple values from the predefined list.
 
 This field uses jQuery UI library to perform the text list action.
 

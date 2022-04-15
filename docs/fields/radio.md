@@ -4,7 +4,7 @@ title: Radio
 
 import Screenshots from '@site/src/components/Screenshots';
 
-The radio field creates a simple list of radio inputs where you are able to select a single choice from the predefined list.
+The radio field creates a simple list of radio inputs where you can select a single choice from the predefined list.
 
 ## Screenshots
 

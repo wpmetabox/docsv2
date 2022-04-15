@@ -107,7 +107,7 @@ Param|Description
 |`replace`: Replace an existing column by the new one
 `column`|The target existing column
 
-Using this configuration, you are able to insert the custom column in any position you want. Note that the column title is the field name by default.
+Using this configuration, you can insert the custom column in any position you want. Note that the column title is the field name by default.
 
 ### 3. Advanced configuration
 

@@ -50,7 +50,7 @@ array(
 
 ## Data
 
-Similar to file field, this field saves multiple values (attachment IDs) in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with last parameter `false`).
+Similar to file field, this field saves multiple values (attachment IDs) in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
 
 ## Template usage
 

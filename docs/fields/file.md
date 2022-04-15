@@ -40,7 +40,7 @@ Note that the `multiple` setting is always set to `true` for this field.
 
 ## Data
 
-This field saves multiple values (attachment IDs) in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with last parameter `false`).
+This field saves multiple values (attachment IDs) in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
 
 ## Upload to custom folder
 

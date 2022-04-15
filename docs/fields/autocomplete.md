@@ -5,7 +5,7 @@ title: Autocomplete
 import Screenshots from '@site/src/components/Screenshots';
 import Choice from '../_parts/_choice.md';
 
-The autocomplete field creates a simple text input with autocomplete feature. You are able to select multiple values from the predefined list.
+The autocomplete field creates a simple text input with autocomplete feature. You can select multiple values from the predefined list.
 
 This field uses jQuery UI library to perform the autocomplete action.
 

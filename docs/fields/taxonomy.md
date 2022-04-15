@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 The taxonomy field allows you to select one or multiple taxonomy terms. This field has several settings that can be displayed as a: simple select dropdown, checkbox list, or beautiful select dropdown with select2 library.
 
-If the taxonomy is hierarchical, you are able to display the field as a select or checkbox tree, e.g. showing childen terms when parent term is selected.
+If the taxonomy is hierarchical, you can display the field as a select or checkbox tree, e.g. showing childen terms when parent term is selected.
 
 ## Screenshots
 

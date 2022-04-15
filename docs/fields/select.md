@@ -5,7 +5,7 @@ title: Select
 import Screenshots from '@site/src/components/Screenshots';
 import ChoiceSingle from '../_parts/_choice-single.md';
 
-The select field creates a simple select dropdown. You are able to select one or multiple values from the predefined list.
+The select field creates a simple select dropdown. You can select one or multiple values from the predefined list.
 
 ## Screenshots
 

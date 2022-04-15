@@ -162,7 +162,7 @@ This parameter sets the minimum number of characters required to start a search.
 
 This field saves user ID(s) in the database.
 
-If field is not `multiple`, a single user ID is saved in the database. Otherwise, the field saves multiple user IDs in the database, where each user ID is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with last parameter `false`).
+If field is not `multiple`, a single user ID is saved in the database. Otherwise, the field saves multiple user IDs in the database, where each user ID is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 

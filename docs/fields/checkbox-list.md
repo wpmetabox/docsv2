@@ -5,7 +5,7 @@ title: Checkbox list
 import Screenshots from '@site/src/components/Screenshots';
 import Choice from '../_parts/_choice.md';
 
-The checkbox list field creates a list of tick-able checkboxes. You are able to select multiple choices from the predefined list.
+The checkbox list field creates a list of tick-able checkboxes. You can select multiple choices from the predefined list.
 
 ## Screenshots
 
