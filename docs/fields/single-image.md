@@ -43,7 +43,7 @@ This field saves the attachment ID in the database.
 **Displaying uploaded image:**
 
 ```php
-<?php $image = rwmb_meta( 'field_id', ['size' => 'thumbnail'] ); ?>
+<?php $image = rwmb_meta( 'my_field_id', ['size' => 'thumbnail'] ); ?>
 <h3>Logo</h3>
 <img src="<?= $image['url']; ?>">
 ```
@@ -76,10 +76,10 @@ or simpler:
 ];
 ```
 
-**Display the image with link to the with linfull-size versionk to a full size (for lightbox effect (for lightbox effect):**
+**Display the image with link to the full-size version (for lightbox effect):**
 
 ```php
-<?php $image = rwmb_meta( 'field_id', ['size' => 'thumbnail'] ); ?>
+<?php $image = rwmb_meta( 'my_field_id', ['size' => 'thumbnail'] ); ?>
 <h3>Logo</h3>
 <a href="<?= $image['full_url'] ?>"><img src="<?= $image['url']; ?>"></a>
 ```

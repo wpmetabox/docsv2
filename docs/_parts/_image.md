@@ -1,7 +1,7 @@
 **Displaying uploaded images:**
 
 ```php
-<?php $images = rwmb_meta( 'field_id', ['size' => 'thumbnail'] ); ?>
+<?php $images = rwmb_meta( 'my_field_id', ['size' => 'thumbnail'] ); ?>
 <h3>Uploaded images</h3>
 <ul>
     <?php foreach ( $images as $image ) : ?>
@@ -38,10 +38,10 @@ or simpler:
 ];
 ```
 
-**Display images with links to the with linfull-size versionk to a full size (for lightbox effects (for lightbox effect):**
+**Display images with links to the full-size versions (for lightbox effects):**
 
 ```php
-<?php $images = rwmb_meta( 'field_id', ['size' => 'thumbnail'] ); ?>
+<?php $images = rwmb_meta( 'my_field_id', ['size' => 'thumbnail'] ); ?>
 <h3>Uploaded images</h3>
 <ul>
     <?php foreach ( $images as $image ) : ?>

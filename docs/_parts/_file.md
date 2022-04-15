@@ -1,7 +1,7 @@
 **Displaying uploaded files with links:**
 
 ```php
-<?php $files = rwmb_meta( 'field_id' ); ?>
+<?php $files = rwmb_meta( 'my_field_id' ); ?>
 <h3>Uploaded files</h3>
 <ul>
     <?php foreach ( $files as $file ) : ?>
@@ -32,7 +32,7 @@ or simpler:
 **Displaying only one file:**
 
 ```php
-<?php $files = rwmb_meta( 'field_id', ['limit' => 1] ) ?>
+<?php $files = rwmb_meta( 'my_field_id', ['limit' => 1] ) ?>
 <?php $file = reset( $files ) ?>
 <a class="button" href="<?= $file['url'] ?>">Download file</a>
 ```
