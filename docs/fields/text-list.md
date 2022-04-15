@@ -46,7 +46,7 @@ If the field is cloneable, then the value is stored as a serialized array of val
 If field is not cloneable:
 
 ```php
-$values = rwmb_meta( $field_id );
+$values = rwmb_meta( 'my_field_id' );
 echo $values[0]; // Name
 echo $values[1]; // Email
 ```
@@ -54,7 +54,7 @@ echo $values[1]; // Email
 If field is cloneable:
 
 ```php
-$values = rwmb_meta( $field_id );
+$values = rwmb_meta( 'my_field_id' );
 foreach ( $values as $value ) {
     echo $value[0]; // Name
     echo $value[1]; // Email
@@ -64,7 +64,7 @@ foreach ( $values as $value ) {
 If you want to just display the value of this field in a table, use this code:
 
 ```php
-rwmb_the_value( $field_id );
+rwmb_the_value( 'my_field_id' );
 ```
 
 which outputs:

@@ -2,39 +2,37 @@
 title: Fieldset Text
 ---
 
-The fieldset text create a set of text inputs. It's useful if you want to save related information.
+import Screenshots from '@site/src/components/Screenshots';
 
-![fielset text](https://i.imgur.com/qh3pfUd.png)
+The fieldset text creates a set of text inputs. It's useful if you want to save related information.
+
+## Screenshots
+
+<Screenshots name="fieldset-text" col1={[
+    ['https://i.imgur.com/qh3pfUd.png', 'The fieldset text field interface']
+]} />
 
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`options` | Array of `'key' => 'Input Label'` pairs. `key` is used as key of array of values stored in the database.
+Name | Key | Description
+--- | --- | ---
+Inputs | `options` | Array of `'key' => 'Input Label'` pairs. `key` is used as keys of the array of values stored in the database.
 
-Note that the `multiple` setting is always set to `false` for this field.
-
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'id'      => 'field_id',
     'name'    => 'Fieldset Text',
     'type'    => 'fieldset_text',
-
-    // Options: array of key => Label for text boxes
-    // Note: key is used as key of array of values stored in the database
-    'options' => array(
+    'options' => [
         'name'    => 'Name',
         'address' => 'Address',
         'email'   => 'Email',
-    ),
-
-    // Is field cloneable?
-    'clone' => true,
-),
+    ],
+],
 ```
 
 ## Data
@@ -43,24 +41,11 @@ This field always stores the value as a serialized array in a single row in the 
 
 ## Template usage
 
-If field is not cloneable:
+**Displaying field inputs' values:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value['name'];
-echo $value['address'];
-echo $value['email'];
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Name: <?= $value['name'] ?></p>
+<p>Address: <?= $value['address'] ?></p>
+<p>Email: <?= $value['email'] ?></p>
 ```
-
-If field is cloneable:
-
-```php
-$values = rwmb_meta( $field_id );
-foreach ( $values as $value ) {
-    echo $value['name'];
-    echo $value['address'];
-    echo $value['email'];
-}
-```
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/).

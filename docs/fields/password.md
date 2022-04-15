@@ -2,46 +2,48 @@
 title: Password
 ---
 
-The password field creates a simple password input. The password is encrypted by [wp_hash_password()](https://codex.wordpress.org/Function_Reference/wp_hash_password) before saving into the database to make sure it's safe.
+import Screenshots from '@site/src/components/Screenshots';
 
-![password](https://i.imgur.com/xozZVMx.png)
+The password field creates a simple password input. The password is encrypted by [wp_hash_password()](https://developer.wordpress.org/reference/functions/wp_hash_password/) before saving it into the database to make sure it's safe.
+
+## Screenshots
+
+<Screenshots name="password" col1={[
+    ['https://i.imgur.com/xozZVMx.png', 'The password field interface']
+]} />
 
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`size` | Input size. Default `30`. Optional.
+Name | Key | Description
+--- | --- | ---
+Size of the input box | `size` | Size of the input box. Without this setting, the input box is full-width.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'name' => 'Password',
     'id'   => 'password',
     'type' => 'password',
-),
+],
 ```
 
 ## Data
 
-This field saves the encrypted password in the database for a better security. The password is encrypted by [wp_hash_password()](https://codex.wordpress.org/Function_Reference/wp_hash_password) function.
+This field saves the encrypted password in the database for better security. The password is encrypted by [wp_hash_password()](https://developer.wordpress.org/reference/functions/wp_hash_password/) function.
 
 ## Template usage
 
-As the password is encrypted in the database, you cannot get the original password via code. There's no reversing function that can turn a password hash into the original one. Otherwise, it will be insecure.
+As the password is encrypted in the database, you **cannot** get the original password via code. There's no reversing function that can turn a password hash into the original one. Otherwise, it will be insecure.
 
 Instead of trying to get the original password, you should check the saved password is correct, like this:
 
 ```php
-$value = rwmb_meta( $field_id );
-// Or if you want to get the field value from a specific post:
-// $value = rwmb_meta( $field_id, '', $post_id );
-
+<?php
+$value = rwmb_meta( 'my_field_id' );
 if ( wp_check_password( 'password to check', $value ) ) {
     echo 'Password is correct';
 }
 ```
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/).

@@ -10,28 +10,26 @@ This field doesn't have any specific settings. It only uses [common settings](/f
 
 To store the hidden value, put it in the `std` setting.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'id'   => 'field_id',
     'type' => 'hidden',
     // Hidden field must have predefined value
     'std'  => 'Hidden value',
-),
+],
 ```
 
 ## Data
 
-Although the value is fixed in the code, this field still saves it in the post meta.
+Although the value is fixed in the code, this field still saves it in the database.
 
 ## Template usage
 
 To get the field value, use this code
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>The hidden value: <?= $value ?>
 ```
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/).

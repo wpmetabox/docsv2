@@ -55,7 +55,7 @@ Meta Box **removes all scripts and iframes** from the value. If you want to ente
 **Displaying cloneable values:**
 
 ```php
-<?php $values = rwmb_meta( $field_id ) ?>
+<?php $values = rwmb_meta( 'my_field_id' ) ?>
 <?php foreach ( $values as $value ) : ?>
     <p><?= $value ?></p>
 <?php endforeach ?>

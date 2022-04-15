@@ -56,14 +56,14 @@ If the field is cloneable, then the value is stored as a serialized array in a s
 To get the field value, use the following code:
 
 ```php
-$value = rwmb_meta( $field_id );
+$value = rwmb_meta( 'my_field_id' );
 echo $value;
 ```
 
 If field is cloneable:
 
 ```php
-$values = rwmb_meta( $field_id );
+$values = rwmb_meta( 'my_field_id' );
 foreach ( $values as $value ) {
     echo $value;
 }

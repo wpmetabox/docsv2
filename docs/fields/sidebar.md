@@ -93,7 +93,7 @@ If the field is cloneable, then the value is stored as a serialized array in a s
 If field is not `multiple`, getting value is simple:
 
 ```php
-$sidebar_id = rwmb_meta( $field_id );
+$sidebar_id = rwmb_meta( 'my_field_id' );
 if ( is_active_sidebar( $sidebar_id ) ) {
     dynamic_sidebar( $sidebar_id );
 }
@@ -102,7 +102,7 @@ if ( is_active_sidebar( $sidebar_id ) ) {
 If field is `multiple`, you can loop through the returned values like this:
 
 ```php
-$sidebar_ids = rwmb_meta( $field_id );
+$sidebar_ids = rwmb_meta( 'my_field_id' );
 foreach ( $sidebar_ids as $sidebar_id ) {
     if ( is_active_sidebar( $sidebar_id ) ) {
         echo '<aside class="sidebar">';
@@ -115,7 +115,7 @@ foreach ( $sidebar_ids as $sidebar_id ) {
 If you just want to output selected sidebars in an unordered list, use this code:
 
 ```php
-rwmb_the_value( $field_id );
+rwmb_the_value( 'my_field_id' );
 ```
 
 Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

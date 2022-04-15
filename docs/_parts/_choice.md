@@ -60,7 +60,7 @@ $values  = rwmb_meta( 'my_field_id' );
 <?php
 $field   = rwmb_get_field_settings( 'my_field_id' );
 $options = $field['options'];
-$values  = rwmb_meta( $field_id );
+$values  = rwmb_meta( 'my_field_id' );
 ?>
 <ul>
     <?php foreach ( $values as $clone ) : ?>

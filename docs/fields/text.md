@@ -77,7 +77,7 @@ If the field is cloneable, then the value is stored as a serialized array in a s
 **Displaying cloneable values:**
 
 ```php
-<?php $values = rwmb_meta( $field_id ) ?>
+<?php $values = rwmb_meta( 'my_field_id' ) ?>
 <?php foreach ( $values as $value ) : ?>
     <p><?= $value ?></p>
 <?php endforeach ?>
