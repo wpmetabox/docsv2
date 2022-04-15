@@ -2,6 +2,8 @@
 title: MB Frontend Submission
 ---
 
+import FAQ from '@site/src/components/FAQ';
+
 MB Frontend Submission lets you put forms on the front end via shortcode so users can submit posts.
 
 ![submission form](https://i.imgur.com/jfXHqSc.png)

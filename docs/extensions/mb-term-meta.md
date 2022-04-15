@@ -3,6 +3,7 @@ title: MB Term Meta
 ---
 
 import Helpers from '../_parts/_helpers.md';
+import FAQ from '@site/src/components/FAQ';
 
 MB Term Meta helps you to add custom fields to taxonomies.
 
