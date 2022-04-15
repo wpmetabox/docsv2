@@ -2,9 +2,18 @@
 title: File Input
 ---
 
-The file input field creates a simple text input for uploading a single file. You can select a file from the Media Library or enter file URL directly (even URL for a file hosted on another website).
+import Screenshots from '@site/src/components/Screenshots';
 
-![file input](https://i.imgur.com/cPVTMNy.png)
+The file input field creates a simple text input for uploading a single file. You can select a file from the Media Library or enter a file URL directly (even a URL for a file hosted on another website).
+
+## Screenshots
+
+<Screenshots
+    name="file-input"
+    col1={[
+        ['https://i.imgur.com/cPVTMNy.png', 'The file input field interface'],
+    ]}
+/>
 
 ## Settings
 
@@ -12,22 +21,20 @@ This field doesn't have any specific settings. It only uses [common settings](/f
 
 ## Data
 
-This field saves file URL in the database.
+This field saves the file URL in the database.
 
 ## Template usage
 
-To get field value (file URL), use the following code:
+**Displaying file:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo $value;
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p><a href="<?= $value >">Download file</a></p>
 ```
 
-If you want to show the file as an image, use the following code:
+**Displaying uploaded image:**
 
 ```php
-$value = rwmb_meta( $field_id );
-echo '<img src="', $value, '">';
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p><img src="<?= $value >"></p>
 ```
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
