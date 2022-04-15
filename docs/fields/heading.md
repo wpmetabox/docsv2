@@ -2,20 +2,26 @@
 title: Heading
 ---
 
+import Screenshots from '@site/src/components/Screenshots';
+
 The heading field creates a simple `<h4>` heading, which has an optional description. It doesn't have any value and is usually used to separate fields into sections for better reading experience.
 
-![heading](https://i.imgur.com/CrDtd5s.png)
+## Screenshots
+
+<Screenshots name="heading" col1={[
+    ['https://i.imgur.com/CrDtd5s.png', 'The heading field interface']
+]} />
 
 ## Settings
 
-This field doesn't have any specific settings. It only requires the `'type' => 'heading'`.
+This field doesn't have any specific settings.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'type' => 'heading',
     'name' => 'Heading',
     'desc' => 'Optional description',
-),
+],
 ```

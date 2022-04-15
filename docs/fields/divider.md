@@ -2,18 +2,27 @@
 title: Divider
 ---
 
-The divider field creates a simple horizontal line. It doesn't have any value and is usually used to separate fields for better reading experience.
+import Screenshots from '@site/src/components/Screenshots';
 
-![divider](https://i.imgur.com/JTIlECL.png)
+The divider field creates a simple horizontal line. It doesn't have any value and is usually used to separate fields for a better reading experience.
+
+## Screenshots
+
+<Screenshots
+    name="divider"
+    col1={[
+        ['https://i.imgur.com/JTIlECL.png', 'The divider field default interface'],
+    ]}
+/>
 
 ## Settings
 
-This field doesn't have any specific settings. It only requires the `'type' => 'divider'`.
+This field doesn't have any specific settings.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'type' => 'divider',
-),
+],
 ```

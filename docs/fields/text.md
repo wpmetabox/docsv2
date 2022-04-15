@@ -8,7 +8,7 @@ The text field creates a simple text input. You can enter any value or select a 
 
 :::info Input types
 
-This docs is also used for URL and email field types as they share the same settings.
+This docs is also used for **URL** and **email** field types as they share the same settings.
 
 :::
 
@@ -52,6 +52,74 @@ This is a sample field settings array when creating this field with code:
     ],
 ],
 ```
+
+:::tip "type" is optional
+
+You can omit the "type" setting. The plugin automatically sets it to "text" if missing.
+
+```php
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
+        'title'      => 'Event details',
+        'post_types' => 'event',
+        'fields'     => [
+            [
+                'name' => 'Date and time',
+                'id'   => 'datetime',
+                'type' => 'datetime',
+            ],
+            // highlight-start
+            [
+                'name' => 'Location',
+                'id'   => 'location',
+            ],
+            // highlight-end
+            [
+                'name'          => 'Map',
+                'id'            => 'map',
+                'type'          => 'osm',
+                'address_field' => 'location',
+            ],
+        ],
+    ];
+
+    return $meta_boxes;
+} );
+```
+
+:::
+
+:::tip Quick define a text field
+
+If your text field only need a label, then you can define it with code simply by the label text. In this case, the field id is auto generated from the label:
+
+```php
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
+        'title'      => 'Event details',
+        'post_types' => 'event',
+        'fields'     => [
+            [
+                'name' => 'Date and time',
+                'id'   => 'datetime',
+                'type' => 'datetime',
+            ],
+            // highlight-next-line
+            'Location', // id is auto-generated to "location"
+            [
+                'name'          => 'Map',
+                'id'            => 'map',
+                'type'          => 'osm',
+                'address_field' => 'location',
+            ],
+        ],
+    ];
+
+    return $meta_boxes;
+} );
+```
+
+:::
 
 ## Data
 
