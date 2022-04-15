@@ -3,50 +3,47 @@ title: File Advanced
 ---
 
 import File from '../_parts/_file.md';
+import Screenshots from '@site/src/components/Screenshots';
 
-The file advanced field uses WordPress media popup for selecting / uploading files. You can also reorder files.
+The file advanced field uses the WordPress media popup for selecting / uploading files. You can also reorder files if you want.
 
-![file advanced](https://i.imgur.com/mqR9Tue.png)
+## Screenshots
+
+<Screenshots
+    name="file-advanced"
+    col1={[
+        ['https://i.imgur.com/mqR9Tue.png', 'The file advanced field interface'],
+    ]}
+/>
 
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`max_file_uploads` | Max number of uploaded files. Optional.
-`force_delete` | Whether or not delete the files from Media Library when deleting them from post meta. `true` or `false` (default). Optional. Note: it might affect other posts if you use same file for multiple posts.
-`mime_type` | MIME type of files which we want to show in Media Library. Note: this is a filter for items in Media popup, it doesn't restrict file types when upload.
-`max_status` | Display how many files uploaded/remaining. Applied only when `max_file_uploads` is defined. `true` (default) or `false`. Optional.
+Name | Key | Description
+--- | --- | ---
+Max number of files | `max_file_uploads` | Max number of uploaded files. Optional.
+Force delete | `force_delete` | Whether or not delete the files from Media Library when deleting them from post meta. `true` or `false` (default). Optional. Note: it might affect other posts if you use the same file for multiple posts.
+MIME types | `mime_type` | MIME type of files which we want to show in the Media Library. Note: this is a filter for items in the media popup, it doesn't restrict file types when uploading.
+Show status | `max_status` | Display how many files uploaded/remaining. Applied only when "Max number of files" is defined. `true` (default) or `false`. Optional.
 
-Note that the `multiple` setting is always set to `true` for this field.
-
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'id'               => 'file',
     'name'             => 'File Advanced',
     'type'             => 'file_advanced',
-
-    // Delete file from Media Library when remove it from post meta?
-    // Note: it might affect other posts if you use same file for multiple posts
     'force_delete'     => false,
-
-    // Maximum file uploads.
     'max_file_uploads' => 2,
-
-    // File types.
-    // 'mime_type'        => 'application,audio,video',
-
-    // Do not show how many files uploaded/remaining.
-    'max_status'       => 'false',
-),
+    'mime_type'        => 'application,audio,video',
+    'max_status'       => false,
+],
 ```
 
 ## Data
 
-Similar to file field, this field saves multiple values (attachment IDs) in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
+This field saves multiple attachment IDs in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
 
 ## Template usage
 
@@ -68,8 +65,7 @@ Filter|Default|Description
 The code below changes the "+ Add Media" string:
 
 ```php
-add_filter( 'rwmb_media_add_string', 'prefix_change_add_string' );
-function prefix_change_add_string() {
+add_filter( 'rwmb_media_add_string', function () {
     return '+ New File';
-}
+} );
 ```
