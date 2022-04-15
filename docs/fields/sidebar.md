@@ -30,10 +30,10 @@ This field inherits the look and field (and settings) from other fields, dependi
 
 Field type | Description | Settings inherited from
 --- | --- | ---
-`select` | Simple select dropdown. | [select](/fields/select/)
-`select_advanced` | Beautiful select dropdown using the select2 library. This is the default value. | [select_advanced](/fields/select_advanced/)
-`checkbox_list` | Flatten list of checkboxes which allows to select multiple items. | [checkbox_list](/fields/checkbox-list/)
-`radio_list` | Flatten list of radio boxes which allows to select only 1 item. | [radio](/fields/radio/)
+`select` | Simple select dropdown. | [Select](/fields/select/)
+`select_advanced` | Beautiful select dropdown using the select2 library. This is the default value. | [Select advanced](/fields/select-advanced/)
+`checkbox_list` | Flatten list of checkboxes which allows to select multiple items. | [Checkbox list](/fields/checkbox-list/)
+`radio_list` | Flatten list of radio boxes which allows to select only 1 item. | [Radio](/fields/radio/)
 
 This is a sample field settings array when creating this field with code:
 

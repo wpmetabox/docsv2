@@ -1,9 +1,9 @@
-import Spotlight from 'spotlight.js';
-
 export default ( function() {
 	if ( typeof window === 'undefined' ) {
 		return null;
 	}
+
+	import( 'spotlight.js' );
 
 	const updateImage = img => {
 		img.classList.add( 'spotlight' );
