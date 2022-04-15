@@ -8,7 +8,7 @@ import Screenshots from '@site/src/components/Screenshots';
 
 The post field allows you to select one or multiple post (or any custom post type) objects. This field has several settings that can be displayed as a: simple select dropdown, checkbox list, or beautiful select dropdown with select2 library.
 
-If the post type is hierarchical, you can display the field as a select or checkbox tree, e.g. showing child posts when a parent post is selected.
+If the post type is hierarchical, you can display the field as a select or checkbox tree, e.g. showing children posts when a parent post is selected.
 
 ## Screenshots
 
@@ -33,7 +33,7 @@ Set as parent | `parent` | Whether or not to set the selected post as the parent
 Placeholder | `placeholder` | The placeholder for the select box. Default is "Select a {post label}". Applied only when the `field_type` is `select` or `select_advanced`.
 Field type | `field_type` | How the posts are displayed? See below.
 
-This field inherits the look and field (and settings) from other fields, depending on the `field_type`, which accepts the following value:
+This field inherits the look and field (and settings) from other fields, depending on the field type, which accepts the following value:
 
 Field type | Description | Settings inherited from
 --- | --- | ---
@@ -96,7 +96,7 @@ Setting this parameter to `false` will disable ajax requests.
 
 ### Limit the number of posts for pagination
 
-The number of posts for pagination is set via the `posts_per_page` parameter in the "Query args":
+The number of posts for pagination is set via the `posts_per_page` parameter in the "Query args" setting:
 
 ```php
 [
@@ -208,6 +208,7 @@ Using `rwmb_the_value` also has some extra options as following:
 <?php rwmb_the_value( 'my_field_id', ['link' => false] ) ?>
 
 <!-- Displaying the post title with link to view post (default) -->
+<?php rwmb_the_value( 'my_field_id' ) ?>
 <?php rwmb_the_value( 'my_field_id', ['link' => 'view'] ) ?>
 
 <!-- Displaying the post title with link to edit post -->

@@ -8,7 +8,7 @@ The key value field allows you to enter unlimited group of "key-value" pairs. It
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
 Name | Description
 --- | ---

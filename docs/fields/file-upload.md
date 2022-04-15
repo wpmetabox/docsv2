@@ -12,7 +12,7 @@ Note that this field doesn't open the Media Library popup for selecting existing
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
 Name | Description
 --- | ---

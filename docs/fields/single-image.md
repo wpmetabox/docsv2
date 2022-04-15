@@ -8,7 +8,7 @@ The single image field allows user to select or upload one image via the WordPre
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings:
+Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
 Name | Description
 --- | ---

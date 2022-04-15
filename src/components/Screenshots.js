@@ -24,6 +24,10 @@ const Screenshots = ( { name = '', col1 = [], col2 = [] } ) => {
 				}
 			</div>
 			<div className="gallery_col2">
+				<figure>
+					<img src={ `/settings/${ name }.png` } alt={ `the ${ name } field settings` } />
+					<figcaption>The { desc } field settings</figcaption>
+				</figure>
 				{
 					col2.map( ( [src, desc], index ) => (
 						<figure key={ src }>
@@ -32,10 +36,6 @@ const Screenshots = ( { name = '', col1 = [], col2 = [] } ) => {
 						</figure>
 					) )
 				}
-				<figure>
-					<img src={ `/settings/${ name }.png` } alt={ `the ${ name } field settings` } />
-					<figcaption>The { desc } field settings</figcaption>
-				</figure>
 			</div>
 		</div>
 	);
