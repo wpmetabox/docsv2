@@ -203,8 +203,7 @@ h1.title_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocCategoryGener
 .markdown > h3 {
   --ifm-h3-font-size: 1.25rem;
 }
-.markdown img,
-.medium-zoom-image--opened {
+.markdown img {
   box-shadow: 0 0 2px rgba(0,0,0,.3);
   border-radius: var(--ifm-global-radius);
 }
@@ -214,6 +213,10 @@ h1.title_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocCategoryGener
   display: block;
   margin-inline: auto;
   margin-bottom: var(--ifm-leading);
+}
+.markdown > p > img,
+figure > img {
+  cursor: zoom-in;
 }
 code {
   border: none;

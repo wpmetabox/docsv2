@@ -8,6 +8,8 @@ export default ( function() {
 	const updateImage = img => {
 		img.classList.add( 'spotlight' );
 		img.setAttribute( 'data-src', img.getAttribute( 'src' ) );
+		img.setAttribute( 'data-control', 'close' );
+		// img.setAttribute( 'data-title', 'false' );
 	}
 	const init = () => {
 		document.querySelectorAll( '.markdown > p > img' ).forEach( updateImage );

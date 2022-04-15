@@ -25,7 +25,7 @@ const Screenshots = ( { name = '', col1 = [], col2 = [] } ) => {
 			</div>
 			<div className="gallery_col2">
 				<figure>
-					<img src={ `/settings/${ name }.png` } alt={ `the ${ name } field settings` } />
+					<img src={ `/settings/${ name }.png` } alt={ `The ${ name } field settings` } />
 					<figcaption>The { desc } field settings</figcaption>
 				</figure>
 				{
