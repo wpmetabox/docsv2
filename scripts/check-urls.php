@@ -126,7 +126,7 @@ $ch = curl_init();
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
 curl_setopt( $ch, CURLOPT_HEADER, 1 );
 curl_setopt( $ch, CURLOPT_NOBODY, 1 );
-// curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
+curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1 );
 
 // Able to pass host from the command line: php scripts/check-urls.php http://127.0.0.1:8989
 $domain = $argv[1] ?? 'http://localhost:3000';
