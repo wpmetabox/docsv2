@@ -9,7 +9,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-blue">
 
-[![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Custom Post Types & Custom Taxonomies</span>](/extensions/mb-custom-post-type/)
+[![custom post types](/extensions/custom-post-types.png) <span className="thumb_text">MB Custom Post Types</span>](/extensions/mb-custom-post-type/)
 
 [![builder](/extensions/builder.png) <span className="thumb_text">Meta Box Builder</span>](/extensions/meta-box-builder/)
 
@@ -67,7 +67,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 </div>
 
-## Integration
+## Integrations
 
 <div className="thumbs color-amber">
 
@@ -75,13 +75,15 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![rankmath](/extensions/rankmath.png) <span className="thumb_text">MB Rank Math</span>](/extensions/mb-rank-math/)
 
-[![yoast seo](/extensions/yoast-seo.png) <span className="thumb_text">Meta Box for Yoast SEO</span>](/extensions/meta-box-yoat-seo/)
+<!-- [![yoast seo](/extensions/yoastseo.png) <span className="thumb_text">Meta Box for Yoast SEO</span>](/extensions/meta-box-yoat-seo/) -->
 
 <!-- [![facetwp](/extensions/facetwp.png) <span className="thumb_text">Meta Box - FacetWP Integrator</span>](/extensions/meta-box-facetwp-integrator/) -->
 
 <!-- [![elementor](/extensions/elementor.png) <span className="thumb_text">Meta Box - Elementor Integrator</span>](/extensions/mb-elementor-integrator/) -->
 
 <!-- [![beaver](/extensions/beaver.png) <span className="thumb_text">Meta Box - Beaver Themer Integrator</span>](/extensions/meta-box-beaver-themer-integrator/) -->
+
+<!-- [![searchwp](/extensions/searchwp.png) <span className="thumb_text">Meta Box - SearchWP Integrator</span>](/extensions/meta-box-searchwp-integrator/) -->
 
 </div>
 
@@ -101,7 +103,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-cyan">
 
-[![aio](/thumbs/checkbox.png) <span className="thumb_text">Meta Box AIO</span>](/extensions/meta-box-aio/)
+[![aio](/extensions/aio.png) <span className="thumb_text">Meta Box AIO</span>](/extensions/meta-box-aio/)
 
 <!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Core</span>](/extensions/mb-core/) -->
 

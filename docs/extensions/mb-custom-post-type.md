@@ -1,5 +1,6 @@
 ---
 title: MB Custom Post Types & Custom Taxonomies
+sidebar_label: MB Custom Post Types
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
