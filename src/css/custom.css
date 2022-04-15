@@ -219,6 +219,7 @@ code {
   border: none;
   background: none;
   padding: 0;
+  color: #e3116c;
 }
 .yt-lite {
   margin-bottom: var(--ifm-paragraph-margin-bottom);

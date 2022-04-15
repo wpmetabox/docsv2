@@ -1,48 +1,46 @@
-To get the uploaded files, use the helper function [rwmb_meta()](/functions/rwmb-meta/):
+**Displaying uploaded files with links:**
 
 ```php
-$files = rwmb_meta( 'field_id' );
-foreach ( $files as $file ) {
-    ?>
-    <a href="<?php echo $file['url']; ?>"><?php echo $file['name']; ?></a>
-    <?php
-}
+<?php $files = rwmb_meta( 'field_id' ); ?>
+<h3>Uploaded files</h3>
+<ul>
+    <?php foreach ( $files as $file ) : ?>
+        <li><a href="<?= $file['url']; ?>"><?= $file['name']; ?></a></li>
+    <?php endforeach ?>
+</ul>
+```
+or simpler:
+
+```php
+<h3>Uploaded files</h3>
+<?php rwmb_the_value( 'my_field_id' ) ?>
 ```
 
-This helper function returns an array of files, each file has the following information:
+The `rwmb_meta()` function returns an array of files, each file has the following information:
 
 ```php
-array(
+[
     'ID'    => 123,
     'name'  => 'intro.txt',
     'path'  => '/var/www/wp-content/uploads/intro.txt',
     'url'   => 'https://example.com/wp-content/uploads/intro.txt',
     'title' => 'Introduction',
-);
+];
 ```
 
-In case you want to get only 1 file, use the `limit` parameter for the helper function:
+**Displaying uploaded files with links using `rwmb_the_value()`:**
+
+The code below displays the list of uploaded files, the same as in the previous example:
 
 ```php
-$files = rwmb_meta( 'field_id', array( 'limit' => 1 ) );
-$file = reset( $files );
-?>
-<a href="<?php echo $file['url']; ?>">Download File</a>
+<h3>Uploaded files</h3>
+<?php rwmb_the_value( 'my_field_id' ) ?>
 ```
 
-If you only want to display uploaded files in an unordered list, you can just use the [rwmb_the_value()](/functions/rwmb-the-value/):
+**Displaying only one file:**
 
 ```php
-rwmb_the_value( $field_id );
+<?php $files = rwmb_meta( 'field_id', ['limit' => 1] ) ?>
+<?php $file = reset( $files ) ?>
+<a class="button" href="<?= $file['url'] ?>">Download file</a>
 ```
-
-which outputs:
-
-```html
-<ul>
-    <li><a href="link/to/file/">File 1</li>
-    <li><a href="link/to/file/">File 2</li>
-</ul>
-```
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

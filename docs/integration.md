@@ -165,6 +165,6 @@ rm -rf vendor && composer clear-cache && composer install
 
 <FAQ question="Can I install Meta Box with Composer?">
 
-Yes, you can integrate Meta Box by bundling it or using Composer. However, We recommend using TGM Plugin Activation method because it allows you to auto update the plugin.
+Yes, you can integrate Meta Box by bundling it or using Composer. However, we recommend using TGM Plugin Activation method because it allows you to auto update the plugin.
 
 </FAQ>
