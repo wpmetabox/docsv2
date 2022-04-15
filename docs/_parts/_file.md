@@ -9,6 +9,7 @@
     <?php endforeach ?>
 </ul>
 ```
+
 or simpler:
 
 ```php
@@ -16,7 +17,7 @@ or simpler:
 <?php rwmb_the_value( 'my_field_id' ) ?>
 ```
 
-The `rwmb_meta()` function returns an array of files, each file has the following information:
+`rwmb_the_value()` outputs files in an unordered list, while `rwmb_meta()` returns an array of files, each file has the following information:
 
 ```php
 [
@@ -26,15 +27,6 @@ The `rwmb_meta()` function returns an array of files, each file has the followin
     'url'   => 'https://example.com/wp-content/uploads/intro.txt',
     'title' => 'Introduction',
 ];
-```
-
-**Displaying uploaded files with links using `rwmb_the_value()`:**
-
-The code below displays the list of uploaded files, the same as in the previous example:
-
-```php
-<h3>Uploaded files</h3>
-<?php rwmb_the_value( 'my_field_id' ) ?>
 ```
 
 **Displaying only one file:**

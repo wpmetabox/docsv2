@@ -3,51 +3,48 @@ title: Image Advanced
 ---
 
 import Image from '../_parts/_image.md';
+import Screenshots from '@site/src/components/Screenshots';
 
-The image advanced field uses WordPress media popup for selecting / uploading images. You can also reorder images.
+The image advanced field uses the WordPress media popup for selecting / uploading images. You can also reorder images if you want.
 
-![image advanced](https://i.imgur.com/tzksNdI.png)
+## Screenshots
+
+<Screenshots
+    name="image-advanced"
+    col1={[
+        ['https://i.imgur.com/tzksNdI.png', 'The image advanced field interface'],
+    ]}
+/>
 
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`max_file_uploads` | Max number of uploaded images. Optional.
-`force_delete` | Whether or not delete the images from Media Library when deleting them from post meta. `true` or `false` (default). Optional. Note: it might affect other posts if you use same image for multiple posts.
-`max_status` | Display how many images uploaded/remaining. Applied only when `max_file_uploads` is defined. `true` (default) or `false`. Optional.
-`image_size` | Image size displays in the edit page. Optional. Default `thumbnail`. Image size is used to make sure images are not blurry. It’s not meant to display images with the exact width and height. Images are always displayed as square.
-`add_to` | Whether to add new images to the beginning or the end of the list. `beginning` or `end`. Default `end`. Optional.
+Name | Key | Description
+--- | --- | ---
+Max number of files | `max_file_uploads` | Max number of uploaded files. Optional.
+Force delete | `force_delete` | Whether or not delete the files from Media Library when deleting them from post meta. `true` or `false` (default). Optional. Note: it might affect other posts if you use the same file for multiple posts.
+Show status | `max_status` | Display how many files uploaded/remaining. Applied only when "Max number of files" is defined. `true` (default) or `false`. Optional.
+Image size | `image_size` | Image size displays in the edit page. Optional. Default "thumbnail". Image size is used to make sure images are not blurry. It’s not meant to display images with the exact width and height. Images are always displayed as a square.
+New image placement | `add_to` | Whether to add new images to the beginning or the end of the list. `beginning` or `end`. Default `end`. Optional.
 
-Note that the `multiple` setting is always set to `true` for this field.
-
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'id'               => 'image',
     'name'             => 'Image Advanced',
     'type'             => 'image_advanced',
-
-    // Delete image from Media Library when remove it from post meta?
-    // Note: it might affect other posts if you use same image for multiple posts
     'force_delete'     => false,
-
-    // Maximum image uploads.
     'max_file_uploads' => 2,
-
-    // Do not show how many images uploaded/remaining.
     'max_status'       => false,
-
-    // Image size that displays in the edit page. Possible sizes small,medium,large,original
     'image_size'       => 'thumbnail',
-),
+],
 ```
 
 ## Data
 
-Similar to file field, this field saves multiple values (attachment IDs) in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
+This field saves multiple attachment IDs in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
 
 ## Template usage
 
@@ -55,7 +52,7 @@ Similar to file field, this field saves multiple values (attachment IDs) in the 
 
 ## Filters
 
-This field inherits from file advanced and thus, uses the [same filters](/fields/file-advanced/) to change the texts displaying on the screen.
+This field inherits from file advanced and thus, uses the [same filters](/fields/file-advanced/) to change the texts displayed on the screen.
 
 Filter|Default|Description
 ---|---|---
@@ -75,6 +72,6 @@ function prefix_change_add_string() {
 }
 ```
 
-## See more
+## Tutorials
 
-- [How to display uploaded images as a WordPress image gallery?](https://metabox.io/display-uploaded-images-as-wordpress-image-gallery/)
+[How to display uploaded images as a WordPress image gallery?](https://metabox.io/display-uploaded-images-as-wordpress-image-gallery/)
