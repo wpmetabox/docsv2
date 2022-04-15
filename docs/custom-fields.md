@@ -135,6 +135,6 @@ Now you know all the basics for working with custom fields in Meta Box. Dependin
 - Explore the [field type gallery](/fields/) to know which fields are suitable for your needs, or
 - Explore more features provided by [extensions](/extensions/)
 
-If you have any questions, feel free to ask in the [support forum](https://metabox.io/support/) or discuss in the [Facebook community group](https://www.facebook.com/groups/metaboxusers).
+If you have any questions, feel free to ask in the [support forum](https://support.metabox.io/) or discuss in the [Facebook community group](https://www.facebook.com/groups/metaboxusers).
 
 Thanks for using Meta Box and happy building websites!

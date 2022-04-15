@@ -384,6 +384,9 @@ summary {
   font-weight: 700;
   font-style: italic;
 }
+.admonition code {
+  color: inherit;
+}
 
 /* Homepage */
 .boxes {

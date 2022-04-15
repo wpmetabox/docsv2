@@ -8,7 +8,7 @@ The official support channel is the [support forum](https://support.metabox.io),
 
 Besides, there is a [Facebook group](https://www.facebook.com/groups/metaboxusers), which is for community discussion, not for support.
 
-We do **not** support via email.
+We rarely support via email. Email is mostly used for sending private info. Please use the support forum first before sending us emails.
 
 ## Scope of support
 
