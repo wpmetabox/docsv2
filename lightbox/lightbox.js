@@ -1,0 +1,27 @@
+import Spotlight from 'spotlight.js';
+
+export default ( function() {
+	if ( typeof window === 'undefined' ) {
+		return null;
+	}
+
+	const updateImage = img => {
+		img.classList.add( 'spotlight' );
+		img.setAttribute( 'data-src', img.getAttribute( 'src' ) );
+	}
+	const init = () => {
+		document.querySelectorAll( '.markdown > p > img' ).forEach( updateImage );
+		document.querySelectorAll( 'figure > img' ).forEach( updateImage );
+	};
+
+	setTimeout( init, 1000 );
+
+	return {
+		onRouteUpdate( { location } ) {
+			if ( location && location.hash && location.hash.length ) {
+				return;
+			}
+			setTimeout( init, 1000 );
+		},
+	};
+} )();
