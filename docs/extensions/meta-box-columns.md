@@ -8,7 +8,7 @@ Meta Box Columns helps you put custom fields into columns in a 12-column grid. Y
 
 ## Simple syntax
 
-To specify number of columns for each field, simply add `columns` parameter for that field. The plugin will automatically calculate number of columns and wrap fields into a div "row" and apply styles for them.
+To specify number of columns for each field, add `columns` parameter for that field. The plugin will automatically calculate number of columns and wrap fields into a div "row" and apply styles for them.
 
 The code below registers some fields and make each field obtain 4 columns of the grid (thus, you'll see 3 columns layout):
 
@@ -54,7 +54,7 @@ function prefix_register_meta_boxes( $meta_boxes ) {
         'id'     => 'test-columns',
         'title'  => 'Meta Box Columns Demo',
         'columns' => array(
-            'column-1' => 4,                   // Simply define the size of the column (from 1 to 12)
+            'column-1' => 4,                   // Define the size of the column (from 1 to 12)
             'column-2' => array(               // More advanced syntax
                 'size' => 8,                   // Column size (1-12)
                 'class' => 'custom-css-class', // Custom CSS class for the column
@@ -100,7 +100,7 @@ In the advanced syntax, you need to define a parameter `columns` for the meta bo
 
 ```php
 'columns' => array(
-    'column-1' => 4,                   // Simply define the size of the column (from 1 to 12)
+    'column-1' => 4,                   // Define the size of the column (from 1 to 12)
     'column-2' => array(               // More advanced syntax
         'size' => 4,                   // Column size (1-12)
         'class' => 'custom-css-class', // Custom CSS class for the column

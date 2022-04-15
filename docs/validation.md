@@ -20,7 +20,7 @@ When editing a field, switch to the **Advanced** tab, and scroll down to the **C
 
 ![validation with html5 attributes](https://i.imgur.com/Cewt9OG.png)
 
-In the **Key** input box, you can select any rule from the dropdown (if you don't see the dropdown, simply press the down arrow button), or enter the attribute name manually. And then enter the desired value in the **Value** input box.
+In the **Key** input box, you can select any rule from the dropdown (if you don't see the dropdown, press the down arrow button), or enter the attribute name manually. And then enter the desired value in the **Value** input box.
 
 :::info Not a premium user?
 
@@ -41,7 +41,7 @@ Attribute| Description
 `step` | Match the step increment. Enter `any` to accept any step.
 `type` | Mostly used as `url` or `email` to validate value as a valid URL or email
 
-If you prefer to [use code to create fields](/creating-fields-with-code/), simply add pairs of `'key' => 'value'` rules for the field settings array:
+If you prefer to [use code to create fields](/creating-fields-with-code/), add pairs of `'key' => 'value'` rules for the field settings array:
 
 ```php
 [
@@ -64,7 +64,7 @@ To define validation rules, switch to the **Advanced** tab, and scroll down to t
 
 ![validation with validation library](https://i.imgur.com/qAvW1LC.png)
 
-For each rule, the list of types is available as a dropdown, so you can simply select it. Depending on the rule type, you can enter a value and/or custom error message.
+For each rule, the list of types is available as a dropdown, so you can select it. Depending on the rule type, you can enter a value and/or custom error message.
 
 These are available validation rules that you can use:
 

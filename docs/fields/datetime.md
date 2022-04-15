@@ -57,7 +57,7 @@ If the `timestamp` is set to `true`, the field value is converted to Unix timest
 
 Meta Box already supports customizing the date format **displaying to users** via `js_options`. For example, you can set it to `dd-mm-yy`.
 
-However, you might want to save the date in another format, like `Y-m-d`, which allows you to [sort or query posts](https://metabox.io/get-posts-by-custom-fields-in-wordpress/) by date. To do that, simply set the value of "Save format" to "Y-m-d".
+However, you might want to save the date in another format, like `Y-m-d`, which allows you to [sort or query posts](https://metabox.io/get-posts-by-custom-fields-in-wordpress/) by date. To do that, set the value of "Save format" to "Y-m-d".
 
 If you use code, then the field settings will look like this:
 

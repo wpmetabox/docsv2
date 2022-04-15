@@ -8,7 +8,7 @@ Meta Box Tooltip helps you to add help information via tooltips.
 
 ## Settings
 
-To add a tooltip to a meta field, simply add `tooltip` parameter for that field. You can define tooltip in one of following formats:
+To add a tooltip to a meta field, add `tooltip` parameter for that field. You can define tooltip in one of following formats:
 
 - `'tooltip' => 'Tooltip content',`
 - `'tooltip' => array( 'icon' => 'info', 'position' => 'top', 'content' => 'Tooltip content', 'allow_html' => true )`

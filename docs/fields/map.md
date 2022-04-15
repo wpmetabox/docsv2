@@ -6,7 +6,7 @@ import Screenshots from '@site/src/components/Screenshots';
 
 This field creates a Google Maps where you can select a location. It requires a text field for address input, which has the autocomplete feature. The data for address autocomplete is gotten from Google Maps Geocode service.
 
-You also can pick a location simply by clicking on the map or dragging and dropping the marker. When you do that, the coordinates are saved in the field value.
+You also can pick a location by clicking on the map or dragging and dropping the marker. When you do that, the coordinates are saved in the field value.
 
 ## Screenshots
 

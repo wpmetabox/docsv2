@@ -48,7 +48,7 @@ http://yourdomain.com/wp-json/wp/v2/users/1234
 
 ## Updating custom fields value via REST API
 
-To update custom fields value via REST API, simply add a new field `meta_box` to your POST requests. This field should be either an array of `'field_id' => 'field_value'` or a JSON string of  this array.
+To update custom fields value via REST API, add a new field `meta_box` to your POST requests. This field should be either an array of `'field_id' => 'field_value'` or a JSON string of  this array.
 
 The plugin will automatically fetch the fields and update the corresponding custom fields.
 

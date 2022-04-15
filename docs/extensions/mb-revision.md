@@ -44,7 +44,7 @@ Please note that the extension works well with [Meta Box Group](/extensions/meta
 
 ## Restoring the revision
 
-If you find out that the current version of the post is incorrect, you can compare it with the previous version and optionally restore it. In order to restore a revision, simply click on the **Restore this revision** button on the comparison screen.
+If you find out that the current version of the post is incorrect, you can compare it with the previous version and optionally restore it. In order to restore a revision, lick on the **Restore this revision** button on the comparison screen.
 
 MB Revision will copy values of the custom fields from the revision to the parent post. So your post will have the correct values of custom fields like it used to be.
 

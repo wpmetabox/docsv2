@@ -8,7 +8,7 @@ This field creates a [Open Street Map](https://openstreetmap.org) where you can 
 
 This field supports all features that the Google Maps field has. It comes along with a text field for address input, which has the autocomplete feature. The data for address autocomplete is gotten from [Nominatum](https://wiki.openstreetmap.org/wiki/Nominatim) geocoding service.
 
-You also can pick a location simply by clicking on the map or dragging and dropping the marker. When you do that, the coordinates are saved in the field value.
+You also can pick a location by clicking on the map or dragging and dropping the marker. When you do that, the coordinates are saved in the field value.
 
 This field uses [Leaflet](https://leafletjs.com) library to render the map.
 

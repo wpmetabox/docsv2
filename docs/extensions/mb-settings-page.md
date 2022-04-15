@@ -53,7 +53,7 @@ Required capability | The required capability to access the settings page.
 Custom CSS class | Custom CSS for the wrapper div in the settings page, so you can add your styling.
 Style | How do you want to style the settings page. Supports "Boxes" which has same the style as normal WordPress meta boxes (like in the edit post screen) and "No boxes" which has the same style as WordPress settings pages.
 Columns | The number of columns in the meta boxes. Can be 1 or 2. You might want to use 1 column with style "No boxes" style to match WordPress style.
-Tabs | This settings helps you to organize meta boxes of a settings page in tabs. Simply add a key-value of tabs here. Note that: when registering meta boxes for the settings page, you must specify which tab the meta box belongs to. See the "Using Tabs" section below for details.
+Tabs | This settings helps you to organize meta boxes of a settings page in tabs. Add a key-value of tabs here. Note that: when registering meta boxes for the settings page, you must specify which tab the meta box belongs to. See the "Using Tabs" section below for details.
 Tab style | Specify the tab style, which can be "Top" (WordPress-native style where tabs are horizontal) or "Left" (tabs are put on the left of the settings page). See the "Using Tabs" section below for details.
 Custom submit button | The custom text for submit button.
 Custom message | The custom message displayed when saving options.
@@ -283,7 +283,7 @@ This is a quick video that demonstrates how to use MB Settings Page to create cu
 
 The idea behind Customizer support is to map a settings page to a Customizer panel. And each meta box in the settings page will be a Customizer section. The mapping is quite simple, clear, and extreme powerful. It allows you to bring everything in a settings page into the Customizer with a single line of code.
 
-To bring a settings page to the Customizer, simply select the "Customizer" settings if you use Meta Box Builder, or add `'customizer' => true` if you use code as follows:
+To bring a settings page to the Customizer, select the "Customizer" settings if you use Meta Box Builder, or add `'customizer' => true` if you use code as follows:
 
 ```php
 add_filter( 'mb_settings_pages', function ( $settings_pages ) {
@@ -334,7 +334,7 @@ Note that this can be done with code only.
 
 In that case, you need to do 2 steps:
 
-**Step 1:** Remove the code that registers settings pages as you don't need settings pages anymore. If you use Meta Box Builder, simply delete the settings page entry.
+**Step 1:** Remove the code that registers settings pages as you don't need settings pages anymore. If you use Meta Box Builder, delete the settings page entry.
 
 **Step 2:** In each meta box, replace the parameter `'settings_pages' => 'rubik'` with `'panel' => ''`, like this:
 
@@ -370,7 +370,7 @@ And you'll see the section on the Customizer like this:
 
 ![Sections now appear as top-level in the Customizer](https://i.imgur.com/xICe0u3.png)
 
-What if you want the _section to be inside another panel_? Like inside another plugin's panel? Simply set the `panel` parameter to ID of the target panel: `'panel' => 'panel_id'`.
+What if you want the _section to be inside another panel_? Like inside another plugin's panel? Set the `panel` parameter to ID of the target panel: `'panel' => 'panel_id'`.
 
 ### Compatibility
 
@@ -386,7 +386,7 @@ A network settings page is a settings page that provides settings for all the we
 
 ![Sample network settings page](https://i.imgur.com/pjZzrKf.png)
 
-Using _MB Settings Page_, you’re now able to do that easily. If you use Meta Box Builder to create the settings page, simply select the "Network" settings checkbox.
+Using _MB Settings Page_, you’re now able to do that easily. If you use Meta Box Builder to create the settings page, select the "Network" settings checkbox.
 
 If you use code, add `'network' => true` to the settings pages args, like this:
 

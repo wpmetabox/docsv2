@@ -25,7 +25,7 @@ To find a field type quickly, type its name in the input box above the field lis
 
 :::tip
 
-You can delete or duplicate a field by clicking the icons in the field title bar. To reorder fields, simply drag and drop them to the new positions.
+You can delete or duplicate a field by clicking the icons in the field title bar. To reorder fields, drag and drop them to the new positions.
 
 :::
 
@@ -37,7 +37,7 @@ After that click the **Publish** button to finish.
 
 ## Field settings
 
-When adding fields to a field group, each field has its own settings. The list of settings with detailed explanation is [here](/field-settings/). Meta Box Builder simply creates UI for them.
+When adding fields to a field group, each field has its own settings. The list of settings with detailed explanation is [here](/field-settings/). Meta Box Builder creates UI for them.
 
 To view and edit field settings, click anywhere in the field title bar:
 
@@ -214,7 +214,7 @@ In Meta Box Builder:
 
 ### JSON notation
 
-Another way to enter nested array in Meta Box Builder, you can use JSON notation. Simply paste the JSON string into the value input, and this JSON will be parsed into an array in PHP.
+Another way to enter nested array in Meta Box Builder, you can use JSON notation. Paste the JSON string into the value input, and this JSON will be parsed into an array in PHP.
 
 For example, the `tax_query` above can be implemented like this:
 

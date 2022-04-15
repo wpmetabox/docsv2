@@ -110,7 +110,7 @@ Here is how it appears:
 
 ### Nested groups
 
-To add nested groups to a group, simply register a new field with type `group` and add subfields to it. Here is an example:
+To add nested groups to a group, register a new field with type `group` and add subfields to it. Here is an example:
 
 ```php
 add_filter( 'rwmb_meta_boxes', 'demo_nested_groups' );
@@ -170,7 +170,7 @@ Name|Description
 `default_state`|Is the group collapsed or expanded by default (when page loads)? `collapsed` or `expanded` (default).
 `group_title`|The title of collapsible group.
 
-The `group_title` settings can show static text, the group index (if group is cloneable), sub-field value or *any combination of them*. To do that, simply set a `group_title` as a text and use the following format:
+The `group_title` settings can show static text, the group index (if group is cloneable), sub-field value or *any combination of them*. To do that, set a `group_title` as a text and use the following format:
 
 ```
 'group_title' => 'Static text {#} {sub_field_1} {sub_field_2}',

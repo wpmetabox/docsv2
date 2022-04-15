@@ -55,7 +55,7 @@ This is a sample field settings array when creating this field with code:
 
 ## Data
 
-This field simply saves the entered value into the database.
+This field saves the entered value into the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 

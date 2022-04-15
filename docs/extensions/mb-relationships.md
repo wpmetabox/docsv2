@@ -415,7 +415,7 @@ Function|Description
 
 Assume you have 2 custom post types: student and class. Each student can join 1 or more classes (many-to-many relationship). Now how to get the classmate of the given student A?
 
-Since version 1.2.0, the plugin introduces new API to get sibling items. To get sibling of a post, simply add `'sibling' => true` to the query as follows:
+Since version 1.2.0, the plugin introduces new API to get sibling items. To get sibling of a post, add `'sibling' => true` to the query as follows:
 
 ```php
 $siblings = new WP_Query( [

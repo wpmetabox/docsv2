@@ -1,6 +1,6 @@
 ## Data
 
-If "Multiple" is not set, this field simply saves the selected value in the database.
+If "Multiple" is not set, this field saves the selected value in the database.
 
 If "Multiple" is set, this field saves multiple values in the database. Each value is stored in a single row in the database with the same key (similar to what `add_post_meta` does with the last parameter `false`).
 

@@ -47,7 +47,7 @@ This will generate a meta box with two tabs `Biography` and `Interest`. And here
 </ul>
 ```
 
-If you want to hide a tab, just add its class to `rwmb_outside_conditions` filter. For example, if I want to hide `Interest` tab when post format is `aside`, simply add these lines:
+If you want to hide a tab, just add its class to `rwmb_outside_conditions` filter. For example, if I want to hide `Interest` tab when post format is `aside`, add these lines:
 
 ```php
 add_filter( 'rwmb_outside_conditions', function( $conditions ) {

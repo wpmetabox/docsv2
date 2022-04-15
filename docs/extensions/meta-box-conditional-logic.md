@@ -180,7 +180,7 @@ Sometimes, you'll need to use more than one conditional logic. To do that, you c
 )
 ```
 
-By default, if you define compound statement, the logic will correct if **ALL** of them are correct. In case you want to visible a field if **ONE** of them is correct, simply move all statements to `when` key and put new `relation` key like this example:
+By default, if you define compound statement, the logic will correct if **ALL** of them are correct. In case you want to visible a field if **ONE** of them is correct, move all statements to `when` key and put new `relation` key like this example:
 
 ```php
 // Visible when 'brand' is 'Apple' OR 'released_year' is between 2010 and 2015
@@ -283,7 +283,7 @@ add_filter( 'rwmb_outside_conditions', function( $conditions ) {
 
 Note that the `.custom-div` can be any CSS selector, like `#custom-id` or `.my-class .children`.
 
-If you want to hide an element `.custom-div` based on a value of an input, which is not a Meta Box field, simply specify its ID as follows:
+If you want to hide an element `.custom-div` based on a value of an input, which is not a Meta Box field, specify its ID as follows:
 
 ```php
 add_filter( 'rwmb_outside_conditions', function( $conditions ) {

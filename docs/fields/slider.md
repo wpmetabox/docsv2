@@ -2,23 +2,27 @@
 title: Slider
 ---
 
-The slider field creates a slider where you can select a number by dragging a control.
+import Screenshots from '@site/src/components/Screenshots';
 
-This field uses jQuery UI library to create the UI.
+The slider field creates a slider where you can select a number by dragging a control. This field uses jQuery UI library to create the UI.
 
-![slider](https://i.imgur.com/voHxzpJ.png)
+## Screenshots
+
+<Screenshots name="slider" col1={[
+    ['https://i.imgur.com/voHxzpJ.png', 'The slider field interface']
+]} />
 
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name | Description
---- | ---
-`prefix` | Text displayed before the field value. Optional.
-`suffix` | Text displayed after the field value. Optional.
-`js_options` | jQuery UI slider options. [See here](https://api.jqueryui.com/slider/).
+Name | Key | Description
+--- | --- | ---
+Prefix | `prefix` | Text displayed before the field value. Optional.
+Suffix | `suffix` | Text displayed after the field value. Optional.
+Slider options | `js_options` | jQuery UI slider options. [See here](https://api.jqueryui.com/slider/).
 
-By default, Meta Box applies these default options for `js_options`:
+By default, Meta Box applies these default slider options:
 
 Name | Value | Description
 --- | ---
@@ -27,43 +31,42 @@ Name | Value | Description
 
 If you set `range` to `true`, the plugin will save 2 values in the database, separated by pipe (`|`) character, e.g. `15|90`.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
-    'name' => 'Slider',
-    'id'   => 'slider',
-    'type' => 'slider',
-
-    // Text labels display before and after value
-    'prefix' => '$',
-    'suffix' => ' USD',
-
-    // jQuery UI slider options. See here http://api.jqueryui.com/slider/
-    'js_options' => array(
+[
+    'name'       => 'Slider',
+    'id'         => 'slider',
+    'type'       => 'slider',
+    'prefix'     => '$',
+    'suffix'     => ' USD',
+    'js_options' => [
         'min'   => 10,
         'max'   => 255,
         'step'  => 5,
-    ),
+    ],
 
     'std' => 150,
-    // 'clone' => true,
-),
+],
 ```
 
 ## Data
 
-This field simply saves a single selected value (without the prefix and suffix) in the database.
+This field saves a single selected value (without the prefix and suffix) in the database.
 
 If the field is cloneable, the value is stored as a serialized array in a single row in the database.
 
 ## Template usage
 
-To get the field value, use the following code:
+**Displaying the field value:**
 
 ```php
-$value = rwmb_meta( 'my_field_id' );
-echo $value;
+<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<p>Selected value: <?= $value ?></p>
 ```
 
-Read more about [rwmb_meta()](/functions/rwmb-meta/).
+or simpler:
+
+```php
+<p>Selected value: <?php rwmb_the_value( 'my_field_id' ) ?></p>
+```

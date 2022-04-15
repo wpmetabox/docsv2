@@ -98,7 +98,7 @@ Examples:
 
 ### Address field
 
-The address field is used to retrieve the suggestions from geolocation API. To add an address field, simply add a text field **with ID starts with `address`** (like `address` or `address_something`)...
+The address field is used to retrieve the suggestions from geolocation API. To add an address field, add a text field **with ID starts with `address`** (like `address` or `address_something`)...
 
 ### Other fields
 

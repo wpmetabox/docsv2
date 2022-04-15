@@ -12,7 +12,7 @@ The extension supports post fields and all Meta Box field types and extensions (
 
 ### Simple form
 
-To create a simple front-end forms, simply put this shortcode in a page content:
+To create a simple front-end forms, put this shortcode in a page content:
 
 ```php
 [mb_frontend_form post_fields="title,content"]
@@ -199,7 +199,7 @@ add_filter( 'rwmb_frontend_validate', function( $validate, $config ) {
 }, 10, 2 );
 ```
 
-If you want to show a custom error message, simply return a string for the filter, like this:
+If you want to show a custom error message, return a string for the filter, like this:
 
 
 ```php

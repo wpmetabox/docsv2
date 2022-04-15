@@ -9,7 +9,7 @@ Before using Online Generator, make sure you [installed and activated Meta Box p
 
 ## Add fields
 
-To add fields, simply click field types on the left. Related fields are put into groups for a fast reference. You can also search for a field by typing in the search box.
+To add fields, click field types on the left. Related fields are put into groups for a fast reference. You can also search for a field by typing in the search box.
 
 ![select a field type](https://i.imgur.com/smn7Cd1.png)
 

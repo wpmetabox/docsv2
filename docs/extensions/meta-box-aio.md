@@ -12,7 +12,7 @@ The plugin has a settings page under *Meta Box &rarr; Extensions*, where you can
 
 ![meta box aio settings page](https://imgur.com/gBFCrB1.png)
 
-Simply check/uncheck the checkbox to enable/disable the corresponding extensions. Then click **Save Changes**.
+Check/uncheck the checkbox to enable/disable the corresponding extensions. Then click **Save Changes**.
 
 Please note that you still need to [install Meta Box](/installation/) plugin to see the admin menu.
 

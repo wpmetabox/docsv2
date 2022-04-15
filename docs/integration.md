@@ -137,7 +137,7 @@ Notes:
 }
 ```
 
-To make the extensions work, simply load Composer's autoload file:
+To make the extensions work, load Composer's autoload file:
 
 ```php
 require 'vendor/autoload.php';

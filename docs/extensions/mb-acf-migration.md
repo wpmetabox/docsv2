@@ -21,7 +21,7 @@ Before migrating data, make sure you have a backup of your database. During the 
 
 Before migrating, make sure you keep Advanced Custom Fields, Meta Box (required) and extensions (optional) activated. To know which extensions you might need, please see the **How it works** section below. Normally, if you use Meta Box AIO and keep all extensions activated, you don't have to worry about this.
 
-To migrate, simply go to **Meta Box > ACF Migration** and click the **Migrate** button.
+To migrate, go to **Meta Box > ACF Migration** and click the **Migrate** button.
 
 The plugin will show the process of migrating. When it's done, you'll see the text "Done".
 

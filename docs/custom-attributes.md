@@ -10,7 +10,7 @@ To add custom attributes to the fields, click the **Advanced** tab in the field 
 
 ![custom input attributes](https://i.imgur.com/IFiPfAr.png)
 
-Then simply add your attribute name and value.
+Then add your attribute name and value.
 
 :::info Not a premium user?
 

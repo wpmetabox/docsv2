@@ -4,7 +4,7 @@ title: rwmb_{$field_type}_html
 
 This filter is used to change the HTML of the field input.
 
-The HTML of a field input is various and depends on the field type. For example, a text field simply outputs an `input` tag, while a wysiwyg field outputs a complex `div`.
+The HTML of a field input is various and depends on the field type. For example, a text field outputs an `input` tag, while a wysiwyg field outputs a complex `div`.
 
 ```php
 apply_filters( "rwmb_{$field_type}_html", $html, $field, $value );

@@ -87,7 +87,7 @@ You'll see other WordPress fields as well such as post title or post content. In
 
 ![selecting a date format](https://i.imgur.com/OPXkorx.png)
 
-Simply choose a date format from the dropdown and click the **Insert** button to insert the field to the template. After that, you'll see the template now has the following text:
+Choose a date format from the dropdown and click the **Insert** button to insert the field to the template. After that, you'll see the template now has the following text:
 
 ```html
 {{ post.datetime | date( 'F j, Y' ) }}

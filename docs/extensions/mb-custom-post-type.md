@@ -138,7 +138,7 @@ Post formats | Enable post format for posts
 
   <TabItem value="taxonomies" label="Taxonomies">
 
-This is the list of taxonomies that are registered for the post type. Simply select the taxonomies you want to use for the post type.
+This is the list of taxonomies that are registered for the post type. Select the taxonomies you want to use for the post type.
 
 ![taxonomies settings](https://i.imgur.com/aggYlsw.png)
 
@@ -247,7 +247,7 @@ Sort | Whether terms in this taxonomy should be sorted.
 
   <TabItem value="post type" label="Post types" default>
 
-This is the list of post types that are connected with the taxonomy. Simply select the post types you want to connect to the taxonomy.
+This is the list of post types that are connected with the taxonomy. Select the post types you want to connect to the taxonomy.
 
 ![post types settings](https://i.imgur.com/MQCmchM.png)
 
@@ -269,7 +269,7 @@ The video below shows you the steps and explains the settings for a custom post 
 
 ### Custom capabilities for custom post types
 
-When creating custom post types, you have 3 options to set capabilities: copy from "post", copy from "page" or create custom capabilities. While copying from "post" or "page" is clear (the plugin simply applies the same capabilities from post or page for this custom post type), creating custom capabilities might be confusing.
+When creating custom post types, you have 3 options to set capabilities: copy from "post", copy from "page" or create custom capabilities. While copying from "post" or "page" is clear (the plugin applies the same capabilities from post or page for this custom post type), creating custom capabilities might be confusing.
 
 When you select "custom" for capabilities, the plugin does the following (assumming we have a post type `book`):
 
@@ -344,7 +344,7 @@ After changing your post type slug, you can use the plugin [Post Type Switcher](
 
 <FAQ question="Will my posts be deleted if I remove a post type?">
 
-No, they're still in the database, but not visible. To show them again, simply create a post type with the old slug.
+No, they're still in the database, but not visible. To show them again, create a post type with the old slug.
 
 </FAQ>
 

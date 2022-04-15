@@ -2,37 +2,37 @@
 title: Text List
 ---
 
-The text list field creates a a list of simple text inputs. You can select multiple values from the predefined list.
+import Screenshots from '@site/src/components/Screenshots';
 
-This field uses jQuery UI library to perform the text list action.
+The text list field creates a list of text inputs.
 
-![text list](https://i.imgur.com/Y7qo1No.png)
+## Screenshots
+
+<Screenshots name="text-list" col1={[
+    ['https://i.imgur.com/Y7qo1No.png', 'The text list field interface']
+]} />
 
 ## Settings
 
 Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
 
-Name|Description
----|---
-`options`|Array of `'placeholder' => 'label'` for the inputs.
+Name | Key | Description
+--- | --- | ---
+Inputs | `options`|Array of `'placeholder' => 'label'` for the inputs.
 
-## Sample code
+This is a sample field settings array when creating this field with code:
 
 ```php
-array(
+[
     'id'      => 'text_list',
     'name'    => 'Text List',
     'type'    => 'text_list',
-
     'clone' => true,
-
-    // Options: array of Placeholder => Label for text boxes
-    // Number of options are not limited
-    'options' => array(
+    'options' => [
         'John Smith'      => 'Name',
         'name@domain.com' => 'Email',
-    ),
-),
+    ],
+],
 ```
 
 ## Data
@@ -43,28 +43,33 @@ If the field is cloneable, then the value is stored as a serialized array of val
 
 ## Template usage
 
-If field is not cloneable:
+**Displaying field inputs' values:**
 
 ```php
-$values = rwmb_meta( 'my_field_id' );
-echo $values[0]; // Name
-echo $values[1]; // Email
+<?php $values = rwmb_meta( 'my_field_id' ) ?>
+<p>Name: <?= $value[0] ?></p>
+<p>Email: <?= $value[1] ?></p>
 ```
 
-If field is cloneable:
+**Displaying cloneable values:**
 
 ```php
-$values = rwmb_meta( 'my_field_id' );
-foreach ( $values as $value ) {
-    echo $value[0]; // Name
-    echo $value[1]; // Email
-}
+<?php $values = rwmb_meta( 'my_field_id' ) ?>
+<ul>
+    <?php foreach ( $values as $value ) : ?>
+        <li>
+            <span>Name: <?= $value[0] ?></span>
+            <span>Email: <?= $value[1] ?></span>
+        </li>
+    <?php endforeach ?>
+</ul>
 ```
 
-If you want to just display the value of this field in a table, use this code:
+**Displaying field values in a table:**
 
 ```php
-rwmb_the_value( 'my_field_id' );
+<h3>Values</h3>
+<?php rwmb_the_value( 'my_field_id' ) ?>
 ```
 
 which outputs:
@@ -89,5 +94,3 @@ HTML:
     </tr>
 </table>
 ```
-
-Read more about [rwmb_meta()](/functions/rwmb-meta/) and [rwmb_the_value()](/functions/rwmb-the-value/).

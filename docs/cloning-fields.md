@@ -14,7 +14,7 @@ The difference between Meta Box and other plugins is that the clone feature can 
 
 ## Making a field cloneable
 
-When editing a field, simply check the checkbox **Cloneable**:
+When editing a field, check the checkbox **Cloneable**:
 
 ![enable clone feature](https://i.imgur.com/1QrOVGT.png)
 

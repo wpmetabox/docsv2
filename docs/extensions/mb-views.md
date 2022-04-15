@@ -363,7 +363,7 @@ Let's see how to do that:
 
 ### Adding template paths
 
-First, you need to register the paths, where the plugin looks for template files. Simply use the `mbv_fs_paths` as follows:
+First, you need to register the paths, where the plugin looks for template files. Use the `mbv_fs_paths` as follows:
 
 ```php
 // Load template files from the 'views' folder in your theme.

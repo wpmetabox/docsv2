@@ -74,7 +74,7 @@ Here is the result:
 
 ## Settings
 
-To show the admin column for a field, simply add `admin_columns` setting for that field. The setting can be in one of 3 following formats:
+To show the admin column for a field, add `admin_columns` setting for that field. The setting can be in one of 3 following formats:
 
 ### 1. Simply display the admin column
 
