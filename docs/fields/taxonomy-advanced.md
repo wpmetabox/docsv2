@@ -41,7 +41,7 @@ Name | Key | Description
 --- | --- | ---
 Taxonomies | `taxonomy` | Taxonomy slug(s). Can be a string (for single taxonomy) or an array (for multiple taxonomies). Required.
 Query args | `query_args` | Query arguments for getting taxonomy terms. Uses same arguments as [get_terms()](https://developer.wordpress.org/reference/functions/get_terms/). Optional.
-Placeholder | `placeholder` | The placeholder for the select box. Default is "Select a {taxonomy label}". Applied only when the `field_type` is a select field.
+Placeholder | `placeholder` | The placeholder for the select box. The default is "Select a {taxonomy label}". Applied only when the field type is a select field.
 Add new | `add_new` | Allow users to create a new term when submitting the post (`true` or `false`).
 Remove default meta box | `remove_default` | Remove the default WordPress taxonomy meta box. Only works with the classic editor.
 Field type | `field_type` | How the terms are displayed? See below.
@@ -52,9 +52,9 @@ Field type | Description | Settings inherited from
 --- | --- | ---
 `select` | Simple select dropdown. | [Select](/fields/select/)
 `select_advanced` | Beautiful select dropdown using the select2 library. This is the default value. | [Select advanced](/fields/select-advanced/)
-`select_tree` | Hierarchical list of select boxes which allows to select multiple items (select/deselect parent item will show/hide child items). Applied only when the post type is hierarchical (like pages). | [Select](/fields/select/)
+`select_tree` | Hierarchical list of select boxes which allows to select multiple items (select/deselect parent item will show/hide child items). Applied only when the taxonomy is hierarchical (like category). | [Select](/fields/select/)
 `checkbox_list` | Flatten list of checkboxes which allows to select multiple items. | [Checkbox list](/fields/checkbox-list/)
-`checkbox_tree` | Hierarchical list of checkboxes which allows to select multiple items (select/deselect parent item will show/hide child items). Applied only when the post type is hierarchical (like pages). | [Checkbox list](/fields/checkbox-list/)
+`checkbox_tree` | Hierarchical list of checkboxes which allows to select multiple items (select/deselect parent item will show/hide child items). Applied only when the taxonomy is hierarchical (like category). | [Checkbox list](/fields/checkbox-list/)
 `radio_list` | Flatten list of radio boxes which allows to select only 1 item. | [Radio](/fields/radio/)
 
 This is a sample field settings array when creating this field with code:
@@ -166,7 +166,7 @@ If the field is cloneable, then the value is stored as a serialized array in a s
 ```php
 <?php $term = rwmb_meta( 'my_field_id' ); ?>
 <pre>
-    <!-- Show all data from the selected post -->
+    <!-- Show all data from the selected term -->
     <?php print_r( $term ); ?>
 </pre>
 ```
@@ -215,7 +215,7 @@ Using `rwmb_the_value` also has some extra options as following:
 
 **Displaying multiple selected terms:**
 
-If the settings "Multiple" is set or the field is cloneable, you can loop through the returned values like this:
+If "Multiple" is set or the field is cloneable, you can loop through the returned values like this:
 
 ```php
 <?php $terms = rwmb_meta( 'my_field_id' ); ?>
@@ -234,7 +234,7 @@ of simpler:
 <?php rwmb_the_value( 'my_field_id' ); ?>
 ```
 
-`rwmb_the_value()` automatically output multiple selected posts as an unordered list with links to each post.
+`rwmb_the_value()` automatically output multiple selected terms as an unordered list with links to each term.
 
 ## Filters
 

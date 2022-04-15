@@ -30,7 +30,7 @@ Name | Key | Description
 Post types | `post_type` | Post types to query. Can be a string (for a single post type) or array (for multiple post types). Required.
 Query args | `query_args` | Query arguments for getting post objects. Uses same arguments as [WP_Query](https://developer.wordpress.org/reference/classes/wp_query/#parameters). Optional.
 Set as parent | `parent` | Whether or not to set the selected post as the parent for the current being edited post? `true` or `false` (default).
-Placeholder | `placeholder` | The placeholder for the select box. Default is "Select a {post label}". Applied only when the `field_type` is `select` or `select_advanced`.
+Placeholder | `placeholder` | The placeholder for the select box. Default is "Select a {post label}". Applied only when the field type is a select field.
 Field type | `field_type` | How the posts are displayed? See below.
 
 This field inherits the look and field (and settings) from other fields, depending on the field type, which accepts the following value:
@@ -217,7 +217,7 @@ Using `rwmb_the_value` also has some extra options as following:
 
 **Displaying multiple selected posts:**
 
-If the settings "Multiple" is set or the field is cloneable, you can loop through the returned values like this:
+If "Multiple" is set or the field is cloneable, you can loop through the returned values like this:
 
 ```php
 <?php $post_ids = rwmb_meta( 'my_field_id' ); ?>
