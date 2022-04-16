@@ -231,8 +231,13 @@ code {
 /* Field screenshots and settings in a gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+@media (max-width:  767px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 figure {
   margin: 0 0 var(--ifm-paragraph-margin-bottom);
