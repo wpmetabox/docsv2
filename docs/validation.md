@@ -133,6 +133,40 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
+`remote` validation example:
+
+```php
+'validation' => array(
+    'rules' => array(
+        'field_id1' => array(
+            'remote' => admin_url( 'admin-ajax.php?action=my_action1' ),
+        ),
+        'field_id2' => array(
+            'remote' => admin_url( 'admin-ajax.php?action=my_action2' ),
+        ),
+    ),
+    'messages' => array(
+        'field_id1' => array(
+            'remote'  => 'value is not passed',                    
+        ),
+    )
+),
+```
+
+```php
+add_action( 'wp_ajax_my_action1', 'remote_validation' );
+
+function remote_validation() {
+    // Get the field value via the global variable $_GET
+    if( $_GET['field_id1'] === 'something' ) {      
+        echo "true"; //valid
+    } else {
+        echo "false"; //invalid
+    }
+    die();
+}
+```
+
 :::caution Fields with multiple inputs
 
 The jQuery validation library actually uses the **input name**, not the input ID. In most cases, they are the same. But for some cases where a field has multiple inputs like a checkbox list, then the checkboxes don't have IDs.
