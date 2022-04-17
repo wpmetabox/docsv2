@@ -17,7 +17,7 @@ More precisely:
 This function accepts 3 arguments as follows:
 
 ```php
-rwmb_get_value( $field_id, $args, $object_id );
+rwmb_meta( $field_id, $args, $object_id );
 ```
 
 Name|Description
