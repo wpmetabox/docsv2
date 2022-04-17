@@ -95,6 +95,48 @@ Parameter|Description
 `$old_value` | The old value which is in the database
 `$object_id` | The current object ID
 
+### Sanitize subfields in a group
+
+Because the `group` field save value in the database as a serialized array with the meta key `group_id` so we need to put the `sanitize_callback` function at the `group` field settings
+
+```php
+'fields' => [
+    [
+        'name'              => __( 'Group', 'your-text-domain' ),
+        'id'                => $prefix . 'group_lotc08c5jb',
+        'type'              => 'group',
+        // highlight-next-line
+        'sanitize_callback' => 'subfield_validation',
+        'fields'            => [
+            [
+                'name' => __( 'Text', 'your-text-domain' ),
+                'id'   => $prefix . 'text',
+                'type' => 'text',
+            ],
+            [
+                'name' => __( 'Textarea', 'your-text-domain' ),
+                'id'   => $prefix . 'textarea',
+                'type' => 'textarea',
+            ],
+        ],
+    ],
+],
+```
+
+The value returned of the callback function is the array of subfield values.
+
+```php
+function subfield_validation( $group_field ) {
+    $text = $group_field['text'];
+    
+    if( empty( $text ) ) {
+        $group_field['text'] = 'Hello World!';
+    }
+              
+    return $group_field;
+}
+```
+
 ## FAQ
 
 <FAQ question="Why doesn't my textarea field save values?">
