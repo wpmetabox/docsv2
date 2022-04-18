@@ -93,7 +93,6 @@ html[data-theme='dark'] {
   overflow: visible;
   text-align: center;
   position: relative;
-  overflow: hidden;
 
   --search-local-modal-width: 100%;
 }
