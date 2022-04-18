@@ -223,6 +223,9 @@ code {
   padding: 0;
   color: #e3116c;
 }
+html[data-theme='dark'] code {
+  color: #c3e88d;
+}
 .yt-lite {
   margin-bottom: var(--ifm-paragraph-margin-bottom);
 }

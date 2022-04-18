@@ -133,40 +133,6 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-`remote` validation example:
-
-```php
-'validation' => array(
-    'rules' => array(
-        'field_id1' => array(
-            'remote' => admin_url( 'admin-ajax.php?action=my_action1' ),
-        ),
-        'field_id2' => array(
-            'remote' => admin_url( 'admin-ajax.php?action=my_action2' ),
-        ),
-    ),
-    'messages' => array(
-        'field_id1' => array(
-            'remote'  => 'value is not passed',                    
-        ),
-    )
-),
-```
-
-```php
-add_action( 'wp_ajax_my_action1', 'remote_validation' );
-
-function remote_validation() {
-    // Get the field value via the global variable $_GET
-    if( $_GET['field_id1'] === 'something' ) {      
-        echo "true"; //valid
-    } else {
-        echo "false"; //invalid
-    }
-    die();
-}
-```
-
 :::caution Fields with multiple inputs
 
 The jQuery validation library actually uses the **input name**, not the input ID. In most cases, they are the same. But for some cases where a field has multiple inputs like a checkbox list, then the checkboxes don't have IDs.
@@ -217,3 +183,38 @@ For the field types "File" and "Image", the input name has the format `_file_fie
 ```
 
 :::
+
+## Remote validation
+
+If you want to validate fields remotely with PHP, use the "remote" parameter for the validation rule array as follows:
+
+```php
+'validation' => [
+    'rules' => [
+        'field_id1' => [
+            // highlight-next-line
+            'remote' => admin_url( 'admin-ajax.php?action=my_action1' ),
+        ],
+    ],
+    'messages' => [
+        'field_id1' => [
+            // highlight-next-line
+            'remote'  => 'Value is not invalid.',
+        ],
+    ],
+],
+```
+
+The validation performs via an ajax request with action "my_action1". In your theme's `functions.php` file or your plugin, you need to create a callback to handle this ajax request that outputs "true" if the value is valid and "false" otherwise.
+
+```php
+add_action( 'wp_ajax_my_action1', function () {
+    // Get the field value via the global variable $_GET
+    if ( $_GET['field_id1'] === 'something' ) {
+        echo 'true'; // Valid
+    } else {
+        echo 'false'; // Invalid
+    }
+    die;
+} );
+```

@@ -95,27 +95,27 @@ Parameter|Description
 `$old_value` | The old value which is in the database
 `$object_id` | The current object ID
 
-### Sanitize subfields in a group
+## Sanitizing subfields in a group
 
-Because the `group` field save value in the database as a serialized array with the meta key `group_id` so we need to put the `sanitize_callback` function at the `group` field settings
+Because the group field saves its value in the database as a serialized array, to sanitize subfields, we need to put the `sanitize_callback` function for the outer group and use it to check the values of subfields:
 
 ```php
 'fields' => [
     [
-        'name'              => __( 'Group', 'your-text-domain' ),
-        'id'                => $prefix . 'group_lotc08c5jb',
+        'name'              => 'My group',
+        'id'                => 'my_group_id',
         'type'              => 'group',
         // highlight-next-line
-        'sanitize_callback' => 'subfield_validation',
+        'sanitize_callback' => 'my_subfield_validation',
         'fields'            => [
             [
-                'name' => __( 'Text', 'your-text-domain' ),
-                'id'   => $prefix . 'text',
+                'name' => 'Text',
+                'id'   => 'text',
                 'type' => 'text',
             ],
             [
-                'name' => __( 'Textarea', 'your-text-domain' ),
-                'id'   => $prefix . 'textarea',
+                'name' => 'Textarea',
+                'id'   => 'textarea',
                 'type' => 'textarea',
             ],
         ],
@@ -123,17 +123,15 @@ Because the `group` field save value in the database as a serialized array with 
 ],
 ```
 
-The value returned of the callback function is the array of subfield values.
+The returned value of the sanitize callback is the group value, e.g. an array of subfield values.
 
 ```php
-function subfield_validation( $group_field ) {
-    $text = $group_field['text'];
-    
-    if( empty( $text ) ) {
-        $group_field['text'] = 'Hello World!';
+function my_subfield_validation( $group ) {
+    if ( empty( $group['text'] ) ) {
+        $group['text'] = 'Hello World!';
     }
-              
-    return $group_field;
+
+    return $group;
 }
 ```
 
@@ -141,6 +139,6 @@ function subfield_validation( $group_field ) {
 
 <FAQ question="Why doesn't my textarea field save values?">
 
-Probably you are trying to save a script like Google Analytics or an embeded video. Meta Box removes all these things during sanitization. To save them, please disable sanitization for the field. See the "Bypass the sanitization" section for details.
+Probably you are trying to save a script like Google Analytics or an embedded video. Meta Box removes all these things during sanitization. To save them, please disable sanitization for the field. See the "Bypass the sanitization" section for details.
 
 </FAQ>
