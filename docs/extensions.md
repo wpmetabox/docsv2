@@ -73,6 +73,8 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![acf](/extensions/acf.png) <span className="thumb_text">MB ACF Migration</span>](/extensions/mb-acf-migration/)
 
+[![toolset](/extensions/toolset.png) <span className="thumb_text">MB Toolset Migration</span>](/extensions/mb-toolset-migration/)
+
 [![rankmath](/extensions/rankmath.png) <span className="thumb_text">MB Rank Math</span>](/extensions/mb-rank-math/)
 
 <!-- [![yoast seo](/extensions/yoastseo.png) <span className="thumb_text">Meta Box for Yoast SEO</span>](/extensions/meta-box-yoat-seo/) -->
