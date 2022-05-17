@@ -12,8 +12,6 @@ The extension supports post fields and all Meta Box field types and extensions (
 
 ## Creating post forms
 
-### Simple form
-
 To create a simple front-end forms, put this shortcode in a page content:
 
 ```php
@@ -22,17 +20,15 @@ To create a simple front-end forms, put this shortcode in a page content:
 
 This shortcode will create a simple post form which has only 2 fields: post title and post content.
 
-### Advanced form
-
-If you want to add more fields to the post form (which are custom fields), then you need to [create a field group](/custom-fields/#how-to-create-custom-fields) first. That field group should contains all the custom fields you want to add to the post.
-
-Then change the shortcode to:
+If you want to add custom fields to the form, then change the shortcode to:
 
 ```php
 [mb_frontend_form id="field-group-id" post_fields="title,content"]
 ```
 
-If you want to embed the form using code, please use the following code:
+where `field-group-id` is the ID of the field group that you [already created](/custom-fields/#how-to-create-custom-fields).
+
+You can also output the shortcode with PHP if you want to display the form in your theme or plugin:
 
 ```php
 $form = '[mb_frontend_form id="field-group-id" post_fields="title,content"]';
@@ -67,9 +63,7 @@ Attributes|Description
 
 ## Dynamic population
 
-In order to make the frontend form flexible, sometimes it's more convenient to set the shortcode attributes via code or something else rather than fixed it in above format.
-
-The dyanamic population feature in MB Frontend Submission extension allows you to dynamically populate a shortcode attribute with a value. This value can be passed via query string and/or hook.
+The dyanamic population feature allows you to dynamically populate a shortcode attribute with a value. This value can be passed via query string and/or hook.
 
 ### Query string
 
@@ -125,7 +119,7 @@ In order to overwrite the output of post fields, please following the steps belo
 
 ## Reorder post fields
 
-Sometimes you want to mix post fields with the custom fields, or change post content to `textarea` field. You can do that with the following steps:
+Sometimes you want to **mix post fields with the custom fields**, or change post content to `textarea` field. You can do that with the following steps:
 
 - Remove the `post_fields` attribute from the shortcode
 - Add post fields as normal custom fields to your meta box settings, like this:
@@ -142,7 +136,8 @@ $meta_boxes[] = [
         ],
         [
             'name' => 'Title',
-            'id'   => 'post_title', // THIS
+            // highlight-next-line
+            'id'   => 'post_title',
         ],
         [
             'name'    => 'Type',
@@ -156,12 +151,14 @@ $meta_boxes[] = [
         [
             'name' => 'Description',
             'type' => 'textarea',
-            'id'   => 'post_content', // THIS
+            // highlight-next-line
+            'id'   => 'post_content',
         ],
         [
             'name' => 'Thumbnail',
             'type' => 'single_image',
-            'id'   => '_thumbnail_id', // THIS
+            // highlight-next-line
+            'id'   => '_thumbnail_id',
         ],
     ],
 ]
@@ -216,13 +213,19 @@ add_filter( 'rwmb_frontend_validate', function( $validate, $config ) {
 }, 10, 2 );
 ```
 
-## User Posts Dashboard
+## User dashboard
 
 To let users **view and edit their submitted posts**, just create a normal WordPress page, and insert the following shortcode into the page content:
 
 ```php
 [mb_frontend_dashboard edit_page="124"]
 ```
+
+:::caution
+
+You **must** create a page for submitting posts first, then use its ID in the `edit_page` attribute.
+
+:::
 
 **Shortcode attributes**
 
@@ -286,19 +289,20 @@ add_filter( 'rwmb_frontend_redirect', function( $redirect, $config ) {
 }, 10, 2 );
 ```
 
-`mbfs_dashboard_query_args`
+`rwmb_frontend_validate`
 
-This filter is used for changing the query args for getting posts in the dashboard page. By default, the plugin will get posts that have the same author as the current user. If you want to change this query, then use this filter.
+This filter is used to check if the form is validated. You can use this filter to add custom check for the data before it's processed.
 
 ```php
-add_filter( 'mbfs_dashboard_query_args', function( $args ) {
-    $args['cat'] = 1; // Get only posts in category ID = 1.
-
-    return $args;
-} );
+apply_filters( 'rwmb_frontend_validate', $validate, $config );
 ```
 
-### Form actions
+The filter has 2 parameter:
+
+- `$validate`: the returned value of validation. If `true`, then the validation is successful. `false` - if not and the plugin will show a default error message. If you want to show a custom error message, just return it as a string. See the **Validation** section above.
+- `$config`: the form configuration.
+
+### Form hooks
 
 `rwmb_frontend_before_process`
 
@@ -344,6 +348,10 @@ This action fires after the confirmation message is displayed. It accepts one pa
 
 This action fires before the submit button is displayed. It accepts one parameter `$config` - the form configuration, taken from the shortcode attributes.
 
+`rwmb_frontend_submit_button`
+
+This filter allows you to change the submit button HTML. It accepts 2 parameters: `$submit_button` - the submit button HTML; and `$post_id` - the post ID, taken from the shortcode attributes.
+
 `rwmb_frontend_after_submit_button`
 
 This action fires after the submit button is displayed. It accepts one parameter `$config` - the form configuration, taken from the shortcode attributes.
@@ -358,21 +366,6 @@ This action fires after the post is deleted. It accepts 2 parameters:
 
 - `$config` - the form configuration, taken from the shortcode attributes.
 - `$post_id` - the deleted post ID
-
-### Form filters
-
-`rwmb_frontend_validate`
-
-This filter is used to check if the form is validated. You can use this filter to add custom check for the data before it's processed.
-
-```php
-apply_filters( 'rwmb_frontend_validate', $validate, $config );
-```
-
-The filter has 2 parameter:
-
-- `$validate`: the returned value of validation. If `true`, then the validation is successful. `false` - if not and the plugin will show a default error message. If you want to show a custom error message, just return it as a string. See the **Validation** section above.
-- `$config`: the form configuration.
 
 ### Post data filters
 
@@ -398,40 +391,40 @@ Sometimes you want to add more things to the post fields, such as make post titl
 
 ```php
 // Post title
-$field = apply_filters( 'rwmb_frontend_post_title', array(
+$field = apply_filters( 'rwmb_frontend_post_title', [
     'type' => 'text',
     'name' => 'Title',
     'id'   => 'post_title',
-) );
+] );
 
 // Post thumbnail
-$field = apply_filters( 'rwmb_frontend_post_thumbnail', array(
+$field = apply_filters( 'rwmb_frontend_post_thumbnail', [
     'type'             => 'image',
     'name'             => 'Thumbnail',
     'id'               => '_thumbnail_id',
     'max_file_uploads' => 1,
-) );
+] );
 
 // Post excerpt
-$field   = apply_filters( 'rwmb_frontend_post_excerpt', array(
+$field   = apply_filters( 'rwmb_frontend_post_excerpt', [
     'type' => 'textarea',
     'name' => 'Excerpt',
     'id'   => 'post_excerpt',
-) );
+] );
 
 // Post date
-$field = apply_filters( 'rwmb_frontend_post_date', array(
+$field = apply_filters( 'rwmb_frontend_post_date', [
     'type' => 'datetime',
     'name' => 'Date',
     'id'   => 'post_date',
-) );
+] );
 
 // Post content
-$field   = apply_filters( 'rwmb_frontend_post_content', array(
+$field   = apply_filters( 'rwmb_frontend_post_content', [
     'type' => 'wysiwyg',
     'name' => 'Content',
     'id'   => 'post_content',
-) );
+] );
 ```
 
 Each post field is treated as a normal Meta Box field (see here for full list of [field settings](/field-settings/)).
@@ -476,6 +469,55 @@ The action accepts 1 parameter: the instance of the `\MBFS\Post` class, which ha
 - `$post_id`: The submitted post ID
 - `$fields`: The post fields
 - `$config`: The configuration, taken from the shortcode attributes
+
+### Dashboard hooks
+
+`rwmb_frontend_dashboard_query_args`
+
+This filter is used for changing the query args for getting posts in the dashboard page. By default, the plugin will get posts that have the same author as the current user. If you want to change this query, then use this filter.
+
+```php
+add_filter( 'rwmb_frontend_dashboard_query_args', function( $args ) {
+    $args['cat'] = 1; // Get only posts in category ID = 1.
+
+    return $args;
+} );
+```
+
+`rwmb_frontend_welcome_message`
+
+This filter is used to change the welcome message. It accepts 3 parameters:
+
+- `$message`: the message content (in HTML)
+- `$user`: the current user
+- `$query`: the post query
+
+`rwmb_frontend_dashboard_edit_page_content`
+
+This filter is used to change the edit page content. The edit page content is used for parsing the edit form configuration. It accepts only one parameter - the content in HTML.
+
+`rwmb_frontend_dashboard_post_title`
+
+This filter is used to change the title link of posts in the post table. It accepts 2 parameters:
+
+- `$title`: the post title link (in HTML)
+- `$post_id`: the post ID
+
+`rwmb_frontend_dashboard_edit_action`
+
+This filter is used to change the edit link for posts in the dashboard. It has 2 parameters: the edit link HTML and the post ID.
+
+```php
+add_filter( 'rwmb_frontend_dashboard_edit_action', function( $edit_action, $post_id ) {
+    $svg_icon = get_template_directory_uri() . 'icons/edit.svg';
+    return '<a href="' . add_query_arg( 'rwmb_frontend_field_post_id', $post_id, 'https://domain.com/submit-page' ) . '><img src="' . $svg_icon . '""></a>';
+}, 10, 2 );
+```
+
+`rwmb_frontend_dashboard_delete_action`
+
+This filter is used to change the delete button for posts in the dashboard. It has 2 parameters: the delete button HTML and the post ID.
+
 
 ## Upload files / images with the media popup
 
