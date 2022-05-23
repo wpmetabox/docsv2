@@ -634,7 +634,7 @@ MB_Relationships_API::delete( $from, $to, $id );
 
 This function checks if the 2 objects already have a relationship and delete that relationship only if they have.
 
-When calling `add` function, the plugin fires a hook as follow:
+When calling `delete` function, the plugin fires a hook as follow:
 
 ```php
 do_action( 'mb_relationships_delete', $from, $to, $id );
