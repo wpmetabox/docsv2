@@ -11,13 +11,13 @@ Here is a screenshot of a custom Gutenberg block (hero area) that's created usin
 
 ![custom Gutenberg block](https://i.imgur.com/fVTmMWi.png)
 
-The preview of the block is displayed in the main content area while the block configuration is displayed on the right. This allows you to edit the block content and live-preview the block in real-time. Later, you can also can change where the block settings are displayed (on the sidebar or right in the main content area).
+The preview of the block is displayed in the main content area while the block configuration is displayed on the right. This allows you to edit the block content and live-preview the block in real-time. Later, you can also change where the block settings are displayed (on the sidebar or right in the main content area).
 
 ## Creating A Gutenberg Block
 
 (Scroll down to see a video tutorial and the code example).
 
-Creating a Gutenberg block with MB Blocks is similar to create a normal meta box. There are just a few different settings.
+Creating a Gutenberg block with MB Blocks is similar to creating a normal meta box. There are just a few different settings.
 
 Assuming we're creating a hero area block (like the screenshot above). Open your theme's `functions.php` file (or your plugin's PHP file) and add the following code:
 
@@ -27,6 +27,8 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 		'title'           => 'Hero Content',
 		'id'              => 'hero-content',
 		'description'     => 'A custom hero content block',
+
+		// highlight-start
 		'type'            => 'block',
 		'icon'            => 'awards',
 		'category'        => 'layout',
@@ -36,6 +38,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 		'supports' => [
 			'align' => ['wide', 'full'],
 		],
+		// highlight-end
 
 		// Block fields.
 		'fields'          => [
@@ -87,15 +90,21 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 You might notice that the syntax is very similar to [creating a field group](/creating-fields-with-code/). You just need to define some settings and fields for the block.
 
-The block settings are inherited from the Block JavaScript API with a few difference. See [Block Registration](https://developer.wordpress.org/block-editor/developers/block-api/block-registration/) page on the Gutenberg Handbook if you need more details.
+The block settings are inherited from the Block JavaScript API with a few differences. See [Block Registration](https://developer.wordpress.org/block-editor/developers/block-api/block-registration/) page on the Gutenberg Handbook if you need more details.
 
 ### `title`
 
-The block title. It's used to dipslay the block when you click the Block Inserter in Gutenberg.
+The block title. It's used to display the block when you click the Block Inserter in Gutenberg.
 
 ### `id`
 
 The block ID. Must be unique.
+
+:::caution No underscores
+
+A block ID can only contain lowercase alphanumeric characters and dashes, and must begin with a letter. It doesn't accept underscores, i.e. `my_block` won't work, but `my-block` will work.
+
+:::
 
 ### `icon`
 
@@ -114,8 +123,7 @@ Example:
 'icon' => '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z" /><path d="M19 13H5v-2h14v2z" /></svg>',
 ```
 
-If you need an advanced configure for the icon, you can set `icon` as an array which can contain background and foreground colors, this colors will appear with the icon
-when they are applicable e.g.: in the inserter.
+If you need an advanced configure for the icon, you can set `icon` as an array that can contain background and foreground colors, these colors will appear with the icon when they are applicable e.g.: in the inserter.
 
 ```php
 'icon' => [
@@ -138,7 +146,7 @@ Tells Meta Box to register this as a Gutenberg block (not as a normal meta box).
 
 ### `category`
 
-Specify the block category, which is used to help users browse and discover them. Available values: `common`, `formatting`, `layout` (defaul), `widgets`, `embed`. If a theme or a plugin registers a custom category, you can also use it, too.
+Specify the block category, which is used to help users browse and discover them. Available values: `text`, `media`, `design` (default), `widgets`, `theme`, `embed`. If a theme or a plugin registers a custom category, you can use it, too.
 
 ### `keywords`
 
@@ -151,7 +159,7 @@ List of keywords that users can use to search the block from the block inserter.
 
 ### `context`
 
-Where to show the block settings. If set to `side`, the block settings is displayed on the right sidebar when you select the block. If omitted (default), the block settings is displayed when you click the Edit icon in the block toolbar.
+Where to show the block settings. If set to `side`, the block settings are displayed on the right sidebar when you select the block. If omitted (default), the block settings are displayed when you click the Edit icon in the block toolbar.
 
 See the short video below to understand.
 
@@ -209,7 +217,7 @@ multiple: false,
 
 #### `reusable`
 
-A block may want to disable the ability of being converted into a reusable block. By default all blocks can be converted to a reusable block. If supports reusable is set to `false`, the option to convert the block into a reusable block will not appear.
+A block may want to disable the ability to be converted into a reusable block. By default, all blocks can be converted to reusable blocks. If supports reusable is set to `false`, the option to convert the block into a reusable block will not appear.
 
 ```php
 // Don't allow the block to be converted into a reusable block.
@@ -228,7 +236,7 @@ The default mode of the block: `edit` to make it shows the edit fields when load
 
 A custom PHP callback to display the block content. The callback accepts 2 parameters:
 
-- `$attributes`: the block attributes, which has all the block settings and fields data.
+- `$attributes`: the block attributes, which have all the block settings and fields data.
 - `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end.
 - `$post_id`: the current post ID.
 
@@ -238,6 +246,7 @@ A custom PHP callback to display the block content. The callback accepts 2 param
 ```
 
 ```php
+<?php
 function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
 	// Fields data.
 	if ( empty( $attributes['data'] ) ) {
@@ -280,7 +289,7 @@ function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
 
 When using the callback, you can access to the block fields data via `$attribute['data'][$field_id]`. However, to make it's convenient for you, we have created 2 helper functions: `mb_get_block_field()` and `mb_the_block_field()`.
 
-These functions work exactly like the `rwmb_get_value()` and `rwmb_the_value()`, but applied for the current block only. The first function returns the data stored for a block field, while the 2nd one outputs that data.
+These functions work exactly like the [`rwmb_get_value()`](/functions/rwmb-get-value/) and [`rwmb_the_value()`](/functions/rwmb-the-value/), but applied for the current block only. The first function returns the data stored for a block field, while the 2nd one outputs that data.
 
 ```php
 // Get block image field.
@@ -293,7 +302,7 @@ mb_the_block_field( 'content' );
 
 ### `render_template`
 
-Sometimes you might want to separate the code that output a custom Gutenberg block into a template part, then you can use `render_template` parameter to specify the full path to that template part.
+Sometimes you might want to separate the code that outputs a custom Gutenberg block into a template part, then you can use `render_template` parameter to specify the full path to that template part.
 
 ```php
 'render_template' => get_template_directory() . '/blocks/hero/template.php',
@@ -301,7 +310,7 @@ Sometimes you might want to separate the code that output a custom Gutenberg blo
 
 Inside the template file, you have full access to the 3 parameters, just like `render_callback`:
 
-- `$attributes`: the block attributes, which has all the block settings and fields data.
+- `$attributes`: the block attributes, which have all the block settings and fields data.
 - `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end.
 - `$post_id`: the current post ID.
 
@@ -310,6 +319,7 @@ You also can use the new helper functions `mb_get_block_field()` and `mb_the_blo
 So, inside the `blocks/hero/template.php`, you can write:
 
 ```php
+<?php
 // Fields data.
 if ( empty( $attributes['data'] ) ) {
 	return;
@@ -359,7 +369,7 @@ If you have multiple blocks, then using multiple CSS files might hurt the perfor
 
 ### `enqueue_script`
 
-If your block requires custom JavaScript actions, then set this parameter the URL to the custom JavaScript file that will be used to do JavaScript tasks for the block (like initialize a slider).
+If your block requires custom JavaScript actions, then set this parameter the URL to the custom JavaScript file that will be used to do JavaScript tasks for the block (like initializing a slider).
 
 ```php
 'enqueue_script'   => get_template_directory_uri() . '/blocks/hero/script.js',
@@ -370,7 +380,7 @@ Please note that this script should be run in 2 cases:
 - When the block is done loading on the front end
 - When the block preview is done loading in the block editor on the back end
 
-On the back end, everytime you modify the block settings, the block preview is re-rendered. The whole HTML of the block preview will be replaced by the new HTML.
+On the back end, every time you modify the block settings, the block preview is re-rendered. The whole HTML of the block preview will be replaced by the new HTML.
 
 So, to trigger a custom code when the block preview is loaded, you need to add an event listener to the event `mb_blocks_preview/{$block_id}` and run your code there:
 
@@ -382,7 +392,7 @@ $( document ).on( 'mb_blocks_preview/hero-area', function( e ) {
 } );
 ```
 
-To make it works for both front end and back end, you can write your JavaScript like this:
+To make it works for both the front end and back end, you can write your JavaScript like this:
 
 ```js
 ( function( $ ) {
@@ -404,7 +414,7 @@ Note that jQuery is already added as a dependency for the script, so you can use
 
 If your block has some CSS / JavaScript dependencies (such as a JavaScript library), then using `enqueue_style` and `enqueue_script` might not be a good option since it allows you to enqueue only one single CSS / JS file.
 
-In that case, use `enqueue_assets` to enqueue your assets. This parameter accept a PHP callback function, like this:
+In that case, use `enqueue_assets` to enqueue your assets. This parameter accepts a PHP callback function, like this:
 
 ```php
 'enqueue_assets' => function() {
@@ -420,9 +430,9 @@ This attribute allows you to set preview data for the block, which will show whe
 
 ![block preview](https://i.imgur.com/bwMPY4t.png)
 
-The block preview is just the block rendered with a sample data. And you'll just need to set the parameter `preview` as an array of that sample data.
+The block preview is just the block rendered with sample data. And you'll just need to set the parameter `preview` as an array of that sample data.
 
-For example, if you have a "Team Member" block (as above) which has 3 fields: image, title and description, you can set the `preview` parameter as follows:
+For example, if you have a "Team Member" block (as above) which has 3 fields: image, title, and description, you can set the `preview` parameter as follows:
 
 ```php
 'preview' => [
@@ -436,7 +446,7 @@ For example, if you have a "Team Member" block (as above) which has 3 fields: im
 
 Sets the storage for the block fields. Default, it's `attributes`, which means saving block fields in the attributes.
 
-If you want to save the block fields into custom fields, set it to `post_meta`. Saving block fields in the custom fields make the block acts like a wrapper of custom fields. In this case, to prevent bugs, you *should* set `multiple` to `false` to prevent inserting the same block multiple times (see `supports` parameter above).
+If you want to save the block fields into custom fields, set it to `post_meta`. Saving block fields in the custom fields make the block acts as a wrapper of custom fields. In this case, to prevent bugs, you *should* set `multiple` to `false` to prevent inserting the same block multiple times (see `supports` parameter above).
 
 If you want to save the block fields into custom tables, you need to activate the [MB Custom Table](/extensions/mb-custom-table/) extension first. Then set `storage_type` and `table` as follows:
 
@@ -486,9 +496,9 @@ Assuming you want to create a custom testimonial block, which has the following 
 - An image
 - A title
 - A paragraph for the testimonial content
-- And a select field for the testimonial style (something like image on the right or above the content)
+- And a select field for the testimonial style (something like an image on the right or above the content)
 
-It's easy to make those fields with MB Blocks. However, it might be less flexible than using default Gutenberg heading and paragraph blocks for the title and content field. So, we might want to wrap those 2 fields into a `InnerBlocks` like this:
+It's easy to make those fields with MB Blocks. However, it might be less flexible than using the default Gutenberg heading and paragraph blocks for the title and content field. So, we might want to wrap those 2 fields into a `InnerBlocks` like this:
 
 - Image
 - InnerBlocks
@@ -497,6 +507,7 @@ It's easy to make those fields with MB Blocks. However, it might be less flexibl
 This is an example code of the block:
 
 ```php
+<?php
 add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 	$meta_boxes[] = [
 		'title'           => 'Testimonial',
@@ -556,7 +567,7 @@ I use [Wayfinder](https://wordpress.org/plugins/wayfinder/) plugin to show the b
 </div>
 ```
 
-To make it more powerful, MB Blocks supports the following properties of InnerBlocks. They're exactly the same as in the [block handbook](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/).
+To make it more powerful, MB Blocks supports the following properties of InnerBlocks. They're the same as in the [block handbook](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/).
 
 ### `allowedBlocks`
 
@@ -606,7 +617,7 @@ Template locking allows locking the InnerBlocks area for the current template. O
 
 If locking is not set in an InnerBlocks area: the locking of the parent InnerBlocks area is used.
 
-If the block is a top level block: the locking of the Custom Post Type is used.
+If the block is a top-level block: the locking of the Custom Post Type is used.
 
 ### Example
 
@@ -687,7 +698,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 ## Block templates
 
-Sometimes you want to load default blocks when creating a new post. Block templates allow to specify a default initial state for an editor session. Use the argument `template` when [registering the post type](https://developer.wordpress.org/reference/functions/register_post_type):
+Sometimes you want to load default blocks when creating a new post. Block templates allow specifying a default initial state for an editor session. Use the argument `template` when [registering the post type](/custom-post-types/):
 
 `'template'              => [
     ['meta-box/{$block_id}']
@@ -725,7 +736,7 @@ When you decode the JSON string, you'll see the block data as an object like thi
 It has the following attribute:
 
 - `name`: the block name
-- `id`: an unique ID for the block. Note that it's different from the block settings ID. This ID can be used to set the `id` parameter in the HTML if you want.
+- `id`: a unique ID for the block. Note that it's different from the block settings ID. This ID can be used to set the `id` parameter in the HTML if you want.
 - `align`: block alignment
 - `anchor`: block anchor
 - `className`: custom CSS class for the block
