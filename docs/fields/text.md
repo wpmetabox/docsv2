@@ -8,7 +8,7 @@ The text field creates a simple text input. You can enter any value or select a 
 
 :::info Input types
 
-This docs is also used for **URL** and **email** field types as they share the same settings.
+This docs is also used for **URL** and **email** field types as they share the same settings. If you want to have full text editing abilities, checkout the [WYSIWYG](/fields/wysiwyg/) field.
 
 :::
 
