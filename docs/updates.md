@@ -40,3 +40,13 @@ Don't click the **Save Changes** button twice. The 2nd time you reload the page,
 We cache the requests to check updates in a WordPress transient, which has a one-day lifetime. To force WordPress to check for updates, you need to remove this transient. To do that, please install the [WP-Sweep](https://wordpress.org/plugins/wp-sweep/) plugin and clear all transients. Then go to **Dashboard » Updates** and click the **Check again** button.
 
 </FAQ>
+
+<FAQ question="Can I define the license key via a constant in wp-config.php?">
+
+You can define the license key in a constant in the `wp-config.php` file instead of storing it in the database. It might be more secure since no one can see it from the WordPress dashboard or in the database. To do that, define it via the `META_BOX_KEY` constant:
+
+```php
+define( 'META_BOX_KEY', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456' ); // Your Meta Box license key.
+```
+
+</FAQ>
