@@ -645,3 +645,9 @@ Delete all data for an object in the custom table.
 ```php
 \MetaBox\CustomTable\API::delete( $object_id, $table );
 ```
+
+## Further reading
+
+[How to Move Custom Fields' Data to Custom Tables](https://metabox.io/move-custom-fields-data-to-custom-tables/)
+
+<LiteYouTubeEmbed id='JaEvtYa4Hcg' />
