@@ -6,7 +6,6 @@ const sidebars = {
 		{
 			type: 'category',
 			label: 'Getting Started',
-			collapsed: false,
 			link: {
 				type: 'generated-index',
 				description: 'Learn about the most important Meta Box concepts through step-by-step guides. Highly recommended to go through everything from the start to the end.',
@@ -49,7 +48,6 @@ const sidebars = {
 		{
 			type: 'category',
 			label: 'Advanced',
-			collapsed: false,
 			link: {
 				type: 'generated-index',
 				description: 'Learn about advanced features from Meta Box.',
@@ -66,7 +64,6 @@ const sidebars = {
 		{
 			type: 'category',
 			label: 'Developer Guides',
-			collapsed: false,
 			link: {
 				type: 'generated-index',
 				description: 'Advanced topics that help you use and customize Meta Box to the fullest. Most of them requires working with code.',
@@ -82,7 +79,6 @@ const sidebars = {
 		{
 			type: 'category',
 			label: 'References',
-			collapsed: false,
 			link: {
 				type: 'generated-index',
 				description: 'API references for developers.',
@@ -132,7 +128,6 @@ const sidebars = {
 		{
 			type: 'category',
 			label: 'Others',
-			collapsed: false,
 			link: {
 				type: 'generated-index',
 			},
