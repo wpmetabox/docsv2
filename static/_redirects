@@ -39,6 +39,7 @@
 /custom-field-type/                                                     /creating-new-field-types/
 /composer/                                                              /integration/
 /extensions/composer/                                                   /integration/
+/extensions/integration/                                                /integration/
 /mb-favorite-posts/                                                     /extensions/mb-favorite-posts/
 /mb-testimonials/                                                       /extensions/mb-testimonials/
 /actions/                                                               /category/actions/
@@ -56,3 +57,4 @@
 /compatible-plugins/                                                    /compatibility/#plugins
 /compatible-hostings/                                                   /compatibility/#hostings
 /using-two-date-formats/                                                /fields/date/
+/get-meta-value/                                                        /displaying-fields-with-code/
