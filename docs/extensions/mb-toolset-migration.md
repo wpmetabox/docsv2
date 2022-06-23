@@ -7,6 +7,12 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 MB Toolset Migration extension helps you to migrate field groups, custom field data, and relationships from Toolset to Meta Box.
 
+:::caution
+
+This extension only migrates the data created by Toolset within a site. It doesn't migrate your website from local to the development environment (you'll need another plugin for this) nor the way you use the data like getting the data and displaying it on the front end. After the migration, just go to the database and check how it changes.
+
+:::
+
 ## Backup the database
 
 Before migrating data, make sure you have a backup of your database. During the migration process, because of the difference in [data format](/database/), the plugin will attempt to modify the existing data in custom fields created by Toolset. We try to do it at a very minimum level and create a backup of fields for some specific cases, but it's still important to make a backup just in case something goes wrong.
