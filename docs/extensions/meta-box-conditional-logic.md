@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 **Meta Box Conditional Logic** helps you to show or hide meta boxes, custom fields or any elements based on other fields' values.
 
-<LiteYouTubeEmbed id='2acm5gW59Mc' />
+<LiteYouTubeEmbed id='m_FtbydM_-I' />
 
 You can also combine conditions. It works not only for meta boxes or custom fields, but also other HTML elements.
 
