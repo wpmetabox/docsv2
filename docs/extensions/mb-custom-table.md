@@ -11,7 +11,7 @@ This reduces the number of rows in the database which can help improve the perfo
 
 ![custom table overview](https://i.imgur.com/BzE1Fvx.png)
 
-### Getting started
+## Getting started
 
 The easiest way to work with custom table is using [Meta Box Builder](/extensions/meta-box-builder/). It provides UI to create custom tables and automatically save custom fields to table columns.
 
@@ -41,14 +41,15 @@ Use the plugin API to create a custom table as follows:
 
 ```php
 add_action( 'init', function () {
-	if ( ! class_exists( 'MB_Custom_Table_API' ) ) {
-		return;
-	}
-	MB_Custom_Table_API::create( 'my_custom_table', [
-		'address' => 'TEXT NOT NULL',
-		'phone'   => 'TEXT NOT NULL',
-		'email'   => 'VARCHAR(20) NOT NULL',
-	] );
+	MB_Custom_Table_API::create(
+		'my_custom_table',                // Custom table name.
+		[                                 // List of columns with data types.
+			'address' => 'TEXT NOT NULL',
+			'phone'   => 'TEXT NOT NULL',
+			'email'   => 'VARCHAR(20) NOT NULL',
+		],
+		[ 'email' ],                      // List of columns that will be indexed.
+	);
 } );
 ```
 
@@ -61,64 +62,23 @@ $sql = 'CREATE TABLE my_custom_table (
   phone TEXT NOT NULL,
   email VARCHAR(20) NOT NULL
   PRIMARY KEY  (ID)
-)';
-```
-
-If you want to set keys for columns, just add the 3rd parameter:
-
-```php
-MB_Custom_Table_API::create( 'my_custom_table', [
-	'address' => 'TEXT NOT NULL',
-	'phone'   => 'TEXT NOT NULL',
-	'email'   => 'VARCHAR(20) NOT NULL',
-], [ 'email' ] );
-```
-
-Which generates:
-
-```php
-$sql = "CREATE TABLE my_custom_table (
-  ID int(11) unsigned NOT NULL,
-  address TEXT NOT NULL,
-  phone TEXT NOT NULL,
-  email VARCHAR(20) NOT NULL
-  PRIMARY KEY  (ID)
   KEY email
-)";
+)';
 ```
 
 Parameter|Description
 ---|---
 `table_name`|The custom table name. Required.
-`columns`|Array of table columns, where the key is the column ID and the value is the column definition (similar in SQL). Required.
-`keys`|Array of key column IDs. These columns will be indexed. Optional.
-
-:::info Data types
-
-Column data types are MySQL's. You can see the list of data types [here](https://dev.mysql.com/doc/refman/8.0/en/data-types.html).
-
-:::
-
-:::caution ID column
-
-The **`ID` column is automatically created**. It's used to store the object ID for future reference. Object ID can be the post ID, user ID, or term ID depending on what meta type the table is used for.
-
-:::
-
-:::info Indexing BLOG & TEXT columns
-
-BLOB and TEXT columns also can be indexed, but a fixed length must be given. Make sure you set the length when you want to index a text column.
-
-:::
-
+`columns`|Array of table columns, where the key is the column name and the value is the [MySQL data type](https://dev.mysql.com/doc/refman/8.0/en/data-types.html). Required.
+`keys`|Array of key column names, which will be indexed. Optional. Note that if you want to index BLOB and TEXT columns, make sure you set a fixed length for them.
 
 ### Notes
 
-A. **Do not add ID column**: The ID column is automatically added to the list of columns and set as the primary key in the table. It's used to store the object ID (post, user, term) for future reference.
+A. **Do not add ID column**. The ID column is automatically created and set as the primary key in the table. It's used to store the object ID for future reference. Object ID can be the post ID, user ID, or term ID depending on what meta type the table is used for.
 
-B. The **column key must match custom fields' IDs**, one column per custom field. If you create a column to store a group, then the column name must be the top-level group ID. Don't create columns for sub-fields.
+B. The **column names must match custom field IDs**, one column per custom field. If you create a column to store a group, then the column name must be the top-level group ID. Don't create columns for sub-fields.
 
-C. The **table name doesn't contain the WordPress table prefix**. The extension does not put any constraints on you to define the table name. If you want to use the WordPress table prefix, you can do like this:
+C. The **table name doesn't need to include the WordPress table prefix**. The extension does not put any constraints on you to define the table name. If you want to include the WordPress table prefix, do this:
 
 ```php
 global $wpdb;
@@ -133,9 +93,6 @@ D. The extension uses WordPress recommended method to create a custom table, whi
 
 ```php
 register_activation_hook( __FILE__, function() {
-	if ( ! class_exists( 'MB_Custom_Table_API' ) ) {
-		return;
-	}
 	MB_Custom_Table_API::create( 'my_custom_table', [
 		'address' => 'TEXT NOT NULL',
 		'phone'   => 'TEXT NOT NULL',
@@ -144,11 +101,11 @@ register_activation_hook( __FILE__, function() {
 } )
 ```
 
-But for some reason, if you can't run the code when activate your plugin, it's totally fine to run the code in `init` or `plugins_loaded` hook.
+But if you can't run the code when activate your plugin, it's totally fine to run the code with the `init` or `plugins_loaded` hook.
 
 ### Using existing tables
 
-You can also use an existing table to store your data. The table can be [manually created](https://codex.wordpress.org/Creating_Tables_with_Plugins) by a plugin, theme or any tool like phpMyAdmin. To use it with Meta Box:
+You can also use an existing table to store your data. The table can be [manually created](https://codex.wordpress.org/Creating_Tables_with_Plugins) by a plugin, a theme or any tool like phpMyAdmin. To use it with Meta Box:
 
 - **The custom table must have the ID column**. It's required to connect entries in the custom table with WordPress posts, terms, or users table.
 - **The columns in the custom table much match the field IDs in your meta box**.
@@ -224,7 +181,7 @@ For group fields, it's worth mentioning that the whole group value, including su
 
 That means:
 
-- When you create a table, please create only one column for the group (even if that group contains many sub-fields or sub-groups). And the column key must be the group ID.
+- When you create a table, please create only one column for the group (even if that group contains many sub-fields or sub-groups). And the column name must be the group ID.
 - The group value is serialized, you cannot make SQL queries against the sub-fields values. Thus, you don't benefit from the custom table structure. So, be careful to decide on what fields should be in groups and what fields should not. It's recommended to use groups only for *data storing, not for querying*.
 
 While the data of the group is serialized, it will be unserialized when getting via helper functions. So you don't have to unserialize yourself.
