@@ -5,72 +5,73 @@ title: MB Custom Table
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-**MB Custom Table** helps you to save custom fields' values to custom table instead of the default WordPress meta table. All custom fields for a post are saved in a single row, where and each column contains the value of a corresponding field.
+**MB Custom Table** helps you to save custom fields' values to a custom table instead of the default WordPress meta table. All custom fields for a post are saved in a single row, where each column contains the value of a corresponding field.
 
-This reduces the number of rows in the database which can cause a performance issue when the data grows. And let you have all of your data in one place, so you can easily view, edit, import, export it.
+This reduces the number of rows in the database which can help improve the performance when the data grows. And let you have all of your data in one place, so you can easily view, edit, import, and export it.
 
 ![custom table overview](https://i.imgur.com/BzE1Fvx.png)
 
-## Video tutorial
+### Getting started
 
-<LiteYouTubeEmbed id='o8ICxe8nbrI' />
+The easiest way to work with custom table is using [Meta Box Builder](/extensions/meta-box-builder/). It provides UI to create custom tables and automatically save custom fields to table columns.
 
-## Creating custom tables
+When creating a field group with Meta Box Builder, switch to the **Settings** tab and you'll see options to use a custom table as follows:
 
-To create a custom table, you can do it manually by following [this guide](https://codex.wordpress.org/Creating_Tables_with_Plugins) or using the API that the extension provides. The API simplifies the process and makes it easier for you.
+![Create custom table with Meta Box Builder](https://i.imgur.com/HRZSV9w.png)
 
-This code creates a simple table for 3 custom fields (*each custom field is a column*):
+Enable the option to **Save data in a custom table**, and enter the **Table name**. By default, the table name doesn't contain the WordPress table prefix. If you want to use the WordPress table prefix, enable the **Include table prefix** option (and don't enter the prefix manually).
+
+If you select the option **Create table automatically**, the plugin will attempt to create the table for you. Once it's done, you'll see the custom table in your database, which have columns that match your custom field IDs, each column per field ID. To make the data compatible with the field data, the plugin uses data type `TEXT` for all columns.
+
+Now you can go to the edit post screen (or the edit user profile if you use the meta box for users) and save the post. You'll see the data is saved in the new custom table instead of the post meta table.
+
+:::info How does it work?
+
+The plugin will map custom table columns with custom field IDs, one column per custom field. If you have a group field, then the column name will be the top-level group ID, and it won't create columns for sub-fields. When you save a post, each custom field is stored in a corresponding column.
+
+:::
+
+## Using custom tables with code
+
+Using custom tables with code is suitable if you want to have more control on the data type or index key which can help improve the performance. It's recommended when you're a developer and you're familiar with MySQL.
+
+### Creating a custom table
+
+Use the plugin API to create a custom table as follows:
 
 ```php
-add_action( 'init', 'prefix_create_table' );
-function prefix_create_table() {
-    if ( ! class_exists( 'MB_Custom_Table_API' ) ) {
-        return;
-    }
-    MB_Custom_Table_API::create( 'my_custom_table', array(
-        'address' => 'TEXT NOT NULL',
-        'phone'   => 'TEXT NOT NULL',
-        'email'   => 'VARCHAR(20) NOT NULL',
-    ) );
-}
+add_action( 'init', function () {
+	if ( ! class_exists( 'MB_Custom_Table_API' ) ) {
+		return;
+	}
+	MB_Custom_Table_API::create( 'my_custom_table', [
+		'address' => 'TEXT NOT NULL',
+		'phone'   => 'TEXT NOT NULL',
+		'email'   => 'VARCHAR(20) NOT NULL',
+	] );
+} );
 ```
 
-Here we hook to `init` to make sure the API is ready to use. For more details about the hooks or which hook you should use, see section **Notes** below.
-
-The code will generate a SQL query for creating a custom table like this:
+Here we use `init` hook to make sure the API is ready to use. The code will generate a SQL query for creating a custom table like this:
 
 ```php
-$sql = "CREATE TABLE my_custom_table (
+$sql = 'CREATE TABLE my_custom_table (
   ID int(11) unsigned NOT NULL,
   address TEXT NOT NULL,
   phone TEXT NOT NULL,
   email VARCHAR(20) NOT NULL
   PRIMARY KEY  (ID)
-)";
+)';
 ```
-
-:::caution Column names and field IDs
-
-Column names have to match your custom fields' IDs, one column per custom field. If you create a column to store a group, then the column name must be the top-level group ID. **Don't** create columns for sub-fields.
-
-:::
-
-:::info Data types
-
-Column data types are MySQL's. You can see the list of data types [here](https://dev.mysql.com/doc/refman/8.0/en/data-types.html).
-
-:::
-
-Note that the **`ID` column is automatically created**. It's used to store the object ID for future reference. Object ID can be post ID, user ID or term ID, depends on what meta type the table is used for.
 
 If you want to set keys for columns, just add the 3rd parameter:
 
 ```php
-MB_Custom_Table_API::create( 'my_custom_table', array(
-    'address' => 'TEXT NOT NULL',
-    'phone'   => 'TEXT NOT NULL',
-    'email'   => 'VARCHAR(20) NOT NULL',
-), array( 'email' ) );
+MB_Custom_Table_API::create( 'my_custom_table', [
+	'address' => 'TEXT NOT NULL',
+	'phone'   => 'TEXT NOT NULL',
+	'email'   => 'VARCHAR(20) NOT NULL',
+], [ 'email' ] );
 ```
 
 Which generates:
@@ -86,166 +87,145 @@ $sql = "CREATE TABLE my_custom_table (
 )";
 ```
 
+Parameter|Description
+---|---
+`table_name`|The custom table name. Required.
+`columns`|Array of table columns, where the key is the column ID and the value is the column definition (similar in SQL). Required.
+`keys`|Array of key column IDs. These columns will be indexed. Optional.
+
+:::info Data types
+
+Column data types are MySQL's. You can see the list of data types [here](https://dev.mysql.com/doc/refman/8.0/en/data-types.html).
+
+:::
+
+:::caution ID column
+
+The **`ID` column is automatically created**. It's used to store the object ID for future reference. Object ID can be the post ID, user ID, or term ID depending on what meta type the table is used for.
+
+:::
+
 :::info Indexing BLOG & TEXT columns
 
 BLOB and TEXT columns also can be indexed, but a fixed length must be given. Make sure you set the length when you want to index a text column.
 
 :::
 
-### Parameters
-
-The API function takes 3 parameters as follows:
-
-```php
-MB_Custom_Table_API::create( $table_name, $columns, $keys = array() );
-```
-
-Where:
-
-Parameter|Description
----|---
-`table_name`|The custom table name. Required.
-`columns`|Array of table columns, where key is the column ID and value is the column definition (similar in SQL). Required.
-`keys`|Array of key column IDs. These columns will be indexed. Optional.
 
 ### Notes
 
-A. **Do not add ID column**: The ID column is automatically added to the list of columns and set as primary key in the table. It's used to store the object ID (post, user, term) for future reference.
+A. **Do not add ID column**: The ID column is automatically added to the list of columns and set as the primary key in the table. It's used to store the object ID (post, user, term) for future reference.
 
-B. The **column key must match custom fields' IDs**.
+B. The **column key must match custom fields' IDs**, one column per custom field. If you create a column to store a group, then the column name must be the top-level group ID. Don't create columns for sub-fields.
 
-C. The **table name doesn't contain WordPress table prefix**. The extension do not put any constrains for you to define the table name. If you want to use WordPress table prefix, you can do like this:
+C. The **table name doesn't contain the WordPress table prefix**. The extension does not put any constraints on you to define the table name. If you want to use the WordPress table prefix, you can do like this:
 
 ```php
 global $wpdb;
-MB_Custom_Table_API::create( "{$wpdb->prefix}my_custom_table", array(
-    'address' => 'TEXT NOT NULL',
-    'phone'   => 'TEXT NOT NULL',
-    'email'   => 'VARCHAR(20) NOT NULL',
-) );
+MB_Custom_Table_API::create( "{$wpdb->prefix}my_custom_table", [
+	'address' => 'TEXT NOT NULL',
+	'phone'   => 'TEXT NOT NULL',
+	'email'   => 'VARCHAR(20) NOT NULL',
+] );
 ```
 
-D. You should **check for the class existence** before running the function, like this:
+D. The extension uses WordPress recommended method to create a custom table, which means if the table already exists, the code will do nothing. Although, **it's recommended to run the code that creates custom tables [only when activating your plugin](https://codex.wordpress.org/Creating_Tables_with_Plugins#Calling_the_functions)**, like this:
 
 ```php
-if ( ! class_exists( 'MB_Custom_Table_API' ) ) {
-    return;
-}
-MB_Custom_Table_API::create( 'my_custom_table', array(
-    'address' => 'TEXT NOT NULL',
-    'phone'   => 'TEXT NOT NULL',
-    'email'   => 'VARCHAR(20) NOT NULL',
-), array( 'email' ) );
+register_activation_hook( __FILE__, function() {
+	if ( ! class_exists( 'MB_Custom_Table_API' ) ) {
+		return;
+	}
+	MB_Custom_Table_API::create( 'my_custom_table', [
+		'address' => 'TEXT NOT NULL',
+		'phone'   => 'TEXT NOT NULL',
+		'email'   => 'VARCHAR(20) NOT NULL',
+	], [ 'email' ] );
+} )
 ```
 
-E. The extension uses WordPress recommended method to create custom table, which means if the table already exists, the code will do nothing. Although, **it's recommended to run the code that create custom tables [only when activate your plugin](https://codex.wordpress.org/Creating_Tables_with_Plugins#Calling_the_functions)**, like this:
-
-```php
-register_activation_hook( __FILE__, 'prefix_create_table' );
-function prefix_create_table() {
-    if ( ! class_exists( 'MB_Custom_Table_API' ) ) {
-        return;
-    }
-    MB_Custom_Table_API::create( 'my_custom_table', array(
-        'address' => 'TEXT NOT NULL',
-        'phone'   => 'TEXT NOT NULL',
-        'email'   => 'VARCHAR(20) NOT NULL',
-    ), array( 'email' ) );
-}
-```
-
-But for some reason, if you can't run the code when activate your plugin, it's totally fine to run the code in `init` or `plugins_loaded` hook:
-
-```php
-add_action( 'init', 'prefix_create_table' );
-function prefix_create_table() {
-    if ( ! class_exists( 'MB_Custom_Table_API' ) ) {
-        return;
-    }
-    MB_Custom_Table_API::create( 'my_custom_table', array(
-        'address' => 'TEXT NOT NULL',
-        'phone'   => 'TEXT NOT NULL',
-        'email'   => 'VARCHAR(20) NOT NULL',
-    ), array( 'email' ) );
-}
-```
+But for some reason, if you can't run the code when activate your plugin, it's totally fine to run the code in `init` or `plugins_loaded` hook.
 
 ### Using existing tables
 
-Sometimes you already have custom tables created by other tools such as phpMyAdmin. In this case, you can still use MB Custom Table with your table.
+You can also use an existing table to store your data. The table can be [manually created](https://codex.wordpress.org/Creating_Tables_with_Plugins) by a plugin, theme or any tool like phpMyAdmin. To use it with Meta Box:
 
-There are 2 requirements:
+- **The custom table must have the ID column**. It's required to connect entries in the custom table with WordPress posts, terms, or users table.
+- **The columns in the custom table much match the field IDs in your meta box**.
 
-- **The custom table must have the ID column**. It's required to connecting entries in the custom table with WordPress posts, terms or users table.
-- **The columns in the custom table much match the field IDs in your meta box**. See **Using custom tables** section below for details.
+### Connecting custom fields to a custom table
 
-## Using custom tables
-
-To tell a meta box to use a custom table to store custom fields instead of default meta tables, you need to specify 2 parameters `storage_type` and `table` like this:
+To tell a field group to use a custom table to store custom fields, you need to specify 2 parameters `storage_type` and `table` like this:
 
 ```php
-add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
-function your_prefix_register_meta_boxes( $meta_boxes ) {
-    $meta_boxes[] = array(
-        'title'        => 'Meta Box Title',
-        'storage_type' => 'custom_table',    // Important
-        'table'        => 'my_custom_table', // Your custom table name
-        'fields'       => array(
-            array(
-                'id'   => 'address',
-                'type' => 'text',
-                'name' => 'Address',
-            ),
-            array(
-                'id'   => 'phone',
-                'type' => 'text',
-                'name' => 'Phone',
-            ),
-            array(
-                'id'   => 'email',
-                'type' => 'email',
-                'name' => 'Email',
-            ),
-        ),
-    );
-    return $meta_boxes;
-}
+add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
+	$meta_boxes[] = [
+		'title'        => 'Meta Box Title',
+		// highlight-start
+		'storage_type' => 'custom_table',
+		'table'        => 'my_custom_table', // Your custom table name
+		// highlight-end
+		'fields'       => [
+			[
+				'id'   => 'address',
+				'name' => 'Address',
+			],
+			[
+				'id'   => 'phone',
+				'name' => 'Phone',
+			],
+			[
+				'id'   => 'email',
+				'type' => 'email',
+				'name' => 'Email',
+			],
+		],
+	];
+	return $meta_boxes;
+} );
 ```
 
 :::caution Column names and field IDs
 
-Again, column names have to match your custom fields' IDs, one column per custom field. If you create a column to store a group, then the column names must be the top-level group ID. No need to create column for sub-fields.
+Again, column names have to match your custom fields' IDs, one column per custom field. If you create a column to store a group, then the column names must be the top-level group ID. No need to create columns for sub-fields.
 
 :::
 
-Now you can go to edit post screen (or edit user profile if you use the meta box for user profile page) and save the post. You'll see the data is saved in the new custom table instead of meta tables.
+Now you can go to the edit post screen (or the edit user profile if you use the meta box for users) and save the post. You'll see the data is saved in the new custom table instead of the post meta table.
+
+### Video tutorial
+
+<LiteYouTubeEmbed id='o8ICxe8nbrI' />
 
 ## Getting field value
 
 Use the helper [rwmb_meta()](/functions/rwmb-meta/) function to get a field value. The only difference is you need to specify the table name in the 2nd argument:
 
 ```php
-$value = rwmb_meta( $field_id, ['storage_type' => 'custom_table', 'table' => $table_name] );
+$args = [
+	'storage_type' => 'custom_table',
+	'table'        => $table_name,
+];
+$value = rwmb_meta( $field_id, $args, $post_id );
 echo $value;
 ```
 
-Also note that the call to the custom table will be cached, e.g. if you call the helper function several times for the same `$post_id`, it will only query once. This technique will improve the database performance.
+Also, note that the call to the custom table will be cached, e.g. if you call the helper function several times for the same `$post_id`, it will only query once. This technique will improve the database performance.
 
-You can also use the [`[rwmb_meta]`](/shortcode/) shortcode to display a field value. You need to set the shortcode attributes similarly to the `rwmb_meta()` helper function:
+You can also use the [`[rwmb_meta]`](/shortcode/) shortcode to display a field value. You need to set the shortcode attributes similar to the `rwmb_meta()` helper function:
 
 ```
 [rwmb_meta id="field_id" storage_type="custom_table" table="table_name"]
 ```
 
-
 ## Group fields
 
-For group fields, it's worth mentioning that the whole group value, including sub-fields' values, is saved as a serialized array in *one* column. So, they're not flat as other fields.
+For group fields, it's worth mentioning that the whole group value, including sub-fields values, is saved as a serialized array in **one column**. So, they're not flat as other fields.
 
 That means:
 
-- When you create a table, please create only one column for the group (even that group contains many sub-fields or sub-groups). And the column key must be the group ID.
-- The group value is serialized, you cannot make SQL query agains the sub-fields' values. Thus, you don't benefit from the custom table structure. So, be careful to make decision what fields should be in groups, what fields should not. It's recommended to use groups only for *data storing, not for querying*.
+- When you create a table, please create only one column for the group (even if that group contains many sub-fields or sub-groups). And the column key must be the group ID.
+- The group value is serialized, you cannot make SQL queries against the sub-fields values. Thus, you don't benefit from the custom table structure. So, be careful to decide on what fields should be in groups and what fields should not. It's recommended to use groups only for *data storing, not for querying*.
 
 While the data of the group is serialized, it will be unserialized when getting via helper functions. So you don't have to unserialize yourself.
 
@@ -253,7 +233,7 @@ While the data of the group is serialized, it will be unserialized when getting 
 
 It's important to understand that the plugin doesn't hook to the `WP_Query` to get posts by custom fields stored in the custom table. In other words, using `meta_*` in `WP_Query` for custom fields won't work.
 
-In order to get posts by custom fields in the custom table, you need to make an extra query to get the post IDs first. Then use these IDs to get full post objects.
+To get posts by custom fields in the custom table, you need to make an extra query to get the post IDs first. Then use these IDs to get full post objects.
 
 Here is an example:
 
@@ -262,13 +242,13 @@ global $wpdb;
 $ids = $wpdb->get_col( "SELECT ID FROM your_table WHERE field1 = 'value1' OR field2 = 'value2'" );
 
 if ( empty( $ids ) ) {
-    echo 'There is no posts';
+	echo 'There is no posts';
 } else {
-    $query = new WP_Query( [
-        'post_type' => 'post',
-        'post__in'  => $ids,
-    ] );
-    // Do something
+	$query = new WP_Query( [
+		'post_type' => 'post',
+		'post__in'  => $ids,
+	] );
+	// Do something
 }
 ```
 
@@ -276,21 +256,21 @@ This technique also works with terms and users.
 
 ## Custom models
 
-Besides custom tables for built-in WordPress posts, terms and users, the plugin allows you to create custom models, which mimic the WordPress posts, but store the data completely in custom tables. So you don't need to connect to posts, terms or users anymore. And the data is stored only in one table, which is more efficient.
+Besides custom tables for built-in WordPress posts, terms and users, the plugin allows you to create custom models, which mimic the WordPress posts, but store the data completely in custom tables. So you don't need to connect to posts, terms, or users anymore. And the data is stored only in one table, which is more efficient.
 
 Pros:
 
 - Better data structure, because you can define the custom table to match your needs.
 - Don't mess with WordPress tables. You manage data on your own.
-- Complete CRUD for models so you can create/edit/delete them easily.
+- Complete CRUD for models so you can create/edit/delete them quickly.
 - Compatible with all Meta Box field types.
-- Use the similar Meta Box and WordPress API/UI to show list of models or edit models.
+- Use the similar Meta Box and WordPress API/UI to show a list of models or edit models.
 - Compatible with MB Admin Columns extension to show fields in admin columns.
 
 Cons:
 
-- Models don't have front-end templates like posts. You won't have permalinks for each model and their archive. Models should be used for managing data. If you want to have the power of the templates, then you should use normal custom tables above.
-- Limited compatibility with some extensions such as MB Relationships, MB Views.
+- Models don't have front-end templates like posts. You won't have permalinks for each model and their archive. Models should be used for managing data. If you want to have the power of the templates, then you should use the normal custom tables above.
+- Limited compatibility with some extensions such as MB Relationships and MB Views.
 
 ### Usage
 
@@ -298,12 +278,11 @@ To create and use custom models, you need to follow 3 steps below:
 
 #### Step 1: Register a model
 
-Registering a model is very similar to a custom post type in WordPress, with less parameters. The code below registers a custom model `transaction`.
+Registering a model is very similar to a custom post type in WordPress, with fewer parameters. The code below registers a custom model `transaction`.
 
 ```php
 // Step 1: Register a model.
-add_action( 'init', 'prefix_register_transaction_model' );
-function prefix_register_transaction_model() {
+add_action( 'init', function() {
 	mb_register_model( 'transaction', [
 		'table'  => 'transactions',
 		'labels' => [
@@ -312,17 +291,17 @@ function prefix_register_transaction_model() {
 		],
 		'menu_icon' => 'dashicons-money-alt',
 	] );
-}
+} );
 ```
 
 Parameter | Description
 ---|---
 `table`|Custom table for the model. Required.
-`labels`|An array of labels for this model. Required. See below for list of labels.
+`labels`|An array of labels for this model. Required. See below for the list of labels.
 `show_in_menu`|Where to show the menu in the admin menu. Optional. Default `true`.
-`menu_position`|The position in the menu order the model should appear. Optional. Default `null` (at the bottom).
-`menu_icon`|The url to the icon to be used for this menu. Pass a base64-encoded SVG using a data URI, which will be colored to match the color scheme -- this should begin with 'data:image/svg+xml;base64,'. Pass the name of a Dashicons helper class to use a font icon, e.g. 'dashicons-chart-pie'. Pass 'none' to leave div.wp-menu-image empty so an icon can be added via CSS. Defaults to use the posts icon.
-`parent`|Menu parent, if you want to show model as a sub-menu. Optional.
+`menu_position`|The position in the menu where the model should appear. Optional. Default `null` (at the bottom).
+`menu_icon`|The URL to the icon to be used for this menu. Pass a base64-encoded SVG using a data URI, which will be colored to match the color scheme -- this should begin with 'data:image/svg+xml;base64,'. Pass the name of a Dashicons helper class to use a font icon, e.g. 'dashicons-chart-pie'. Pass 'none' to leave div.wp-menu-image empty so an icon can be added via CSS. Defaults to use the posts icon.
+`parent`|Menu parent, if you want to show the model as a sub-menu. Optional.
 `capability`|The capability to access the menu and create/edit/delete models. Default `edit_posts`.
 
 List of labels:
@@ -330,7 +309,7 @@ List of labels:
 Name|Description
 ---|---
 `name`|General name for the model, usually plural.
-`menu_name`|Label for the menu name. Default is the same as name.
+`menu_name`|Label for the menu name. The default is the same as the name.
 `singular_name`|Name for one item of this model.
 `add_new`|Label for 'Add New' models.
 `add_new_item`|Label for adding a new singular item.
@@ -344,12 +323,11 @@ Name|Description
 
 #### Step 2: Create a custom table for the model
 
-Creating a custom table is similar to the section above, except one thing: you must specify the 4th parameter as `true` to indicate this is a table for models.
+Creating a custom table is similar to the section above, except for one thing: you must specify the 4th parameter as `true` to indicate this is a table for models.
 
 ```php
 // Step 2: Create a custom table for the model.
-add_action( 'init', 'prefix_register_transaction_table' );
-function prefix_register_transaction_table() {
+add_action( 'init', function() {
 	MetaBox\CustomTable\API::create(
 		'transactions',                    // Table name.
 		[                                  // Table columns (without ID).
@@ -361,16 +339,17 @@ function prefix_register_transaction_table() {
 			'screenshot' => 'TEXT',
 		],
 		['email', 'status'],               // List of index keys.
-		true                               // THIS: Must be true for models.
+		// highlight-next-line
+		true                               // Must be true for models.
 	);
-}
+} );
 ```
 
-Do **NOT** create a ID column. It's automatically created (primary key, auto increment).
+Do **NOT** create an ID column. It's automatically created (primary key, auto-increment).
 
-#### Step 3: Register fields for model, corresponding to the custom table structure
+#### Step 3: Register fields for the model, corresponding to the custom table structure
 
-Registering fields for models is exactly the same as for posts. You just need to specify which model the meta box for.
+Registering fields for models is the same as for posts. You just need to specify which model the meta box is for.
 
 If your custom table has many fields, you can split them into multiple meta boxes, to enter the data more conveniently. The order of fields doesn't matter when saving.
 
@@ -380,9 +359,11 @@ add_filter( 'rwmb_meta_boxes', 'prefix_register_transaction_fields' );
 function prefix_register_transaction_fields( $meta_boxes ) {
 	$meta_boxes[] = [
 		'title'        => 'Transaction Details',
+		// highlight-start
 		'models'       => ['transaction'], // Model name
 		'storage_type' => 'custom_table',  // Must be 'custom_table'
 		'table'        => 'transactions',  // Custom table name
+		// highlight-end
 		'fields'       => [
 			[
 				'id'          => 'created_at',
@@ -424,9 +405,11 @@ function prefix_register_transaction_fields( $meta_boxes ) {
 
 	$meta_boxes[] = [
 		'title'        => 'Additional Transaction Details',
+		// highlight-start
 		'models'       => ['transaction'], // Model name
 		'storage_type' => 'custom_table',  // Must be 'custom_table'
 		'table'        => 'transactions',  // Custom table name
+		// highlight-end
 		'fields'       => [
 			[
 				'id'   => 'email',
@@ -456,7 +439,7 @@ After completing 3 steps, you'll see the Transactions menu on the left and you c
 
 ### Getting field values for models
 
-To get a field value for models, you can use 2 method:
+To get a field value for models, you can use 2 methods:
 
 Using custom table API to get the raw value in the custom table.
 
@@ -467,11 +450,12 @@ $value = \MetaBox\CustomTable\API::get_value( $field_id, $model_id, $table_name 
 $status = \MetaBox\CustomTable\API::get_value( 'status', 3, 'transactions' );
 ```
 
-Using the helper function to get the formated value:
+Using the helper function to get the formatted value:
 
 ```php
 $value = rwmb_meta( $field_id, [
-	'object_type' => 'model', // THIS must be set to 'model',
+	// highlight-next-line
+	'object_type' => 'model', // Must be 'model',
 	'type'        => $model,
 ], $model_id );
 
@@ -500,11 +484,23 @@ This feature currently works with the following extensions:
 
 `mbct_{$model}_query_where`
 
-Filters the where statement in query in the custom model table list. Accepts one parameter - the where statement.
+Filters the where statement in the query in the custom model table list. Accepts one parameter - the where statement. It should include the term `WHERE` if not empty.
+
+```php
+add_filter( 'mbct_transaction_query_where', function( $where ) {
+	return $where ? $where . ' AND status="completed"' : 'WHERE status="completed"';
+} );
+```
 
 `mbct_{$model}_query_order`
 
-Filters the order statement in query in the custom model table list. Accepts one parameter - the order statement.
+Filters the order statement in the query in the custom model table list. Accepts one parameter - the order statement. It should include the `ORDER BY` term if not empty.
+
+```php
+add_filter( 'mbct_transaction_query_order', function( $order ) {
+	return $order ? $order : 'ORDER BY created_at DESC';
+} );
+```
 
 `mbct_{$model}_columns`
 
@@ -529,7 +525,7 @@ Filters the list of actions for each row item in the custom model table list (de
 
 `mbct_restrict_manage_posts`
 
-Fires after the bulk action for the custom model table list, usually used to output custom filters for the table. Accepts 2 parameters:
+Fires after the bulk action for the custom model table list. It's usually used to output custom filters for the table. Accepts 2 parameters:
 
 - `$model`: the model name
 - `$which`: `top` or `bottom` - the position of the filters
@@ -540,7 +536,7 @@ Fires after the bulk action and after `mbct_restrict_manage_posts`. Accepts one 
 
 `mbct_submit_box`
 
-Filters the output of the submit meta box. Accepts 2 parameter:
+Filters the output of the submit meta box. Accepts 2 parameters:
 
 - `$output`: the HTML output
 - `$model`: the model name
@@ -553,14 +549,14 @@ Fires before the output of the submit meta box. Accepts one parameter - the mode
 
 Fires after the output of the submit meta box. Accepts one parameter - the model name.
 
-`mbct_before_add`
-`mbct_after_add`
-`mbct_before_update`
-`mbct_after_update`
-`mbct_before_delete`
-`mbct_after_delete`
+`mbct_before_add`<br />
+`mbct_after_add`<br />
+`mbct_before_update`<br />
+`mbct_after_update`<br />
+`mbct_before_delete`<br />
+`mbct_after_delete`<br />
 
-Fire before/after adding/updating/deleting data in a custom table via the API. Accepts 3 parameters:
+Fire before/after adding/updating/deleting data in a custom table. Accepts 3 parameters:
 
 - `$object_id`: the object ID
 - `$table`: the table name
@@ -570,11 +566,11 @@ Fire before/after adding/updating/deleting data in a custom table via the API. A
 
 Each model can have only one custom table.
 
-While models work with all Meta Box field types, the data of cloneable/multiple/group fields is always an array, thus it's saved as an serialized array in the model table column.
+While models work with all Meta Box field types, the data of cloneable/multiple/group fields is always an array, thus it's saved as a serialized array in the model table column.
 
 ## API
 
-The plugin has the following APIs for you to work with the data in custom tables. These APIs work well with both custom tables for posts/terms/users and for models.
+The plugin has the following APIs for you to work with the data in custom tables. These APIs work well with both custom tables for posts/terms/users and models.
 
 ### `exists`
 
@@ -612,7 +608,7 @@ Result:
 
 ### `add`
 
-Add an array of custom field values for an object. Make sure the data for the object doesn't exists yet in the database.
+Add an array of custom field values for an object. Make sure the data for the object doesn't exist yet in the database.
 
 ```php
 $data = [
@@ -627,7 +623,7 @@ In case you want to add a row for a custom model, set `$object_id` to `null`.
 
 ### `update`
 
-Update the data for an object. Works similarly to `add`. Make sure the data for object exists in the database.
+Update the data for an object. Works similarly to `add`. Make sure the data for the object exists in the database.
 
 ```php
 $data = [
