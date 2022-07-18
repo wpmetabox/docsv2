@@ -3,6 +3,6 @@ This is the repo for [Meta Box Documentation](https://docs.metabox.io) website. 
 To run the docs locally, run the following commands:
 
 ```bash
-yarn install
-yarn start
+npm install
+npm start
 ```
