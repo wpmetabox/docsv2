@@ -543,3 +543,311 @@ summary {
 	border: none;
 	padding: 0;
 }
+
+/* Tutorials */
+.tutorials img{
+	border-radius: 0;
+	width: 100%;
+	max-height: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+	margin: 0;
+}
+.tutorials p{
+	margin: 0;
+	height: 100%;
+}
+.banner{
+	display: grid;
+	grid-template-columns: repeat( 2, 1fr );
+	grid-gap: 11px;
+}
+.banner_left p a{
+	position: relative;
+}
+.banner_left p a::before{
+	content: '';
+	background: linear-gradient(0deg, rgba(16, 19, 31, 0.9) 0%, rgba(16, 19, 31, 0.1) 100%);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+.banner_left .category_title{
+	position: absolute;
+	left: 20px;
+	bottom: 50px;
+}
+.banner_left .category{
+	padding: 0px 12px 4px 12px;
+	background: #FFB800;
+	font-size: 20px;
+	line-height: 27px;
+	font-weight: 400;
+	color: #fff;
+}
+.banner_left .title{
+	color: #fff;
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 700;
+	display: block;
+}
+
+.banner_right{
+	display: grid;
+	grid-template-rows: repeat( 2, 1fr );
+	grid-gap: 8px;
+}
+.banner_right p a{
+	position: relative;
+}
+.banner_right p a::before{
+	content: '';
+	background: linear-gradient(0deg, rgba(16, 19, 31, 0.9) 0%, rgba(16, 19, 31, 0.1) 100%);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+.banner_right .category_title{
+	position: absolute;
+	left: 7px;
+	bottom: 28px;
+}
+.banner_right .category{
+	padding: 2px 8px 4px 8px;
+	background: #000;
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 400;
+	color: #fff;
+}
+.banner_right .title{
+	color: #fff;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 700;
+	display: block;
+}
+
+.banner_right .title.top{
+	width: 55%;
+}
+.banner_right_bottom{
+	display: grid;
+	grid-template-columns: repeat( 2, 1fr );
+	grid-gap: 8px;
+}
+.trending{
+	margin: 59px 0px 47px 0px;
+	padding: 20px 22px;
+	border: 1px solid #000;
+}
+.trending .category{
+	color: #fff;
+	background: #000;
+	font-size: 25px;
+	line-height: 30px;
+	font-weight: bold;
+	padding: 0px 8px 4px 8px;
+}
+.trending .title{
+	color: #2B3D4F;
+	font-size: 16px;
+	line-height: 19px;
+	padding-left: 42px;
+	font-weight: 700;
+}
+.trending a:hover{
+	text-decoration: unset;
+}
+.tutorials-category{
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	column-gap: 27px;
+	row-gap: 82px;
+}
+.tutorials-category p{
+	height: unset;
+	margin: 0;
+}
+.tutorials-category .img_title a{
+	position: relative;
+	margin-bottom: 17px;
+	display: block;
+}
+.tutorials-category .img_title a::before{
+	content: '';
+	background: linear-gradient(0deg, rgba(16, 19, 31, 0.9) 0%, rgba(16, 19, 31, 0.1) 100%);
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+.tutorials-category .heading{
+	font-size: 30px;
+	line-height: 37px;
+	color: #43A7AB;
+	font-weight: 700;
+	margin-bottom: 37px;
+	display: block;
+}
+.tutorials-category .title{
+	position: absolute;
+	left: 19px;
+	bottom: 26px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 700;
+	width: 80%;
+}
+.tutorials-category .sub_title{
+	font-size: 12px;
+	line-height: 15px;
+	font-weight: 500;
+	color: #2B3D4F;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #B4B4B4;
+	display: block;
+	position: relative;
+	padding-left: 20px;
+}
+.tutorials-category .sub_title::before{
+	content: "";
+	width: 6px;
+	height: 8px;
+	background: #43A7AB;
+	position: absolute;
+	left: 0px;
+	top: 18px;
+}
+.tutorials-category img{
+	border-radius: 0;
+	width: 100%;
+	max-height: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+	margin: 0;
+	box-shadow: unset;
+}
+.tutorials-category .img_title a img[alt="hot tutorials"]{
+	width: 39px;
+	height: 62px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.tutorials-category .img_title a img[alt="video tutorials"]{
+	width: 60px;
+	height: 40px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.details-category .tutorials-category{
+	margin-top: 80px;
+}
+.details-category .tutorials-category .heading{
+	font-size: 25px;
+	line-height: 30px;
+	margin-bottom: 19px;
+}
+
+.details-category .tutorials-category.beginners{
+	row-gap: 80px;
+	column-gap: 44px;
+}
+
+.beginners .img_title a img[alt="video tutorials"]{
+	width: 45px;
+	height: 32px;
+}
+
+.beginners .img_title a{
+	margin-bottom: 10px;
+}
+
+.beginners .img_title a::before{
+	background: unset;
+}
+.beginners .titles {
+	font-size: 20px;
+	line-height: 27px;
+	font-weight: 600;
+	color: #202E3C;
+	position: relative;
+	margin-bottom: 19px;
+	display: block;
+}
+.beginners .tag{
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 300;
+	color: #202E3C;
+}
+.beginners .hash_tag a:not(:first-child) {
+    margin-left: 23px;
+}
+
+@media ( max-width:767px ){
+	.banner{
+		grid-template-columns: repeat( 1, 1fr );
+	}
+	.banner_left .category_title{
+		left: 7px;
+		bottom: 28px;
+	}
+	.banner_left .category{
+		font-size: 14px;
+		line-height: 17px;
+	}
+	.banner_left .title{
+		font-size: 18px;
+		line-height: 22px;
+	}
+	.banner_right{
+		grid-template-rows: repeat( 1, 1fr );
+	}
+	.banner_right .title.top{
+		width: 100%;
+	}
+	.banner_right_bottom{
+		grid-template-columns:  repeat( 1, 1fr );
+	}
+	.trending .category{
+		display: inline-block;
+		font-size: 22px;
+	}
+	.trending .title{
+		display: block;
+		padding: 0;
+		margin-top: 8px;
+	}
+	.tutorials-category{
+		display: grid;
+		grid-template-columns: repeat( 1, 1fr );
+		grid-gap: 47px;
+	}
+	.tutorials-category .heading{
+		font-size: 22px;
+		margin-bottom: 15px;
+	}
+	.beginners .titles{
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+
+	.details-category .tutorials-category.beginners{
+		row-gap: 40px;
+	}
+
+}

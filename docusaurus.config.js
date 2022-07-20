@@ -85,6 +85,11 @@ const config = {
             label: 'Extensions',
           },
           {
+            to: 'tutorials',
+            position: 'left',
+            label: 'Tutorials',
+          },
+          {
             href: 'https://support.metabox.io',
             position: 'right',
             label: 'Support',

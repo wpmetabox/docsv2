@@ -1,39 +1,18 @@
 ---
-title: Tutorials
+title: Case studies
 hide_table_of_contents: true
 ---
-<div className="tutorials">
-<div className="banner">
-<div className="banner_left">
 
-[![banner tutorials](/tutorials/banner-1.png) <div className="category_title"><span className="category">Extensions</span><span className="title">Display The Latest Products Section - P3 - Using Meta Box And Oxygen</span></div>](/tutorius/display-the-latest-products-section-p3-using-meta-box-and-oxygen/)
+Tutorials on using Meta Box and Meta Box extensions to build real websites and applications.
 
-</div>
-<div className="banner_right">
-
-[![banner tutorials](/tutorials/banner-2.png) <div className="category_title"><span className="category">Beginners</span><span className="title top">How to Create Custom Meta Boxes & Custom Fields in WordPress?</span></div>](/tutorius/how-to-create-custom-meta-boxes-&-custom-fields-in-wordpress?/)
-
-<div className="banner_right_bottom">
-
-[![banner tutorials](/tutorials/banner-3.png) <div className="category_title"><span className="category">Beginners</span><span className="title">How to Create Custom Meta Boxes & Custom Fields in WordPress?</span></div>](/tutorius/how-to-create-custom-meta-boxes-&-custom-fields-in-wordpress?/)
-
-[![banner tutorials](/tutorials/banner-4.png) <div className="category_title"><span className="category">Beginners</span><span className="title">How to Create Custom Meta Boxes & Custom Fields in WordPress?</span></div>](/tutorius/how-to-create-custom-meta-boxes-&-custom-fields-in-wordpress?/)
-
-</div>
-</div>
-</div>
-<div className="trending">
-
-[<span className="category">Trending now</span><span className="title">How to Create a Team Members Page - P1- Using Meta Box and Elementor</span>](/tutorius/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/)
-
-</div>
+<div className="details-category">
 <div className="tutorials-category">
 <div className="category">
 
 [<span className="heading">Beginners</span>](/tutorius/beginners/)
 <div className="img_title">
 
-[![category tutorials](/tutorials/category-1.png) <span className="title">How to Create a Team Members Page - P2 - Using Meta Box and Oxygen</span>](/tutorius/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/)
+[![category tutorials](/tutorials/category-1.png) ![hot tutorials](/tutorials/hot.png) ![video tutorials](/tutorials/video.png) <span className="title">How to Create a Team Members Page - P2 - Using Meta Box and Oxygen</span>](/tutorius/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/)
 
 </div>
 
@@ -119,6 +98,4 @@ hide_table_of_contents: true
 
 </div>
 </div>
-
 </div>
-
