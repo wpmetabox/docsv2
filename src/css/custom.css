@@ -765,6 +765,7 @@ summary {
 .details-category .tutorials-category.beginners{
 	row-gap: 80px;
 	column-gap: 44px;
+	margin-top: 67px;
 }
 
 .beginners .img_title a img[alt="video tutorials"]{
