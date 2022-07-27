@@ -554,19 +554,25 @@ summary {
 	object-position: center center;
 	margin: 0;
 }
-.tutorials p{
+.tutorials h2 , .tutorials h3{
 	margin: 0;
-	height: 100%;
 }
+.banner .item1 { grid-area: item1; }
+.banner .item2 { grid-area: item2; }
+.banner .item3 { grid-area: item3; }
+.banner .item4 { grid-area: item4; }
 .banner{
 	display: grid;
-	grid-template-columns: repeat( 2, 1fr );
-	grid-gap: 11px;
+	grid-template-areas:
+    'item1 item1 item2 item2'
+    'item1 item1 item3 item4';
+	grid-gap: 0.75rem;
 }
-.banner_left p a{
+
+.banner a{
 	position: relative;
 }
-.banner_left p a::before{
+.banner a::before{
 	content: '';
 	background: linear-gradient(0deg, rgba(16, 19, 31, 0.9) 0%, rgba(16, 19, 31, 0.1) 100%);
 	width: 100%;
@@ -575,92 +581,69 @@ summary {
 	top: 0;
 	position: absolute;
 }
-.banner_left .category_title{
+.banner .category_title{
 	position: absolute;
 	left: 20px;
-	bottom: 50px;
+	right: 20px;
+	bottom: 20px;
 }
+.banner .category{
+	font-weight: 400;
+	color: #fff;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
 .banner_left .category{
 	padding: 0px 12px 4px 12px;
 	background: #FFB800;
 	font-size: 20px;
 	line-height: 27px;
-	font-weight: 400;
-	color: #fff;
 }
 .banner_left .title{
 	color: #fff;
-	font-size: 30px;
-	line-height: 40px;
-	font-weight: 700;
+	font-size: var( --ifm-h1-font-size );
 	display: block;
 }
 
-.banner_right{
-	display: grid;
-	grid-template-rows: repeat( 2, 1fr );
-	grid-gap: 8px;
-}
-.banner_right p a{
-	position: relative;
-}
-.banner_right p a::before{
-	content: '';
-	background: linear-gradient(0deg, rgba(16, 19, 31, 0.9) 0%, rgba(16, 19, 31, 0.1) 100%);
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	position: absolute;
-}
-.banner_right .category_title{
-	position: absolute;
-	left: 7px;
-	bottom: 28px;
-}
 .banner_right .category{
 	padding: 2px 8px 4px 8px;
 	background: #000;
 	font-size: 14px;
 	line-height: 17px;
-	font-weight: 400;
-	color: #fff;
 }
 .banner_right .title{
 	color: #fff;
-	font-size: 18px;
-	line-height: 22px;
-	font-weight: 700;
 	display: block;
 }
 
-.banner_right .title.top{
-	width: 55%;
+.banner_right.bottom .title{
+	color: #fff;
+	font-size: var( --ifm-h3-font-size ) ;
+	display: block;
 }
-.banner_right_bottom{
-	display: grid;
-	grid-template-columns: repeat( 2, 1fr );
-	grid-gap: 8px;
-}
+
 .trending{
-	margin: 59px 0px 47px 0px;
+	margin: 47px 0px;
 	padding: 20px 22px;
 	border: 1px solid #000;
 }
+.trending a{
+	display: flex;
+	align-items: center;
+}
+
 .trending .category{
 	color: #fff;
 	background: #000;
-	font-size: 25px;
-	line-height: 30px;
+	font-size: var( --ifm-h2-font-size )  ;
 	font-weight: bold;
 	padding: 0px 8px 4px 8px;
 }
 .trending .title{
 	color: #2B3D4F;
-	font-size: 16px;
-	line-height: 19px;
+	font-size: var( --ifm-h3-font-size ) ;
 	padding-left: 42px;
-	font-weight: 700;
 }
 .trending a:hover{
 	text-decoration: unset;
@@ -668,13 +651,10 @@ summary {
 .tutorials-category{
 	display: grid;
 	grid-template-columns: repeat( 3, 1fr );
-	column-gap: 27px;
-	row-gap: 82px;
+	column-gap: 2rem;
+	row-gap: 4rem;
 }
-.tutorials-category p{
-	height: unset;
-	margin: 0;
-}
+
 .tutorials-category .img_title a{
 	position: relative;
 	margin-bottom: 17px;
@@ -690,43 +670,45 @@ summary {
 	position: absolute;
 }
 .tutorials-category .heading{
-	font-size: 30px;
-	line-height: 37px;
+	font-size: var( --ifm-h2-font-size ) ;
 	color: #43A7AB;
-	font-weight: 700;
-	margin-bottom: 37px;
+	margin-bottom: 12px;
 	display: block;
 }
 .tutorials-category .title{
 	position: absolute;
-	left: 19px;
-	bottom: 26px;
+	left: 20px;
+	bottom: 20px;
+	right: 20px;
 	color: #fff;
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: 700;
-	width: 80%;
+	font-size: var( --ifm-h3-font-size ) ;
 }
-.tutorials-category .sub_title{
-	font-size: 12px;
-	line-height: 15px;
+.tutorials-category ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: square;
+}
+.tutorials-category ul li{
+	position: relative;
+	font-size: 1.25rem;
 	font-weight: 500;
 	color: #2B3D4F;
-	padding-top: 15px;
-	padding-bottom: 10px;
+	padding: 15px 15px 10px 15px;
+	list-style-type: none;
 	border-bottom: 1px solid #B4B4B4;
-	display: block;
-	position: relative;
-	padding-left: 20px;
 }
-.tutorials-category .sub_title::before{
+.tutorials-category ul li::before{
 	content: "";
 	width: 6px;
-	height: 8px;
+	height: 6px;
 	background: #43A7AB;
 	position: absolute;
 	left: 0px;
-	top: 18px;
+	top: 30px;
+}
+.tutorials-category ul li a{
+	color: #2B3D4F;
+	font-size: var( --ifm-h4-font-size ) ;
 }
 .tutorials-category img{
 	border-radius: 0;
@@ -754,7 +736,7 @@ summary {
 	transform: translate(-50%, -50%);
 }
 .details-category .tutorials-category{
-	margin-top: 80px;
+	margin-top: 60px;
 }
 .details-category .tutorials-category .heading{
 	font-size: 25px;
@@ -762,37 +744,22 @@ summary {
 	margin-bottom: 19px;
 }
 
-.details-category .tutorials-category.beginners{
-	row-gap: 80px;
-	column-gap: 44px;
-	margin-top: 67px;
-}
-
-.beginners .img_title a img[alt="video tutorials"]{
-	width: 45px;
-	height: 32px;
-}
-
-.beginners .img_title a{
-	margin-bottom: 10px;
-}
-
 .beginners .img_title a::before{
 	background: unset;
 }
 .beginners .titles {
-	font-size: 20px;
-	line-height: 27px;
-	font-weight: 600;
 	color: #202E3C;
+	font-size: var( --ifm-h3-font-size ) ;
 	position: relative;
 	margin-bottom: 19px;
 	display: block;
 }
+.beginners a{
+	color: #202E3C;
+}
 .beginners .tag{
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 19px;
-	font-weight: 300;
 	color: #202E3C;
 }
 .beginners .hash_tag a:not(:first-child) {
@@ -801,29 +768,23 @@ summary {
 
 @media ( max-width:767px ){
 	.banner{
-		grid-template-columns: repeat( 1, 1fr );
+		grid-template-areas:'item1''item2''item3''item4';
 	}
-	.banner_left .category_title{
-		left: 7px;
-		bottom: 28px;
+	.banner .category_title{
+		left: 15px;
+		bottom: 15px;
+		right: 15px;
 	}
-	.banner_left .category{
+	.banner .category{
 		font-size: 14px;
 		line-height: 17px;
+		margin-bottom: 5px;
 	}
-	.banner_left .title{
+	.banner .title{
 		font-size: 18px;
 		line-height: 22px;
 	}
-	.banner_right{
-		grid-template-rows: repeat( 1, 1fr );
-	}
-	.banner_right .title.top{
-		width: 100%;
-	}
-	.banner_right_bottom{
-		grid-template-columns:  repeat( 1, 1fr );
-	}
+
 	.trending .category{
 		display: inline-block;
 		font-size: 22px;
@@ -845,10 +806,6 @@ summary {
 	.beginners .titles{
 		font-size: 22px;
 		margin-bottom: 10px;
-	}
-
-	.details-category .tutorials-category.beginners{
-		row-gap: 40px;
 	}
 
 }
