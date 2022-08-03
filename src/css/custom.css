@@ -557,11 +557,11 @@ summary {
 .tutorials h2 , .tutorials h3{
 	margin: 0;
 }
-.banner .item1 { grid-area: item1; }
-.banner .item2 { grid-area: item2; }
-.banner .item3 { grid-area: item3; }
-.banner .item4 { grid-area: item4; }
-.banner{
+.tutorials_banner .banner_left--item1 { grid-area: item1; }
+.tutorials_banner .banner_right--item2 { grid-area: item2; }
+.tutorials_banner .banner_right--item3 { grid-area: item3; }
+.tutorials_banner .banner_right--item4 { grid-area: item4; }
+.tutorials_banner{
 	display: grid;
 	grid-template-areas:
     'item1 item1 item2 item2'
@@ -569,10 +569,10 @@ summary {
 	grid-gap: 0.75rem;
 }
 
-.banner a{
+.tutorials_banner a{
 	position: relative;
 }
-.banner a::before{
+.tutorials_banner a::before{
 	content: '';
 	background: linear-gradient(0deg, rgba(16, 19, 31, 0.9) 0%, rgba(16, 19, 31, 0.1) 100%);
 	width: 100%;
@@ -581,86 +581,86 @@ summary {
 	top: 0;
 	position: absolute;
 }
-.banner .category_title{
+.tutorials_banner .cards{
 	position: absolute;
 	left: 20px;
 	right: 20px;
 	bottom: 20px;
 }
-.banner .category{
+.tutorials_banner .cards_category{
 	font-weight: 400;
 	color: #fff;
 	display: inline-block;
 	margin-bottom: 10px;
 }
 
-.banner_left .category{
+.banner_left .cards_category{
 	padding: 0px 12px 4px 12px;
 	background: #FFB800;
 	font-size: 20px;
 	line-height: 27px;
 }
-.banner_left .title{
+.banner_left .cards_title{
 	color: #fff;
 	font-size: var( --ifm-h1-font-size );
 	display: block;
 }
 
-.banner_right .category{
+.banner_right .cards_category{
 	padding: 2px 8px 4px 8px;
 	background: #000;
 	font-size: 14px;
 	line-height: 17px;
 }
-.banner_right .title{
+.banner_right .cards_title{
 	color: #fff;
 	display: block;
 }
 
-.banner_right.bottom .title{
+.banner_right--bottom .cards_title{
 	color: #fff;
 	font-size: var( --ifm-h3-font-size ) ;
 	display: block;
 }
 
-.trending{
+.tutorials_trending{
 	margin: 47px 0px;
 	padding: 20px 22px;
 	border: 1px solid #000;
 }
-.trending a{
+.tutorials_trending .trending{
 	display: flex;
 	align-items: center;
 }
 
-.trending .category{
+.tutorials_trending .trending_category{
 	color: #fff;
 	background: #000;
 	font-size: var( --ifm-h2-font-size )  ;
 	font-weight: bold;
 	padding: 0px 8px 4px 8px;
 }
-.trending .title{
+.tutorials_trending .trending_title{
 	color: #2B3D4F;
 	font-size: var( --ifm-h3-font-size ) ;
 	padding-left: 42px;
 }
-.trending a:hover{
+.tutorials_trending a:hover{
 	text-decoration: unset;
 }
-.tutorials-category{
+.tutorials_category{
 	display: grid;
 	grid-template-columns: repeat( 3, 1fr );
 	column-gap: 2rem;
 	row-gap: 4rem;
 }
 
-.tutorials-category .img_title a{
+.tutorials_category .items_content a{
 	position: relative;
 	margin-bottom: 17px;
 	display: block;
 }
-.tutorials-category .img_title a::before{
+.tutorials_category .items_content a::before{
 	content: '';
 	background: linear-gradient(0deg, rgba(16, 19, 31, 0.9) 0%, rgba(16, 19, 31, 0.1) 100%);
 	width: 100%;
@@ -669,13 +669,13 @@ summary {
 	top: 0;
 	position: absolute;
 }
-.tutorials-category .heading{
+.tutorials_category .items_heading{
 	font-size: var( --ifm-h2-font-size ) ;
 	color: #43A7AB;
 	margin-bottom: 12px;
 	display: block;
 }
-.tutorials-category .title{
+.tutorials_category .items_title{
 	position: absolute;
 	left: 20px;
 	bottom: 20px;
@@ -683,12 +683,12 @@ summary {
 	color: #fff;
 	font-size: var( --ifm-h3-font-size ) ;
 }
-.tutorials-category ul{
+.tutorials_category ul{
 	margin: 0;
 	padding: 0;
 	list-style-type: square;
 }
-.tutorials-category ul li{
+.tutorials_category ul li{
 	position: relative;
 	font-size: 1.25rem;
 	font-weight: 500;
@@ -697,7 +697,7 @@ summary {
 	list-style-type: none;
 	border-bottom: 1px solid #B4B4B4;
 }
-.tutorials-category ul li::before{
+.tutorials_category ul li::before{
 	content: "";
 	width: 6px;
 	height: 6px;
@@ -706,11 +706,11 @@ summary {
 	left: 0px;
 	top: 30px;
 }
-.tutorials-category ul li a{
+.tutorials_category ul li a{
 	color: #2B3D4F;
 	font-size: var( --ifm-h4-font-size ) ;
 }
-.tutorials-category img{
+.tutorials_category img{
 	border-radius: 0;
 	width: 100%;
 	max-height: 100%;
@@ -720,14 +720,14 @@ summary {
 	margin: 0;
 	box-shadow: unset;
 }
-.tutorials-category .img_title a img[alt="hot tutorials"]{
+.tutorials_category .items_content a img[alt="hot tutorials"]{
 	width: 39px;
 	height: 62px;
 	position: absolute;
 	right: 0px;
 	top: 0px;
 }
-.tutorials-category .img_title a img[alt="video tutorials"]{
+.tutorials_category .items_content a img[alt="video tutorials"]{
 	width: 60px;
 	height: 40px;
 	position: absolute;
@@ -735,75 +735,79 @@ summary {
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
-.details-category .tutorials-category{
+.category_wrap .tutorials_category{
 	margin-top: 60px;
 }
-.details-category .tutorials-category .heading{
+.category_wrap .tutorials_category .items_heading{
 	font-size: 25px;
 	line-height: 30px;
 	margin-bottom: 19px;
 }
 
-.beginners .img_title a::before{
+.tutorials_category--beginners .items_content a::before{
 	background: unset;
 }
-.beginners .titles {
+.tutorials_category--beginners .items_titles {
 	color: #202E3C;
 	font-size: var( --ifm-h3-font-size ) ;
 	position: relative;
 	margin-bottom: 19px;
 	display: block;
 }
-.beginners a{
+.tutorials_category--beginners a{
 	color: #202E3C;
 }
-.beginners .tag{
+.tutorials_category--beginners .items_tag span{
 	font-size: 16px;
 	line-height: 19px;
 	color: #202E3C;
 }
-.beginners .hash_tag a:not(:first-child) {
+.tutorials_category--beginners .items_tag a:not(:first-child) {
     margin-left: 23px;
 }
 
 @media ( max-width:767px ){
-	.banner{
+	.tutorials_banner{
 		grid-template-areas:'item1''item2''item3''item4';
 	}
-	.banner .category_title{
+	.tutorials_banner .cards{
 		left: 15px;
 		bottom: 15px;
 		right: 15px;
 	}
-	.banner .category{
+	.tutorials_banner .cards_category{
 		font-size: 14px;
 		line-height: 17px;
 		margin-bottom: 5px;
 	}
-	.banner .title{
+	.tutorials_banner .cards_title{
 		font-size: 18px;
 		line-height: 22px;
 	}
 
-	.trending .category{
+	.tutorials_trending .trending{
+		display: block;
+	}
+
+	.tutorials_trending .trending_category{
 		display: inline-block;
 		font-size: 22px;
 	}
-	.trending .title{
+	.tutorials_trending .trending_title{
 		display: block;
 		padding: 0;
 		margin-top: 8px;
 	}
-	.tutorials-category{
+	.tutorials_category{
 		display: grid;
 		grid-template-columns: repeat( 1, 1fr );
 		grid-gap: 47px;
 	}
-	.tutorials-category .heading{
+	.tutorials_category .heading{
 		font-size: 22px;
 		margin-bottom: 15px;
 	}
-	.beginners .titles{
+	.tutorials_category--beginners .items_titles{
 		font-size: 22px;
 		margin-bottom: 10px;
 	}
