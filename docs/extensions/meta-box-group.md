@@ -36,72 +36,42 @@ Name|Description
 So, to add a group, you need to add a field with type `group` and list of sub-fields in its `fields` attribute, like this:
 
 ```php
-$meta_boxes[] = array(
-    'title'  => 'Meta Box Title',
-    'fields' => array(
-        array(
-            'name'   => 'Group', // Optional
-            'id'     => 'group_id',
-            'type'   => 'group',
-            // List of sub-fields
-            'fields' => array(
-                array(
-                    'name' => 'Text',
-                    'id'   => 'text',
-                    'type' => 'text',
-                ),
-                // Other sub-fields here
-            ),
-        ),
-    ),
-);
-```
-
-### Sample code
-
-The code below creates a group for tracks in an album, each track is a group and is clonable (see screenshot below):
-
-```php
-add_filter( 'rwmb_meta_boxes', 'meta_box_group_demo_register' );
-function meta_box_group_demo_register( $meta_boxes ) {
-    $meta_boxes[] = array(
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
         'title'  => 'Album Tracks',
-        'fields' => array(
-            array(
-                'id'     => 'standard',
-                // Group field
-                'type'   => 'group',
-                // Clone whole group?
-                'clone'  => true,
-                // Drag and drop clones to reorder them?
-                'sort_clone' => true,
-                // Sub-fields
-                'fields' => array(
-                    array(
+        'fields' => [
+            [
+                'id'         => 'standard',
+                'type'       => 'group',  // Group!
+                'clone'      => true,     // Clone whole group?
+                'sort_clone' => true,     // Drag and drop clones to reorder them?
+
+                // List of sub-fields.
+                'fields'     => [
+                    [
                         'name' => 'Track name',
                         'id'   => 'text',
-                        'type' => 'text',
-                    ),
-                    array(
+                    ],
+                    [
                         'name' => 'Release Date',
                         'id'   => 'date',
                         'type' => 'date',
-                    ),
-                    array(
+                    ],
+                    [
                         'name'    => 'Genre',
                         'id'      => 'genre',
                         'type'    => 'select_advanced',
-                        'options' => array(
+                        'options' => [
                             'pop'  => 'Pop',
                             'rock' => 'Rock',
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    );
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ];
     return $meta_boxes;
-}
+} );
 ```
 
 Here is how it appears:
@@ -110,55 +80,44 @@ Here is how it appears:
 
 ### Nested groups
 
-To add nested groups to a group, register a new field with type `group` and add subfields to it. Here is an example:
+You can put a group inside anther group, like normal fields, to create nested groups:
 
 ```php
-add_filter( 'rwmb_meta_boxes', 'demo_nested_groups' );
-function demo_nested_groups( $meta_boxes ) {
-    $meta_boxes[] = array(
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
         'title'  => 'Multi-level nested groups',
-        'fields' => array(
-            array(
+        'fields' => [
+            [
                 'id'     => 'group',
                 'type'   => 'group',
-                'clone'  => true,
-                'fields' => array(
-                    // Normal field (cloned)
-                    array(
-                        'name'  => 'Text',
-                        'id'    => 'text',
-                        'type'  => 'text',
-                        'clone' => true,
-                    ),
-                    // Nested group level 2
-                    array(
+                'fields' => [
+                    [
+                        'name' => 'Text',
+                        'id'   => 'text',
+                    ],
+                    // highlight-start
+                    [
                         'name'   => 'Sub group',
                         'id'     => 'sub_group',
                         'type'   => 'group',
-                        'clone'  => true,
-                        'fields' => array(
+                        'fields' => [
                             // Normal field (cloned)
-                            array(
+                            [
                                 'name'  => 'Sub text',
                                 'id'    => 'sub_text',
-                                'type'  => 'text',
-                                'clone' => true,
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    );
+                            ],
+                        ],
+                    ],
+                    // highlight-end
+                ],
+            ],
+        ],
+    ];
     return $meta_boxes;
-}
+} );
 ```
 
-Result:
-
-![multi-level nested groups](https://i.imgur.com/gWazAFA.png)
-
-The plugin supports unlimited nesting levels.
+The plugin supports **unlimited nesting levels**.
 
 ### Collapsible groups
 
@@ -182,55 +141,47 @@ This is an example of a collapsible group:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
-    $meta_boxes[] = array(
-        'title'      => 'Company Branches',
-        'post_types' => 'page',
-        'fields'     => array(
-            array(
+    $meta_boxes[] = [
+        'title'  => 'Company Branches',
+        'fields' => [
+            [
                 'id'          => 'g1',
                 'name'        => 'Branches',
                 'type'        => 'group',
                 'clone'       => true,
-                'sort_clone'  => true,
                 'collapsible' => true,
-                'group_title' => array( 'field' => 'name' ), // ID of the subfield
-                'save_state' => true,
+                'group_title' => '{name}', // ID of the subfield
 
-                'fields' => array(
-                    array(
+                'fields' => [
+                    [
                         'name' => 'Name',
                         'id'   => 'name',
-                        'type' => 'text',
-                    ),
-                    array(
+                    ],
+                    [
                         'name' => 'Address',
                         'id'   => 'address',
-                        'type' => 'text',
-                    ),
-                    array(
+                    ],
+                    [
                         'id'          => 'contacts',
                         'type'        => 'group',
                         'clone'       => true,
                         'collapsible' => true,
-                        'save_state'  => true,
                         'group_title' => '{person}',
-                        'fields'      => array(
-                            array(
+                        'fields'      => [
+                            [
                                 'id'   => 'person',
-                                'type' => 'text',
                                 'name' => 'Person',
-                            ),
-                            array(
+                            ],
+                            [
                                 'id'   => 'phone',
-                                'type' => 'text',
                                 'name' => 'Phone',
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-        ),
-    );
+                            ],
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ];
 
     return $meta_boxes;
 } );
@@ -241,56 +192,54 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 To get sub-field value, you need to get meta value of the group. This is done with following code:
 
 ```php
-$group_value = rwmb_meta( 'group_id' );
+$group_value = rwmb_meta( 'group_id' ) ?: [];
 ```
 
 The returned value is associated array of sub-fields' values with keys are sub-fields IDs, like this:
 
 ```php
-array(
+[
     'sub_field_1_key' => 'sub_field_1_value',
     'sub_field_2_key' => 'sub_field_2_value',
     'sub_field_3_key' => 'sub_field_3_value',
     //...
-)
+]
 ```
 
 So, to get value of a sub-field, use the following code:
 
 ```php
-$value = isset( $group_value[$sub_field_key] ) ? $group_value[$sub_field_key] : '';
+$value = $group_value[ $sub_field_key ] ?? '';
 echo $value; // Display sub-field value
 ```
 
 If the group is **cloneable**, then the value returned by `rwmb_meta` is array of group values, each group value is an array of sub-fields' values:
 
 ```php
-array(
-    array(
+[
+    [
         'sub_field_1_key' => 'sub_field_1_value',
         'sub_field_2_key' => 'sub_field_2_value',
         'sub_field_3_key' => 'sub_field_3_value',
         //...
-    ),
-    array(
+    ],
+    [
         'sub_field_1_key' => 'sub_field_1_value',
         'sub_field_2_key' => 'sub_field_2_value',
         'sub_field_3_key' => 'sub_field_3_value',
         //...
-    ),
+    ],
     //...
-)
+]
 ```
 
 To output values of cloneable groups, use the following code:
 
 ```php
-$group_values = rwmb_meta( 'group_id' );
-if ( ! empty( $group_values ) ) {
-    foreach ( $group_values as $group_value ) {
-        $value = isset( $group_value[$sub_field_key] ) ? $group_value[$sub_field_key] : '';
-        echo $value; // Display sub-field value
-    }
+$group_values = rwmb_meta( 'group_id' ) ?: [];
+foreach ( $group_values as $group_value ) {
+    $value = $group_value[ $sub_field_key ] ?? '';
+    echo $value; // Display sub-field value
 }
 ```
 
@@ -299,118 +248,54 @@ if ( ! empty( $group_values ) ) {
 This sample code registers a group of fields: contact name, contact email, contact phone number:
 
 ```php
-add_filter( 'rwmb_meta_boxes', 'prefix_register_contacts' );
-function prefix_register_contacts( $meta_boxes ) {
-    $meta_boxes[] = array(
-        'title' => 'Contacts',
-        'post_types' => 'post',
-        'fields' => array(
-            array(
-                'id' => 'contacts',
-                'type' => 'group',
-                'clone' => true,
-                'fields' => array(
-                    array(
-                        'id' => 'name',
-                        'type' => 'text',
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
+        'title'  => 'Contacts',
+        'fields' => [
+            [
+                'id'     => 'contacts',
+                'type'   => 'group',
+                'clone'  => true,
+                'fields' => [
+                    [
+                        'id'   => 'name',
                         'name' => 'Name',
-                    ),
-                    array(
-                        'id' => 'email',
-                        'type' => 'text',
+                    ],
+                    [
+                        'id'   => 'email',
                         'name' => 'Email',
-                    ),
-                    array(
-                        'id' => 'phone',
-                        'type' => 'text',
+                    ],
+                    [
+                        'id'   => 'phone',
                         'name' => 'Phone',
-                    ),
-                ),
-            ),
-        ),
-    );
+                    ],
+                ],
+            ],
+        ],
+    ];
     return $meta_boxes;
-}
+} );
 ```
 
 In the `single.php`, you can add the following code to display contacts:
 
 ```php
-$contacts = rwmb_meta( 'contacts' );
-if ( ! empty( $contacts ) ) {
-    foreach ( $contacts as $contact ) {
-        echo '<div class="contact">';
-        echo '<h4>', 'Contact info', '</h4>';
-        echo '<p><label>', 'Name:', '<label> ', $contact['name'], '</p>';
-        echo '<p><label>', 'Email:', '<label> ', $contact['email'], '</p>';
-        echo '<p><label>', 'Phone number:', '<label> ', $contact['phone'], '</p>';
-        echo '</div>';
-    }
+$contacts = rwmb_meta( 'contacts' ) ?: [];
+foreach ( $contacts as $contact ) {
+    echo '<div class="contact">';
+    echo '<h4>', 'Contact info', '</h4>';
+    echo '<p><label>', 'Name:', '<label> ', $contact['name'], '</p>';
+    echo '<p><label>', 'Email:', '<label> ', $contact['email'], '</p>';
+    echo '<p><label>', 'Phone number:', '<label> ', $contact['phone'], '</p>';
+    echo '</div>';
 }
 ```
 
-This is another more advanced example with nested group:
+### Outputting group with page builders
 
-Group field declaration:
+Currently, **only Elementor and Oxygen** can output sub-field in a group, including cloneable group. If you use these plugins, just follow the UI while connecting group data to show it.
 
-```php
-array(
-    'id'     => 'sector',
-    'type'   => 'group',
-    'clone'  => true,
-    'fields' => array(
-        array(
-            'name' => 'Title',
-            'id'   => 'sector-title',
-            'type' => 'text',
-        ),
-        // Group nested
-        array(
-            'id'     => 'sector-object',
-            'type'   => 'group',
-            'clone'  => true,
-            'fields' => array(
-                array(
-                    'name' => 'Images',
-                    'id'   => 'sector-object-img',
-                    'type' => 'image_advanced',
-                ),
-                array(
-                    'name' => 'Description',
-                    'id'   => 'sector-object-description',
-                    'type' => 'textarea',
-                ),
-            ),
-        ),
-    ),
-),
-```
-
-How to get value and output in the frontend:
-
-```php
-// Requires PHP 7+.
-$sectors = rwmb_meta( 'sector' );
-$sectors = $sectors ?? [];
-foreach ( $sectors as $sector ) {
-    echo $sector['sector-title'] ?? '';
-
-    $objects = $sector['sector-object'] ?? [];
-    foreach ( $objects as $object ) {
-        $imgs = $object['sector-object-img'] ?? : [];
-        foreach ( $imgs as $img ) {
-            echo '<img src="' . wp_get_attachment_image_url( $img, 'your_image_size' ) . '">';
-        }
-        echo $object['sector-object-description'] ?? '';
-    }
-}
-```
-
-### Outputing group with page builders
-
-If you want to output a group in a page builder like [Beaver Builder](https://metabox.io/recommends/beaver-builder/) or [Elementor](https://metabox.io/recommends/elementor/), please understand that there's no way to output each sub-field in a group as a element in these page builders.
-
-In order to display group value, the recommended way is creating [a view](/extensions/mb-views/) or a shortcode to display the group. Then you can insert the view/shortcode anywhere with the page builder.
+If you use other page builders like Beaver Builder or Divi, the recommended way to show groups is creating [a view](/extensions/mb-views/) or a shortcode to display the group. Then you can insert the view/shortcode anywhere with the page builder.
 
 Here is an example of a custom shortcode for a group with 3 fields: title (`text`), images (`image_advanced`) and description (`wysiwyg`). You can use it as a start:
 
@@ -426,7 +311,7 @@ add_shortcode( 'my_group', function() {
 
 	// Sub-field title.
 	$title = $group['title'] ?? '';
-	$output .= '<h3 class="my-title">' . $title . '</h3>';
+	$output .= $title ? '<h3 class="my-title">' . $title . '</h3>' : '';
 
 	// Sub-field image_advanced.
 	$image_ids = $group['images'] ?? [];
@@ -441,7 +326,7 @@ add_shortcode( 'my_group', function() {
 
 	// Sub-field description.
 	$desc = $group['desc'] ?? '';
-	$output .= '<div class="my-description">' . wpautop( $desc ). '</div>';
+	$output .= $desc ? '<div class="my-description">' . wpautop( $desc ). '</div>' : '';
 
 	return $output;
 } );
@@ -451,14 +336,21 @@ add_shortcode( 'my_group', function() {
 
 ### Sub-field values
 
-It's important to note that the helper function returns only raw array of sub-field values. It doesn't transform value to meaning full details like [rwmb_meta](/functions/rwmb-meta/) function for specific fields. Specifically:
+:::caution
+
+It's important to note that the helper function returns only raw array of sub-field values. It doesn't transform value to meaning full details like [rwmb_meta](/functions/rwmb-meta/) function for specific fields.
+
+:::
+
+These are the raw values of sub-fields:
 
 Sub-field type|Value
 ---|---
-`taxonomy_advanced`, `user`, `post`|Object ID(s)
-`file`, `file_advanced`, `file_upload`, `image`, `image_advanced`, `image_upload`, `single_image`|Attachment ID(s)
+`taxonomy`, `taxonomy_advanced`, `user`, `post`|Object ID(s)
+File and image types: `file`, `file_advanced`, `file_upload`, `image`, `image_advanced`, `image_upload`, `single_image`|Attachment ID(s)
 `map`, `osm`|Text in format "latitude,longitude,zoom"
 `oembed`|URL
+`wysiwyg`|Raw content, without `<p></p>`
 
 To get more details for fields, you might need to add some extra code as below.
 
@@ -491,16 +383,17 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 				'id'   => 'group',
 				'fields' => [
 					[
-						'type' => 'text',
-						'id' => 'name',
+						'id'   => 'name',
 						'name' => 'Name',
-						'std' => 'My Name', // THIS
+                        // highlight-next-line
+						'std'  => 'My Name',
 					],
 					[
 						'type' => 'email',
-						'id' => 'email',
+						'id'   => 'email',
 						'name' => 'Email',
-						'std' => 'myemail@domain.com', // THIS
+                        // highlight-next-line
+						'std'  => 'myemail@domain.com',
 					],
 				],
 			]
@@ -530,22 +423,22 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 				'id'   => 'group',
 				'fields' => [
 					[
-						'type' => 'text',
-						'id' => 'name',
+						'id'   => 'name',
 						'name' => 'Name',
 					],
 					[
 						'type' => 'email',
-						'id' => 'email',
+						'id'   => 'email',
 						'name' => 'Email',
 					],
 				],
 
-				// THIS
+				// highlight-start
 				'std' => [
-					'name' => 'My name',
+					'name'  => 'My name',
 					'email' => 'myemail@domain.com',
 				],
+				// highlight-end
 			]
 		],
 	];
@@ -613,11 +506,12 @@ To change the clone button text, set use the `add_button` parameter like below:
 
 ```php
 [
-	'type' => 'group',
-	'name' => 'Tracks',
-	'id' => 'tracks',
+	'type'       => 'group',
+	'name'       => 'Tracks',
+	'id'         => 'tracks',
+    // highlight-next-line
 	'add_button' => 'Add another track',
-	'fields' => [
+	'fields'     => [
 		// Sub-fields here.
 	],
 ],
