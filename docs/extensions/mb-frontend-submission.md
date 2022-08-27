@@ -41,7 +41,7 @@ Attributes|Description
 ---|---
 `id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas.
 `ajax`|Enable Ajax submission. `true` or `false` (default).
-`edit`|Allow users to edit the post after submitting. `true` or `false` (default). If `true` then ajax attribute will be setted to `false`.
+`edit`|Allow users to edit the post after submitting. `true` or `false` (default). If `true` then `ajax` attribute will be disabled, e.g. set to `false`.
 `allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
 `force_delete`|Whether to delete the submitted post permanently or temporarily (move to Trash).
 `post_type`|The submitted post type. Optional. Default is the first post type defined in the meta box. If meta box is made for multiple post types, you should set this attribute to the correct one.
