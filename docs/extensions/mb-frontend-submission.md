@@ -55,6 +55,7 @@ Attributes|Description
 `label_date` | Label for post date field.
 `label_thumbnail` | Label for post thumbnail field.
 `submit_button`|The submit button text.
+`add_button`|The add new button text.
 `delete_button`|The delete button text.
 `redirect`|Custom redirect URL.
 `confirmation`|The text for the confirmation message when the form is successfully submitted.
