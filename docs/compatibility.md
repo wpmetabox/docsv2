@@ -60,6 +60,7 @@ Meta Box has a built-in integration for these multilingual plugins which allows 
 ### Others
 
 - [Auto Listings](https://wpautolistings.com/)
+- [WordPress Ultimate CSV, XML Importer Pro](https://www.smackcoders.com/wp-ultimate-csv-importer-pro.html/)
 - BlogVault
 - BuddyBoss
 - Click Ranger Pro
