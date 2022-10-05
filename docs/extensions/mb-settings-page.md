@@ -448,6 +448,12 @@ When you add it to your settings page, it will show all of your settings in JSON
 
 The backup field inherits from [`textarea`](/fields/textarea/) so you can customize it the way you want: change the field name, description, input size, etc. This field doesn't require an `ID`. And of course, you should have only one backup field on your settings page.
 
+:::caution
+
+The backup field only works if it is a top field. It does not work if it is a subfield in a group.
+
+:::
+
 ## Hooks
 
 **`mb_settings_page_load` action**
