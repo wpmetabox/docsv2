@@ -50,11 +50,13 @@ This is a sample field settings array when creating this field with code:
 
 If the `timestamp` is set to `true`, the field value is converted to Unix timestamp and saved to the database. Otherwise, the user input value is saved.
 
-## Saving dates in another format
+## Date format
 
-Meta Box already supports customizing the date format **displaying to users** via `js_options`. For example, you can set it to `dd-mm-yy`.
+It's important to understand that the date format showing in the date picker, which is set via `js_options['dateFormat']` is the jQueryUI format. It's **not** the same as PHP date format! By default, Meta Box sets the format to `yy-mm-dd`. You might want to change it to `dd-mm-yy` (for European countries) or `mm/dd/yy` (for US).
 
-However, you might want to save the date in another format, like `Y-m-d`, which allows you to [sort or query posts](https://metabox.io/get-posts-by-custom-fields-in-wordpress/) by date. To do that, set the value of "Save format" to "Y-m-d".
+However, this is the format that users see in the date picker. You might want to save the value in another format, like `2022-10-20`, which allows you to [sort or query posts](https://metabox.io/get-posts-by-custom-fields-in-wordpress/) by date. To do that, set the value of "Save format" to `Y-m-d`. Unlike the above, the saved format **is the PHP date format**, which is similar to PHP's `date()` function.
+
+Why is the difference? Because the plugin depends on jQueryUI to render the date picker, so we must use its format. On the back end, we can use what PHP provides us.
 
 If you use code, then the field settings will look like this:
 
