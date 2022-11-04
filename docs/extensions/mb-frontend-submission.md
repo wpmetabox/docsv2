@@ -44,6 +44,7 @@ Attributes|Description
 `edit`|Allow users to edit the post after submitting. `true` or `false` (default). If `true` then `ajax` attribute will be disabled, e.g. set to `false`.
 `allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
 `force_delete`|Whether to delete the submitted post permanently or temporarily (move to Trash).
+`show_add_more`|Show add new button after submit. Default is false.
 `post_type`|The submitted post type. Optional. Default is the first post type defined in the meta box. If meta box is made for multiple post types, you should set this attribute to the correct one.
 `post_id`|The post ID. Optional. Used when you want to update an existing post. If you want to pass the ID of the current post, set it to `current`.
 `post_status`|The status for submitted posts. See [the list here](https://codex.wordpress.org/Post_Status).
@@ -54,6 +55,7 @@ Attributes|Description
 `label_date` | Label for post date field.
 `label_thumbnail` | Label for post thumbnail field.
 `submit_button`|The submit button text.
+`add_button`|The add new button text.
 `delete_button`|The delete button text.
 `redirect`|Custom redirect URL.
 `confirmation`|The text for the confirmation message when the form is successfully submitted.
