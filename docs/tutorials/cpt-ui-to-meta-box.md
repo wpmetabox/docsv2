@@ -1,49 +1,49 @@
 ---
-title: How to Move All Custom Post Types and Custom Taxonomies from CPT UI to Meta Box
+title: Moving custom post types & taxonomies from CPT UI to Meta Box
 ---
 
-You can move data from the <strong>CPT UI</strong> to the <strong>Meta Box</strong> with the help of the <strong>MB Custom Post Types</strong> <strong>&amp; Taxonomies</strong> extensions. It will save a lot of time and shorten the process dramatically.
+You can move data from the **CPT UI** to the **Meta Box** with the help of the **MB Custom Post Types** **&amp; Taxonomies** extensions. It will save a lot of time and shorten the process dramatically.
 
-<h2>Step 1: Check and Backup the Data</h2>
+## Backing up the data
 
-<strong><ins>Note</ins></strong>: Remember to back up your data before migrating to avoid unexpected events.
+**Note**: Remember to back up your data before migrating to avoid unexpected events.
 
-Here is my example. I have this <strong>Companies</strong> post type created by <strong>CPT UI</strong> with all the posts inside.
+Here is my example. I have this **Companies** post type created by **CPT UI** with all the posts inside.
 
-<img src="https://i.imgur.com/vyTY90m.png" alt="Post typed created by CPU UI" width="1200" height="602" />
+![Post typed created by CPU UI](https://i.imgur.com/vyTY90m.png)
 
-As you can see in the <strong>Plugin</strong> menu, the <strong>CPT UI</strong> has already been activated.
+As you can see in the **Plugin** menu, the **CPT UI** has already been activated.
 
-<img src="https://i.imgur.com/U4ZKxGf.png" alt="Activate the CPU UI" width="1560" height="636" />
+<img alt="Activate the CPU UI" height="636" src="https://i.imgur.com/U4ZKxGf.png" width="1560">
 
 I will now proceed to transfer the data.
 
-<h2>Step 2: Install the MB Custom Post Type &amp; Custom Taxonomies Plugin</h2>
+## Installing plugins
 
-I'll install and activate <strong>MB Custom Post Types</strong> &amp; <strong>Custom Taxonomies</strong>.
+I'll install and activate **MB Custom Post Types** &amp; **Custom Taxonomies**.
 
-After that, the new <strong>Post Types</strong> menu appears on the <strong>Dashboard</strong> along with the <strong>CPT UI Migration sub-menu</strong>.
+After that, the new **Post Types** menu appears on the **Dashboard** along with the **CPT UI Migration sub-menu**.
 
-<img src="https://i.imgur.com/sxEKSlv.png" alt="New Post Type menu appears on the Dashboard" width="1200" height="606" />
+<img alt="New Post Type menu appears on the Dashboard" height="606" src="https://i.imgur.com/sxEKSlv.png" width="1200">
 
-<h2>Step 3: Migrating the Data</h2>
+## Migrating the data
 
-Go to the <strong>Post Types</strong> menu &gt; <strong>CPT UI Migration</strong> &gt; Click the <strong>Migrate</strong> button.
+Go to the **Post Types** menu &gt; **CPT UI Migration** &gt; Click the **Migrate** button.
 
-<img src="https://i.imgur.com/FRk0drJ.png" alt="Click the Migrate button in the Post Types menu" width="1200" height="603" />
+<img alt="Click the Migrate button in the Post Types menu" height="603" src="https://i.imgur.com/FRk0drJ.png" width="1200">
 
 When the process finishes, it will show a "Done" message.
 
-<strong>Note</strong>: The <strong>CPT UI</strong> menu will automatically disappear when the migration process finishes. This is because Meta Box automatically deactivated it to avoid conflict and errors caused by registering the same post type.
+**Note**: The **CPT UI** menu will automatically disappear when the migration process finishes. This is because Meta Box automatically deactivated it to avoid conflict and errors caused by registering the same post type.
 
-<h2>Step 4: Recheck the Data After Migration</h2>
+## Validating
 
 The Companies post type and all the terms in the Company Types taxonomy are still there. They are the new ones created by Meta Box. It also means that all the data was migrated successfully.
 
-<img src="https://i.imgur.com/x7i0sB9.png" alt="The Companies post type has successfully migrated." width="1200" height="606" />
+<img alt="The Companies post type has successfully migrated." height="606" src="https://i.imgur.com/x7i0sB9.png" width="1200">
 
-And the <strong>CPT UI</strong> has already been deactivated.
+And the **CPT UI** has already been deactivated.
 
-<img src="https://i.imgur.com/U4ZKxGf.png" alt="The CPT UI has already been deactivated" width="1560" height="636" />
+<img alt="The CPT UI has already been deactivated" height="636" src="https://i.imgur.com/U4ZKxGf.png" width="1560">
 
 The migration has been done.
