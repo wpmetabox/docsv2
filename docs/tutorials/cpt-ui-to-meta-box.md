@@ -6,7 +6,11 @@ You can move data from the **CPT UI** to the **Meta Box** with the help of the *
 
 ## Backing up the data
 
-**Note**: Remember to back up your data before migrating to avoid unexpected events.
+:::caution
+
+Remember to back up your data before migrating to avoid unexpected events.
+
+:::
 
 Here is my example. I have this **Companies** post type created by **CPT UI** with all the posts inside.
 
@@ -14,7 +18,7 @@ Here is my example. I have this **Companies** post type created by **CPT UI** wi
 
 As you can see in the **Plugin** menu, the **CPT UI** has already been activated.
 
-<img alt="Activate the CPU UI" height="636" src="https://i.imgur.com/U4ZKxGf.png" width="1560">
+![Activate the CPU UI](https://i.imgur.com/U4ZKxGf.png)
 
 I will now proceed to transfer the data.
 
@@ -24,13 +28,13 @@ I'll install and activate **MB Custom Post Types** &amp; **Custom Taxonomies**.
 
 After that, the new **Post Types** menu appears on the **Dashboard** along with the **CPT UI Migration sub-menu**.
 
-<img alt="New Post Type menu appears on the Dashboard" height="606" src="https://i.imgur.com/sxEKSlv.png" width="1200">
+![New Post Type menu appears on the Dashboard](https://i.imgur.com/sxEKSlv.png)
 
 ## Migrating the data
 
 Go to the **Post Types** menu &gt; **CPT UI Migration** &gt; Click the **Migrate** button.
 
-<img alt="Click the Migrate button in the Post Types menu" height="603" src="https://i.imgur.com/FRk0drJ.png" width="1200">
+![Click the Migrate button in the Post Types menu](https://i.imgur.com/FRk0drJ.png)
 
 When the process finishes, it will show a "Done" message.
 
@@ -40,10 +44,10 @@ When the process finishes, it will show a "Done" message.
 
 The Companies post type and all the terms in the Company Types taxonomy are still there. They are the new ones created by Meta Box. It also means that all the data was migrated successfully.
 
-<img alt="The Companies post type has successfully migrated." height="606" src="https://i.imgur.com/x7i0sB9.png" width="1200">
+![The Companies post type has successfully migrated](https://i.imgur.com/x7i0sB9.png)
 
 And the **CPT UI** has already been deactivated.
 
-<img alt="The CPT UI has already been deactivated" height="636" src="https://i.imgur.com/U4ZKxGf.png" width="1560">
+![The CPT UI has already been deactivated](https://i.imgur.com/U4ZKxGf.png)
 
 The migration has been done.
