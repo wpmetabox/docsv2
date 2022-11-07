@@ -1,5 +1,6 @@
 ---
 title: Moving custom post types & taxonomies from CPT UI to Meta Box
+image: https://i.imgur.com/vyTY90m.png
 ---
 
 You can move data from the **CPT UI** to the **Meta Box** with the help of the **MB Custom Post Types** **&amp; Taxonomies** extensions. It will save a lot of time and shorten the process dramatically.
