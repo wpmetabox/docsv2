@@ -25,7 +25,7 @@ Here are the tools we need:
 * <a href="https://wordpress.org/plugins/meta-box/">Meta Box plugin</a>: install this plugin on all sites to have a framework to create custom fields. It’s free and available on <a href="https://wordpress.org/plugins/meta-box/">wordpress.org</a>.
 * <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>: activate this extension on the original site where you created the custom fields.
 
-## Create field groups and custom fields
+## Creating field groups and custom fields
 
 If you already have custom fields, you can move to the next step. In case you want to create a sample of custom fields and then paste them into sites, let’s do it.
 
@@ -37,7 +37,7 @@ For instance, I created a field group like this:
 
 ![Example of the created group field](https://i.imgur.com/hUeyTAx.png)
 
-## Export the code of custom fields
+## Exporting the code of custom fields
 
 Go back to the field group editor. Press the **Get PHP Code button** &gt; **Generate** to generate the code.
 
@@ -49,7 +49,7 @@ Remember that this is the code of a field group, so you’re exporting all the c
 
 If your field group includes several custom fields and you want to clone some specific ones only, you need to separate them into different field groups and then export each one.
 
-## Import code to another website
+## Importing code to another website
 
 Next, on the website where you want to paste the code, go to **Appearance** &gt; **Theme File Editor** and open the **functions.php** file to embed the copied code.
 
