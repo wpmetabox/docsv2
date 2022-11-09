@@ -5,6 +5,8 @@ title: Custom fields vs. Custom taxonomies, when to (not) use?
 With the help of <a href="https://metabox.io/">Meta Box</a>, today you can easily create both custom fields and custom taxonomies to store data for the custom post types. However, many users may be confused about when they should use each of them. Let’s clarify it.
 
 ## Why are custom fields and taxonomies necessary?
+### Why are custom fields and taxonomies necessary?
+#### Why are custom fields and taxonomies necessary?
 
 Since version 3.0, WordPress gives you the capability to add your own custom post types and to use them in different ways. Your website can contain more content types than just "post". They can be "listing" for a real estate website, "product" for an e-commerce website, or "hotel" for a travel website.
 
