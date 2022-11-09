@@ -10,7 +10,7 @@ Before going to update the field ID, make sure you backup your database first. T
 
 :::
 
-##Method 1: Running SQL in phpMyAdmin
+## Method 1: Running SQL in phpMyAdmin
 
 I’ll change the field’s ID from `location` to `address`.
 
@@ -26,7 +26,7 @@ Go to the SQL tab and enter the SQL query above, then click the Run button to ex
 
 ![Enter the SQL query above in the SQL](https://i.imgur.com/BIl1IaJ.png)
 
-##Method 2: Using a Functionality Plugin
+## Method 2: Using a Functionality Plugin
 
 If you can’t access phpMyAdmin, you can create a functionality plugin that can help you perform the same SQL query.
 
