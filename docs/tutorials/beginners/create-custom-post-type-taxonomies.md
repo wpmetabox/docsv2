@@ -89,7 +89,7 @@ To choose the features which you want the post type to have, go to the **Support
 
 ![Choose more features for the post type](https://i.imgur.com/9n9pBqx.png)
 
-### Set taxonomies for the post type
+### Setting taxonomies for the post type
 
 In the **Taxonomies** tab, you can see there are several options for you to choose which taxonomies you want to apply the created post type for. If you create any custom post types, they will also appear here. Keep reading to the next part to know how to create custom taxonomies.
 
@@ -99,7 +99,7 @@ After setting up the custom post types, remember to publish the one you created.
 
 ![The created post type will appear in the menu dashboard](https://i.imgur.com/g5Nmc9t.png)
 
-## Create custom taxonomies
+## Creating custom taxonomies
 
 Go to **Meta Box** &gt; **Taxonomies** &gt; **Add New** to create a new custom taxonomy.
 
@@ -109,9 +109,9 @@ Then, you just need to fill in the information of the taxonomy. Similar to creat
 
 ![Fill in the information of the taxonomy](https://i.imgur.com/CohaxS7.png)
 
-## Configure the taxonomy
+## Configuring the taxonomy
 
-### Change the labels
+### Changing the labels
 
 In the **Labels** tab, all options are also generated automatically, but you can change them as well.
 
@@ -131,7 +131,7 @@ For the **Advanced** tab, there are several fields which are similar to the adva
 
 ![Choose the options you want](https://i.imgur.com/ZgYEVsO.png)
 
-### Set post type for the taxonomy
+### Setting post type for the taxonomy
 
 In the event that you want to apply the created taxonomy to a post type, move to the **Post Types** tab and select the post type where you want to show it for.
 
