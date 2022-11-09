@@ -59,8 +59,9 @@ Then click on the **Update File** button.
 
 **Remarks:**
 
-1. There is no need to install the Meta Box Builder on the targeted website, but you must install the Meta Box core plugin on this site to make sure that the embedded code can operate.In case the target is the original website used to create fields, let’s deactivate Meta Box Builder on this site before embedding its code.
-If the field group IDs are iterated, only the last one is accepted. Therefore, make sure the ID of each field group differs from others so all of them can work.
+1. There is no need to install the Meta Box Builder on the targeted website, but you must install the Meta Box core plugin on this site to make sure that the embedded code can operate.
+2. In case the target is the original website used to create fields, let’s deactivate Meta Box Builder on this site before embedding its code.
+3. If the field group IDs are iterated, only the last one is accepted. Therefore, make sure the ID of each field group differs from others so all of them can work.
 
 After embedding the code into another site, the field group with custom fields will display similar to the original site:
 
