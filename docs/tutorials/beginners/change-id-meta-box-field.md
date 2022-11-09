@@ -3,6 +3,7 @@ title: Changing the ID of a Meta Box field
 ---
 
 You’ll have two methods to update the ID of a Meta Box field without having an effect on existing data.
+
 :::caution
 
 Before going to update the field ID, make sure you backup your database first. The methods described here involve running SQL on your database, which can’t revert. Having backups might help you if there's something wrong.
@@ -22,6 +23,7 @@ UPDATE wp_postmeta SET meta_key = 'location' WHERE meta_key = 'address'
 ```
 
 Go to the SQL tab and enter the SQL query above, then click the Run button to execute it.
+
 ![Enter the SQL query above in the SQL](https://i.imgur.com/BIl1IaJ.png)
 
 ##Method 2: Using a Functionality Plugin
@@ -29,6 +31,7 @@ Go to the SQL tab and enter the SQL query above, then click the Run button to ex
 If you can’t access phpMyAdmin, you can create a functionality plugin that can help you perform the same SQL query.
 
 Create a PHP file with the following content:
+
 ```
 <!--?php
 /**
