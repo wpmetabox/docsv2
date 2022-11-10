@@ -6,7 +6,7 @@ With the help of <a href="https://metabox.io/">Meta Box</a>, today you can easil
 
 ## Why are custom fields and taxonomies necessary?
 
-Since version 3.0, WordPress gives you the capability to add your own custom post types and to use them in different ways. Your website can contain more content types than just "post". They can be "listing" for a real estate website, "product" for an e-commerce website, or "hotel" for a travel website.
+WordPress gives you the capability to add your own custom post types and to use them in different ways. Your website can contain more content types than just "post". They can be "listing" for a real estate website, "product" for an e-commerce website, or "hotel" for a travel website.
 
 When creating a listing, for example, the post title and content are not enough, **you may want to add more info such as area, location, and price for the listing**. That’s why we need to use custom fields and custom taxonomies to handle this problem.
 
