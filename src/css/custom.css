@@ -230,8 +230,8 @@ h1.title_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocCategoryGener
 }
 
 .markdown img {
-	height: auto;
-	max-width: 1000px;
+	max-height: 400px;
+	width: auto;
 	display: block;
 	margin-inline: auto;
 	margin-bottom: var(--ifm-leading);
