@@ -4,8 +4,7 @@ title: Creating a custom post type and custom taxonomies
 
 ## Video
 
-[!(https://img.youtube.com/vi/oYrHGOri4w/default.jpg)](https://youtu.be/-oYrHGOri4w)
-
+<LiteYouTubeEmbed id='-oYrHGOri4w' />
 
 ## Before getting started
 
