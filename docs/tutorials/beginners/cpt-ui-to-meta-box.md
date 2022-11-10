@@ -1,5 +1,5 @@
 ---
-title: Moving custom post types & taxonomies from CPT UI to Meta Box
+title: Migrating from CPT UI to Meta Box
 image: https://i.imgur.com/vyTY90m.png
 ---
 
