@@ -14,7 +14,7 @@ When creating a listing, for example, the post title and content are not enough,
 
 <a href="https://metabox.io/what-is-custom-fields-in-wordpress/">Custom fields</a> **are used to store arbitrary extra information for a post**.
 
-**Custom taxonomies are utilized to group posts together.**
+**Custom taxonomies are utilized to group posts together**
 
 Therefore, grouping is the main difference between these two things.
 
