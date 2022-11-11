@@ -14,7 +14,7 @@ Before getting started, make sure you install and activate the <a href="https://
 
 To use this method, you need to have <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a> extension to create custom fields and modify their settings directly in the admin dashboard with the UI interface.
 
-You can go to **My Account** or **Meta Box AIO** to download and activate it.
+You can go to **My Account** or **Meta Box AIO** to download and activate it. 
 
 ### Step 1: Add new fields
 
