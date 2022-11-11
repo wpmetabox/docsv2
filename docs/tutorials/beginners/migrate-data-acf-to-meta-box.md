@@ -1,5 +1,5 @@
 ---
-title: Migrating custom fields data from ACF to Meta Box
+title: Migrating from ACF to Meta Box
 ---
 # Migrating custom fields data from ACF to Meta Box
 
