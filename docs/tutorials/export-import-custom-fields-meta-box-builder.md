@@ -6,7 +6,7 @@ Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/
 
 ## Video Version
 
-<LiteYouTubeEmbed id='D7byaGagM9Y' />
+<LiteYouTubeEmbed D7byaGagM9Y='-oYrHGOri4w' />
 
 ## Step 1: Install and activate Meta Box Builder
 
