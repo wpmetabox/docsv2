@@ -32,7 +32,7 @@ Here we’ll create a field group named **Author** and export/import its setting
 
 ![Create a field group and export import its settings to other sites](https://i.imgur.com/5ZYjwFs.png)
 
-## **Step 3: Export/Import Custom Fields by Meta Box Builder**
+## **Step 3: Export/Import Custom Fields with Meta Box Builder**
 
 ### Export Field Groups and Custom Fields
 
@@ -52,7 +52,7 @@ In case you export several field groups, press the **Bulk actions** dropdown, th
 
 After that, the file that contains the data of the selected field groups will be downloaded automatically.
 
-## Step 4: Import field groups and custom fields to another website
+### Import field groups and custom fields to another website
 
 In the dashboard of another website you want to import the field group, go to **Meta Box** &gt; **Custom Fields** &gt; **Import**.
 
