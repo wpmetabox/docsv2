@@ -6,7 +6,7 @@ With the help of <a href="https://metabox.io/">Meta Box</a>, today you can easil
 
 ## Why are custom fields and taxonomies necessary?
 
-WordPress gives you the capability to add your own custom post types and to use them in different ways. Your website can contain more content types than just "post". They can be "listing" for a real estate website, "product" for an e-commerce website, or "hotel" for a travel website.
+Since version 3.0, WordPress gives you the capability to add your own custom post types and to use them in different ways. Your website can contain more content types than just "post". They can be "listing" for a real estate website, "product" for an e-commerce website, or "hotel" for a travel website.
 
 When creating a listing, for example, the post title and content are not enough, **you may want to add more info such as area, location, and price for the listing**. That’s why we need to use custom fields and custom taxonomies to handle this problem.
 
@@ -56,13 +56,13 @@ In conclusion:
 
 **Querying posts**
 
-You can make a complex query and get your desired posts by using the meta query (with custom fields) and tax_query (with custom taxonomies).
+You can make a complex query and get your desired posts by using the meta query (with custom fields) and `tax_query` (with custom taxonomies).
 
 There are 2 different things between querying posts by custom fields and custom taxonomies:
 
 1. **You can order posts by custom fields, not by taxonomies.**
 
-This is due to the way WordPress saves data. With custom fields, it saves both meta keys and values, thus you can order by values. With taxonomies, it saves only the key (_term_id_) which is a reference to the terms table.
+This is due to the way WordPress saves data. With custom fields, it saves both meta keys and values, thus you can order by values. With taxonomies, it saves only the key (`term_id`) which is a reference to the terms table.
 
 Simply understand that custom fields are added to posts and are considered a part of posts, so you can order them by that. Conversely, taxonomies are groups of posts, thus it doesn’t make sense if you order posts by taxonomy since each term has a group of posts.
 
@@ -76,7 +76,7 @@ Since the taxonomy is a main front-end presentation feature in the WordPress cor
 
 **Taxonomies have templates, whereas custom fields don’t**. This is the significant difference between them.
 
-For custom taxonomies, WordPress supports various hierarchies of templates, namely _taxonomy_-{_taxonomy_}-{_term_}._php_, _taxonomy-{taxonomy}.php, taxonomy.php._
+For custom taxonomies, WordPress supports various hierarchies of templates, namely `taxonomy-{taxonomy}-{term}.php`, `taxonomy-{taxonomy}.php`, `taxonomy.php`.
 
 About custom fields, you don’t have that. You need to make a custom page template, then put a custom query to get posts and use a <a href="https://docs.metabox.io/displaying-fields/">helper function</a> to show the info. You have to do a lot of work by yourself. And as mentioned before, if you have to query by custom fields, make sure you <a href="https://vip.wordpress.com/documentation/querying-on-meta_value/">avoid performance problems</a>.
 
