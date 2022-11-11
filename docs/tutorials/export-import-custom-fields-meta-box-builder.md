@@ -1,5 +1,5 @@
 ---
-title: Exporting and importing custom fields with Meta Box Builder
+title: Export/Import custom fields with Meta Box Builder
 ---
 
 Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/">using code to embed custom fields from one site to others</a>, we could use another method supported by <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>. This extension allows you to export/import custom fields fast and easily.
