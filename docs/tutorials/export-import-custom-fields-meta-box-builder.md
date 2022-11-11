@@ -6,7 +6,7 @@ Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/
 
 ## Video Version
 
-https://youtu.be/D7byaGagM9Y
+<LiteYouTubeEmbed id='D7byaGagM9Y' />
 
 ## Step 1: Install and activate Meta Box Builder
 
