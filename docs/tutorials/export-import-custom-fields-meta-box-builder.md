@@ -22,7 +22,7 @@ After that, you’ll see a new **Meta Box** menu as below:
 
 ![Meta Box menu display like this](https://i.imgur.com/6Z77o0a.png)
 
-## Step 2: Create Custom Fields
+## Step 2: Create custom fields
 
 To export/import custom fields, first, we need to create field groups that contain custom fields.
 
@@ -32,7 +32,7 @@ Here we’ll create a field group named **Author** and export/import its setting
 
 ![Create a field group and export import its settings to other sites](https://i.imgur.com/5ZYjwFs.png)
 
-## **Step 3: Export/Import Custom Fields with Meta Box Builder**
+## **Step 3: Export/Import custom fields with Meta Box Builder**
 
 ### Export Field Groups and Custom Fields
 
@@ -68,7 +68,7 @@ To check whether the field group works well, you might create/edit a page or pos
 
 ![Create or edit a post to check whether the field group works well](https://i.imgur.com/In8WGsj.png)
 
-## Final Words
+## Final words
 
 We’ve introduced another method to transfer custom fields from one site to others using Meta Box Builder. It’s an extremely fast and easy way to do that without touching a line of code. Freely choose any method that is most suitable for your purpose.
 
