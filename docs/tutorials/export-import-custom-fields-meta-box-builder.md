@@ -34,7 +34,7 @@ Here we’ll create a field group named **Author** and export/import its setting
 
 ## **Step 3: Export/Import custom fields with Meta Box Builder**
 
-### Export Field Groups and Custom Fields
+### Export field groups and custom fields
 
 To export the custom fields, go to **Meta Box** &gt; **Custom Fields**.
 
