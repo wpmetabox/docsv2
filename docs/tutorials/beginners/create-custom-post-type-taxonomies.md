@@ -51,7 +51,7 @@ Here are some options you may need:
 * **Public queryable**: it allows to get the taxonomy’s data and display it on the website;
 * **Hierarchical**: it allows to make the post type hierarchical - it means you can have a parent post type and its sub-post types inside;
 * **Show UI**: it allows to show the post type as the menu in the Dashboard;
-* **Show in menu**: once you enable the **Show UI** option, go to specify where to display the post type in the admin menu. There are several options to select like **Show as top-level menu**,** Show as sub-menu of WP Engine**, **Show as sub-menu of Dashboard**, etc.
+* **Show in menu**: once you enable the **Show UI** option, go to specify where to display the post type in the admin menu. There are several options to select like **Show as top-level menu**, **Show as sub-menu of WP Engine**, **Show as sub-menu of Dashboard**, etc.
 
 ![With Show as top-level menu default option, two fields will appear](https://i.imgur.com/oXk1z33.png)
 
