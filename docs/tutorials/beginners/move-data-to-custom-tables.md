@@ -52,7 +52,7 @@ So, you have just created a custom table automatically with **Meta Box Builder.*
 
 From now on, the **new data will be automatically saved in the custom table** whenever you update.
 
-How about the **existing data** of this post type? It is still in the `wp_postmeta` table, so we need to use some code to move it to the new `wp_custom_company`table.
+How about the **existing data** of this post type? It is still in the `wp_postmeta` table, so we need to use some code to move it to the new `wp_custom_company` table.
 
 ## Step 2: Moving the existing data to the new custom table
 
