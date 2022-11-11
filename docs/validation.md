@@ -6,7 +6,7 @@ Meta Box has a built-in validation module for all fields. You can use validation
 
 There are 2 ways of doing validation: basic validation with input attributes and advanced validation with jQuery validation plugin. You can choose which one fits your needs.
 
-## Basic validation with input attributes
+## Basic validation
 
 Meta Box supports [custom attributes](/custom-attributes/) for all input fields. You can use these attributes to validate the values of fields.
 
@@ -56,7 +56,7 @@ If you prefer to [use code to create fields](/creating-fields-with-code/), add p
 ]
 ```
 
-## Advanced validation with jQuery validation plugin
+## Advanced validation
 
 For more advanced validation, including new rules and custom error messages, you might want to use the validation module, powered by the popular [jQuery validation plugin](https://jqueryvalidation.org/). It comes bundled with a useful set of validation methods and an API to write your own methods. All methods come with default error messages in English and translations into 37 other languages.
 
@@ -186,7 +186,9 @@ For the field types "File" and "Image", the input name has the format `_file_fie
 
 ## Remote validation
 
-If you want to validate fields remotely with PHP, use the "remote" parameter for the validation rule array as follows:
+Remote validation is supported by the jQuery validation library, which is used by Meta Box. Using remote validation helps you use server data (such as from post or a settings) and return dynamic error messages.
+
+To validate fields remotely with PHP, use the `remote` parameter for the validation rule array as follows:
 
 ```php
 'validation' => [
@@ -205,7 +207,11 @@ If you want to validate fields remotely with PHP, use the "remote" parameter for
 ],
 ```
 
-The validation performs via an ajax request with action "my_action1". In your theme's `functions.php` file or your plugin, you need to create a callback to handle this ajax request that outputs "true" if the value is valid and "false" otherwise.
+The validation performs via an ajax request with action `my_action1`. In your theme's `functions.php` file or your plugin, you need to create a callback to handle this ajax request that outputs:
+
+- "true" if the value is valid
+- "false" if the value is not valid. In this case, the error message is set in the `messages` array as above
+- A custom string (not "false") if the value is not valid and you want to return it as a custom error message
 
 ```php
 add_action( 'wp_ajax_my_action1', function () {
@@ -214,6 +220,8 @@ add_action( 'wp_ajax_my_action1', function () {
         echo 'true'; // Valid
     } else {
         echo 'false'; // Invalid
+        // or
+        // echo 'This value is invalid, please try again.'; // Custom error message
     }
     die;
 } );
