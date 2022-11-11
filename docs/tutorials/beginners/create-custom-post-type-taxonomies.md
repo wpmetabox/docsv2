@@ -1,5 +1,5 @@
 ---
-title: Creating a custom post type and custom taxonomies
+title: Creating custom post type and taxonomies
 ---
 
 ## Video
