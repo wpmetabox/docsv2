@@ -16,13 +16,15 @@ To move your custom fields' data to a custom table, here are the tools you need:
 * <a href="https://metabox.io/plugins/mb-custom-table/?swcfpc=1">MB Custom Table</a> allows saving custom fields' data in a custom table.
 * <a href="https://metabox.io/plugins/meta-box-builder/?swcfpc=1">Meta Box Builder</a> to have an UI in the back-end to create custom fields for the post type.
 
+
 :::tip
 
-_You can move all the custom fields' data of all custom post types to one custom table. However, it will be difficult to manage, categorize, and may cause confusion for you._
+You can move all the custom fields' data of all custom post types to one custom table. However, it will be difficult to manage, categorize, and may cause confusion for you.
 
-_Thus, we're going to move the data of each post type to a separate custom table. This method is a bit more time-consuming, but in the long run, it will be more beneficial. That's because the custom fields' data of different post types are saved in different tables._
+Thus, we're going to move the data of each post type to a separate custom table. This method is a bit more time-consuming, but in the long run, it will be more beneficial. That's because the custom fields' data of different post types are saved in different tables.
 
- :::
+:::
+
 
 We already have a post type named **Companies** with **Company name**, **Address**, and **Start day** fields. This is the field group of these fields in Meta Box Builder:
 
