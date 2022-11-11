@@ -8,7 +8,7 @@ Instead of rebuilding similar custom fields in different sites, you can use the 
 
 Actually, cloning is copying the code of the meta boxes/custom fields group created on a site, then importing it into another site.
 
-On the other hand, you can create a series of custom fields on a local site only with an adequate configuration as you want. Then, import the code of the needed fields to the target sites.** It ensures that all of the fields which you import into the sites have the same settings.**
+On the other hand, you can create a series of custom fields on a local site only with an adequate configuration as you want. Then, import the code of the needed fields to the target sites. **It ensures that all of the fields which you import into the sites have the same settings**.
 
 Moreover, **there is no need to install any extension of Meta Box on the target sites.**
 
