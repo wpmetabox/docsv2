@@ -6,7 +6,7 @@ By default, WordPress saves custom fields' values in the `wp_postmeta_ table` in
 
 ## Video version
 
-<LiteYouTubeEmbed JaEvtYa4Hcg='-oYrHGOri4w' />
+<LiteYouTubeEmbed id='-JaEvtYa4Hcg' />
 
 ## Before getting started
 
