@@ -8,7 +8,7 @@ Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/
 
 ## Video Version
 
-<LiteYouTubeEmbed id='-BGVY-5W6d7g' />
+<LiteYouTubeEmbed id='BGVY-5W6d7g'/>
 
 ## Before getting started
 
