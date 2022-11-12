@@ -42,15 +42,6 @@ For someone who is not using any page builder on their site, this part may help.
 
 Just go to **Views** and create a new view with this code:
 
-```
-<a class="wp-block-button__link" href="{{ post.view_demo }}">
-    View demo
-</a>
-<a class="wp-block-button__link" href="{{ post.download }}">
-    Download
-</a>
-```
-
 In there, `view_demo` and `download` are custom fields with IDs. By the way, because I’m using the <a href="https://gretathemes.com/wordpress-themes/estar/">eStar</a> theme, I must use the `wp-block-button__link` class to create buttons.
 
 The view will generate a shortcode as you see in the below image. Just copy and embed it somewhere.
