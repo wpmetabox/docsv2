@@ -1,6 +1,8 @@
 ---
 title: Moving custom fields' data to custom tables
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 By default, WordPress saves custom fields' values in the `wp_postmeta_ table` in the database, in which each row stores a custom field's data. If your website has too many custom fields' data, your database will be bloated considerably. This solution is to move your custom fields' data to a custom table in **only ONE row**. Therefore, you can release the burden of your database and improve your website performance dramatically! Now we will do it in action.
 
