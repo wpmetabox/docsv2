@@ -1,75 +1,63 @@
 ---
 title: Export/Import custom fields with Meta Box Builder
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/">using code to embed custom fields from one site to others</a>, we could use another method supported by <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>. This extension allows you to export/import custom fields fast and easily.
 
 ## Video Version
 
-<LiteYouTubeEmbed D7byaGagM9Y='-oYrHGOri4w' />
+<LiteYouTubeEmbed id='-BGVY-5W6d7g' />
 
-## Step 1: Install and activate Meta Box Builder
+## Before getting started
 
-Before getting started, we need to have the <a href="https://metabox.io/">Meta Box plugin</a> and <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a> on 2 websites.
+We need to have the [Meta Box plugin](https://metabox.io/) and [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) on both websites, the original site and targeted one.
 
-You can freely download and activate the <a href="https://metabox.io/">Meta Box plugin</a> on <a href="https://wordpress.org/plugins/meta-box/">wordpress.org</a> to have a framework to create custom fields.
+You can freely download and activate the Meta Box plugin from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
-![Install and activate Meta Box Builder](https://i.imgur.com/UVojT23.png)
+You can install [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) individually or find it in the Meta Box AIO. This extension provides a UI to create custom fields and the export and import features.
 
-Then, go to **My Account** or use **Meta Box AIO**to install and activate the <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a> to have an intuitive UI to create custom fields in the WordPress page admin.
+After activating two plugins, you’ll see a new **Meta Box** menu as below:
 
-After that, you’ll see a new **Meta Box** menu as below:
+![Meta Box dashboard menu](https://i.imgur.com/qwWGCLu.png)
 
-![Meta Box menu display like this](https://i.imgur.com/6Z77o0a.png)
+## Creating custom fields
 
-## Step 2: Create custom fields
+On the original site, let’s create some fields. We have a tutorial on creating custom fields with Meta Box Builder, please take a look for more detail here.
 
-To export/import custom fields, first, we need to create field groups that contain custom fields.
+Here we’ll create a field group named **Author** and export/import its settings to other sites for example.
 
-We have a tutorial for creating custom fields with Meta Box Builder, please take a look for more detail <a href="https://metabox.io/add-configure-custom-fields-meta-box-builder/">here</a>.
+![Created field group](https://i.imgur.com/W6y5utN.png)
 
-Here we’ll create a field group named **Author** and export/import its settings to other sites.
+## Exporting field groups and custom fields
 
-![Create a field group and export import its settings to other sites](https://i.imgur.com/5ZYjwFs.png)
-
-## **Step 3: Export/Import custom fields with Meta Box Builder**
-
-### Export field groups and custom fields
-
-To export the custom fields, go to **Meta Box** &gt; **Custom Fields**.
-
-Then a list of field groups will appear. Choose the ones you want to export by ticking the checkbox.
+To export the custom fields from the original site, go to **Meta Box** > **Custom Fields**. Then, a list of field groups will appear. Choose the ones you want to export by ticking the checkbox.
 
 Next, there are two ways to export the field groups.
 
 If you choose one field group, simply click on its **Export** option like this:
 
-![Click Export option to choose the field group](https://i.imgur.com/xAI7Fmw.png)
+![Click on Export option](https://i.imgur.com/0nfoK7n.png)
 
 In case you export several field groups, press the **Bulk actions** dropdown, then select the **Export** option and **Apply**.
 
-![Choose Bulk actions to export several fields](https://i.imgur.com/i7vDyQs.png)
+![To choose several field groups, press the Bulk actions](https://i.imgur.com/3uSObWY.png)
 
 After that, the file that contains the data of the selected field groups will be downloaded automatically.
 
-### Import field groups and custom fields to another website
+## Importing field groups and custom fields
 
-In the dashboard of another website you want to import the field group, go to **Meta Box** &gt; **Custom Fields** &gt; **Import**.
+In the dashboard of the targeted website you want to import the field group, go to **Meta Box** > **Custom Fields** > **Import**. 
 
-Then click on **Choose File** and select the downloaded file to import the field group. Here I will choose the **Author** field group that I’ve already created and exported in the previous step.
+Then click on **Choose File** and select the downloaded file to import the field group.
 
-![Import field groups and custom fields to another website](https://i.imgur.com/OYND0jF.png)
+![Click on Choose File and select downloaded file](https://i.imgur.com/9975GzX.png)
 
-Then go back to the field groups list, and you can see the imported field group is displayed as follows:
+Then go back to the field groups list in the **Custom Fields** menu on the targeted site, and you’ll see the imported field group is displayed as follows:
 
-![Imported field groups display as follows](https://i.imgur.com/GwJKWrm.png)
+![Imported field group is displayed](https://i.imgur.com/pUZ5i4f.png)
 
-To check whether the field group works well, you might create/edit a page or post, its data will display similar to the original website.
+To check whether the field group works well, you might create/edit a page or post where the custom fields are located, the fields will display similar to the original website.
 
-![Create or edit a post to check whether the field group works well](https://i.imgur.com/In8WGsj.png)
-
-## Final words
-
-We’ve introduced another method to transfer custom fields from one site to others using Meta Box Builder. It’s an extremely fast and easy way to do that without touching a line of code. Freely choose any method that is most suitable for your purpose.
-
-Please keep track of our next tuts and leave a comment below if you have any ideas for any tutorials.
+![Edit or created a page to check whether the field group works well](https://i.imgur.com/rLSvmBB.png)
