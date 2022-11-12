@@ -215,6 +215,3 @@ Now open the post that we’ve edited and see the result:
 ## Conclusion
 
 We've introduced 3 methods that help save tons of time and effort to create and configure custom fields. Depending on your purpose, choose the method that is most suitable for you. Try it now and if you have any questions, feel free to let us know in the section below.
-
-
- 
