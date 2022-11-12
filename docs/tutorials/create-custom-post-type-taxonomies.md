@@ -6,6 +6,8 @@ title: Creating custom post type and taxonomies
 
 <LiteYouTubeEmbed id='-oYrHGOri4w' />
 
+<LiteYouTubeEmbed id='JD75cXNmIso' />
+
 ## Before getting started
 
 We need the <a href="https://metabox.io/plugins/custom-post-type/">MB Custom Post Types and Custom Taxonomies</a> plugin of Meta Box to create custom post types and custom taxonomies with or without installing the Meta box core plugin. It’s free and available on <a href="https://wordpress.org/">wordpress.org</a>, so just install it.
