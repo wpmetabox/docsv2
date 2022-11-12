@@ -6,7 +6,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/">using code to embed custom fields from one site to others</a>, we could use another method supported by <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>. This extension allows you to export/import custom fields fast and easily.
 
-:::Remarks
+:::info
 
 * This method allows you to choose exporting/importing any field group individually;
 * This method allows you to export/import only the field settings, excluding the data that is stored in the fields.
