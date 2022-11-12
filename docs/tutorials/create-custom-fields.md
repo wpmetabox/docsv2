@@ -1,5 +1,5 @@
 ---
-title: Create and configure custom fields
+title: Creating and configuring custom fields
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
