@@ -1,12 +1,14 @@
 ---
 title: Migrating custom post type and fields from Pods to Meta Box
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 We will move all the data of the custom post type and custom fields created with Pods to Meta Box easily following these few simple steps.
 
 ## Video Version
 
-<LiteYouTubeEmbed id='-iYGAXypM_c0' />
+<LiteYouTubeEmbed id='iYGAXypM_c0' />
 
 ## Overall
 
@@ -71,7 +73,7 @@ Pods and Meta Box support many different fields. Therefore, every time you add a
 
 For example, the corresponding field type of paragraph text (Pods field) is the text area (Meta Box field).
 
-Similar to the previous step, you must enter the corresponding IDs for the custom fields. You can use the different values for other information like Label. However, to make the information consistent, I recommend that you should copy exactly everything.
+Similar to the previous step, you must enter the corresponding IDs for the custom fields. You can use the different values for other information like **Label**. However, to make the information consistent, I recommend that you should copy exactly everything.
 
 ![Enter the corresponding IDs for the post type](https://i.imgur.com/m6f27vU.png)
 
