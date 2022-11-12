@@ -33,7 +33,7 @@ If you can’t access phpMyAdmin, you can create a functionality plugin that can
 Create a PHP file with the following content:
 
 ```php
-<!--?php
+<?php
 /**
 * Plugin Name: Update Your ID
 * Description: This is the plugin to help you update your ID.
@@ -42,11 +42,12 @@ Create a PHP file with the following content:
 **/
 
 function update_your_id() {
-    global $wpdb;global $wpdb;
-    $wpdb--->query( "UPDATE $wpdb-&gt;postmeta SET meta_key = 'location' WHERE meta_key = 'address'" );
+    global $wpdb;
+    $wpdb->query( "UPDATE $wpdb->postmeta SET meta_key = 'location' WHERE meta_key = 'address'" );
 }
 
 update_your_id();
+
 ```
 
 I named the plugin as **Update Your ID**. It has only the `update_your_id` function which runs the SQL query to perform the database update. The SQL query is exactly the same that we have in the previous method.
