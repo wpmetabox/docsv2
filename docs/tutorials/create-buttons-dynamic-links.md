@@ -1,6 +1,7 @@
 ---
 title: Create buttons with dynamic links
 ---
+
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
@@ -71,6 +72,7 @@ I will set a container to contain two buttons right under the featured image of 
 ![Set a container to contain two buttons right under the featured image](https://i.imgur.com/Vk9dVOF.png)
 
 Now, add a button. At the end of the URL section, there is a button linked to dynamic data. Click it, then choose **Meta** / **Custom** **Field** in the **Post** section. Next, scroll your mouse until you find the ID of the wanted field to connect to the button.
+
 ![Set the wanted buttons](https://i.imgur.com/0MnXzkH.png)
 
 The remaining thing to do is style the button as you want.
