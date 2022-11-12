@@ -55,7 +55,14 @@ Go to the **Meta Box** menu &gt; **ACF Migration** &gt; Click the **Migrate** bu
 
 When the process finishes, it will show a “Done” message.
 
-**Note**: The **AFC** menu will automatically disappear when the migration process finishes. This is because **Meta Box** turned the ACF plugin off automatically to avoid problems caused by registering the same post type.
+
+:::caution
+
+The **AFC** menu will automatically disappear when the migration process finishes. This is because **Meta Box** turned the ACF plugin off automatically to avoid problems caused by registering the same post type.
+
+
+:::
+
 
 ## Step 4: Recheck the data after migration
 
