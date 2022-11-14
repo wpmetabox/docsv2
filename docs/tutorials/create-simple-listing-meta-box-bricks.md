@@ -118,15 +118,15 @@ Now, let’s get the data from custom fields to the page. Still in the settings 
 
 I’ll remove the post excerpt and add some fields. Just click **Add Field** > type the name of the custom fields or the taxonomy you want in the **Dynamic Data**. Then, the data of each post will immediately display in the preview.
 
-![Add field then choose a taxonomy from the Dynamic Data box](https://i.imgur.com/xu4e1iK.gifv)
+![Add field then choose a taxonomy from the Dynamic Data box](https://i.imgur.com/xu4e1iK.gif)
 
-![Add field then choose a custom field from the Dynamic Data box](https://i.imgur.com/18b4jUh.gifv)
+![Add field then choose a custom field from the Dynamic Data box](https://i.imgur.com/18b4jUh.gif)
 
 For the logo field. It’s a bit different so pay attention to it.
 
 When you add the logo field, it will display the text only. So if you want to show it as an image, **add an extra attribute** to the logo field as follows.
 
-![Add an extra attribute to the logo field to have the image](https://i.imgur.com/KLRtNPs.gifv)
+![Add an extra attribute to the logo field to have the image](https://i.imgur.com/KLRtNPs.gif)
 
 Furthermore, since Bricks doesn’t support creating classes for the **Posts** element, if you want to style each information later, you can use the **HTML tag**.
 
@@ -156,5 +156,5 @@ In the event that you want to refer to my CSS code, I put it on [Github](https:/
 
 This is how it displays on the frontend. The filters also work well.
 
-![The filters on the archive page also work well](https://i.imgur.com/H0T7qcV.gifv)
+![The filters on the archive page also work well](https://i.imgur.com/H0T7qcV.gif)
 
