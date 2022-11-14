@@ -2,14 +2,14 @@
 title: Create buttons with dynamic links
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-
 Dynamic links are created to show various links in different posts and are displayed as buttons. It can be made in a variety of ways. One method is to use custom fields.
 
 For instance, I have a website about theme reviews here. Each post about a theme has buttons for its own demo and download pages. They are dynamic links.
 
-<img alt="Create buttons with dynamic links" height="496" src="https://i.imgur.com/4eZDsXP.png" width="1000">
+![Create buttons with dynamic links](https://i.imgur.com/4eZDsXP.png)
+
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 ## Video version
 
@@ -41,6 +41,18 @@ After having these fields, please go to the posts and input some links. That way
 For someone who is not using any page builder on their site, this part may help. MB Views from Meta Box will help to create a button easily with a shortcode.
 
 Just go to **Views** and create a new view with this code:
+
+```
+
+<a class="wp-block-button__link" href="{{ post.view_demo }}">
+    View demo
+</a>
+<a class="wp-block-button__link" href="{{ post.download }}">
+    Download
+</a>
+
+```
+
 
 In there, `view_demo` and `download` are custom fields with IDs. By the way, because I’m using the <a href="https://gretathemes.com/wordpress-themes/estar/">eStar</a> theme, I must use the `wp-block-button__link` class to create buttons.
 
