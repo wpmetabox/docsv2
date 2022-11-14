@@ -73,7 +73,7 @@ function estar_child_add_link() {
 
 So, you can see the result like this:.<img alt="The download button is displayed on the front end" height="691" src="https://i.imgur.com/Oaa3J40.png" width="1000">
 
-### Method 2: Using a shortcode
+## Method 2: Using a shortcode
 
 First, add this code to the `functions.php` to create the shortcode:
 
