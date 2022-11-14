@@ -1,5 +1,5 @@
 ---
-Title: Creating a team members page - Meta Box + Elementor
+title: Creating a team members page - Meta Box + Elementor
 ---
 
 
