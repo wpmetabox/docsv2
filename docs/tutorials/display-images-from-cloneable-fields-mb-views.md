@@ -84,7 +84,9 @@ To get the input data from those custom fields to display the brand information,
 
 In the **Template** tab of the view, click the **Insert Field** button to choose the value from which fields to display.
 
+
 ![In the Template tab, you can insert fields to get their data.](https://i.imgur.com/2aD8XWb.png)
+
 
 Since we created custom fields for the **Settings Page**, we go to the **Site** tab then find the created custom fields.
 
