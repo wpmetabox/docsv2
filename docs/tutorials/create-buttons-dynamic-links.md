@@ -1,5 +1,5 @@
 ---
-title: Create buttons with dynamic links
+title: Creating buttons with dynamic links
 ---
 
 Dynamic links are created to show various links in different posts and are displayed as buttons. It can be made in a variety of ways. One method is to use custom fields.
