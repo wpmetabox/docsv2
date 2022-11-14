@@ -1,8 +1,10 @@
 ---
-Title: Create a team members page - Meta Box + Elementor
+Title: Creating a team members page - Meta Box + Elementor
 ---
+
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 
 We will go through some steps to create a team member page using Meta Box and Elementor.
 
@@ -143,6 +145,8 @@ For more advanced styling, I also added some custom CSS. Go to **Posts** element
 
 Here is my CSS code that you can refer to:
 
+
+```
 .team-member .elementor-widget:not(:last-child) {
     margin-bottom: 5px;
 }
@@ -156,7 +160,7 @@ Here is my CSS code that you can refer to:
 .team-member .member-box .elementor-row .elementor-column .elementor-widget-wrap {
     align-content: center;
 }
-
+```
 It displays beautifully as I want.
 
 ![Team Members Page after adding CSS](https://i.imgur.com/b2ENTxJ.png)
