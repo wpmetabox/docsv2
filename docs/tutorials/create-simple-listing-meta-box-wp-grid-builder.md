@@ -12,7 +12,6 @@ We’ll use WP Grid Builder to **create an archive page for restaurants** and th
 
 <LiteYouTubeEmbed id='YP7sMXHdf_Q' />
 
-https://www.youtube.com/watch?v=YP7sMXHdf_Q
 
 ## Before getting started
 
