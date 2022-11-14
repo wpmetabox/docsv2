@@ -36,7 +36,7 @@ They are quite simple with a type of URL and there are no special settings.
 
 After having these fields, please go to the posts and input some links. That way, you will have data to check if the buttons work.
 
-## Creating buttons without using any page builder
+## Creating buttons without page builder
 
 For someone who is not using any page builder on their site, this part may help. MB Views from Meta Box will help to create a button easily with a shortcode.
 
