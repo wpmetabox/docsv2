@@ -77,25 +77,28 @@ So, you can see the result like this:.<img alt="The download button is displayed
 
 First, add this code to the `functions.php` to create the shortcode:
 
+
 ```
 add_shortcode( 'estar_button_download', 'estar_button_download');
 function estar_button_download() {
-	ob_start();
-	?>
-	<div class="document_link_download abc">
-		<?php
-		$files = rwmb_meta( 'file_download' );
-		foreach ( $files as $file ) : ?>
-		<a class="document_link" href="<?php echo $file['url'] ?>" target="_blank">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-			<?php esc_html_e( 'Download document', 'estar' ) ?>		
-		</a>
+    ob_start();
+    ?>
+    <div class="document_link_download abc">
+        <?php
+	$files = rwmb_meta( 'file_download' );
+	foreach ( $files as $file ) : ?>
+		
+	<a class="document_link" href="<?php echo $file['url'] ?>" target="_blank">
+	    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+	    <?php esc_html_e( 'Download document', 'estar' ) ?>		
+	</a>
 
-		<?php endforeach ?>
-	</div>
-	<?php
-	return ob_get_clean();
+	<?php endforeach ?>
+    </div>
+    <?php
+    return ob_get_clean();
 }
+
 ```
 
 <strong>In there</strong>: `estar_button_download` is the shortcode for the download button (you can name it as whatever you want). Then, you just need to insert this shortcode in the wanted positions, such as posts, pages, and widgets.</pre>
