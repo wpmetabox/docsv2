@@ -1,5 +1,5 @@
 ---
-title: Create a recipe - Meta Box + Elementor
+title: Creating a recipe - Meta Box + Elementor
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
