@@ -1,5 +1,5 @@
 ---
-Title: Creating a video gallery page - Meta Box + Oxygen
+title: Creating a video gallery page - Meta Box + Oxygen
 ---
 
 
