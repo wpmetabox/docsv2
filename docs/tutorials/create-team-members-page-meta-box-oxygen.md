@@ -1,5 +1,5 @@
 ---
-title: Create a team members page - Meta Box + Oxygen
+title: Creating a team members page - Meta Box + Oxygen
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
