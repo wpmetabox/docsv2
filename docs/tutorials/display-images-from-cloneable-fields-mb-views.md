@@ -1,5 +1,5 @@
 ---
-title: Display images from cloneable fields - MB Views
+title: Displaying images from cloneable fields - MB Views
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -37,9 +37,9 @@ In the **Admin Dashboard**, go to **Meta Box** &gt; **Custom Fields** &gt; **Add
 <table>
 <tbody>
 <tr>
-<td> **Field** </td>
-<td> **Types of Field** </td>
-<td> **ID** </td>
+<td> Field </td>
+<td> Types of Field </td>
+<td> ID </td>
 </tr>
 <tr>
 <td>Brand Group</td>
