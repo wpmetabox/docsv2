@@ -8,7 +8,7 @@ Here is an example of this practice with hotels filtered by location:
 
 ![Example of seraching posts by taxonomy](https://imgur.com/V5kT58q.png)
 
-## Before Getting Started
+## Before Getting Starte
 
 In addition to using the **Meta Box Core Plugin**, ensure you already have the **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**. It is a free extension of Meta Box and is used to create custom post types and custom taxonomies.
 
