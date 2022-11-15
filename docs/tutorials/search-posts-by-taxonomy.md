@@ -68,7 +68,7 @@ Let’s use ajax to filter so people can click the **Search** button without rel
 
 Add the following code to the `functions.php` file: 
 
-```
+```php
 function justread_custom_scripts() {
     $terms = get_terms( array(
         'taxonomy'   => 'location',
@@ -93,9 +93,9 @@ Explanation:
 * `'wp_enqueue_scripts'`: it’s the hook used to declare the filter-hotel.js file that I‘ll create later;
 * `wp_localize_script ()`: a function that helps transfer the value of the variable 'ajax_url' from the functions.php file to the filter-hotel.js file.
  
-Next, add the following code to functions.php to return the custom post type data as JSON when someone clicks the **Search** button.
+Next, add the following code to `functions.php` to return the custom post type data as JSON when someone clicks the **Search** button.
 
-```
+```php
 function justread_filter_hotel() {
     $location = $_POST['location'];
     $query_arr = array(
@@ -137,8 +137,8 @@ Explanation:
 * `'location'`: the ID of the custom taxonomy that we created in step 1 for the location;
 * `'wp_ajax_justread_filter_hotel' and 'wp_ajax_nopriv_justread_filter_hotel`': they’re two hooks to perform ajax. They’re named according to the following rules: wp_ajax_my_action and wp_ajax_nopriv_my_action. In this example, my_action is justread_filter_hotel.
 
-Also, in the theme folder, let’s create another file named filter-hotel.js with the following content: 
-```
+Also, in the theme folder, let’s create another file named `filter-hotel.js` with the following content: 
+```js
 jQuery( function ( $ ) {
     function filterHotel() {
         var location = ajax_object.location_autocomplete;
