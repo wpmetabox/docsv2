@@ -1,5 +1,5 @@
 ---
-title: Creating a recipe - Meta Box + Zion
+title: Create a recipe - Meta Box + Zion
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
