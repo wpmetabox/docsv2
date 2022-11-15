@@ -46,7 +46,7 @@ First, create a file named single `[$custom_post_type_slug].php` and put it into
 
 Open that file, and get value from each custom field with the code below:
 
-Get the value of the text, number, or select fields:
+### Get the value of the text, number, or select fields:
 
 To get value from these types of field, use this function:
 
@@ -81,7 +81,7 @@ Here:
 * `array( 'size' => 'thumbnail' )`: is an array of parameters to stipulate how the value will display.
 
 In this case, we will get the image from the Gallery field like this:
-```
+```php
 <?php
 $gallery = rwmb_meta( 'car_gallery', array( 'size' => 'thumbnail', 'limit' => 5 ) );
 foreach ( $gallery as $img ) {
