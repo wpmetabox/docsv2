@@ -102,7 +102,7 @@ Go back to the page editor with Oxygen. For easy styling, you can add some **div
 
 You can change the layout of the gallery in the settings of the **Repeater**, or choose each component and change its settings.
 
-(anh)
+![Change the layout of the gallery in the settings](https://i.imgur.com/9a01tAh.png)
 
 If you want to have some advanced style for the page, you should use some CSS codes. Go to **Manage** > **Stylesheets** > **Add Stylesheet** and add some code.
 
