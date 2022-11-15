@@ -85,8 +85,8 @@ Choose **Meta Box gallery** in the **Carousel content** section, and fill in the
 
 ![set the gallery](https://i.imgur.com/eyUWeFG.png)
 
-You can move to the **Advanced** tab to set the slider display as you want.
-
+You can move to the **Advanced** tab to set the slider display as you want
+  
 Go to the second column with the 2nd **div** tag. To get the title of the post, which is the name of the product, add a **Heading** component. Then, insert data from the post title into this component.
 
 ![insert data from the title of the post](https://i.imgur.com/MZf00m2.gif)
