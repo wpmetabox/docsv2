@@ -1,5 +1,5 @@
 ---
-title: Display the latest products section - Meta Box + Zion
+title: Displaying the latest products section - Meta Box + Zion
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
