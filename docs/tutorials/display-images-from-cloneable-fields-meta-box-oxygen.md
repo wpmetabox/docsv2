@@ -111,6 +111,7 @@ Next, add a Code Block inside the Div. Then, add code to the PHP&amp;HTML sectio
 
 I’m using this code, you can refer to it.
 
+```php
 <?php
 $group = rwmb_meta( 'brand_group', ['object_type' => 'setting'], 'brand' );
 ?>
@@ -131,7 +132,7 @@ $group = rwmb_meta( 'brand_group', ['object_type' => 'setting'], 'brand' );
         </div>
     <?php endforeach; ?>
 </div>
-
+```
 **Explanation**
 * `$group = rwmb_meta( 'brand_group', ['object_type' => 'setting'], 'brand' );`create the $group variable to get the value of the field which has the ID as brand_group, from the object which has type as settings page and name as Brands. You can change the name of this variable as you want, but please make sure you input exactly the field ID and object name as yours.
 * `<?php foreach( $group as $value): ?>`:since the brand_group the field is cloneable, I create a loop to get value from the $group variable.
@@ -140,40 +141,43 @@ $group = rwmb_meta( 'brand_group', ['object_type' => 'setting'], 'brand' );
 * `img src="<?php echo $image['url']?>"/> and <img src="<?php echo $value['logo_url'] ?>"/>`:display image from the corresponding returned url.
 * `<?php echo $value['brand_name'] ?>`: get and display the value from the field brand_name.
 
+```
 <?php if (!empty($image)): ?>
     <img src="<?php echo $image['url']?>"/>
+```
 
-If the $image variable doesn't have a value, we'll use the returned value to show the uploaded image.
+If the `$image` variable doesn't have a value, we'll use the returned value to show the uploaded image.
 
+```
 <?php elseif (!empty($value['brand_logo_url'])): ?>
     <img src="<?php echo $value['logo_url'] ?>"/>
+```
 
-If there is any value in the URL field, which has ID brand_logo_url, we will display the image from that link.
-
+If there is any value in the **URL** field, which has ID `brand_logo_url`, we will display the image from that link.
+```
 <?php else: ?>
     <img src="<?php echo $image['url']?>"/>
+```
 
+If both of these fields have a value, we set priority here to display only the image from the **Single Image**.
 
-If both of these fields have a value, we set priority here to display only the image from the Single Image.
-
-After adding code, click Apply Code.
+After adding code, click **Apply Code**.
 
 Now, you can see all of the brand logos, along with their names, displayed in the live preview already.
 
-
-https://i.imgur.com/T2ZUjxs.png
+![After editing with Oxygen, the brand logos along with their names displayed already.](https://i.imgur.com/T2ZUjxs.png)
 
 But it hasn’t looked good yet. Thus, we’ll need some CSS to make it look better.
 
-Step 4: Style the section using CSS
+## Step 4: Style the section using CSS
 
-From the Primary tab in the page editor by Oxygen, choose CSS to style the section.
+From the **Primary** tab in the page editor by Oxygen, choose **CSS** to style the section.
 
-
-https://i.imgur.com/R8mzxkU.png
+![Choose CSS to style the section](https://i.imgur.com/R8mzxkU.png)
 
 You can refer to this CSS.
 
+```css
 .brand-group {
     padding-left: calc(30px/2);
     padding-right: calc(30px/2);
@@ -199,13 +203,12 @@ You can refer to this CSS.
     font-weight: 700;
 	text-transform: uppercase;
 }
+```
 
-
-https://i.imgur.com/qbSpxxt.png
+![Add the code](https://i.imgur.com/qbSpxxt.png)
 
 Here is the result.
 
-
-https://i.imgur.com/I21QKgJ.png
+![The result after all steps](https://i.imgur.com/I21QKgJ.png)
 
 
