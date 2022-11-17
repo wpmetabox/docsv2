@@ -550,6 +550,10 @@ summary {
 }
 .tutorials img{
 	border-radius: 0;
+	width: 100%;
+	height: auto;
+	max-height: unset;
+	margin: 0;
 }
 .tutorials_banner .banner_left--item1 { grid-area: item1; }
 .tutorials_banner .banner_right--item2 { grid-area: item2; }
@@ -561,60 +565,6 @@ summary {
     'item1 item1 item2 item2'
     'item1 item1 item3 item4';
 	grid-gap: 0.75rem;
-}
-
-.tutorials_banner a{
-	position: relative;
-}
-.tutorials_banner a::before{
-	content: '';
-	background: linear-gradient(0deg, rgba(16, 19, 31, 0.9) 0%, rgba(16, 19, 31, 0.1) 100%);
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	position: absolute;
-}
-.tutorials_banner .cards{
-	position: absolute;
-	left: 20px;
-	right: 20px;
-	bottom: 20px;
-}
-.tutorials_banner .cards_category{
-	font-weight: 400;
-	color: #fff;
-	display: inline-block;
-	margin-bottom: 10px;
-}
-
-.banner_left .cards_category{
-	padding: 0px 12px 4px 12px;
-	background: #FFB800;
-	font-size: 20px;
-	line-height: 27px;
-}
-.banner_left .cards_title{
-	color: #fff;
-	font-size: var( --ifm-h1-font-size );
-	display: block;
-}
-
-.banner_right .cards_category{
-	padding: 2px 8px 4px 8px;
-	background: #000;
-	font-size: 14px;
-	line-height: 17px;
-}
-.banner_right .cards_title{
-	color: #fff;
-	display: block;
-}
-
-.banner_right--bottom .cards_title{
-	color: #fff;
-	font-size: var( --ifm-h3-font-size ) ;
-	display: block;
 }
 
 .tutorials_trending{
@@ -716,20 +666,6 @@ summary {
 @media ( max-width:991px ){
 	.tutorials_banner{
 		grid-template-areas:'item1''item2''item3''item4';
-	}
-	.tutorials_banner .cards{
-		left: 15px;
-		bottom: 15px;
-		right: 15px;
-	}
-	.tutorials_banner .cards_category{
-		font-size: 14px;
-		line-height: 17px;
-		margin-bottom: 5px;
-	}
-	.tutorials_banner .cards_title{
-		font-size: 18px;
-		line-height: 22px;
 	}
 
 	.tutorials_trending .trending{

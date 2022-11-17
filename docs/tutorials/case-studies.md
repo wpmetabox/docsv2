@@ -10,7 +10,7 @@ Watch these videos for a basic introduction to use Meta Box and working with its
 		<div className="items">
 			<a href="/tutorials/beginners/"><h2 className="items_heading">Beginners</h2></a>
 			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
-				<img src="/tutorials/category-1.png"/>
+				<img src="/tutorials/case-1.png"/>
 			</a>
 			<ul>
 				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
@@ -22,7 +22,7 @@ Watch these videos for a basic introduction to use Meta Box and working with its
 		<div className="items">
 			<a href="/tutorials/general-guide/"><h2 className="items_heading">General Guide</h2></a>
 			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
-				<img src="/tutorials/category-2.png"/>
+				<img src="/tutorials/case-2.png"/>
 			</a>
 			<ul>
 				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
@@ -34,7 +34,7 @@ Watch these videos for a basic introduction to use Meta Box and working with its
 		<div className="items">
 			<a href="/tutorials/extensions/"><h2 className="items_heading">Extensions</h2></a>
 			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
-				<img src="/tutorials/category-3.png"/>
+				<img src="/tutorials/case-3.png"/>
 			</a>
 			<ul>
 				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
@@ -46,7 +46,7 @@ Watch these videos for a basic introduction to use Meta Box and working with its
 		 <div className="items">
 			<a href="/tutorials/beginners/"><h2 className="items_heading">Beginners</h2></a>
 			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
-				<img src="/tutorials/category-4.png"/>
+				<img src="/tutorials/case-4.png"/>
 			</a>
 			<ul>
 				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
@@ -58,7 +58,7 @@ Watch these videos for a basic introduction to use Meta Box and working with its
 		<div className="items">
 			<a href="/tutorials/general-guide/"><h2 className="items_heading">General Guide</h2></a>
 			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
-				<img src="/tutorials/category-5.png"/>
+				<img src="/tutorials/case-5.png"/>
 			</a>
 			<ul>
 				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
@@ -70,7 +70,7 @@ Watch these videos for a basic introduction to use Meta Box and working with its
 		<div className="items">
 			<a href="/tutorials/extensions/"><h2 className="items_heading">Extensions</h2></a>
 			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
-				<img src="/tutorials/category-6.png"/>
+				<img src="/tutorials/case-6.png"/>
 			</a>
 			<ul>
 				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
