@@ -78,6 +78,6 @@ Here are the fields that are shown in the field edit. All the information, such 
 
 And the **ACF** has already been deactivated.
 
-!["ACF has already been deactivated](https://i.imgur.com/SHaFa9W.png)
+!["ACF has already been deactivated](https://i.imgur.com/G7trDkv.png)
 
 The migration has been done.
