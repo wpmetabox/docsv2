@@ -8,75 +8,56 @@ Watch these videos for a basic introduction to use Meta Box and working with its
 <div className="category_wrap">
 	<div className="tutorials_category">
 		<div className="items">
-			<a href="/tutorials/beginners/"><h2 className="items_heading">Beginners</h2></a>
-			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
+			<a href=""><h2 className="items_heading">Category Featured Images</h2></a>
+			<a href="">
 				<img src="/tutorials/case-1.png"/>
 			</a>
 			<ul>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-p2-using-meta-box-and-bricks/">How to Create a Simple Listing - P2 - Using Meta Box and Bricks</a></li>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">How to Create a Team Members Page - P2- Using Meta Box and Oxygen</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-using-meta-box-and-wp-grid-builder/">How to Create a Simple Listing Using Meta Box and WP Grid Builder</a></li>
+				<li><a href="">Create category thumbnails & featured Images</a></li>
 			</ul>
 		</div>
 		<div className="items">
-			<a href="/tutorials/general-guide/"><h2 className="items_heading">General Guide</h2></a>
-			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
-				<img src="/tutorials/case-2.png"/>
-			</a>
+			<a href=""><h2 className="items_heading">Simple Listing</h2></a>
+			<img src="/tutorials/case-2.png"/>
 			<ul>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-p2-using-meta-box-and-bricks/">How to Create a Simple Listing - P2 - Using Meta Box and Bricks</a></li>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">How to Create a Team Members Page - P2- Using Meta Box and Oxygen</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-using-meta-box-and-wp-grid-builder/">How to Create a Simple Listing Using Meta Box and WP Grid Builder</a></li>
+				<li><a href="">Using Meta Box + Bricks</a></li>
+				<li><a href="">Using Meta Box + WP Grid Builder</a></li>
 			</ul>
 		</div>
 		<div className="items">
-			<a href="/tutorials/extensions/"><h2 className="items_heading">Extensions</h2></a>
-			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
+			<a href=""><h2 className="items_heading">Extensions</h2></a>
+			<a href="">
 				<img src="/tutorials/case-3.png"/>
 			</a>
 			<ul>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-p2-using-meta-box-and-bricks/">How to Create a Simple Listing - P2 - Using Meta Box and Bricks</a></li>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">How to Create a Team Members Page - P2- Using Meta Box and Oxygen</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-using-meta-box-and-wp-grid-builder/">How to Create a Simple Listing Using Meta Box and WP Grid Builder</a></li>
+				<li><a href="">Using Meta Box + Elementor + WP Grid Builder</a></li>
 			</ul>
 		</div>
 		 <div className="items">
-			<a href="/tutorials/beginners/"><h2 className="items_heading">Beginners</h2></a>
-			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
+			<a href="/tutorials/beginners/"><h2 className="items_heading">Buttons with Dynamic Link</h2></a>
+			<a href="">
 				<img src="/tutorials/case-4.png"/>
 			</a>
 			<ul>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-p2-using-meta-box-and-bricks/">How to Create a Simple Listing - P2 - Using Meta Box and Bricks</a></li>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">How to Create a Team Members Page - P2- Using Meta Box and Oxygen</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-using-meta-box-and-wp-grid-builder/">How to Create a Simple Listing Using Meta Box and WP Grid Builder</a></li>
+				<li><a href="">Create Buttons with Dynamic Link</a></li>
 			</ul>
 		</div>
 		<div className="items">
-			<a href="/tutorials/general-guide/"><h2 className="items_heading">General Guide</h2></a>
-			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
+			<a href=""><h2 className="items_heading">Video Gallery Page</h2></a>
+			<a href="">
 				<img src="/tutorials/case-5.png"/>
 			</a>
 			<ul>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-p2-using-meta-box-and-bricks/">How to Create a Simple Listing - P2 - Using Meta Box and Bricks</a></li>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">How to Create a Team Members Page - P2- Using Meta Box and Oxygen</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-using-meta-box-and-wp-grid-builder/">How to Create a Simple Listing Using Meta Box and WP Grid Builder</a></li>
+				<li><a href="">Using Meta Box + Oxygen</a></li>
 			</ul>
 		</div>
 		<div className="items">
-			<a href="/tutorials/extensions/"><h2 className="items_heading">Extensions</h2></a>
-			<a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">
+			<a href=""><h2 className="items_heading">User Profile Page</h2></a>
+			<a href="">
 				<img src="/tutorials/case-6.png"/>
 			</a>
 			<ul>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p1-using-meta-box-and-elementor/">How to Create a Team Members Page - P1- Using Meta Box and Elementor</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-p2-using-meta-box-and-bricks/">How to Create a Simple Listing - P2 - Using Meta Box and Bricks</a></li>
-				<li><a href="/tutorials/how-to-create-a-team-members-page-p2-using-meta-box-and-oxygen/">How to Create a Team Members Page - P2- Using Meta Box and Oxygen</a></li>
-				<li><a href="/tutorials/how-to-create-a-simple-listing-using-meta-box-and-wp-grid-builder/">How to Create a Simple Listing Using Meta Box and WP Grid Builder</a></li>
+				<li><a href="">Create Custom User Profile Page on Frontend</a></li>
 			</ul>
 		</div>
 	</div>

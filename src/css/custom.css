@@ -33,6 +33,7 @@
 	/* Meta Box blue shades */
 	--color-base: hsl(210, 29%, 24%);
 	--color-dark: hsl(210, 30%, 18%);
+	--color-tutorius: #202E3C;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -49,6 +50,8 @@ html[data-theme='dark'] {
 	--ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
 
 	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, .3);
+
+	--color-tutorius: var(--ifm-font-color-base);
 }
 
 /* Colors */
@@ -602,6 +605,9 @@ summary {
 }
 .tutorials_category img{
 	border-radius: 0;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 .category_wrap .tutorials_category{
 	margin-top: 60px;
@@ -626,9 +632,6 @@ summary {
 }
 .tutorials_category ul li{
 	position: relative;
-	font-size: 1.25rem;
-	font-weight: 500;
-	color: #2B3D4F;
 	padding: 15px 15px 10px 15px;
 	list-style-type: none;
 	border-bottom: 1px solid #B4B4B4;
@@ -643,8 +646,13 @@ summary {
 	top: 30px;
 }
 .tutorials_category ul li a{
-	color: #2B3D4F;
-	font-size: var( --ifm-h4-font-size ) ;
+	font-size: 16px ;
+	line-height: 19px;
+	font-weight: 500;
+	color: var(--color-tutorius);
+}
+.tutorials_category ul li a:hover{
+	color: var(--ifm-menu-color-active);
 }
 .tutorials_category .items_heading{
 	font-size: 20px;
@@ -653,13 +661,13 @@ summary {
 	margin-bottom: 15px;
 }
 .tutorials_category--beginners .items_titles {
-	font-size: 20px ;
-	line-height: 24px;
+	font-size: 16px ;
+	line-height: 19px;
 	font-weight: 500;
-	color: #202E3C;
+	color: var(--color-tutorius);
 }
-.tutorials_category--beginners a{
-	color: #202E3C;
+.tutorials_category--beginners .items :hover .items_titles{
+    color: var(--ifm-menu-color-active);
 }
 
 
