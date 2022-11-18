@@ -4,7 +4,7 @@ title: Reordering posts manually using custom fields
 
 Arranging posts in a custom order will be much easier if you use custom fields. It allows you to set any post first without criteria.
 
-### Before Getting Started
+## Before Getting Started
 
 To get started, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
