@@ -1,5 +1,6 @@
 ---
 title: Creating dynamic favicon in WordPress 
+---
 
 Favicon is a small icon on the browser tab that helps to attract and create a memorable image of the brand in the user’s mind. It is typically 16x16 pixels in size and is kept in a file called `favicon.io` in the server's root folder. Using Meta Box plugin and editing the theme a little bit will help you get it easily. 
 
@@ -23,7 +24,7 @@ Then, name it and publish.
 
 ![Name the created post type](https://i.imgur.com/oOYhUT4.png)
 
-Step 2: Add a new custom field
+## Step 2: Add a new custom field
 
 Go to **Meta Box** menu > **Custom Fields > Add New**.
 
@@ -39,9 +40,9 @@ After filling in the information, move to the **Settings** tab. Then, set the **
 
 Go back to the edit page of the product post. You will see the field and can add an image to the field.
 
-![The fiedls will be shown}[https://i.imgur.com/faszUxs.png
+![The fiedls will be shown](https://i.imgur.com/faszUxs.png)
 
-Step 3: Set the field’s value to be favicon
+## Step 3: Set the field’s value to be favicon
 
 The current favicon of your product page is now the site’s one. Thus, we will replace it with the custom field’s value.
 
@@ -77,4 +78,4 @@ If you need any further parameters for the image field, [this documentation](htt
 
 Save the `functions.php` file and go to the product page. You will see the image displayed as the favicon:
 
-![https://i.imgur.com/RVLyjAd.png
+![The final result](https://i.imgur.com/RVLyjAd.png)
