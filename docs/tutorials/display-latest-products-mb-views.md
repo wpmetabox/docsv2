@@ -1,5 +1,5 @@
 ---
-title: Displaying the latest products section - MB Views
+title: Displaying the latest products - MB Views
 ---
 
 We’ll create a section and choose the products or posts that are the latest ones to display only on the homepage.
