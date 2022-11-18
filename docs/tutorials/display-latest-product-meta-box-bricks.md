@@ -1,5 +1,5 @@
 ---
-title: Displaying the latest products section - Meta Box + Bricks
+title: Displaying the latest products - Meta Box + Bricks
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
