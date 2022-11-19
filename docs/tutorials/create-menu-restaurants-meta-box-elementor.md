@@ -38,7 +38,6 @@ After publishing, we’ll have a new menu named **Restaurants**.
 ## Step 2: Create custom fields
 
 Go to **Meta Box > Custom Fields** to create fields. I’ll create them with the structure like this:
-
 <table>
 <tbody>
 <tr>
