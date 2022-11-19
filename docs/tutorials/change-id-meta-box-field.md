@@ -6,7 +6,7 @@ You’ll have two methods to update the ID of a Meta Box field without having an
 
 :::caution
 
-Before going to update the field ID, make sure you backup your database first. The methods described here involve running SQL on your database, which can’t revert. Having backups might help you if there's something wrong.
+Before going to update the field ID, make sure you [backup your database](https://deluxeblogtips.com/best-wordpress-backup-plugins/) first. The methods described here involve running SQL on your database, which can’t revert. Having backups might help you if there's something wrong.
 
 :::
 
