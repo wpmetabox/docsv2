@@ -63,7 +63,11 @@ function extra_info() {
 * `'Guaranty:'` and `'Color:'` : are the prefixes I added to display along with the field value;
 * `'twentytwenty'` : is the name of the theme I am using.
 
-** Note: My `'color_1'` field has multiple values, so I need to use the loop to call out all the values. In other information fields that only have a unique value, you can use the code as the 'text_1' field.
+:::tip
+
+My `'color_1'` field has multiple values, so I need to use the loop to call out all the values. In other information fields that only have a unique value, you can use the code as the `'text_1'` field.
+
+:::
 
 After that, the values of the field I added will display like this:
 
