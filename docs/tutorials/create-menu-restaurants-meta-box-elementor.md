@@ -42,9 +42,9 @@ Go to **Meta Box > Custom Fields** to create fields. I’ll create them with the
 <table>
 <tbody>
 <tr>
-<td>**Name**</td>
-<td>**Field type**</td>
-<td>**Settings**</td>
+<td> Name </td>
+<td> Field type </td>
+<td> Settings </td>
 </tr>
 <tr>
 <td>Menu Details</td>
