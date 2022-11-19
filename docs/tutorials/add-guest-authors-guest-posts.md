@@ -120,7 +120,7 @@ Back to the page editor of the My Account page, add the below shortcode to its c
 [ mb_user_profile_info id="user-profile" label_submit="Update" ]
 ```
 
-https://i.imgur.com/eQH694C.png
+![Add the shortcode to its content](https://i.imgur.com/eQH694C.png)
 
 In there:
 
