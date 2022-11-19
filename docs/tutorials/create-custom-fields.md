@@ -50,7 +50,7 @@ You also can change this field group ID as you want.
 
 ## Configuring the each custom fields
 
-In the settings of each field, you will have two tabs which are General and Advanced. Let’s get through each one.
+In the settings of each field, you will have two tabs which are **General** and **Advanced**. Let’s get through each one.
 
 ### General settings
 
@@ -85,7 +85,7 @@ This is how they display:
 
 ![Cloneable allows you to add more value](https://i.imgur.com/aShzeEg.png)
 
-If you tick to choose Cloneable option, you’ll see some further settings inside:
+If you tick to choose **Cloneable** option, you’ll see some further settings inside:
 
 ![Some futher settings inside after choosing Cloneable option](https://i.imgur.com/PYGYpHc.png)
 
@@ -118,7 +118,7 @@ The left one is the value of the option. And the right one is the label of the o
 
 You can follow this structure or read for more format of the option in the instruction below the box.
 
-Still in the fields in the kinds of selection, you also have the **Default value** settings. If you enter a value into this box, you always see an option that has been chosen already in the post editor. Then, the user still can change the options as they want. E.g. The first option of my Payment Discount field is also chosen as default like this.
+Still in the fields in the kinds of selection, you also have the **Default value** settings. If you enter a value into this box, you always see an option that has been chosen already in the post editor. Then, the user still can change the options as they want. E.g. The first option of my **Payment Discount** field is also chosen as default like this.
 
 ![How it will display](https://i.imgur.com/2TN713A.png)
 
@@ -138,7 +138,7 @@ These settings will help your field display in the admin area as follows.
 
 ![These settings will help your field display in the admin area like this](https://i.imgur.com/3P2dvo2.png)
 
-And, the Columns settings is provided by the Meta Box Column extension.
+And, the Columns settings is provided by the **Meta Box Column** extension.
 
 ![the Columns settings is provided by the Meta Box Column extension](https://i.imgur.com/XvkBfja.png)
 
@@ -146,7 +146,7 @@ Each row to display the fields will be divided into 12 grids. If you want the fi
 
 ![You can change the number of columns in the box](https://i.imgur.com/swehWP5.png)
 
-If you use the Meta Box Tooltip extension, you will have the Tooltip setting.
+If you use the **Meta Box Tooltip** extension, you will have the **Tooltip** setting.
 
 ![Tooltip setting](https://i.imgur.com/akiR2vj.png)
 
