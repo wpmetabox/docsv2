@@ -125,9 +125,9 @@ Just add this code to the `css/admin.css` file.
 .rwmb-rating input[type=radio]:checked+label:before {
     color: unset;
 }
-
-To get the style in admin, we use the function admin_enqueue_scripts () to enqueue. Please enqueue in the rating.php file as follows:
-
+```
+To get the style in admin, we use the function admin_enqueue_scripts () to enqueue. Please enqueue in the `rating.php` file as follows:
+```
 public static function admin_enqueue_scripts() {
     wp_enqueue_style( 'rwmb-rating', plugin_dir_url( __FILE__ ) . '/css/admin.css', [], '1.0.0' );
 }
@@ -167,7 +167,7 @@ function your_prefix_register_meta_boxes( $meta_boxes ) {
 }
 ```
 
-In there, 'post_types' => ['post'] stipulates the location of the fields as blog posts. 
+In there, `'post_types'` => `['post']` stipulates the location of the fields as blog posts. 
 
 After that, you will see the created custom field display in the post editor.
 
