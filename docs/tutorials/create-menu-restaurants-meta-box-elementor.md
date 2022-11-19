@@ -1,5 +1,5 @@
 ---
-Creating menus for restaurants - Meta Box + Elementor
+title: Creating menus for restaurants - Meta Box + Elementor
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
