@@ -553,10 +553,12 @@ summary {
 }
 .tutorials img{
 	border-radius: 0;
+}
+.tutorials_banner img{
 	width: 100%;
 	height: auto;
 	max-height: unset;
-	margin: 0;
+	float: left;
 }
 .tutorials_banner .banner_left--item1 { grid-area: item1; }
 .tutorials_banner .banner_right--item2 { grid-area: item2; }
@@ -605,9 +607,7 @@ summary {
 }
 .tutorials_category img{
 	border-radius: 0;
-	width: 100%;
-	height: auto;
-	object-fit: cover;
+	float: left;
 }
 .category_wrap .tutorials_category{
 	margin-top: 60px;
@@ -629,6 +629,7 @@ summary {
 	margin: 0;
 	padding: 0;
 	list-style-type: square;
+	clear: both;
 }
 .tutorials_category ul li{
 	position: relative;
@@ -638,12 +639,12 @@ summary {
 }
 .tutorials_category ul li::before{
 	content: "";
-	width: 6px;
-	height: 6px;
+	width: 5px;
+	height: 5px;
 	background: #43A7AB;
 	position: absolute;
 	left: 0px;
-	top: 30px;
+	top: 27px;
 }
 .tutorials_category ul li a{
 	font-size: 16px ;
@@ -660,20 +661,24 @@ summary {
 	font-weight: 700;
 	margin-bottom: 15px;
 }
-.tutorials_category--beginners .items_titles {
+.tutorials_category--new .items_titles {
 	font-size: 16px ;
 	line-height: 19px;
 	font-weight: 500;
 	color: var(--color-tutorius);
+	clear: both;
 }
-.tutorials_category--beginners .items :hover .items_titles{
+.tutorials_category--new .items :hover .items_titles{
     color: var(--ifm-menu-color-active);
 }
 
 
-@media ( max-width:991px ){
+@media ( max-width:996px ){
 	.tutorials_banner{
 		grid-template-areas:'item1''item2''item3''item4';
+	}
+	.tutorials_banner img{
+		width: unset;
 	}
 
 	.tutorials_trending .trending{
@@ -698,9 +703,8 @@ summary {
 		font-size: 22px;
 		margin-bottom: 15px;
 	}
-	.tutorials_category--beginners .items_titles{
+	.tutorials_category--new .items_titles{
 		font-size: 22px;
-		text-align: center;
 	}
 
 }
