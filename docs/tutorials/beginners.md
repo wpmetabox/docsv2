@@ -6,7 +6,7 @@ hide_table_of_contents: true
 Let’s start with some basic pratices with Meta Box.
 
 <div className="category_wrap">
-	<div className="tutorials_category tutorials_category--beginners">
+	<div className="tutorials_category tutorials_category--new">
 		<div className="items">
 			<a href="/tutorials/create-custom-post-type-taxonomies/">
 				<img src="/tutorials/beginners-1.png"/>
