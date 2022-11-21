@@ -31,11 +31,11 @@ Go to **Meta Box > Custom Fields > Add New** to create a new field group. Then, 
 <table>
 <thead>
 <tr>
-<th>**Name**</th>
-<th>**ID**</th>
-<th>**Type**</th>
-<th>**Options**</th>
-<th>**Condition**</th>
+<th> Name </th>
+<th> ID </th>
+<th> Type </th>
+<th> Options </th>
+<th> Condition </th>
 </tr>
 </thead>
 <tbody>
@@ -224,7 +224,6 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 </tr>
 </tbody>
 </table>
-
 
 You can see in the above table, the first field is a **select** field with 3 options. I filled in the options into the **Choice** box as below.
 
