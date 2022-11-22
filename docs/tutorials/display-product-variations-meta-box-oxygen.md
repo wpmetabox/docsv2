@@ -204,11 +204,8 @@ Furthermore, variations are differentiated by color, so we have this code to get
 <?php endforeach; ?>
 ```
 
-In there, I added an **<a>** tag and a dynamic class. There will be different classes for each color and each one will be the name of the color. This class plays an important role in helping us to define which variations are showing.
 
-Then, I added some **div** tags to the code to set elements in a reasonable layout. I also added an attribute named **data-id** in the gallery, price, size, and status sections.
-
-`data-id="<?php echo $price['color_name'] ?>`
+` data-id="<?php echo $price['color_name'] ?>" `
 
 This attribute will obtain the name of the corresponding color, then we’ll know which images, prices, status, or sizes are of which variation. So that we can easily choose which information should be shown to fit the chosen color.
 
@@ -329,7 +326,7 @@ Explanation:
 
 Add code inside the function **custom_enqueue_files()** in the `plugin.php` file in the case you use the 3rd party plugin. Otherwise, add to the `functions.php` to declare all the above js and css files.
 
-````
+```
             wp_enqueue_style('slick', plugin_dir_url( __FILE__ ).'/assets/css/slick.css');
 	wp_enqueue_style('slick-theme', plugin_dir_url( __FILE__ ).'/assets/css/slick-theme.css');
 
