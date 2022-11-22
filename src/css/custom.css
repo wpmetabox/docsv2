@@ -556,8 +556,6 @@ summary {
 	box-shadow: unset;
 }
 .tutorials_banner img{
-	width: 100%;
-	height: auto;
 	max-height: unset;
 	margin: 0;
 	float: left;
@@ -604,10 +602,10 @@ summary {
 	color: var(--ifm-menu-color-active);
 }
 
-/* Beginners */
+/* Category new */
 .tutorials_category{
 	display: grid;
-	grid-template-columns: repeat( auto-fit, 412px );
+	grid-template-columns: repeat( auto-fit, 413px );
 	column-gap: 1.5rem;
 	row-gap: 3rem;
 }
@@ -674,16 +672,9 @@ summary {
 }
 
 
-@media ( max-width:996px ){
+@media ( max-width:767px ){
 	.tutorials_banner{
 		grid-template-areas:'item1''item2''item3''item4';
-	}
-	.tutorials_banner img{
-		width: unset;
-	}
-
-	.tutorials_trending .trending{
-		display: block;
 	}
 
 	.tutorials_trending .trending_category{
