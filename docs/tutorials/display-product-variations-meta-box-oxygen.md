@@ -208,10 +208,8 @@ In there, I added an **<a>** tag and a dynamic class. There will be different cl
 
 Then, I added some **div** tags to the code to set elements in a reasonable layout. I also added an attribute named **data-id** in the gallery, price, size, and status sections.
 
-```
-data-id="<?php echo $price['color_name'] ?>
-```
-  
+`data-id="<?php echo $price['color_name'] ?>`
+
 This attribute will obtain the name of the corresponding color, then we’ll know which images, prices, status, or sizes are of which variation. So that we can easily choose which information should be shown to fit the chosen color.
 
 Apply the code then back to a single product page, you’ll see all the information of product display.
@@ -317,45 +315,43 @@ e.preventDefault();
 ```
 Explanation:
 
-$('.slider-single').slick({ }) to create a slider for the elements that have the .slider-single class. They are product images which I set to display in the large size.
- $('.slider-nav'): to create a slider as well. The elements which have the .slider-nav class are product images which I set to display in the thumbnail size.
-.on('init', function (event, slick) { }): to identify which thumbnail is in the current slide. And, that thumbnail will be added a class as “is active”.
-$('.slider-single').on('afterChange', function (event, slick, currentSlide) { }): to trigger the event that someone clicks on the large image to move to the other one, then the thumbnail slider will be changed to the corresponding thumbnail.
-$('.slider-nav').on('click', '.slick-slide', function (event) { }): to trigger that event when someone clicks on the thumbnail slider. Then, it also displays the corresponding large image in the large slider.
-jQuery(".grouped-product .color-contain-group .color-group .color-name a").click(function (e) { }): to trigger when someone clicks on a product color using the A tag we added in the view.
-jQuery(".color-contain-group .color-group .color-name").removeClass("active"); jQuery(this).show(); jQuery(this).parent().addClass("active"): to remove the active class from the unselected color and add it to the selected one.
-jQuery("div[data-id]").removeClass("active"); jQuery("div[data-id='" + jQuery(this).attr("href").replace("#", "") + "']").addClass("active"): to remove and add the active class to all the elements that have value of the data-id attribute as the name of the color. It means that when you click on a color, all the corresponding information of that variation such as price, size, status, and image gallery will be displayed.
-jQuery('.slider-single').slick('refresh') and jQuery('.slider-nav').slick('refresh'): to refresh both sliders to load new images.
+* `$('.slider-single').slick({ })` to create a slider for the elements that have the .slider-single class. They are product images which I set to display in the large size.
+* `$('.slider-nav')`: to create a slider as well. The elements which have the .slider-nav class are product images which I set to display in the thumbnail size.
+* `.on('init', function (event, slick) { })`: to identify which thumbnail is in the current slide. And, that thumbnail will be added a class as “is active”.
+* `$('.slider-single').on('afterChange', function (event, slick, currentSlide) { })`: to trigger the event that someone clicks on the large image to move to the other one, then the thumbnail slider will be changed to the corresponding thumbnail.
+* `$('.slider-nav').on('click', '.slick-slide', function (event) { })`: to trigger that event when someone clicks on the thumbnail slider. Then, it also displays the corresponding large image in the large slider.
+* `jQuery(".grouped-product .color-contain-group .color-group .color-name a").click(function (e) { })`: to trigger when someone clicks on a product color using the A tag we added in the view.
+* `jQuery(".color-contain-group .color-group .color-name").removeClass("active"); jQuery(this).show(); jQuery(this).parent().addClass("active")`: to remove the active class from the unselected color and add it to the selected one.
+* `jQuery("div[data-id]").removeClass("active"); jQuery("div[data-id='" + jQuery(this).attr("href").replace("#", "") + "']").addClass("active")`: to remove and add the active class to all the elements that have value of the data-id attribute as the name of the color. It means that when you click on a color, all the corresponding information of that variation such as price, size, status, and image gallery will be displayed.
+* `jQuery('.slider-single').slick('refresh') and jQuery('.slider-nav').slick('refresh')`: to refresh both sliders to load new images.
 
-Declare the js and css files
+### Declare the js and css files
 
-Add code inside the function custom_enqueue_files() in the plugin.php file in the case you use the 3rd party plugin. Otherwise, add to the functions.php to declare all the above js and css files.
+Add code inside the function **custom_enqueue_files()** in the `plugin.php` file in the case you use the 3rd party plugin. Otherwise, add to the `functions.php` to declare all the above js and css files.
 
+````
             wp_enqueue_style('slick', plugin_dir_url( __FILE__ ).'/assets/css/slick.css');
 	wp_enqueue_style('slick-theme', plugin_dir_url( __FILE__ ).'/assets/css/slick-theme.css');
 
 	wp_enqueue_script('custom', plugin_dir_url( __FILE__ ).'/assets/js/custom.js', ['jquery']);
 	wp_enqueue_script('slick-min', plugin_dir_url( __FILE__ ).'/assets/js/slick.min.js', ['jquery']);
 	wp_enqueue_script('script', plugin_dir_url( __FILE__ ).'/assets/js/script.js', ['jquery']);
-
+```
+	
 Go back to a single product page, there is a slider and some differences.
 
+![The product images have already turned into a slider.](https://i.imgur.com/QR1FF2Z.gif)
 
-https://i.imgur.com/QR1FF2Z.gif
+## Step 5: Style the product page
 
-Step 5: Style the product page
+Back to page editor by Oxygen, go to **Manage > Stylesheets > Add Stylesheet** to have space to add CSS.
 
-Back to page editor by Oxygen, go to Manage > Stylesheets > Add Stylesheet to have space to add CSS.
+![Go to Manage > Stylesheets > Add Stylesheet to have space to add CSS](https://i.imgur.com/bXom5pT.png)
 
+Then add code into the box. All the code is uploaded into [Github](https://github.com/wpmetabox/tutorials/blob/master/display-product-variations-with-Oxygen/custom.css), so you can refer to it.
 
-https://i.imgur.com/bXom5pT.png
-
-Then add code into the box. All the code is uploaded into Github, so you can refer to it.
-
-
-https://i.imgur.com/fTmhDu0.png
+![Add CSS to the box](https://i.imgur.com/fTmhDu0.png)
 
 Now, on the single product page, you’ll see a final result. When you select a color, the photo gallery will change to that color automatically. At the same time, the sizes and prices also change correspondingly.
 
-
-https://i.imgur.com/TbbFLpa.gif
+![The product variations turned into a new look.](https://i.imgur.com/TbbFLpa.gif)
