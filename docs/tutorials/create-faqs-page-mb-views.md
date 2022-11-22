@@ -31,9 +31,9 @@ Go to **Meta Box > Custom Fields > Add New** to create fields saving questions a
 <table>
 <tbody>
 <tr>
-<td>**Name**</td>
-<td>**Field Type**</td>
-<td>**Settings**</td>
+<td> Name </td>
+<td> Field Type </td>
+<td> Settings </td>
 </tr>
 <tr>
 <td>Tabs</td>
