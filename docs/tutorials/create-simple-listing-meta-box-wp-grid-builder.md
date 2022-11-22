@@ -1,5 +1,5 @@
 ---
-title: Creating a simple listing - Meta Box + WP Grid Builder
+title: Creating a simple listing site - Meta Box + WP Grid Builder
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
