@@ -308,7 +308,7 @@ Here are all the fields that I’ve created in groups and sections:
 
 ![The created fields](https://i.imgur.com/5pxt1si.png)
 
-![The created fields]([https://i.imgur.com/k53GyYj.png)
+![The created fields](https://i.imgur.com/k53GyYj.png)
 
 ![The created fields](https://i.imgur.com/ZcJSrtm.png)
 
