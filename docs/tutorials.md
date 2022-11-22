@@ -26,18 +26,24 @@ hide_table_of_contents: true
 		</div>
 	</div>
 	<div className="tutorials_trending">
-		<h2 className="trending_category">Trending now</h2>
-		<a className="trending"href="">
-			<h2 className="trending_title">Create category thumbnails & featured images</h2>
-		</a>
-		<img src="/tutorials/Rectangle.png"/>
-		<a className="trending"href="">
-			<h2 className="trending_title">Show featured products</h2>
-		</a>
-		<img src="/tutorials/Rectangle.png"/>
-		<a className="trending"href="">
-			<h2 className="trending_title">Create a simple listing</h2>
-		</a>
+		<div className="items trending--first">
+			<h2 className="trending_category">Trending now</h2>
+			<a className="trending"href="">
+				<h2 className="trending_title">Create category thumbnails & featured images</h2>
+			</a>
+		</div>
+		<div className="items trending--second">
+			<img src="/tutorials/Rectangle.png"/>
+			<a className="trending"href="">
+				<h2 className="trending_title">Show featured products</h2>
+			</a>
+		</div>
+		<div className="items trending--third">
+			<img src="/tutorials/Rectangle.png"/>
+			<a className="trending"href="">
+				<h2 className="trending_title">Create a simple listing site</h2>
+			</a>
+		</div>
 	</div>
 	<div className="tutorials_category">
 		<div className="items">
@@ -48,7 +54,7 @@ hide_table_of_contents: true
 			<ul>
 				<li><a href="">Custom fields vs custom taxonomies</a></li>
 				<li><a href="">Move fields’ data to custom tables</a></li>
-				<li><a href="">Clone custom fields from site to sites</a></li>
+				<li><a href="">Copy custom fields from sites to sites</a></li>
 				<li><a href="">Export and import custom fields</a></li>
 			</ul>
 		</div>

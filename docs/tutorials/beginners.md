@@ -15,7 +15,7 @@ Let’s start with some basic pratices with Meta Box.
 		</div>
 		<div className="items">
 			<a href="/tutorials/create-custom-fields/">
-				<img src="/tutorials/a2.png"/>
+				<img src="/tutorials/beginners-2.png"/>
 				<h2 class="items_titles">Create and configure custom fields</h2>
 			</a>
 		</div>

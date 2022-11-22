@@ -579,7 +579,7 @@ summary {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	margin: 47px 0px;
 	padding: 20px 22px;
 	border: 1px solid #000;
@@ -590,6 +590,7 @@ summary {
 }
 
 .tutorials_trending .trending_category{
+	display: inline-block;
 	color: #fff;
 	background: #000;
 	font-size: var( --ifm-h2-font-size )  ;
@@ -600,9 +601,14 @@ summary {
 	color: var(--color-tutorius);
 	font-size: 16px;
 	line-height: 19px;
+	padding-left: 50px;
 }
 .tutorials_trending a:hover h2{
 	color: var(--ifm-menu-color-active);
+}
+.tutorials_trending .items{
+	display: flex;
+	align-items: center;
 }
 
 /* Category new */
@@ -676,8 +682,17 @@ summary {
 .tutorials_category--new .items :hover .items_titles{
     color: var(--ifm-menu-color-active);
 }
-
-
+@media ( max-width:1023px ){
+	.tutorials_category{
+		grid-template-columns: repeat( 2, 1fr );
+	}
+	.tutorials_trending{
+		display: block;
+	}
+	.tutorials_trending .trending_title{
+		margin: 10px 0px;
+	}
+}
 @media ( max-width:767px ){
 	.tutorials_banner{
 		grid-template-areas:'item1''item2''item3''item4';
@@ -687,8 +702,17 @@ summary {
 		max-height: unset;
 		height: auto;
 	}
+	.tutorials_trending img{
+		width: unset;
+	}
+	.tutorials_trending .items{
+		display: block;
+	}
+	.tutorials_trending .trending_title{
+		padding: 0;
+	}
 	.tutorials_category{
-		grid-template-columns: unset;
+		grid-template-columns: repeat( 1, 1fr );
 	}
 	.tutorials_category img{
 		width: 100%;
