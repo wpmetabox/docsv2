@@ -203,7 +203,9 @@ Furthermore, variations are differentiated by color, so we have this code to get
 			<a href="#<?php echo $variation_color ?>" class="color <?php echo $variation_color ?>" title="<?php echo $variation_color ?>"><?php echo $variation_color ?></a>
 <?php endforeach; ?>
 ```
+In there, I added an *a* tag and a dynamic class. There will be different classes for each color and each one will be the name of the color. This class plays an important role in helping us to define which variations are showing.
 
+Then, I added some `div` tags to the code to set elements in a reasonable layout. I also added an attribute named `data-id` in the gallery, price, size, and status sections.
 
 ` data-id="<?php echo $price['color_name'] ?>" `
 
