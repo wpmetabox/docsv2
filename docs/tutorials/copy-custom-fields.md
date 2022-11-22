@@ -1,5 +1,5 @@
 ---
-title: Copying custom fields from site to sites
+title: Copying custom fields from sites to sites
 ---
 
 Instead of rebuilding similar custom fields in different sites, you can use the <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a> extension to easily copy them from one site to others with just a few clicks.
