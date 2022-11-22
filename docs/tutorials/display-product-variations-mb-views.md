@@ -265,7 +265,7 @@ Now, add code inside the function `custom_enqueue_files()` in the `plugin.php` f
 
 Now, the product images have already turned into a slider, but we cannot see all the information of each variation in the right place.
 
-![The product images turn into a slider](https://i.imgur.com/ivyQwVz.gif)
+![The product images turn into a slider](https://i.imgur.com/QR1FF2Z.gif)
 
 ## Step 5: Style the product page
 
@@ -277,4 +277,4 @@ You can refer to all of it on [Github](https://github.com/wpmetabox/tutorials/tr
 
 Back to a singular product page, it’ll have a new look. When you choose a color, the photo gallery will automatically change according to that color. At the same time, the sizes and prices also change correspondingly.
 
-![The final result](https://i.imgur.com/RGy2ryG.gif)
+![The final result](https://i.imgur.com/FuWHvCk.gif)
