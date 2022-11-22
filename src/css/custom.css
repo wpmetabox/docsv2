@@ -552,13 +552,16 @@ summary {
 	margin: 0;
 }
 .tutorials img{
+	object-fit: cover;
+	object-position: center;
+	height: auto;
 	border-radius: 0;
 	box-shadow: unset;
 }
 .tutorials_banner img{
-	max-height: unset;
 	margin: 0;
 	float: left;
+	max-height: unset;
 }
 .tutorials_banner .banner_left--item1 { grid-area: item1; }
 .tutorials_banner .banner_right--item2 { grid-area: item2; }
@@ -605,11 +608,14 @@ summary {
 /* Category new */
 .tutorials_category{
 	display: grid;
-	grid-template-columns: repeat( auto-fit, 413px );
+	grid-template-columns: repeat( 3, 1fr );
 	column-gap: 1.5rem;
 	row-gap: 3rem;
 }
 .tutorials_category img{
+	object-fit: cover;
+	object-position: center;
+	height: auto;
 	border-radius: 0;
 	box-shadow: unset;
 	float: left;
@@ -676,25 +682,18 @@ summary {
 	.tutorials_banner{
 		grid-template-areas:'item1''item2''item3''item4';
 	}
-
-	.tutorials_trending .trending_category{
-		display: inline-block;
-		font-size: 22px;
-	}
-	.tutorials_trending .trending_title{
-		display: block;
-		padding: 0;
-		margin-top: 8px;
+	.tutorials img{
+		width: 100%;
+		max-height: unset;
+		height: auto;
 	}
 	.tutorials_category{
-		grid-gap: 3rem;
+		grid-template-columns: unset;
 	}
-	.tutorials_category .heading{
-		font-size: 22px;
-		margin-bottom: 15px;
-	}
-	.tutorials_category--new .items_titles{
-		font-size: 22px;
+	.tutorials_category img{
+		width: 100%;
+		max-height: unset;
+		height: auto;
 	}
 
 }
