@@ -27,7 +27,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 			<h2 className="items_heading">Meta Box Conditional Logic</h2>
 			<img src="/tutorials/extensions-3.png"/>
 			<ul>
-				<li><a href="">Meta Box Conditional Logic</a></li>
+				<li><a href="">Displaying opening hours for restaurants</a></li>
 				<li><a href="">Creating online admission form</a></li>
 			</ul>
 		</div>

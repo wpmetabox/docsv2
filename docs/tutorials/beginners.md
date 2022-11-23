@@ -10,13 +10,13 @@ Let’s start with some basic pratices with Meta Box.
 		<div className="items">
 			<a href="/tutorials/create-custom-post-type-taxonomies/">
 				<img src="/tutorials/beginners-1.png"/>
-				<h2 class="items_titles">Create post types and taxonomies</h2>
+				<h2 class="items_titles">Creating post types and taxonomies</h2>
 			</a>
 		</div>
 		<div className="items">
 			<a href="/tutorials/create-custom-fields/">
 				<img src="/tutorials/beginners-2.png"/>
-				<h2 class="items_titles">Create and configure custom fields</h2>
+				<h2 class="items_titles">Creating and configure custom fields</h2>
 			</a>
 		</div>
 		<div className="items">
@@ -28,25 +28,25 @@ Let’s start with some basic pratices with Meta Box.
 		<div className="items">
 			<a href="/tutorials/move-data-to-custom-tables/">
 				<img src="/tutorials/beginners-4.png"/>
-				<h2 class="items_titles">Move fields’ data to custom tables</h2>
+				<h2 class="items_titles">Moving fields’ data to custom tables</h2>
 			</a>
 		</div>
 		<div className="items">
 			<a href="/tutorials/copy-custom-fields/">
 				<img src="/tutorials/beginners-5.png"/>
-				<h2 class="items_titles">Clone custom fields from site to sites</h2>
+				<h2 class="items_titles">Moving custom fields from sites to sites</h2>
 			</a>
 		</div>
 		<div className="items">
 			<a href="/tutorials/export-import-custom-fields-meta-box-builder/">
 				<img src="/tutorials/beginners-6.png"/>
-				<h2 class="items_titles">Export and import custom fields</h2>
+				<h2 class="items_titles">Exporting and import custom fields</h2>
 			</a>
 		</div>
 		<div className="items">
 			<a href="/tutorials/migrate-data-acf-to-meta-box/">
 				<img src="/tutorials/beginners-7.png"/>
-				<h2 class="items_titles">Migrate from ACF to Meta Box</h2>
+				<h2 class="items_titles">Migrating from ACF to Meta Box</h2>
 			</a>
 		</div>
 		<div className="items">
@@ -58,13 +58,13 @@ Let’s start with some basic pratices with Meta Box.
 		<div className="items">
 			<a href="/tutorials/cpt-ui-to-meta-box/">
 				<img src="/tutorials/beginners-9.png"/>
-				<h2 class="items_titles">Migrate from CPT UI to Meta Box</h2>
+				<h2 class="items_titles">Migrating from CPT UI to Meta Box</h2>
 			</a>
 		</div>
 		<div className="items">
 			<a href="/tutorials/change-id-meta-box-field/">
 				<img src="/tutorials/beginners-10.png"/>
-				<h2 class="items_titles">Change the ID of a Meta Box field</h2>
+				<h2 class="items_titles">Changing the ID of a Meta Box field</h2>
 			</a>
 		</div>
 	</div>

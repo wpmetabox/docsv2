@@ -11,65 +11,65 @@ Tutorials on combining Meta Box and other builders or tools for real builders st
 			<h2 className="items_heading">Bricks</h2>
 			<img src="/tutorials/builders-1.png"/>
 			<ul>
-				<li><a href="">Create a product page</a></li>
-				<li><a href="">Create a recipe</a></li>
-				<li><a href="">Create a simple listing</a></li>
-				<li><a href="">Create a team members page</a></li>
-				<li><a href="">Display the latest products</a></li>
+				<li><a href="">Creating a product page</a></li>
+				<li><a href="/tutorials/create-recipes-meta-box-bricks/">Creating a recipe</a></li>
+				<li><a href="/tutorials/create-simple-listing-meta-box-bricks/">Creating a simple listing</a></li>
+				<li><a href="/tutorials/create-team-members-page-meta-box-bricks/">Creating a team members page</a></li>
+				<li><a href="/tutorials/display-latest-product-meta-box-bricks/">Displaying the latest products</a></li>
 			</ul>
 		</div>
 		<div className="items">
 			<h2 className="items_heading">Oxygen</h2>
 			<img src="/tutorials/builders-2.png"/>
 			<ul>
-				<li><a href="">Create a product page</a></li>
-				<li><a href="">Create a recipe</a></li>
-				<li><a href="">Create a team members page</a></li>
-				<li><a href="">Create a video gallery page</a></li>
-				<li><a href="">Create an FAQs page</a></li>
-				<li><a href="">Create buttons with dynamic link</a></li>
-				<li><a href="">Display images from cloneable fields</a></li>
-				<li><a href="">Display the latest products</a></li>
-				<li><a href="">Create menus for restaurants</a></li>
-				<li><a href="">Create taxonomy thumbnails & featured images</a></li>
-				<li><a href="">Display product variations</a></li>
+				<li><a href="/tutorials/create-product-page-meta-box-oxygen/">Creating a product page</a></li>
+				<li><a href="/tutorials/create-recipe-meta-box-oxygen/">Creating a recipe</a></li>
+				<li><a href="/tutorials/create-team-members-page-meta-box-oxygen/">Creating a team members page</a></li>
+				<li><a href="/tutorials/create-video-gallery-page-meta-box-oxygen/">Creating a video gallery page</a></li>
+				<li><a href="/tutorials/create-faqs-page-meta-box-oxygen/">Creating an FAQs page</a></li>
+				<li><a href="">Creating buttons with dynamic link</a></li>
+				<li><a href="/tutorials/display-images-from-cloneable-fields-meta-box-oxygen/">Displaying images from cloneable fields</a></li>
+				<li><a href="/tutorials/display-latest-product-meta-box-oxygen/">Displaying the latest products</a></li>
+				<li><a href="">Creating menus for restaurants</a></li>
+				<li><a href="/tutorials/create-category-thumbnails/">Creating taxonomy thumbnails & featured images</a></li>
+				<li><a href="">Displaying product variations</a></li>
 			</ul>
 		</div>
 		<div className="items">
 			<h2 className="items_heading">Elementor</h2>
 			<img src="/tutorials/builders-3.png"/>
 			<ul>
-				<li><a href="">Create a recipe</a></li>
-				<li><a href="">Create a team members page</a></li>
-				<li><a href="">Display an FAQs page</a></li>
-				<li><a href="">Create buttons with dynamic link</a></li>
-				<li><a href="">Display images from cloneable fields</a></li>
-				<li><a href="">Display the latest products</a></li>
-				<li><a href="">Show featured products</a></li>
-				<li><a href="">Create menus for restaurants</a></li>
+				<li><a href="/tutorials/create-recipe-meta-box-elementor/">Creating a recipe</a></li>
+				<li><a href="/tutorials/create-team-members-page-meta-box-elementors/">Creating a team members page</a></li>
+				<li><a href="/tutorials/create-faqs-page-meta-box-elementor/">Displaying an FAQs page</a></li>
+				<li><a href="">Creating buttons with dynamic link</a></li>
+				<li><a href="/tutorials/display-images-from-cloneable-fields-meta-box-elementor/">Displaying images from cloneable fields</a></li>
+				<li><a href="">Displaying the latest products</a></li>
+				<li><a href="">Showing featured products</a></li>
+				<li><a href="/tutorials/create-menu-restaurants-meta-box-elementor/">Creating menus for restaurants</a></li>
 			</ul>
 		</div>
 		 <div className="items">
 			<h2 className="items_heading">Zion</h2>
 			<img src="/tutorials/builders-4.png"/>
 			<ul>
-				<li><a href="">Display the latest products</a></li>
-				<li><a href="">Create a recipe</a></li>
+				<li><a href="/tutorials/display-latest-products-meta-box-zion/">Displaying the latest products</a></li>
+				<li><a href="/tutorials/create-recipes-meta-box-zion/">Creating a recipe</a></li>
 			</ul>
 		</div>
 		<div className="items">
 			<h2 className="items_heading">Beaver Builder</h2>
 			<img src="/tutorials/builders-5.png"/>
 			<ul>
-				<li><a href="">Create buttons with dynamic link</a></li>
+				<li><a href="">Creating buttons with dynamic link</a></li>
 			</ul>
 		</div>
 		<div className="items">
 			<h2 className="items_heading">WP Grid Builder</h2>
 			<img src="/tutorials/builders-6.png"/>
 			<ul>
-				<li><a href="">Show featured products</a></li>
-				<li><a href="">Create a simple listing</a></li>
+				<li><a href="/tutorials/show-featured-products-meta-box-elementor-wp-grid-builder/">Showing featured products</a></li>
+				<li><a href="/tutorials/create-simple-listing-meta-box-wp-grid-builder/">Creating a simple listing</a></li>
 			</ul>
 		</div>
 	</div>
