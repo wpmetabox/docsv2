@@ -36,8 +36,12 @@ No matter if the field is cloneable or not, you can add the custom settings as a
 
 ## Step 2: Check the results in Rank Math
 
+Before configuring the fields as above, Rank Math just analyze the content in the Content field like this:
+
+![Rank math analyze the content in the content field](https://i.imgur.com/J5fHOMZ.png)
+
 After completing creating custom settings, you can see the content of the field displayed in the Rank Math SEO Analysis. For example, Rank Math analyzes my content in the description field and displays the information about length, focus keyword, …
 
-![check the results in rank math](https://i.imgur.com/5Ziy5wE.png)
+![The result](https://i.imgur.com/qRetDmF.png)
 
 The rest of your work now is writing SEO-optimized content.
