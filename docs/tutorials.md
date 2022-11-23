@@ -83,18 +83,6 @@ hide_table_of_contents: true
 			</ul>
 		</div>
 		<div className="items">
-			<a href="/tutorials/mb-with-builders/">
-				<h2 className="items_heading">MB with Builders</h2>
-			</a>
-			<img src="/tutorials/category-4.png"/>
-			<ul>
-				<li><a href="">Create an FAQs page - Meta Box + Oxygen</a></li>
-				<li><a href="">Create a simple listing - Meta Box + Bricks</a></li>
-				<li><a href="">Create team members page - Meta Box + Elementor</a></li>
-				<li><a href="">Display latest products - Meta Box + Zion</a></li>
-			</ul>
-		</div>
-		<div className="items">
 			<a href="/tutorials/extensions/">
 				<h2 className="items_heading">Extensions</h2>
 			</a>
@@ -104,6 +92,18 @@ hide_table_of_contents: true
 				<li><a href="">Create settings page for customizer options</a></li>
 				<li><a href="">Analyze Content in Custom Fields for SEO</a></li>
 				<li><a href="">Add testimonials</a></li>
+			</ul>
+		</div>
+		<div className="items">
+			<a href="/tutorials/mb-with-builders/">
+				<h2 className="items_heading">MB with Builders</h2>
+			</a>
+			<img src="/tutorials/category-4.png"/>
+			<ul>
+				<li><a href="">Create an FAQs page - Meta Box + Oxygen</a></li>
+				<li><a href="">Create a simple listing - Meta Box + Bricks</a></li>
+				<li><a href="">Create team members page - Meta Box + Elementor</a></li>
+				<li><a href="">Display latest products - Meta Box + Zion</a></li>
 			</ul>
 		</div>
 		<div className="items">

@@ -584,6 +584,10 @@ summary {
 	padding: 20px 22px;
 	border: 1px solid #000;
 }
+html[data-theme='dark'] .tutorials_trending img{
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
 .tutorials_trending img{
 	margin-inline: unset;
 	margin: 0;
@@ -617,6 +621,13 @@ summary {
 	grid-template-columns: repeat( 3, 1fr );
 	column-gap: 1.5rem;
 	row-gap: 3rem;
+}
+.tutorials_category .items_heading{
+	font-size:25px;
+	line-height: 30px;
+	color: var(--ifm-menu-color-active);
+	margin-bottom: 19px;
+	display: block;
 }
 .tutorials_category img{
 	object-fit: cover;
@@ -665,13 +676,6 @@ summary {
 .tutorials_category ul li a:hover{
 	color: var(--ifm-menu-color-active);
 }
-.tutorials_category .items_heading{
-	font-size:25px;
-	line-height: 30px;
-	color: var(--ifm-menu-color-active);
-	margin-bottom: 19px;
-	display: block;
-}
 .tutorials_category--new .items_titles {
 	font-size: 16px ;
 	line-height: 19px;
@@ -682,16 +686,39 @@ summary {
 .tutorials_category--new .items :hover .items_titles{
     color: var(--ifm-menu-color-active);
 }
-@media ( max-width:1023px ){
+@media ( max-width: 1199px ){
+	.tutorials_trending .trending_category{
+		font-size: 18px;
+	}
+	.tutorials_trending .trending_title{
+		padding-left: 35px;
+	}
+	.tutorials_trending .trending--third{
+		display: none;
+	}
+	.tutorials_category .items_heading{
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+@media ( max-width:1024px ){
+	.tutorials_trending .trending_category{
+		font-size: 1.5rem;
+	}
+	.tutorials_trending .trending_title{
+		padding-left: 52px;
+	}
+	.tutorials_trending .trending--second{
+		display: none;
+	}
+	.tutorials_category .items_heading{
+		font-size: 25px;
+		line-height: 30px;
+	}
 	.tutorials_category{
 		grid-template-columns: repeat( 2, 1fr );
 	}
-	.tutorials_trending{
-		display: block;
-	}
-	.tutorials_trending .trending_title{
-		margin: 10px 0px;
-	}
+
 }
 @media ( max-width:767px ){
 	.tutorials_banner{
@@ -702,14 +729,22 @@ summary {
 		max-height: unset;
 		height: auto;
 	}
+	.tutorials_trending{
+		display: block;
+		padding: 12px;
+	}
+	.tutorials_trending .trending_category{
+		font-size: 22px;
+	}
 	.tutorials_trending img{
-		width: unset;
+		display: none;
 	}
 	.tutorials_trending .items{
 		display: block;
 	}
 	.tutorials_trending .trending_title{
 		padding: 0;
+		margin-top: 12px;
 	}
 	.tutorials_category{
 		grid-template-columns: repeat( 1, 1fr );
