@@ -44,7 +44,7 @@ Back to the post editor, you will see all the created custom fields. Let’s fil
 
 ## Step 3: Create the add-to-calendar button
 
-First, I create a file named `single-event.php` in the theme folder (I’m using the Justread theme) to edit the template of the singular **Event** page.
+First, I create a file named `single-event.php` in the theme folder (I’m using the [Justread](https://gretathemes.com/wordpress-themes/justread/) theme) to edit the template of the singular **Event** page.
 
 After that, include the **Add to Calendar** button on this page by adding the following code to the `single-event.php` file:
 
