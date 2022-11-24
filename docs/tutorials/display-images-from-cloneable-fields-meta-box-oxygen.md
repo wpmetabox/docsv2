@@ -50,9 +50,9 @@ The following table illustrates the fields’ structure that I’m using.
 <table>
 <tbody>
 <tr>
-<td>**Field**</td>
-<td>**Types of Field**</td>
-<td>**ID**</td>
+<td> Field </td>
+<td> Types of Field </td>
+<td> ID </td>
 </tr>
 <tr>
 <td>Brand Group</td>
@@ -211,4 +211,11 @@ Here is the result.
 
 ![The result after all steps](https://i.imgur.com/I21QKgJ.png)
 
+------
+
+You may be interested in: 
+
+* [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-oxygen/)
+* [Creating a video gallery page](https://docs.metabox.io/tutorials/create-video-gallery-page-meta-box-oxygen/)
+* [Creating an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-oxygen/)
 
