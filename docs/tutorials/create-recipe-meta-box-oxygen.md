@@ -113,7 +113,7 @@ We’ve finished getting all of the recipe information. On the frontend, you see
 
 ![Back to the frontend, everything is well displayed](https://i.imgur.com/HXaAJjv.png)
 
-Step 4: Style the page
+## Step 4: Style the page
 
 Back to the page editor with Oxygen, choose each component and change the settings to style them.
 
@@ -125,4 +125,16 @@ Go to the recipe page, and you’ll see the new look.
 
 ![Back to the frontend, everything is well displayed](https://i.imgur.com/SCek8XG.png)
 
+------
+
+You may be interested in: 
+* [Create a product page](https://docs.metabox.io/tutorials/create-product-page-meta-box-oxygen/)
+* [Create a recipe](https://docs.metabox.io/tutorials/create-recipe-meta-box-oxygen/)
+* [Create a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-oxygen/)
+* [Create a video gallery page](https://docs.metabox.io/tutorials/create-video-gallery-page-meta-box-oxygen/)
+* [Create an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-oxygen/)
+* [Display images from cloneable fields](https://docs.metabox.io/tutorials/display-images-from-cloneable-fields-meta-box-oxygen/)
+* [Display the latest products](https://docs.metabox.io/tutorials/display-latest-product-meta-box-oxygen/)
+* [Create taxonomy thumbnails & featured images](https://docs.metabox.io/tutorials/create-category-thumbnails/)
+* [Display Product Variations](https://docs.metabox.io/tutorials/display-product-variations-meta-box-oxygen/)
 
