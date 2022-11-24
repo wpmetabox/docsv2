@@ -84,13 +84,14 @@ Add this code to the **Template** tab:
 `{% if( settings.show == 1) %}`
 
 This line is to check if the **Show** field is checked or not. If it’s checked that means the value of this field is set as **1**, we will display the following information on the banner.
-`
-{% set image_ids = settings.image %}
+
+
+`{% set image_ids = settings.image %}
 {% set image_attributes = mb.wp_get_attachment_image_src( image_ids, 'full') %}`
 
 These lines of code is to get the link of the image from the **Image** field.
-`
-{{ settings.width }}
+
+`{{ settings.width }}
 {{ settings.color }}
 {{ settings.color_description }}
 {{ settings.title }}
