@@ -14,12 +14,12 @@ Build front-end templates for WordPress without touching theme files. Support Tw
 </div>
 <div className="items">
 
-[![creating buttons with dynamic link](/tutorials/views-2.png) <h2 class="items_titles">Creating Buttons with Dynamic Link</h2>](/tutorials/)
+[![creating buttons with dynamic link](/tutorials/views-2.png) <h2 class="items_titles">Creating buttons with dynamic link</h2>](/tutorials/)
 
 </div>
 <div className="items">
 
-[![creating user profile page](/tutorials/views-3.png) <h2 class="items_titles">Creating User Profile Page on Frontend</h2>](/tutorials/)
+[![creating user profile page](/tutorials/views-3.png) <h2 class="items_titles">Creating user profile page on frontend</h2>](/tutorials/)
 
 </div>
 <div className="items">
@@ -29,67 +29,67 @@ Build front-end templates for WordPress without touching theme files. Support Tw
 </div>
 <div className="items">
 
-[![creating a team members page](/tutorials/views-5.png) <h2 class="items_titles">Creating a team members page</h2>](/tutorials/copy-custom-fields/)
+[![creating a team members page](/tutorials/views-5.png) <h2 class="items_titles">Creating a team members page</h2>](/tutorials/create-team-members-page-mb-views/)
 
 </div>
 <div className="items">
 
-[![creating a recipe](/tutorials/views-6.png) <h2 class="items_titles">Creating a recipe</h2>](/tutorials/copy-custom-fields/)
+[![creating a recipe](/tutorials/views-6.png) <h2 class="items_titles">Creating a recipe</h2>](/tutorials/create-recipe-mb-views/)
 
 </div>
 <div className="items">
 
-[![displaying the latest products](/tutorials/views-7.png) <h2 class="items_titles">Displaying the latest products</h2>](/tutorials/copy-custom-fields/)
+[![displaying the latest products](/tutorials/views-7.png) <h2 class="items_titles">Displaying the latest products</h2>](/tutorials/display-latest-products-mb-views/)
 
 </div>
 <div className="items">
 
-[![displaying images from cloneable fields](/tutorials/views-8.png) <h2 class="items_titles">Displaying images from cloneable fields</h2>](/tutorials/copy-custom-fields/)
+[![displaying images from cloneable fields](/tutorials/views-8.png) <h2 class="items_titles">Displaying images from cloneable fields</h2>](/tutorials/display-images-cloneable-fields-mb-views/)
 
 </div>
 <div className="items">
 
-[![creating a product page](/tutorials/views-9.png) <h2 class="items_titles">Creating a product page</h2>](/tutorials/copy-custom-fields/)
+[![creating a product page](/tutorials/views-9.png) <h2 class="items_titles">Creating a product page</h2>](/tutorials/create-product-pages-mb-views/)
 
 </div>
 <div className="items">
 
-[![creating online admission form](/tutorials/views-10.png) <h2 class="items_titles">Creating online admission form</h2>](/tutorials/copy-custom-fields/)
+[![creating online admission form](/tutorials/views-10.png) <h2 class="items_titles">Creating online admission form</h2>](/tutorials/create-online-admission-form/)
 
 </div>
 <div className="items">
 
-[![configuring homepage](/tutorials/views-11.png) <h2 class="items_titles">Configuring homepage</h2>](/tutorials/copy-custom-fields/)
+[![configuring homepage](/tutorials/views-11.png) <h2 class="items_titles">Configuring homepage</h2>](/tutorials/configure-homepage/)
 
 </div>
 <div className="items">
 
-[![creating an auto-updated cheat sheet](/tutorials/views-12.png) <h2 class="items_titles">Creating an auto-updated cheat sheet</h2>](/tutorials/copy-custom-fields/)
+[![creating an auto-updated cheat sheet](/tutorials/views-12.png) <h2 class="items_titles">Creating an auto-updated cheat sheet</h2>](/tutorials/)
 
 </div>
 <div className="items">
 
-[![displaying opening hours for restaurants](/tutorials/views-14.png) <h2 class="items_titles">Displaying opening hours for restaurants</h2>](/tutorials/copy-custom-fields/)
+[![displaying opening hours for restaurants](/tutorials/views-14.png) <h2 class="items_titles">Displaying opening hours for restaurants</h2>](/tutorials/)
 
 </div>
 <div className="items">
 
-[![displaying product variations](/tutorials/views-15.png) <h2 class="items_titles">Displaying product variations</h2>](/tutorials/copy-custom-fields/)
+[![displaying product variations](/tutorials/views-15.png) <h2 class="items_titles">Displaying product variations</h2>](/tutorials/display-product-variations-mb-views/)
 
 </div>
 <div className="items">
 
-[![creating an FAQs page](/tutorials/views-16.png) <h2 class="items_titles">Creating an FAQs page</h2>](/tutorials/copy-custom-fields/)
+[![creating an FAQs page](/tutorials/views-16.png) <h2 class="items_titles">Creating an FAQs page</h2>](/tutorials/create-faqs-page-mb-views/)
 
 </div>
 <div className="items">
 
-[![adding dynamic banners](/tutorials/views-17.png) <h2 class="items_titles">Adding dynamic banners</h2>](/tutorials/copy-custom-fields/)
+[![adding dynamic banners](/tutorials/views-17.png) <h2 class="items_titles">Adding dynamic banners</h2>](/tutorials/)
 
 </div>
 <div className="items">
 
-[![displaing relationships](/tutorials/views-18.png) <h2 class="items_titles">Displaing relationships</h2>](/tutorials/copy-custom-fields/)
+[![displaing relationships](/tutorials/views-18.png) <h2 class="items_titles">Displaying relationships</h2>](/tutorials/)
 
 </div>
 	</div>

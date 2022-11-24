@@ -39,7 +39,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 ![mb rank math](/tutorials/extensions-4.png)
 <ul>
-	<li><a href="">Analyzing Content in Custom Fields for SEO</a></li>
+	<li><a href="">Analyzing content in custom fields for SEO</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -47,7 +47,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 ![meta box for yoast SEO](/tutorials/extensions-5.png)
 <ul>
-	<li><a href="">Analyzing Content in Custom Fields for SEO</a></li>
+	<li><a href="">Analyzing content in custom fields for SEO</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -55,7 +55,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 ![mb admin columns](/tutorials/extensions-6.png)
 <ul>
-	<li><a href="">Creating a team members page - MB+ Elementor </a></li>
+	<li><a href="">Creating a team members page - with Elementor </a></li>
 </ul>
 		</div>
 		<div className="items">

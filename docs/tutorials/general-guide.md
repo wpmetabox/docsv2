@@ -69,7 +69,7 @@ See how to use Meta box in common tasks.
 </div>
 <div className="items">
 
-[![creating dynamic favicon](/tutorials/guide-13.png) <h2 class="items_titles">Creating Dynamic Favicon</h2>](/tutorials/create-dynamic-favicon/)
+[![creating dynamic favicon](/tutorials/guide-13.png) <h2 class="items_titles">Creating dynamic favicon</h2>](/tutorials/create-dynamic-favicon/)
 
 </div>
 <div className="items">
@@ -154,12 +154,12 @@ See how to use Meta box in common tasks.
 </div>
 <div className="items">
 
-[![building gutenberg blocks](/tutorials/guide-30.png) <h2 class="items_titles">Building gutenberg blocks</h2>](/tutorials/)
+[![adding a favorite button](/tutorials/guide-31.png) <h2 class="items_titles">Adding a favorite button</h2>](/tutorials/)
 
 </div>
 <div className="items">
 
-[![adding a favorite button](/tutorials/guide-31.png) <h2 class="items_titles">Adding a favorite button</h2>](/tutorials/)
+[![building gutenberg blocks](/tutorials/guide-30.png) <h2 class="items_titles">Building gutenberg blocks</h2>](/tutorials/)
 
 </div>
 <div className="items">

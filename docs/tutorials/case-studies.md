@@ -148,5 +148,150 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 	<li><a href="tutorials/create-product-page/">Using MB Views</a></li>
 </ul>
 		</div>
+		<div className="items">
+			<h2 className="items_heading">Menus for Restaurants</h2>
+
+![menus for restaurants](/tutorials/case-16.png)
+<ul>
+	<li><a href="/tutorials/create-menu-restaurants-meta-box-elementor/">Using Meta Box + Elementor</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Product Variations</h2>
+
+![product variations](/tutorials/case-17.png)
+<ul>
+	<li><a href="/tutorials/display-product-variations-meta-box-oxygen/">Using Meta Box + Oxygen</a></li>
+	<li><a href="/tutorials/display-product-variations-mb-views/">Using MB Views</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Opening Hours</h2>
+
+![opening hours](/tutorials/case-18.png)
+<ul>
+	<li><a href="/tutorials/">Using MB Views</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">All Listings On A Map</h2>
+
+![all listings on a map](/tutorials/case-19.png)
+<ul>
+	<li><a href="/tutorials/display-listings-on-map/">Displaying all listings on a map</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Search Posts</h2>
+
+![search posts](/tutorials/case-20.png)
+<ul>
+	<li><a href="/tutorials/search-posts-by-taxonomy/">Searching posts by taxonomy</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Add Guest Author and Posts</h2>
+
+![add guest author and posts](/tutorials/case-21.png)
+<ul>
+	<li><a href="/tutorials/add-guest-authors/">Adding guest authors and guest posts</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Online Admission Form</h2>
+
+![online admission form](/tutorials/case-22.png)
+<ul>
+	<li><a href="/tutorials/create-online-admission-form/">Creating online admission form</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Custom Avatar</h2>
+
+![custom avatar](/tutorials/case-23.png)
+<ul>
+	<li><a href="/tutorials/create-custom-avatar/">Creating a custom avatar for user</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">RSS Content / Title</h2>
+
+![rss content title](/tutorials/case-24.png)
+<ul>
+	<li><a href="/tutorials/">Changing the RSS content / title</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Dynamic Banners</h2>
+
+![dynamic banners](/tutorials/case-25.png)
+<ul>
+	<li><a href="/tutorials/">Dynamic Banners</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Configure Homepage</h2>
+
+![configure homepage](/tutorials/case-26.png)
+<ul>
+	<li><a href="/tutorials/configure-homepage/">Configure Homepage</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Online Reservation Form</h2>
+
+![online reservation form](/tutorials/case-27.png)
+<ul>
+	<li><a href="/tutorials/create-online-reservation-forms/">Creating online reservation form</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Styling Post</h2>
+
+![styling post](/tutorials/case-28.png)
+<ul>
+	<li><a href="/tutorials/">Styling posts in different categories</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Hotel Booking Website</h2>
+
+![hotel booking website](/tutorials/case-29.png)
+<ul>
+	<li><a href="/tutorials/">Building a hotel booking website</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Classified Ads Website</h2>
+
+![classified ads website](/tutorials/case-30.png)
+<ul>
+	<li><a href="/tutorials/">Creating a classified ads website</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Auto-Updated Cheat Sheet</h2>
+
+![auto-updated cheat sheet](/tutorials/case-31.png)
+<ul>
+	<li><a href="/tutorials/">Creating an auto-updated cheat sheet</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">Contributors Lists for Posts</h2>
+
+![contributors lists for posts](/tutorials/case-32.png)
+<ul>
+	<li><a href="/tutorials/">Creating contributors lists for posts</a></li>
+</ul>
+		</div>
+		<div className="items">
+			<h2 className="items_heading">OTA Website</h2>
+
+![ota website](/tutorials/case-33.png)
+<ul>
+	<li><a href="/tutorials/">Creating an OTA website</a></li>
+</ul>
+		</div>
 	</div>
 </div>

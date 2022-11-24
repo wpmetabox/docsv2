@@ -66,10 +66,10 @@ hide_table_of_contents: true
 
 ![case studies](/tutorials/category-2.png)
 <ul>
-	<li><a href="/tutorials/create-simple-listing-meta-box-bricks/">Creating a simple listing - Meta Box + Bricks</a></li>
-	<li><a href="/tutorials/create-faqs-page-meta-box-elementor/">Creating a FAQs page - Meta Box + Elementor</a></li>
+	<li><a href="/tutorials/create-simple-listing-meta-box-bricks/">Creating a simple listing - with Bricks</a></li>
+	<li><a href="/tutorials/create-faqs-page-meta-box-elementor/">Creating a FAQs page - with Elementor</a></li>
 	<li><a href="/tutorials/create-buttons-dynamic-links/">Creating buttons with dynamic link</a></li>
-	<li><a href="/tutorials/create-video-gallery-page-meta-box-oxygen/">Creating a video gallery page - Meta Box + Oxygen</a></li>
+	<li><a href="/tutorials/create-video-gallery-page-meta-box-oxygen/">Creating a video gallery page - with Oxygen</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -94,7 +94,7 @@ hide_table_of_contents: true
 <ul>
 	<li><a href="/tutorials/create-subscription-form-connect-to-mailchimp/">Creating subscription form connecting to Mailchimp</a></li>
 	<li><a href="">Creating settings page for customizer options</a></li>
-	<li><a href="/tutorials/analyze-content-seo-rank-math/">Analyzing Content in Custom Fields for SEO</a></li>
+	<li><a href="/tutorials/analyze-content-seo-rank-math/">Analyzing content in custom fields for SEO</a></li>
 	<li><a href="/tutorials/add-testimonials/">Adding testimonials</a></li>
 </ul>
 		</div>
@@ -105,10 +105,10 @@ hide_table_of_contents: true
 
 ![mb with builders](/tutorials/category-4.png)
 <ul>
-	<li><a href="/tutorials/create-faqs-page-meta-box-oxygen/">Creating an FAQs page - Meta Box + Oxygen</a></li>
-	<li><a href="/tutorials/create-simple-listing-meta-box-bricks/">Creating a simple listing - Meta Box + Bricks</a></li>
-	<li><a href="/tutorials/create-team-members-page-meta-box-elementor/">Creating team members page - Meta Box + Elementor</a></li>
-	<li><a href="/tutorials/display-latest-products-meta-box-zion/">Displaying latest products - Meta Box + Zion</a></li>
+	<li><a href="/tutorials/create-faqs-page-meta-box-oxygen/">Creating an FAQs page - with Oxygen</a></li>
+	<li><a href="/tutorials/create-simple-listing-meta-box-bricks/">Creating a simple listing - with Bricks</a></li>
+	<li><a href="/tutorials/create-team-members-page-meta-box-elementor/">Creating team members page - with Elementor</a></li>
+	<li><a href="/tutorials/display-latest-products-meta-box-zion/">Displaying latest products - with Zion</a></li>
 </ul>
 		</div>
 		<div className="items">

@@ -19,7 +19,7 @@ Let’s start with some basic pratices with Meta Box.
 </div>
 <div className="items">
 
-[![custom fields vs taxonomies](/tutorials/beginners-3.png) <h2 class="items_titles">Custom fields vs. custom taxonomies</h2>](/tutorials/custom-fields-vs-taxonomies/)
+[![custom fields vs taxonomies](/tutorials/beginners-3.png) <h2 class="items_titles">Custom fields vs custom taxonomies</h2>](/tutorials/custom-fields-vs-taxonomies/)
 
 </div>
 <div className="items">
@@ -54,7 +54,7 @@ Let’s start with some basic pratices with Meta Box.
 </div>
 <div className="items">
 
-[![changing the ID of a Meta Box field](/tutorials/beginners-10.png) <h2 class="items_titles">changing the ID of a Meta Box field</h2>](/tutorials/change-id-meta-box-field/)
+[![changing the ID of a Meta Box field](/tutorials/beginners-10.png) <h2 class="items_titles">Changing the ID of a Meta Box field</h2>](/tutorials/change-id-meta-box-field/)
 
 </div>
 	</div>
