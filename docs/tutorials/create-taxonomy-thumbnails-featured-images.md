@@ -158,7 +158,7 @@ Here is the result:
 
 ![The result](https://i.imgur.com/AfqYQyN.png)
 
-## Display Featured Images of Taxonomy
+## Displaying featured images of taxonomy
 
 I have an archive page for each taxonomy term. However, they haven’t had featured images yet, so I will create one at the top.
 
