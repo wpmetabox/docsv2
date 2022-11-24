@@ -141,7 +141,6 @@ Here is the result.
 ------
 
 You may be interested in: 
-* [Creating a simple listing - Bricks](https://docs.metabox.io/tutorials/create-simple-listing-meta-box-bricks/)
-* [Creating a recipe - Bricks](https://docs.metabox.io/tutorials/create-recipes-meta-box-bricks/)
-* [Creating a team members - Bricks](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-bricks/)
-* [Creating a product page - Bricks](https://docs.metabox.io/tutorials/display-latest-product-meta-box-bricks/)
+* [Creating a simple listing site](https://docs.metabox.io/tutorials/create-simple-listing-meta-box-bricks/)
+* [Creating a team members](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-bricks/)
+* [Creating a product page](https://docs.metabox.io/tutorials/display-latest-product-meta-box-bricks/)
