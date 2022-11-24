@@ -128,13 +128,13 @@ Go to the recipe page, and you’ll see the new look.
 ------
 
 You may be interested in: 
-* [Create a product page](https://docs.metabox.io/tutorials/create-product-page-meta-box-oxygen/)
-* [Create a recipe](https://docs.metabox.io/tutorials/create-recipe-meta-box-oxygen/)
-* [Create a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-oxygen/)
-* [Create a video gallery page](https://docs.metabox.io/tutorials/create-video-gallery-page-meta-box-oxygen/)
-* [Create an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-oxygen/)
-* [Display images from cloneable fields](https://docs.metabox.io/tutorials/display-images-from-cloneable-fields-meta-box-oxygen/)
-* [Display the latest products](https://docs.metabox.io/tutorials/display-latest-product-meta-box-oxygen/)
-* [Create taxonomy thumbnails & featured images](https://docs.metabox.io/tutorials/create-category-thumbnails/)
-* [Display Product Variations](https://docs.metabox.io/tutorials/display-product-variations-meta-box-oxygen/)
+* [Creating a product page](https://docs.metabox.io/tutorials/create-product-page-meta-box-oxygen/)
+* [Creating a recipe](https://docs.metabox.io/tutorials/create-recipe-meta-box-oxygen/)
+* [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-oxygen/)
+* [Creating a video gallery page](https://docs.metabox.io/tutorials/create-video-gallery-page-meta-box-oxygen/)
+* [Creating an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-oxygen/)
+* [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-from-cloneable-fields-meta-box-oxygen/)
+* [Displaying the latest products](https://docs.metabox.io/tutorials/display-latest-product-meta-box-oxygen/)
+* [Creating taxonomy thumbnails & featured images](https://docs.metabox.io/tutorials/create-category-thumbnails/)
+* [Displaying product variations](https://docs.metabox.io/tutorials/display-product-variations-meta-box-oxygen/)
 
