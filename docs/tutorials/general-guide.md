@@ -82,5 +82,115 @@ See how to use Meta box in common tasks.
 [![searching posts by taxonomy](/tutorials/guide-15.png) <h2 class="items_titles">Searching posts by taxonomy</h2>](/tutorials/search-posts-by-taxonomy/)
 
 </div>
+<div className="items">
+
+[![creating subscription form connecting to Mailchimp](/tutorials/guide-16.png) <h2 class="items_titles">Creating subscription form connecting to Mailchimp</h2>](/tutorials/create-subscription-form-connect-to-mailchimp/)
+
+</div>
+<div className="items">
+
+[![using custom HTML field to output texts or custom CSS](/tutorials/guide-17.png) <h2 class="items_titles">Using custom HTML field to output texts or custom CSS</h2>](/tutorials/create-notification-custom-html-field/)
+
+</div>
+<div className="items">
+
+[![adding paginations & search Boxes to custom fields ](/tutorials/guide-18.png) <h2 class="items_titles">Adding paginations & search Boxes to custom fields </h2>](/tutorials/add-paginations-search-boxes/)
+
+</div>
+<div className="items">
+
+[![analyzing content in custom fields for SEO](/tutorials/guide-19.png) <h2 class="items_titles">Analyzing content in custom fields for SEO</h2>](/tutorials/analyze-content-seo-rank-math/)
+
+</div>
+<div className="items">
+
+[![analyzing content in custom fields for SEO](/tutorials/guide-20.png) <h2 class="items_titles">Analyzing content in custom fields for SEO</h2>](/tutorials/analyze-content-yoast-seo/)
+
+</div>
+<div className="items">
+
+[![storing cloneable fields in multiple rows in the database](/tutorials/guide-21.png) <h2 class="items_titles">Storing cloneable fields in multiple rows in the database</h2>](/tutorials/store-cloneable-fields/)
+
+</div>
+<div className="items">
+
+[![adding testimonials](/tutorials/guide-22.png) <h2 class="items_titles">Adding testimonials</h2>](/tutorials/add-testimonials/)
+
+</div>
+<div className="items">
+
+[![adding related posts](/tutorials/guide-23.png) <h2 class="items_titles">Adding related posts</h2>](/tutorials/add-related-posts/)
+
+</div>
+<div className="items">
+
+[![changing the RSS content title](/tutorials/guide-24.png) <h2 class="items_titles">Changing the RSS content / title</h2>](/tutorials/change-rss-content/)
+
+</div>
+<div className="items">
+
+[![creating reusable template parts](/tutorials/guide-25.png) <h2 class="items_titles">Creating reusable template parts</h2>](/tutorials/create-reusable-template-parts/)
+
+</div>
+<div className="items">
+
+[![creating dynamic banners](/tutorials/guide-26.png) <h2 class="items_titles">Creating dynamic Banners</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![adding custom JavaScript actions](/tutorials/guide-27.png) <h2 class="items_titles">Adding custom JavaScript actions</h2>](/tutorials/add-javascript-actions-button-field/)
+
+</div>
+<div className="items">
+
+[![adding icon to title of custom fields](/tutorials/guide-28.png) <h2 class="items_titles">Adding icon to title of custom fields</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![bundling Meta Box into another plugin](/tutorials/guide-29.png) <h2 class="items_titles">Bundling Meta Box into another plugin</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![building gutenberg blocks](/tutorials/guide-30.png) <h2 class="items_titles">Building gutenberg blocks</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![adding a favorite button](/tutorials/guide-31.png) <h2 class="items_titles">Adding a favorite button</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![creating a contact form](/tutorials/guide-32.png) <h2 class="items_titles">Creating a contact form</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![getting field settings by field ID](/tutorials/guide-33.png) <h2 class="items_titles">Getting field settings by field ID</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![creating posts series](/tutorials/guide-34.png) <h2 class="items_titles">Creating posts series</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![displaying relationships](/tutorials/guide-35.png) <h2 class="items_titles">Displaying relationships</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![styling Meta Box’s custom fields with CSS](/tutorials/guide-36.png) <h2 class="items_titles">Styling Meta Box’s custom fields with CSS</h2>](/tutorials/)
+
+</div>
+<div className="items">
+
+[![using composer to install Meta Box extensions](/tutorials/guide-37.png) <h2 class="items_titles">Using composer to install Meta Box extensions</h2>](/tutorials/)
+
+</div>
 	</div>
 </div>
