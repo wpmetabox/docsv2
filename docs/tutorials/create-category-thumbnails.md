@@ -18,7 +18,7 @@ Here is my example:
 In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure you already have these extensions:
 
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It provides UI to create custom fields;
-* [MB Term Met](https://metabox.io/plugins/mb-term-meta/)a: It allows to create of custom fields for categories or taxonomies;
+* [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): It allows to create of custom fields for categories or taxonomies;
 * [MB Views](https://metabox.io/plugins/mb-views/): this extension creates a shortcode to display category thumbnails;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): (optional) you need this extension when you are creating thumbnails for custom taxonomies of a custom post type.
 
@@ -73,7 +73,7 @@ In the **Template** tab, I used this code:
 In there:
 * `get_categories( args )`: to know which category is getting data;
 * `<a href="{{ mb.get_category_link( category.term_id ) }}">{{ category.name }}</a>`: to get the link of the corresponding category by ID. At the same time, display the category name and hyperlink it;
-* `get_term_meta (): to get values for the fields from the corresponding category by category.term_id. 'thumbnail_images_category' and 'url_images_category' are IDs of fields;
+* `get_term_meta ()`: to get values for the fields from the corresponding category by `category.term_id. 'thumbnail_images_category'` and `'url_images_category'` are IDs of fields;
 * `wp_get_attachment_image_src ()`: to get the link of the uploaded image of the corresponding category;
 * `<img src="{{ }}">`: to display the image by the link assigned to the variable.
 
@@ -180,7 +180,7 @@ This is an archive page before the featured image is added.
 
 ![The archive page before adding the featured image](https://i.imgur.com/UPaXUH1.png)
 
-We need to edit the theme file to display the top-field images. Go to the archive.php file. It is the template file for the archive pages.
+We need to edit the theme file to display the top-field images. Go to the `archive.php` file. It is the template file for the archive pages.
 
 Add this code after the header and the first `div` tag.
 ```php
