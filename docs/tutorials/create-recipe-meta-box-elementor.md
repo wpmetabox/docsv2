@@ -241,10 +241,6 @@ Now, the recipe has a new look as below:
 ------
 
 You may be interested in: 
-* [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-elementors/)
-* [Creating an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-elementor/)
-* [Creating buttons with dynamic link](https://docs.metabox.io/tutorials/create-buttons-dynamic-links/)
 * [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-from-cloneable-fields-meta-box-elementor/)
 * [Displaying the latest products](https://docs.metabox.io/tutorials/display-latest-product-meta-box-elementor/)
 * [Showing featured products](https://docs.metabox.io/tutorials/show-featured-products-meta-box-elementor-wp-grid-builder/)
-* [Create menus for restaurants](https://docs.metabox.io/tutorials/create-menu-restaurants-meta-box-elementor/)
