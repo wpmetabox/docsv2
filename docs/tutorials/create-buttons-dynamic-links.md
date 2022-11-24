@@ -58,7 +58,7 @@ In there, `view_demo` and `download` are custom fields with IDs. By the way, bec
 
 The view will generate a shortcode as you see in the below image. Just copy and embed it somewhere.
 
-![The view will generate a shortcode](https://i.imgur.com/wqfanwd.png")
+![The view will generate a shortcode](https://i.imgur.com/wqfanwd.png)
 
 For instance, I pasted it to a sidebar on the single blog post page and got these default buttons.
 
@@ -66,7 +66,7 @@ For instance, I pasted it to a sidebar on the single blog post page and got thes
 
 Note that this look of the button is from the theme default.
 
-## Create buttons with dynamic links using Oxygen
+## Creating buttons with dynamic links using Oxygen
 
 I’ve already pre-made a template using <a href="https://oxygenbuilder.com/">Oxygen</a>. It is applied to blog posts.
 
