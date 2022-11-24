@@ -29,8 +29,8 @@ In the upcoming execution, we’ll create them one by one.
 
 To do it, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) and some of its extensions, including:
 
-* **MB Custom Post Type**: to create custom post types for the restaurants;
-* **Meta Box Builder**: to have a UI in the back end to create custom fields to save extra information about restaurants.
+* **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**: to create custom post types for the restaurants;
+* **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: to have a UI in the back end to create custom fields to save extra information about restaurants.
 
 Next, we need **[WP Grid Builder](https://wpgridbuilder.com/)** to build the page.
 
@@ -193,7 +193,7 @@ Now, all of the restaurant’s information is displayed. And you can see that th
 
 In this practice, I’ll add some CSS and JS code to style the section a little bit in the WP Grid Builder.
 
-Instead of adding code to the theme file, we’ll go to **Customization** in the grid’s settings of WWP Grid Builder, then add code to the corresponding boxes.
+Instead of adding code to the theme file, we’ll go to **Customization** in the grid’s settings of WP Grid Builder, then add code to the corresponding boxes.
 
 ![Add code to the Custom CSS box in Customization section](https://i.imgur.com/HfdIdgM.png)
 
