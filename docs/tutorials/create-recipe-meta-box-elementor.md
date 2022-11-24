@@ -241,7 +241,6 @@ Now, the recipe has a new look as below:
 ------
 
 You may be interested in: 
-* [Creating a recipe](https://docs.metabox.io/tutorials/create-recipe-meta-box-elementor/) 
 * [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-elementors/)
 * [Creating an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-elementor/)
 * [Creating buttons with dynamic link](https://docs.metabox.io/tutorials/create-buttons-dynamic-links/)
