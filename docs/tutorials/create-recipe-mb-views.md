@@ -260,7 +260,6 @@ You may interested in:
 * [Creating user profile page on frontend](https://docs.metabox.io/tutorials/create-user-profile-page/)
 * [Creating a dynamic landing page](https://docs.metabox.io/tutorials/create-dynamic-landing-page/)
 * [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-mb-views/)
-* [Creating a recipe](https://docs.metabox.io/tutorials/create-recipe-mb-views/)
 * [Displaying the latest products](https://docs.metabox.io/tutorials/display-latest-products-mb-views/)
 * [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-cloneable-fields-mb-views/)
 * [Creating a product page](https://docs.metabox.io/tutorials/create-product-pages-mb-views/)
