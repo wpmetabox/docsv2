@@ -180,5 +180,10 @@ The full code for the whole template is [here](https://github.com/wpmetabox/tuto
 
 Then, go to the FAQs page, you will see the questions and answers display as you want.
 
+------
+You may be interested in: 
 
+* [Creating online admission form](https://docs.metabox.io/tutorials/create-online-admission-form/)
+* [Configuring homepage](https://docs.metabox.io/tutorials/configure-homepage/)
+* [Displaying product variations](https://docs.metabox.io/tutorials/display-product-variations-mb-views/)
 
