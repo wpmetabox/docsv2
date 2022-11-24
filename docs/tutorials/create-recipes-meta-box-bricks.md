@@ -5,7 +5,7 @@ title: Creating a recipe - Meta Box + Bricks
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-We’re going to create a recipe page using Meta Box and Bricks. This page is a singular page of a custom post type and includes information that is stored in custom fields created with Meta Box.
+We’re going to **create a recipe page** using **Meta Box** and **Bricks**. This page is a singular page of a custom post type and includes information that is stored in custom fields created with Meta Box.
 
 The image below is a specific example.
 
@@ -137,3 +137,11 @@ Just choose the desired element and change the settings in the **Style** section
 Here is the result.
 
 ![The result after all steps](https://i.imgur.com/ZkaeruX.jpg)
+
+------
+
+You may be interested in: 
+* [Creating a simple listing - Bricks](https://docs.metabox.io/tutorials/create-simple-listing-meta-box-bricks/)
+* [Creating a recipe - Bricks](https://docs.metabox.io/tutorials/create-recipes-meta-box-bricks/)
+* [Creating a team members - Bricks](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-bricks/)
+* [Creating a product page - Bricks](https://docs.metabox.io/tutorials/display-latest-product-meta-box-bricks/)
