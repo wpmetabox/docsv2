@@ -125,7 +125,11 @@ Here is an example result of how I styled the page in my way.
 
 ![The result](https://i.imgur.com/eDe9LAZ.png)
 
+------
 
+You may be interested in: 
+* [Creating a recipe - Zion](https://docs.metabox.io/tutorials/create-recipes-meta-box-zion/)
+* [Displaying the latest products - Zion](https://docs.metabox.io/tutorials/display-latest-products-meta-box-zion/)
 
 
 
