@@ -136,3 +136,10 @@ Then all the changes in the skin will be automatically applied for the page.
 
 ![The result of created faqs page](https://i.imgur.com/sjpQ1l7.png)
 
+------
+You may be interested in: 
+
+* [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-elementors/)
+* [Creating buttons with dynamic link](https://docs.metabox.io/tutorials/create-buttons-dynamic-links/)
+* [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-from-cloneable-fields-meta-box-elementor/)
+
