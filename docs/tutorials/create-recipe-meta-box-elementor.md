@@ -46,30 +46,53 @@ Let’s create custom fields in the next step.
 
 Go to **Meta Box** > **Custom Fields** to create fields. This is the structure of the fields that I created:
 
-**Name**
-**Field Type**
-**Settings**
-Prep Time / Cooking Time / Resting Time / Total Time
-Text
+<table>
+<thead>
+<tr>
+<th> Name </th>
+<th> Field Type </th>
+<th> Settings </th>
+</tr>
+<tr>
+<th>Prep Time / Cooking Time / Resting Time / Total Time</th>
+<th>Text</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instruction</td>
+<td>
+Group</td>
+<td>
 
--
-Instruction
+* Cloneable
+* Collapsible
 
-Group
-Cloneable
-Collapsible
-         Step Number
-Text
--
-         Description
-Text
--
-Video
-oEmbed
--
-Ingredients / Notes / Nutrition / Equipment
-WYSIWYG
--
+</td>
+</tr>
+<tr>
+<td> Step Number</td>
+<td>Text</td>
+<td>-</td>
+</tr>
+<tr>
+<td> Description</td>
+<td>Text</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>oEmbed</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Ingredients / Notes / Nutrition / Equipment</td>
+<td>WYSIWYG</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
 Since there will be more than one step for the process of cooking, create a group for the instruction with two subfields as below. And, I also set this group to be cloneable to add more steps.
 
@@ -215,3 +238,14 @@ Now, the recipe has a new look as below:
 
 ![the recipe appearance after styling](https://i.imgur.com/WdagIRI.png)
 
+------
+
+You may be interested in: 
+* [Creating a recipe](https://docs.metabox.io/tutorials/create-recipe-meta-box-elementor/) 
+* [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-elementors/)
+* [Creating an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-elementor/)
+* [Creating buttons with dynamic link](https://docs.metabox.io/tutorials/create-buttons-dynamic-links/)
+* [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-from-cloneable-fields-meta-box-elementor/)
+* [Displaying the latest products](https://docs.metabox.io/tutorials/display-latest-product-meta-box-elementor/)
+* [Showing featured products](https://docs.metabox.io/tutorials/show-featured-products-meta-box-elementor-wp-grid-builder/)
+* [Create menus for restaurants](https://docs.metabox.io/tutorials/create-menu-restaurants-meta-box-elementor/)
