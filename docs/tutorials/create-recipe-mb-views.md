@@ -254,7 +254,7 @@ Now my pizza recipe looks much more delicious and beautiful.
 
 ------
 
-You may interested in: 
+You may be interested in: 
 * [Creating category thumbnails & featured images](https://docs.metabox.io/tutorials/create-category-thumbnails/)
 * [Creating buttons with dynamic link](https://docs.metabox.io/tutorials/create-buttons-dynamic-links/)
 * [Creating user profile page on frontend](https://docs.metabox.io/tutorials/create-user-profile-page/)
