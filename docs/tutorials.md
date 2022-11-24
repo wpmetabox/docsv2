@@ -6,7 +6,7 @@ hide_table_of_contents: true
 <div className="tutorials_banner">
 <div className="banner_left--item1">
 
-[![custom post types](/tutorials/banner-1.png)](/tutorials/create-custom-post-type-taxonomies/)
+[![create custom post type taxonomies](/tutorials/banner-1.png)](/tutorials/create-custom-post-type-taxonomies/)
 
 </div>
 <div className="banner_right--item2">
