@@ -47,8 +47,8 @@ In the case that you want to custom the register form with extra settings, you c
 <table>
 <tbody>
 <tr>
-<td>**Name**</td>
-<td>**Description**</td>
+<td> Name </td>
+<td> Description </td>
 </tr>
 <tr>
 <td>_id_</td>
@@ -108,11 +108,11 @@ In the case that you want to custom the register form with extra settings, you c
 </tr>
 <tr>
 <td>_password_strength_</td>
-<td>Set the required password strength. Available options: _strong_, _medium_, _weak_, _very-weak_ or _false_ to disable the password strength meter.</td>
+<td>Set the required password strength. Available options: strong, medium, weak, very-weak or false to disable the password strength meter.</td>
 </tr>
 <tr>
 <td>_email_as_username_</td>
-<td>Use email for username. If this param is _true_, then the username field will disappear.</td>
+<td>Use email for username. If this param is true, then the username field will disappear.</td>
 </tr>
 </tbody>
 </table>
@@ -220,7 +220,7 @@ Copy it and also insert to the shortcode on the User Profile page.
 
 You will see the fields displayed on the User Profile page on the frontend as below:
 
-https://i.imgur.com/tJ3hW2A.png
+![The created fields on the frontend](https://i.imgur.com/tJ3hW2A.png)
 
 To check whether the fields work well or not, you can input something then go to the user profile in the backend to see if they are there. If everything you input in the page also is in the backend, you made it right.
 
