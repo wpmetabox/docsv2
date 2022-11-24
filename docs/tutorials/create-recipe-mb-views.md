@@ -185,7 +185,7 @@ I’ve uploaded all of these codes on [Github](https://github.com/wpmetabox/tuto
 
 Next, scroll down to see the **Settings** section of the view:
 
-https://i.imgur.com/eZYZtZn.png
+![Settings section of the view](https://i.imgur.com/eZYZtZn.png)
 
 Set the **Type** of the template as **Singular**, then choose the **Location** as **Recipe** to apply this template to all the posts in the Recipe post type.
 
@@ -251,3 +251,20 @@ Otherwise, if you use the method 2 in the previous step, which means you’re us
 Now my pizza recipe looks much more delicious and beautiful.
 
 ![The result](https://i.imgur.com/evpVQXw.jpg)
+
+------
+
+You may interested in: 
+* [Creating category thumbnails & featured images](https://docs.metabox.io/tutorials/create-category-thumbnails/)
+* [Creating buttons with dynamic link](https://docs.metabox.io/tutorials/create-buttons-dynamic-links/)
+* [Creating user profile page on frontend](https://docs.metabox.io/tutorials/create-user-profile-page/)
+* [Creating a dynamic landing page](https://docs.metabox.io/tutorials/create-dynamic-landing-page/)
+* [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-mb-views/)
+* [Creating a recipe](https://docs.metabox.io/tutorials/create-recipe-mb-views/)
+* [Displaying the latest products](https://docs.metabox.io/tutorials/display-latest-products-mb-views/)
+* [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-cloneable-fields-mb-views/)
+* [Creating a product page](https://docs.metabox.io/tutorials/create-product-pages-mb-views/)
+* [Creating online admission form](https://docs.metabox.io/tutorials/create-online-admission-form/)
+* [Configuring homepage](https://docs.metabox.io/tutorials/configure-homepage/)
+* [Creating an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-mb-views/)
+* [Displaying product variations](https://docs.metabox.io/tutorials/display-product-variations-mb-views/)
