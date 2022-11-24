@@ -83,11 +83,11 @@ This is a group with three subfields inside. This group is set to be cloneable t
 
 ![Set this group as cloneable to have more spaces to add different brands information.](https://i.imgur.com/Hi033mY.png)
 
-As you can see in the structure, I added 2 fields which are Single Image and Url. One allows you to upload images and save them in the library, and one allows you to input a link of an image from anywhere.
+As you can see in the structure, I added 2 fields which are **Single Image** and **Url**. One allows you to upload images and save them in the library, and one allows you to input a link of an image from anywhere.
 
 ![2 fields which are Single Image and Url help you upload images and input a link of image.](https://i.imgur.com/dmaPInv.png)
 
-After having all the needed fields, go to the Settings tab and choose the Location as the Settings Page that we’ve just created to apply the custom fields to it.
+After having all the needed fields, go to the **Settings** tab and choose the **Location** as the **Settings Page** that we’ve just created to apply the custom fields to it.
 
 ![In the Settings tab, choose the Location as the Settings Page that we’ve just created to apply the custom fields.](https://i.imgur.com/MHr0exH.png)
 
@@ -177,4 +177,10 @@ After adding css, my brand section turned into a new look.
 
 ![The result after adding css code](https://i.imgur.com/MQpnntm.png)
  
- 
+ ------
+
+You may be interested in: 
+* [Creating user profile page on frontend](https://docs.metabox.io/tutorials/create-user-profile-page/)
+* [Creating a dynamic landing page](https://docs.metabox.io/tutorials/create-dynamic-landing-page/)
+* [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-mb-views/)
+
