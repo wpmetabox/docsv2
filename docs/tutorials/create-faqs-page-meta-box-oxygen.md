@@ -111,3 +111,11 @@ Now, on the FAQs page, you will see the result like this.
 
 ![Result of the created FAQ page after all steps](https://i.imgur.com/iL7LKx4.gif)
 
+------
+
+You may be interested in: 
+
+* [Creating a product page](https://docs.metabox.io/tutorials/create-product-page-meta-box-oxygen/)
+* [Creating a recipe](https://docs.metabox.io/tutorials/create-recipe-meta-box-oxygen/)
+* [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-oxygen/)
+
