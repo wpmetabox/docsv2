@@ -31,11 +31,11 @@ Go to **Meta Box > Custom Fields > Add New** to create a new field group. Then, 
 <table>
 <thead>
 <tr>
-<th>**Name**</th>
-<th>**ID**</th>
-<th>**Type**</th>
-<th>**Options**</th>
-<th>**Condition**</th>
+<th> Name </th>
+<th> ID </th>
+<th> Type </th>
+<th> Options </th>
+<th> Condition </th>
 </tr>
 </thead>
 <tbody>
@@ -53,7 +53,7 @@ Go to **Meta Box > Custom Fields > Add New** to create a new field group. Then, 
 <td>group</td>
 
 <td>display only when:
-the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
+the choose_an_option_ field = the all_days_are_the_same_ option</td>
 </tr>
 <tr>
 <td> Type of opening hours</td>
@@ -103,20 +103,20 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 </tr>
 <tr>
 <td> Choose time slots</td>
-<td>choose_time_slots**_weekdays**</td>
+<td>choose_time_slots_weekdays</td>
 <td>group</td>
 
 <td>display only when: the _type_of_opening_hours_weekdays_ field = the _enter_hours_ option</td>
 </tr>
 <tr>
 <td>Start time</td>
-<td>start_time**_weekdays**</td>
+<td>start_time_weekdays</td>
 <td>time picker</td>
 
 </tr>
 <tr>
 <td>End time</td>
-<td>end_time**_weekdays**</td>
+<td>end_time_weekdays**</td>
 <td>time picker</td>
 
 </tr>
@@ -139,20 +139,20 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 </tr>
 <tr>
 <td> Choose time slots</td>
-<td>choose_time_slots**_weekend**</td>
+<td>choose_time_slots_weekend</td>
 <td>group</td>
 
 <td>display only when: the _type_of_opening_hours_weekend_ field = the _enter_hours_ option</td>
 </tr>
 <tr>
 <td>Start time</td>
-<td>start_time**_weekend**</td>
+<td>start_time_weekend</td>
 <td>time picker</td>
 
 </tr>
 <tr>
 <td>End time</td>
-<td>end_time**_weekend**</td>
+<td>end_time_weekend</td>
 <td>time picker</td>
 
 </tr>
@@ -165,7 +165,7 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 </tr>
 <tr>
 <td> Type of opening hours</td>
-<td>type_of_opening_hours**_monday**</td>
+<td>type_of_opening_hours_monday</td>
 <td>select</td>
 <td>1. open_all_day
 2. close_all_day
@@ -175,20 +175,20 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 </tr>
 <tr>
 <td> Choose time slots</td>
-<td>choose_time_slots**_weekend**</td>
+<td>choose_time_slots_weekend</td>
 <td>group</td>
 
 <td>display only when: the _type_of_opening_hours_monday_ field = the _enter_hours_ option</td>
 </tr>
 <tr>
 <td>Start time</td>
-<td>start_time**_weekend**</td>
+<td>start_time_weekend</td>
 <td>time picker</td>
 
 </tr>
 <tr>
 <td>End time</td>
-<td>end_time**_weekend**</td>
+<td>end_time_weekend</td>
 <td>time picker</td>
 
 </tr>
