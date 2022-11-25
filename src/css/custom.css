@@ -588,6 +588,13 @@ html[data-theme='dark'] .tutorials_trending img{
 	-webkit-filter: brightness(0) invert(1);
 	filter: brightness(0) invert(1);
 }
+html[data-theme='dark'] .tutorials_trending .trending_category{
+	background: #fff;
+	color: #000;
+}
+html[data-theme='dark'] .tutorials_trending{
+	border: 1px solid #fff;
+}
 .tutorials_trending img{
 	margin-inline: unset;
 	margin: 0;
