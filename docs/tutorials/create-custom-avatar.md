@@ -4,7 +4,7 @@ title: Creating a custom avatar for users
 
 Normally, to change your avatar on WordPress, you have to use your Gravatar account and change your avatar on it. After that, it will automatically link to your account on the website. However, this method may be time-consuming for some. For users to be able to change their avatar directly on the website, we can create a field where we can upload an image and link it so that you can apply it to your avatar. It is called a custom avatar.
 
-![Example of a custom avatar](https://imgur.com/G18RnMP)
+![Example of a custom avatar](https://i.imgur.com/G18RnMP.png)
 
 ## Before Getting Started
 
@@ -19,19 +19,19 @@ Go to **Meta Box > Custom Fields > Add new**.
 
 Then, click **Add Field** button and select **Single Image** field type to create your needed field. 
 
-![Create the wanted fields](https://imgur.com/qJImjuJ)
+![Create the wanted fields](https://i.imgur.com/qJImjuJ.png)
 
 Since the ID of the Single Image field will be used in the next steps, change it to something easy to remember, e.g., custom_avatar.
 
 Next, move to the **Settings** tab and set the **Location** as **Users**.
 
-![set location for the created fields](https://imgur.com/csuPTND)
+![set location for the created fields](https://i.imgur.com/csuPTND.png)
 
 Finally, click **Save Changes** to save the created custom field.
 
 When you go to edit a user profile in the **Users** section, you will see the **Custom Avatar** field appear.
 
-![Custom avatar field appear](https://imgur.com/YzeZDmQ)
+![Custom avatar field appear](https://i.imgur.com/YzeZDmQ.png)
 
 You can upload an image to the field.
 
@@ -39,7 +39,7 @@ You can upload an image to the field.
 
 Now, your **Profile Picture** hasn't got the uploaded picture from your **Custom Avatar** field automatically yet.
 
-![The profile picture hasn't got the uploaded picture](https://imgur.com/5EYCABo)
+![The profile picture hasn't got the uploaded picture](https://i.imgur.com/5EYCABo.png)
 
 To make it happen, you need to put this code into the `functions.php` file:
 
@@ -72,7 +72,7 @@ function mbua_get_avatar_url( $url, $id_or_email, $args ) {
 ```
 After adding the code, you will see that the **Profile Picture** has been automatically replaced with the similar image that you uploaded in the **Custom Avatar** field.
 
-![After adding the code there will be uploaded custom avatar](https://imgur.com/G18RnMP)
+![After adding the code there will be uploaded custom avatar](https://i.imgur.com/G18RnMP.png)
 
 ## Last Words
 
