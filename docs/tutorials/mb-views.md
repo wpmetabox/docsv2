@@ -9,17 +9,17 @@ Build front-end templates for WordPress without touching theme files. Support Tw
 	<div className="tutorials_category tutorials_category--new">
 <div className="items">
 
-[![filtering posts by custom fields and taxonomies](/tutorials/views-1.png) <h2 class="items_titles">Filtering posts by custom fields and taxonomies</h2>](/tutorials/)
+[![Create Category Thumbnails & Featured Images](/tutorials/views-1.png) <h2 class="items_titles">Create category thumbnails & featured images</h2>](/tutorials/create-category-thumbnails/)
 
 </div>
 <div className="items">
 
-[![creating buttons with dynamic link](/tutorials/views-2.png) <h2 class="items_titles">Creating buttons with dynamic link</h2>](/tutorials/)
+[![creating buttons with dynamic link](/tutorials/views-2.png) <h2 class="items_titles">Creating buttons with dynamic link</h2>](/tutorials/create-buttons-dynamic-links/)
 
 </div>
 <div className="items">
 
-[![creating user profile page](/tutorials/views-3.png) <h2 class="items_titles">Creating user profile page on frontend</h2>](/tutorials/)
+[![creating user profile page](/tutorials/views-3.png) <h2 class="items_titles">Creating user profile page on frontend</h2>](/tutorials/create-user-profile-page/)
 
 </div>
 <div className="items">
@@ -84,12 +84,7 @@ Build front-end templates for WordPress without touching theme files. Support Tw
 </div>
 <div className="items">
 
-[![adding dynamic banners](/tutorials/views-17.png) <h2 class="items_titles">Adding dynamic banners</h2>](/tutorials/)
-
-</div>
-<div className="items">
-
-[![displaing relationships](/tutorials/views-18.png) <h2 class="items_titles">Displaying relationships</h2>](/tutorials/)
+[![adding dynamic banners](/tutorials/views-17.png) <h2 class="items_titles">Creating dynamic banners</h2>](/tutorials/create-dynamic-banners/)
 
 </div>
 	</div>

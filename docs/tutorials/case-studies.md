@@ -38,7 +38,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![buttons with dynamic link](/tutorials/case-4.png)
 <ul>
-	<li><a href="/tutorials/create-buttons-dynamic-links/">Creating Buttons with Dynamic Link</a></li>
+	<li><a href="/tutorials/create-buttons-dynamic-links/">Creating buttons with dynamic link</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -54,7 +54,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![user profile page](/tutorials/case-6.png)
 <ul>
-	<li><a href="/tutorials/create-user-profile-page/">Creating Custom User Profile Page on Frontend</a></li>
+	<li><a href="/tutorials/create-user-profile-page/">Creating custom user profile page on frontend</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -94,7 +94,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![add-to-calendar buttons](/tutorials/case-10.png)
 <ul>
-	<li><a href="/tutorials/create-add-to-calendar-buttons/">Creating Add To Calendar Buttons for Your Events</a></li>
+	<li><a href="/tutorials/create-add-to-calendar-buttons/">Creating Add-to-calendar buttons for your events</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -102,7 +102,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![download buttons](/tutorials/case-11.png)
 <ul>
-	<li><a href="/tutorials/create-download-button/">Creating Download Buttons</a></li>
+	<li><a href="/tutorials/create-download-button/">Creating Download buttons</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -110,7 +110,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![dynamic landing page](/tutorials/case-12.png)
 <ul>
-	<li><a href="/tutorials/create-dynamic-landing-page/">Creating A Dynamic Landing Page</a></li>
+	<li><a href="/tutorials/create-dynamic-landing-page/">Creating a dynamic landing page</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -218,7 +218,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![rss content title](/tutorials/case-24.png)
 <ul>
-	<li><a href="/tutorials/">Changing the RSS content / title</a></li>
+	<li><a href="/tutorials/change-rss-content/">Changing the RSS content / title</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -226,7 +226,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![dynamic banners](/tutorials/case-25.png)
 <ul>
-	<li><a href="/tutorials/">Dynamic Banners</a></li>
+	<li><a href="/tutorials/create-dynamic-banners/">Creating dynamic banners</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -234,7 +234,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![configure homepage](/tutorials/case-26.png)
 <ul>
-	<li><a href="/tutorials/configure-homepage/">Configure Homepage</a></li>
+	<li><a href="/tutorials/configure-homepage/">Configure homepage</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -250,47 +250,7 @@ See how to use Meta Box in the real case studies with comprehensive tutorials.
 
 ![styling post](/tutorials/case-28.png)
 <ul>
-	<li><a href="/tutorials/">Styling posts in different categories</a></li>
-</ul>
-		</div>
-		<div className="items">
-			<h2 className="items_heading">Hotel Booking Website</h2>
-
-![hotel booking website](/tutorials/case-29.png)
-<ul>
-	<li><a href="/tutorials/">Building a hotel booking website</a></li>
-</ul>
-		</div>
-		<div className="items">
-			<h2 className="items_heading">Classified Ads Website</h2>
-
-![classified ads website](/tutorials/case-30.png)
-<ul>
-	<li><a href="/tutorials/">Creating a classified ads website</a></li>
-</ul>
-		</div>
-		<div className="items">
-			<h2 className="items_heading">Auto-Updated Cheat Sheet</h2>
-
-![auto-updated cheat sheet](/tutorials/case-31.png)
-<ul>
-	<li><a href="/tutorials/">Creating an auto-updated cheat sheet</a></li>
-</ul>
-		</div>
-		<div className="items">
-			<h2 className="items_heading">Contributors Lists for Posts</h2>
-
-![contributors lists for posts](/tutorials/case-32.png)
-<ul>
-	<li><a href="/tutorials/">Creating contributors lists for posts</a></li>
-</ul>
-		</div>
-		<div className="items">
-			<h2 className="items_heading">OTA Website</h2>
-
-![ota website](/tutorials/case-33.png)
-<ul>
-	<li><a href="/tutorials/">Creating an OTA website</a></li>
+	<li><a href="/tutorials/style-posts-different-categories/">Styling posts in different categories</a></li>
 </ul>
 		</div>
 	</div>

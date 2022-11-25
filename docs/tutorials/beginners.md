@@ -34,7 +34,7 @@ Let’s start with some basic pratices with Meta Box.
 </div>
 <div className="items">
 
-[![exporting and import custom fields](/tutorials/beginners-6.png) <h2 class="items_titles">Exporting and import custom fields</h2>](/tutorials/export-import-custom-fields-meta-box-builder/)
+[![exporting and import custom fields](/tutorials/beginners-6.png) <h2 class="items_titles">Exporting and importing custom fields</h2>](/tutorials/export-import-custom-fields-meta-box-builder/)
 
 </div>
 <div className="items">

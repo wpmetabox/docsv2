@@ -673,6 +673,7 @@ html[data-theme='dark'] .tutorials_trending img{
 	line-height: 19px;
 	font-weight: 500;
 	color: var(--color-tutorius);
+	display: inline-block;
 }
 .tutorials_category ul li a:hover{
 	color: var(--ifm-menu-color-active);

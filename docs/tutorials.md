@@ -55,8 +55,8 @@ hide_table_of_contents: true
 <ul>
 	<li><a href="/tutorials/custom-fields-vs-taxonomies/">Custom fields vs custom taxonomies</a></li>
 	<li><a href="/tutorials/move-data-to-custom-tables/">Moving fields’ data to custom tables</a></li>
-	<li><a href="/tutorials/copy-custom-fields/">Cloning custom fields from site to sites</a></li>
-	<li><a href="/tutorials/export-import-custom-fields-meta-box-builder/">Exporting and import custom fields</a></li>
+	<li><a href="/tutorials/copy-custom-fields/">Cloning custom fields from sites to sites</a></li>
+	<li><a href="/tutorials/export-import-custom-fields-meta-box-builder/">Exporting and importing custom fields</a></li>
 </ul>
 		</div>
 		<div className="items">
@@ -79,7 +79,7 @@ hide_table_of_contents: true
 
 ![general guide](/tutorials/category-3.png)
 <ul>
-	<li><a href="/tutorials/add-custom-fields-to-yoast-seo/">Adding custom fields to Yoast SEO Meta Tags</a></li>
+	<li><a href="/tutorials/add-custom-fields-to-yoast-seo/">Adding custom fields to Yoast SEO meta tags</a></li>
 	<li><a href="/tutorials/move-data-to-custom-tables/">Moving custom fields’ data to custom tables</a></li>
 	<li><a href="/tutorials/display-users-list/">Displaying a user list on the frontend</a></li>
 	<li><a href="/tutorials/get-posts-by-custom-fields/">Getting posts by custom fields</a></li>
@@ -107,7 +107,7 @@ hide_table_of_contents: true
 <ul>
 	<li><a href="/tutorials/create-faqs-page-meta-box-oxygen/">Creating an FAQs page - with Oxygen</a></li>
 	<li><a href="/tutorials/create-simple-listing-meta-box-bricks/">Creating a simple listing - with Bricks</a></li>
-	<li><a href="/tutorials/create-team-members-page-meta-box-elementor/">Creating team members page - with Elementor</a></li>
+	<li><a href="/tutorials/create-team-members-page-meta-box-elementor/">Showing featured products - with Elementor</a></li>
 	<li><a href="/tutorials/display-latest-products-meta-box-zion/">Displaying latest products - with Zion</a></li>
 </ul>
 		</div>
