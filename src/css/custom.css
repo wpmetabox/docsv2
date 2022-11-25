@@ -615,7 +615,7 @@ html[data-theme='dark'] .tutorials_trending img{
 	align-items: center;
 }
 
-/* Category new */
+/* Category */
 .tutorials_category{
 	display: grid;
 	grid-template-columns: repeat( 3, 1fr );
@@ -636,6 +636,7 @@ html[data-theme='dark'] .tutorials_trending img{
 	border-radius: 0;
 	box-shadow: unset;
 	float: left;
+	margin-bottom: 5px;
 }
 .category_wrap .tutorials_category{
 	margin-top: 60px;
@@ -654,7 +655,7 @@ html[data-theme='dark'] .tutorials_trending img{
 }
 .tutorials_category ul li{
 	position: relative;
-	padding: 15px 15px 10px 15px;
+	padding: 10px 15px;
 	list-style-type: none;
 	border-bottom: 1px solid #B4B4B4;
 }
@@ -665,7 +666,7 @@ html[data-theme='dark'] .tutorials_trending img{
 	background: var(--ifm-menu-color-active);
 	position: absolute;
 	left: 0px;
-	top: 27px;
+	top: 21px;
 }
 .tutorials_category ul li a{
 	font-size: 16px ;
@@ -677,11 +678,24 @@ html[data-theme='dark'] .tutorials_trending img{
 	color: var(--ifm-menu-color-active);
 }
 .tutorials_category--new .items_titles {
+	position: relative;
 	font-size: 16px ;
 	line-height: 19px;
 	font-weight: 500;
 	color: var(--color-tutorius);
-	clear: both;
+    padding: 15px 15px 10px 15px;
+    margin: 0;
+    border-bottom: 1px solid #B4B4B4;
+    clear: both;
+}
+.tutorials_category--new .items_titles::before{
+	content: "";
+    width: 5px;
+    height: 5px;
+    background: var(--ifm-menu-color-active);
+    position: absolute;
+    left: 0px;
+    top: 23px;
 }
 .tutorials_category--new .items :hover .items_titles{
     color: var(--ifm-menu-color-active);
