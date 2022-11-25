@@ -55,7 +55,7 @@ hide_table_of_contents: true
 <ul>
 	<li><a href="/tutorials/custom-fields-vs-taxonomies/">Custom fields vs custom taxonomies</a></li>
 	<li><a href="/tutorials/move-data-to-custom-tables/">Copying fields’ data to custom tables</a></li>
-	<li><a href="/tutorials/copy-custom-fields/">Cloning custom fields from sites to sites</a></li>
+	<li><a href="/tutorials/copy-custom-fields/">Copying custom fields from sites to sites</a></li>
 	<li><a href="/tutorials/export-import-custom-fields-meta-box-builder/">Exporting and importing custom fields</a></li>
 </ul>
 		</div>
