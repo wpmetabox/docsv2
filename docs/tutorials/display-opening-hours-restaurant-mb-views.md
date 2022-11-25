@@ -44,11 +44,8 @@ Go to **Meta Box > Custom Fields > Add New** to create a new field group. Then, 
 <td>choose_an_option</td>
 <td>select</td>
 <td>1. all_days_are_the_same
-
 2. difference_between_weekdays_and_weekend
-
 3. custom</td>
-
 </tr>
 <tr>
 <td>All days have the same opening hours</td>
@@ -56,7 +53,6 @@ Go to **Meta Box > Custom Fields > Add New** to create a new field group. Then, 
 <td>group</td>
 
 <td>display only when:
-
 the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 </tr>
 <tr>
@@ -64,11 +60,8 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 <td>type_of_opening_hours</td>
 <td>select</td>
 <td>1. open_all_day
-
 2. close_all_day
-
 3. by_appointment_only
-
 4. enter_hours</td>
 
 </tr>
@@ -103,11 +96,8 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 <td>type_of_opening_hours**_weekdays**</td>
 <td>select</td>
 <td>1. open_all_day
-
 2. close_all_day
-
 3. by_appointment_only
-
 4. enter_hours</td>
 
 </tr>
@@ -142,11 +132,8 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 <td>type_of_opening_hours**_weekend**</td>
 <td>select</td>
 <td>1. open_all_day
-
 2. close_all_day
-
 3. by_appointment_only
-
 4. enter_hours</td>
 
 </tr>
@@ -181,11 +168,8 @@ the _choose_an_option_ field = the _all_days_are_the_same_ option</td>
 <td>type_of_opening_hours**_monday**</td>
 <td>select</td>
 <td>1. open_all_day
-
 2. close_all_day
-
 3. by_appointment_only
-
 4. enter_hours</td>
 
 </tr>
