@@ -84,7 +84,7 @@ Finally, let’s create a post for a restaurant, you will see the custom fields 
 
 ![You will see the custom fields and the voucher taxonomy with terms appear in the post editor](https://i.imgur.com/ApHXazu.png)
 
-## Step 3: Built the page
+## Step 3: Build the page
 
 Since we’ll built the page with Bricks, create a new page and edit it with Bricks.
 
