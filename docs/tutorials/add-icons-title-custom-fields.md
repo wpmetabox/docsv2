@@ -61,7 +61,7 @@ In this way, you need to install [Meta Box Builder](https://metabox.io/plugins/m
 
 Here are my example fields.
 
-![Example fields](https://imgur.com/A8QNyRf)
+![Example fields](https://i.imgur.com/A8QNyRf.png)
 
 Now, we add the HTML of the icon to the **Title** of Meta Box or **Label** of fields.
 
