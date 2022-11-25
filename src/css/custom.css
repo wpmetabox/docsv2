@@ -778,3 +778,9 @@ html[data-theme='dark'] .tutorials_trending{
 	}
 
 }
+
+/* hide menu */
+.menu__list-item:last-child .menu__list >li:nth-child(n+7){
+	display: none !important;
+
+}
