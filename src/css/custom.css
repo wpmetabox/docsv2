@@ -33,6 +33,7 @@
 	/* Meta Box blue shades */
 	--color-base: hsl(210, 29%, 24%);
 	--color-dark: hsl(210, 30%, 18%);
+	--color-tutorius: #202E3C;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -49,6 +50,8 @@ html[data-theme='dark'] {
 	--ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
 
 	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, .3);
+
+	--color-tutorius: var(--ifm-font-color-base);
 }
 
 /* Colors */
@@ -542,4 +545,242 @@ summary {
 .pagination-nav__link {
 	border: none;
 	padding: 0;
+}
+
+/* Tutorials */
+.tutorials h2 , .tutorials h3{
+	margin: 0;
+}
+.tutorials img{
+	object-fit: cover;
+	object-position: center;
+	height: auto;
+	border-radius: 0;
+	box-shadow: unset;
+}
+.tutorials_banner img{
+	margin: 0;
+	float: left;
+	max-height: unset;
+}
+.tutorials_banner .banner_left--item1 { grid-area: item1; }
+.tutorials_banner .banner_right--item2 { grid-area: item2; }
+.tutorials_banner .banner_right--item3 { grid-area: item3; }
+.tutorials_banner .banner_right--item4 { grid-area: item4; }
+.tutorials_banner{
+	display: grid;
+	grid-template-areas:
+    'item1 item1 item2 item2'
+    'item1 item1 item3 item4';
+	grid-gap: 0.75rem;
+}
+
+.tutorials_trending{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	margin: 47px 0px;
+	padding: 20px 22px;
+	border: 1px solid #000;
+}
+html[data-theme='dark'] .tutorials_trending img{
+	-webkit-filter: brightness(0) invert(1);
+	filter: brightness(0) invert(1);
+}
+html[data-theme='dark'] .tutorials_trending .trending_category{
+	background: #fff;
+	color: #000;
+}
+html[data-theme='dark'] .tutorials_trending{
+	border: 1px solid #fff;
+}
+.tutorials_trending img{
+	margin-inline: unset;
+	margin: 0;
+}
+
+.tutorials_trending .trending_category{
+	display: inline-block;
+	color: #fff;
+	background: #000;
+	font-size: var( --ifm-h2-font-size )  ;
+	font-weight: bold;
+	padding: 0px 8px 4px 8px;
+}
+.tutorials_trending .trending_title{
+	color: var(--color-tutorius);
+	font-size: 16px;
+	line-height: 19px;
+	padding-left: 50px;
+}
+.tutorials_trending a:hover h2{
+	color: var(--ifm-menu-color-active);
+}
+.tutorials_trending .items{
+	display: flex;
+	align-items: center;
+}
+
+/* Category */
+.tutorials_category{
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	column-gap: 1.5rem;
+	row-gap: 3rem;
+}
+.tutorials_category .items_heading{
+	font-size:25px;
+	line-height: 30px;
+	color: var(--ifm-menu-color-active);
+	margin-bottom: 19px;
+	display: block;
+}
+.tutorials_category img{
+	object-fit: cover;
+	object-position: center;
+	height: auto;
+	border-radius: 0;
+	box-shadow: unset;
+	float: left;
+	margin-bottom: 5px;
+}
+.category_wrap .tutorials_category{
+	margin-top: 60px;
+}
+.tutorials_category .items_title{
+	font-size: 20px ;
+	line-height: 24px;
+	font-weight: 500;
+	color: #202E3C;
+}
+.tutorials_category ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: square;
+	clear: both;
+}
+.tutorials_category ul li{
+	position: relative;
+	padding: 10px 15px;
+	list-style-type: none;
+	border-bottom: 1px solid #B4B4B4;
+}
+.tutorials_category ul li::before{
+	content: "";
+	width: 5px;
+	height: 5px;
+	background: var(--ifm-menu-color-active);
+	position: absolute;
+	left: 0px;
+	top: 21px;
+}
+.tutorials_category ul li a{
+	font-size: 16px ;
+	line-height: 19px;
+	font-weight: 500;
+	color: var(--color-tutorius);
+	display: inline-block;
+}
+.tutorials_category ul li a:hover{
+	color: var(--ifm-menu-color-active);
+}
+.tutorials_category--new .items_titles {
+	position: relative;
+	font-size: 16px ;
+	line-height: 19px;
+	font-weight: 500;
+	color: var(--color-tutorius);
+    padding: 15px 15px 10px 15px;
+    margin: 0;
+    border-bottom: 1px solid #B4B4B4;
+    clear: both;
+}
+.tutorials_category--new .items_titles::before{
+	content: "";
+    width: 5px;
+    height: 5px;
+    background: var(--ifm-menu-color-active);
+    position: absolute;
+    left: 0px;
+    top: 23px;
+}
+.tutorials_category--new .items :hover .items_titles{
+    color: var(--ifm-menu-color-active);
+}
+@media ( max-width: 1199px ){
+	.tutorials_trending .trending_category{
+		font-size: 18px;
+	}
+	.tutorials_trending .trending_title{
+		padding-left: 35px;
+	}
+	.tutorials_trending .trending--third{
+		display: none;
+	}
+	.tutorials_category .items_heading{
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+@media ( max-width:1024px ){
+	.tutorials_trending .trending_category{
+		font-size: 1.5rem;
+	}
+	.tutorials_trending .trending_title{
+		padding-left: 52px;
+	}
+	.tutorials_trending .trending--second{
+		display: none;
+	}
+	.tutorials_category .items_heading{
+		font-size: 25px;
+		line-height: 30px;
+	}
+	.tutorials_category{
+		grid-template-columns: repeat( 2, 1fr );
+	}
+
+}
+@media ( max-width:767px ){
+	.tutorials_banner{
+		grid-template-areas:'item1''item2''item3''item4';
+	}
+	.tutorials img{
+		width: 100%;
+		max-height: unset;
+		height: auto;
+	}
+	.tutorials_trending{
+		display: block;
+		padding: 12px;
+	}
+	.tutorials_trending .trending_category{
+		font-size: 22px;
+	}
+	.tutorials_trending img{
+		display: none;
+	}
+	.tutorials_trending .items{
+		display: block;
+	}
+	.tutorials_trending .trending_title{
+		padding: 0;
+		margin-top: 12px;
+	}
+	.tutorials_category{
+		grid-template-columns: repeat( 1, 1fr );
+	}
+	.tutorials_category img{
+		width: 100%;
+		max-height: unset;
+		height: auto;
+	}
+
+}
+
+/* hide menu */
+.menu__list-item:last-child .menu__list >li:nth-child(n+7){
+	display: none !important;
+
 }
