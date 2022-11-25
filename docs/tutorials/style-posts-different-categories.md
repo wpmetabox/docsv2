@@ -92,11 +92,11 @@ add_action( 'wp_head', 'estar_output_frontend' );
 
 **Explanation**:
 
-* `estar` is the theme that I am using. You can download this free theme [here](https://gretathemes.com/wordpress-themes/estar/);
+* *estar* is the theme that I am using. You can download this free theme [here](https://gretathemes.com/wordpress-themes/estar/);
 * `If ( ! is_single() ) {}`: is to check that the user is in the singular post or not. If yes, do the following actions.
 * `get_the_category ()`: To know which category the post is.
 * `get_term_meta ($ categories [0] -> term_id, 'background_color', true)`: use `get_term_meta ()` to get the value of the custom field corresponding to the category returned by the get_the_category() function, with the ID of the custom field is `background_color` (we created it in step 1).
-` wp_head`: This hook will print the above data into the head tag on the front end of your WordPress website.
+* ` wp_head`: This hook will print the above data into the head tag on the front end of your WordPress website.
 
 Now, I will set a color in the **Background Color** field of the **Breakfast** category:
 
