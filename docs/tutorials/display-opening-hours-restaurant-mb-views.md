@@ -15,7 +15,7 @@ For a website having information about more than one restaurant, each one may ha
 
 In this practice, I’ll take an example of an online food order with multiple restaurants on the site. Each restaurant will be a post in their own custom post type. Then, we’ll display the opening hours on the singular post where we put information about each restaurant.
 
-For having time slots for each day, we’ll use custom fields. So, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create them. Furthermore, we also need some advanced features from Meta Box that are available in the following extensions:
+For having time slots for each day, we’ll use custom fields. So, we need the [Meta Box](https://metabox.io) to have a framework to create them. Furthermore, we also need some advanced features from Meta Box that are available in the following extensions:
 
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/?swcfpc=1): provides an intuitive UI in the back end to create and configure custom fields for opening hours;
 * [MB Group](https://metabox.io/plugins/meta-box-group/?swcfpc=1): helps to arrange fields into groups;

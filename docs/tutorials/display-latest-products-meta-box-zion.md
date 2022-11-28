@@ -21,7 +21,7 @@ We'll display the latest restaurants and then the oldest ones. Each one’s info
 
 So we need some tools to do this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom post type and custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
+* [Meta Box](https://metabox.io) to have the framework for creating custom post type and custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a new custom post type named Restaurants;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields for the Restaurant post type in the backend;
 Zion Builder (Pro version): to build the page.

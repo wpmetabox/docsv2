@@ -8,7 +8,7 @@ We are going to find out how to add custom fields to meta tags in Yoast SEO.
 
 Here are all the tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box): to have framework to create custom fields;
+* [Meta Box](https://metabox.io): to have framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI on the backend to create custom fields easier;
 * [Meta Box for Yoast SEO](https://metabox.io/plugins/meta-box-yoast-seo): to add content of custom fields to Yoast SEO Content Analysis to have better SEO score.
 

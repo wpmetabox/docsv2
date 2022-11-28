@@ -19,7 +19,7 @@ This is the example page:
 
 We have a FAQs page that needs to have custom fields for saving the questions and corresponding answers for it. So we need these tools to do it:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom fields. It’s free, and you can download it directly from wordpress.org.
+* [Meta Box](https://metabox.io) to have the framework for creating custom fields. It’s free, and you can download it directly from wordpress.org.
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into robust and intensely user-friendly groups;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * [Meta Box Include Exclude](https://metabox.io/plugins/meta-box-include-exclude/): to add more rules on where to display the field group on the FAQs page;

@@ -10,7 +10,7 @@ Let’s create a single product page that contains different information of prod
 
 For this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post type and custom fields for products;
+* [Meta Box](https://metabox.io): to have a framework to create custom post type and custom fields for products;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): creates custom post types for the products;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI in the back end to create custom fields to save extra information for product variations;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): helps you organize custom fields into repeatable and collapsible groups;

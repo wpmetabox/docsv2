@@ -21,7 +21,7 @@ Each member’s information will be preserved in a post and displayed as a name 
 
 To do it, we need Meta Box and its extensions:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): a framework to create custom fields and custom post types. It’s free and available on [wordpress.org](https://wordpress.org/);
+* [Meta Box](https://metabox.io): a framework to create custom fields and custom post types. It’s free and available on [wordpress.org](https://wordpress.org/);
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types named Team Member;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): create custom fields easily to save team members’ information in the backend;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the team members page.

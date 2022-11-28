@@ -1,13 +1,11 @@
 ---
-title: Showing the featured products - Meta Box + Elementor + WP Grid Builder
+title: Displaying featured posts with WP Grid Builder
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-We’ll create a section to **display the featured products on the homepage** which is built with Elementor. To choose which product is featured and displayed, we’ll **use a custom field and use a condition based on this field’s value**. The condition will be created with the help of WWP Grid Builder.
-
-I’ll take the restaurants as example for products:
+We'll create a section to **display the featured posts on the homepage** which is built with Elementor. To choose which product is featured and displayed, we'll **use a custom field and use a condition based on this field's value**. The condition will be created with the help of WP Grid Builder.
 
 ![Example of Featured Restaurant](https://i.imgur.com/HkEGy4I.png)
 
@@ -21,11 +19,11 @@ The section is shown as a slider on the homepage. It is provided by WP Grid Buil
 
 ![The illustration of Grid and Card in the restaurant section](https://i.imgur.com/9NML7JD.png)
 
-The restaurant's information will be saved in a post of a **custom post type** named **Restaurants**. Their names and images are the titles and featured images of the posts. And other information, such as address, voucher, and logo also will be saved in **custom fields**.
+The restaurant's information will be saved in a **custom post type** named **Restaurants**. Their names and images are the titles and featured images of the posts. And other information, such as address, voucher, and logo also will be saved in **custom fields**.
 
 So, here are the tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post type and custom fields;
+* [Meta Box](https://metabox.io): to have a framework to create custom post type and custom fields;
 * [MB Custom Post Types](https://metabox.io/plugins/custom-post-type/): to create custom post types for the restaurants;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the extra information of the restaurants;
 * [Elementor](https://elementor.com/): to build the page. I use the Elementor Pro;
@@ -34,13 +32,13 @@ So, here are the tools we need for this practice:
 
 ![Intergrations between WP Grid Builder](https://i.imgur.com/eo20R9C.png)
 
-## Step 1: Create a new custom post type
+## Creating restaurant post type
 
 Go to **Meta Box > Post Types** to create a new post type for the restaurants.
 
 ![Create a new custom post type for ](https://i.imgur.com/OyfXcNz.png)
 
-## Step 2: Create custom fields
+## Creating custom fields for restaurants
 
 Go to **Meta Box > Custom Fields**, then create fields as you want.
 
@@ -62,7 +60,7 @@ Look at the field which we use to clarify which restaurant is featured, it is in
 
 Now, let’s fill in the information for the restaurant into the fields.
 
-## Step 3: Create a card
+## Creating a card view
 
 Go to **Gridbuilder > All Cards > Create a Card**. This is the one to stipulate which information about the products (in this case is the restaurants) will be displayed.
 
@@ -91,42 +89,38 @@ We do this to display the voucher and address information as well.
 The logo of the restaurant is a special one. There’s no pre-built block that supports calling out the image from custom fields, so I’ll create a new custom block. Add the following code to the `functions.php` file:
 
 ```php
-add_filter(
-    'wp_grid_builder/blocks', function( $blocks ) {
+add_filter( 'wp_grid_builder/blocks', function( $blocks ) {
+    // 'custom_image_block' corresponds to the block slug.
+    $blocks['custom_image_block'] = [
+        'name' => __( 'Custom image block', 'text-domain' ),
+        'render_callback' => function() {
 
-        // 'custom_image_block' corresponds to the block slug.
-        $blocks['custom_image_block'] = [
-            'name' => __( 'Custom image block', 'text-domain' ),
-            'render_callback' => function() {
+            // Get current post, term, or user object.
+            $post = wpgb_get_post();
+            $image = get_post_meta( $post->ID, 'custom_field_name', true );
 
-                // Get current post, term, or user object.
-                $post = wpgb_get_post();
-                $image = get_post_meta( $post->ID, 'custom_field_name', true );
+            if ( empty( $image ) ) {
+                return;
+            }
 
-                if ( empty( $image ) ) {
-                    return;
-                }
+            $source = wp_get_attachment_image_src( $image );
 
-                $source = wp_get_attachment_image_src( $image );
+            if ( empty( $source ) ) {
+                return;
+            }
 
-                if ( empty( $source ) ) {
-                    return;
-                }
+            printf(
+                '<img src="%s" width="%s" height="%s">',
+                esc_url( $source[0] ),
+                esc_attr( $source[1] ),
+                esc_attr( $source[2] )
+            );
 
-                printf(
-                    '<img src="%s" width="%s" height="%s">',
-                    esc_url( $source[0] ),
-                    esc_attr( $source[1] ),
-                    esc_attr( $source[2] )
-                );
+        },
+    ];
 
-            },
-        ];
-
-        return $blocks;
-
-    }
-);
+    return $blocks;
+} );
 ```
 
 :::info
@@ -147,9 +141,9 @@ There is no need to change any options for this block.
 
 That’s all for the card.
 
-## Step 4: Create a grid and condition
+## Creating a grid and condition
 
-### Create the grid to display products
+### Creating a grid to display restaurants
 
 Go to **Gridbuilder > All Grids > Create a Grid**. This is where to display all the products we want to feature.
 
@@ -159,7 +153,7 @@ To get the posts that you want to display in the grid, go to the **Content Query
 
 ![choose the name of the post type created to get the content to display](https://i.imgur.com/kPnv9cS.png)
 
-### Set the condition
+### Setting the condition
 
 Pay attention to the **Custom Fields** section - an important part. This is where you set the condition to display the restaurants.
 
@@ -171,7 +165,7 @@ In the **Fields Type** section, choose **Numeric** since this **Switch** field h
 
 Next, just enter **1** into the **Value Field** box to show the restaurants that have the **Switch** field set in the On mode.
 
-### Set style for the grid
+### Setting style for the grid
 
 For the layout of the grid, you can set this section to be a slider by choosing the **Carousel** option in the **Grid Carousel** section.
 
@@ -183,7 +177,7 @@ To stipulate which information displays in the grid, move to the **Card Style** 
 
 ![Choose the card styles you want to display for the post as Featured Restaurant](https://i.imgur.com/IWRqW5y.png)
 
-## Step 5: Display the grid on the frontend
+## Displaying the grid on the frontend
 
 Let’s edit the homepage with Elementor. 
 
@@ -197,7 +191,7 @@ Then, you’ll see the featured restaurants displayed on the homepage.
 
 ![Featured restaurants as displayed on the homepage](https://i.imgur.com/QBwcKeC.png)
 
-## Step 6: Style the section
+## Styling
 
 In the editor for the created grid of WP Grid Builder, go to the **Customization** section and add CSS code.
 

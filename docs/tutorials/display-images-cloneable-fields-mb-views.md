@@ -13,7 +13,7 @@ Images like a series of brand logos of typical partners or avatar of clients in 
 
 ## Before getting started
 
-We’ll need [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) and some of its extensions for this practice:
+We’ll need [Meta Box](https://metabox.io) and some of its extensions for this practice:
 
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/?swcfpc=1): create settings pages for uploading images;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/?swcfpc=1): it provides a UI to create custom fields;

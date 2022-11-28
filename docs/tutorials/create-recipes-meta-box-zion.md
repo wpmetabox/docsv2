@@ -19,7 +19,7 @@ All of the recipe information will be saved in a post of a custom post type. The
 
 Here are the tools that we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom post types and custom fields;
+* [Meta Box](https://metabox.io) to have the framework for creating custom post types and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types for the recipe;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the back end to create custom fields to save extra information about recipe.
 * **Zion Builder**: make sure that you have **Zion Builder Pro** to have integration with Meta Box.

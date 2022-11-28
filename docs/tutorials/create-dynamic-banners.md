@@ -8,7 +8,7 @@ Do you have difficulties adding, resizing, or replacing pictures or texts on you
 
 There are some tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have framework to create settings page and custom fields;
+* [Meta Box](https://metabox.io): to have framework to create settings page and custom fields;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/):  to create settings pages with numerous options on the back end;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create custom fields;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the banner.

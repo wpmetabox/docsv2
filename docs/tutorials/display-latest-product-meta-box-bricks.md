@@ -20,7 +20,7 @@ As you can see in my example, my products are restaurants which are posts of a c
 
 These are the tools we need:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating custom post types and custom fields.
+* [Meta Box](https://metabox.io): to have a framework for creating custom post types and custom fields.
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a new custom post types named Restaurant;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields in the backend for saving restaurants’ information;
 * **Bricks**: to build the page. Remember to update and activate the latest version of Bricks on your site.

@@ -6,7 +6,7 @@ We will use custom fields to allow users to find some restaurant information sur
 
 ## Before getting started
 
-We need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom post type and custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
+We need the [Meta Box](https://metabox.io) to have the framework for creating custom post type and custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
 Also, we’ll use some of Meta Box’s extensions:
 

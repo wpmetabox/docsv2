@@ -19,7 +19,7 @@ Each restaurant on the website will be a post of a custom post type. Then the di
 
 For this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post type and custom fields;
+* [Meta Box](https://metabox.io): to have a framework to create custom post type and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types for the restaurant;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend to save the extra information of the restaurant’s menus;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display custom fields created by Meta Box plugin in the Elementor's dynamic tags.

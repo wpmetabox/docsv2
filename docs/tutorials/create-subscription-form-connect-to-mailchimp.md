@@ -8,7 +8,7 @@ We’re going to use the [MB Frontend Submission](https://metabox.io/plugins/mb-
 
 We need to install the following tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box): to have a framework to create a custom post type and custom fields for the form. It’s free and available on [wordpress.org](https://wordpress.org/plugins/meta-box).
+* [Meta Box](https://metabox.io): to have a framework to create a custom post type and custom fields for the form. It’s free and available on [wordpress.org](https://wordpress.org/plugins/meta-box).
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI in the back-end to create custom fields for the form.
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to display custom fields on the front-end as a form.
 * [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the form, each submitted form will be a post. 

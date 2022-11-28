@@ -6,7 +6,7 @@ Arranging posts in a custom order will be much easier if you use custom fields. 
 
 ## Before Getting Started
 
-To get started, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
+To get started, we need the [Meta Box](https://metabox.io) to have the framework for creating custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
 Also, we’ll use some of Meta Box’s extensions:
 

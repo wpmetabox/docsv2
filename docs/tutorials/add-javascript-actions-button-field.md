@@ -12,7 +12,7 @@ In this tutorial, I’ll create two buttons for my eCommerce site: one to reset 
 
 Here are the tools we need:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [Meta Box](https://metabox.io): to have a framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to easily create custom fields to save the product information and the buttons.
 
 ## Step 1: Create custom fields

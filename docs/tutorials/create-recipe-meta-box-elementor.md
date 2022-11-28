@@ -21,7 +21,7 @@ Besides the name and the images of the recipe which are the post title and featu
 
 Here are some tools we need:
 
-* **[Meta Box core plugin](https://wordpress.org/plugins/meta-box/)**: to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/);
+* **[Meta Box](https://metabox.io)**: to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/);
 * **[MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/)**: to create a custom post type named Recipe;
 * **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an intuitive UI to create custom fields in the backend to save extra information;
 * **[MB Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/)**: to connect and display custom fields created by Meta Box plugin in the Elementor's dynamic tags.

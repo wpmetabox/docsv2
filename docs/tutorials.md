@@ -16,7 +16,7 @@ hide_table_of_contents: true
 </div>
 <div className="banner_right--item3">
 
-[![create category thumbnails](/tutorials/banner-3.png)](/tutorials/create-category-thumbnails/)
+[![create category thumbnails](/tutorials/banner-3.png)](/tutorials/category-thumbnails/)
 
 </div>
 <div className="banner_right--item4">
@@ -34,8 +34,8 @@ hide_table_of_contents: true
 		</div>
 		<div className="items trending--second">
 			<img alt="icon" src="/tutorials/Rectangle.png"/>
-			<a className="trending" href="/tutorials/show-featured-products-meta-box-elementor-wp-grid-builder/">
-				<h2 className="trending_title">Showing featured products</h2>
+			<a className="trending" href="/tutorials/displaying-featured-posts-with-wp-grid-builder/">
+				<h2 className="trending_title">Displaying featured posts</h2>
 			</a>
 		</div>
 		<div className="items trending--third">

@@ -10,7 +10,7 @@ Let’s find out how to create a download button to download a file. The file wi
 
 For this practice, we need the following tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): the framework to create custom fields;
+* [Meta Box](https://metabox.io): the framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI on the back end to create custom fields to save the file for downloading. Or you can use the free [Online Generator](https://metabox.io/online-generator/) tool instead.
 
 ## Step 1: Create custom fields

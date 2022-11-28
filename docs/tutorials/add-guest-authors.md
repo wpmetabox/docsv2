@@ -8,7 +8,7 @@ Adding guest authors means that **allowing users to sign up a Guest Author accou
 
 In this practice, we need some tools below:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have framework to create custom fields;
+* [Meta Box](https://metabox.io): to have framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides an intuitive UI to create custom fields to save the guest author’s information;
 * [MB User Profile](https://metabox.io/plugins/mb-user-profile/): to create register/login forms, manage author accounts on the frontend;
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create a form to submit posts on the frontend.

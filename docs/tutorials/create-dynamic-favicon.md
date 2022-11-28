@@ -10,7 +10,7 @@ Here is my example:
 
 ## Before Getting Started
 
-In addition to using the [Meta Box Core Plugin](https://wordpress.org/plugins/meta-box/), make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). It allows you to create custom fields in the back end using an intuitive UI without coding.
+In addition to using the [Meta Box](https://metabox.io), make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). It allows you to create custom fields in the back end using an intuitive UI without coding.
 
 Also, to make a dynamic favicon, you must do some things with the theme. I'm making this tutorial with the help of [Justread from Gretathemes](https://gretathemes.com/wordpress-themes/justread/). It's free and fast, so you could give it a try.
 

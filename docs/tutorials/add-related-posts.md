@@ -8,7 +8,7 @@ Normally, most tools set related posts automatically based on the keywords, tags
 
 We need to install the following tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): is a framework that allows you to custom custom fields;
+* [Meta Box](https://metabox.io): is a framework that allows you to custom custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI in the backend to create custom fields.
 
 ## Step 1: Create a new custom field
