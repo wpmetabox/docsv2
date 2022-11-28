@@ -34,7 +34,7 @@ So, there are some tools we need for this practice:
 * **[MB Admin Columns (optional)](https://metabox.io/plugins/mb-admin-columns/)**: to display the voucher of each restaurant in the backend for the purpose of easier comparison in this practice;
 Bricks: to build the page.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box** > **Post Types** > **New Post Type** to create a new post type for restaurants.
 
@@ -44,7 +44,7 @@ After publishing, you’ll have a new menu in your dashboard.
 
 ![Menu in the dashboard will appear](https://i.imgur.com/brKXI7u.png)
 
-## Step 2: Create custom fields and taxonomy
+## 2. Creating custom fields and taxonomy
 
 ### Creating custom fields
 
@@ -84,7 +84,7 @@ Finally, let’s create a post for a restaurant, you will see the custom fields 
 
 ![You will see the custom fields and the voucher taxonomy with terms appear in the post editor](https://i.imgur.com/ApHXazu.png)
 
-## Step 3: Build the page
+## 3. Building the page
 
 Since we’ll built the page with Bricks, create a new page and edit it with Bricks.
 
