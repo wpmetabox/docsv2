@@ -29,7 +29,7 @@ For this practice, we need these tools:
 * **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: to provide a UI on the back end to easily create custom fields to save the video’s links.
 * **[Oxygen](https://oxygenbuilder.com/)**: to build the page. You should use the 3.9 version or higher, which has integration with Meta Box.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box** > **Post Types** > **New Post Type** to create a new custom post type for the videos.
 
@@ -38,7 +38,7 @@ Go to **Meta Box** > **Post Types** > **New Post Type** to create a new custom p
 In the settings of the post type, we have the **Support** tab that provides some features to add to your post type. In this case, we will display the author’s information for this post, so check the **Author** box here.
 ![In the settings of the post type, choose some features of the Supports tab to add them to the post type](https://i.imgur.com/qSceLhJ.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Move to **Meta Box** > **Custom Fields** > **Add New**.
 
@@ -60,7 +60,7 @@ Furthermore, since we added the **Author** feature to the **Support** tab, we’
 
 ![As we added the Author feature in the Supports tab, we will have the Author section to choose the post’s author](https://i.imgur.com/UkjEHH1.png)
 
-## Step 3: Create a template for page with Oxygen
+## 3. Creating a template for page with Oxygen
 
 In the **Oxygen** menu, create a new template and apply it to the wanted page. Then, edit the page with Oxygen.
 
@@ -96,7 +96,7 @@ After saving the template, you will see the video gallery on the page.
 
 ![The video gallery on the page before styling](https://i.imgur.com/5py7iGN.png)
 
-## Step 4: Style the page
+## 4. Styling the page
 
 Go back to the page editor with Oxygen. For easy styling, you can add some **div** tags for each element or group them together and add classes for them.
 
