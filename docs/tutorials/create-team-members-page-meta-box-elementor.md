@@ -25,7 +25,6 @@ The name and avatar of the member are the titles and the featured images of the 
 
 To do it, we need Meta Box and its extensions:
 
-* <a href="https://wordpress.org/plugins/meta-box/">Meta Box core plugin</a>: This is the framework to create custom fields and custom post types. It’s free and available on <a href="https://wordpress.org/plugins/meta-box/">wordpress.org</a>
 * <a href="https://metabox.io/plugins/custom-post-type/">MB Custom Post Type</a>: to create custom post types for Team Member;
 * <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>: provides a UI in the back end to create custom fields easily for Member Information;
 * <a href="https://metabox.io/plugins/mb-elementor-integrator/">Meta Box - Elementor integrator</a>. allows you to get data from custom fields created by the Meta Box plugin in the templates of Elementor.

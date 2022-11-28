@@ -12,7 +12,7 @@ I made an example like this:
 
 We need the following tools for this practice:
 
-* [Meta Box core plugin](https://metabox.io/): to have a framework to create custom fields;
+* [Meta Box](https://metabox.io/): to have a framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the fields along with the Custom HTML field using for the notification together;
 * [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) (optional): to show the alert message only when users choose an option in another field.

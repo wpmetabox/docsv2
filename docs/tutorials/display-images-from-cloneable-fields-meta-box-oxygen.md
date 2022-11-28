@@ -17,7 +17,7 @@ I made an example like this:
 
 ## Before getting started
 
-In addition to using the [Meta Box Core Plugin](https://metabox.io/plugins/meta-box-builder/), make sure you already have these extensions:
+In addition to using [Meta Box](https://metabox.io), make sure you already have these extensions:
 
 * **[MB Settings Page](https://metabox.io/plugins/mb-settings-page/)**: it helps you to create settings pages, we’ll need a settings page to place the custom fields into.
 * **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: It provides a UI to create custom fields.

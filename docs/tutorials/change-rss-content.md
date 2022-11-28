@@ -2,7 +2,7 @@
 title: Changing the RSS content
 ---
 
-This article will show you **how to get information from a custom field created by** [Meta Box](https://wordpress.org/plugins/meta-box/) **then include them into the** [RSS feed](https://gretathemes.com/rss-feed-applications-wordpress/). I will use [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/?swcfpc=1) to have a UI to create custom fields.
+This article will show you **how to get information from a custom field created by** [Meta Box](https://wordpress.org/plugins/meta-box/) **then include them into the** [RSS feed](https://gretathemes.com/rss-feed-applications-wordpress/). I will use [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to have a UI to create custom fields.
 
 ## Step 1: Create custom fields
 

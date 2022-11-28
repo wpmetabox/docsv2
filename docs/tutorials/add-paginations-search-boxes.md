@@ -12,7 +12,7 @@ Here I create a field to allow the user to choose the background for the post. A
 
 ## Before getting started
 
-In addition to using the **Meta Box Core Plugin**, make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
+In addition to using **Meta Box**, make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
 
 In this article, `list.js` and `script.js` are the **Library** and the file I use to create JS for the search box, respectively.
 

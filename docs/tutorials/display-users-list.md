@@ -14,7 +14,7 @@ As you can see, we’ll have extra information for users along with the default 
 
 So, these are the tools we need:
 
-* [Meta Box core plugin](https://metabox.io/): to have a framework to create custom fields;
+* [Meta Box](https://metabox.io/): to have a framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to choose publish the users’ information or not;
 * [DataTables](https://datatables.net/): is used to choose the number of users to display on the page, and create a search function for the users list.
 

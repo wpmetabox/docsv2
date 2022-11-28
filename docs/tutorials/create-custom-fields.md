@@ -10,7 +10,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 ## Before getting started
 
-We need [Meta Box core plugin](https://docs.metabox.io/installation/) to have a framework for creating custom fields. It’s free and available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
+We need [Meta Box](https://docs.metabox.io/installation/) to create custom fields. It’s free and available on wordpress.org.
 
 ![Install Meta Box core plugin](https://i.imgur.com/VN8iwgE.png)
 

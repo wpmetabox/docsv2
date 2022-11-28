@@ -17,7 +17,7 @@ We are going to **create taxonomy thumbnails and featured images using custom fi
 
 ## Before getting started 
 
-In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure you already have these extensions:
+In addition to using the [Meta Box](https://metabox.io/), make sure you already have these extensions:
  
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): a free extension of Meta Box to create custom post types. It’s also available on [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/);
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It provides a UI on the back end to create and configure custom fields without code;

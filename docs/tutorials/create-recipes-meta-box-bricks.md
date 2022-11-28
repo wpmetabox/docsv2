@@ -19,7 +19,7 @@ The image below is a specific example.
 
 In this case, the recipe page is the singular page of the Recipe post type. The recipe’s name and the dish's pictures are the title and featured image of the post. Besides, the remaining detailed information will be saved in custom fields.
 
-In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure you already have these extensions:
+In addition to using the [Meta Box](https://metabox.io/), make sure you already have these extensions:
 
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): It helps to create a custom post type that we need for recipes;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.

@@ -15,7 +15,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 These are the tools we need for this practice:
 
-* [Meta Box core plugin](https://metabox.io/): to have a framework to use its solution;
+* [Meta Box](https://metabox.io/): to have a framework to use its solution;
 * [MB Favorite Posts](https://metabox.io/plugins/mb-favorite-posts/): to create a favorite button.
 
 After activating the **MB Favorite Posts** solution, a favorite button will automatically appear on the posts of your site like this:

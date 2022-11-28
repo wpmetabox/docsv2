@@ -34,7 +34,7 @@ If you already have had many different layouts and want to choose one for a post
 
 :::
 
-As I’ve mentioned, we need to create a custom field for the category to choose the background color. So we need to install and activate the [Meta Box](https://metabox.io/) core plugin and some of its extensions:
+As I’ve mentioned, we need to create a custom field for the category to choose the background color. So we need to install and activate the [Meta Box](https://metabox.io/) and some of its extensions:
 
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the backend creating custom fields.
 * [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): to add custom fields to taxonomy terms such as categories and tags.

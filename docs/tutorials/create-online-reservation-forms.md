@@ -13,9 +13,9 @@ I will create an online reservation form to allow customers to reserve not only 
 
 ## Before getting started
 
-Along with the Meta Box core plugin from [wordpress.org](https://wordpress.org/plugins/meta-box/), we need some its extensions:
+Along with the Meta Box, we need some its extensions:
 
-* [MB Custom Post Types](https://metabox.io/plugins/custom-post-type/?swcfpc=1): to create custom post types for the reservations;
+* [MB Custom Post Types](https://metabox.io/plugins/custom-post-type/): to create custom post types for the reservations;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend to save the reservation information;
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create forms for users to submit their order from the frontend.
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): show reservation information in the list of posts.
@@ -102,7 +102,7 @@ I embed an iframe of Google Maps to pin the restaurant’s address on the map as
 
 ### Adding the reservation form
 
-After having the [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/?swcfpc=1) extension activated, the shortcodes for field groups will be auto-generated. You can look for them on this screen.
+After having the [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/) extension activated, the shortcodes for field groups will be auto-generated. You can look for them on this screen.
 
 ![The shortcodes for field groups will be auto-generated](https://i.imgur.com/zkvDm7T.png)
 

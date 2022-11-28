@@ -15,7 +15,7 @@ Adding testimonials to the homepage will be easier when you use the MB Testimoni
 
 MB Testimonials is only available in the lifetime bundle of Meta Box. If you haven’t got one yet, it’s [here](https://metabox.io/pricing/).
 
-After purchasing, log in to your account on [metabox.io](https://metabox.io/?swcfpc=1) in [My Account](https://metabox.io/my-account/) and download the **MB Testimonials** solution, then install and activate it on your website.
+After purchasing, log in to [My Account](https://metabox.io/my-account/) and download the **MB Testimonials** solution, then install and activate it on your website.
 
 Keep in mind that you have to install the Meta Box framework from [wordpress.org](https://wordpress.org/plugins/meta-box/) to use MB Testimonials. There is no need to install the Meta box AIO or any other extensions of Meta Box.
 
@@ -49,7 +49,7 @@ Scrolling down to the bottom, you will see the **Display** tab which has 7 built
 
 This is an outstanding feature of MB Testimonials in comparison to other plugins. It helps you to immediately apply the built-in templates to testimonials without any adjustment.
 
-When going to **Click here** text right below the templates, you will see the code of the template you have just chosen. You can customize and add [custom fields](https://metabox.io/series/custom-fields/?swcfpc=1) to the template using HTML, or delete the code and create a new one.
+When going to **Click here** text right below the templates, you will see the code of the template you have just chosen. You can customize and add [custom fields](https://metabox.io/series/custom-fields/) to the template using HTML, or delete the code and create a new one.
 
 ![Customize and add custom fields to the template](https://i.imgur.com/szSZRwt.gif)
 

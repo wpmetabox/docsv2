@@ -12,7 +12,7 @@ This is the page we’re going to create in this practice. It’s built without 
 
 We’ll need these tools:
 
-* [Meta Box Core Plugin](https://metabox.io/plugins/meta-box-builder/): to have framework to create custom fields;
+* [Meta Box](https://metabox.io/plugins/meta-box-builder/): to have framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create and configure custom fields;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the fields together. In this case each couple of question and answer will be set in a group.
 

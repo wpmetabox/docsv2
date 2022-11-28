@@ -18,7 +18,7 @@ As you can see, there are five sections including Hero, Intro, Services, Feature
 
 So, we need these tools:
 
-* [Meta Box core plugin](https://metabox.io/): to have a framework to create custom fields;
+* [Meta Box](https://metabox.io/): to have a framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI to create custom fields for the landing page in the backend;
 
 ## Step 1: Create a page

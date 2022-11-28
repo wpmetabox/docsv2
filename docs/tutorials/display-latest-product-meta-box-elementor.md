@@ -21,7 +21,7 @@ I will show the latest restaurants first and then the oldest ones. Each restaura
 
 So we need some tools for this practice:
 
-* [Meta Box core plugin](https://metabox.io/): to have a framework to create custom post types and custom fields;
+* [Meta Box](https://metabox.io/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a new post type for the restaurants;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to easily create custom fields for saving extra information of the restaurant.
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get data saved in custom fields created by Meta Box in the template of Elementor;

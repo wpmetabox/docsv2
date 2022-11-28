@@ -13,7 +13,7 @@ Here is the example.
 
 ## Before getting started
 
-Since all the additional information will be saved in different custom fields, we need **[Meta Box core plugin](https://metabox.io/)**. It’s free and available on wordpress.org, so you can download it directly.
+Since all the additional information will be saved in different custom fields, we need **[Meta Box](https://metabox.io/)**. It’s free and available on wordpress.org, so you can download it directly.
 
 To have advanced features, we need some of its extensions:
 

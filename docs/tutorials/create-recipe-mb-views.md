@@ -19,7 +19,7 @@ And, we’re creating a page with another style for demo only.
 
 ## Before getting started
 
-In addition to using the [Meta Box Core Plugin](https://metabox.io/plugins/meta-box-builder/), make sure you already have these extensions:
+In addition to using the [Meta Box](https://metabox.io/plugins/meta-box-builder/), make sure you already have these extensions:
 
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): It helps to create a custom post type that we need for recipes;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
