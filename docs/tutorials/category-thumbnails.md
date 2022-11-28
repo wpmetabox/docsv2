@@ -1,11 +1,11 @@
 ---
-title: Creating category thumbnails & featured images
+title: Creating category thumbnails
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-**Category thumbnails** and featured images are images that are chosen as the representative image for Categories. This tutorial will show you a simple solution to **display those thumbnails on a page** and display the **featured images on Archive pages of each category**.
+**Category thumbnails** (featured images) are images that are chosen as the representative image for categories. This tutorial will show you a simple solution to create thumbnails for categories and **display those thumbnails on a page** and on the **archive pages of each category**.
 
 Here is my example:
 
@@ -15,7 +15,7 @@ Here is my example:
 
 ## Before getting started
 
-In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure you already have these extensions:
+In addition to [Meta Box](https://metabox.io/), make sure you already have these extensions:
 
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It provides UI to create custom fields;
 * [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): It allows to create of custom fields for categories or taxonomies;
@@ -30,7 +30,7 @@ In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure 
 
 Go to **Meta Box > Custom Fields > Add New**.
 
-I created two fields. One is the **URL** field to save the URL, and another is **Simple Image**, which allows you to upload an image to the media library.
+I created two fields. One is the **URL** field to save the URL, and another is **Single Image**, which allows you to upload an image to the media library.
 
 ![One is URL to save URL. And, one is Single Image which allows you to upload an image to the media library](https://i.imgur.com/tZkl0Kg.png)
 
@@ -46,18 +46,19 @@ Then, go to the category editor page, and you will see the fields. I filled in t
 
 Images from the links will be used as the thumbnails and featured images.
 
-## Displaying the categories thumbnails
+## Displaying the list of categories with thumbnails
 
 Go to **Meta Box > Views** and create a new view.
 
 ![Go to Views and create a new view to display the list of category thumbnails](https://i.imgur.com/4lqEHOs.png)
 
 In the **Template** tab, I used this code:
+
 ```
 {% set args = {hide_empty: false} %}
 {% set categories = mb.get_categories( args ) %}
-    {% for category in categories %}
-        {{ category.name }}
+{% for category in categories %}
+    {{ category.name }}
     {% set image_upload = mb.get_term_meta( category.term_id, 'thumbnail_images_category', true ) %}
     {% set image_url = mb.get_term_meta( category.term_id, 'url_images_category', true ) %}
     {% if image_upload %}
@@ -70,11 +71,13 @@ In the **Template** tab, I used this code:
     {% endif %}
 {% endfor %}
 ```
+
 In there:
-* `get_categories( args )`: to know which category is getting data;
+
+* `mb.get_categories( args )`: get all categories via `mb` proxy.
 * `<a href="{{ mb.get_category_link( category.term_id ) }}">{{ category.name }}</a>`: to get the link of the corresponding category by ID. At the same time, display the category name and hyperlink it;
-* `get_term_meta ()`: to get values for the fields from the corresponding category by `category.term_id. 'thumbnail_images_category'` and `'url_images_category'` are IDs of fields;
-* `wp_get_attachment_image_src ()`: to get the link of the uploaded image of the corresponding category;
+* `mb.get_term_meta ()`: to get values for the fields from the corresponding category. `'thumbnail_images_category'` and `'url_images_category'` are IDs of fields;
+* `mb.wp_get_attachment_image_src ()`: to get the link of the uploaded image of the corresponding category;
 * `<img src="{{ }}">`: to display the image by the link assigned to the variable.
 
 If I don't add a link or upload a picture, the last line of code will show a default picture.
@@ -84,6 +87,7 @@ For easier styling later, you can add some div tags like this:
 ![You can add some div tags to style later easiser](https://i.imgur.com/jp4yqy7.png)
 
 Full code here:
+
 ```
 {% set args = {hide_empty: false} %}
 {% set categories = mb.get_categories( args ) %}
@@ -92,20 +96,21 @@ Full code here:
         <div class="item">
             <div class="overlay-thumbnail-categories"></div>
             <div class="category-title"><a href="{{ mb.get_category_link( category.term_id ) }}">{{ category.name }}</a></div>
-    {% set image_upload = mb.get_term_meta( category.term_id, 'thumbnail_images_category', true ) %}
-    {% set image_url = mb.get_term_meta( category.term_id, 'url_images_category', true ) %}
-    {% if image_upload %}
-        {% set image_upload_link = mb.wp_get_attachment_image_src( image_upload, 'medium' ) %}
-        <img src="{{ image_upload_link[0] }}">
-    {% elseif image_url %}
-        <img src="{{ image_url }}">
-    {% else %}
-        <img src="http://demo1.elightup.com/test-metabox/wp-content/uploads/2020/11/oriental-tiles.png">
-    {% endif %}
-        </div>
-{% endfor %}
+        {% set image_upload = mb.get_term_meta( category.term_id, 'thumbnail_images_category', true ) %}
+        {% set image_url = mb.get_term_meta( category.term_id, 'url_images_category', true ) %}
+        {% if image_upload %}
+            {% set image_upload_link = mb.wp_get_attachment_image_src( image_upload, 'medium' ) %}
+            <img src="{{ image_upload_link[0] }}">
+        {% elseif image_url %}
+            <img src="{{ image_url }}">
+        {% else %}
+            <img src="http://demo1.elightup.com/test-metabox/wp-content/uploads/2020/11/oriental-tiles.png">
+        {% endif %}
+            </div>
+    {% endfor %}
 </div>
 ```
+
 This view will be set as the type of a shortcode. You can use it to easily display the list of categories with thumbnails everywhere you want. It seems to simplify the process a lot.
 
 ![This view will be set in the type of Shortcode so that it will auto-generate a shortcode.](https://i.imgur.com/OdYVivy.png)
@@ -123,7 +128,8 @@ Back to the view, add some code to the **CSS** tab to style this section.
 ![Add some CSS code](https://i.imgur.com/J0tl0tV.png)
 
 Here is the code I used:
-```
+
+```css
 body {
     overflow-x: hidden;
 }
@@ -170,6 +176,7 @@ body {
     color: #f0a030;
 }
 ```
+
 After that, the Top Destinations section has a new look!
 
 ![New look of the page](https://i.imgur.com/IAIi0HW.png)
@@ -182,31 +189,29 @@ This is an archive page before the featured image is added.
 
 We need to edit the theme file to display the top-field images. Go to the `archive.php` file. It is the template file for the archive pages.
 
-Add this code after the header and the first `div` tag.
+Add this code after the header.
+
 ```php
 <?php
-    $categories= get_the_category();
-    $background_image = get_term_meta( $categories[0]->term_id, 'thumbnail_images_category', true );
-    if ($background_image) {
-        $link_image = wp_get_attachment_image_src( $background_image, 'full' );
-        $link_image_source = $link_image[0];
-    }
-    else {
-        $link_image_source = get_term_meta( $categories[0]->term_id, 'url_images_category', true );
-    }
+$background_image = get_term_meta( get_queried_object_id(), 'thumbnail_images_category', true );
+if ( $background_image ) {
+    $link_image = wp_get_attachment_image_src( $background_image, 'full' );
+    $link_image_source = $link_image[0];
+} else {
+    $link_image_source = get_term_meta( get_queried_object_id(), 'url_images_category', true );
+}
 ?>
 <div class="thumbnail-container">
-    <img class="thumbnail-cat" src="<?php echo $link_image_source ?>">
+    <img class="thumbnail-cat" src="<?= $link_image_source ?>">
     <div class="thumbnail-overlay"></div>
 </div>
 ```
-**In there**:
 
-* `get_the_category()`: to know which archive page the user is;
+In there:
+
 * `get_term_meta ()`: get the value of the field;
-* `'thumbnail_images_category' and 'url_images_category'` are IDs of the created custom fields;
+* `'thumbnail_images_category'` and `'url_images_category'` are IDs of the created custom fields;
 * `wp_get_attachment_image_src ()`: to get the link of the uploaded image;
-* `src="<?php echo $link_image_source ?>`: to display the image from the link which is the value of the $link_image_source variable.
 
 Then, the featured image will display as below:
 
@@ -216,7 +221,7 @@ Go back to the theme files and style the featured picture, category title, and d
 
 ![use css to sty;e the featured image, category title](https://i.imgur.com/k3Hwe22.png)
 
-```
+```css
 .thumbnail-container {
     position: relative;
 }
@@ -250,6 +255,7 @@ Go back to the theme files and style the featured picture, category title, and d
     font-style: italic;
 }
 ```
+
 Here is the result:
 
 ![The result after all steps](https://i.imgur.com/hmGpeWH.png)

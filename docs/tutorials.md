@@ -28,8 +28,8 @@ hide_table_of_contents: true
 	<div className="tutorials_trending">
 		<div className="items trending--first">
 			<h2 className="trending_category">Trending now</h2>
-			<a className="trending" href="/tutorials/create-category-thumbnails/">
-				<h2 className="trending_title">Creating category thumbnails & featured images</h2>
+			<a className="trending" href="/tutorials/category-thumbnails/">
+				<h2 className="trending_title">Creating category thumbnails</h2>
 			</a>
 		</div>
 		<div className="items trending--second">
