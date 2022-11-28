@@ -12,7 +12,6 @@ We’ll use WP Grid Builder to **create an archive page for restaurants** and th
 
 <LiteYouTubeEmbed id='YP7sMXHdf_Q' />
 
-
 ## Before getting started
 
 All of the restaurants' information will be saved in a **custom post type**, and each restaurant will be a post. The restaurant’s name and image are the default title and featured image of the post. And other information such as status, address, voucher, and logo will be saved in different **custom fields**.
@@ -38,7 +37,7 @@ And the last one, make sure that you installed the integration between WP Grid B
 
 ![Activate Meta Box plugin](https://i.imgur.com/BjrWQ5L.png)
 
-## Step 1: Create a new custom post type and custom fields
+## 1. Creating a new custom post type and custom fields
 
 Go to **Meta Box** > **Post Types** to create a new post type for your restaurants.
 
@@ -48,9 +47,9 @@ To create custom fields, go to **Meta Box** > **Custom Fields** > **Add New**.
 
 ![Create custom fields for the custom post type](https://i.imgur.com/nun5Rt6.png)
 
-You can refer to this tutorial to know how to create them.
+You can refer to [this tutorial](https://docs.metabox.io/tutorials/create-custom-fields/) to know how to create them.
 
-## Step 2: Create a card
+## 2. Creating a card
 
 Go to **Gridbuilder** > **All Cards** > **Create a Card**.
 
@@ -121,7 +120,7 @@ Go back to edit the card, you will see a new block named **Custom Image Block**,
 
 We’ve done all the settings for the card.
 
-## Step 3: Create a grid
+## 3. Creating a grid
 
 Open **Gridbuilder** > **All Grids** > **Create a Grid**.
 
@@ -141,7 +140,7 @@ Next, in the **Card Styles** section, set both the **Default Card** and **Post T
 
 ![In the Card Styles section, set both the Default Card and Post Type Cards as the Restaurant Card which we’ve just created](https://i.imgur.com/GUDFPce.png)
 
-## Step 4: Create a facet
+## 4. Creating a facet
 
 To create a facet, go to **Gridbuilder** > **All Facets**.
 
@@ -169,7 +168,7 @@ With the **Sort** facet, I also keep it as the default settings. You can remove 
 
 ![The settings of Sort Facet](https://i.imgur.com/omLPAvH.png)
 
-## Step 5: Create the archive page
+## 5. Creating the archive page
 
 Go to **Page** > **Add New**.
 
@@ -189,7 +188,7 @@ Now, all of the restaurant’s information is displayed. And you can see that th
 
 ![The result after all steps](https://i.imgur.com/t1kxMYs.gif)
 
-## Step 6: Style the page
+## 6. Styling the page
 
 In this practice, I’ll add some CSS and JS code to style the section a little bit in the WP Grid Builder.
 
