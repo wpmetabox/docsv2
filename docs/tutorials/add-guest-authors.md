@@ -60,9 +60,9 @@ First, create a new file named page-account.php in the theme folder with the con
 
 ```php
 <?php
-/*
-*     Template Name: My Account
-*/
+/**
+ * Template Name: My Account
+ */
 ?>
 ```
 
@@ -88,6 +88,7 @@ In the right sidebar of the page editor, go to **Page Attributes > Template** > 
 Open the file `page-account.php` once again, add the `the_content()` function right after `get_header()` and before `get_footer()`.
 
 For your quick reference, this is the whole code for this file, which I made with the Twenty Seventeen theme:
+
 ```php
 <?php
 /** 
@@ -335,7 +336,9 @@ You can copy [these codes](https://gist.github.com/rilwis/e27d4deccc7aeba8b637de
 
 Back to the `page-account.php` file, add a column to the table of the post list. This column is used to show the URL.
 
-<a href="<?php echo get_page_link(268).'?rwmb_frontend_field_post_id='.$post_author->ID; ?>" title="<?php echo $post_author->post_title; ?>">Edit</a>
+```php
+<a href="<?= get_page_link(268) . '?rwmb_frontend_field_post_id=' . $post_author->ID; ?>">Edit</a>
+```
 
 :::caution
 

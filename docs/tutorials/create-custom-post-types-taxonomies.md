@@ -1,5 +1,5 @@
 ---
-title: Creating custom post type and taxonomies
+title: Creating custom post types and taxonomies
 ---
 
 
@@ -13,15 +13,15 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 ## Before getting started
 
-We need the <a href="https://metabox.io/plugins/custom-post-type/">MB Custom Post Types and Custom Taxonomies</a> plugin of Meta Box to create custom post types and custom taxonomies with or without installing the Meta box core plugin. It’s free and available on <a href="https://wordpress.org/">wordpress.org</a>, so just install it.
+We need the [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/) plugin to create custom post types and custom taxonomies. It's free and available on wordpress.org, so just install it.
 
 ![Install MB custom post typed and custom taxonomies plugin](https://i.imgur.com/TRxg4wE.png)
 
-In the event that you use MB Custom Post Types &amp; Custom Taxonomies without Meta Box core plugin. It will display in the dashboard like this:
+In the event that you use MB Custom Post Types &amp; Custom Taxonomies without Meta Box, it will display in the dashboard like this:
 
 ![Without Meta Box core plugin the dashboard will be like this](https://i.imgur.com/2mwdN8Q.png)
 
-If you install both the Meta Box core plugin and MB Custom Post Types &amp; Custom Taxonomies plugin, you will see the Post Types as a sub-menu in the Meta Box menu.
+If you install both the Meta Box and MB Custom Post Types &amp; Custom Taxonomies plugin, you will see the Post Types as a sub-menu in the Meta Box menu.
 
 ![Post types will appear as a sub-menu in the Meta Box menu](https://i.imgur.com/6RVv5rw.png)
 

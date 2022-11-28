@@ -6,7 +6,7 @@ hide_table_of_contents: true
 <div className="tutorials_banner">
 <div className="banner_left--item1">
 
-[![create custom post type taxonomies](/tutorials/banner-1.png)](/tutorials/create-custom-post-type-taxonomies/)
+[![create custom post type taxonomies](/tutorials/banner-1.png)](/tutorials/create-custom-post-types-taxonomies/)
 
 </div>
 <div className="banner_right--item2">
@@ -99,8 +99,8 @@ hide_table_of_contents: true
 </ul>
 		</div>
 		<div className="items">
-			<a href="/tutorials/mb-with-builders/">
-				<h2 className="items_heading">MB with Builders</h2>
+			<a href="/tutorials/builders/">
+				<h2 className="items_heading">Page Builders</h2>
 			</a>
 
 ![mb with builders](/tutorials/category-4.png)
