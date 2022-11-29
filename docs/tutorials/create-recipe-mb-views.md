@@ -26,7 +26,7 @@ In addition to using the [Meta Box Core Plugin](https://metabox.io/plugins/meta-
 * [MB Views](https://metabox.io/plugins/mb-views/): Build front-end templates for WordPress without touching theme files. 
 * [eStar](https://gretathemes.com/wordpress-themes/estar/): It is a lightweight and highly customizable WordPress theme.
 
-## Step 1: Create a custom post type
+## 1. Creating a custom post type
 
 Go to **Meta Box > Post Types > New Post Types**.
 
@@ -36,7 +36,7 @@ I created the Recipe post type with the following information:
 
 ![Create the post type](https://i.imgur.com/fBqG9cp.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New**.
 
@@ -52,7 +52,7 @@ Back to the post editor, you will see all of the newly created custom fields.
 
 ![Newly created custom fields in the post editor](https://i.imgur.com/CW1s8Jk.png)
 
-## Step 3: Display recipe information on frontend
+## 3. Displaying recipe information on frontend
 
 I’m going to display the recipe information saved in custom fields into this section on the singular post page.
 
@@ -193,7 +193,7 @@ Now, whichever method you choose, you’ll get the result like this:
 
 ![Set loction for the custom fields](https://i.imgur.com/hHzqid1.jpg)
 
-## Step 3: Style the recipe page
+## 3. Styling the recipe page
 
 Go to **Customizer > Additional CSS** and add the CSS code.
 
