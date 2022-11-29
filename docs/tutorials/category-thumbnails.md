@@ -46,11 +46,11 @@ Then, go to the category editor page, and you will see the fields. I filled in t
 
 Images from the links will be used as the thumbnails and featured images.
 
-## Displaying the list of categories with thumbnails
+## Displaying the categories thumbnails
 
 Go to **Meta Box > Views** and create a new view.
 
-![Go to Views and create a new view to display the list of category thumbnails](https://i.imgur.com/9kigRui.png)
+![Go to Views and create a new view to display the list of category thumbnails](https://i.imgur.com/nCz5fkS.png)
 
 In the **Template** tab, I used this code:
 
@@ -58,13 +58,13 @@ In the **Template** tab, I used this code:
 {% set args = {hide_empty: false} %}
 {% set categories = mb.get_categories( args ) %}
     {% for category in categories %}
-        {{ category.name }}
-    {% set image_upload = mb.get_term_meta( category.term_id, 'thumbnail_images_category', true ) %}
+        {{ category.name }
     {% set image_url = mb.get_term_meta( category.term_id, 'url_images_category', true ) %}
     {% if image_url %}
         <img src="{{ image_url }}">
     {% else %}
-        <img src="http://demo1.elightup.com/test-metabox/wp-content/uploads/2020/11/oriental-tiles.png">
+        <img
+src="http://demo1.elightup.com/test-metabox/wp-content/uploads/2020/11/oriental-tiles.png">
     {% endif %}
 {% endfor %}
 
@@ -73,15 +73,14 @@ In the **Template** tab, I used this code:
 In there:
 
 * `get_categories( args )`: to know which category is getting data;
-* `<a href="{{ mb.get_category_link( category.term_id ) }}">{{ category.name }}</a>`: to get the link of the corresponding category by ID. At the same time, display the category name and hyperlink it;
-* `get_term_meta ()`: to get values for the fields from the corresponding category by `category.term_id. 'thumbnail_images_category` and `url_images_category` are IDs of fields;
+* `mb.get_term_meta ()`: to get values for the fields from the corresponding category by `category.term_id. 'url_images_category'` is ID of fields;
 * `<img src="{{ }}">`: to display the image by the link assigned to the variable.
 
 If I don't add a link picture, the last line of code will show a default picture.
 
 For easier styling later, you can add some div tags like this:
 
-![You can add some div tags to style later easiser](https://i.imgur.com/ho4KWU6.png)
+![You can add some div tags to style later easiser](https://i.imgur.com/Gs3hNpp.png)
 
 Full code here:
 
@@ -93,7 +92,6 @@ Full code here:
         <div class="item">
             <div class="overlay-thumbnail-categories"></div>
             <div class="category-title"><a href="{{ mb.get_category_link( category.term_id ) }}">{{ category.name }}</a></div>
-    {% set image_upload = mb.get_term_meta( category.term_id, 'thumbnail_images_category', true ) %}
     {% set image_url = mb.get_term_meta( category.term_id, 'url_images_category', true ) %}
     {% if image_url %}
         <img src="{{ image_url }}">
@@ -105,10 +103,11 @@ Full code here:
 </div>
 
 ```
+In there, I added an A tag: `<a href="{{ mb.get_category_link( category.term_id ) }}">{{ category.name }}</a>` to get the link of the corresponding category by ID. At the same time, display the category name and hyperlink it;
 
 This view will be set as the type of a shortcode. You can use it to easily display the list of categories with thumbnails everywhere you want. It seems to simplify the process a lot.
 
-![This view will be set in the type of Shortcode so that it will auto-generate a shortcode.](https://i.imgur.com/OdYVivy.png)
+![This view will be set in the type of Shortcode so that it will auto-generate a shortcode](https://i.imgur.com/bTlGp9e.png)
 
 Copy and paste the shortcode into a page, e.g. the homepage.
 
@@ -170,8 +169,8 @@ body {
     text-decoration: none !important;
     color: #f0a030;
 }
-```
 
+```
 After that, the Top Destinations section has a new look!
 
 ![New look of the page](https://i.imgur.com/IAIi0HW.png)
@@ -189,35 +188,27 @@ Add this code after the header and the first `div` tag.
 ```php
 <?php
     $categories= get_the_category();
-    $background_image = get_term_meta( $categories[0]->term_id, 'thumbnail_images_category', true );
-    if ($background_image) {
-        $link_image = wp_get_attachment_image_src( $background_image, 'full' );
-        $link_image_source = $link_image[0];
-    }
-    else {
-        $link_image_source = get_term_meta( $categories[0]->term_id, 'url_images_category', true );
-    }
-?>
+    $link_image_source = get_term_meta( $categories[0]->term_id, 'url_images_category', true );
 <div class="thumbnail-container">
     <img class="thumbnail-cat" src="<?php echo $link_image_source ?>">
     <div class="thumbnail-overlay"></div>
 </div>
+
 ```
 **In there**:
+
 * `get_the_category()`: to know which archive page the user is;
 * `get_term_meta ()`: get the value of the field;
-* `thumbnail_images_category` and `url_images_category` are IDs of the created custom fields;
+* `url_images_category` is ID of the created custom fields;
 * `wp_get_attachment_image_src ()`: to get the link of the uploaded image;
 * `src="<?php echo $link_image_source ?>`: to display the image from the link which is the value of the `$link_image_source` variable.
 
-
 Then, the featured image will display as below:
+![the featured image will display](https://i.imgur.com/mCrtTIO.png)
 
-![The featured image dislays](https://i.imgur.com/mCrtTIO.png)
+Go back to the theme files and style the featured picture, category title, and description using CSS
 
-Go back to the theme files and style the featured picture, category title, and description using CSS.
-
-![use css to sty;e the featured image, category title](https://i.imgur.com/k3Hwe22.png)
+![use css to style the featured image, category title](https://i.imgur.com/k3Hwe22.png)
 
 ```css
 .thumbnail-container {
@@ -252,6 +243,7 @@ Go back to the theme files and style the featured picture, category title, and d
     font-size: 17px;
     font-style: italic;
 }
+
 ```
 
 Here is the result:
