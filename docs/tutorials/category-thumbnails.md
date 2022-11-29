@@ -26,7 +26,7 @@ In addition to [Meta Box](https://metabox.io/), make sure you already have these
 
 <LiteYouTubeEmbed id='pFgElK8pvn0' />
 
-## Creating custom fields for images
+## 1. Creating custom fields for images
 
 Go to **Meta Box > Custom Fields > Add New**.
 
@@ -46,7 +46,7 @@ Then, go to the category editor page, and you will see the fields. I filled in t
 
 Images from the links will be used as the thumbnails and featured images.
 
-## Displaying the categories thumbnails
+## 2. Displaying the categories thumbnails
 
 Go to **Meta Box > Views** and create a new view.
 
@@ -175,7 +175,7 @@ After that, the Top Destinations section has a new look!
 
 ![New look of the page](https://i.imgur.com/IAIi0HW.png)
 
-## Displaying the featured images on archive pages
+## 3. Displaying the featured images on archive pages
 
 This is an archive page before the featured image is added.
 
