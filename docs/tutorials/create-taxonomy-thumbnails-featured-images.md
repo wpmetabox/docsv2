@@ -28,7 +28,7 @@ Finally, [Oxygen Builder](https://oxygenbuilder.com/). I build the pages with Ox
 
 ## Creating a new post type and taxonomy
 
-### Step 1: Create a new post type
+### Creating a new post type
 
 Go to **Meta Box > Post Types > New Post Type**. 
 
@@ -38,7 +38,7 @@ After publishing, you will see your new post type displayed on the admin dashboa
 
 ![New post displayed in the admin dashboard](https://i.imgur.com/5czIMPN.png)
 
-### Step 2: Create taxonomy and terms
+### Creating taxonomy and terms
 
 Go to **Meta Box > Taxonomies > Add New**.
 
@@ -73,9 +73,13 @@ Then, go to the **Portfolio Type** taxonomy, and you will see the fields. Let’
 
 ## Displaying thumbnails on the frontend
 
-### Step 1: Create a Template
+### Creating a template
 
-Go to **Meta Box > Views > Add New**, and add this code to the **Template** tab:
+Go to **Meta Box > Views > Add New**, and create a new view.
+
+![Create a template](https://i.imgur.com/jfZul2C.png)
+
+In the Template tab, I used this code:
 
 ```
 {% set args = {taxonomy: 'portfolio-type',hide_empty: false} %}
@@ -86,16 +90,11 @@ Go to **Meta Box > Views > Add New**, and add this code to the **Template** tab:
     {% for portfolio in portfolios %}
         <div class="item">
             <div class="overlay-thumbnail-categories">
-                {% set image_upload = mb.get_term_meta( portfolio.term_id, 'upload_portfolio_thumbnail', true ) %}
                 {% set image_url = mb.get_term_meta( portfolio.term_id, 'url_portfolio_thumbnail', true ) %}
-                {% if image_upload %}
-                    {% set image_upload_link = mb.wp_get_attachment_image_src( image_upload, large) %}
-                    <div class="thumbnail" style="background-image:url({{ image_upload_link [0] }})"></div>
-                    <img src="{{ image_upload_link[0] }}">
-                {% elseif image_url %}
-                    <div class="thumbnail" style="background-image:url({{ image_url }})"></div>
+                {% if image_url %}
+                     <div class="thumbnail" style="background-image:url({{ image_url }})"></div>
                     <img src="{{ image_url }}">
-                {% else %}
+               {% else %}
                     <img src="http://demo1.elightup.com/test-metabox/wp-content/uploads/2020/11/oriental-tiles.png">
                 {% endif %}
             </div>
@@ -110,17 +109,15 @@ Go to **Meta Box > Views > Add New**, and add this code to the **Template** tab:
     {% endfor %}
     </div>
 </div>
+
 ```
 Explanation:
 
 * `{% set args = {taxonomy: 'portfolio-type',hide_empty: false} %}`: to declare the args variable with the data taken from the taxonomy that has the slug as `portfolio-type`;
 * `{% set portfolios = mb.get_terms( args ) %}`: this is used to pass the returned data of the args variable to this portfolios variable;
 * `{% for portfolio in portfolios %}`: This loop will list all the terms of the taxonomy;
-* `{% set image_upload = mb.get_term_meta()` and `{% set image_url = mb.get_term_meta()`: they create the `image_upload` and `image_url` variables to take the value of the fields that have IDs as `upload_portfolio_thumbnail` and `url_portfolio_thumbnail` from the corresponding terms;
-* `{% if image_upload %}`: if this variable has value, it will create `image_upload_link` variable to get the link of the uploaded image;
 * `wp_get_attachment_image_src ()`: to get the link of the uploaded image of the corresponding term;
 * `<img src="{{ }}">`: to display the image by the link assigned to the corresponding variable;
-* `{% elseif image_url %}`: if the image_upload variable has no value, it will get the value from the image_url variable;
 * `<imgsrc="http://demo1.elightup.com/test-metabox/wp-content/uploads/2020/11/oriental-tiles.png">`: In case you don’t upload any image or insert any URL to the two custom fields, it will display a default image from this link. You can choose the default image as you want;
 * `{{ portfolio.name }}`: This displays the name of the terms;
 * `{{ portfolio.description }}`: this displays the description of the terms;
@@ -128,13 +125,13 @@ Explanation:
 
 Now, move to the **Type** section and select **Shortcode**.
 
-![Move to Type section and select Shortcode](https://i.imgur.com/bhIhF5h.png)
+![Move to Type section and select Shortcode](https://i.imgur.com/KW8U2ry.png)
 
 After publishing, your template will appear as a shortcode. You can use it to display the template anywhere on your website.
 
-![The template will appear as a shortcode](https://i.imgur.com/PN2Gp1D.png)
+![The template will appear as a shortcode](https://i.imgur.com/jjMfTYx.png)
 
-### Step 2: Add the template to a page
+### Adding the template to a page
 
 Go to **Pages > Add New** to create a new page. You can also use an existing page.
 
@@ -148,7 +145,7 @@ Then, paste the shortcode into the **Full Shortcode** item. And you can see the 
 
 ![The list of terms appear in the thumbnails](https://i.imgur.com/75ayMbQ.png)
 
-### Step 3: Style the portfolio section
+### Styling the portfolio section
 
 To make it look better, I will add some **CSS** in the **CSS** tab of the **View**. You can refer to my CSS code [here](https://github.com/wpmetabox/tutorials/blob/master/create-taxonomy-thumbnail-and-featured-image/portfolio.css).
 
@@ -164,7 +161,7 @@ I have an archive page for each taxonomy term. However, they haven’t had featu
 
 ![The acrchive page still doesn't have featured images](https://i.imgur.com/TGvHgoI.png)
 
-### Step1: Add the featured image to the archive page
+### Adding the featured image to the archive page
 
 Go to **Oxygen > Template > Archive > Edit with Oxygen**. Next, select a term to preview it.
 
@@ -181,15 +178,9 @@ I’ll add a component named **Code Block**, and drag and drop it into the **Sec
 ```php
 <?php
     $terms= get_the_terms( $post->ID, 'portfolio-type');
-    $background_image = get_term_meta( $terms[0]->term_id, 'upload_portfolio_thumbnail', true );
-    if ($background_image) {
-        $link_image = wp_get_attachment_image_src( $background_image, 'full' );
-        $link_image_source = $link_image[0];
-    }
-    else {
-        $link_image_source = get_term_meta( $terms[0]->term_id, 'url_portfolio_thumbnail', true );
-    }
-    if ( !empty( $terms ) ){
+   $link_image_source = get_term_meta( $terms[0]->term_id, 'url_portfolio_thumbnail', true );
+   
+   if ( !empty( $terms ) ){
         $term = array_shift( $terms );
     }
 ?>
@@ -198,24 +189,21 @@ I’ll add a component named **Code Block**, and drag and drop it into the **Sec
 </div>
 <div class="portfolio-heading"><?php echo $term->name; ?></div>
 <div class="portfolio-description"><?php echo category_description(the_category_id()); ?> </div>
+
 ```
 
 Explanation:
 
 * `$terms= get_the_terms( $post->ID, 'portfolio-type')`: to get the list of the term from the taxonomy that the ID as `portfolio-type`;
 * `get_term_meta ()`: to get the custom fields’ value of the corresponding terms;
-* `src="<?php echo $link_image_source ?>`: to display images from the links that are returned from the `$link_image_source` variable;
-* `if ($background_image) {$link_image = wp_get_attachment_image_src( $background_image, 'full' );$link_image_source = $link_image[0];}else {$link_image_source = get_term_meta( $terms[0]->term_id, 'url_portfolio_thumbnail', true );}`
-The logic of this part is quite similar to the code of the view in step 2 of the first part. It sets a rule to decide which image to display;
 * `if ( !empty( $terms ) ){`: to check which archive page of which term that users are in;
-* `<?php echo $term->name; ?>`: to display the name of the corresponding term that users are in;
 * `<?php echo category_description(the_category_id()); ?>`: similarly, to display the description of the corresponding term;
 
 Here is the result:
 
-![The result](https://i.imgur.com/0QpIjc3.png)
+![The result](https://i.imgur.com/bpIaRIF.png)
 
-### Step 2: Style the featured image section
+### Styling the featured image section
 
 Go to **Manage > Stylesheets > Add Stylesheet** and add code:
 
