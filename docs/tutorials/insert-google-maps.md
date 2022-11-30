@@ -4,7 +4,7 @@ title: Inserting Google Maps using custom fields
 
 We will use custom fields to allow users to enter an address and mark the location on Google Maps in the back end. Then, this map along with the location markup will be displayed on the single post page.
 
-## Step 1: Get the Google Maps API Key
+## 1. Getting the Google Maps API Key
 
 Following these Google’s instructions [here](https://developers.google.com/maps/documentation/javascript/get-api-key) to get the API Key. After completing all those steps, you will have an API Key as the following:
 
@@ -12,7 +12,7 @@ Following these Google’s instructions [here](https://developers.google.com/map
 
 Just copy this API Key to use in the next steps.
 
-## Step 2: Create custom fields to fill in address
+## 2. Creating custom fields to fill in address
 
 I will add two custom fields, one for entering an address and one for displaying the location on map corresponding to the entered address.
 
@@ -34,7 +34,7 @@ Then, you will see the two created information fields in the post editor. Just e
 
 ![2 created information fields in the post editor](https://i.imgur.com/uh6akVu.gif)
 
-## Step 3: Display maps on the frontend
+## 3. Displaying maps on the frontend
 
 In this post, I use WooCommerce for my product on my website so I need my own WooCommerce hook and place these code to `functions.php` file.
 
@@ -59,6 +59,7 @@ function add_google_map() {
 :::
 
 If you don’t use WooCommerce, you should add the code below to the file `single-[post-type-name].php`
+
 ```php
 $args = array(
     'zoom' => 14,
