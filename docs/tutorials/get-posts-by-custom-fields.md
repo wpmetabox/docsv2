@@ -32,7 +32,7 @@ In this section, I will create two fields for each method. One is the **Price** 
 
 To know more about the parameters of which the constructor method WP_Query accepts, please read [here](https://developer.wordpress.org/reference/classes/wp_query/).
 
-### Step 1: Create a search section
+### 1. Creating a search section
 
 Create a page template and use a `WP_Query` to query posts and display them as the search result. Besides, you have the total right to control the query as well as the returns. In the folder `page-templates` of your theme, create a file called `advanced-search.php` in the folder with the below content:
 ```php
@@ -81,7 +81,7 @@ When you refresh the page, the search form will appear with minimum and maximum 
 
 ![The search form will appear with minimum and maximum price fields](https://i.imgur.com/F2wEqcf.png)
 
-### Step 2: Create a search function
+### 2. Creating a search function
 
 Now, use the following code to get the values of the minimum and maximum prices which are input to the above fields on the frontend:
 ```php
@@ -91,7 +91,7 @@ $max_price = $_GET['max_price'] ?: '';
 ```
 Explanation:
 
-`$min_price = $_GET['min_price'] ?: ''; $max_price = $_GET['max_price'] ?: '';`: Declare variables $min_price and $max_price to get the price from field min_price and max_price
+`$min_price = $_GET['min_price'] ?: ''; $max_price = $_GET['max_price'] ?: '';`: Declare variables `$min_price` and `$max_price` to get the price from field `min_price` and `max_price`
 
 Then, go back to edit the created template, edit the fields in the form as below:
 
@@ -187,7 +187,7 @@ When you install the [MB Admin Columns](https://metabox.io/plugins/mb-admin-colu
 
 Now, I will proceed to search for posts by these values.
 
-### Step 1: Join the `wp_posts` and `wp_postmeta` tables
+### 1. Join the `wp_posts` and `wp_postmeta` tables
 
 WordPress only supports searching for keywords in the titles and content of posts and pages. To search for posts by keywords in the posts / pages titles and custom field values, you need to understand how the WordPress search feature works first.
 
@@ -209,11 +209,11 @@ add_filter( 'posts_join', 'justread_search_join' );
 ```
 :::info
 
-justread is the theme I’m using (you can download this free WordPress theme here).
+justread is the theme I’m using (you can download this free WordPress theme [here](https://wordpress.org/themes/justread/).
 
 :::
 
-### Step 2: Create the query for search
+### 2. Creating the query for search
 
 Next, you have to edit the query to search for posts by custom field values. To do it, add the following code to the `functions.php` file:
 ```php
@@ -230,7 +230,7 @@ function justread_search_where( $where ) {
 }
 add_filter( 'posts_where', 'justread_search_where' );
 ```
-### Step 3: Allow searching by keyword with spacing
+### 3. Allowing searching by keyword with spacing
 
 You can now search by using the values of custom fields. However, to allow searching by the keyword having the spacing between text or not, you can add the following code to the `functions.php` file: 
 ```php
