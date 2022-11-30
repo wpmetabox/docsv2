@@ -79,7 +79,7 @@ Explanation:
 
 ## 4. Displaying RSS feed
 
-Go to **Appearance > Widgets**, find the **RSS** tab then drag it into the area you want. Then you enter a link which is in the form of http://yourwebsite.com/feed in the **RSS Feed URL** section.
+Go to **Appearance > Widgets**, find the **RSS** tab then drag it into the area you want. Then you enter a link which is in the form of *http://yourwebsite.com/feed* in the **RSS Feed URL** section.
 
 ![Display the rss feed](https://i.imgur.com/sppBE9h.png)
 
