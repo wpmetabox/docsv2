@@ -59,7 +59,7 @@ First, go to **Meta Box > Custom Fields** to see all the field groups that you c
 
 Copy the shortcode of the field group that we use for the subscription form. This shortcode will be like this:
 
-```
+```php
 [mb_frontend_form id='subscription-form' post_fields='title,content']
 ```
 
@@ -69,7 +69,7 @@ Now, go to the Subscribe page and paste the shortcode into it.
 
 To customize the subscription form, you can add some attributes as following:
 
-```
+```php
 [mb_frontend_form id="subscription-form" ajax="true" recaptcha_key="..." recaptcha_secret="..."]
 ```
 Explanation:
@@ -89,7 +89,7 @@ Here is how the subscription form displays on the page.
 ## 4. Styling the subscription form
 
 To style the form, go to **Appearance > Customize > Additional CSS**. Then add the CSS code below to make the form more appealing:
-```
+```css
 .rwmb-form {
 	background: #e2e8f0;
 	padding: 24px;
@@ -139,7 +139,7 @@ For example, I’m using the [eStar](https://gretathemes.com/wordpress-themes/es
 
 Next, add this code to the `functions.php` file:
 
-```
+```php
 include get_stylesheet_directory() . '/inc/MailChimp.php';
 use \DrewM\MailChimp\MailChimp;
 
