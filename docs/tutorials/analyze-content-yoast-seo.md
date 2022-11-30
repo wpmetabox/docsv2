@@ -9,7 +9,7 @@ We will use custom fields to add extra information for the posts / products. It 
 
 We’ll use the [Meta Box for Yoast SEO](https://metabox.io/plugins/meta-box-yoast-seo/) extension from Meta Box. It supports not only the Text, Textarea, and Wysiwyg fields from Meta Box but also cloneable fields (or repeated fields).
 
-## Video Version
+## Video version
 
 <LiteYouTubeEmbed id='hI8rwrz3nyI' />
 
