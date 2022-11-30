@@ -22,7 +22,7 @@ You also need these extensions of Meta Box:
 
 Now, when you go to a post or page, the content in the custom fields hasn’t been added in the Rank Math content analysis yet. To analyze the content in the custom fields, follow this tutorial.
 
-## Step 1: Configure custom fields
+## 1. Configuring custom fields
 
 Go to **Meta Box > Custom Fields** and create or configure some fields.
 
@@ -34,7 +34,7 @@ Open the field that you want Rank Math to analyze its content. Then, move to the
 
 No matter if the field is cloneable or not, you can add the custom settings as above. It always works.
 
-## Step 2: Check the results in Rank Math
+## 2. Checking the results in Rank Math
 
 Before configuring the fields as above, Rank Math just analyze the content in the Content field like this:
 
