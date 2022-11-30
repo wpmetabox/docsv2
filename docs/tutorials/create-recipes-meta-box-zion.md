@@ -24,13 +24,13 @@ Here are the tools that we need for this practice:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the back end to create custom fields to save extra information about recipe.
 * **Zion Builder**: make sure that you have **Zion Builder Pro** to have integration with Meta Box.
 
-## Step 1: Create a custom post type
+## 1. Creating a custom post type
 
 Go to **Meta Box > Post Types > Add New** to create a new post type for the recipes.
 
 ![Create a custom post type](https://i.imgur.com/kOWxuCF.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Move to **Meta Box > Custom Fields** to create as many fields as you want.
 
@@ -57,7 +57,7 @@ Back to the post editor, you will see all of the created custom fields.
 
 Let’s fill in information for the recipe into the fields.
 
-## Step 3: Create a template
+## 3. Creating a template
 
 Go to the **Zion Builder** menu and create a new template.
 
@@ -117,7 +117,7 @@ After finishing getting all of the recipe information, you will see all of them 
 
 ![all the information is displays](https://i.imgur.com/yXgx2go.png)
 
-## Step 4: Style the page
+## 4. Styling the page
 
 Back to the page editor with Zion Builder, you can change the settings of each element to style them.
 
