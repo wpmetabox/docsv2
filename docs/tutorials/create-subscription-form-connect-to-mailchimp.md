@@ -13,9 +13,9 @@ We need to install the following tools:
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to display custom fields on the front-end as a form.
 * [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the form, each submitted form will be a post. 
 
-Finally, you need to have a Mailchimp account. In case you haven’t had it, go here to create a new one.
+Finally, you need to have a Mailchimp account. In case you haven’t had it, go [here](https://login.mailchimp.com/) to create a new one.
 
-## Step 1: Create a new post type for subscribers
+## 1. Creating a new post type for subscribers
 
 To save and review subscriber data easily and conveniently, firstly, you need to create a new post type. I named it as Subscribers.
 
@@ -27,11 +27,11 @@ After publishing, a new menu named **Subscribers** will appear as below:
 
 ![Newly created post type appears in the menu](https://i.imgur.com/jjokucc.png)
 
-## Step 2: Create a subscription form
+## 2. Creating a subscription form
 
 I’m going to add two basic custom fields for a subscription form: **Name** and **Email**.
 
-Besides, to save the database space, I will use the name which is submitted into the form for the post title, and the email for the post content. So, the ID of the Name field will be post_title, and the ID of the Email field will be post_content which are two default IDs in WordPress for title and post content.
+Besides, to save the database space, I will use the name which is submitted into the form for the post title, and the email for the post content. So, the ID of the Name field will be post_title, and the ID of the Email field will be `post_content` which are two default IDs in WordPress for title and post content.
 
 Go to **Meta Box > Custom Fields > Add New**. Then choose the field type as **Text** for both Name and Email fields.
 
@@ -47,7 +47,7 @@ Normally, after publishing the field group, its ID will be auto-generated in the
 
 ![The IDs are auto-generated](https://i.imgur.com/B4p8GvN.png)
 
-## Step 3: Display the subscription form on the front-end
+## 3. Displaying the subscription form on the front-end
 
 To display the subscription form on the website, which means displaying the custom fields on the frontend, and allow users to fill in the fields right on the frontend, you need to use the [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/) extension.
 
@@ -86,7 +86,7 @@ Here is how the subscription form displays on the page.
 
 ![The subscription form displays like this](https://i.imgur.com/x4sK4RD.png)
 
-## Step 4: Style the subscription form
+## 4. Styling the subscription form
 
 To style the form, go to **Appearance > Customize > Additional CSS**. Then add the CSS code below to make the form more appealing:
 ```
@@ -123,7 +123,7 @@ This is how it looks after customizing with CSS:
 
 ![Customize the form with css](https://i.imgur.com/xz62Goe.png)
 
-## Step 5: Connect the subscription form to mailchimp
+## 5. Connecting the subscription form to mailchimp
 
 We’re going to integrate the subscription form to MailChimp to send the subscriber information submitted into the form to MailChimp. With this information, you can [use MailChimp to send email marketing campaigns](https://gretathemes.com/mailchimp-send-wordpress-blog-post-email/) to these subscribers easily.
 
