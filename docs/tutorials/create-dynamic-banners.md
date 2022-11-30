@@ -13,7 +13,7 @@ There are some tools we need for this practice:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create custom fields;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the banner.
 
-## Step 1: Create a settings page
+## 1. Creating a settings page
 
 Go to **Meta Box > Settings Page > New Settings Page**.
 
@@ -27,7 +27,7 @@ This is the settings page I’ve created:
 
 This page is still blank. So, we’ll add custom fields to create some options for the content and parameters of the banner.
 
-## Step 2: Add custom fields
+## 2. Adding custom fields
 
 Here are the custom fields I created:
 
@@ -45,7 +45,7 @@ Now, back to the created settings page for our banner, you will see the fields a
 
 ![Fill in the banner information](https://i.imgur.com/6VIdJKm.png)
 
-## Step 3: Create a template for banner
+## 3. Creating a template for banner
 
 We’ll create a template and generate a shortcode for it to embed it anywhere easily.
 
@@ -160,7 +160,7 @@ This code is quite the same with the code we used with MB Views above, just chan
 
 This time, put `[banner-shortcode]` anywhere you wish to show the banner (footer, header, article, etc.).
 
-## Step 4: Display the banner on the frontend
+## 4. Displaying the banner on the frontend
 
 To add a product picture to the sidebar, go to **Dashboard > Appearance > Widgets** and paste the created shortcode:
 
