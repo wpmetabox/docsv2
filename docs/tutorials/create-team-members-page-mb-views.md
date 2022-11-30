@@ -63,7 +63,8 @@ In the **Admin Dashboard**, go to **Meta Box > Views > Add New** to create a new
 ![Create a new template.](https://i.imgur.com/n4xngkG.png)
 
 In the **Template** tab of the view, add some code:
-```
+
+```php
 {% set args = { post_type: 'team-member', posts_per_page: -1, orderby: 'date', order: 'ASC' } 
 %}
 {% set posts = mb.get_posts( args ) %}
@@ -77,13 +78,13 @@ In the **Template** tab of the view, add some code:
 ```
 ![Add new code to the template.](https://i.imgur.com/TQW38fy.png)
 
-**Explanation:
+**Explanation**:
 
-* `{% set args = { post_type: 'team-member', posts_per_page: -1, orderby: 'date', order: 'ASC' } %}`
+* ```{% set args = { post_type: 'team-member', posts_per_page: -1, orderby: 'date', order: 'ASC' } %}```
 
 This code is used to declare the variable that obtained posts from the Team Member post type. The `posts_per_page: -1` means that it will get all the posts and display them in one page. The `orderby: 'date', order: 'ASC'` are used to define the order of the posts.
 
-* `{% set posts = mb.get_posts( args ) %}`
+* ```{% set posts = mb.get_posts( args ) %}```
 
 This function is to get the posts data from the variable that was declared above.
 ```
@@ -92,7 +93,8 @@ This function is to get the posts data from the variable that was declared above
 {% endfor %}`
 ```
 This is a loop to display all the posts in the Team Member post type.
-```
+
+```php
 {{ mb.get_the_post_thumbnail( post.ID,'medium' ) }}
 
 This function is used to get the avatar of the member which is the featured image of the post.
