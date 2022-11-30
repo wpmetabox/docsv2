@@ -42,7 +42,7 @@ For someone who is not using any page builder on their site, this part may help.
 
 Just go to **Views** and create a new view with this code:
 
-```
+```php
 
 <a class="wp-block-button__link" href="{{ post.view_demo }}">
     View demo
