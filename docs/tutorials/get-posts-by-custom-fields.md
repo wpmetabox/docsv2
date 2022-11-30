@@ -147,13 +147,13 @@ After that, to display the search result, add the following code to the `advance
 ```
 Explanation:
 
-* `<?php if ( $min_price || $max_price ): ?>`: This code checks to see if both variables min_price and max_price exist.
+* `<?php if ( $min_price || $max_price ): ?>`: This code checks to see if both variables `min_price` and `max_price` exist.
 
 * `if ( $min_price ) { $args['meta_query'][] = ['key' => 'hcf_price', 'value' => $min_price, 'compare' => '>=', 'type' => 'NUMERIC'];}`: This code returns posts whose fields value is greater than or equal to the value entered for `$min_price`. In there, `'hcf_price'` is the ID of the Price field.
 
 * `if ( $max_price ) { $args['meta_query'][] = [ 'key' => 'hcf_price', 'value' => $max_price 'compare' => '<=', 'type' => 'NUMERIC' ];}`: This code returns posts with values less than or equal to the value of `$max_price`.
 
-* `$search_query = new WP_Query( $args );`: $search_query variable to initialize the `WP_Query `class with $args as the passed parameter.
+* `$search_query = new WP_Query( $args );`: `$search_query` variable to initialize the `WP_Query `class with `$args` as the passed parameter.
 
 * `if ( $search_query->have_posts() ): while ( $search_query->have_posts() ) { $search_query->the_post(); get_template_part( 'template-parts/post/content', 'excerpt' ); } wp_reset_postdata(); ?>in the above code <?php else: ?> <p>No result found.</p> <?php endif; ?> </div> <?php endif; ?>`: create a loop to get posts that match the conditions specified above
 
@@ -167,7 +167,7 @@ $args = [
 ```
 :::caution
 
-There is a part about building parameters for the $args query based on the values of the min price and max price. We use a comparison function <=, >= to ensure that the price of products is within the selected pricing range.
+There is a part about building parameters for the `$args` query based on the values of the min price and max price. We use a comparison function <=, >= to ensure that the price of products is within the selected pricing range.
 
 :::
 
@@ -216,6 +216,7 @@ justread is the theme I’m using (you can download this free WordPress theme [h
 ### 2. Creating the query for search
 
 Next, you have to edit the query to search for posts by custom field values. To do it, add the following code to the `functions.php` file:
+
 ```php
 function justread_search_where( $where ) {
     global $pagenow, $wpdb;
