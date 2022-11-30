@@ -25,7 +25,7 @@ For this practice, we need these tools:
 
 The last one is [Oxygen](https://oxygenbuilder.com/) which is used to build the page. You should use the 3.9 version or upper, which has integration with Meta Box already.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type**.
 
@@ -33,7 +33,7 @@ Go to **Meta Box > Post Types > New Post Type**.
 
 Enter the name for the post type, and if you want some further configuration, follow [this tutorial](http://docs/metabox.io//tutorials/create-custom-post-type-taxonomies/).
 
-Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to Meta Box > Custom Fields, then create fields as you want for the products.
 
@@ -51,7 +51,7 @@ Back to the post editor, you will see all of the created custom fields. Just fil
 
 ![newly created custom fields](https://i.imgur.com/gkVJ6Vx.png)
 
-## Step 3: Create a template with Oxygen
+## 3. Creating a template with Oxygen
 
 Go to the **Oxygen** menu and create a new template.
 
