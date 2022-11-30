@@ -39,7 +39,7 @@ As I’ve mentioned, we need to create a custom field for the category to choose
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the backend creating custom fields.
 * [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): to add custom fields to taxonomy terms such as categories and tags.
 
-## Step 1: Create a custom field
+## 1. Creating a custom field
 
 We’ll create a field only for the background color. Go to **Meta Box > Custom Fields > Add New**.
 
@@ -61,7 +61,7 @@ Then, go to **Posts > Categories** and select any category you want to edit. You
 
 Just choose a color for the category.
 
-## Step 2: Change the background color for posts
+## 2. Changing the background color for posts
 
 Go to a post in the **Breakfast** category, its background color still is the white as default.
 
