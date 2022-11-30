@@ -6,7 +6,7 @@ When you create a website for a client, hiding information such as the used plug
 
 I will create a new plugin then bundle Meta Box into it for example.
 
-## 1. Create a new plugin
+## 1. Creating a new plugin
 
 In the **wp-content** folder > **plugin**, create a new folder named `project-demo` with a `project-demo.php` file inside. The php file will have the following content:
 
@@ -22,13 +22,13 @@ In the **wp-content** folder > **plugin**, create a new folder named `project-de
 ```
 In the **Admin Dashboard > Plugins**, you’ll see a new plugin named **Project Demo**. Let's activate it.
 
-## 2. Bundle Meta Box using composer
+## 2. Bundling Meta Box using composer
 
 We must download the necessary libraries from Meta Box into the plugin you've created.
 
-In the **project-demo** folder, we create a file named *composer.json* with the following content:
+In the **project-demo** folder, we create a file named `composer.json` with the following content:
 
-```
+```json
 {
     "repositories":[
         {
@@ -76,7 +76,9 @@ Then, the `project-demo` folder will include these folders and files as follows:
 
 Finally, run the following code in the `project-demo.php` file to download the libraries that you’ve declared:
 
-`require 'vendor/autoload.php'`;
+```php
+require 'vendor/autoload.php
+```
 
 ![The code](https://i.imgur.com/wD5bgNO.png)
 
@@ -130,6 +132,7 @@ On the **Admin Dashboard**, you’ll see a new menu named `Projects`. It’s the
 ### Creating custom fields
 
 To create custom fields, you need to code manually if you didn’t include the Meta Box Buidler to the created plugin. Add code (as in the example below) into the `project-demo.php` file:
+
 ```php
 // Add custom fields for the Project post type
 function prefix_add_fields_project( $meta_boxes) {
@@ -181,7 +184,8 @@ function prefix_project_template( $template ) {
 add_filter( 'template_include', 'prefix_project_template', 99 );
 ```
 Next, create a new file in the project-demo folder that is named `project-template.php` (it must have the name as we’ve declared above) with the following content:
-```
+
+```php
 <?php get_header(); ?>
 <div class="content">
     <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
@@ -193,7 +197,8 @@ Next, create a new file in the project-demo folder that is named `project-templa
 ### Getting custom fields' values
 
 Add the following code to the content of the template file (`project-template.php`):
-```
+
+```php
 <div class="img-post">
     <?php
     $images = rwmb_meta( 'image', ['size' => 'full'] );
@@ -233,6 +238,7 @@ Fields and their values are not displayed well, so we need to style them a bit.
 ### Styling fields
 
 In the `project-demo` folder, I created a file named style.css. Then, I enqueue it to the `project-demo.php` file:
+
 ```php
 function prefix_project_styles() {
     wp_enqueue_style( 'prefix_main-style', plugin_dir_url( __FILE__ ) . '/style.css' );
