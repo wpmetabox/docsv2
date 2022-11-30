@@ -25,7 +25,8 @@ You can fill in some information to the fields to check if it is in the RSS in t
 We’ll use the function `rwmb_meta()` to get value from the fields.
 
 In your theme folder, find the `content.php` and add this code:
-```
+
+```php
  <ul>
         <li>
             <strong>Price</strong>: <?php echo rwmb_meta( 'price' ) ?>
@@ -46,7 +47,8 @@ The custom fields’ values are shown. Next is to include them in the RSS feed.
 ## 3. Adding the values of custom fields to the rss feed 
 
 Go to the `functions.php` file and add this code:
-```
+
+```php
 /**
  * MetaBox- Add custom fields into RSS Feed
  *
