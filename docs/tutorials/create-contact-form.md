@@ -16,7 +16,7 @@ For the advanced features from Meta Box, we need some of its extensions:
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create forms for users to submit their posts from the frontend.
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to create a professional admin list screen.
 
-## Step 1: Create a custom post type
+## 1. Creating a custom post type
 
 Each contact submitted in the form will be saved in a post of a custom post type. So, let’s create one. Go to **Meta Box > Post Types > Add New**.
 
@@ -30,7 +30,7 @@ After that, you will see a new **Contacts** menu in the admin dashboard.
 
 ![Contacts menu in the admin dashboard](https://i.imgur.com/wSHn3lP.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group.
 
@@ -48,7 +48,7 @@ Pay attention to the **ID** of the field group since we’ll use it in the next 
 
 ![Pay attention to the ID of the created field group](https://i.imgur.com/1z7qIfC.png)
 
-## Step 3: Display contact form on the frontend
+## 3. Displaying contact form on the frontend
 
 Go to **Pages > Add New** to create a new page named **Contact Us**.
 
@@ -84,7 +84,7 @@ Now, go to the admin dashboard > **Contacts** and you'll see your test message i
 
 Your contact form is ready for use. However, I want to see the details of the submitted contacts directly in the admin dashboard, so I will show them as columns in the next step.
 
-## Step 4: Show contact information in the admin column
+## 4. Showing contact information in the admin column
 
 To have a page listing all the contacts information in the admin dashboard, you need the help of the **MB Admin Columns** extension. Go back to the created custom field group, and set up for each field.
 
@@ -114,7 +114,7 @@ Now, go to the **Contacts** post type and you’ll see a better list for easier 
 
 ![The created post type show in a tiny way](https://i.imgur.com/rsh8CkK.png)
 
-## Step 5: Send email notification
+## 5. Sending email notification
 
 If you want to send the contacts to your email right after it’s submitted, follow this step.
 
