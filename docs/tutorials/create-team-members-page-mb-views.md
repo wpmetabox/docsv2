@@ -26,7 +26,7 @@ To do it, we need Meta Box and its extensions:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): create custom fields easily to save team members’ information in the backend;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the team members page.
 
-## Step 1: Create a new post type
+## 1. Creating a new post type
 
 In the **Admin Dashboard**, go to **Meta Box > Post Types**, then create a new post type for the members.
 
@@ -36,7 +36,7 @@ Publish and you will see a new menu in your dashboard.
 
 ![The result appears after creating](https://i.imgur.com/vrcT9BN.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group.
 
@@ -56,7 +56,7 @@ When adding a new post in the Team Member post type, you will see all the fields
 
 ![The custom fields display in the post editor](https://i.imgur.com/hrepb82.png)
 
-## Step 3: Create a template
+## 3. Creating a template
 
 In the **Admin Dashboard**, go to **Meta Box > Views > Add New** to create a new template.
 
@@ -127,7 +127,7 @@ Go to the **Meet The Team** page and you will see all the data has been displaye
 
 Now, all the information of the members has been obtained and displayed to the page. 
 
-## Step 4: Style the page
+## 4. Styling the page
 
 If you want to style the page, you can easily do it by adding some CSS in the CSS tab of the created template in the Views.
 
