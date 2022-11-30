@@ -29,7 +29,7 @@ Here are the tools we need:
 
 If you already have custom fields, you can move to the next step. In case you want to create a sample of custom fields and then paste them into sites, let’s do it.
 
-We have another tutorial for this step, please take a look for more detail [here](https://docs.metabox.io//tutorials/create-custom-fields/).
+We have another tutorial for this step, please take a look for more detail [here](https://docs.metabox.io/tutorials/create-custom-fields/).
 
 For instance, I created a field group like this:
 
