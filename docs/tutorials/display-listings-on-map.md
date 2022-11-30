@@ -93,14 +93,16 @@ add_action( 'wp_enqueue_scripts', function() {
 ```
 Explanation: 
 
-       ```
-       wp_enqueue_style( 'leaflet', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', [], '1.5.1' );
+```
+        wp_enqueue_style( 'leaflet', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', [], '1.5.1' );
         wp_enqueue_script( 'leaflet', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', [], '1.5.1', true );
 
         wp_enqueue_script( 'list', get_parent_theme_file_uri( 'js/list.js' ), ['jquery', 'leaflet'], '1.0', true );
-        ```
+        
+ ```
 
 This code is to enqueue a custom JavaScript file to render our map. The file is put under the js folder and is named `list.js`, which we will create in the next step.
+
 ```
         $locations = [];
         $query = new WP_Query( [
@@ -121,12 +123,13 @@ This code is to query all restaurants and get their title, location, address, ic
 ```
 This code is to send the restaurants' data to JavaScript via `wp_localize_script` function.
 
-Note that: I'm using the `rwmb_get_value` helper function to get location data for each restaurant. This helper function returns an array of latitude and longitude, which is very useful and ready to use in the front end. See more information about this function [here](https://docs.metabox.io/rwmb-get-value/).
+**Note that**: I'm using the `rwmb_get_value` helper function to get location data for each restaurant. This helper function returns an array of latitude and longitude, which is very useful and ready to use in the front end. See more information about this function [here](https://docs.metabox.io/rwmb-get-value/).
 
 ## 5. Rendering the map with javascript
 
 Create a new file `list.js` in the js folder in your theme and enter the following code:
-```
+
+```js
 ( function( document, Locations, L ) {
     // Set map center = first restaurant location.
     var center = L.latLng( Locations[0].latitude, Locations[0].longitude );
@@ -167,7 +170,7 @@ Create a new file `list.js` in the js folder in your theme and enter the followi
 ```
 These all lines of code are to create the map. Simply follow the [Leaflet documentation](https://leafletjs.com/examples/quick-start/) to do it.
 
-```
+```php
     // Set map center = first restaurant location.
     var center = L.latLng( Locations[0].latitude, Locations[0].longitude );
 
@@ -178,7 +181,7 @@ These all lines of code are to create the map. Simply follow the [Leaflet docume
     };
 ```
 This is to set the location of the first restaurant as the initial center of the map.
-```
+```php
   Locations.forEach( function( location ) {
         // Marker options.
         var options = {
