@@ -328,7 +328,7 @@ Explanation:
 
 Add code inside the function **custom_enqueue_files()** in the `plugin.php` file in the case you use the 3rd party plugin. Otherwise, add to the `functions.php` to declare all the above js and css files.
 
-```
+```php
             wp_enqueue_style('slick', plugin_dir_url( __FILE__ ).'/assets/css/slick.css');
 	wp_enqueue_style('slick-theme', plugin_dir_url( __FILE__ ).'/assets/css/slick-theme.css');
 
