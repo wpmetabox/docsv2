@@ -20,7 +20,7 @@ We’ll need [Meta Box](https://metabox.io) and some of its extensions for this 
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/?swcfpc=1): organize custom fields into cloneable groups, where we input images;
 * [MB Views](https://metabox.io/plugins/mb-views/?swcfpc=1): it helps you to create templates as well as get and display fields’ values.
 
-## Step 1: Create a settings page
+## 1. Creating a settings page
 
 Go to **Meta Box > Settings Page > Add New** and change the option name.
 
@@ -30,7 +30,7 @@ Now, a new menu named **Brands** appears. It’s my new **Settings Page**.
 
 ![The new Settings Page named Brands appears.](https://i.imgur.com/U4H4ELu.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 In the **Admin Dashboard**, go to **Meta Box > Custom Fields > Add New**. I created fields with the below structure.
 
@@ -95,7 +95,7 @@ Back to the **Settings Page**, you’ll see all of the created custom fields. Yo
 
 ![The created custom fields are displayed.](https://i.imgur.com/4JJ0nEh.png)
 
-## Step 3: Display data from fields
+## 3. Displaying data from fields
 
 To get the input data from those custom fields to display the brand information, I will use **MB Views** to create a template. Go to **Meta Box > Views** and add a new view.
 
@@ -117,7 +117,7 @@ Delete the text ‘INSERT SUB-FIELDS HERE” and choose a field from the list in
 
 When you insert the logo from the **Single Image** field, you can choose the size to output. Here I set it to be the thumbnail.
 
-[Get the value from the Single Image field when the URL field is empty](https://i.imgur.com/A9VwBOb.png)
+![Get the value from the Single Image field when the URL field is empty](https://i.imgur.com/A9VwBOb.png)
 
 When inserting the fields, I also edit the code a little bit to create a rule for displaying images. For example, I set a rule that if there is no URL input to the **URL** field, the value from the **Single Image** field will be obtained and displayed.
 
@@ -165,7 +165,7 @@ Now, you can see all of the brand logos along with their names displayed already
 
 ![All the images appeared](https://i.imgur.com/mTWu5xF.gif)
 
-## Step 4: Style the section
+## 4. Styling the section
 
 In the view, move to the **CSS** tab and add css into the box.
 
