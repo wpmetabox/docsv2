@@ -116,7 +116,7 @@ the choose_an_option_ field = the all_days_are_the_same_ option</td>
 </tr>
 <tr>
 <td>End time</td>
-<td>end_time_weekdays**</td>
+<td>end_time_weekdays</td>
 <td>time picker</td>
 
 </tr>
@@ -254,7 +254,7 @@ If you’ve had a template created by MB Views for the Restaurant single page, j
 
 The code is quite long, so I put it in my Github [here](https://github.com/wpmetabox/tutorials/tree/master/showing-opening-hours-section-with-MB-Views). You can refer to it for more details. The code is divided into several parts to get corresponding group data. Because of the same concept in all parts, I’ll explain a typical part to be more clear about the logic.
 
-```
+```php
 <div class="opening-hours">
 <h2>
     Opening Hours
@@ -313,7 +313,7 @@ All the time slots are shown exactly as I input in the backend. But this section
 ## 3. Styling the opening hours section
 
 Still, in the view of the single Restaurant page, move to the **CSS** tab. And add the code below.
-```
+```css
 .container.detail-restaurant .opening-hours {
     max-width: 300px;
     margin: 0 auto;
