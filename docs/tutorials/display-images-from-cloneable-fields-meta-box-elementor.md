@@ -29,7 +29,7 @@ They’re all in the **Meta Box AIO**. If you haven’t had it, you can download
 
 Finally, make sure you have **Elementor Pro** on your site.
 
-## Step 1: Create a settings page
+## 1. Creating a settings page
 
 With **custom post types**, information from each brand will be saved in a separate post. But with a **settings page**, all of them will be on this page only. So, I will use a settings page for more convenience.
 
@@ -43,7 +43,7 @@ After publishing, you’ll see a new settings page named Brands appears.
 
 ![New settings page named Brands appears](https://i.imgur.com/0etweZJ.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create custom fields for the settings page.
 
@@ -93,7 +93,7 @@ Go back to the settings page, and you’ll see all of the newly created custom f
 
 Now, let’s fill in the information in the fields and move to the next step.
 
-## Step 3: Create a skin
+## 3. Creating a skin
 
 Go to **Elementor Theme Builder > Meta Box Group Skin > Add New**.
 
@@ -123,7 +123,7 @@ After that, I’ll style both elements a little bit.
 
 ![Style both elements a little bit](https://i.imgur.com/Ma9aEXQ.gif)
 
-## Step 4: Display the image section on a page
+## 4. Displaying the image section on a page
 
 Let’s edit a page with Elementor, I’m doing this with the homepage in this practice.
 
