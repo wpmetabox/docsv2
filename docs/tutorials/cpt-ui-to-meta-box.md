@@ -4,7 +4,7 @@ title: Migrating from CPT UI to Meta Box
 
 You can move data from the **CPT UI** to the **Meta Box** with the help of the **MB Custom Post Types** **&amp; Taxonomies** extensions. It will save a lot of time and shorten the process dramatically.
 
-## Step 1: Back up the data
+## 1. Backing up the data
 
 :::caution
 
@@ -22,7 +22,7 @@ As you can see in the **Plugin** menu, the **CPT UI** has already been activated
 
 I will now proceed to transfer the data.
 
-## Step 2: Install plugins
+## 2. Installing plugins
 
 I'll install and activate **MB Custom Post Types** &amp; **Custom Taxonomies**.
 
@@ -30,7 +30,7 @@ After that, the new **Post Types** menu appears on the **Dashboard** along with 
 
 ![New Post Type menu appears on the Dashboard](https://i.imgur.com/sxEKSlv.png)
 
-## Step 3: Migrate the data
+## 3. Migrating the data
 
 Go to the **Post Types** menu &gt; **CPT UI Migration** &gt; Click the **Migrate** button.
 
@@ -40,7 +40,7 @@ When the process finishes, it will show a "Done" message.
 
 **Note**: The **CPT UI** menu will automatically disappear when the migration process finishes. This is because Meta Box automatically deactivated it to avoid conflict and errors caused by registering the same post type.
 
-## Step 4: Validate
+## 4. Validating
 
 The Companies post type and all the terms in the Company Types taxonomy are still there. They are the new ones created by Meta Box. It also means that all the data was migrated successfully.
 
