@@ -16,7 +16,7 @@ Here are the tools we’ll use in this practice:
 * [MB Custom Post Type & Taxonomies](https://wordpress.org/plugins/mb-custom-post-type/): to create custom post types for events;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It provides UI to create custom fields;
 
-## Step 1: Create a new post type
+## 1. Creating a new post type
 
 Go to **Meta Box > Post Types > New Post Type** to create a post type for the events.
 
@@ -26,7 +26,7 @@ After publishing the post type, you’ll see a new menu.
 
 ![The newly created post type appears in the menu dashboard](https://i.imgur.com/X6FQ62u.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 We'll create some fields to save time and other event information.
 
@@ -42,7 +42,7 @@ Back to the post editor, you will see all the created custom fields. Let’s fil
 
 ![Newly created custom fields in the post editor](https://i.imgur.com/UUyhiQq.png)
 
-## Step 3: Create the add-to-calendar button
+## 3. Creating the add-to-calendar button
 
 First, I create a file named `single-event.php` in the theme folder (I’m using the [Justread](https://gretathemes.com/wordpress-themes/justread/) theme) to edit the template of the singular **Event** page.
 
