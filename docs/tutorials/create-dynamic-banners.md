@@ -61,7 +61,7 @@ Go to the **Meta Box > Views** to create a new template to display the banner in
 
 Add this code to the **Template** tab:
 
-```
+```php
 {% set settings = mb.get_option( 'banner' ) %}
 
 {% if( settings.show == 1) %}
@@ -81,13 +81,11 @@ Add this code to the **Template** tab:
 
 **Explanation**: 
 
-`{% if( settings.show == 1) %}`
-
-This line is to check if the **Show** field is checked or not. If it’s checked that means the value of this field is set as **1**, we will display the following information on the banner.
+`{% if( settings.show == 1) %}` : This line is to check if the **Show** field is checked or not. If it’s checked that means the value of this field is set as **1**, we will display the following information on the banner.
 
 
 `{% set image_ids = settings.image %}
-{% set image_attributes = mb.wp_get_attachment_image_src( image_ids, 'full') %}`
+{% set image_attributes = mb.wp_get_attachment_image_src( image_ids, 'full') %}`: 
 
 These lines of code is to get the link of the image from the **Image** field.
 
@@ -97,9 +95,9 @@ These lines of code is to get the link of the image from the **Image** field.
 {{ settings.title }}
 {{ settings.title_position }}
 {{ settings.description }}
-{{ settings.description_position }}`
+{{ settings.description_position }}`: 
 
-These are to get the fields’ values. In there, the part after the *settings*. is the ID of the field.
+These are to get the fields’ values. In there, the part after the `settings.` is the ID of the field.
 
 
 Then, scroll down to the **Settings** section of the view, set the **Type** as **Shortcode** to save this template as a shortcode.
@@ -113,6 +111,7 @@ After publishing the view, just copy the generated shortcode and input it to any
 ### Method 2: Adding code to theme file
 
 Add the following code to the `functions.php` file:
+
 ```php
 function short_code_banner() {
     // Banner 
@@ -146,11 +145,11 @@ function short_code_banner() {
 }
 add_shortcode( 'banner-shortcode', 'short_code_banner' );
 ```
-In there:
+**In there**:
 
 This code is quite the same with the code we used with MB Views above, just change it a little bit.
 
-* `$settings`: Create the $setting variable to get the value of all the fields in the settings page which has the option name as `banner`. Note that the ID of the settings page also is the option name automatically. In the case you change the option name to the other one, make sure to add it here.
+* `$settings`: Create the `$setting` variable to get the value of all the fields in the settings page which has the option name as `banner`. Note that the ID of the settings page also is the option name automatically. In the case you change the option name to the other one, make sure to add it here.
 
 * `$image_ids`: Create the `$image_ids` variable to obtain value from the field with ID as 'image'.
 
@@ -179,7 +178,8 @@ In the case you use the **MB Views**, go back to the created template > **CSS** 
 Otherwise, if you use the method 2 in the previous step, go to **Customizer > Additional CSS*** then add code.
 
 No matter which the method we use, you can use the below CSS code to customize the banner:
-```
+
+```css
 .banner {
     position: relative;
     height: 250px;
