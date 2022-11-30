@@ -21,7 +21,7 @@ Then, you can add some div tags for styling as follows.
 
 ![Add some div tags for styling](https://i.imgur.com/nM6OStJ.png)
 
-```
+```php
 <div class="flex">
     <img class="mr-6" src="{{ post.thumbnail.thumbnail.url }}" width="{{ post.thumbnail.thumbnail.width }}" height="{{ post.thumbnail.thumbnail.height }}" alt="{{ post.thumbnail.thumbnail.alt }}">
     <div class="flex-1">
@@ -52,12 +52,13 @@ For example, I create a new one, so the template is blank. Click the **Insert Fi
 We’ve done the including the created template part into this new view with the *include* statement as in the above image.
 
 Note: instead of insert field by a few clicks, you also can add code:
-```
+
+```php
 <! – Using include tag – >
 {% include 'event-basic-info' %}
-
+```
 or
-
+```php
 <! – Using include function – >
 {{ include( 'event-basic-info' ) }}
 ```
@@ -75,7 +76,7 @@ As a result, the include statement works and displays event thumbnail, date, and
 
 :::caution
 
-While you can use the *include* tag or function, Twig recommends using the function syntax.
+While you can use the `include` tag or function, Twig recommends using the function syntax.
 
 :::
 
@@ -103,7 +104,8 @@ There are 2 obvious advantages of template parts:
 But these are not the best things about template parts. When you include template parts in a view, they **have access to the same context as the current view**. This means that **any variable defined in the main view will be available in the template parts**.
 
 For example: if you’re creating a template part to display posts in a custom category, like this:
-```
+
+```php
 {% set posts = mb.get_posts( args ) %}
 <ul>
     {% for post in posts %}
@@ -115,29 +117,29 @@ For example: if you’re creating a template part to display posts in a custom c
 
 Then in a view, you can set the query args to show posts in a category ID 3:
 
-```
+```php
 {% set args = {post_type: 'post', posts_per_page: 10, cat: 3} %}
 {{ include( 'custom-query' ) }}
 ```
 
 In another view, you can show posts in a category ID 5:
 
-```
+```php
 {% set args = {post_type: 'post', posts_per_page: 10, cat: 5} %}
 {{ include( 'custom-query' ) }}
 ```
 
 You can even do more with the include syntax like conditionally including a template part:
 
-```
+```php
 {% include ajax ? 'ajax' : 'not-ajax' %}
 ```
 
-(this syntax is available only for *include* tag, not *include* function)
+(this syntax is available only for `include` tag, not `include` function)
 
 or include a template inside a for loop to render each item in the loop:
 
-```
+```php
 {% for post in posts %}
     {{ include( 'post' ) }}
 {% endfor %}
