@@ -22,7 +22,7 @@ You can follow [this tutorial](https://docs.metabox.io//tutorials/create-user-pr
 :::
 
 
-### Step 1: Allow guest users to register an account
+### 1. Allowing guest users to register an account
 
 Go to the **Settings** menu > **General**, then check the box **Anyone can register** in the **Membership** item.
 
@@ -36,7 +36,7 @@ Now, go to the default login page of WordPress (URL: yourdomain.com/wp-login), y
 
 When someone clicks on the text **Register**, they will be redirected to the registration page.
 
-### Step 2: Create fields for the user profile
+### 2. Creating fields for the user profile
 
 Firstly, go to the **Meta Box > Custom fields > Add New** to create a new field group.
 
@@ -52,7 +52,7 @@ After creating all the essential fields, go to the **Settings** tab > choose **L
 
 ![Set location for the created fields](https://i.imgur.com/bwn3SSy.png)
 
-### Step 3: Create the My Account page on the frontend
+### 3. Creating the My Account page on the frontend
 
 #### Creating a template for the page
 
@@ -83,7 +83,7 @@ In the right sidebar of the page editor, go to **Page Attributes > Template** > 
 
 ![Create a new page for my accpunt](https://i.imgur.com/ZFnaDSz.png)
 
-#### Display content and fields on the page
+#### Displaying content and fields on the page
 
 Open the file `page-account.php` once again, add the `the_content()` function right after `get_header()` and before `get_footer()`.
 
@@ -147,7 +147,7 @@ So, you’ve finished the page to manage the user profile in the frontend alread
 
 We need a submit form for users on the frontend to submit a post.
 
-### Step 1: Create custom fields
+### 1. Creating custom fields
 
 As the way of creating a field group for the user profile, I created a new field group as follows:
 
@@ -163,7 +163,7 @@ When you go to **Meta Box > Custom Fields**, you’ll see the shortcode of the f
 
 This shortcode will be used in the next step.
 
-### Step 2: Create a page for post submission
+### 2. Creating a page for post submission
 
 Now, create a new page and then paste the above shortcode like this:
 
@@ -173,7 +173,7 @@ Save it, and you’ll see the post submission page on the frontend.
 
 ![The post submisson page on the frontend](https://i.imgur.com/rjrezCX.png)
 
-### Step 3: Set a layout and login requirement for the page
+### 3. Setting a layout and login requirement for the page
 
 The post submission page has the same layout and requirements that users must log in before accessing as the My Account page. So, I do the same actions on this page as on the My Account page, as follows.
 
@@ -228,7 +228,7 @@ Use the Bootstrap to create a Table for post listing like this:
 
 We will use some codes and available functions to do some actions like getting the current user information, getting all the posts which submit by the current user, and inserting URL of the edit page to the pending post
 
-### Step 1: Get the current user information
+### 1. Getting the current user information
 
 Add the `wp_get_current_user()` function to the page-account.php file:
 
@@ -247,7 +247,7 @@ In there:
 
 You can add something else to get other information about the current user. It’s up to you.
 
-### Step 2: Get the list of the submitted posts by the current user
+### 2. Getting the list of the submitted posts by the current user
 
 We add the following function to the `page-account.php` file:
 
@@ -276,7 +276,7 @@ Here is the list of submitted posts on the My Account page. It has both the admi
 
 The code for the above steps is [here](https://gist.github.com/rilwis/614adf5a501ec571f63f116686183026), where you can find more details.
 
-### Step 3: Show url of the edit page to each post in the list
+### 3. Showing url of the edit page to each post in the list
 
 At this point, guest authors can’t edit the post content, although they can see it on the list. The reason is that there is no link to go to the post editor’s page.
 
