@@ -16,11 +16,11 @@ In addition to using the **Meta Box Core Plugin**, make sure you already have [M
 
 In this article, `list.js` and `script.js` are the **Library** and the file I use to create JS for the search box, respectively.
 
-## Step 1: Declare the Library
+## 1. Declaring the Library
 
 First, I need to declare a third-party library named `list.js` by adding the following code to `functions.php`:
 
-```js
+```php
 function justread_add_list_js_library() {
 	wp_enqueue_script( 'listjs', '//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js' );
 	wp_enqueue_script( 'justread-custom-scripts', get_stylesheet_directory_uri() . '/js/scripts.js' );
@@ -33,7 +33,7 @@ add_filter( 'rwmb_enqueue_scripts', 'justread_add_list_js_library' );
 * In the above code, we declared two files that are `list.js` - the library file and `scripts.js` - the file used to perform the search function.
 * `justread` is the theme that  I’m using (you can download this theme [here](https://gretathemes.com/wordpress-themes/justread/) for free).
 
-## Step 2: Create options and the search box
+## 2. Creating options and the search box
 
 Go to **Meta Box > Custom Fields > Add New**.
 
@@ -63,7 +63,7 @@ Now, try editing any post. When you drag it down, the choices appear as follows:
 
 However, the search box is still not working, and you have not added pagination. As a result, move to step 3.
 
-## Step 3: Create the pagination and the search function
+## 3. Creating the pagination and the search function
 
 To do it, you need to add the following code to the `scripts.js` file declared in step 1:
 ```js
