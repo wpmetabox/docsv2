@@ -32,7 +32,7 @@ To do it, we need Meta Box and its extensions:
 * <a href="https://elementor.com/">Elementor</a> (Pro version): to built the page for displaying team members’ information;
 * <a href="https://wordpress.org/plugins/ele-custom-skin/">Elementor Custom Skin</a>: to have the Loop template to display the list of posts which are members.
 
-## Step 1: Create a new post type
+## 1. Creating a new post type
 
 In the **Admin Dashboard**, go to **Meta Box** &gt; **Post Types**, then create a new post type for members.
 
@@ -42,7 +42,7 @@ After publishing the new post types, you will see a new item in your menu.
 
 ![Add the post type's name in the box](https://i.imgur.com/LECK97n.png)
 
-## Step 2: Create custom fields for the post type
+## 2. Creating custom fields for the post type
 
 Go to **Meta Box** &gt; **Custom Fields** to create a new field group.
 
@@ -62,7 +62,7 @@ Now, go to the post editor in Team Members post type, you will see the fields. L
 
 ![Add member's information](https://i.imgur.com/CeHd3gg.png)
 
-## Step 3: Create a template for the name cards
+## 3. Creating a template for the name cards
 
 Go to **Templates** &gt; **Saved Templates** &gt; **Add New.**
 
@@ -118,7 +118,7 @@ I made an example as following:
 
 ![all the information of the team member has been obtained](https://i.imgur.com/w0WufAO.gif)
 
-## Step 4: Display all the members’ name cards on the page
+## 4. Displaying all the members’ name cards on the page
 
 Go to **Pages** &gt; **Add New** to create a Team Members page. Then, **edit it with Elementor**.
 
