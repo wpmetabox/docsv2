@@ -18,7 +18,7 @@ So, these are the tools we need:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to choose publish the users’ information or not;
 * [DataTables](https://datatables.net/): is used to choose the number of users to display on the page, and create a search function for the users list.
 
-## Step 1: Create custom fields
+## 1. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group.
 
@@ -42,7 +42,7 @@ After publishing, you will see the created field on the user profile page.
 
 ![Created fields on the user profile page](https://i.imgur.com/aTn0Sdc.png)
 
-## Step 2: Create a template
+## 2. Creating a template
 
 Go to the theme directory, create a new file named `users-listing-page.php`. Then, add the following code to it:
 ```
@@ -81,7 +81,7 @@ Go to the theme directory, create a new file named `users-listing-page.php`. The
 ```
 Then, you will have a template named **Users Listing Page**.
 
-## Step 3: Create a new page
+## 3. Creating a new page
 
 Go to **Pages > Add New** to create a new page.
 
@@ -89,7 +89,7 @@ Look at the **Page Attributes** section, you can see the **Template** tab, choos
 
 ![Choose Users Listing Page option](https://i.imgur.com/VY2PMQg.png)
 
-## Step 5: Display users list
+## 4. Displaying users list
 
 Open the `users-listing-page.php` file that we created previously. Then, use the following function to get users’ data only when the value of the **Publish or not?** field is **Yes**;
 
@@ -125,7 +125,7 @@ You will see the user list display like this on the frontend:
 
 ![The user list display on the frontend](https://i.imgur.com/k5WVTb4.png)
 
-## Step 5: Add search box
+## 5. Adding search box
 
 If you have more than 100 users on your sites, you should separate the users information into pages. In a different way,with the **DataTables library**, you can allow the viewer to choose how many users they want to see on the page and search for any user.
 
