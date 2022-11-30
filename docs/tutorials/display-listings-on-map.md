@@ -15,13 +15,13 @@ Also, we’ll use some of Meta Box’s extensions:
 
 In addition, I use the [Leaflet](https://leafletjs.com/) library, a very powerful JavaScript library to render Open Street Maps.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types** to create a new post type for your restaurants.
 
 ![Create a new custom post type](https://i.imgur.com/B3a64Yj.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Each restaurant will have some information such as: Title, Description, Address Location, Marker icon for the map. Title and Description are used for the post’s default information. 
 Go to **Meta Box > Custom Fields** and create fields for other information.
@@ -40,7 +40,7 @@ You can add some restaurants along with the information, so that we have some it
 
 ![Add some information](https://i.imgur.com/EHBQJSo.png)
 
-## Step 3: Create a page template
+## 3. Creating a page template
 
 You can use the archive template for displaying all restaurants on a map. But in this tutorial, I'm going to use a page template for simplicity.
 
@@ -63,7 +63,7 @@ Now go to **Pages > Add New** and create a new page. Select List (which is the n
 
 ![Create a new page](https://i.imgur.com/Ryo4eec.png)
 
-## Step 4: Enqueue JavaScript file with location data
+## 4. Enqueuing JavaScript file with location data
 
 I'll use JavaScript to render the map and enqueue with the wp_enqueue_script function.
 Enter the following code in your theme's `functions.php` file:
@@ -100,7 +100,7 @@ Explanation:
         wp_enqueue_script( 'list', get_parent_theme_file_uri( 'js/list.js' ), ['jquery', 'leaflet'], '1.0', true );
         ```
 
-This code is to enqueue a custom JavaScript file to render our map. The file is put under the js folder and is named list.js, which we will create in the next step.
+This code is to enqueue a custom JavaScript file to render our map. The file is put under the js folder and is named `list.js`, which we will create in the next step.
 ```
         $locations = [];
         $query = new WP_Query( [
@@ -123,7 +123,7 @@ This code is to send the restaurants' data to JavaScript via `wp_localize_script
 
 Note that: I'm using the `rwmb_get_value` helper function to get location data for each restaurant. This helper function returns an array of latitude and longitude, which is very useful and ready to use in the front end. See more information about this function [here](https://docs.metabox.io/rwmb-get-value/).
 
-## Step 5: Render the map with javascript
+## 5. Rendering the map with javascript
 
 Create a new file `list.js` in the js folder in your theme and enter the following code:
 ```
