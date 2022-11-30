@@ -49,9 +49,9 @@ Here I just add some basic fields like in the above image. Most of those fields 
 <table>
 <tbody>
 <tr>
-<td>Field</td>
-<td>Type of field</td>
-<td>Content</td>
+<td> Field </td>
+<td> Type of field </td>
+<td> Content </td>
 </tr>
 <tr>
 <td>1. Personal Information</td>
@@ -111,9 +111,9 @@ Here is the settings for columns of each field:
 <table>
 <tbody>
 <tr>
-<td>**Field**</td>
-<td>**Field type**</td>
-<td>**Columns**</td>
+<td> Field </td>
+<td> Field type </td>
+<td> Columns </td>
 </tr>
 <tr>
 <td>1. Personal Information</td>
