@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Adding testimonials to the homepage will be easier when you use the MB Testimonials extension. It’s a ready-to-use solution from Meta Box.
 
-## Video Version
+## Video version
 
 <LiteYouTubeEmbed id='gNjQwRfI3kY' />
 
@@ -23,7 +23,7 @@ Keep in mind that you have to install the Meta Box framework from [wordpress.org
 
 After installing the MB Testimonials extension, you will see that a **Testimonials** menu also be auto-created.
 
-## 1. Add content to the testimonials
+## 1. Adding content to the testimonials
 
 Go to the **Testimonials** menu and click **Add New** to create a new post.
 
@@ -41,7 +41,7 @@ Click **Add more** to add other testimonials, or click **Remove** to delete test
 
 Next, let’s customize testimonials’ display and layout.
 
-## 2. Customize testimonials’ layout
+## 2. Customizing testimonials’ layout
 
 Scrolling down to the bottom, you will see the **Display** tab which has 7 built-in templates for testimonials. The templates are illustrated in the list below:
 
@@ -59,7 +59,7 @@ In the **Styling** tab, you can customize other parameters of testimonials, for 
 
 After adding and customizing, just click **Publish** to get your work done.
 
-## 3. Display the testimonials
+## 3. Displaying the testimonials
 
 Once you click **Publish**, the plugin will give you a shortcode of the Testimonials post you’ve just made.
 
@@ -69,8 +69,8 @@ Use this shortcode to display the testimonials at any position that you want.
 
 For example, I inserted my shortcode to a new page:
 
-And this is the result that I got on the front end:
-
 ![the result in the front end](https://i.imgur.com/3BXBVOR.png)
+
+And this is the result that I got on the front end:
 
 ![The final result](https://i.imgur.com/dWho03P.gif)
