@@ -101,7 +101,7 @@ Now, we need to write these 2 functions:
 * `estar_child_admin_records_get_companies()`: to take the list of posts
 * `estar_child_move_data_company()`: to move data for each post
 
-```
+```php
 function estar_child_admin_records_get_companies( $paged = 1 ) {
     $args = [
         'post_type' =&gt; 'companies',
