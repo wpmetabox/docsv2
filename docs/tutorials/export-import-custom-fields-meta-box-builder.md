@@ -31,7 +31,7 @@ After activating two plugins, you’ll see a new **Meta Box** menu as below:
 
 ## Creating custom fields
 
-On the original site, let’s create some fields. We have a tutorial on creating custom fields with Meta Box Builder, please take a look for more detail here.
+On the original site, let’s create some fields. We have a tutorial on creating custom fields with Meta Box Builder, please take a look for more detail [here](https://docs.metabox.io/tutorials/create-custom-fields/).
 
 Here we’ll create a field group named **Author** and export/import its settings to other sites for example.
 
