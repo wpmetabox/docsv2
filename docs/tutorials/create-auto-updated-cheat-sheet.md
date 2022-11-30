@@ -25,7 +25,7 @@ You need to install the following tools:
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): display custom fields on the frontend to help users submit deals easier;
 * [MB Views](https://metabox.io/plugins/mb-views/): display values of the custom fields (deals’ information) on the post.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 We’ll create a post type for the deals. Each of the deals will be a post of this post type.
 
@@ -33,7 +33,7 @@ Go to **Meta Box > Post Types > Add New**.
 
 ![Create a new custom post type](https://i.imgur.com/zg4UN4f.png)
 
-## Step 2: Create fields for the submission form
+## 2. Creating fields for the submission form
 
 Users will have a form to submit a deal, so we’ll create custom fields for it. Each field will be used to import a type of deal’s information.
 
@@ -94,7 +94,7 @@ In the post editor, you’ll see all the created custom fields.
 
 If you are in charge of importing data, you can import data directly from the backend. Otherwise, if you want other people to import data into your cheat sheet, you need to bring these fields to the frontend.
 
-## Step 3: Display the submission form on the frontend
+## 3. Displaying the submission form on the frontend
 
 Now, we need **MB Frontend Submission** to display the custom fields of this form to the frontend. It’ll automatically generate a shortcode for the field group like this:
 
@@ -124,7 +124,7 @@ And the custom fields of my submission form will show up on the frontend like th
 
 If you want to add more things to the submission form, you can add other attributes to the shortcode. You can see a list of addable attributes and detailed instructions [here](https://docs.metabox.io/extensions/mb-frontend-submission/#shortcode-attributes).
 
-## Step 4: Style the submission form
+## 4. Styling the submission form
 
 Go to **Customizer > Additional CSS** and add some CSS:
 
@@ -167,7 +167,7 @@ My submission form will turn to this appearance:
 
 ![The created submission form](https://i.imgur.com/yGTzWlD.png)
 
-## Step 5: Display data into a table on frontend
+## 5. Displaying data into a table on frontend
 
 Go to **Meta Box > Views > Add New**, and add these codes:
 
