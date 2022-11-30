@@ -4,7 +4,7 @@ title: Adding star rating fields
 
 Meta Box hasn’t provided any **field type for star rating** yet. If you want to have one, you should create it on your own by following this tutorial. **This will be a new field type** which will stand by current 40+ field types from Meta Box.
 
-## Step 1: Create a plugin to create a new field type
+## 1. Creating a plugin to create a new field type
 
 I named this new plugin **MB Rating Field** so go to the **wp-content** folder and create the files with the directory structure as below:
 
@@ -35,7 +35,7 @@ Then, you will see the new plugin in the list of installed plugins in the **Dash
 
 ![The new plugin in the list of installed plugins](https://i.imgur.com/F1XriLc.png)
 
-## Step 2: Create a new field type as star rating
+## 2. Creating a new field type as star rating
 
 In the `rating.php` file, add some code to add the star ratings field type.
 
@@ -54,13 +54,13 @@ function prefix_load_rating_type () {
     require __DIR__. '/rating.php';
 }
 ```
-## Step 3: Create options for the field type
+## 3. Creating options for the field type
 
 Once you have the rating field, you need to create options that allow website owners to score stars (from 0.5 to 5 stars).
 
 This rating class will inherit all the methods of the `RWMB_Field` class. In this rating field, we must specify the content of the html method to output the HTML in the backend.
 
-Do it by adding the following code to the rating.php file.
+Do it by adding the following code to the `rating.php` file.
 
 ```
 public static function html( $meta, $field ) {
@@ -126,14 +126,14 @@ Just add this code to the `css/admin.css` file.
     color: unset;
 }
 ```
-To get the style in admin, we use the function admin_enqueue_scripts () to enqueue. Please enqueue in the `rating.php` file as follows:
+To get the style in admin, we use the function `admin_enqueue_scripts () to enqueue`. Please enqueue in the `rating.php` file as follows:
 ```
 public static function admin_enqueue_scripts() {
     wp_enqueue_style( 'rwmb-rating', plugin_dir_url( __FILE__ ) . '/css/admin.css', [], '1.0.0' );
 }
 ```
 
-## Step 4: Create a field in type of star rating
+## 4. Creating a field in type of star rating
 
 Now, we can create custom fields with rating field type using the newly created **MB Star Rating** plugin!
 
@@ -173,14 +173,15 @@ After that, you will see the created custom field display in the post editor.
 
 ![Newly created field display in the post editor](https://i.imgur.com/Uxg005Y.png)
 
-## Step 5: Display the value from the star rating fields
+## 5. Displaying the value from the star rating fields
 
 We have created a custom field to add star ratings to a post / page in the backend. You can use the WordPress `wp_star_rating ()` function to display ratings on the frontend for readers to view.
 
-In the `rating.php` file, you use the format_single_value () method by adding this code:
-public static function `format_single_value( $field, $value, $args, $post_id ) {`
+In the `rating.php` file, you use the `format_single_value ()` method by adding this code:
+
 ```
-  require_once( ABSPATH . 'wp-admin/includes/template.php' );
+public static function format_single_value( $field, $value, $args, $post_id ) {
+	require_once( ABSPATH . 'wp-admin/includes/template.php' );
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'frontend', plugin_dir_url(__FILE__) . '/css/frontend.css' );
 	$starrating = rwmb_get_value( $field['id'] );
@@ -190,9 +191,10 @@ public static function `format_single_value( $field, $value, $args, $post_id ) {
 	);
 	wp_star_rating( $args );
 }
+
 ```
 
-Note:To use the `wp_star_rating()` function, you need to require the `wp-admin/includes/template.php` file as above.
+**Note**: To use the `wp_star_rating()` function, you need to require the `wp-admin/includes/template.php` file as above.
 
 The above code will output the following HTML on the frontend:
 ```
