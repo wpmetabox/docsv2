@@ -81,7 +81,7 @@ Go to **Meta Box > Views > Add New**, and create a new view.
 
 In the Template tab, I used this code:
 
-```
+```php
 {% set args = {taxonomy: 'portfolio-type',hide_empty: false} %}
 {% set portfolios = mb.get_terms( args ) %}
 <div class="portfolio container">
@@ -211,7 +211,7 @@ Go to **Manage > Stylesheets > Add Stylesheet** and add code:
 
 Here is my example CSS that I showed at the beginning of this post:
 
-```
+```css
 .port-thumbnail {
     position: relative;
     height: 100vh;
