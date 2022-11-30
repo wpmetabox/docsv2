@@ -16,7 +16,7 @@ In addition to using the <a href="https://metabox.io/">Meta Box Core Plugin</a>,
 
 Besides these above plugins, remember to install all the Meta Box extensions that correspond to the migrated features. For example, if you have fields in a group created by ACF, you have to enable **Meta Box Group** to migrate the group field data. Or, in ACF, when you set a location to display a field group in taxonomy, you have to activate the **MB Term Meta** extension in Meta Box.
 
-## **Step 1: Check and backup the data**
+## 1. Checking and backing up the data
 
 **Note**: Remember to back up your data before migrating to avoid unexpected errors.
 
@@ -36,7 +36,7 @@ As you can see here in the **Plugin** menu, the ACF has already been activated.
 
 ![Activate ACF plugin](https://i.imgur.com/h36TWSK.png)
 
-## Step 2: Install Meta Box extensions
+## 2. Installing Meta Box extensions
 
 As I said before, we need to install extensions that correspond to the features that you used with ACF.
 
@@ -47,7 +47,7 @@ In this case, similar to all the above features in **ACF**, I will use these ext
 
 ![Install extensions](https://i.imgur.com/0DtTi2R.png)
 
-## Step 3: Migrate the data
+## 3. Migrating the data
 
 Go to the **Meta Box** menu &gt; **ACF Migration** &gt; Click the **Migrate** button.
 
@@ -64,7 +64,7 @@ The **AFC** menu will automatically disappear when the migration process finishe
 :::
 
 
-## Step 4: Recheck the data after migration
+## 4. Rechecking the data after migration
 
 Now, you can see that the fields are displayed the same as when you use **ACF**. All the features, like group and conditional logic, also work well.
 
