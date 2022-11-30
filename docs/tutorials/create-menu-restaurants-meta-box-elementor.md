@@ -25,7 +25,7 @@ For this practice, we need these tools:
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display custom fields created by Meta Box plugin in the Elementor's dynamic tags.
 * Make sure you have **Elementor Pro** on your site.
 
-## Step 1: Create a custom post type
+## 1. Creating a custom post type
 
 Go to **Meta Box > Post Types > Add New**.
 
@@ -35,7 +35,7 @@ After publishing, we’ll have a new menu named **Restaurants**.
 
 ![The post type appear as a menu after creating](https://i.imgur.com/WfnjLM7.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create fields. I’ll create them with the structure like this:
 <table>
@@ -102,7 +102,7 @@ Then, you can see all the created fields in the post editor.
 
  Just fill in the dishes’ details.
 
-## Step 3: Create a skin
+## 3. Creating a skin
 
 To style the menus later, you should create a skin to display the dishes information.
 
@@ -140,7 +140,7 @@ For the image of the dish, add an **Image** element. Also use the Dynamic Tags a
 
 As you can see, it’ll automatically get and display the information saved in the first group (means the 1st dish) only in the preview of the skin.
 
-## Step 4: Create a template for the menu
+## 4. Creating a template for the menu
 
 Back to the **Theme Builder > Single Post** to create a new template for post.
 
@@ -164,7 +164,7 @@ For styling, in the **Skin** section, choose the skin that you’ve created in t
 
 ![Choose the created skin to style](https://i.imgur.com/sAe04lk.png)
 
-## Step 5: Style the menu
+## 5. Styling the menu
 
 To have more styling, you can add some decoration for the template as I did.
 
