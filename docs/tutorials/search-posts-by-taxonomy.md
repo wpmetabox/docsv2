@@ -8,7 +8,7 @@ Here is an example of this practice with hotels filtered by location:
 
 ![Example of seraching posts by taxonomy](https://imgur.com/V5kT58q.png)
 
-## Before Getting Started
+## Before getting started
 
 In addition to using the **Meta Box Core Plugin**, ensure you already have the **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**. It is a free extension of Meta Box and is used to create custom post types and custom taxonomies.
 
@@ -48,9 +48,9 @@ First, go to the **Hotel** post type’s archive page (http://domain.com/post-ty
 
 At this moment, there’s no hotel search box on the page. So, I will add a location box.
 
-Create a file named `archive-hotel.php` (the file name is in the form of archive- [post-type-name].php) in the theme folder and add this code:
+Create a file named `archive-hotel.php` (the file name is in the form of archive- `[post-type-name].php`) in the theme folder and add this code:
 
-```
+```php
 <div class="filter-hotel">
 <p>Search Hotel</p>
     <input class="filter-input" id="location" type="" name="" placeholder="Location">
@@ -90,8 +90,8 @@ add_action( 'wp_enqueue_scripts', 'justread_custom_scripts' );
 
 Explanation: 
 
-* `'wp_enqueue_scripts'`: it’s the hook used to declare the filter-hotel.js file that I‘ll create later;
-* `wp_localize_script ()`: a function that helps transfer the value of the variable 'ajax_url' from the functions.php file to the filter-hotel.js file.
+* `'wp_enqueue_scripts'`: it’s the hook used to declare the `filter-hotel.js` file that I‘ll create later;
+* `wp_localize_script ()`: a function that helps transfer the value of the variable `ajax_url` from the `functions.php` file to the `filter-hotel.js` file.
  
 Next, add the following code to `functions.php` to return the custom post type data as JSON when someone clicks the **Search** button.
 
@@ -135,9 +135,10 @@ Explanation:
 
 * `'hotel'`: the slug of the custom post type that we created in step 1;
 * `'location'`: the ID of the custom taxonomy that we created in step 1 for the location;
-* `'wp_ajax_justread_filter_hotel' and 'wp_ajax_nopriv_justread_filter_hotel`': they’re two hooks to perform ajax. They’re named according to the following rules: wp_ajax_my_action and wp_ajax_nopriv_my_action. In this example, my_action is justread_filter_hotel.
+* `'wp_ajax_justread_filter_hotel' and 'wp_ajax_nopriv_justread_filter_hotel`': they’re two hooks to perform ajax. They’re named according to the following rules: `wp_ajax_my_action` and `wp_ajax_nopriv_my_action`. In this example, `my_action` is `justread_filter_hotel`.
 
 Also, in the theme folder, let’s create another file named `filter-hotel.js` with the following content: 
+
 ```js
 jQuery( function ( $ ) {
     function filterHotel() {
