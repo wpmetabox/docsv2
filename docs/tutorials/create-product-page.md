@@ -16,7 +16,7 @@ We need to install the following tools:
 * **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/?swcfpc=1)**: to have an UI in the back-end to create custom fields for the product.
 * **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/?swcfpc=1)**: to create a custom post type for the product.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 In the admin dashboard, go to **Meta Box > Post Types > New post type**.
 
@@ -26,7 +26,7 @@ After publishing, we’ll have a new menu named **Car Rentals** in the Admin Men
 
 ![A new nemu appears in the Menu](https://i.imgur.com/CNMPsat.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create fields. Here is the fields that I created:
 
@@ -40,13 +40,13 @@ Back to the post editor, the custom fields will be there.
 
 ![The custom fields in the post editor](https://i.imgur.com/8zhAekK.gif)
 
-## Step 3: Display the product information on the page
+## 3. Displaying the product information on the page
 
 First, create a file named single `[$custom_post_type_slug].php` and put it into your theme’s folder. For car rental, the file will be `single-car-rental.php`. This file means that your website will display all the posts which have the post type `car-rental`.
 
 Open that file, and get value from each custom field with the code below:
 
-### Get the value of the text, number, or select fields:
+### Getting the value of the text, number, or select fields:
 
 To get value from these types of field, use this function:
 
@@ -65,7 +65,7 @@ $price = rwmb_meta( 'price' );
 echo $price;
 ?>
 ```
-### Get value of image advanced fields:
+### Getting value of image advanced fields:
 
 We’ll use this function:
 
