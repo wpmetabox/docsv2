@@ -14,7 +14,7 @@ In addition to using the [Meta Box](https://metabox.io), make sure you already h
 
 Also, to make a dynamic favicon, you must do some things with the theme. I'm making this tutorial with the help of [Justread from Gretathemes](https://gretathemes.com/wordpress-themes/justread/). It's free and fast, so you could give it a try.
 
-## Step 1: Create a new post type
+## 1. Creating a new post type
 
 Go to **Meta Box > Custom Post Type > New Post Type**.
 
@@ -24,7 +24,7 @@ Then, name it and publish.
 
 ![Name the created post type](https://i.imgur.com/oOYhUT4.png)
 
-## Step 2: Add a new custom field
+## 2. Adding a new custom field
 
 Go to **Meta Box** menu > **Custom Fields > Add New**.
 
@@ -42,7 +42,7 @@ Go back to the edit page of the product post. You will see the field and can add
 
 ![The fiedls will be shown](https://i.imgur.com/faszUxs.png)
 
-## Step 3: Set the field’s value to be favicon
+## 3. Setting the field’s value to be favicon
 
 The current favicon of your product page is now the site’s one. Thus, we will replace it with the custom field’s value.
 
