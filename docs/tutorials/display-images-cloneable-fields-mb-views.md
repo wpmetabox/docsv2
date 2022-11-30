@@ -137,7 +137,7 @@ If you have any further information for the brand, such as the **Brand Name** th
 
 If you want to style this section, add some **div** tags. I also did it and here is all the code.
 
-```
+```php
 <div class="brand-group">
 {% for clone in site.brands.brand_group %}
     <div class="brand-img">
