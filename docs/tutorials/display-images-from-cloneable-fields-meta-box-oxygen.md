@@ -27,7 +27,7 @@ You can install these extensions individually or use **Meta Box AIO** to have th
 
 The last one is [Oxygen](https://oxygenbuilder.com/). You should use the 3.9 version or higher, which has native integration with Meta Box.
 
-## Step 1: Create a settings page
+## 1. Creating a settings page
 
 With **Custom Post Types**, information from each brand will be saved in a separate post. But with a **Settings Page**, all of them will be on this page only.
 
@@ -39,7 +39,7 @@ After publishing, a new menu named **Brands** appears.
 
 ![The new Settings Page named Brands appears](https://i.imgur.com/tq05p6M.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Let’s create custom fields to save images and other information for the created settings page.
 
@@ -95,7 +95,7 @@ Go back to the settings page, and you’ll see all of the newly created custom f
 
 Now, let’s fill in the information in the fields and move to the next step.
 
-## Step 3: Display images from the fields
+## 3. Displaying images from the fields
 
 To add a section for displaying brands’ information, go to the Edit with Oxygen section of the page you want.
 
@@ -169,7 +169,7 @@ Now, you can see all of the brand logos, along with their names, displayed in th
 
 But it hasn’t looked good yet. Thus, we’ll need some CSS to make it look better.
 
-## Step 4: Style the section using CSS
+## 4. Styling the section using CSS
 
 From the **Primary** tab in the page editor by Oxygen, choose **CSS** to style the section.
 
