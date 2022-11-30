@@ -13,11 +13,13 @@ Here is a screenshot of a custom Gutenberg block (hero area) that's created usin
 
 The preview of the block is displayed in the main content area while the block configuration is displayed on the right. This allows you to edit the block content and live-preview the block in real-time. Later, you can also change where the block settings are displayed (on the sidebar or right in the main content area).
 
-## Creating A Gutenberg Block
+## Block registration
 
-(Scroll down to see a video tutorial and the code example).
+You can create a custom block for Gutenberg with [Meta Box Builder](/extensions/meta-box-builder/). The plugin provides you the UI to create blocks easily. This is the video on doing that:
 
-Creating a Gutenberg block with MB Blocks is similar to creating a normal meta box. There are just a few different settings.
+<LiteYouTubeEmbed id='v3ke1DBlWuk' />
+
+Below is the process of creating custom blocks **with code**. Creating a Gutenberg block with MB Blocks is similar to creating a normal meta box. There are just a few different settings.
 
 Assuming we're creating a hero area block (like the screenshot above). Open your theme's `functions.php` file (or your plugin's PHP file) and add the following code:
 
@@ -53,34 +55,9 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 				'name' => 'Title',
 			],
 			[
-				'type' => 'text',
-				'id'   => 'subtitle',
-				'name' => 'Subtitle',
-			],
-			[
 				'type' => 'textarea',
 				'id'   => 'content',
 				'name' => 'Content',
-			],
-			[
-				'type' => 'single_image',
-				'id'   => 'signature',
-				'name' => 'Signature',
-			],
-			[
-				'type' => 'text',
-				'id'   => 'button_text',
-				'name' => 'Button Text',
-			],
-			[
-				'type' => 'text',
-				'id'   => 'button_url',
-				'name' => 'Button URL',
-			],
-			[
-				'type' => 'color',
-				'id'   => 'background_color',
-				'name' => 'Background Color',
 			],
 		],
 	];
@@ -105,6 +82,10 @@ The block ID. Must be unique.
 A block ID can only contain lowercase alphanumeric characters and dashes, and must begin with a letter. It doesn't accept underscores, i.e. `my_block` won't work, but `my-block` will work.
 
 :::
+
+### `version`
+
+The block version. This version number is also used to enqueue CSS and Javascript file to avoid browser caching.
 
 ### `icon`
 
@@ -457,7 +438,7 @@ If you want to save the block fields into custom tables, you need to activate th
 
 See [MB Custom Table documentation](/extensions/mb-custom-table/) for more details.
 
-## Adding fields to blocks
+## Block fields
 
 Each block can have unlimited fields. Adding fields to blocks is similar to adding fields to a custom meta box. All you need to do is specify the fields in the parameter `fields` from the block settings.
 
@@ -555,11 +536,13 @@ As you can see the InnerBlocks on the left, where the usual placeholder is displ
 
 ![inner blocks in action](https://i.imgur.com/GckMMnA.png)
 
-### Note:
+:::tip
 
 I use [Wayfinder](https://wordpress.org/plugins/wayfinder/) plugin to show the block outline, which makes us easier to see which blocks are being edited.
 
-`<InnerBlocks />` must be wrapped in a `<div>` tag to avoid breaking the DOM nodes in the Block Editor. Get more details [here](https://github.com/WordPress/gutenberg/blob/ab1380cd41d261c91d45a0299dc4af527219e089/packages/block-editor/src/components/inner-blocks/README.md).
+:::
+
+`<InnerBlocks />` must be wrapped in a `<div>` tag to avoid breaking the DOM nodes in the Block Editor..
 
 ```html
 <div class="my-inner-blocks">
@@ -700,9 +683,11 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 Sometimes you want to load default blocks when creating a new post. Block templates allow specifying a default initial state for an editor session. Use the argument `template` when [registering the post type](/custom-post-types/):
 
-`'template'              => [
+```php
+'template'              => [
     ['meta-box/{$block_id}']
-]`
+]
+```
 
 ## Block Data
 
