@@ -29,7 +29,7 @@ Here are some tools we need:
 * **[MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/)** (optional): to display the position of each members in the admin area;
 * **[Oxygen](https://oxygenbuilder.com/)**: to build the page. You should use the 3.9 version or upper to have integration with Meta Box.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type** to create a Team Members post type.
 
@@ -39,7 +39,7 @@ Then, you will see a post type in the Admin Dashboard.
 
 ![A post type in the Admin Dashboard](https://i.imgur.com/pPBwDKq.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create a new field group for the member’s information.
 
@@ -55,7 +55,7 @@ Now, go to the post editor in Team Members post type, you will see the fields. L
 
 ![the custom fields display in the post editor](https://i.imgur.com/CeHd3gg.png)
 
-## Step 3: Create a template for the page
+## 3. Creating a template for the page
 
 In the Oxygen, create a new template and choose **inactive - Default Page** to set it to inherit this style.
 
@@ -127,7 +127,7 @@ So, on the Meet the Team page, you can see all the information about the members
 
 Let’s style this page.
 
-## Step 4: Style the page
+## 4. Styling the page
 
 To style this page, you can choose each component and change the settings.
 
