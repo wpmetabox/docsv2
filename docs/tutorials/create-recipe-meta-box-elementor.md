@@ -30,7 +30,7 @@ They’re all in the **Meta Box AIO**. If you haven’t had it, you can download
 
 Finally, make sure you have **Elementor Pro** on your site.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box** > **Post Types** > **Add New** to create a new post type.
 
@@ -42,7 +42,7 @@ After publishing, we’ll have a menu named Recipe in the Admin Dashboard.
 
 Let’s create custom fields in the next step.
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box** > **Custom Fields** to create fields. This is the structure of the fields that I created:
 
@@ -122,7 +122,7 @@ Then, you can easily see all the created fields in the post editor. Just fill in
 
 ![newly created custom fields](https://i.imgur.com/I1EZRLQ.gif)
 
-## Step 3: Create a skin
+## 3. Creating a skin
 
 In this case, we have a cloneable group for the instruction information. If you get the data as usual, all of them will be displayed with the same style. But, I want the data from each field in that group to have its own style. So, I'll create a skin for them.
 
@@ -156,7 +156,7 @@ Now, both the step and step’s description have been obtained already. It’ll 
 
 ![style the elements on your own](https://i.imgur.com/vl1YiRp.png)
 
-## Step 4: Create a template for the recipe page
+## 4. Creating a template for the recipe page
 
 Back to the **Theme Builder > Single Post** to create a new template for post.
 
