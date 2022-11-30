@@ -251,7 +251,7 @@ You can add something else to get other information about the current user. It�
 
 We add the following function to the `page-account.php` file:
 
-```
+```php
 $args_post_by_author = array(
 'author'        => $user_id,
 'posts_per_page'=> -1,
@@ -284,7 +284,7 @@ With the support from [MB Frontend Submission](https://metabox.io/plugins/mb-fro
 
 **For example**:
 
-http://yourdomain.com/your-submission-page-slug/?rwmb_frontend_field_post_id=316
+*http://yourdomain.com/your-submission-page-slug/?rwmb_frontend_field_post_id=316*
 
 ![Example](https://i.imgur.com/URhnTe0.png)
 
@@ -294,20 +294,20 @@ Thus, it’s so risky and out of control because everyone can edit any post, no 
 
 Use the `$_GET[‘param’]` function to get the post information (in this case, I got post ID) and assign its value to `$post_id`:
 
-```
+```php
 $post_id = $_GET['rwmb_frontend_field_post_id'];
 ```
 
 Then, export name of author and post status by this `post_id`:
 
-```
+```php
 $author_id = get_post_field ('post_author', $post_id);
 $post_status = get_post_field ('post_status', $post_id);
 ```
 
 Finally, get the ID of the current user:
 
-```
+```php
 $current_user = wp_get_current_user();
 $user_id = $current_user->ID;
 ```
@@ -319,7 +319,7 @@ Since we had all the above values, we will check whether they fit together:
 
 Guest authors can access the edit page only when both of the above conditions are satisfied. We use the *IF ELSE* command to check these conditions.
 
-```
+```php
 if ($_GET['rwmb_frontend_field_post_id']) {
      echo ‘Yes’;
 } else {
@@ -342,7 +342,7 @@ Back to the `page-account.php` file, add a column to the table of the post list.
 
 :::caution
 
-268 is the ID of my post-submission page. So, you must get the ID of yours and replace this number with it.
+268 is the ID of my `post-submission` page. So, you must get the ID of yours and replace this number with it.
 
 :::
 
@@ -350,4 +350,4 @@ Well, **My Account** page now has all the posts with full information, as below:
 
 ![The final result](https://i.imgur.com/zFfRyvw.png)
 
-For your quick reference, this is the source code of my page-account.php file:
+For your quick reference, this is the source code of my `page-account.php` file:
