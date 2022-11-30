@@ -16,7 +16,7 @@ We’ll need these tools:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create and configure custom fields;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the fields together. In this case each couple of question and answer will be set in a group.
 
-## Step 1: Create a new page
+## 1. Creating a new page
 
 Go to **Pages > Add New** to have a new FAQs page.
 
@@ -24,7 +24,7 @@ Go to **Pages > Add New** to have a new FAQs page.
 
 ![The FAQs page](https://i.imgur.com/LocJd9u.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create fields saving questions and answers. I created custom fields with the following structure:
 
@@ -77,7 +77,7 @@ Back to the post editor, you will see all of the created custom fields.
 
 ![Created custom fields appear in the post editor](https://i.imgur.com/4ZKQO6n.png)
 
-## Step 3: Display the FAQs on the page
+## 3. Displaying the FAQs on the page
 
 There are two methods to show the FAQs information on the FAQs page: using MB Views or using a PHP file.
 
