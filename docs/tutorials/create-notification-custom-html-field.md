@@ -17,7 +17,7 @@ We need the following tools for this practice:
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the fields along with the Custom HTML field using for the notification together;
 * [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) (optional): to show the alert message only when users choose an option in another field.
 
-## Step 1: Create custom fields
+## 1.  Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create a new field group.
 
@@ -39,7 +39,7 @@ In the settings of the **Custom HTML** field, there is a box named **Content (HT
 
 This text is the content of the notification which we will show for users in the next step.
 
-Note that I set the classes for this text as _&lt;div class="alert alert-info"&gt;_. We’ll use these classes for styling later.
+Note that I set the classes for this text as `<div class="alert alert-info">`. We’ll use these classes for styling later.
 
 After creating all the subfields, move to the **Advanced** tab of the **Group** field to set conditional logic for it as below:
 
@@ -57,9 +57,10 @@ This is how it displays when we edit any post. You will see the notification fro
 
 ![The notification from the custom HTML](https://i.imgur.com/21LZcyJ.png)
 
-## Step 2: Style the Custom HTML field
+## 2. Styling the Custom HTML field
 
 In the css folder of the themes, create a new file named `admin.css` with the content as follows:
+
 ```css
 .alert-info {
 background-color: #d9edf7;
@@ -81,7 +82,7 @@ That’s the rule for styling that we set for two classes: `alert` and `alert-in
 
 Next, go to the `functions.php` file and add this code to declare the `admin.css` file:
 
-```
+```php
 add_action( 'rwmb_enqueue_scripts', 'enqueue_custom_style' );
 function enqueue_custom_style() {
 wp_enqueue_style( 'custom-css', get_template_directory_uri() . '/assets/css/admin.css' );
