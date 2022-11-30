@@ -38,7 +38,7 @@ And the custom field's data is saved in the `wp_postmeta`:
 
 To move this custom field's data to a custom table, follow these steps:
 
-## Step 1: Creating a custom table
+## 1. Creating a custom table
 
 Go to **Meta Box** &gt; **Custom Fields** and edit the field group I mentioned above. Go to the **Settings** tab and just tick the **Save data in a custom table** box.
 
@@ -56,7 +56,7 @@ From now on, the **new data will be automatically saved in the custom table** wh
 
 How about the **existing data** of this post type? It is still in the `wp_postmeta` table, so we need to use some code to move it to the new `wp_custom_company` table.
 
-## Step 2: Moving data to the new custom table
+## 2. Moving data to the new custom table
 
 This script below is to copy the custom fields' data in the `_wp_postmeta` table and paste it to the `wp_custom_company`. Then, it will delete the old data in the `wp_postmeta` table. Just insert this code into the `functions.php_ file`.
 
