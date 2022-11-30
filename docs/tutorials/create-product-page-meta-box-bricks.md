@@ -24,7 +24,7 @@ Here are some tools we need:
 
 <LiteYouTubeEmbed id='95DviTWI25o' />
 
-## Step 1: Create a post type
+## 1. Creating a post type
 
 Go to **Meta Box > Post Types > Add New** to create a new post type.
 
@@ -34,7 +34,7 @@ After publishing, you will see a new **Car Rentals** menu here.
 
 ![New custom post type after created in the admin dash board](https://i.imgur.com/eg4njnw.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group. Here, I created some fields as below to save the products’ information:
 
@@ -60,7 +60,7 @@ You can easily see all the created custom fields when creating a new post in the
 
  ![All created custom fields in the created post type](https://i.imgur.com/Hw2emW6.png)
 
-## Step 3: Create a template for the page
+## 3. Creating a template for the page
 
 Go to **Bricks > Template** to create a new template.
 
@@ -96,7 +96,7 @@ Since the name and the description of the car are the post title and post conten
 
 To display the rental price per day, add the **Rich Text** element. Then, click the **Select dynamic data** button > choose the corresponding field to get the data that is saved in a custom field created by Meta Box.
 
-![[Display the rental price per day](https://i.imgur.com/54ZOeGo.png)
+![Display the rental price per day](https://i.imgur.com/54ZOeGo.png)
 
 For all the detailed information of the product, add the **List** element. In this element, add items such as Car Year, Fuel, Max Passenger, etc. You can add title for each item as the name of the characteristic, then add dynamic data from custom fields into the Meta section as follows:
 
@@ -110,7 +110,7 @@ Then, still in the list, just add respective items and connect them to the custo
 
 Now, all the information of the product has been displayed.
 
-## Step 4: Style the page
+## 4. Styling the page
 
 You can style some elements and layout of the page as you want in the Bricks visual builder. Choose the wanted element and change the settings in the Style section.
 
