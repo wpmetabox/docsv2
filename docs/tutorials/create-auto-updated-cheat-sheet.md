@@ -171,7 +171,7 @@ My submission form will turn to this appearance:
 
 Go to **Meta Box > Views > Add New**, and add these codes:
 
-```
+```php
 {% set args = {post_type: 'deal', posts_per_page: -1, orderby: 'date', order: 'ASC' } %}
 {% set posts = mb.get_posts( args ) %}
 
