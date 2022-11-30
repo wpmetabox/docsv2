@@ -26,7 +26,7 @@ So we need some tools to do this practice:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields for the Restaurant post type in the backend;
 Zion Builder (Pro version): to build the page.
 
-## Step 1: Create a custom post type
+## 1. Creating a custom post type
 
 Go to **Meta Box > Post Types > Add New** to create a new post type.
 
@@ -36,7 +36,7 @@ After publishing, we’ll have a new menu named **Restaurants** in the **Admin D
 
 ![a new menu display on the left sidebar](https://i.imgur.com/tsUMKuy.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create fields. I’ll create all the fields like this for the illustration purpose only:
 
@@ -52,9 +52,9 @@ Now, when creating a new post in my **Restaurant** post type, the custom fields 
 
 ![the custom fields displayed in the post editor](https://i.imgur.com/vgVr0Cm.png)
 
-## Step 3: Add a section for the latest products
+## 3. Adding a section for the latest products
 
-### Create and configure the section
+### Creating and configuring the section
 
 Let’s edit a page to add the section. I’ll take the homepage and **edit it with Zion Builder**.
 
@@ -94,7 +94,7 @@ But, it will display all the posts in the chosen post type. So, enter a number t
 
 Because we haven’t chosen any kind of information of the product to show yet, it’s still blank there.
 
-### Display products information into the section
+### Displaying products information into the section
 
 Let’s do it by adding some elements.
 
@@ -132,7 +132,7 @@ Now, all the information of the restaurant has been obtained and displayed in a 
 
 ![all the information of the restaurant has been obtained and displayed in a section on the homepage](https://i.imgur.com/VThxpkm.png)
 
-## Step 4: Style the section
+## 4. Styling the section
 
 If you want to have more styling to make this section more lively, you can easily do it in Zion visual builder.
 
