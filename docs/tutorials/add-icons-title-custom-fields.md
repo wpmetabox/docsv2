@@ -12,9 +12,9 @@ If you use [FontAwesome](https://fontawesome.com/), [Elusive](http://elusiveicon
 
 1. Download the library to your computer.
 2. Copy the CSS and font files and paste them into the theme’s folder.
-3. Add this code to the functions.php file.
+3. Add this code to the `functions.php` file.
 
-```
+```php
 function your_prefix_enqueue_admin_style() {
     wp_enqueue_style( 'admin_css', get_stylesheet_directory_uri() . 'css_file_direction_in_the_theme_folder' );
 }
@@ -39,7 +39,7 @@ Firstly, go to the [Dashicons](https://developer.wordpress.org/resource/dashicon
 
 Then, choose one of these ways.
 
-### 1. Use code to add icons
+### 1. Using code to add icons
 
 Add the HTML to the meta box's **title** attribute or the field's **name** attribute.
 
@@ -55,9 +55,9 @@ Save the code, and the fields will look like this:
 
 ![The fields display after saving the code](https://i.imgur.com/gwuXqzV.png)
 
-### 2. Use UI to add icons
+### 2. Using UI to add icons
 
-In this way, you need to install [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) which provides an intuitive UI to create and configure custom fields in the admin dashboard.
+In this way, you need to install [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) which provides an intuitive UI to [create and configure custom fields](https://docs.metabox.io/tutorials/create-custom-fields/) in the admin dashboard.
 
 Here are my example fields.
 
