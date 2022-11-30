@@ -6,15 +6,15 @@ When you create a website for a client, hiding information such as the used plug
 
 I will create a new plugin then bundle Meta Box into it for example.
 
-## Step 1: Create a new plugin
+## 1. Create a new plugin
 
 In the **wp-content** folder > **plugin**, create a new folder named `project-demo` with a `project-demo.php` file inside. The php file will have the following content:
 
 ```php
 <?php
 /**
- * Plugin Name: Project Demo 
- * Plugin URI: https://metabox.io 
+ * Plugin Name: Project Demo
+ * Plugin URI: https://metabox.io
  * Version: 1.0
  * Author: Meta Box
  * Author URI: https://metabox.io
@@ -22,7 +22,7 @@ In the **wp-content** folder > **plugin**, create a new folder named `project-de
 ```
 In the **Admin Dashboard > Plugins**, you’ll see a new plugin named **Project Demo**. Let's activate it.
 
-## Step 2: Bundle Meta Box using composer
+## 2. Bundle Meta Box using composer
 
 We must download the necessary libraries from Meta Box into the plugin you've created.
 
@@ -80,7 +80,7 @@ Finally, run the following code in the `project-demo.php` file to download the l
 
 ![The code](https://i.imgur.com/wD5bgNO.png)
 
-## Step 3: Create custom post types and custom fields
+## 3. Create custom post types and custom fields
 
 From now on, you can create custom post types and custom fields using the created plugin. This is quite similar to installing Meta Box on a website. The difference is that if you don’t bundle extensions providing UI (such as [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/), [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/)) into the plugin as I did, you have to code manually. Instead of writing code in the `functions.php` file, you must do it in the `.php` file of the created plugin (project-demo.php).
 
@@ -195,7 +195,7 @@ Next, create a new file in the project-demo folder that is named `project-templa
 Add the following code to the content of the template file (`project-template.php`):
 ```
 <div class="img-post">
-    <?php 
+    <?php
     $images = rwmb_meta( 'image', ['size' => 'full'] );
     foreach ( $images as $image ) {
         echo '<img src="'. $image['url']. '">';
