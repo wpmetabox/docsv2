@@ -77,7 +77,7 @@ This hook runs before we determine which template is loaded. In other words, it 
 
 All you need to do now is add the following code to the `functions.php` file:
 
-```
+```php
 function justread_ics_download() {
         if ( is_singular( ‘event’ ) && isset( $_GET['ics'] ) ) {
                 include get_stylesheet_directory() . '/inc/ICS.php';
