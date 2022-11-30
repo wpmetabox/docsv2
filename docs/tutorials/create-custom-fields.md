@@ -64,9 +64,11 @@ As you can see, there are several settings:
 
 * **Label**: to name the field as you want;
 * **ID**: it’s required since you cannot publish the field group if you don’t enter the ID of the field. It will be used as meta_key when saving to the database. Normally, the ID will be auto-generated based on the label of the field, but you can also change it on your own. You should use numbers, characters, and underscores to name it;
+
 ![Example of the iD](https://i.imgur.com/vLWu3Zd.png)
 
 * **Type**: show the type of the field. You can change it to another field type with keeping the settings such as **Label** and **ID** of the field;
+
 ![You can change the field type](https://i.imgur.com/5TWZXtd.png)
 
 * **Label Description**: describe the label here. It appears below the field label;
@@ -132,7 +134,7 @@ For example:
 
 The **Show as an admin column** settings is provided by the **MB Admin Column**. When you tick to choose it, you will see other settings options for you to choose like this.
 
-![ The admin column](https://i.imgur.com/T0hBFUx.png)
+![The admin column](https://i.imgur.com/T0hBFUx.png)
 
 These settings will help your field display in the admin area as follows.
 
