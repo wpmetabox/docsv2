@@ -26,13 +26,13 @@ We have a FAQs page that needs to have custom fields for saving the questions an
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display data from custom fields created by Meta Box plugin in the Elementor's dynamic tags;
 * [Elementor](https://elementor.com/) (Pro version): to build the page for displaying Q&A;
 
-## Step 1: Create a new page
+## 1. Creating a new page
 
 Go to **Pages > Add New** to create a new page for FAQs.
 
 ![Create a new page](https://i.imgur.com/1StiUwk.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group for the page.
 
@@ -62,7 +62,7 @@ Then, you can easily see all the fields in the page editor. Just fill in the Q&A
 
 ![The page with created custom fields ](https://i.imgur.com/DqQ2lHz.png)
 
-## Step 3: Create a skin
+## 3. Creating a skin
 
 If you don’t use a cloneable field, you can get the data as usual, all of them will be displayed with the same style. Here, I used a cloneable field and was willing to have a different style for the questions and answers. So, I’ll create a skin to do it easily.
 
@@ -100,7 +100,7 @@ Since this skin will be applied for the FAQs page, remember to add a condition w
 
 ![Add a condition when publishing ](https://i.imgur.com/M1jOCwQ.png)
 
-## Step 4: Apply the skin to the page
+## 4. Applying the skin to the page
 
 Go to **Pages** > edit the FAQs page with Elementor.
 
