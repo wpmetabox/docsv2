@@ -19,7 +19,7 @@ So, here are the tools we need.
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create and configure custom fields to save restaurants’ extra information;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a WordPress template for the section.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types** to create a new post type.
 
@@ -29,7 +29,7 @@ After publishing, you will see a new **Restaurant** menu in the **Admin Dashboar
 
 ![The newly created custom post type appears on the menu dashboard](https://i.imgur.com/Ip1pYfc.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group.
 
@@ -51,7 +51,7 @@ Now, when creating a post in the Restaurant post type, you’ll see all the fiel
 
 ![Enter the information for the post.](https://i.imgur.com/albVCmK.png)
 
-## Step 3: Display posts and its information on the page
+## 3. Displaying posts and its information on the page
 
 Go to **Meta Box > Views** to create a new template.
 
@@ -101,15 +101,15 @@ For example, I’ve already had a homepage built with Gutenberg. I’ll paste it
 
 The section for the latest posts will display on the homepage like this:
 
-![ display the latest products on homepage with custom field’ value.](https://i.imgur.com/1KWIwxo.gif)
+![display the latest products on homepage with custom field’ value](https://i.imgur.com/1KWIwxo.gif)
 
 You can refer to the code that I used here.
 
-## Step 4: Style the section
+## 4. Styling the section
 
 If you want to have advanced styling, go back to the created template in the **Views**. Depending on your idea about the look of the section, you can add both CSS and JS code to the corresponding tab of the view.
 
-![Add code to this CSS tab in Views.](https://i.imgur.com/KwDRokj.png)
+![Add code to this CSS tab in Views](https://i.imgur.com/KwDRokj.png)
 
 For example, I add CSS like this:
 
@@ -117,7 +117,7 @@ For example, I add CSS like this:
 
 To have styling for the status and create slider for the section, we can use some JS by adding code to the **JavaScript** tab in the view.
 
-![use some JS by adding code to the JavaScript tab in the view]https://i.imgur.com/GGAVa0d.png
+![use some JS by adding code to the JavaScript tab in the view](https://i.imgur.com/GGAVa0d.png)
 
 You can refer to all the code in this post on our [Github](https://github.com/wpmetabox/tutorials/tree/master/display-latest-posts-with-MB-Views).
 
