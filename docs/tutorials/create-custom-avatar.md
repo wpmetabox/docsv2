@@ -13,7 +13,7 @@ In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure 
 * [MB User Meta](https://metabox.io/plugins/mb-user-meta/) or[ MB User Profile](https://metabox.io/plugins/mb-user-profile/): to create fields for your user profiles. It’s okay to use one of them only.
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields with an intuitive UI without having to code yourself. In addition, you can also use another tool to do that - Online Generator.
 
-## Step 1: Create a field to upload avatar picture
+## 1. Creating a field to upload avatar picture
 
 Go to **Meta Box > Custom Fields > Add new**.
 
@@ -35,7 +35,7 @@ When you go to edit a user profile in the **Users** section, you will see the **
 
 You can upload an image to the field.
 
-## Step 2: Get data from the custom avatar field to set
+## 2. Getting data from the custom avatar field to set
 
 Now, your **Profile Picture** hasn't got the uploaded picture from your **Custom Avatar** field automatically yet.
 
