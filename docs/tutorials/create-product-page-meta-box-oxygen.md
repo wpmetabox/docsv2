@@ -31,7 +31,7 @@ Go to **Meta Box > Post Types > New Post Type**.
 
 ![create new custom post type](https://i.imgur.com/ZGSNOek.png)
 
-Enter the name for the post type, and if you want some further configuration, follow [this tutorial](http://docs/metabox.io//tutorials/create-custom-post-type-taxonomies/).
+Enter the name for the post type, and if you want some further configuration, follow [this tutorial](http://docs.metabox.io/tutorials/create-custom-post-type-taxonomies/).
 
 ## 2. Creating custom fields
 
