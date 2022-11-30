@@ -21,13 +21,13 @@ For this practice, we need these tools:
 
 The last one is [Oxygen](https://oxygenbuilder.com/). You should use the 3.9 version or higher, which already has integration with Meta Box.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type**.
 
 ![Create a new custom post type](https://i.imgur.com/sA6AR2s.png)
 
-Step 2: Create custom fields
+## 2. Creating custom fields
 
 The product normally has a lot of information that we need to save in custom fields. Go to **Meta Box > Custom Fields > Add New** to create them.
 
@@ -93,7 +93,7 @@ Back in the post editor of your product, you’ll see the created fields.
 
 Just enter information for the product.
 
-## Step 3: Display the variations information
+## 3. Displaying the variations information
 
 Go to the **Oxygen** menu and create a new template.
 
@@ -215,19 +215,19 @@ Apply the code then back to a single product page, you’ll see all the informat
 
 ![Apply the code then back to a single product page](https://i.imgur.com/fOaCeZD.png)
 
-## Step 4: Set rules to display the variations
+## 4. Setting rules to display the variations
 
 Information of each variation is not always displayed. They will be shown only when the matching color displays. To set that rule and have a slider for the image gallery, we need some JS code. As well as, we should use some CSS to have a beautiful display.
 
 Please notice that you can use a 3rd party plugin to add JS and CSS instead of inserting them directly into the theme file.
 
-### Download the js and css library
+### Downloading the js and css library
 
 For the slider and the rule, I use the Slick library. It is also available on [Github](https://github.com/kenwheeler/slick). We just need three files here.
 
 ![JS and CSS files in the Slick library.](https://i.imgur.com/fkSE9Mv.png)
 
-### Create custom js for slider and rules
+### Creating custom js for slider and rules
 
 Next, create a new **custom.js** file in the **js** folder and add code to it.
 
@@ -324,7 +324,7 @@ Explanation:
 * `jQuery("div[data-id]").removeClass("active"); jQuery("div[data-id='" + jQuery(this).attr("href").replace("#", "") + "']").addClass("active")`: to remove and add the active class to all the elements that have value of the data-id attribute as the name of the color. It means that when you click on a color, all the corresponding information of that variation such as price, size, status, and image gallery will be displayed.
 * `jQuery('.slider-single').slick('refresh') and jQuery('.slider-nav').slick('refresh')`: to refresh both sliders to load new images.
 
-### Declare the js and css files
+### Declaring the js and css files
 
 Add code inside the function **custom_enqueue_files()** in the `plugin.php` file in the case you use the 3rd party plugin. Otherwise, add to the `functions.php` to declare all the above js and css files.
 
@@ -341,7 +341,7 @@ Go back to a single product page, there is a slider and some differences.
 
 ![The product images have already turned into a slider.](https://i.imgur.com/QR1FF2Z.gif)
 
-## Step 5: Style the product page
+## 5. Styling the product page
 
 Back to page editor by Oxygen, go to **Manage > Stylesheets > Add Stylesheet** to have space to add CSS.
 
