@@ -27,13 +27,13 @@ As I said, we will create a custom post type and custom fields in [Meta Box](htt
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types easily. It can run without installing the Meta Box core plugin. Otherwise, you can try [Post Type Generator](https://metabox.io/post-type-generator/).
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields with an intuitive interface in the backend. If you don’t want to use this premium extension of Meta Box, you can use the free tool provided by Meta Box in the simplified version of Meta Box Builder - [Online Generator](https://metabox.io/online-generator/).
 
-## Step 1: Get the post type’s slug & custom field’s ID in Pods
+## 1. Getting the post type’s slug & custom field’s ID in Pods
 
 I already have the **Project** post type created with Pods. Its slug is _‘project’_. You can see it in the **Name** column:
 
 ![The created post type](https://i.imgur.com/0WjFgSH.png)
 
-In the **Project** post type, there are two custom fields. Their IDs are _project_name_ and _project_description_.
+In the **Project** post type, there are two custom fields. Their IDs are `project_name` and `project_description`.
 
 ![There are two custom fields in the post type](https://i.imgur.com/rC4Syns.png)
 
@@ -47,7 +47,7 @@ And these are the custom fields in the Project post type:
 
 Now, **deactivate the Pods plugin**. After that, the data of Pods is still in the database.
 
-## Step 2: Create a Custom Post Type and Move Its Data from Pods to Meta Box
+## 2. Creating a custom post type and move its data from Pods to Meta Box
 
 First, activate the **Meta Box** plugin and its extensions.
 
@@ -65,7 +65,7 @@ Especially, the post information such as post title, post content, ... is still 
 
 That’s how we’ve done for moving the posts content.
 
-## Step 3: Create Custom Fields and Move Their Data from Pods to Meta Box
+## 3. Creating custom fields and move their data from Pods to Meta Box
 
 Go to **Meta Box** > **Custom Fields** > **Add New** to create new fields corresponding to the fields in Pods.
 
