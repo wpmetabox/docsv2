@@ -4,7 +4,7 @@ title: Changing the RSS content
 
 This article will show you **how to get information from a custom field created by** [Meta Box](https://wordpress.org/plugins/meta-box/) **then include them into the** [RSS feed](https://gretathemes.com/rss-feed-applications-wordpress/). I will use [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/?swcfpc=1) to have a UI to create custom fields.
 
-## Step 1: Create custom fields
+## 1. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create fields.
 
@@ -20,7 +20,7 @@ Back to the post editor, the custom fields will be there.
 
 You can fill in some information to the fields to check if it is in the RSS in the next step.
 
-## Step 2: Display custom fields’ values on the frontend
+## 2. Displaying custom fields’ values on the frontend
 
 We’ll use the function `rwmb_meta()` to get value from the fields.
 
@@ -43,7 +43,7 @@ Back to your post, the values of these fields will be displayed as follows:
 
 The custom fields’ values are shown. Next is to include them in the RSS feed.
 
-## Step 3: Add the values of custom fields to the rss feed
+## 3. Adding the values of custom fields to the rss feed 
 
 Go to the `functions.php` file and add this code:
 ```
@@ -75,7 +75,7 @@ Explanation:
 * `price` and `availability` also are the IDs of the fields;
 * `$output .=`: to write the returned values into the RSS feed.
 
-## Step 4: Display RSS feed
+## 4. Displaying RSS feed
 
 Go to **Appearance > Widgets**, find the **RSS** tab then drag it into the area you want. Then you enter a link which is in the form of http://yourwebsite.com/feed in the **RSS Feed URL** section.
 
