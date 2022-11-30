@@ -54,7 +54,7 @@ In conclusion:
 * Use custom fields if you want to add extra data to a post. Use custom taxonomies if that data is utilized to group posts together.
 * Custom fields are bits of information that are specific to the post item itself. Taxonomies are bits of information shared by many different items.
 
-**Querying posts**
+### Querying posts
 
 You can make a complex query and get your desired posts by using the meta query (with custom fields) and `tax_query` (with custom taxonomies).
 
