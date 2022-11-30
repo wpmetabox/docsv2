@@ -405,7 +405,8 @@ Go to **Meta Box > Views > Add New** to create a new template.
 ![Create a template for the page]( https://i.imgur.com/7YThrpP.png)
 
 To display the admission form, add this code to the **Template** tab:
-```
+
+```php
 <div class="container">
 	<div class="form-header">
 <!-// Put logo of the university to the header – >
@@ -425,7 +426,7 @@ To display the admission form, add this code to the **Template** tab:
 
 **Explanation**:
 
-http://metabox4.wpengine.com/wp-content/uploads/2022/11/Logo-1.png
+*http://metabox4.wpengine.com/wp-content/uploads/2022/11/Logo-1.png*
 
 This is the URL of the featured image of the page which we use for the logo on the page as well.
 
@@ -475,7 +476,7 @@ Go to **Pages > Add New** to create a new page called **Review Admission Form**.
 
 We’ll need a redirect link to redirect students from the admission form page to the reviewing page. To make the link, we add some codes to the `functions.php` file of the theme:
 
-```
+```php
 add_filter( 'rwmb_frontend_redirect', function( $redirect, $config ) {
     if ( 'university-admission-form' !== $config['id'] ) {
         return $redirect;
@@ -518,7 +519,7 @@ Go to **Meta Box > Views** to create a new template to redirect to the **Review 
 
 In the **Template** tab of the view, add this code:
 
-```
+```php
 {% set pupil_id = mb.estar_get_method_function( 'student_id' ) %}
 {% if pupil_id %}
     <div class="form-header">
@@ -543,7 +544,8 @@ Because each admission form will be saved in a post of the **Student Info** post
 Create a `pupil_id` variable to recognize its value automatically thanks to the returned value of the `estar_get_method_function( 'student_id' )` function.
 
 Additionally, I want to have a Print button instead of Submit, so that students can print their admission forms out. Thus, I added that button to the footer of the page. To hide the Submit button, still in the created template, go to the CSS tab and add this code:
-```
+
+```php
 .rwmb-form-submit {
     display: none;
 }
