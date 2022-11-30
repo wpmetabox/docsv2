@@ -14,7 +14,7 @@ Before going to update the field ID, make sure you [backup your database](https:
 
 I’ll change the field’s ID from `location` to `address`.
 
-In phpMyAdmin, you can directly run the SQL UPDATE statement to perform the change. Meta Box saves each custom field in one row in the post meta table, where the field id is the `meta_key` and the value will be the `meta_value` in the meta table.
+In phpMyAdmin, you can directly run the SQL UPDATE statement to perform the change. Meta Box [saves each custom field](https://docs.metabox.io/database/) in one row in the post meta table, where the field id is the `meta_key` and the value will be the `meta_value` in the meta table.
 
 So, in phpMyAdmin you only need to run the following SQL:
 
