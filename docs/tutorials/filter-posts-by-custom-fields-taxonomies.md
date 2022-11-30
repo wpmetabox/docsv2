@@ -12,7 +12,7 @@ Here are some tools we need:
 
 ## Using custom taxonomies
 
-### Step 1: Create a custom taxonomy
+### 1. Creating a custom taxonomy
 
 Since I’ve already had a custom post type named **Books**, I will create a custom taxonomy for it. If you don't know how to create a custom post type, refer to [this article](https://docs.metabox.io/tutorials/create-custom-post-type-taxonomies/) for more details.
 
@@ -46,7 +46,7 @@ Then, you will see all the terms displayed in the post editor.
 
 ![Terms display in the post editor](https://i.imgur.com/DQBQMza.png)
 
-### Step 2: Display the taxonomy terms on the archive page
+### 2. Displaying the taxonomy terms on the archive page
 
 Go to **Appearance > Theme File Editor** > `archive.php` and add this code to where you want to show the terms on the archive page.
 
@@ -66,7 +66,7 @@ This is how your term displays in the archive page:
 
 ![The terms display in the archive page](https://i.imgur.com/HuBUeD1.png)
 
-### Step 3: Get posts by the taxonomy terms
+### 3. Getting posts by the taxonomy terms
 
 Still in the **Theme File Editor**, go to the `functions.php` file, add these codes:
 
@@ -113,9 +113,9 @@ Here is the final result. All books of that term are filtered.
 
 ![The final result](https://i.imgur.com/qCrvR8p.gif)
 
-Using custom fields
+## Using custom fields
 
-Step 1: Create a custom field
+## 1. Creating a custom field
 
 First of all, create a custom field named **Author** for the **Book** post type. This data saved in the custom field will be used for the filter.
 
@@ -134,7 +134,7 @@ Here is the created custom field in the post editor.
 
 ![created fields](https://i.imgur.com/luX44DB.png)
 
-Step 2: Display the list of fields’ value
+## 2. Displaying the list of fields’ value
 
 Add these codes below in the `archive.php file` to show the custom field’s values:
 
@@ -156,7 +156,7 @@ Now, in the archive page, all the created custom fields have been obtained.
 
 ![All the created custom fields have been obtained in the archive page](https://i.imgur.com/Ri98Mwa.png)
 
-### Step 3: Get posts by custom field’s values
+### 3. Getting posts by custom field’s values
 
 In the `functions.php` file, use these codes to set the filter action:
 ```
