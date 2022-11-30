@@ -25,7 +25,7 @@ The necessary tools are listed below:
 
 The last one is [Oxygen](https://oxygenbuilder.com/). You should use the 3.9 version or higher which has the integration with Meta Box already.
 
-## Step 1: Create a custom post type
+## 1. Creating a custom post type
 
 Go to **Meta Box > Post Types > Add New**.
 
@@ -33,7 +33,7 @@ Go to **Meta Box > Post Types > Add New**.
 
 Then, enter information and configure the post type.
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Move to **Meta Box > Custom Fields**, then create fields as you want.
 
@@ -57,7 +57,7 @@ In the post editor, you will see all of the newly created custom fields.
 
 ![Newly created custom fields](https://i.imgur.com/f56IhBp.png)
 
-## Step 3: Create a template with Oxygen
+## 3. Creating a template with Oxygen
 
 Go to the **Oxygen** menu and create a new template.
 
@@ -113,7 +113,7 @@ We’ve finished getting all of the recipe information. On the frontend, you see
 
 ![Back to the frontend, everything is well displayed](https://i.imgur.com/HXaAJjv.png)
 
-## Step 4: Style the page
+## 4. Styling the page
 
 Back to the page editor with Oxygen, choose each component and change the settings to style them.
 
