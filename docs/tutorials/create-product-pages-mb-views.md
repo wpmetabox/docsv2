@@ -29,7 +29,7 @@ For this practice, we need these tools:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save extra information of the product;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the product page without touching the theme file.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type**.
 
@@ -37,7 +37,7 @@ Go to **Meta Box > Post Types > New Post Type**.
 
 Then, enter information and configure the post type.
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields**, then create fields as you want.
 
@@ -55,7 +55,7 @@ In the post editor, you will see all of the newly created custom fields.
 
 ![Newly created custom fields show in the post editor](https://i.imgur.com/mIGtsRv.png)
 
-## Step 3: Create a template for the page
+## 3. Creating a template for the page
 
 To display the product’s details, you normally have to go to the theme’s files to add code or use a page builder. However, you have another way with the **MB Views** extension to create templates for the product page.
 
@@ -89,7 +89,7 @@ On the product page, all the product information is already displayed.
 
 ![All the product information is displayed in the product page](https://i.imgur.com/SrnDUqe.png)
 
-## Step 4: Style the page
+## 4. Styling the page
 
 Before styling, let’s add some **div** tags to separate the page into different sections for easier styling.
 
