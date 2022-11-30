@@ -254,7 +254,7 @@ e.preventDefault();
 
 Now, add code inside the function `custom_enqueue_files()` in the `plugin.php` file in the case you use the 3rd party plugin as I’m using. In the case you want to insert code directly into the theme file, use the `functions.php` file.
 
-```
+```php
             wp_enqueue_style('slick', plugin_dir_url( __FILE__ ).'/assets/css/slick.css');
 	wp_enqueue_style('slick-theme', plugin_dir_url( __FILE__ ).'/assets/css/slick-theme.css');
 
