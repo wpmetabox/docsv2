@@ -113,7 +113,7 @@ Then, scroll down to the **Settings** tab, choose **Type** as **Singular**. Sinc
 
 To display questions and answers corresponding to its tab, we need to add some Javascript. Go to the **Javascript** tab and add the following code to it.
 
-```
+```javascript
 jQuery(document).ready(function()
 {
     function activeTab(obj)
