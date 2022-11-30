@@ -6,7 +6,7 @@ By using a custom field in the type of [Image Advanced](https://metabox.io/docs/
 
 ![Example of image gallery](https://i.imgur.com/U5bPBEK.png)
 
-## Step 1: Create a custom field
+## 1. Creating a custom field
 
 I will create **Image Advanced** field for showing the gallery. Go to **Meta Box > Custom Fields > Add New**.
 
@@ -18,11 +18,11 @@ After creating that field, move to the **Settings** tab, choose **Location** as 
 
 Then, you will see the created field in the post editor. Click in **Add Media** to add more images.
 
-![https://i.imgur.com/JdyvOSy.png
+![The created fields in the pót editor](https://i.imgur.com/JdyvOSy.png)
 
-## Step 2: Display gallery on the frontend
+## 2. Displaying gallery on the frontend
 
-The way to display uploaded images in a WordPress gallery is quite simple: get the image IDs, put them in the gallery shortcode and run it. In this practice, we will display it on the frontend in two ways: (1) adding code to the theme's template file, and (2) using MB Views.
+The way to display uploaded images in a WordPress gallery is quite simple: get the image IDs, put them in the `gallery` shortcode and run it. In this practice, we will display it on the frontend in two ways: (1) adding code to the theme's template file, and (2) using MB Views.
 
 ### Method 1: Adding code to the theme’s file
 
