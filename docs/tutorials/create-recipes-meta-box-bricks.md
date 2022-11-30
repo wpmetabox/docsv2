@@ -26,7 +26,7 @@ In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure 
 
 For the last one, we use [Bricks](https://bricksbuilder.io/) to build the page.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type**.
 
@@ -36,7 +36,7 @@ After publishing the post type, you’ll see a new menu.
 
 ![New post type showed in the menu dashboard](https://i.imgur.com/fBqG9cp.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New**.
 
@@ -54,7 +54,7 @@ Back to the post editor, you will see all the created custom fields.
 
 ![Newly created custom fields showed in the post editor](https://i.imgur.com/CW1s8Jk.png)
 
-## Step 3: Create a page template using bricks
+## 3. Creating a page template using bricks
 
 Go to **Bricks > Templates > Add new**.
 
@@ -128,7 +128,7 @@ I will do the same with other sets of information.
 
 ![Do likewise with other sets of information](https://i.imgur.com/HHknTqp.png)
 
-## Step 4: Style the page
+## 4. Styling the page
 
 Just choose the desired element and change the settings in the **Style** section in Bricks’ template editor.
 
