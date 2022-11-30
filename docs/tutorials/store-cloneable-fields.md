@@ -16,7 +16,7 @@ Assuming you have a **cloneable custom field** named Start Date with the ID `sta
 
 This field is set to be cloneable, so that you can save more than one date for the event. The value of this field will be save in the database in one row like this:
 
-*a:2:{i:0;s:10:"2019-05-01";i:1;s:10:"2019-04-30";} (['2019-05-01', '2019-04-30'])*
+`a:2:{i:0;s:10:"2019-05-01";i:1;s:10:"2019-04-30";} (['2019-05-01', '2019-04-30'])`
 
 ![Choose cloneable option](https://i.imgur.com/8kvsdui.png)
 
@@ -27,6 +27,7 @@ We need to convert that string back to an array of two elements and store them i
 ## Converting the upcoming data
 
 In the theme file folder, I create a new file named `convert.php` with the code inside as below:
+
 ```php
 <?php
 function prefix_convert( $field_id ) {
