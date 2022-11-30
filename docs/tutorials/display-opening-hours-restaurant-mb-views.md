@@ -22,7 +22,7 @@ For having time slots for each day, we’ll use custom fields. So, we need the [
 * [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/?swcfpc=1): allows you to create rules to control the display of hours with options.
 * [MB Views](https://metabox.io/plugins/mb-views/?swcfpc=1): create templates and display the custom fields’ value in Opening Hours on the frontend;
 
-## Step 1: Create custom fields
+## 1. Creating custom fields
 
 Normally, we will create a new custom post type for the **restaurants** first. I skipped that step since I already had it on my website. If you haven’t had it yet, create it first then go to this step.
 
@@ -246,7 +246,7 @@ Publish this field group and go to the post editor in **Restaurant**, you will s
 
 ![Created fields in the post editor](https://i.imgur.com/OelC36Y.gif)
 
-## Step 2: Display the fields’ value on the frontend
+## 2. Displaying the fields’ value on the frontend
 
 In this step, we’ll get the input data from those custom fields to display into the Restaurant single page with **MB Views**.
 
@@ -310,7 +310,7 @@ Go to the single Restaurant page and see how the opening hours section displays.
 
 All the time slots are shown exactly as I input in the backend. But this section doesn't look as good as I want. So, I will add some CSS to style this section in the next step.
 
-## Step 3: Style the opening hours section
+## 3. Styling the opening hours section
 
 Still, in the view of the single Restaurant page, move to the **CSS** tab. And add the code below.
 ```
