@@ -28,7 +28,7 @@ To have advanced features, we need some of its extensions:
 
 They’re all in the **Meta Box AIO**. If you haven’t had it, you can download and install each extension individually.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > Add New** to create a new post type. In my case, the new post type is **Student Info**.
 
@@ -38,7 +38,7 @@ After publishing, you will see a new menu in the **Admin Dashboard**.
 
 ![New post type appear in the Admin Dashboard](https://i.imgur.com/hFkGDMI.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 ### Field types
 
@@ -94,7 +94,7 @@ If you keep this layout for the fields, each field will be a line on the fronten
 
 Thus, I will adjust a little bit by grouping the fields and setting them into columns.
 
-### Create groups and set columns
+### Creating groups and set columns
 
 Just add a field in the type of group, and add other fields to be its sub-fields.
 
@@ -384,9 +384,9 @@ Now, when creating a new post in the **Student Info** post type, you’ll see al
 
 ![Create a new post in the post type](https://i.imgur.com/lO24W6A.gif)
 
-## Step 3: Display the form on the frontend
+## 3. Displaying the form on the frontend
 
-### Create a new page
+### Creating a new page
 
 Go to **Pages > Add New** to create a new blank page. Here, I created a page named **Admission Form**.
 
@@ -398,7 +398,7 @@ When creating the new page, set the featured image for it. This image will be us
 
 Remember to copy the URL of the featured image since we’ll use it to display on the frontend.
 
-### Create a template for the page
+### Creating a template for the page
 
 Go to **Meta Box > Views > Add New** to create a new template.
 
@@ -463,11 +463,11 @@ To have advanced styling, go to the **CSS** tab of the template and add some CSS
 
 ![Add some css code for styling](https://i.imgur.com/yaRmTfz.png)
 
-## Step 4: Set the page for reviewing
+## 4. Setting the page for reviewing
 
 Instead of saying thank you or notifying students for successful submissions, I want to have a reviewing page for students to check student IDs or print the admission form. To do it, we need to create a reviewing page and redirect them to that page.
 
-### Create a new page
+### Creating a new page
 
 Go to **Pages > Add New** to create a new page called **Review Admission Form**.
 
@@ -512,7 +512,7 @@ This code will get and return the value of the `student_id` variable from the re
 
 ![Add the code to the box](https://i.imgur.com/UjaLREU.png)
 
-### Create a new template for reviewing page
+### Creating a new template for reviewing page
 
 Go to **Meta Box > Views** to create a new template to redirect to the **Review Admission Form** page.
 
@@ -556,8 +556,8 @@ Try a test, after submitting information, the link is changed and the **Student 
 ![The final result](https://i.imgur.com/wHDPc7q.png)
 
 
-![The final result]https://i.imgur.com/xpkC9s5.png
+![The final result](https://i.imgur.com/xpkC9s5.png)
 
 
-![The final result]https://i.imgur.com/Ha9G97T.png
+![The final result](https://i.imgur.com/Ha9G97T.png)
 
