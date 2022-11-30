@@ -54,7 +54,7 @@ Go to **Meta Box > Views** and create a new view.
 
 In the **Template** tab, I used this code:
 
-```
+```php
 {% set args = {hide_empty: false} %}
 {% set categories = mb.get_categories( args ) %}
     {% for category in categories %}
@@ -84,7 +84,7 @@ For easier styling later, you can add some div tags like this:
 
 Full code here:
 
-```
+```php
 {% set args = {hide_empty: false} %}
 {% set categories = mb.get_categories( args ) %}
 <div class="thumbnail-images">
