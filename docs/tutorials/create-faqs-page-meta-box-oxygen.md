@@ -23,13 +23,13 @@ The FAQs page is built with [Oxygen](https://oxygenbuilder.com/). You should use
 
 The questions and answers are displayed in an accordion style on the page, which is provided by [OxyExtras](https://oxyextras.com/). This is optional only.
 
-## Step 1: Create a new page
+## 1. Creating a new page
 
 Go to **Pages > Add New** to create a page for FAQs.
 
 ![Create a new page](https://i.imgur.com/n1QF4Yl.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New**. I’ll add a group with two subfields inside. It is also set to be cloneable to have more spaces to add different questions and answers.
 
@@ -55,7 +55,7 @@ Back in the page editor, you will see the fields and can fill in information abo
 
 ![The fields appear in the page editor](https://i.imgur.com/hR9kpeL.png)
 
-## Step 3: Create a template with Oxygen
+## 3. Creating a template with Oxygen
 
 In **Oxygen**, create a new template and choose the **inactive - Default Page** option to inherit its style and choose to apply this template for **Pages**.
 
