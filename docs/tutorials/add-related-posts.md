@@ -11,7 +11,7 @@ We need to install the following tools:
 * [Meta Box](https://metabox.io): is a framework that allows you to custom custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI in the backend to create custom fields.
 
-## Step 1: Create a new custom field
+## 1. Creating a new custom field
 
 We’ll create a custom field in the type of **Post** where users can choose which post will be related to the current one.
 
@@ -37,10 +37,11 @@ Back to the post editor of your post type, you will see the created field and a 
 
 ![Created field in the post editor](https://i.imgur.com/kr4iWdH.png)
 
-## Step 2: Display the related posts on the front end
+## 2. Displaying the related posts on the front end
 
 The created Post field saves the IDs of chosen related posts. It returns an array of values as follows:
-```
+
+```php
 array (size=3)
     0 => string '36' (length=2)
     1 => string '25' (length=2)
@@ -49,7 +50,7 @@ array (size=3)
 
 So, we use the function to get the value of posts in this form:
 
-```
+```php
 $post_ids = rwmb_meta( $field_id );
 foreach ( $post_ids as $post_id ) {
     echo '<p>'. get_the_title( $post_id ). '</p>';
@@ -91,5 +92,6 @@ if (isset($related_posts)) { ?>
 ```
 
 Then, the related posts will be displayed like this:
+
 ![The final result](https://i.imgur.com/9xIf0QH.png)
 
