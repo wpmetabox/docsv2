@@ -21,7 +21,7 @@ So, we need these tools:
 * [Meta Box core plugin](https://metabox.io/): to have a framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI to create custom fields for the landing page in the backend;
 
-## Step 1: Create a page
+## 1. Creating a page
 
 Go to **Pages > Add New** to have a new landing page.
 
@@ -29,7 +29,7 @@ Go to **Pages > Add New** to have a new landing page.
 
 ![Choose landing page](https://i.imgur.com/D8YzLxh.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Since each section will have different data, I will create some field groups corresponding to each section. You also can add only one field group then add corresponding groups inside for sections.
 
@@ -79,7 +79,7 @@ When you go to edit the landing page, you will see all the created field groups 
 
 ![Created fields display in the post editor](https://i.imgur.com/vNRj2Gr.png)
 
-## Step 3: Create template for the page
+## 3. Creating template for the page
 
 There are two methods to create a template for the page: using MB Views or a PHP file.
 
