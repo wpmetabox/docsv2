@@ -20,13 +20,13 @@ Along with the Meta Box core plugin from [wordpress.org](https://wordpress.org/p
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create forms for users to submit their order from the frontend.
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): show reservation information in the list of posts.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > Add New** to create a new post type for the reservations.
 
 ![Create a new custom post type](https://i.imgur.com/WMgUU9b.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group. Here are all the fields that I created for example:
 
@@ -62,7 +62,7 @@ Finally, go to the **Reservations** menu, you will see the columns as follows. T
 
 ![The result of the columns](https://i.imgur.com/6RDejuA.png)
 
-## Step 3: Create the reservation page
+## 3. Creating the reservation page
 
 ### Creating a template
 
@@ -238,7 +238,7 @@ And now, the page turns to this look:
 
 ![The page after styling](https://i.imgur.com/ivPJlyI.png)
 
-## Step 4: Calculate the total amount
+## 4. Calculating the total amount
 
 The **Amount** field is $0 so far no matter what you change the information in the other fields many times. To figure out the amount then apply the number into this field, we should use code.
 
