@@ -11,7 +11,7 @@ I also made a sample of the page which is built by Oxygen.
 
 ![Sample for the Team Members Page with Meta Box and Oxygen](https://i.imgur.com/Zxtz5ca.png)
 
-## Video Version
+## Video version
 
 <LiteYouTubeEmbed id='CgI4bxfOkk4' />
 
