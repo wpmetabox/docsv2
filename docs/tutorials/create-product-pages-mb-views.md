@@ -103,7 +103,7 @@ I also added some code in the **JavaScript** tab. This is to create a slider for
 
 ![Go to the JavaScript tab, add some code](https://i.imgur.com/a5wBuDh.png)
 
-All of these codes are available on Github, you can refer to it.
+All of these codes are available on [Github](https://github.com/wpmetabox/tutorials/tree/master/create-a-product-page-with-MB-Views), you can refer to it.
 
 Now, you’ll see the final look of the page on the frontend. That’s done!
 
