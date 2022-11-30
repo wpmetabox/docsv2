@@ -28,7 +28,7 @@ So we need some tools for this practice:
 * [Elementor](https://elementor.com/) (Pro version): to build the page and display all the restaurants’ information;
 * [Elementor Custom Skin](https://wordpress.org/plugins/ele-custom-skin/): to create a loop to display the listing of posts.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type** to create a new custom post type.
 
@@ -38,7 +38,7 @@ After publishing, you will see a new **Restaurant** menu in the Admin Dashboard.
 
 ![A new menu named Restaurant appears.](https://i.imgur.com/YTbt5ZN.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group. Then, create custom fields as you want.
 
@@ -60,7 +60,7 @@ When you edit any post in the **Restaurant** post type, you’ll see all the cre
 
 ![Enter the information into fields.](https://i.imgur.com/qm8DIgf.png)
 
-## Step 3: Create a new template
+## 3. Creating a new template
 
 We’re going to create a template to display the information of the restaurants.
 
@@ -115,7 +115,7 @@ For the **Status** information, just do the same as the **Voucher** information.
 
 Now, you also can see that all the information of the restaurant has been displayed.
 
-## Step 4: Add section to the page
+## 4. Adding section to the page
 
 Go to edit the page where you want to display the latest products section with Elementor. I take the homepage as an example.
 
@@ -143,9 +143,9 @@ All the products are obtained and displayed in the time order: the latest post f
 
 ![The result of displaying the latest products section before styling.](https://i.imgur.com/tb3kVVQ.png)
 
-## Step 5: Style the section
+## 5. Styling the section
 
-### Add CSS code to style each element
+### Adding CSS code to style each element
 
 To style the section, you can set the CSS classes for each element in the **Advanced** tab.
 
@@ -157,7 +157,7 @@ After setting CSS classes for each element, choose the **Section** element that 
 
 I uploaded the code I use to [Github](https://github.com/wpmetabox/tutorials/blob/master/display-latest-posts-with-Elementor/custom.css), so you can easily refer to it.
 
-### Create slider effect for the section (Optional)
+### Creating slider effect for the section (Optional)
 
 To have the slider effect, you should use some JS. I use the [Slick Slider library](https://github.com/kenwheeler/slick/tree/master/slick) for it. You can add JS code to the theme’s file or use a 3rd party plugin.
 
