@@ -20,13 +20,13 @@ For this practice, we need these tools:
 
 (Coming soon)
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type**.
 
 ![Create a new post type](https://i.imgur.com/g3nBd0W.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create fields you want.
 
@@ -37,9 +37,9 @@ This is the structure of the fields that I’ll create.
 <table>
 <tbody>
 <tr>
-<td>**Field**</td>
-<td>**Types of Field**</td>
-<td>**ID**</td>
+<td> Field </td>
+<td> Types of Field </td>
+<td> ID </td>
 </tr>
 <tr>
 <td>Variations of Product</td>
@@ -93,7 +93,7 @@ Back to the post editor, you will see all of the created custom fields.
 
 Now, just enter the information into the fields.
 
-## Step 3: Display the variations information
+## 3. Displaying the variations information
 
 To display the product variations information on the product page, you normally have to go to the theme’s files to add code or use a page builder. But, you have another way with the **MB Views** from **Meta Box** to create templates without touching the theme’s files.
 
@@ -141,11 +141,11 @@ On the single product page, all the elements have just been rearranged.
 
 ![All the elements of single product page have just been rearranged](https://i.imgur.com/m0ckVMh.gif)
 
-## Step 4: Set rules to display the variations
+## 4. Setting rules to display the variations
 
 The images of the product variations will be in a slider and the information of each variation displays only when you choose the matching color. To have it, I use some JS and CSS. However, I’m using **My Custom Functionality** plugin instead of adding them directly to the theme. So, when I change the theme, it won’t be affected.
 
-### Download the JS and CSS library
+### Downloading the JS and CSS library
 
 For the JS and CSS, I use the Slick library. It’s also available on [Github](https://github.com/kenwheeler/slick/tree/master/slick). We just need three files here.
 
@@ -153,7 +153,7 @@ For the JS and CSS, I use the Slick library. It’s also available on [Github](h
 
 Go to the folder of the My Custom Functionality plugin. Upload them into the corresponding JS and CSS folders.
 
-### Create custom JS for slider and rules
+### Creating custom JS for slider and rules
 
 Next, to set a rule that stipulates for displaying the information of each variation as well as the slider, I’ll create a **custom.js** file in the **js** folder and add the following code to it.
 
@@ -250,7 +250,7 @@ e.preventDefault();
 * `jQuery("div[data-id]").removeClass("active"); jQuery("div[data-id='" + jQuery(this).attr("href").replace("#", "") + "']").addClass("active")`: to remove and add the active class to all the elements that have value of the data-id attribute as the name of the color. It means that when you click on a color, all the corresponding information of that variation such as price, size, status, and image gallery will be displayed.
 * `jQuery('.slider-single').slick('refresh')` and `jQuery('.slider-nav').slick('refresh')`: to refresh both sliders to load new images.
 
-### Declare the js and css files
+### Declaring the js and css files
 
 Now, add code inside the function `custom_enqueue_files()` in the `plugin.php` file in the case you use the 3rd party plugin as I’m using. In the case you want to insert code directly into the theme file, use the `functions.php` file.
 
@@ -267,7 +267,7 @@ Now, the product images have already turned into a slider, but we cannot see all
 
 ![The product images turn into a slider](https://i.imgur.com/QR1FF2Z.gif)
 
-## Step 5: Style the product page
+## 5. Styling the product page
 
 Go to the view of Meta Box, add some code into the **CSS** tab of the view.
 
