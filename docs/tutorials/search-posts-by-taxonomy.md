@@ -8,13 +8,13 @@ Here is an example of this practice with hotels filtered by location:
 
 ![Example of seraching posts by taxonomy](https://imgur.com/V5kT58q.png)
 
-## Before Getting Starte
+## Before Getting Started
 
 In addition to using the **Meta Box Core Plugin**, ensure you already have the **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**. It is a free extension of Meta Box and is used to create custom post types and custom taxonomies.
 
 Besides, I also use a free theme as a demo. It’s [Justread](https://gretathemes.com/wordpress-themes/justread/).
 
-## Step 1: Create a new custom post type and custom taxonomy
+## 1. Creating a new custom post type and custom taxonomy
 
 Go to **Meta Box** > **Post Types** > **New Post Type**.
 
@@ -42,7 +42,7 @@ You can also use [plugins](https://wordpress.org/search/import+taxonomy+data/) t
 
 ![You can choose more locations as you want](https://i.imgur.com/gXsuBCc.png)
 
-## Step 2: Create the search box
+## 2. Creating the search box
 
 First, go to the **Hotel** post type’s archive page (http://domain.com/post-type-name).
 
@@ -62,7 +62,7 @@ Then, you will see the search box as follows:
 
 ![Search box appears as following](https://i.imgur.com/Bzwysn3.png)
 
-## Step 3: Display hotels that meet the criterion
+## 3. Displaying hotels that meet the criterion
 
 Let’s use ajax to filter so people can click the **Search** button without reloading the website.
 
