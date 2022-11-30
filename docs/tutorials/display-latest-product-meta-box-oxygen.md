@@ -26,7 +26,7 @@ So, these are several tools we need:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to save the data of the restaurants;
 * [Oxygen](https://oxygenbuilder.com/): to build the page for displaying the posts. You should use the 3.9 version or upper to have integration with Meta Box.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type** to create a new post type for the restaurants.
 
@@ -34,7 +34,7 @@ After publishing, you’ll see a new Restaurant menu in your dashboard.
 
 ![Create a new custom post type](https://i.imgur.com/07DcNhO.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to add a new field group.
 
@@ -56,9 +56,9 @@ When creating a new post in the **Restaurant** post type, the custom fields are 
 
 ![The custom fields in the post editor](https://i.imgur.com/AvwlKLv.png)
 
-## Step 3: Add a section for the latest products section
+## 3. Adding a section for the latest products section
 
-### Create and configure the section
+### Creating and configuring the section
 
 Let’s edit the homepage with Oxygen.
 
@@ -70,7 +70,7 @@ In this component settings, choose **Query > Custom > Post Type**, then search f
 
 ![Search the wanted post type](https://i.imgur.com/cZbISWW.gif)
 
-### Display products information into the section
+### Displaying products information into the section
 
 To display restaurant’s information, add some components to show them such as name, featured image, voucher and so on.
 
@@ -120,9 +120,9 @@ After saving the changes for the page, you will see all the information of the r
 
 ![all the information has been obtained](https://i.imgur.com/MZ15y7n.gif)
 
-## Step 4: Style the section
+## 4. Styling the section
 
-### Add CSS code to style each element
+### Adding CSS code to style each element
 
 To style the section, I will restructure some components and set CSS classes for them.
 
@@ -135,7 +135,7 @@ Then, still in the Oxygen preview, choose **Manage > Stylesheet** and **Add Styl
 
 ![Add Stylesheet to add some css](https://i.imgur.com/zXm13Wc.gif)
 
-### Create slider effect for the section (Optional)
+### Creating slider effect for the section (Optional)
 
 To have the slider effect, you should use some JS. I use the Slick Slider library for it. You can add JS code to the theme’s file or use a 3rd party plugin.
 
