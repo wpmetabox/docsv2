@@ -8,7 +8,7 @@ WooCommerce is an open-source eCommerce platform built on WordPress that powers 
 
 In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
 
-## Step 1: Create custom fields
+## 1. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create any fields for saving extra information for your products.
 
@@ -34,11 +34,11 @@ After publishing the field group, return to the editor page of the product (post
 
 ![custom fields show in the page editor](https://i.imgur.com/p0B7u59.png)
 
-## Step 2: Display the custom fields’ values on frontend
+## 2. Displaying the custom fields’ values on frontend
 
 Add the following code to the `functions.php` file of the theme:
 
-```
+```php
 add_action( 'woocommerce_product_meta_end', 'extra_info' );
 function extra_info() {
     echo "<div class='extra-info'>";
