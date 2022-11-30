@@ -32,13 +32,13 @@ So, here are the tools we need for this practice:
 
 ![Intergrations between WP Grid Builder](https://i.imgur.com/eo20R9C.png)
 
-## Creating restaurant post type
+## 1. Creating restaurant post type
 
 Go to **Meta Box > Post Types** to create a new post type for the restaurants.
 
 ![Create a new custom post type for ](https://i.imgur.com/OyfXcNz.png)
 
-## Creating custom fields for restaurants
+## 2. Creating custom fields for restaurants
 
 Go to **Meta Box > Custom Fields**, then create fields as you want.
 
@@ -60,7 +60,7 @@ Look at the field which we use to clarify which restaurant is featured, it is in
 
 Now, let’s fill in the information for the restaurant into the fields.
 
-## Creating a card view
+## 3. Creating a card view
 
 Go to **Gridbuilder > All Cards > Create a Card**. This is the one to stipulate which information about the products (in this case is the restaurants) will be displayed.
 
@@ -141,7 +141,7 @@ There is no need to change any options for this block.
 
 That’s all for the card.
 
-## Creating a grid and condition
+## 4. Creating a grid and condition
 
 ### Creating a grid to display restaurants
 
@@ -177,7 +177,7 @@ To stipulate which information displays in the grid, move to the **Card Style** 
 
 ![Choose the card styles you want to display for the post as Featured Restaurant](https://i.imgur.com/IWRqW5y.png)
 
-## Displaying the grid on the frontend
+## 5. Displaying the grid on the frontend
 
 Let’s edit the homepage with Elementor. 
 
@@ -191,7 +191,7 @@ Then, you’ll see the featured restaurants displayed on the homepage.
 
 ![Featured restaurants as displayed on the homepage](https://i.imgur.com/QBwcKeC.png)
 
-## Styling
+## 6. Styling
 
 In the editor for the created grid of WP Grid Builder, go to the **Customization** section and add CSS code.
 
