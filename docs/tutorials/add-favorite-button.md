@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 **MB Favorite Posts** is a solution of Meta Box for users saving a post to their Favorite lists. This solution provides you with all the needed tools and features to **add a Favorite button**. This tutorial will show how!
 
-## Video Version
+## Video version
 
 <LiteYouTubeEmbed id='fSFmNp-Ayew' />
 
@@ -48,7 +48,7 @@ You can change the style for the button. We create 3 predefined styles for you t
 
 ![Style for the button](https://i.imgur.com/1FlEIKQ.gif)
 
-### Enable for non-logged in users
+### Enabling for non-logged in users
 
 This option is chosen as default. However, if users do not log in, their favorite posts list will be **temporarily saved in the cookie of the browser**, and will be lost when the cookie is deleted. 
 
