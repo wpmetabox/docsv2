@@ -13,7 +13,7 @@ For this practice, we need the following tools:
 * [Meta Box](https://metabox.io): the framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI on the back end to create custom fields to save the file for downloading. Or you can use the free [Online Generator](https://metabox.io/online-generator/) tool instead.
 
-## Step 1: Create custom fields
+## 1. Creating custom fields
 
 Go to **Meta Box > Custom Fields**.
 
@@ -33,7 +33,7 @@ Now, just upload a file you want to share by clicking the **Add Media** button. 
 
 ![The document is inserted to the custom fields](https://i.imgur.com/Iqve4Hs.png)
 
-## Step 2: Display the download button on the frontend
+## 2. Displaying the download button on the frontend
 
 There are 2 methods to display the download button: **adding code to the theme** or **using a shortcode**. Note that the first way is helpful when you just need to display this button **in the same position on all pages**. If you want it to appear in **different positions on different pages**, the second one will make sense.
 
