@@ -25,7 +25,7 @@ These are the tools we need:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields in the backend for saving restaurants’ information;
 * **Bricks**: to build the page. Remember to update and activate the latest version of Bricks on your site.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type** to create a new post type.
 
@@ -35,7 +35,7 @@ Publish and you’ll see a new menu named Restaurants in the dashboard.
 
 ![a new menu display on the left sidebar](https://i.imgur.com/zwO4Ahp.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields*8 to create fields.
 
@@ -49,9 +49,9 @@ When creating a new post in the Restaurant post type, the custom fields will be 
 
 ![newly created custom fields](https://i.imgur.com/VKHeWA1.png)
 
-## Step 3: Add a section for the latest products
+## 3. Adding a section for the latest products
 
-### Create and configure the section
+### Creating and configuring the section
 
 Let’s edit a page to add the section. I’ll take the homepage and **edit it with Bricks**.
 
@@ -87,7 +87,7 @@ Next, if you want to change the page’s layout or the display of the featured i
 
 ![change the image options](https://i.imgur.com/2CKWlmP.png)
 
-### Display products information into the section
+### Displaying products information into the section
 
 Now, let’s add data from custom fields to the section to show extra information about the restaurants. Still in the **Content** section of the **Posts** element, go to the **Fields** and add some fields. You also can remove the field you don’t want to show here, e.g I’ll remove the post excerpt.
 
@@ -115,7 +115,7 @@ Now, all the data saved in custom fields has been obtained and displayed on the 
 
 ![all the data saved in custom fields has been obtained and displayed on the frontend](https://i.imgur.com/WYMV9q9.png)
 
-## Step 4: Style the section
+## 4. Styling the section
 
 In the Bricks visual editor, you can easily style the section as you want. For further styling, you can also add some CSS code.
 
