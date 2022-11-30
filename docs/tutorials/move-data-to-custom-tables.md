@@ -90,7 +90,7 @@ add_action( 'admin_init', 'estar_child_data_company' );
 
 ```
 
-This script will run when you access the URL https://yourwebsite.com/wp-admin/?move-data-companies=1. It's a URL to your WordPress backend, here we use a custom URL parameter `move-data-companies` to let the script know how to process the data.
+This script will run when you access the URL *https://yourwebsite.com/wp-admin/?move-data-companies=1* It's a URL to your WordPress backend, here we use a custom URL parameter `move-data-companies` to let the script know how to process the data.
 
 The script will check if the current user is an admin, so normal users can't run it. When you access the URL, the script will get all the companies via `estar_child_admin_records_get_companies()` and for each company, it will process its data via `estar_child_move_data_company(). ‘estar’` is the theme that I’m using, you can change it to yours.
 
@@ -148,7 +148,7 @@ function estar_child_move_data_company( $post_id ) {
 
 This code queries 100 companies in each run. For each company, it gets the custom fields' data from the post meta, and then inserts them into the new custom table. After that, it removes all custom fields from the post meta table.
 
-After adding code, go to this URL: https://yourwebsite.com/wp-admin/?move-data-companies=1 to enable moving the custom fields' data to the custom table.
+After adding code, go to this URL: *https://yourwebsite.com/wp-admin/?move-data-companies=1* to enable moving the custom fields' data to the custom table.
 
 ![Enable moving the custom fields' data to the custom table](https://i.imgur.com/RlNZRFS.png)
 
