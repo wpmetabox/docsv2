@@ -69,7 +69,7 @@ echo $price;
 
 We’ll use this function:
 
-```
+```php
 $images = rwmb_meta( $field_id, array( 'size' => 'thumbnail' ) );
 foreach ( $images as $image ) {
     echo '<a href="'.$image['full_url'].'"><img src="'.$image['url'].'"></a>';
