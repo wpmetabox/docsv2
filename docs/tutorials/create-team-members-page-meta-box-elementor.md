@@ -146,8 +146,7 @@ For more advanced styling, I also added some custom CSS. Go to **Posts** element
 
 Here is my CSS code that you can refer to:
 
-
-```
+```css
 .team-member .elementor-widget:not(:last-child) {
     margin-bottom: 5px;
 }
