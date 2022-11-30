@@ -27,7 +27,7 @@ To do it, we need Meta Box and its extensions:
 
 We’ll use [Bricks](https://bricksbuilder.io/) to build the page.
 
-## Step 1: Create a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box > Post Types > New Post Type**.
 
@@ -37,7 +37,7 @@ After publishing, you will see your new post type displayed on the admin dashboa
 
 ![The result appears after creating](https://i.imgur.com/pjgDm93.png)
 
-## Step 2: Create custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New**.
 
@@ -51,7 +51,7 @@ Finally, go to the post editor, and you will see your created custom fields appe
 
 ![the custom fields display in the post editor](https://i.imgur.com/ZNScdEe.png)
 
-## Step 3: Create the page
+## 3. Creating the page
 
 Move to **Pages > Add New** to create a new page. Then, edit it with Bricks.
 
@@ -101,7 +101,7 @@ Because Bricks does not support adding classes for each element, you should use 
 
 ![use the HTML tag for styling](https://i.imgur.com/bNCoekt.png)
 
-## Step 4: Style the page
+## 4. Styling the page
 
 For styling the page, still in the page editor with Bricks, move to the **Style** section of each element to change the look of them if you want.
 
