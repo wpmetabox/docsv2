@@ -39,7 +39,7 @@ Then, you will see the new plugin in the list of installed plugins in the **Dash
 
 In the `rating.php` file, add some code to add the star ratings field type.
 
-```
+```php
 if (class_exists ('RWMB_Field')) {
     class RWMB_Rating_Field extends RWMB_Field {}
 }
@@ -62,7 +62,7 @@ This rating class will inherit all the methods of the `RWMB_Field` class. In thi
 
 Do it by adding the following code to the `rating.php` file.
 
-```
+```php
 public static function html( $meta, $field ) {
 	return sprintf(
 		'<fieldset class="rwmb-rating" id="%1$s">
@@ -92,7 +92,7 @@ Next, we need to style it a little bit to show the above radio options as stars 
 
 Just add this code to the `css/admin.css` file.
 
-```
+```css
 .rwmb-rating {
     border: none;
     float: left;
@@ -127,7 +127,8 @@ Just add this code to the `css/admin.css` file.
 }
 ```
 To get the style in admin, we use the function `admin_enqueue_scripts () to enqueue`. Please enqueue in the `rating.php` file as follows:
-```
+
+```php
 public static function admin_enqueue_scripts() {
     wp_enqueue_style( 'rwmb-rating', plugin_dir_url( __FILE__ ) . '/css/admin.css', [], '1.0.0' );
 }
@@ -179,7 +180,7 @@ We have created a custom field to add star ratings to a post / page in the backe
 
 In the `rating.php` file, you use the `format_single_value ()` method by adding this code:
 
-```
+```php
 public static function format_single_value( $field, $value, $args, $post_id ) {
 	require_once( ABSPATH . 'wp-admin/includes/template.php' );
 	wp_enqueue_style( 'dashicons' );
@@ -197,7 +198,8 @@ public static function format_single_value( $field, $value, $args, $post_id ) {
 **Note**: To use the `wp_star_rating()` function, you need to require the `wp-admin/includes/template.php` file as above.
 
 The above code will output the following HTML on the frontend:
-```
+
+```php
 <div class="star-rating" title="Number of stars obtained rating">
      <div class="star star-full"></div>
      <div class="star star-full"></div>
@@ -208,7 +210,7 @@ The above code will output the following HTML on the frontend:
 ```
 In case you want the star reviews to look better, you should style a bit. I will enqueue the Dashicons and the frontend.css file as in the method above. Below is the content of the frontend.css file:
 
-```
+```css
 @font-face {
     font-family: "dashicons";
     src: url("../fonts/dashicons.eot");
@@ -247,7 +249,7 @@ In case you want the star reviews to look better, you should style a bit. I will
 ```
 To display the results to the website, simply insert the following code in your theme's `single.php` file or anywhere you want to display:
 
-```
+```php
 rwmb_the_value( 'rating' );
 ```
 In the case that you don’t want to touch the theme files, instead of adding the above line of code to the `single.php` file, just use MB Views to display the field’s value.
