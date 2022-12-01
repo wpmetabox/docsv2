@@ -58,7 +58,7 @@ The task is **getting the product short description and rating from the Product 
 
 First, register a custom snippet variable for Yoast by adding the following code in `functions.php` file:
 
-```
+```php
 add_action( 'wpseo_register_extra_replacements', function() {
     wpseo_register_var_replacement( '%%my_var%%', 'my_callback_function', 'advanced', 'Some help text' );
 } );
@@ -72,7 +72,7 @@ The hook `wpseo_register_extra_replacements` is used to register a custom replac
 
 Here is the callback function to retrieve the replacement value for the variable. Copy and insert this code to `functions.php`.
 
-```
+```php
 function my_callback_function() {
     $value = '';
 
