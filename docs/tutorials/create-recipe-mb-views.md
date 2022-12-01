@@ -63,7 +63,7 @@ There are two methods to get and display the custom fields’ value on the front
 * **Method 1**: Add the code to the theme file.
 * **Method 2**: Use **MB Views** extension.
 
-### Method 1: Add code to the theme file
+### Method 1: Adding code to the theme file
 
 I’ll use a hook of [eStar](https://gretathemes.com/wordpress-themes/estar/) theme which is `estar_entry_footer_before` to display custom fields’ value. Refer to this hook [here](https://gretathemes.com/docs/estar/#section-theme-hooks).
 
@@ -165,7 +165,7 @@ function estar_child_recipe() {
 * `do_shortcode( wpautop(  ) )`: remove extra tags from custom field WYSIWYG
 * `wp_oembed_get()`: Embeds the object by specified URL. Tries to get the HTML code from the passed URL by using supported WordPress oEmbed providers.
 
-### Method 2: Use the MB Views extension
+### Method 2: Using the MB Views extension
 
 Go to **Meta Box > Views > Add New**.
 
