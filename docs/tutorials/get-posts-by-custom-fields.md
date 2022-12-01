@@ -35,6 +35,7 @@ To know more about the parameters of which the constructor method WP_Query accep
 ### 1. Creating a search section
 
 Create a page template and use a `WP_Query` to query posts and display them as the search result. Besides, you have the total right to control the query as well as the returns. In the folder `page-templates` of your theme, create a file called `advanced-search.php` in the folder with the below content:
+
 ```php
 <?php
 /**
@@ -46,6 +47,7 @@ Go to **Pages > Add New** and create an **Advanced Search** page then assign the
 ![Create Advanced Search](https://i.imgur.com/jK6wSJ3.png)
 
 Now, we display the search form in the page template and edit the code of that page as below:
+
 ```php
 <?php
 /**
@@ -107,7 +109,8 @@ Field max_price:
 ```
 
 After that, to display the search result, add the following code to the `advanced-search.php` file:
-```
+
+```php
 <?php if ( $min_price || $max_price ): ?>
     <div class="search-result">
         <?php
@@ -158,7 +161,8 @@ Explanation:
 * `if ( $search_query->have_posts() ): while ( $search_query->have_posts() ) { $search_query->the_post(); get_template_part( 'template-parts/post/content', 'excerpt' ); } wp_reset_postdata(); ?>in the above code <?php else: ?> <p>No result found.</p> <?php endif; ?> </div> <?php endif; ?>`: create a loop to get posts that match the conditions specified above
 
 In the case that the Price field is used for a custom post type, you should declare the post type in the `$args` variable like this:
-```
+
+```php
 $args = [
     'post_type' => 'post_type_slug',
     'posts_per_page' => - 1,
@@ -195,7 +199,7 @@ By default, WordPress only allows searching by keywords on the `wp_posts` table 
 
 Thus, to search by custom field values, we need to JOIN `wp_posts` and `wp_postmeta` tables together. This work can be done by adding this code to the `functions.php` file:
 
-```
+```php
 function justread_search_join( $join ) {
     global $wpdb;
 
