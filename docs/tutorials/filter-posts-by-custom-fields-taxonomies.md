@@ -90,13 +90,13 @@ add_action( 'pre_get_posts', ‘yourprefix_filter_archive_by_tax’);
 
 In this code:
 
-```yourprefix_filter_archive_by_tax```: This is the name that I set for the function. You can name it as you want
+* ```yourprefix_filter_archive_by_tax```: This is the name that I set for the function. You can name it as you want
 
-```if ( is_admin() || ! $query->is_archive() || ! $query->is_main_query() || empty( $_GET['getby'] ) || 'cat' !== $_GET['getby'] ) {```: This statement does check if the user is on the archive page on frontend and it runs the main query or not.
+* ```if ( is_admin() || ! $query->is_archive() || ! $query->is_main_query() || empty( $_GET['getby'] ) || 'cat' !== $_GET['getby'] ) {```: This statement does check if the user is on the archive page on frontend and it runs the main query or not.
    
-``` $tax_query = [ ['taxonomy' => 'publisher', 'field'    => 'slug', 'terms'    => $_GET['cat'], ], ]; ```: This is to declare the variable to get the posts which have the taxonomy’s slug as `publisher`. `terms`    => $`_GET['cat']` is used to get the slug of the terms inside the taxonomy.
+* ``` $tax_query = [ ['taxonomy' => 'publisher', 'field'    => 'slug', 'terms'    => $_GET['cat'], ], ]; ```: This is to declare the variable to get the posts which have the taxonomy’s slug as `publisher`. `terms`    => $`_GET['cat']` is used to get the slug of the terms inside the taxonomy.
 
-```add_action( 'pre_get_posts', ‘yourprefix_filter_archive_by_tax’);```: This is used to add a callback function to an action hook. `pre_get_posts` is the name of the hook filter and the `yourprefix_filter_archive_by_tax` is a callback to add into `pre_get_posts`. We use `pre_get_posts` to modify the query to get the wanted posts. We simply add a `tax_query` by publisher to get posts that have the selected term.
+* ```add_action( 'pre_get_posts', ‘yourprefix_filter_archive_by_tax’);```: This is used to add a callback function to an action hook. `pre_get_posts` is the name of the hook filter and the `yourprefix_filter_archive_by_tax` is a callback to add into `pre_get_posts`. We use `pre_get_posts` to modify the query to get the wanted posts. We simply add a `tax_query` by publisher to get posts that have the selected term.
 
 Here is the final result. All books of that term are filtered.
 
