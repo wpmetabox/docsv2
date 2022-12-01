@@ -121,7 +121,8 @@ This is how the code is after replacing all the elements.
 ![Apply the code](https://i.imgur.com/A7EXdTk.png)
 
 This is the full code after we modified it:
-```
+
+```php
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
