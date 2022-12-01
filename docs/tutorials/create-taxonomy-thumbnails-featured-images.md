@@ -197,6 +197,7 @@ Explanation:
 * `$terms= get_the_terms( $post->ID, 'portfolio-type')`: to get the list of the term from the taxonomy that the ID as `portfolio-type`;
 * `get_term_meta ()`: to get the custom fields’ value of the corresponding terms;
 * `if ( !empty( $terms ) ){`: to check which archive page of which term that users are in;
+* `<?php echo $term->name; ?>`: to display the name of the corresponding term that users are in;
 * `<?php echo category_description(the_category_id()); ?>`: similarly, to display the description of the corresponding term;
 
 Here is the result:
