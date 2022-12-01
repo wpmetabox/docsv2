@@ -6,10 +6,9 @@ title: Creating custom post types and taxonomies
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-## Video
+## Video version
 
 <LiteYouTubeEmbed id='-oYrHGOri4w' />
-
 
 ## Before getting started
 
