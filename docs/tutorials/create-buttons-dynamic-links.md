@@ -17,7 +17,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 ## Before getting started
 
-In addition to using the <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Core Plugin</a>, make sure you already have these extensions:
+In addition to using Meta Box, make sure you already have these extensions:
 
 * <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>: It provides UI to create custom fields;
 * <a href="https://metabox.io/plugins/mb-views/">MB Views</a>: Build front-end templates for WordPress without touching theme files. Support Twig and all field types.

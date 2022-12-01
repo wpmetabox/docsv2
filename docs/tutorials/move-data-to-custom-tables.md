@@ -14,9 +14,9 @@ By default, WordPress saves custom fields' values in the `wp_postmeta_ table` in
 
 To move your custom fields' data to a custom table, here are the tools you need:
 
-* <a href="https://metabox.io/?swcfpc=1">Meta Box core plugin</a> to have a framework to create a custom post type and custom fields for the form. It’s free and available on <a href="https://wordpress.org/plugins/meta-box">wordpress.org</a>.
-* <a href="https://metabox.io/plugins/mb-custom-table/?swcfpc=1">MB Custom Table</a> allows saving custom fields' data in a custom table.
-* <a href="https://metabox.io/plugins/meta-box-builder/?swcfpc=1">Meta Box Builder</a> to have an UI in the back-end to create custom fields for the post type.
+* <a href="https://metabox.io/">Meta Box</a> to have a framework to create a custom post type and custom fields for the form. It’s free and available on <a href="https://wordpress.org/plugins/meta-box">wordpress.org</a>.
+* <a href="https://metabox.io/plugins/mb-custom-table/">MB Custom Table</a> allows saving custom fields' data in a custom table.
+* <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a> to have an UI in the back-end to create custom fields for the post type.
 
 
 :::tip

@@ -12,11 +12,11 @@ Here I create a field to allow the user to choose the background for the post. A
 
 ## Before getting started
 
-In addition to using the **Meta Box Core Plugin**, make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
+In addition to using **Meta Box**, make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
 
 In this article, `list.js` and `script.js` are the **Library** and the file I use to create JS for the search box, respectively.
 
-## 1. Declaring the Library
+## Enqueuing JavaScript
 
 First, I need to declare a third-party library named `list.js` by adding the following code to `functions.php`:
 
@@ -27,13 +27,14 @@ function justread_add_list_js_library() {
 }
 add_filter( 'rwmb_enqueue_scripts', 'justread_add_list_js_library' );
 ```
+
 **In there**:
 
 * `rwmb_enqueue_scripts` is the hook to declare the script in the Admin Panel.
 * In the above code, we declared two files that are `list.js` - the library file and `scripts.js` - the file used to perform the search function.
 * `justread` is the theme that  I’m using (you can download this theme [here](https://gretathemes.com/wordpress-themes/justread/) for free).
 
-## 2. Creating options and the search box
+## Creating options and the search box
 
 Go to **Meta Box > Custom Fields > Add New**.
 
@@ -63,9 +64,10 @@ Now, try editing any post. When you drag it down, the choices appear as follows:
 
 However, the search box is still not working, and you have not added pagination. As a result, move to step 3.
 
-## 3. Creating the pagination and the search function
+## Creating the pagination and the search function
 
 To do it, you need to add the following code to the `scripts.js` file declared in step 1:
+
 ```js
 jQuery( function( $ ) {
 	$( document ).ready( function() {

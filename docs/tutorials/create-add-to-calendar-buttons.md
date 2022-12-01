@@ -12,7 +12,7 @@ Here is an example which we’ll do for this practice:
 
 Here are the tools we’ll use in this practice:
 
-* [Meta Box Core Plugin](https://metabox.io/)
+* [Meta Box](https://metabox.io/)
 * [MB Custom Post Type & Taxonomies](https://wordpress.org/plugins/mb-custom-post-type/): to create custom post types for events;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It provides UI to create custom fields;
 

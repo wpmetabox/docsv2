@@ -11,7 +11,7 @@ We need to install the following tools:
 * [Meta Box](https://metabox.io): is a framework that allows you to custom custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI in the backend to create custom fields.
 
-## 1. Creating a new custom field
+## Creating a new custom field
 
 We’ll create a custom field in the type of **Post** where users can choose which post will be related to the current one.
 
@@ -37,7 +37,7 @@ Back to the post editor of your post type, you will see the created field and a 
 
 ![Created field in the post editor](https://i.imgur.com/kr4iWdH.png)
 
-## 2. Displaying the related posts on the front end
+## Displaying the related posts on the front end
 
 The created Post field saves the IDs of chosen related posts. It returns an array of values as follows:
 

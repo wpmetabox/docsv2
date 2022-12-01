@@ -1,7 +1,7 @@
 ---
 title: Creating reusable template parts
 ---
-Beside getting Meta Box fields and building your templates on the front end fast and easily,  [MB Views](https://metabox.io/plugins/mb-views/?swcfpc=1) also helps you to create template parts then include it into multiple views for reusable purpose. Let’s see how!
+Beside getting Meta Box fields and building your templates on the front end fast and easily,  [MB Views](https://metabox.io/plugins/mb-views/) also helps you to create template parts then include it into multiple views for reusable purpose. Let’s see how!
 
 ## Before getting started
 
@@ -113,7 +113,7 @@ For example: if you’re creating a template part to display posts in a custom c
     {% endfor %}
 </ul>
 ```
-(To understand the syntax, please see the documentation for the [mb proxy](https://docs.metabox.io/extensions/mb-views/?swcfpc=1#running-php-functions))
+(To understand the syntax, please see the documentation for the [mb proxy](https://docs.metabox.io/extensions/mb-views/#running-php-functions))
 
 Then in a view, you can set the query args to show posts in a category ID 3:
 

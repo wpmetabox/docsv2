@@ -6,7 +6,7 @@ Besides using Tag and Category to filter your posts, you can also use custom fie
 
 Here are some tools we need:
 
-* [Meta Box core plugin](https://metabox.io/) to have a framework to create custom post types and custom fields. It’s free and available on [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box](https://metabox.io/) to have a framework to create custom post types and custom fields. It’s free and available on wordpress.org;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type named Book and a custom taxonomy named Publishers;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for Book custom post type in the backend.
 

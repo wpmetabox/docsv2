@@ -17,7 +17,7 @@ Here are the tools we need:
 
 ## 1. Creating custom fields
 
-### For the product information
+### Product information
 
 First, create some extra custom fields to input data. You can dig into the details on how to add custom fields [here](https://docs.metabox.io/tutorials/create-custom-fields/).
 
@@ -31,7 +31,7 @@ Move to the **Settings** tab > **Location** > choose **Post type** as **Product*
 
 ![Set location for the created fields](https://i.imgur.com/KH3vub8.png)
 
-### For the button information
+### Creating buttons
 
 We’ll add another field group as the **Button** field type to save the information of two buttons.
 
@@ -54,28 +54,26 @@ After creating needed field groups, go to any post in the **Product** post type 
 In the theme’s `functions.php` file, add this code:
 
 ```php
-add_action( 'rwmb_enqueue_scripts', 'twentytwenty_enqueue_custom_script' );
-function twentytwenty_enqueue_custom_script() {
-        wp_enqueue_script( 'script-id', get_template_directory_uri() . '/assets/js/admin.js', array( 'jquery' ), '', true );
-}
+add_action( 'rwmb_enqueue_scripts', function() {
+    wp_enqueue_script( 'script-id', get_template_directory_uri() . '/assets/js/admin.js', ['jquery'], '', true );
+} );
 ```
+
 This code enqueues a script file named `admin.js` which we will create in the next.
 
 Then, create an `admin.js` file in the `assets/js` folder with this content:
 
 ```js
 jQuery( function ( $ ) {
+    $( '#button_reset' ).on( 'click', function() {
+        $( '#product-information' ).find( 'input[type=text]' ).val('');
+    } );
 
-$( '#button_reset' ).on( 'click', function() {
-                $( '#product-information' ).find( 'input[type=text]' ).val('');
-} );
-
-        $( '#set_default' ).on( 'click', function() {
-                $( '#product-information' ).find( '#wholesale_price' ).val('150000');
-                $( '#product-information' ).find( '#retail_price' ).val('100000');
-                $( '#product-information' ).find( '#discount_price' ).val('80000');
-        } );
-
+    $( '#set_default' ).on( 'click', function() {
+        $( '#product-information' ).find( '#wholesale_price' ).val('150000');
+        $( '#product-information' ).find( '#retail_price' ).val('100000');
+        $( '#product-information' ).find( '#discount_price' ).val('80000');
+    } );
 } );
 ```
 **Explanation**:

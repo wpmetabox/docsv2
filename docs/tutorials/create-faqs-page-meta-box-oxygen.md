@@ -17,7 +17,7 @@ This is a specific example that we’ll create in this practice:
 
 ## Before getting started
 
-For custom fields, we will use [Meta Box Core Plugin](https://metabox.io/) and [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to have a UI for creating custom fields right on the back end.
+For custom fields, we will use [Meta Box](https://metabox.io/) and [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to have a UI for creating custom fields right on the back end.
 
 The FAQs page is built with [Oxygen](https://oxygenbuilder.com/). You should use its 3.9 version or higher, which has native integration with Meta Box.
 

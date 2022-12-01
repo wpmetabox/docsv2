@@ -17,10 +17,10 @@ In this practice, I’ll take an example of an online food order with multiple r
 
 For having time slots for each day, we’ll use custom fields. So, we need the [Meta Box](https://metabox.io) to have a framework to create them. Furthermore, we also need some advanced features from Meta Box that are available in the following extensions:
 
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/?swcfpc=1): provides an intuitive UI in the back end to create and configure custom fields for opening hours;
-* [MB Group](https://metabox.io/plugins/meta-box-group/?swcfpc=1): helps to arrange fields into groups;
-* [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/?swcfpc=1): allows you to create rules to control the display of hours with options.
-* [MB Views](https://metabox.io/plugins/mb-views/?swcfpc=1): create templates and display the custom fields’ value in Opening Hours on the frontend;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides an intuitive UI in the back end to create and configure custom fields for opening hours;
+* [MB Group](https://metabox.io/plugins/meta-box-group/): helps to arrange fields into groups;
+* [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): allows you to create rules to control the display of hours with options.
+* [MB Views](https://metabox.io/plugins/mb-views/): create templates and display the custom fields’ value in Opening Hours on the frontend;
 
 ## 1. Creating custom fields
 

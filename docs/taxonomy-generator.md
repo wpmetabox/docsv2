@@ -3,7 +3,7 @@ title: Taxonomy Generator
 displayed_sidebar: general
 ---
 
-[Taxonomy Generator](https://metabox.io/taxonomy-generator/) is a free online tool to create custom taxonomy easily and quickly. You can use it without installing Meta Box core plugin.
+[Taxonomy Generator](https://metabox.io/taxonomy-generator/) is a free online tool to create custom taxonomy easily and quickly. You can use it without installing Meta Box.
 
 ## Set up a New Custom Post Taxonomy
 

@@ -28,7 +28,7 @@ For those filters, I use taxonomy to classify restaurants into separate groups a
 
 So, there are some tools we need for this practice:
 
-* **[Meta Box core plugin](https://docs.metabox.io/installation/)**: to have a framework to create custom fields;
+* **[Meta Box](https://docs.metabox.io/installation/)**: to have a framework to create custom fields;
 * **[MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/)**: to create the Restaurant post type and taxonomy named Voucher to filter posts;
 * **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: to have a UI in the back end to create custom fields to save extra information about restaurants;
 * **[MB Admin Columns (optional)](https://metabox.io/plugins/mb-admin-columns/)**: to display the voucher of each restaurant in the backend for the purpose of easier comparison in this practice;

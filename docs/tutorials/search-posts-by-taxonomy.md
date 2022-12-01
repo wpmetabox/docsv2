@@ -10,7 +10,7 @@ Here is an example of this practice with hotels filtered by location:
 
 ## Before getting started
 
-In addition to using the **Meta Box Core Plugin**, ensure you already have the **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**. It is a free extension of Meta Box and is used to create custom post types and custom taxonomies.
+In addition to using **Meta Box**, ensure you already have the **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**. It is a free extension of Meta Box and is used to create custom post types and custom taxonomies.
 
 Besides, I also use a free theme as a demo. It’s [Justread](https://gretathemes.com/wordpress-themes/justread/).
 

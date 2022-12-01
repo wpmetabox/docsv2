@@ -6,7 +6,7 @@ WooCommerce is an open-source eCommerce platform built on WordPress that powers 
 
 ## Before getting started
 
-In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
+In addition to using [Meta Box](https://metabox.io/), make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
 
 ## 1. Creating custom fields
 
@@ -34,26 +34,25 @@ After publishing the field group, return to the editor page of the product (post
 
 ![custom fields show in the page editor](https://i.imgur.com/p0B7u59.png)
 
-## 2. Displaying the custom fields’ values on frontend
+## 2. Displaying custom fields on the front end
 
 Add the following code to the `functions.php` file of the theme:
 
 ```php
-add_action( 'woocommerce_product_meta_end', 'extra_info' );
-function extra_info() {
-    echo "<div class='extra-info'>";
+add_action( 'woocommerce_product_meta_end', function () {
+    echo '<div class="extra-info">';
     if ( $meta = rwmb_meta( 'text_1' ) ) {
-        echo '<div>' . __( 'Guaranty: ', 'twentytwenty' ) . $meta . '</div>';
+        echo '<div>', __( 'Guaranty: ', 'twentytwenty' ), $meta, '</div>';
     }
     if ( $meta = rwmb_meta( 'color_1' ) ) {
-        echo '<div class="color">' . __( 'Color: ', 'twentytwenty' );
-        foreach($meta as $value) {
-            echo '<span style="background:'. $value .'"></span>';
+        echo '<div class="color">', __( 'Color: ', 'twentytwenty' );
+        foreach( $meta as $value ) {
+            echo '<span style="background:', $value, '"></span>';
         }
         echo '</div>';
     }
     echo "</div>";
-}
+} );
 ```
 
 **Explanation**:
@@ -74,6 +73,7 @@ After that, the values of the field I added will display like this:
 ![The values of the added field will display like this](https://i.imgur.com/vIQpq2n.png)
 
 The color section of the product here is temporarily not shown, so I added some CSS to style this part.
+
 ```css
 .extra-info {
     display:flex;
@@ -96,9 +96,7 @@ The color section of the product here is temporarily not shown, so I added some 
     align-items: center;
 }
 ```
+
 Here is the result: 
 
 ![The result](https://i.imgur.com/0xVlFOM.png)
-
-
-

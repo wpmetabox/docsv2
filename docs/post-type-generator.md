@@ -5,7 +5,7 @@ displayed_sidebar: general
 
 [Post Type Generator](https://metabox.io/post-type-generator/) is a free online tool to help you create and set up custom post types easily with a simple and intuitive user interface. With this tool, you can copy and paste PHP code for custom post types in a few clicks.
 
-One notable feature of this tool is that it can be used independently from Meta Box core plugin. Therefore, you don’t need to install the Meta Box core plugin to use Post Type Generator.
+One notable feature of this tool is that it can be used independently from Meta Box. Therefore, you don’t need to install the Meta Box to use Post Type Generator.
 
 
 ## Set up a New Custom Post Type

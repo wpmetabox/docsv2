@@ -8,7 +8,7 @@ Normally, to change your avatar on WordPress, you have to use your Gravatar acco
 
 ## Before Getting Started
 
-In addition to using the [Meta Box Core Plugin](https://metabox.io/), make sure you already have these extensions:
+In addition to using [Meta Box](https://metabox.io/), make sure you already have these extensions:
 
 * [MB User Meta](https://metabox.io/plugins/mb-user-meta/) or[ MB User Profile](https://metabox.io/plugins/mb-user-profile/): to create fields for your user profiles. It’s okay to use one of them only.
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields with an intuitive UI without having to code yourself. In addition, you can also use another tool to do that - Online Generator.

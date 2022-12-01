@@ -24,7 +24,7 @@ I’m going to move data of the **Project** custom type and its custom fields fr
 
 As I said, we will create a custom post type and custom fields in [Meta Box](https://wordpress.org/plugins/meta-box/), so we need it along with some of its extensions:
 
-* [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types easily. It can run without installing the Meta Box core plugin. Otherwise, you can try [Post Type Generator](https://metabox.io/post-type-generator/).
+* [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types easily. It can run without Meta Box. Otherwise, you can try [Post Type Generator](https://metabox.io/post-type-generator/).
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields with an intuitive interface in the backend. If you don’t want to use this premium extension of Meta Box, you can use the free tool provided by Meta Box in the simplified version of Meta Box Builder - [Online Generator](https://metabox.io/online-generator/).
 
 ## 1. Getting the post type’s slug & custom field’s ID in Pods
