@@ -155,6 +155,9 @@ Custom supports for the block. This parameter accepts an array like this:
 	'align'           => ['wide', 'full'],
 	'customClassName' => true,
 	'anchor'          => false,
+	'multiple'        => true,
+	'reusable'        => true,
+	'lock'            => false,
 ],
 ```
 
@@ -192,8 +195,7 @@ This property adds a field to define a custom CSS class name for the block's wra
 If you want to have a block that can be inserted into each post one time only (like a hero area block), then set this parameter to `false`. A non-multiple block's icon is automatically dimmed (unclickable) to prevent multiple instances.
 
 ```php
-// Use the block just once per post
-multiple: false,
+'multiple' => false,
 ```
 
 #### `reusable`
@@ -201,8 +203,15 @@ multiple: false,
 A block may want to disable the ability to be converted into a reusable block. By default, all blocks can be converted to reusable blocks. If supports reusable is set to `false`, the option to convert the block into a reusable block will not appear.
 
 ```php
-// Don't allow the block to be converted into a reusable block.
-reusable: false,
+'reusable' => false,
+```
+
+#### `lock`
+
+If you want to remove the support for locking UI, set this param to `false`:
+
+```php
+'lock' => false,
 ```
 
 ### `mode`
