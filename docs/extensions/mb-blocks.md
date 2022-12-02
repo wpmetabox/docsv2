@@ -468,7 +468,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 Each field is an array of its settings. See [this guide](/field-settings/) for details about field settings.
 
-## Nested blocks (InnerBlocks)
+## Nested blocks
 
 WordPress has an amazing feature for Gutenberg blocks called [InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/), which allows you to insert other blocks inside a block. Since version 1.4, MB Blocks also supports this feature.
 
@@ -604,7 +604,7 @@ If the block is a top-level block: the locking of the Custom Post Type is used.
 
 ### Example
 
-This is a more complete example of the testimonial block with more properties (here I insert inline style into the block for the demo purpose, you should separate it into a CSS file using the `enqueue_style` parameter):
+This is a more complete example of the testimonial block with more properties:
 
 ```php
 <?php
@@ -635,27 +635,6 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 					<?php mb_the_block_field( 'image' ) ?>
 				</div>
 			</div>
-			<style>
-				.testimonial {
-					padding: 16px;
-					display: flex;
-					justify-content: space-between;
-					align-items: flex-start;
-				}
-				.testimonial__text {
-					flex: 1;
-					margin-right: 12px;
-				}
-				.testimonial--image_above {
-					flex-direction: column-reverse;
-					text-align: center;
-					align-items: stretch;
-				}
-				.testimonial--image_above .testimonial__text {
-					margin-right: 0;
-					margin-top: 12px;
-				}
-			</style>
 			<?php
 		},
 		'fields'          => [
