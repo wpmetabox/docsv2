@@ -719,6 +719,16 @@ The data is passed to the `render_callback` or `render_template` as `$attributes
 
 Note that: although you can access to the fields values via `$attributes['data]'`, it's recommended to use the `mb_get_block_field()` and `mb_the_block_field()` functions.
 
+## Hooks
+
+`mb_${blockId}_settings`
+
+This is a filter to let developers to change the block settings **via Javascript**. It accept one parameter - `settings`, the block settings array.
+
+In this filter, `blockId` is the block ID, which has format `meta-box/id` where `id` is the field group ID.
+
+To use Javascript hook, please refer to [this tutorial](https://metabox.io/wordpress-javascript-hooks/).
+
 ## Video Tutorial
 
 **Create Custom Gutenberg Blocks With Meta Box (only PHP)**
