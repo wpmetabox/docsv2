@@ -40,7 +40,7 @@ Name|Description
 `recaptcha_key`|Google reCaptcha site key (version 3). Optional.
 `recaptcha_secret`|Google reCaptcha secret key (version 3). Optional.
 `show_if_user_can`|Always show the form if the current user has a proper capability. Should be a [WordPress capability](https://wordpress.org/support/article/roles-and-capabilities/). Useful if admins want to register for other people.
-`role`|Role for the new user. Default is empty.
+`role`|Role for the new user. If `append_role` is set to `true`, then the new role is appended, so users will have 2 roles: the default roles set by WordPress and this role. Default is empty.
 `append_role`|Whether to append the role to users instead of setting only one role for users.
 
 ## Login form
@@ -178,6 +178,29 @@ To let users change their password, please use the field group ID `rwmb-user-inf
 [mb_user_profile_info id="rwmb-user-info"]
 ```
 
+## Force password change
+
+MB User Profile allows you set a security rule that forces users to change their password after the first login. To enable this feature, go to **Settings > General** and tick the checkbox **Force password change**:
+
+![Force password change settings](https://i.imgur.com/z82eSRB.png)
+
+After that, any users registered with MB User Profile will be requested to change their password when they login to the website the first time.
+
+## Email templates
+
+MB User Profile send emails to users when:
+
+- They reset their passwords
+- They register and are requested to confirm by email
+
+To overwrite the emails created by the plugin, please:
+
+- Create a folder `mb-user-profile` in your theme (or your child theme)
+- Copy the email templates from the MB User Profile's `templates` folder to the `mb-user-profile` folder that you've just created above
+- Edit the new templates files
+
+Now the emails sent by the plugin will use the templates in your theme.
+
 ## Hooks
 
 ### `rwmb_profile_redirect`
@@ -310,23 +333,18 @@ The action accepts 1 parameter: the instance of the `MB_User_Profile_User` class
 - `$user_id`: The submitted user ID
 - `$config`: The configuration, taken from the shortcode attributes
 
-## Notes
+## Known issues
 
 ### Upload files / images
 
 To be able to upload files or images (via fields `file_advanced`, `file_upload`, `image_advanced`, `image_upload`), users have to login and proper capability `upload_files` to access the Media Library. If your users don't have that capability (if they have subscriber role), then the upload fields don't work. In that case, you can add the capability for that role as follows:
 
 ```php
-function mb_allow_subscriber_uploads() {
-    if ( is_admin() ) {
-        return;
-    }
-
-    // Replace 'subscriber' with the required role to update, can also be contributor.
+add_action( 'init', function () {
+    // Replace 'subscriber' with the required role to update.
     $subscriber = get_role( 'subscriber' );
     $subscriber->add_cap( 'upload_files' );
-}
-add_action( 'init', 'mb_allow_subscriber_uploads' );
+} );
 ```
 
 Another solution is using `file` or `image` fields. Both of them works similar. They just don't have a nice UI, but they do the job very well.
@@ -337,4 +355,4 @@ The extension outputs the default fields' HTML with CSS comes from Meta Box plug
 
 ### Caching
 
-As you might know, Meta Box uses [nonces](https://codex.wordpress.org/WordPress_Nonces) to prevent misuse or malicious requests. As the nonce fields are outputted directly in the HTML, they might be cached by caching plugins such as W3 Total Cache, WP Super Cache, etc. And thus, the verification of the nonce might not work properly and break the form submission. In this case, please do not cache the page where the form is embeded (both caching plugins allow you to do that). For more information, please read this [technical article](https://myatus.com/p/wordpress-caching-and-nonce-lifespan/).
+As you might know, Meta Box uses [nonces](https://developer.wordpress.org/apis/security/nonces/) to prevent misuse or malicious requests. As the nonce fields are outputted directly in the HTML, they might be cached by caching plugins such as W3 Total Cache, WP Super Cache, etc. And thus, the verification of the nonce might not work properly and break the form submission. In this case, please do not cache the page where the form is embeded (caching plugins allow you to do that).
