@@ -687,25 +687,15 @@ html[data-theme='dark'] .tutorials_trending{
 }
 .tutorials_category--new .items_titles {
 	position: relative;
-	font-size: 16px ;
-	line-height: 19px;
-	font-weight: 500;
 	color: var(--color-tutorius);
-    padding: 15px 15px 10px 15px;
+    padding: 15px 0px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
     margin: 0;
-    border-bottom: 1px solid #B4B4B4;
     clear: both;
 }
-.tutorials_category--new .items_titles::before{
-	content: "";
-    width: 5px;
-    height: 5px;
-    background: var(--ifm-menu-color-active);
-    position: absolute;
-    left: 0px;
-    top: 23px;
-}
-.tutorials_category--new .items :hover .items_titles{
+.tutorials_category--new p :hover .items_titles{
     color: var(--ifm-menu-color-active);
 }
 @media ( max-width: 1199px ){
