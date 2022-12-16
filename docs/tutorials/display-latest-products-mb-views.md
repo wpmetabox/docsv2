@@ -8,7 +8,7 @@ I’ll take the restaurants as an example for products.
 
 ![the example of creating the latest restaurants section.](https://i.imgur.com/6EhYqsk.png)
 
-## Before getting started
+## Preparation
 
 Here, we’ll display the latest restaurants first and then the oldest ones. Each restaurant is a post of a custom post type. All the restaurants will have detailed information including name and image (are the title and featured images of the post) and other extra information such as address, logo, voucher (are saved in different custom fields).
 
@@ -57,12 +57,12 @@ Go to **Meta Box > Views** to create a new template.
 
 In the **Template** tab, add this code:
 ```
-{% set args = { post_type: 'restaurant', posts_per_page: -1, orderby: 'date', order: 'DESC' } 
+{% set args = { post_type: 'restaurant', posts_per_page: -1, orderby: 'date', order: 'DESC' }
 %}
 {% set posts = mb.get_posts( args ) %}
 {% for post in posts %}
             ………
-{% endfor %} 
+{% endfor %}
 ```
 ![Use MB Views to create a new template for the latest products.](https://i.imgur.com/njcRNNo.png)
 

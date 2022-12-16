@@ -3,7 +3,7 @@ title: Creating reusable template parts
 ---
 Beside getting Meta Box fields and building your templates on the front end fast and easily,  [MB Views](https://metabox.io/plugins/mb-views/) also helps you to create template parts then include it into multiple views for reusable purpose. Let’s see how!
 
-## Before getting started
+## Preparation
 
 Assuming you’re creating a view for the **Event** post type. And you need to display event thumbnail, date, and location on both singular and archive pages. Also, on singular event pages, you need to display more details like Google maps, speaker info.
 
@@ -35,7 +35,7 @@ Then, you can add some div tags for styling as follows.
 ```
 (Note that I’m still using TailwindCSS to style the event details quickly. It’s not required, though.)
 
-In the **Settings** of the view, I’ll set **Type** to **Shortcode** because we don’t use this view to render templates for any singular or archive pages. We only use it as a template part to 
+In the **Settings** of the view, I’ll set **Type** to **Shortcode** because we don’t use this view to render templates for any singular or archive pages. We only use it as a template part to
 
 in other views.
 

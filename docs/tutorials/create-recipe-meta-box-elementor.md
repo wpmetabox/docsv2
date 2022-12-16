@@ -15,7 +15,7 @@ I made an example like this:
 
 <LiteYouTubeEmbed id='YL3rRGN7Ovc' />
 
-## Before getting started
+## Preparation
 
 Besides the name and the images of the recipe which are the post title and featured image, we also have extra information about the recipe and how to cook. These information will be saved in different custom fields. So, we need to create custom post type and custom fields in this practice.
 
@@ -132,7 +132,7 @@ Go to **Templates > Theme Builder > Meta Box Group Skin > Add New** to create a 
 
 ![add new skin in the Meta Box Group Skin](https://i.imgur.com/1peivE2.png)
 
-Remember to set the preview for the skin. 
+Remember to set the preview for the skin.
 
 ![click the Dynamic Tags button](https://i.imgur.com/MKUnM5B.png)
 
@@ -240,7 +240,7 @@ Now, the recipe has a new look as below:
 
 ------
 
-You may be interested in: 
+You may be interested in:
 * [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-from-cloneable-fields-meta-box-elementor/)
 * [Displaying the latest products](https://docs.metabox.io/tutorials/display-latest-product-meta-box-elementor/)
 * [Showing featured products](https://docs.metabox.io/tutorials/show-featured-products-meta-box-elementor-wp-grid-builder/)

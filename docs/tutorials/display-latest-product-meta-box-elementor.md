@@ -15,7 +15,7 @@ I’ll take the restaurants as an example for products.
 
 <LiteYouTubeEmbed id='KvYfEO-X4OA' />
 
-## Before getting started
+## Preparation
 
 I will show the latest restaurants first and then the oldest ones. Each restaurant is a post of a custom post type. All the extra information of each restaurant such as address, logo, status and voucher will be saved in different custom fields.
 
@@ -104,7 +104,7 @@ The **Address** of the restaurant is also saved in a custom field, add a **Text 
 
 ![Settings for Address field](https://i.imgur.com/q9HEYCe.gif)
 
-When users hover over the featured image of the restaurant, I want a text as **View Detail** display, so I add a **Heading** widget here. Rename the **Title** to **View Detail** and link it to the 
+When users hover over the featured image of the restaurant, I want a text as **View Detail** display, so I add a **Heading** widget here. Rename the **Title** to **View Detail** and link it to the
 **Post URL**.
 
 ![Setting for View Detail field.](https://i.imgur.com/dXaufUA.gif)

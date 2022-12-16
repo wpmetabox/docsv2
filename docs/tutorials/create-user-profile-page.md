@@ -6,7 +6,7 @@ This tutorial provides a way to create those pages and allow users to edit their
 
 ![Example of user profile page](https://i.imgur.com/6HTuQ40.jpg)
 
-## Before getting started
+## Preparation
 
 We need the following plugins for this post:
 
@@ -25,7 +25,7 @@ Go to the **Settings** menu, in the **Membership** section of the **General Sett
 
 Create a new page as normally. I named it as **Register Page**.
 
-Since we have the [MB User Profile](https://metabox.io/plugins/mb-user-profile/) extension which automatically creates basic fields, including the default fields such as **Username, Email, Password**, and **Confirm Password**, you just need to insert a shortcode to the page as follows. 
+Since we have the [MB User Profile](https://metabox.io/plugins/mb-user-profile/) extension which automatically creates basic fields, including the default fields such as **Username, Email, Password**, and **Confirm Password**, you just need to insert a shortcode to the page as follows.
 
 In the content section of the page, insert this shortcode:
 
@@ -226,7 +226,7 @@ To check whether the fields work well or not, you can input something then go to
 
 ### Creating and displaying additional fields
 
-In case you allow users adding and editing more information, you may create more custom fields using Meta Box. 
+In case you allow users adding and editing more information, you may create more custom fields using Meta Box.
 
 ![Create more custom fields to add more information](https://i.imgur.com/wMgFxP7.png)
 

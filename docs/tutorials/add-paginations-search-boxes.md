@@ -1,5 +1,5 @@
 ---
-title: Adding paginations & searching boxes to custom fields 
+title: Adding paginations & searching boxes to custom fields
 ---
 
 When your custom fields have too many options, displaying them all at once will make the post or page editor look very confusing. To divide these options into different pages, you can include pagination and search boxes.
@@ -10,7 +10,7 @@ Here is an example:
 
 Here I create a field to allow the user to choose the background for the post. And there will be a lot of photo styles available for users to choose from. So I will divide these photos into the pages as above.
 
-## Before getting started
+## Preparation
 
 In addition to using **Meta Box**, make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
 
@@ -76,7 +76,7 @@ jQuery( function( $ ) {
 				{ attr: 'value', name: 'rwmb-image_select' }
 			],
 			pagination: true,
-			page: 3, 
+			page: 3,
 		};
 		var featureList = new List( 'background-for-post', options );
 	} );

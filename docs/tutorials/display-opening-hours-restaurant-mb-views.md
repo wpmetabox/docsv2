@@ -11,7 +11,7 @@ For a website having information about more than one restaurant, each one may ha
 
 <LiteYouTubeEmbed id='8nZwyBbAWXU' />
 
-## Before getting started
+## Preparation
 
 In this practice, I’ll take an example of an online food order with multiple restaurants on the site. Each restaurant will be a post in their own custom post type. Then, we’ll display the opening hours on the singular post where we put information about each restaurant.
 

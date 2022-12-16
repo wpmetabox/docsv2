@@ -12,7 +12,7 @@ I chose a demo like this as an example:
 
 ![Example of landing pages](https://i.imgur.com/QpyxYnG.jpg)
 
-## Before getting started
+## Preparation
 
 As you can see, there are five sections including Hero, Intro, Services, Features, CTA and Footer. Corresponding to each section, there are some types of information. To save this data, we need some custom fields.
 

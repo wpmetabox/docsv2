@@ -5,7 +5,7 @@ title: Creating a contact form
 
 With the help of the **MB Frontend Submission** extension from Meta Box, you can easily create forms for users to submit their posts from the frontend. Let’s see how it does!
 
-## Before getting started
+## Preparation
 
 To get started, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/).
 

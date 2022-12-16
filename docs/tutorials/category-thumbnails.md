@@ -13,7 +13,7 @@ Here is my example:
 
 ![An example for Category Thumbnails](https://i.imgur.com/1POSTVu.png)
 
-## Before getting started
+## Preparation
 
 In addition to [Meta Box](https://metabox.io/), make sure you already have these extensions:
 

@@ -10,7 +10,7 @@ Let’s display product variations that are stored in custom fields to the produ
 
 (Coming soon)
 
-## Before getting started
+## Preparation
 
 For this practice, we need these tools:
 
@@ -191,7 +191,7 @@ The Status field is a **Select** field (which has options as well as the checkbo
     <?php endif; ?>
     <?php
         }
-    }			
+    }
 ?>
 ```
 
@@ -336,7 +336,7 @@ Add code inside the function **custom_enqueue_files()** in the `plugin.php` file
 	wp_enqueue_script('slick-min', plugin_dir_url( __FILE__ ).'/assets/js/slick.min.js', ['jquery']);
 	wp_enqueue_script('script', plugin_dir_url( __FILE__ ).'/assets/js/script.js', ['jquery']);
 ```
-	
+
 Go back to a single product page, there is a slider and some differences.
 
 ![The product images have already turned into a slider.](https://i.imgur.com/QR1FF2Z.gif)

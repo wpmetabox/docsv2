@@ -8,7 +8,7 @@ My example user list will be shown like this:
 
 ![Example of a users list](https://i.imgur.com/zpNqsi1.gif)
 
-## Before getting started
+## Preparation
 
 As you can see, we’ll have extra information for users along with the default ones. Furthermore, we also have a custom field to choose to show/hide the users.
 

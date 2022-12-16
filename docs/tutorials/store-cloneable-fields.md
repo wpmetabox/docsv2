@@ -4,7 +4,7 @@ title: Storing cloneable fields in multiple rows in the database
 
 Normally, the data saved in a custom field is stored in one row only in the database, even when it is a cloneable/repeater field. To convert its data to store in multiple rows, let’s follow this tutorial.
 
-## Before getting started
+## Preparation
 
 You should backup your database before running the code as this tutorial.
 
@@ -51,7 +51,7 @@ function prefix_convert( $field_id ) {
  }
  wp_reset_postdata();
 }
- 
+
 add_action( 'init', function() {
  if ( ! isset( $_GET['unique_key'] ) ) {
  return;

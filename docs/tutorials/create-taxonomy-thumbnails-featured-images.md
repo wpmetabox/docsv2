@@ -1,6 +1,6 @@
 ---
 title: Creating taxonomy thumbnails & featured Images
---- 
+---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -15,10 +15,10 @@ We are going to **create taxonomy thumbnails and featured images using custom fi
 
 <LiteYouTubeEmbed id='8Nyg8lw-GH8' />
 
-## Before getting started 
+## Preparation
 
 In addition to using the [Meta Box](https://metabox.io/), make sure you already have these extensions:
- 
+
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): a free extension of Meta Box to create custom post types. It’s also available on [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/);
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It provides a UI on the back end to create and configure custom fields without code;
 * [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): a premium extension of Meta Box to add custom fields created with Meta Box to categories, tags, or any custom taxonomies;
@@ -30,7 +30,7 @@ Finally, [Oxygen Builder](https://oxygenbuilder.com/). I build the pages with Ox
 
 ### Creating a new post type
 
-Go to **Meta Box > Post Types > New Post Type**. 
+Go to **Meta Box > Post Types > New Post Type**.
 
 ![Create a new post type](https://i.imgur.com/8iPsfQD.png)
 
@@ -58,7 +58,7 @@ Go to **Meta Box > Custom Fields > Add New** to create some fields.
 
 I will create two fields, as follows:
 
-* **URL**: It allows users to input an image by entering the image URL. 
+* **URL**: It allows users to input an image by entering the image URL.
 * **Single Image**: It supports uploading images to the Media Library.
 
 These fields are so simple that I just enter their name and ID without any further configuration.
@@ -66,7 +66,7 @@ These fields are so simple that I just enter their name and ID without any furth
 Then, move to the **Settings** tab, set the **Location** as **Taxonomy** and select **Portfolio Type**.
 
 ![Set location for the post type](https://i.imgur.com/FFS04q2.png)
- 
+
 Then, go to the **Portfolio Type** taxonomy, and you will see the fields. Let’s upload images for each term here.
 
 ![The fields in the taxonomy](https://i.imgur.com/m2zFoiu.png)
@@ -179,7 +179,7 @@ I’ll add a component named **Code Block**, and drag and drop it into the **Sec
 <?php
     $terms= get_the_terms( $post->ID, 'portfolio-type');
    $link_image_source = get_term_meta( $terms[0]->term_id, 'url_portfolio_thumbnail', true );
-   
+
    if ( !empty( $terms ) ){
         $term = array_shift( $terms );
     }

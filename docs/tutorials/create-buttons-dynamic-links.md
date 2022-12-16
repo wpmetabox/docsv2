@@ -15,7 +15,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 <LiteYouTubeEmbed id='8sD-Lyy6-5c' />
 
-## Before getting started
+## Preparation
 
 In addition to using Meta Box, make sure you already have these extensions:
 

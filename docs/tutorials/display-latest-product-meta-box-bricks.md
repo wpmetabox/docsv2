@@ -14,7 +14,7 @@ I’ll take the restaurants as an example for products.
 
 <LiteYouTubeEmbed id='ThRnmpJgROE' />
 
-## Before getting started
+## Preparation
 
 As you can see in my example, my products are restaurants which are posts of a custom post type. We’ll display the latest posts first and then the oldest ones based on the posts’ published date. The name and image of the restaurants are the post title and featured image of the post. The extra information such as address, logo, and voucher will be stored in separated custom fields.
 

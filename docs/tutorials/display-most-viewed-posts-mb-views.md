@@ -13,7 +13,7 @@ Today, we’ll showcase the most viewed posts on the homepage to attract custome
 
 <LiteYouTubeEmbed id='JEph7bhDhm8' />
 
-## Before getting started
+## Preparation
 
 We’ll create a **custom post type** named **Restaurants** and each restaurant is a post of that post type.
 

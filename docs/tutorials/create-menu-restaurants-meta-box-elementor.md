@@ -13,7 +13,7 @@ In an online food order website, you may have more than one restaurant and each 
 
 <LiteYouTubeEmbed id='mE_mtLz5lCA' />
 
-## Before getting started
+## Preparation
 
 Each restaurant on the website will be a post of a custom post type. Then the dishes of their menus will be added to those posts by using custom fields.
 

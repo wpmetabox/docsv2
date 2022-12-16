@@ -4,7 +4,7 @@ title: Adding guest authors and guest posts
 
 Adding guest authors means that **allowing users to sign up a Guest Author account and submit posts** from the frontend. In this practice, we’re going to do it and also do some further things such as: **reviewing every guest post** before publishing, allowing the guest authors to **manage and edit their articles** before reviewing them.
 
-## Before getting started
+## Preparation
 
 In this practice, we need some tools below:
 
@@ -91,7 +91,7 @@ For your quick reference, this is the whole code for this file, which I made wit
 
 ```php
 <?php
-/** 
+/**
  * Template Name: My Account
  */
 
@@ -258,7 +258,7 @@ $args_post_by_author = array(
 'post_status'   => array('publish', 'pending')
 );
 $posts_author = get_posts($args_post_by_author);
-``` 
+```
 **In there**:
 
 * `$arg_post_by_author`: an array that holds all the essential parameters for information exporting

@@ -4,7 +4,7 @@ title: Displaying all listings on a map
 
 We will use custom fields to allow users to find some restaurant information surrounding their location. Then, the map along with the location markups will be displayed on a page when someone searches.
 
-## Before getting started
+## Preparation
 
 We need the [Meta Box](https://metabox.io) to have the framework for creating custom post type and custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
@@ -23,7 +23,7 @@ Go to **Meta Box > Post Types** to create a new post type for your restaurants.
 
 ## 2. Creating custom fields
 
-Each restaurant will have some information such as: Title, Description, Address Location, Marker icon for the map. Title and Description are used for the post’s default information. 
+Each restaurant will have some information such as: Title, Description, Address Location, Marker icon for the map. Title and Description are used for the post’s default information.
 Go to **Meta Box > Custom Fields** and create fields for other information.
 
 ![Create custom fields](https://i.imgur.com/IW13Uac.png)
@@ -91,14 +91,14 @@ add_action( 'wp_enqueue_scripts', function() {
     }
 } );
 ```
-Explanation: 
+Explanation:
 
 ```
         wp_enqueue_style( 'leaflet', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.css', [], '1.5.1' );
         wp_enqueue_script( 'leaflet', 'https://unpkg.com/leaflet@1.5.1/dist/leaflet.js', [], '1.5.1', true );
 
         wp_enqueue_script( 'list', get_parent_theme_file_uri( 'js/list.js' ), ['jquery', 'leaflet'], '1.0', true );
-        
+
  ```
 
 This code is to enqueue a custom JavaScript file to render our map. The file is put under the js folder and is named `list.js`, which we will create in the next step.

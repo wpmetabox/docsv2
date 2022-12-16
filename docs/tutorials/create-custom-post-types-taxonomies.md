@@ -10,7 +10,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 <LiteYouTubeEmbed id='-oYrHGOri4w' />
 
-## Before getting started
+## Preparation
 
 We need the [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/) plugin to create custom post types and custom taxonomies. It's free and available on wordpress.org, so just install it.
 

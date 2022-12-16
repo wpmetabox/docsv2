@@ -10,7 +10,7 @@ By default, WordPress saves custom fields' values in the `wp_postmeta_ table` in
 
 <LiteYouTubeEmbed id='JaEvtYa4Hcg' />
 
-## Before getting started
+## Preparation
 
 To move your custom fields' data to a custom table, here are the tools you need:
 
@@ -68,7 +68,7 @@ function estar_child_data_company() {
 
     $paged = isset( $_GET['estar-child-paged'] ) ? $_GET['estar-child-paged'] : 0;
     $paged += 1;
-    $url = add_query_arg( 'estar-child-paged', $paged, 
+    $url = add_query_arg( 'estar-child-paged', $paged,
 'https://yourwebsite.com/wp-admin/?move-data-companies=1' );
 
     $posts = estar_child_admin_records_get_companies( $paged );

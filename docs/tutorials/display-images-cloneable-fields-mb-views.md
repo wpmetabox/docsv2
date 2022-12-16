@@ -11,7 +11,7 @@ Images like a series of brand logos of typical partners or avatar of clients in 
 
 <LiteYouTubeEmbed id='nteLH6DDKSI' />
 
-## Before getting started
+## Preparation
 
 We’ll need [Meta Box](https://metabox.io) and some of its extensions for this practice:
 
@@ -176,10 +176,10 @@ All the css code is uploaded to [Github](https://github.com/wpmetabox/tutorials/
 After adding css, my brand section turned into a new look.
 
 ![The result after adding css code](https://i.imgur.com/MQpnntm.png)
- 
+
  ------
 
-You may be interested in: 
+You may be interested in:
 * [Creating user profile page on frontend](https://docs.metabox.io/tutorials/create-user-profile-page/)
 * [Creating a dynamic landing page](https://docs.metabox.io/tutorials/create-dynamic-landing-page/)
 * [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-mb-views/)

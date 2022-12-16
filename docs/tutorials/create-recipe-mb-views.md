@@ -1,5 +1,5 @@
 ---
-title: Creating a recipe - MB Views 
+title: Creating a recipe - MB Views
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -17,13 +17,13 @@ And, we’re creating a page with another style for demo only.
 
 <LiteYouTubeEmbed id='pfX0QYllIb8' />
 
-## Before getting started
+## Preparation
 
 In addition to using the [Meta Box](https://metabox.io/plugins/meta-box-builder/), make sure you already have these extensions:
 
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): It helps to create a custom post type that we need for recipes;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
-* [MB Views](https://metabox.io/plugins/mb-views/): Build front-end templates for WordPress without touching theme files. 
+* [MB Views](https://metabox.io/plugins/mb-views/): Build front-end templates for WordPress without touching theme files.
 * [eStar](https://gretathemes.com/wordpress-themes/estar/): It is a lightweight and highly customizable WordPress theme.
 
 ## 1. Creating a custom post type
@@ -58,7 +58,7 @@ I’m going to display the recipe information saved in custom fields into this s
 
 ![Custom fields](https://i.imgur.com/Wp1BugZ.png)
 
-There are two methods to get and display the custom fields’ value on the front end: 
+There are two methods to get and display the custom fields’ value on the front end:
 
 * **Method 1**: Add the code to the theme file.
 * **Method 2**: Use **MB Views** extension.
@@ -158,7 +158,7 @@ function estar_child_recipe() {
 }
 ```
 
-**Explanation**: 
+**Explanation**:
 
 * `'estar_child_recipe'` is the function name, you can set it on a whim.
 * `'ingredients'` , `'instructions'` , `'equipment'` , `'video'` ,` 'note'` ,` 'nutrition'` , `'prep_time'` , `'cook_time'` , `'resting_time'`, `'total_time'` are the IDs of custom fields.
@@ -254,7 +254,7 @@ Now my pizza recipe looks much more delicious and beautiful.
 
 ------
 
-You may be interested in: 
+You may be interested in:
 * [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-mb-views/)
 * [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-cloneable-fields-mb-views/)
 * [Creating a product page](https://docs.metabox.io/tutorials/create-product-pages-mb-views/)

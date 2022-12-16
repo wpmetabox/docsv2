@@ -15,7 +15,7 @@ I also made a sample of the page which is built by Oxygen.
 
 <LiteYouTubeEmbed id='CgI4bxfOkk4' />
 
-## Before getting started
+## Preparation
 
 Each member’s information will be saved in a separated box, maybe called a name card. They are saved in posts of a custom post type for team members only.
 

@@ -4,7 +4,7 @@ title: Adding JavaScript actions using Button field
 
 Besides the default functional buttons, like submitting posts or adding categories, you can use Meta Box to create other custom buttons. One of the Meta Box button’s features is that allows you to add custom JavaScript actions.
 
-## Before getting started
+## Preparation
 
 In this tutorial, I’ll create two buttons for my eCommerce site: one to reset the inputs and another to set default values like this:
 

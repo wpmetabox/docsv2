@@ -8,7 +8,7 @@ I made an example like this:
 
 ![Example of notification](https://i.imgur.com/gVaxcXe.png)
 
-## Before getting started
+## Preparation
 
 We need the following tools for this practice:
 
@@ -45,7 +45,7 @@ After creating all the subfields, move to the **Advanced** tab of the **Group** 
 
 ![Set conditional logic for all the subfields](https://i.imgur.com/BGBw2B4.png)
 
-Then, the fields will show/hide like this: 
+Then, the fields will show/hide like this:
 
 ![the fields will show/hide like this](https://i.imgur.com/iQqMgqM.gif)
 

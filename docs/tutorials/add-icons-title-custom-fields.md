@@ -21,7 +21,7 @@ function your_prefix_enqueue_admin_style() {
 add_action( 'admin_enqueue_scripts', 'your_prefix_enqueue_admin_style' );
 ```
 
-You can skip this step if you’re using [Dashicons](https://developer.wordpress.org/resource/dashicons/). Because this library was created by WordPress, you may use it without enqueueing. 
+You can skip this step if you’re using [Dashicons](https://developer.wordpress.org/resource/dashicons/). Because this library was created by WordPress, you may use it without enqueueing.
 
 I’ll use [Dashicons](https://developer.wordpress.org/resource/dashicons/) in this practice since it's simpler.
 
@@ -29,7 +29,7 @@ I’ll use [Dashicons](https://developer.wordpress.org/resource/dashicons/) in t
 
 There are two ways to insert icons into the title of meta box or field name, which are using code or UI. However, the UI is available only when you have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/),
 
-Here is my example with 3 custom fields inside. I will add icons to this meta box and its custom fields. 
+Here is my example with 3 custom fields inside. I will add icons to this meta box and its custom fields.
 
 ![Example of created fields](https://i.imgur.com/F8DGLez.png)
 

@@ -15,7 +15,7 @@ This is an example of the posts’ background.
 
 <LiteYouTubeEmbed id='sV_ZW2y5CpY' />
 
-## Before getting started
+## Preparation
 
 To change the posts’ background color by categories, we need to create a custom field for the category to choose the background color, then use some code to display it on the frontend.
 

@@ -11,7 +11,7 @@ Here is the example.
 
 ![Example of the online admission form](https://i.imgur.com/cHAFehA.png)
 
-## Before getting started
+## Preparation
 
 Since all the additional information will be saved in different custom fields, we need **[Meta Box](https://metabox.io/)**. It’s free and available on wordpress.org, so you can download it directly.
 
@@ -360,7 +360,7 @@ The **Program Type** field has three options with values and labels.To show up o
 
 ![The program type field](https://i.imgur.com/uMmL2B5.png)
 
-**Note that**: `program_type` is the ID of the **Program Type** field while `undergraduate_program` is the corresponding value of the Undergraduate Programs option that we’ve filled in the Choices box of the Program Type. 
+**Note that**: `program_type` is the ID of the **Program Type** field while `undergraduate_program` is the corresponding value of the Undergraduate Programs option that we’ve filled in the Choices box of the Program Type.
 
 It means when the students chose the Program Type as **Undergraduate Programs**, all the courses of it will be displayed.
 

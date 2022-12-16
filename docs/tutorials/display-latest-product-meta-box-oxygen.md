@@ -15,7 +15,7 @@ I created a latest restaurants section as an example:
 
 <LiteYouTubeEmbed id='2TndR67aQQk' />
 
-## Before getting started
+## Preparation
 
 In this case, my products are restaurants. And, I will show the latest restaurants first and then the oldest ones. All the restaurants are posts of a custom post type. Besides basic information such as name and image of the restaurant (which are the title and featured image of the post), the restaurants will have extra information such as address, voucher and logo will be saved in different custom fields.
 

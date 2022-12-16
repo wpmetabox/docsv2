@@ -1,5 +1,5 @@
 ---
-title: Creating a simple listing site - Meta Box + Bricks
+title: Creating a simple listing site with Bricks
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -16,7 +16,7 @@ Since Bricks supports filtering posts easily, I will show you how to create a fi
 
 <LiteYouTubeEmbed id='bIq1k7-0QMo' />
 
-## Before getting started
+## Preparation
 
 We’ll need a custom post type for restaurants for example. Each restaurant will be saved in a post of a post type. The name and images of the restaurant are the title and featured image of the post. Other extra information such as status, address and logo will be saved in different custom fields.
 

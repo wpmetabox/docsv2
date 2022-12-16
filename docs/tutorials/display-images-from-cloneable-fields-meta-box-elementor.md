@@ -15,7 +15,7 @@ The image below is a specific example.
 
 <LiteYouTubeEmbed id='yqRud-APqgQ' />
 
-## Before getting started
+## Preparation
 
 Here are some tools we need:
 
@@ -160,7 +160,7 @@ Here is the result we’ve got:
 ![The final result of displaying images from cloneable fields with Meta Box + Elementor](https://i.imgur.com/x5JABan.png)
 
 ------
-You may be interested in: 
+You may be interested in:
 
 * [Creating an FAQs page](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-elementor/)
 * [Creating buttons with dynamic link](https://docs.metabox.io/tutorials/create-buttons-dynamic-links/)

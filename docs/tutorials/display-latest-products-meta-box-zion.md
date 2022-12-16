@@ -15,7 +15,7 @@ I’ll take the restaurants as an example for products.
 
 <LiteYouTubeEmbed id='wgklwMfolEc' />
 
-## Before getting started
+## Preparation
 
 We'll display the latest restaurants and then the oldest ones. Each one’s information will be saved in a post of a custom post type. The extra information such as address, logo, voucher will be saved in custom fields.
 

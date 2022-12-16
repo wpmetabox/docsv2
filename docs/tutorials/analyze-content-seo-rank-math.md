@@ -11,14 +11,14 @@ We will use custom fields to add extra information to the content analysis of Ra
 
 <LiteYouTubeEmbed id='I3ncHxLxwlM' />
 
-## Before getting started
+## Preparation
 
-First thing first, make sure that you installed and activated **Meta Box** and **Rank Math**. You can install Meta Box directly from wordpress.org or download it from [metabox.io](https://metabox.io/). 
+First thing first, make sure that you installed and activated **Meta Box** and **Rank Math**. You can install Meta Box directly from wordpress.org or download it from [metabox.io](https://metabox.io/).
 
 You also need these extensions of Meta Box:
 
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
-* [MB Rank Math](https://metabox.io/plugins/mb-rank-math/): to allow Rank Math analyze content from custom fields created by Meta Box. 
+* [MB Rank Math](https://metabox.io/plugins/mb-rank-math/): to allow Rank Math analyze content from custom fields created by Meta Box.
 
 Now, when you go to a post or page, the content in the custom fields hasn’t been added in the Rank Math content analysis yet. To analyze the content in the custom fields, follow this tutorial.
 

@@ -8,7 +8,7 @@ Here is an example which we’ll do for this practice:
 
 ![Example of add-to-calendar buttons](https://i.imgur.com/mO38pFO.png)
 
-## Before getting started
+## Preparation
 
 Here are the tools we’ll use in this practice:
 
@@ -71,7 +71,7 @@ $end_date   = wp_date( 'Ymd\THis', $end_date );
 * `name="start_date"`, `name="end_date"`, `name="location"`, `name="summary"` are the names of the data variables that will be used in the above code.
 * The above code is a form with the POST method to pass the `start_date`, `end_date`, `location`, and `summary data`.
 
-Next, we use the `template_redirect` hook to download the ics file (when users click the Add to Calendar button) with the start_date, end_date, location, and summary data received above. 
+Next, we use the `template_redirect` hook to download the ics file (when users click the Add to Calendar button) with the start_date, end_date, location, and summary data received above.
 
 This hook runs before we determine which template is loaded. In other words, it reloads the page to show a new window for users to download the **ics** file.
 
