@@ -692,9 +692,6 @@ html[data-theme='dark'] .tutorials_trending{
 	position: relative;
 	color: var(--color-tutorius);
     padding: 15px 0px;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 500;
     margin: 0;
     clear: both;
 }
