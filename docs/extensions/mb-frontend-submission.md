@@ -4,42 +4,37 @@ title: MB Frontend Submission
 
 import FAQ from '@site/src/components/FAQ';
 
-MB Frontend Submission lets you put forms on the front end via shortcode so users can submit posts.
+MB Frontend Submission helps you create a front-end forms for users to submit posts to your website. It allows you to submit post fields (title, content, etc.) and also custom fields created by Meta Box. It works with all extensions like [Meta Box Group](/extensions/meta-box-group/) or [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/).
 
 ![submission form](https://i.imgur.com/jfXHqSc.png)
 
-The extension supports post fields and all Meta Box field types and extensions (columns, group, conditional logic, etc.).
+## Submission form
 
-## Creating post forms
+If you're using [Meta Box Builder](/extensions/meta-box-builder/) to [create custom fields](/custom-fields/), then go to **Meta Box > Custom Fields** admin page and copy the content in the **Shortcode** column for the field group that you created:
 
-To create a simple front-end forms, put this shortcode in a page content:
+![Copy submission form shortcode in Meta Box Builder](https://i.imgur.com/sfeWhBA.png)
 
-```php
-[mb_frontend_form post_fields="title,content"]
-```
+Then paste the shortcode into a page. When viewing the page, you'll see the submission form.
 
-This shortcode will create a simple post form which has only 2 fields: post title and post content.
-
-If you want to add custom fields to the form, then change the shortcode to:
+The shortcode has the following format:
 
 ```php
 [mb_frontend_form id="field-group-id" post_fields="title,content"]
 ```
 
-where `field-group-id` is the ID of the field group that you [already created](/custom-fields/#how-to-create-custom-fields).
+It will show the submission form with 2 post fields for post title and post content, and the custom fields that you created for the field group.
 
-You can also output the shortcode with PHP if you want to display the form in your theme or plugin:
+If you only want to **submit posts without custom fields**, then change the shortcode to:
 
 ```php
-$form = '[mb_frontend_form id="field-group-id" post_fields="title,content"]';
-echo do_shortcode( $form );
+[mb_frontend_form post_fields="title,content"]
 ```
 
-## Shortcode attributes
+**Shortcode attributes**
 
 Attributes|Description
 ---|---
-`id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas.
+`id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas. Optional.
 `ajax`|Enable Ajax submission. `true` or `false` (default).
 `edit`|Allow users to edit the post after submitting. `true` or `false` (default). If `true` then `ajax` attribute will be disabled, e.g. set to `false`.
 `allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
@@ -63,11 +58,11 @@ Attributes|Description
 `recaptcha_key`|Google reCaptcha site key (version 3). Optional.
 `recaptcha_secret`|Google reCaptcha secret key (version 3). Optional.
 
-## Dynamic population
+### Dynamic population
 
-The dyanamic population feature allows you to dynamically populate a shortcode attribute with a value. This value can be passed via query string and/or hook.
+The dynamic population feature allows you to dynamically populate a shortcode attribute with a value. This value can be passed via query string and/or hook.
 
-### Query string
+#### Query string
 
 You can populate post ID for the shortcode via the query string by appending the dynamic population parameter for the attribute to the end of your form URL along with your custom value.
 
@@ -79,7 +74,7 @@ The query parameter is `rwmb_frontend_field_post_id`.
 
 Note that *only* post ID is supported for populating via query string since version 2.2.0.
 
-### Hooks
+#### Hooks
 
 Shortcode attributes can also be populated via WordPress hooks. This example below change the `post_id` to `123`:
 
@@ -103,7 +98,7 @@ $value = apply_filters( "rwmb_frontend_field_value_{$attribute}", $value, $args 
 
 The callback function accepts 2 parameters: the attribute value and the array of all attributes. You should use `$args['id]` to check if you're filter for the right form.
 
-## Post template files
+### Templates
 
 The plugin allows you to use a custom template files for post fields and the confirmation message.
 
@@ -119,9 +114,9 @@ In order to overwrite the output of post fields, please following the steps belo
 - Copy a template file that you want to change from plugins's `templates` folder to the new `mb-frontend-submission` folder, keeping the same folder structure.
 - Modify the new template file.
 
-## Reorder post fields
+### Field order
 
-Sometimes you want to **mix post fields with the custom fields**, or change post content to `textarea` field. You can do that with the following steps:
+Sometimes you want to **mix post fields with custom fields**, or change post content to `textarea` field. You can do that with the following steps:
 
 - Remove the `post_fields` attribute from the shortcode
 - Add post fields as normal custom fields to your meta box settings, like this:
@@ -178,7 +173,7 @@ Post thumbnail|`_thumbnail_id`
 
 With this method, you're able to set the label for post fields, or change settings (even field type) for them easily using any [field settings](/field-settings/).
 
-## Validation
+### Validation
 
 There are 2 ways to validate fields: on the front end with JavaScript and on the back end with PHP.
 
@@ -215,9 +210,57 @@ add_filter( 'rwmb_frontend_validate', function( $validate, $config ) {
 }, 10, 2 );
 ```
 
+### File upload
+
+#### User capability
+
+To be able to upload files or images with the media popup (via fields `file_advanced`, `file_upload`, `image_advanced`, `image_upload`), users have to login and proper capability `upload_files` to access the Media Library. If your users don't have that capability (if they have subscriber role), then the upload fields don't work. In that case, you can add the capability for that role as follows:
+
+```php
+add_action( 'init', function () {
+    // Replace 'subscriber' with the required role to update, can also be contributor.
+    $subscriber = get_role( 'subscriber' );
+    $subscriber->add_cap( 'upload_files' );
+} );
+```
+
+Another solution is using `file` or `image` fields. Both of them works similar. They just don't have a nice UI, but they do the job very well.
+
+#### Post thumbnail
+
+Another improvement you might want to add is use the media popup to pick an image as the post thumbnail. By default, it uses `image` field, which provides a simple input for image.
+
+To do that, you need to change the field type for thumbnail from `image` to `single_image`. Here are the steps:
+
+- Create a folder `mb-frontend-submission` in your theme, inside that folder, create a sub-folder `post`.
+- Copy the file `thumbnail.php` from the plugin's `templates/post` folder to the `post` folder above.
+- Replace the content of the copied `thumbnail.php` with [this code](https://pastebin.com/6AFcPF7b).
+
+Please note that, in order to open the media popup, users need to log in and have proper capability. See the section above for how to do that.
+
+### Embedding forms
+
+If you have a front-end submission form on site A, then you want to output it on site B by embedding the form within an iframe, there might be a problem with the cookie policy on browsers that prevent the from from submitting.
+
+To make it work please add this snippet to `functions.php` in your theme on site A:
+
+```php
+add_action( 'template_redirect', function () {
+    if ( session_status() !== PHP_SESSION_NONE || headers_sent() ) {
+        return;
+    }
+
+    $params = session_get_cookie_params();
+    session_set_cookie_params( $params['lifetime'], '/; samesite=None', $_SERVER['HTTP_HOST'], true, false );
+    session_start();
+}, 9 );
+```
+
+The snippet above will set the cookie setting `samesite=None` and `Security=true`. Note that you can only use it on the sites that use HTTPS (connection security) and on Chrome and Firefox. It doesn't work on Safari because Safari is blocking third party cookies. Setting `samesite=None` also might be a security issue, so please be sure you really want to do that. For more details, please [see this article](https://web.dev/samesite-cookies-explained/).
+
 ## User dashboard
 
-To let users **view and edit their submitted posts**, just create a normal WordPress page, and insert the following shortcode into the page content:
+To let users **view and edit their submitted posts**, create a normal WordPress page, and insert the following shortcode into the page content:
 
 ```php
 [mb_frontend_dashboard edit_page="124"]
@@ -472,7 +515,7 @@ The action accepts 1 parameter: the instance of the `\MBFS\Post` class, which ha
 - `$fields`: The post fields
 - `$config`: The configuration, taken from the shortcode attributes
 
-### Dashboard hooks
+### Dashboard
 
 `rwmb_frontend_dashboard_query_args`
 
@@ -520,63 +563,17 @@ add_filter( 'rwmb_frontend_dashboard_edit_action', function( $edit_action, $post
 
 This filter is used to change the delete button for posts in the dashboard. It has 2 parameters: the delete button HTML and the post ID.
 
+`rwmb_frontend_before_edit_action`
 
-## Upload files / images with the media popup
+This action fires before the edit button is displayed.
 
-To be able to upload files or images with the media popup (via fields `file_advanced`, `file_upload`, `image_advanced`, `image_upload`), users have to login and proper capability `upload_files` to access the Media Library. If your users don't have that capability (if they have subscriber role), then the upload fields don't work. In that case, you can add the capability for that role as follows:
+`rwmb_frontend_before_delete_action`
 
-```php
-function mb_allow_subscriber_uploads() {
-    if ( is_admin() ) {
-        return;
-    }
+This action fires before the delete button is displayed.
 
-    // Replace 'subscriber' with the required role to update, can also be contributor.
-    $subscriber = get_role( 'subscriber' );
-    $subscriber->add_cap( 'upload_files' );
-}
-add_action( 'init', 'mb_allow_subscriber_uploads' );
-```
+`rwmb_frontend_end_actions`
 
-Another solution is using `file` or `image` fields. Both of them works similar. They just don't have a nice UI, but they do the job very well.
-
-## Use the media popup for post thumbnail
-
-Another improvement you might want to add is use the media popup to pick an image as the post thumbnail. By default, it uses `image` field, which provides a simple input for image.
-
-To do that, you need to change the field type for thumbnail from `image` to `single_image`. Here are the steps:
-
-- Create a folder `mb-frontend-submission` in your theme, inside that folder, create a sub-folder `post`.
-- Copy the file `thumbnail.php` from the plugin's `templates/post` folder to the `post` folder above.
-- Replace the content of the copied `thumbnail.php` with [this code](https://pastebin.com/6AFcPF7b).
-
-Please note that, in order to open the media popup, users need to log in and have proper capability. See the section above for how to do that.
-
-## Embedding forms on other sites (via iframe)
-
-If you have a front-end submission form on site A, then you want to output it on site B by embedding the form within an iframe, there might be a problem with the cookie policy on browsers that prevent the from from submitting.
-
-To make it work please add this snippet to `functions.php` in your theme on site A:
-
-```php
-add_action( 'template_redirect', 'your_prefix_init_session', 9 );
-function your_prefix_init_session() {
-    if ( session_status() === PHP_SESSION_NONE && ! headers_sent() ) {
-        $currentCookieParams = session_get_cookie_params();
-
-        session_set_cookie_params(
-            $currentCookieParams["lifetime"],
-            '/; samesite=None',
-            $_SERVER['HTTP_HOST'],
-            true,
-            false
-        );
-        session_start();
-    }
-}
-```
-
-The snippet above will set the cookie setting `samesite=None` and `Security=true`. Note that you can only use it on the sites that use HTTPS (connection security) and on Chrome and Firefox. It doesn't work on Safari because Safari is blocking third party cookies. Setting `samesite=None` also might be a security issue, so please be sure you really want to do that. For more details, please [see this article](https://web.dev/samesite-cookies-explained/).
+This action fires after all action buttons are displayed.
 
 ## FAQ
 
@@ -596,7 +593,7 @@ Each relationship box has the ID `{$relationship_id}_relationships_from` and `{$
 
 </FAQ>
 
-<FAQ question="Why does frontend dashoard not display the post type?">
+<FAQ question="Why does frontend dashboard not display the post type?">
 
 You need to add the attribute `post_type` to the frontend submission shortcode
 
@@ -604,7 +601,7 @@ You need to add the attribute `post_type` to the frontend submission shortcode
 
 </FAQ>
 
-## Notes
+## Known issues
 
 ### Styling
 
@@ -612,10 +609,10 @@ The extension outputs the default fields' HTML with CSS comes from Meta Box plug
 
 ### Caching
 
-As you might know, Meta Box uses [nonces](https://codex.wordpress.org/WordPress_Nonces) to prevent misuse or malicious requests. As the nonce fields are outputted directly in the HTML, they might be cached by caching plugins such as W3 Total Cache, WP Super Cache, etc. And thus, the verification of the nonce might not work properly and break the form submission. In this case, please do not cache the page where the form is embeded (both caching plugins allow you to do that). For more information, please read this [technical article](https://myatus.com/p/wordpress-caching-and-nonce-lifespan/).
+As you might know, Meta Box uses [nonces](https://developer.wordpress.org/apis/security/nonces/) to prevent misuse or malicious requests. As the nonce fields are outputted directly in the HTML, they might be cached by caching plugins such as W3 Total Cache, WP Super Cache, etc. And thus, the verification of the nonce might not work properly and break the form submission. In this case, please do not cache the page where the form is embeded (both caching plugins allow you to do that).
 
 ## Tutorials
 
+- [Adding guest authors and guest posts](/tutorials/add-guest-authors/)
 - [MB Frontend Submission: Dashboard, Ajax, reCaptcha & More](https://metabox.io/mb-frontend-submission-dashboard-ajax-recaptcha/)
-- How to Add Guest Author in WordPress using Meta Box: [Part 1](https://metabox.io/p1-add-guest-author-in-wordpress/) & [Part 2](https://metabox.io/p2-add-guest-author-in-wordpress/).
 - [How to Create a Classified Ads Website using Meta Box](https://metabox.io/create-classified-ads-website-using-meta-box/)
