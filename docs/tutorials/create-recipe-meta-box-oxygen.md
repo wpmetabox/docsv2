@@ -13,7 +13,7 @@ We’ll use Oxygen to build a singular page and get the recipe information store
 
 <LiteYouTubeEmbed id='HZLS8pe2nDk' />
 
-## Before getting started
+## Preparation
 
 All of the information about the recipe will be saved in posts of a **custom post type**. The recipe’s name and the dish picture are the title and the featured image of the post. Besides, the remaining detailed information will be saved in **custom fields**.
 
@@ -127,7 +127,7 @@ Go to the recipe page, and you’ll see the new look.
 
 ------
 
-You may be interested in: 
+You may be interested in:
 * [Creating a product page](https://docs.metabox.io/tutorials/create-product-page-meta-box-oxygen/)
 * [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-oxygen/)
 * [Creating a video gallery page](https://docs.metabox.io/tutorials/create-video-gallery-page-meta-box-oxygen/)

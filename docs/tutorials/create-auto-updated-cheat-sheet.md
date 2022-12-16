@@ -13,7 +13,7 @@ Today, we’ll create a submission form to input data, then the data will be aut
 
 <LiteYouTubeEmbed id='_XnNwhKFzlY' />
 
-## Before getting started
+## Preparation
 
 In this tutorial, specifically, we’ll add a cheat sheet about the deals for Black Friday. Each deal will have information like product name, product type, offer start date, end date, and promotion code.
 

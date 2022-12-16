@@ -12,15 +12,15 @@ We will move all the data of the custom post type and custom fields created with
 
 ## Overall
 
-Both Pods and Meta Box use two WordPress standard functions: `get_post_meta()` and `update_post_meta()`. 
+Both Pods and Meta Box use two WordPress standard functions: `get_post_meta()` and `update_post_meta()`.
 
-Besides, these two plugins [save the custom fields' data](https://docs.metabox.io/database/) in the same way: save each field in a line on the post meta table with the `meta_key` field’s ID and the `meta_value` field’s value. 
+Besides, these two plugins [save the custom fields' data](https://docs.metabox.io/database/) in the same way: save each field in a line on the post meta table with the `meta_key` field’s ID and the `meta_value` field’s value.
 
 Therefore, to move data from Pods to Meta Box, we just need to create new fields in Meta Box that have the same IDs as the corresponding fields in Pods. As for the custom post types, the method is the same.
 
 I’m going to move data of the **Project** custom type and its custom fields from Pods to Meta Box. In this case, I’ll move only the data of custom fields for **posts**. You can apply the same method for **terms** and **users**.
 
-## Before getting started
+## Preparation
 
 As I said, we will create a custom post type and custom fields in [Meta Box](https://wordpress.org/plugins/meta-box/), so we need it along with some of its extensions:
 

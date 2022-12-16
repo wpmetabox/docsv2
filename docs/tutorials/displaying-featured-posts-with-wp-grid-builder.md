@@ -13,7 +13,7 @@ We'll create a section to **display the featured posts on the homepage** which i
 
 <LiteYouTubeEmbed id='w9JLxvGAy4Y' />
 
-## Before getting started
+## Preparation
 
 The section is shown as a slider on the homepage. It is provided by WP Grid Builder in the Grid type. In the grid, there are cards, and each one displays information about a restaurant.
 
@@ -179,7 +179,7 @@ To stipulate which information displays in the grid, move to the **Card Style** 
 
 ## 5. Displaying the grid on the frontend
 
-Let’s edit the homepage with Elementor. 
+Let’s edit the homepage with Elementor.
 
 Add a section to a place you want to display it on the homepage. Add a **Heading**, name it, and style it as you want.
 

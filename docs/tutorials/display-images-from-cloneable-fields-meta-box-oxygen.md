@@ -15,7 +15,7 @@ I made an example like this:
 
 <LiteYouTubeEmbed id='mUcuw6NGUC4' />
 
-## Before getting started
+## Preparation
 
 In addition to using [Meta Box](https://metabox.io), make sure you already have these extensions:
 
@@ -43,7 +43,7 @@ After publishing, a new menu named **Brands** appears.
 
 Let’s create custom fields to save images and other information for the created settings page.
 
-Go to **Meta Box > Custom Fields > Add New**. 
+Go to **Meta Box > Custom Fields > Add New**.
 
 The following table illustrates the fields’ structure that I’m using.
 
@@ -213,7 +213,7 @@ Here is the result.
 
 ------
 
-You may be interested in: 
+You may be interested in:
 
 * [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-oxygen/)
 * [Creating a video gallery page](https://docs.metabox.io/tutorials/create-video-gallery-page-meta-box-oxygen/)

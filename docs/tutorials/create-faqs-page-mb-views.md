@@ -8,7 +8,7 @@ This is the page we’re going to create in this practice. It’s built without 
 
 ![The example of FAQs page](https://i.imgur.com/JQyjIeJ.gif)
 
-## Before getting started
+## Preparation
 
 We’ll need these tools:
 
@@ -181,7 +181,7 @@ The full code for the whole template is [here](https://github.com/wpmetabox/tuto
 Then, go to the FAQs page, you will see the questions and answers display as you want.
 
 ------
-You may be interested in: 
+You may be interested in:
 
 * [Creating online admission form](https://docs.metabox.io/tutorials/create-online-admission-form/)
 * [Configuring homepage](https://docs.metabox.io/tutorials/configure-homepage/)

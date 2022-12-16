@@ -17,7 +17,7 @@ This is a sample we’ll use for this practice:
 
 <LiteYouTubeEmbed id='gemgZLtMe84' />
 
-## Before getting started
+## Preparation
 
 As you can see, each member’s information will be included in a separated box, maybe called a name card. They are saved in posts of a custom post type for team members only.
 
@@ -152,7 +152,7 @@ Here is my CSS code that you can refer to:
 .team-member p {
     margin: 5px;
 }
-.team-member .member-box .elementor-row .elementor-widget-wrap .social-icon 
+.team-member .member-box .elementor-row .elementor-widget-wrap .social-icon
 .elementor-row .elementor-widget-wrap {
     padding: 5px 0;
 }

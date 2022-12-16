@@ -15,7 +15,7 @@ This is the sample that I made.
 
 <LiteYouTubeEmbed id='u6XVlG1_3gY' />
 
-## Before getting started
+## Preparation
 
 Each member’s information will be preserved in a post and displayed as a name card. The member's name and avatar are the title and featured image of the post, respectively. Other information such as position, Facebook, Instagram, and Mail will be saved in custom fields.
 
@@ -65,7 +65,7 @@ In the **Admin Dashboard**, go to **Meta Box > Views > Add New** to create a new
 In the **Template** tab of the view, add some code:
 
 ```php
-{% set args = { post_type: 'team-member', posts_per_page: -1, orderby: 'date', order: 'ASC' } 
+{% set args = { post_type: 'team-member', posts_per_page: -1, orderby: 'date', order: 'ASC' }
 %}
 {% set posts = mb.get_posts( args ) %}
 {% for post in posts %}
@@ -127,7 +127,7 @@ Go to the **Meet The Team** page and you will see all the data has been displaye
 
 ![Result after applying the template](https://i.imgur.com/Ko8JdeR.png)
 
-Now, all the information of the members has been obtained and displayed to the page. 
+Now, all the information of the members has been obtained and displayed to the page.
 
 ## 4. Styling the page
 

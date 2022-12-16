@@ -5,7 +5,7 @@ title: Migrating from ACF to Meta Box
 
 You can easily move data from **ACF** to **Meta Box** with the help of the **MB ACF Migration** plugin. It will save a lot of time and shorten the process dramatically.
 
-## Before getting started
+## Preparation
 
 In addition to using the <a href="https://metabox.io/">Meta Box</a>, make sure you already have these extensions:
 

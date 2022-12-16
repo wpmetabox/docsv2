@@ -14,7 +14,7 @@ We’ll use Oxygen to **create a page showing a video gallery**. **The video's i
 
 <LiteYouTubeEmbed id='rs2kJI8NZYQ' />
 
-## Before getting started
+## Preparation
 
 The gallery includes a lot of videos, and each one will be saved as a post. So, we'll have a custom post type for it. All the information about the video, such as the title, description, and author is the post’s default information.
 
@@ -83,7 +83,7 @@ Add a **Video** component inside the **Repeater**. You will see the default vide
 ![To get the wanted video preview, we need to change the URL in Dynamic tag](https://i.imgur.com/7rgAiUf.png)
 
 Click the **Data** button. Then, in the **Meta/Custom Field** section, find the field’s ID that you saved the video’s link.
- 
+
 ![Get the wanted video preview step by step](https://i.imgur.com/8SXcNPn.gif)
 
 For other information about the video, such as the video’s title, description, and author, select the corresponding component as **Text Link, Text, Image**, etc. Then, use the **Data** tag in the same way to automatically get the data from the post.

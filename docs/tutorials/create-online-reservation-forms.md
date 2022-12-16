@@ -11,7 +11,7 @@ I will create an online reservation form to allow customers to reserve not only 
 
 <LiteYouTubeEmbed id='K6YfrQ3ZRLY' />
 
-## Before getting started
+## Preparation
 
 Along with the Meta Box, we need some its extensions:
 
@@ -143,7 +143,7 @@ Let’s add some CSS for the page to have a better look.
   width: 100%; }
 
 .rwmb-input select {
-  width: 100%; 
+  width: 100%;
     padding: 10px 0
 
 }

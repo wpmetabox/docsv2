@@ -16,7 +16,7 @@ I’ll take a car rental page for example:
 
 <LiteYouTubeEmbed id='DnKcWGkyhEQ' />
 
-## Before getting started
+## Preparation
 
 The product is a kind of custom post type. In this case, each car for rental will be a post of that post type. The product’s name and its descriptions are the title and content of the post. We’ll need custom fields to save some extra information about the cars, such as price, image gallery, type of fuel, etc.
 

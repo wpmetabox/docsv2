@@ -1,6 +1,6 @@
 ---
 title: Creating a product page - Meta Box + Oxygen
---- 
+---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -11,7 +11,7 @@ I’ll create a car rental page for example of a product page. It’s a singular
 
 <LiteYouTubeEmbed id='9P2Q49n8sJk' />
 
-## Before getting started
+## Preparation
 
 Product is a kind of custom post type. In this case, each car for rental will be a post in that post type. Besides the default information such as title and content of the post, a product may have some extra information. E.g. each car will have some information such as price, image gallery, type of fuel, etc. So, we use custom fields to save that information.
 

@@ -13,7 +13,7 @@ Let’s see how to showcase some featured posts on a page. Take restaurants as a
 
 <LiteYouTubeEmbed id='pK1_OhNiazM' />
 
-## Before getting started
+## Preparation
 
 This section will display only the restaurants which are manually chosen to be featured. To do it, we will create a custom field to choose which one is featured.
 

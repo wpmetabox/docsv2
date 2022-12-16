@@ -1,6 +1,6 @@
 ---
 title: Creating a recipe - Meta Box + Zion
---- 
+---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -13,7 +13,7 @@ Let’s create a recipe page which contains different kinds of information store
 
 <LiteYouTubeEmbed id='y6XCjCj3EZ8' />
 
-## Before getting started
+## Preparation
 
 All of the recipe information will be saved in a post of a custom post type. The recipe’s name and dish picture are the post's title and featured image. And the extra information will be saved in custom fields.
 
@@ -127,7 +127,7 @@ Here is an example result of how I styled the page in my way.
 
 ------
 
-You may be interested in: 
+You may be interested in:
 * [Creating a recipe - Zion](https://docs.metabox.io/tutorials/create-recipes-meta-box-zion/)
 * [Displaying the latest products - Zion](https://docs.metabox.io/tutorials/display-latest-products-meta-box-zion/)
 

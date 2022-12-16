@@ -15,7 +15,7 @@ This is my sample team members page:
 
 <LiteYouTubeEmbed id='h07sZBTGTDQ' />
 
-## Before getting started
+## Preparation
 
 Each member’s information will be saved in a post and displayed as a name card on the page. All extra information about each member such as Position, Facebook, Instagram, and Mail will be saved in custom fields. Name and image of the member are the title and featured image of the post.
 
@@ -85,7 +85,7 @@ For instance, I choose the **Position**. Then, the position of each member will 
 
 ![Add Item > Insert Dynamic Data to add a new field and insert the dynamic data from the custom fields](https://i.imgur.com/SxVeXby.gif)
 
-For other information like Facebook, Instagram, and Mail, simply do the same. 
+For other information like Facebook, Instagram, and Mail, simply do the same.
 
 Be noted that, when inserting dynamic data, it just displays them as text. To set them as URLs, you should add an attribute to these fields as below.
 

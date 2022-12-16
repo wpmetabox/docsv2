@@ -1,6 +1,6 @@
 ---
 title: Creating a recipe - Meta Box + Bricks
---- 
+---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -15,7 +15,7 @@ The image below is a specific example.
 
 <LiteYouTubeEmbed id='ev24jQJTgCY' />
 
-## Before getting started
+## Preparation
 
 In this case, the recipe page is the singular page of the Recipe post type. The recipe’s name and the dish's pictures are the title and featured image of the post. Besides, the remaining detailed information will be saved in custom fields.
 
@@ -116,7 +116,7 @@ To display both the step and description fields, I use a rich text element. And 
 
 ![Use a rich text element to display both steps and description fields](https://i.imgur.com/3q4Mz8i.png)
 
-For the **Video** section, I will add a **Heading** and **Video** element. 
+For the **Video** section, I will add a **Heading** and **Video** element.
 
 ![Add a Heading and Video element for the Video section](https://i.imgur.com/mLC4owd.png)
 
@@ -140,7 +140,7 @@ Here is the result.
 
 ------
 
-You may be interested in: 
+You may be interested in:
 * [Creating a simple listing site](https://docs.metabox.io/tutorials/create-simple-listing-meta-box-bricks/)
 * [Creating a team members](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-bricks/)
 * [Creating a product page](https://docs.metabox.io/tutorials/display-latest-product-meta-box-bricks/)

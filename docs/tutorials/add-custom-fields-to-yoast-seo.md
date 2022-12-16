@@ -4,7 +4,7 @@ title: Adding custom fields to Yoast SEO meta tags
 
 We are going to find out how to add custom fields to meta tags in Yoast SEO.
 
-## Before getting started
+## Preparation
 
 Here are all the tools we need for this practice:
 

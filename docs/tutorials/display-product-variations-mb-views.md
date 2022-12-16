@@ -6,7 +6,7 @@ Let’s create a single product page that contains different information of prod
 
 ![Example of product variations](https://i.imgur.com/FuWHvCk.gif)
 
-## Before getting started
+## Preparation
 
 For this practice, we need these tools:
 

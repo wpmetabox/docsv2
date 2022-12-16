@@ -6,7 +6,7 @@ Normally, to change your avatar on WordPress, you have to use your Gravatar acco
 
 ![Example of a custom avatar](https://i.imgur.com/G18RnMP.png)
 
-## Before Getting Started
+## Preparation
 
 In addition to using [Meta Box](https://metabox.io/), make sure you already have these extensions:
 
@@ -17,7 +17,7 @@ In addition to using [Meta Box](https://metabox.io/), make sure you already have
 
 Go to **Meta Box > Custom Fields > Add new**.
 
-Then, click **Add Field** button and select **Single Image** field type to create your needed field. 
+Then, click **Add Field** button and select **Single Image** field type to create your needed field.
 
 ![Create the wanted fields](https://i.imgur.com/qJImjuJ.png)
 
@@ -66,7 +66,7 @@ function mbua_get_avatar_url( $url, $id_or_email, $args ) {
     }
 
     $url = $custom_avatar['full_url'];
-    
+
     return $url;
 }
 ```

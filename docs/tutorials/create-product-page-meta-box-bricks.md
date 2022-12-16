@@ -9,7 +9,7 @@ We’re going to find out how to create a product page using Meta Box and Bricks
 
 ![Example of a Product Page](https://i.imgur.com/iufdSei.png)
 
-## Before getting started
+## Preparation
 
 As you can see, my product page contains the product’s detailed information. Each product will be a post of a custom post type. The basic information such as products’ name and its description are the title and content of the post. Other extra information will be saved in different custom fields.
 

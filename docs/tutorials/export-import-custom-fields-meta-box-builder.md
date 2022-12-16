@@ -17,7 +17,7 @@ Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/
 
 <LiteYouTubeEmbed id='BGVY-5W6d7g'/>
 
-## Before getting started
+## Preparation
 
 We need to have the [Meta Box plugin](https://metabox.io/) and [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) on both websites, the original site and targeted one.
 
@@ -55,7 +55,7 @@ After that, the file that contains the data of the selected field groups will be
 
 ## Importing field groups and custom fields
 
-In the dashboard of the targeted website you want to import the field group, go to **Meta Box** > **Custom Fields** > **Import**. 
+In the dashboard of the targeted website you want to import the field group, go to **Meta Box** > **Custom Fields** > **Import**.
 
 Then click on **Choose File** and select the downloaded file to import the field group.
 

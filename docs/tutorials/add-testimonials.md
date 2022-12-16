@@ -11,7 +11,7 @@ Adding testimonials to the homepage will be easier when you use the MB Testimoni
 
 <LiteYouTubeEmbed id='gNjQwRfI3kY' />
 
-## Before getting started
+## Preparation
 
 MB Testimonials is only available in the lifetime bundle of Meta Box. If you haven’t got one yet, it’s [here](https://metabox.io/pricing/).
 

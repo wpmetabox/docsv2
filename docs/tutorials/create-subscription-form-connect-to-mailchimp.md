@@ -4,14 +4,14 @@ title: Creating a subscription form connecting to Mailchimp
 
 We’re going to use the [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/) extension of Meta Box to create a subscription form and connect it with an email marketing service - Mailchimp to manage and send emails fast and easily.
 
-## Before getting started
+## Preparation
 
 We need to install the following tools:
 
 * [Meta Box](https://metabox.io): to have a framework to create a custom post type and custom fields for the form. It’s free and available on [wordpress.org](https://wordpress.org/plugins/meta-box).
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI in the back-end to create custom fields for the form.
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to display custom fields on the front-end as a form.
-* [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the form, each submitted form will be a post. 
+* [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the form, each submitted form will be a post.
 
 Finally, you need to have a Mailchimp account. In case you haven’t had it, go [here](https://login.mailchimp.com/) to create a new one.
 
@@ -80,7 +80,7 @@ Explanation:
 
 I use Google reCaptcha to avoid spamming. In addition, to integrate Google reCaptcha in the frontend form, simply enter the site key and the secret key into the shortcode above.
 
-Read [this documentation](https://docs.metabox.io/extensions/mb-frontend-submission/#shortcode-attributes) to get a detailed guide for reCaptcha and other attributes of the form. 
+Read [this documentation](https://docs.metabox.io/extensions/mb-frontend-submission/#shortcode-attributes) to get a detailed guide for reCaptcha and other attributes of the form.
 
 Here is how the subscription form displays on the page.
 
@@ -131,7 +131,7 @@ To do it, use the library below to connect to the MailChimp API:
 
 https://github.com/drewm/mailchimp-api
 
-Access the link and download the `Mailchimp.php` file, then insert it into your theme. 
+Access the link and download the `Mailchimp.php` file, then insert it into your theme.
 
 For example, I’m using the [eStar](https://gretathemes.com/wordpress-themes/estar) theme and its [child theme](https://gretathemes.com/what-is-child-theme/#what-is-child-theme), so I create an inc folder and copy the `Mailchimp.php` file to it.
 

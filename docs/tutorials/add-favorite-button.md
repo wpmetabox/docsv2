@@ -11,7 +11,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 <LiteYouTubeEmbed id='fSFmNp-Ayew' />
 
-## Before getting started
+## Preparation
 
 These are the tools we need for this practice:
 
@@ -50,7 +50,7 @@ You can change the style for the button. We create 3 predefined styles for you t
 
 ### Enabling for non-logged in users
 
-This option is chosen as default. However, if users do not log in, their favorite posts list will be **temporarily saved in the cookie of the browser**, and will be lost when the cookie is deleted. 
+This option is chosen as default. However, if users do not log in, their favorite posts list will be **temporarily saved in the cookie of the browser**, and will be lost when the cookie is deleted.
 
 ![The favorite posts list will be temporarily saved in the cookies or the browser](https://i.imgur.com/kR3395E.png)
 

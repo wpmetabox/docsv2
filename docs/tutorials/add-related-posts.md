@@ -4,7 +4,7 @@ title: Adding related posts
 
 Normally, most tools set related posts automatically based on the keywords, tags, categories, or taxonomies. It might be not precise, especially when you want particularly related posts to be prior on the list. In that case, **choosing related posts manually using custom fields will be the best way**. This post will show how!
 
-## Before getting started
+## Preparation
 
 We need to install the following tools:
 
@@ -67,13 +67,13 @@ We can customize or export data by IDs. It means that you can get any informatio
 To get more information, we also use the function as above with some customization. Put the following gist to the single.php file if your post type is post. If your post is another custom post type, create a file named `single-{custom_post_type_slug}.php` and put the gist into there.
 
 ```php
-<?php 
+<?php
 $field_id = 'related_posts';
 $related_posts = rwmb_meta( $field_id );
 if (isset($related_posts)) { ?>
 	<div id="relatedPosts" class="related-posts">
 		<h3 class="related-posts-headline"><em>You might also like</em></h3>
-		<div class="related-posts-items jp-related-posts-grid"> 
+		<div class="related-posts-items jp-related-posts-grid">
 			<?php foreach ($related_posts as $related_post) { ?>
 				<div class="related-post-item">
 					<a class="related-post-a" href="<?php echo get_the_permalink($related_post); ?>" title="<?php echo get_the_title($related_post); ?>" rel="nofollow">
@@ -87,7 +87,7 @@ if (isset($related_posts)) { ?>
 
 			<?php } ?>
 		</div>
-	</div>	 
+	</div>
 <?php } ?>
 ```
 

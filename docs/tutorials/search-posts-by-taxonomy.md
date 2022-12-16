@@ -8,7 +8,7 @@ Here is an example of this practice with hotels filtered by location:
 
 ![Example of seraching posts by taxonomy](https://imgur.com/V5kT58q.png)
 
-## Before getting started
+## Preparation
 
 In addition to using **Meta Box**, ensure you already have the **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**. It is a free extension of Meta Box and is used to create custom post types and custom taxonomies.
 
@@ -20,7 +20,7 @@ Go to **Meta Box** > **Post Types** > **New Post Type**.
 
 ![Create a new custom post type and custom taxonomy](https://i.imgur.com/DTRAKX9.png)
 
-To create a taxonomy for location information, go to **Meta Box** > **Taxonomies** > **Add New**. 
+To create a taxonomy for location information, go to **Meta Box** > **Taxonomies** > **Add New**.
 
 Remember to choose **Hotel** in the **Assign to Post Types** section for the custom taxonomy information entry. It will assign the custom taxonomy we create to the **Hotel** post type.
 
@@ -34,11 +34,11 @@ Now, the **Hotel** post type will appear on the admin menu. Let’s go there and
 
 :::info
 
-In this article, I just enter a few locations as an example. In fact, you may have a large number of locations which are on many levels such as countries, provinces, cities, regions, … That time, you need to import that data to the Location taxonomy. 
+In this article, I just enter a few locations as an example. In fact, you may have a large number of locations which are on many levels such as countries, provinces, cities, regions, … That time, you need to import that data to the Location taxonomy.
 
 :::
 
-You can also use [plugins](https://wordpress.org/search/import+taxonomy+data/) to import data easily. 
+You can also use [plugins](https://wordpress.org/search/import+taxonomy+data/) to import data easily.
 
 ![You can choose more locations as you want](https://i.imgur.com/gXsuBCc.png)
 
@@ -66,7 +66,7 @@ Then, you will see the search box as follows:
 
 Let’s use ajax to filter so people can click the **Search** button without reloading the website.
 
-Add the following code to the `functions.php` file: 
+Add the following code to the `functions.php` file:
 
 ```php
 function justread_custom_scripts() {
@@ -88,11 +88,11 @@ function justread_custom_scripts() {
 add_action( 'wp_enqueue_scripts', 'justread_custom_scripts' );
 ```
 
-Explanation: 
+Explanation:
 
 * `'wp_enqueue_scripts'`: it’s the hook used to declare the `filter-hotel.js` file that I‘ll create later;
 * `wp_localize_script ()`: a function that helps transfer the value of the variable `ajax_url` from the `functions.php` file to the `filter-hotel.js` file.
- 
+
 Next, add the following code to `functions.php` to return the custom post type data as JSON when someone clicks the **Search** button.
 
 ```php
@@ -137,7 +137,7 @@ Explanation:
 * `'location'`: the ID of the custom taxonomy that we created in step 1 for the location;
 * `'wp_ajax_justread_filter_hotel' and 'wp_ajax_nopriv_justread_filter_hotel`': they’re two hooks to perform ajax. They’re named according to the following rules: `wp_ajax_my_action` and `wp_ajax_nopriv_my_action`. In this example, `my_action` is `justread_filter_hotel`.
 
-Also, in the theme folder, let’s create another file named `filter-hotel.js` with the following content: 
+Also, in the theme folder, let’s create another file named `filter-hotel.js` with the following content:
 
 ```js
 jQuery( function ( $ ) {

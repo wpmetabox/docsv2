@@ -4,7 +4,7 @@ title: Reordering posts manually using custom fields
 
 Arranging posts in a custom order will be much easier if you use custom fields. It allows you to set any post first without criteria.
 
-## Before getting started
+## Preparation
 
 To get started, we need the [Meta Box](https://metabox.io) to have the framework for creating custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
@@ -55,8 +55,8 @@ add_action( 'pre_get_posts', 'memory_custom_post_order_sort' );
 
 * `'pre_get_posts'`: the hook that fires just before the post query is created.
 * `is_home()`: ensure that the reordering happens on the homepage only; in case, if you want to reorder posts on the archive page only, use this function `is_archive()`.
-* field with id `mb_order`. Replace `mb_order` with your field ID if you use another ID. 
-* `mb_order`: the field’s id created in the custom fields. You can replace `mb_order` with your field ID if you use another ID. 
+* field with id `mb_order`. Replace `mb_order` with your field ID if you use another ID.
+* `mb_order`: the field’s id created in the custom fields. You can replace `mb_order` with your field ID if you use another ID.
 * `ASC`: display your post in ascending order. Change it to `DESC` if you want to show your post in descending one.
 
 Save the code, and you will see the new order of the post in the page you want.

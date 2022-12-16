@@ -15,7 +15,7 @@ This is a specific example that we’ll create in this practice:
 
 <LiteYouTubeEmbed id='K0F-Mbiz_ls' />
 
-## Before getting started
+## Preparation
 
 For custom fields, we will use [Meta Box](https://metabox.io/) and [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to have a UI for creating custom fields right on the back end.
 
@@ -113,7 +113,7 @@ Now, on the FAQs page, you will see the result like this.
 
 ------
 
-You may be interested in: 
+You may be interested in:
 
 * [Creating a product page](https://docs.metabox.io/tutorials/create-product-page-meta-box-oxygen/)
 * [Creating a recipe](https://docs.metabox.io/tutorials/create-recipe-meta-box-oxygen/)

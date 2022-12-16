@@ -12,13 +12,13 @@ We’ll use WP Grid Builder to **create an archive page for restaurants** and th
 
 <LiteYouTubeEmbed id='YP7sMXHdf_Q' />
 
-## Before getting started
+## Preparation
 
 All of the restaurants' information will be saved in a **custom post type**, and each restaurant will be a post. The restaurant’s name and image are the default title and featured image of the post. And other information such as status, address, voucher, and logo will be saved in different **custom fields**.
 
 On the page, we’ll have **Card**, **Grid**, and **Facet** as the following:
 
-![The illustration of Card, Grid, Facet on the listing page](https://i.imgur.com/vsYIhRa.png) 
+![The illustration of Card, Grid, Facet on the listing page](https://i.imgur.com/vsYIhRa.png)
 
 * **Card**: is a box to show up a restaurant information.
 * **Grid**: is an area to list all the restaurants.

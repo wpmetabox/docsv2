@@ -9,9 +9,9 @@ In this article, I will get posts in two ways. One is using the `WP_Query` to ge
 
 ## Video version
 
-<LiteYouTubeEmbed id='_fg63TxLZeE' /> 
+<LiteYouTubeEmbed id='_fg63TxLZeE' />
 
-## Before getting started
+## Preparation
 
 In addition to using [Meta Box](https://metabox.io/), make sure you already have these extensions:
 
@@ -203,7 +203,7 @@ Thus, to search by custom field values, we need to JOIN `wp_posts` and `wp_postm
 function justread_search_join( $join ) {
     global $wpdb;
 
-    if ( is_search() ) {    
+    if ( is_search() ) {
         $join .=' LEFT JOIN '.$wpdb->postmeta. ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
     }
 
@@ -237,7 +237,7 @@ add_filter( 'posts_where', 'justread_search_where' );
 ```
 ### 3. Allowing searching by keyword with spacing
 
-You can now search by using the values of custom fields. However, to allow searching by the keyword having the spacing between text or not, you can add the following code to the `functions.php` file: 
+You can now search by using the values of custom fields. However, to allow searching by the keyword having the spacing between text or not, you can add the following code to the `functions.php` file:
 ```php
 function justread_search_distinct( $where ) {
     global $wpdb;

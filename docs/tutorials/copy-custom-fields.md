@@ -18,7 +18,7 @@ There are some benefits of this:
 * It may not waste time anymore in the field configuration with the complex attributions or conditions. You only do it once, and clone to the sites you need. That’ll save a lot of time.
 * Your website runs faster because of not installing any plugin or extensions for these custom fields beyond the Meta Box Framework. Meanwhile, you still have the adequacy of necessary custom fields and their configuration on your website.
 
-## Before getting started
+## Preparation
 
 Here are the tools we need:
 

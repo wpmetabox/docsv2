@@ -4,7 +4,7 @@ title: Creating posts series
 
 Sometimes, classifying posts by Category or Tag is not enough, and you may need another method. This article will show you how to create a post series using [Meta Box](https://metabox.io/).
 
-## Before getting started
+## Preparation
 
 Creating a series of posts by Category or Tag has a few drawbacks, as follows:
 
@@ -107,6 +107,6 @@ Remember to change the above `series` parameter to the name of the taxonomy that
 
 ![Change the above series parament to the name of the created taxonomy](https://i.imgur.com/WCAcCMF.png)
 
-Here is the result: 
+Here is the result:
 
 ![The final result](https://i.imgur.com/vTkosBX.png)

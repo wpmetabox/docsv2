@@ -1,14 +1,14 @@
 ---
-title: Creating dynamic favicon in WordPress 
+title: Creating dynamic favicon in WordPress
 ---
 
-Favicon is a small icon on the browser tab that helps to attract and create a memorable image of the brand in the user’s mind. It is typically 16x16 pixels in size and is kept in a file called `favicon.io` in the server's root folder. Using Meta Box plugin and editing the theme a little bit will help you get it easily. 
+Favicon is a small icon on the browser tab that helps to attract and create a memorable image of the brand in the user’s mind. It is typically 16x16 pixels in size and is kept in a file called `favicon.io` in the server's root folder. Using Meta Box plugin and editing the theme a little bit will help you get it easily.
 
-Here is my example: 
+Here is my example:
 
 ![Example of dynamic favicon](https://i.imgur.com/2Pvq4fh.png)
 
-## Before Getting Started
+## Preparation
 
 In addition to using the [Meta Box](https://metabox.io), make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). It allows you to create custom fields in the back end using an intuitive UI without coding.
 
@@ -30,7 +30,7 @@ Go to **Meta Box** menu > **Custom Fields > Add New**.
 
 ![Add a new custom field](https://i.imgur.com/ca5hFyG.png)
 
-Add the **Single Image** field and set its name as **Favicon** to upload an image 
+Add the **Single Image** field and set its name as **Favicon** to upload an image
 
 ![Add the Single imgae field](https://i.imgur.com/DVIyUSH.png)
 

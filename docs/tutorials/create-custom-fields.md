@@ -8,7 +8,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 <LiteYouTubeEmbed id='_DaFUt92kYY' />
 
-## Before getting started
+## Preparation
 
 We need [Meta Box](https://docs.metabox.io/installation/) to create custom fields. It’s free and available on wordpress.org.
 
@@ -16,7 +16,7 @@ We need [Meta Box](https://docs.metabox.io/installation/) to create custom field
 
 To have a UI on the backend to create custom fields easily, we need **Meta Box Builder**. It’s a premium Meta Box extension. You can download it individually [here](https://metabox.io/plugins/meta-box-builder/) or use Meta Box AIO to have all Meta Box extensions.
 
-In case you haven’t had the Meta Box Builder, you still can create custom fields by using the [Online Generator](https://metabox.io/online-generator/) provided by Meta Box, but it is only a simplified version of the Meta Box Builder. 
+In case you haven’t had the Meta Box Builder, you still can create custom fields by using the [Online Generator](https://metabox.io/online-generator/) provided by Meta Box, but it is only a simplified version of the Meta Box Builder.
 
 ## Adding new field group and custom fields
 
@@ -114,7 +114,7 @@ For the selection field types such as **Select**, **Checkbox list**,... you will
 
 ![For some field types there will be choices box](https://i.imgur.com/e0Zcogs.png)
 
-The left one is the value of the option. And the right one is the label of the option. 
+The left one is the value of the option. And the right one is the label of the option.
 
 ![The left one is the value of the option. And the right one is the label of the option](https://i.imgur.com/zLZw95R.png)
 
@@ -156,7 +156,7 @@ This allows you to show the explanation of the field when hovering over the titl
 
 ![The explantion of the field shows](https://i.imgur.com/5s8kLX3.png)
 
-Please note that the settings of the sub-fields also follow the ones of normal fields. 
+Please note that the settings of the sub-fields also follow the ones of normal fields.
 
 ![the settings of the sub-fields also follow the ones of normal fields](https://i.imgur.com/iuX1q9z.png)
 

@@ -4,7 +4,7 @@ title: Creating dynamic banners
 
 Do you have difficulties adding, resizing, or replacing pictures or texts on your banners? Creating a backend settings page and adding custom fields can help you deal with this easily. Each custom field is a parameter to customize the banner.
 
-## Before getting started
+## Preparation
 
 There are some tools we need for this practice:
 
@@ -79,13 +79,13 @@ Add this code to the **Template** tab:
 
 ![Insert the code](https://i.imgur.com/gAfryD5.png)
 
-**Explanation**: 
+**Explanation**:
 
 `{% if( settings.show == 1) %}` : This line is to check if the **Show** field is checked or not. If it’s checked that means the value of this field is set as **1**, we will display the following information on the banner.
 
 
 `{% set image_ids = settings.image %}
-{% set image_attributes = mb.wp_get_attachment_image_src( image_ids, 'full') %}`: 
+{% set image_attributes = mb.wp_get_attachment_image_src( image_ids, 'full') %}`:
 
 These lines of code is to get the link of the image from the **Image** field.
 
@@ -95,7 +95,7 @@ These lines of code is to get the link of the image from the **Image** field.
 {{ settings.title }}
 {{ settings.title_position }}
 {{ settings.description }}
-{{ settings.description_position }}`: 
+{{ settings.description_position }}`:
 
 These are to get the fields’ values. In there, the part after the `settings.` is the ID of the field.
 
@@ -114,7 +114,7 @@ Add the following code to the `functions.php` file:
 
 ```php
 function short_code_banner() {
-    // Banner 
+    // Banner
     $settings = get_option( 'banner' );
     $image_ids = $settings['image'];
     $image_attributes = wp_get_attachment_image_src( $image_ids, 'full');
@@ -131,14 +131,14 @@ function short_code_banner() {
     $width = rwmb_meta( 'width', ['object_type' => 'setting'], 'banner' );
 
     if ( !is_admin() ) {
-        
+
         echo '<div class="banner" style="background-image: url(' .  $image_attributes[0]  . ' )">';
             echo '<div class= "content-banner" style="width: ' . $width . ' "> ';
 
                 echo '<h2 style="color: ' . $color . ' " class="title-banner ' . $title_position . ' ">' . $title . '</h2>';
-                
+
                 echo '<div style="color: ' . $color_description . ' " class="description-banner ' . $description_position . ' ">' . $description . '</div>';
-                
+
             echo '</div>';
         echo '</div>';
     }
@@ -209,7 +209,7 @@ No matter which the method we use, you can use the below CSS code to customize t
 }
 ```
 
-Here is the result: 
+Here is the result:
 
 ![The result](https://i.imgur.com/QK9PMO3.png)
 

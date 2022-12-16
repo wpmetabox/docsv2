@@ -1,6 +1,6 @@
 ---
 title: Creating an FAQs page - Meta Box + Elementor
---- 
+---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -15,7 +15,7 @@ This is the example page:
 
 <LiteYouTubeEmbed id='nGTT2Vl_t1U' />
 
-## Before getting started
+## Preparation
 
 We have a FAQs page that needs to have custom fields for saving the questions and corresponding answers for it. So we need these tools to do it:
 
@@ -137,7 +137,7 @@ Then all the changes in the skin will be automatically applied for the page.
 ![The result of created faqs page](https://i.imgur.com/sjpQ1l7.png)
 
 ------
-You may be interested in: 
+You may be interested in:
 
 * [Creating a team members page](https://docs.metabox.io/tutorials/create-team-members-page-meta-box-elementors/)
 * [Creating buttons with dynamic link](https://docs.metabox.io/tutorials/create-buttons-dynamic-links/)
