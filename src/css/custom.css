@@ -685,6 +685,9 @@ html[data-theme='dark'] .tutorials_trending{
 .tutorials_category ul li a:hover{
 	color: var(--ifm-menu-color-active);
 }
+.tutorials_category--new{
+	row-gap: 1.5rem;
+}
 .tutorials_category--new .items_titles {
 	position: relative;
 	color: var(--color-tutorius);
