@@ -670,9 +670,7 @@ The plugin provides REST API endpoints so you can retrieve and update related it
 
 Note: each relationship must first be created use [any of the supported methods](#creating-relationships).
 
-### Managing connections via API
-
-#### Check for the existence of a connection
+### Check for the existence of a connection
 
 Send a `GET` request to `/wp-json/mb-relationships/v1/{id}/exists?from={from ID}&to={to ID}`.
 
@@ -693,7 +691,7 @@ curl --request GET --url 'https://example.test/wp-json/mb-relationships/v1/posts
 }
 ```
 
-#### Create a new connection
+### Create a new connection
 
 Send a `POST` request to `/wp-json/mb-relationships/v1/{id}` with body parameters `from` and `to`.
 
@@ -719,7 +717,7 @@ curl --request POST \
 }
 ```
 
-#### Delete a connection
+### Delete a connection
 
 Send a `DELETE` request to `/wp-json/mb-relationships/v1/{id}?from={from ID}&to={to ID}`.
 
