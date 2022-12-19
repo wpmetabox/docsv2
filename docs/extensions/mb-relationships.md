@@ -691,6 +691,54 @@ curl --request GET --url 'https://example.test/wp-json/mb-relationships/v1/posts
 }
 ```
 
+### Get all “to” objects for a specified “from” object
+
+Send a `GET` request to `/wp-json/mb-relationships/v1/{id}/connected-from/{from ID}`.
+
+By default, this endpoint does not require authentication or authorization; use the `mb_relationships_rest_api_can_read_relationships` and/or `mb_relationships_rest_api_can_read_relationships_public` filter to modify this.
+
+Example:
+
+```shell
+curl --request GET --url 'https://example.test/wp-json/mb-relationships/v1/posts_to_pages/connected-from/14773'
+```
+
+```json
+{
+	"relationship": "posts_to_pages",
+	"from": 14773,
+	"to": [
+        13577,
+        13578,
+        13579,
+    ],
+}
+```
+
+### Get all “from” objects for a specified “to” object
+
+Send a `GET` request to `/wp-json/mb-relationships/v1/{id}/connected-to/{to ID}`.
+
+By default, this endpoint does not require authentication or authorization; use the `mb_relationships_rest_api_can_read_relationships` and/or `mb_relationships_rest_api_can_read_relationships_public` filter to modify this.
+
+Example:
+
+```shell
+curl --request GET --url 'https://example.test/wp-json/mb-relationships/v1/posts_to_pages/connected-to/13577'
+```
+
+```json
+{
+	"relationship": "posts_to_pages",
+	"from": [
+        14773,
+        14775,
+        14777,
+    ],
+	"to": 13577,
+}
+```
+
 ### Create a new connection
 
 Send a `POST` request to `/wp-json/mb-relationships/v1/{id}` with body parameters `from` and `to`.
