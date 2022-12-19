@@ -572,7 +572,7 @@ while ( $query->have_posts() ) {
 wp_reset_postdata();
 ```
 
-## Creating connections programmatically
+## Managing connections programmatically
 
 The plugin has several public APIs that can help you create or delete connections between 2 items using code.
 
@@ -663,3 +663,81 @@ This structure allows us to create simple and efficient queries. All columns are
 If you use the extension as a separated plugin, e.g. not bundle it within another, then the table is created during plugin activation. It's the ideal situation, where the plugin only checks for table existence only once.
 
 If you bundle the extension within another plugin, then the table is checked and created when it's loaded. While the check is relatively fast, it's still an extra small query to the database.
+
+## REST API
+
+The plugin provides REST API endpoints so you can retrieve and update related items from external sources.
+
+Note: each relationship must first be created use [any of the supported methods](#creating-relationships).
+
+### Managing connections via API
+
+#### Check for the existence of a connection
+
+Send a `GET` request to `/wp-json/mb-relationships/v1/{id}/exists?from={from ID}&to={to ID}`.
+
+By default, this endpoint does not require authentication or authorization; use the `mb_relationships_rest_api_can_read_relationships` and/or `mb_relationships_rest_api_can_read_relationships_public` filter to modify this.
+
+Example:
+
+```shell
+curl --request GET --url 'https://example.test/wp-json/mb-relationships/v1/posts_to_pages/exists?from=14773&to=13577'
+```
+
+```json
+{
+	"has_relationship": true,
+	"relationship": "posts_to_pages",
+	"to": 13577,
+	"from": 14773
+}
+```
+
+#### Create a new connection
+
+Send a `POST` request to `/wp-json/mb-relationships/v1/{id}` with body parameters `from` and `to`.
+
+By default, this endpoint requires a user with `publish_posts` capability (administrator role); use the `mb_relationships_rest_api_can_create_relationships` and/or `mb_relationships_rest_api_can_create_relationships_public` filter to modify the capabilities.
+
+Example:
+
+```shell
+curl --request POST \
+  --url https://example.test/wp-json/mb-relationships/v1/posts_to_pages \
+  --header 'Authorization: Basic dXNlcjpwYXNzd29yZA==' \
+  --header 'Content-Type: multipart/form-data' \
+  --form from=14773 \
+  --form to=13952
+```
+
+```json
+{
+	"has_relationship": true,
+	"relationship": "posts_to_pages",
+	"to": 13577,
+	"from": 14773
+}
+```
+
+#### Delete a connection
+
+Send a `DELETE` request to `/wp-json/mb-relationships/v1/{id}?from={from ID}&to={to ID}`.
+
+By default, this endpoint requires a user with `delete_posts` capability (administrator role); use the `mb_relationships_rest_api_can_delete_relationships` and/or `mb_relationships_rest_api_can_delete_relationships_public` filter to modify the capabilities.
+
+Example:
+
+```shell
+curl --request DELETE \
+  --url 'https://example.test/wp-json/mb-relationships/v1/team_member_to_location?from=14773&to=13952' \
+  --header 'Authorization: Basic dXNlcjpwYXNzd29yZA=='
+```
+
+```json
+{
+	"has_relationship": false,
+	"relationship": "posts_to_pages",
+	"to": 13577,
+	"from": 14773
+}
+```
