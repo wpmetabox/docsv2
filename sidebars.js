@@ -15,6 +15,7 @@ const sidebars = {
 				'installation',
 				'custom-post-types',
 				'custom-fields',
+				'philosophy',
 			],
 		},
 		{

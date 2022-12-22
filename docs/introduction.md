@@ -32,6 +32,8 @@ Being thoroughly optimized for code and for how to store data, Meta Box never im
 
 With APIs and actions, filters in many necessary places, you can change how to display fields, change data, or do other things like sending emails.
 
+Learn more about [Meta Box philosophy](/philosophy/).
+
 ## Meta Box overview
 
 Meta Box has 3 parts:
