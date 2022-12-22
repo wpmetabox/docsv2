@@ -1,5 +1,3 @@
-## Custom upload folder
-
 To upload files to a custom folder, set "Custom upload folder" to your folder full path.
 
 If you're using code to create this field, you can use WordPress constants to specify the path easier, such as:

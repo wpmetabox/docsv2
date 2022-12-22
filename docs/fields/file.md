@@ -44,6 +44,8 @@ This is a sample field settings array when creating this field with code:
 
 This field saves multiple attachment IDs in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
 
+## Custom upload folder
+
 <CustomUploadFolder />
 
 ## Template usage
