@@ -2,8 +2,6 @@
 title: Cloning fields
 ---
 
-import FAQ from '@site/src/components/FAQ';
-
 The clone feature of Meta Box allows you to create multiple inputs from a text, textarea, select, ... fields without declaring many fields in the code. Combining clone with [groups](/extensions/meta-box-group/) gives you a flexible way to define repeatable content.
 
 :::info Clone is a feature

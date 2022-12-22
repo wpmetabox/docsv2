@@ -2,12 +2,6 @@
 title: Custom fields
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import FAQ from '@site/src/components/FAQ';
-
 After creating custom post types and custom taxonomies, you'll need to add more details to your posts. For example, you'll need "date" and "location" for the "event" post type. Such details are called custom fields and that's the main thing that Meta Box does for you.
 
 ## What are custom fields?

@@ -2,9 +2,6 @@
 title: Displaying fields with code
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-import TabItem from '@theme/TabItem';
 import FAQ from '@site/src/components/FAQ';
 
 If you're a developer and familiar with changing template file with PHP code, you can use Meta Box helper functions to display fields:

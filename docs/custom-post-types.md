@@ -4,9 +4,6 @@ title: Custom post types
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import FAQ from '@site/src/components/FAQ';
 
 When building a website, there may be sections on the website such as events and projects where the content and appearance are very different from posts and pages. That's when you need custom post types.
 
