@@ -261,3 +261,20 @@ If you put in the `wp-content/meta-box-yml` folder as well, then you can use bot
 You can put multiple files in multiple folders. The plugin will read and parse them all. This process is real-time, which means if you make any changes, they will affect immediately. This is convenient if you want to keep all your configuration files in one place and put them under version control like Git.
 
 :::
+
+## Hooks
+
+`meta_box_template_files`
+
+This filter allows developers to register paths to files and folders to parse YAML files. It accepts one parameters: an array of files/folders.
+
+For example, if you want to add folder(s), which contains your YAML config files, use the following code:
+
+```php
+add_filter( 'meta_box_template_files', function( $files ) {
+    $files[] = get_template_directory() . '/meta-box-yml';
+    $files[] = '/path/to/your/yml/file-or-folder';
+
+    return $files;
+} );
+```
