@@ -2,67 +2,71 @@
 title: Meta Box Template
 ---
 
-Meta Box Template helps you write configuration for meta boxes and custom fields in a human-readable format (YAML).
+Meta Box Template helps you write configuration for custom fields in the YAML format, which is human-readable and easy to understand.
 
-![meta box template](https://i1.wp.com/metabox.io/wp-content/uploads/2014/12/meta-box-template-file.png)
+![meta box template](https://i.imgur.com/UIKF04C.png)
 
 After installing, please go to *Settings &rarr; Meta Box Template* to add the template for custom meta boxes and custom fields.
 
-### YAML syntax
+## Quick sample
 
-Before going into details about the syntax, let's look at the demo of 2 meta boxes defined with this plugin as an example:
+Before going into details about using the plugin, let's look at a quick sample to see how it works (screenshot above).
+
+In the plugin settings page, enter the following content written in YAML. This is the settings for a field group. .
 
 ```yml
-#First Meta Box
-- title: Profile
-  pages: page
-  fields:
-    - name: Title
-      id: prefix_title
-      type: radio
-      options:
-        mr: Mr.
-        mrs: Mrs.
-        ms: Ms.
-    - name: Name
-      id: prefix_name
-      type: text
-    - name: Image
-      id: prefix_image
-      type: image_advanced
-    - name: DOB
-      id: prefix_dob
-      type: date
-      js_options:
-        dateFormat: 'd-m-y'
-
-# Second Meta Box
-- title: Job Description
-  pages: [post, page]
-  fields:
-    - name: Job Title
-      id: prefix_job
-      type: select_advanced
-      options:
-        director: Director
-        manager: Marketing Manager
-        tech: Technical Supportor
-      placeholder: Please select your job title
-    - name: Job Description
-      id: prefix_job_desc
-      type: wysiwyg
-      options:
-        media_buttons: false
-        quicktags: false
+title: Laptop details
+post_types: laptop
+fields:
+  - name: Brand
+    type: select
+    options:
+      hp: HP
+      asus: ASUS
+      dell: Dell
+  - Model
+  - name: Images
+    type: image_advanced
 ```
 
-This will render the following meta boxes:
+The plugin will parse this content into a PHP array as follows:
 
-![meta box](https://i.imgur.com/IpqVqAD.png).
+```php
+[
+    'title'      => 'Laptop details',
+    'post_types' => 'laptop',
+    'fields'     => [
+        [
+            'name'    => 'Brand',
+            'type'    => 'select',
+            'options' => [
+                'hp'   => 'HP',
+                'asus' => 'ASUS',
+                'dell' => 'Dell',
+            ],
+        ],
+        'Model',
+        [
+            'name' => 'Images',
+            'type' => 'image_advanced',
+        ],
+    ],
+]
+```
 
-### Basic rules
+This array will be sent to Meta Box and Meta Box will register a field group with this settings array. The result looks like this:
 
-**Arrays** (YAML calls it *sequences*) use a dash followed by space:
+![meta box](https://i.imgur.com/C6W5MtS.png)
+
+Now you understand how the plugin works. It's time to get familiar with YAML syntax.
+
+## YAML syntax
+
+In YAML, we mostly defines arrays with `key: value` pairs as you saw above. YAML has different ways to define simple arrays and associated arrays.
+
+### Simple arrays
+
+Simple arrays are called *sequences* in YAML. They use dashes followed by space (`- `) to define items:
 
 ```yml
 - Item 1
@@ -79,10 +83,12 @@ You can also use short syntax like this:
 Both are equivalent to the following PHP code:
 
 ```yml
-array( 'Item 1', 'Item 2', 'Item 3');
+[ 'Item 1', 'Item 2', 'Item 3' ];
 ```
 
-**Associated arrays** (YAML calls it *mappings*) use a colon followed by a space (: ) to mark each key/value pair:
+### Associated arrays
+
+Associated arrays are called *mappings* in YAML. They use a colon followed by a space (`: `) to define each key/value pair:
 
 ```yml
 key1: value1
@@ -99,63 +105,71 @@ alternatively:
 which is equivalent to this PHP code:
 
 ```yml
-array('key1' => 'value1', 'key2' => 'value2', 'key3' => 'value3');
+[
+    'key1' => 'value1',
+    'key2' => 'value2',
+    'key3' => 'value3'
+]
 ```
 
-**Nested arrays** (sequences or mappings) can be defined with 1 or more spaces:
+### Nested arrays
+
+Nested arrays (sequences or mappings) can be defined with 1 or more spaces:
 
 ```yml
 fields:
   - name: Name
-    id: prefix_name
+    id: name
     type: text
   - name: Image
-    id: prefix_image
+    id: image
     type: image_advanced
 ```
 
 which is equivalent to:
 
 ```php
-array( 'fields' => array(
-    array(
-        'name' => 'Name',
-        'id' => 'prefix_name',
-        'type' => 'text',
-    ),
-    array(
-        'name' => 'Image',
-        'id' => 'prefix_image',
-        'type' => 'image_advanced',
-    ),
-) );
+[
+    'fields' => [
+        [
+            'name' => 'Name',
+            'id'   => 'name',
+            'type' => 'text',
+        ],
+        [
+            'name' => 'Image',
+            'id'   => 'image',
+            'type' => 'image_advanced',
+        ],
+    ],
+]
 ```
 
-**Small bits about the syntax**:
+:::tip
 
 - The number of spaces does not matter. But keep the indentation consistent with the same number of spaces.
 - Comments can be added by adding `#` at the beginning of the line.
 - YAML accepts all data types string, number, booleans, etc.
 
-For more information about using YAML, the Symfony project wrote a very good guide to follow. Check it out [here](https://symfony.com/doc/current/components/yaml/yaml_format.html). If you want the full reference (you don't need to for Meta Box Template), you can read it at [YAML homepage](https://www.yaml.org/spec/1.2/spec.html).
+:::
 
-**Note:** To make you easier to type template for meta boxes and fields, the plugin added basic editing functionality like tab, auto closing brackets, etc.
+For more information about using YAML, the Symfony project wrote a [very good guide](https://symfony.com/doc/current/components/yaml/yaml_format.html) to follow. If you want the full reference, you can read it at [YAML homepage](https://www.yaml.org/spec/1.2/spec.html).
 
-## Creating meta boxes
+## Creating field groups
 
-Each meta box or custom field has a list of the parameters which is written in `key: value` pairs (associated arrays). We use YAML mapping for these parameters.
+Each field group or custom field has a list of the settings which is written in `key: value` pairs (associated arrays). We use YAML mapping for these settings.
 
-Please see [this documentation](/creating-fields-with-code/) for list of meta box parameters and [this documentation](/field-settings/) for full list of custom fields parameters.
+:::caution
 
-To register multiple meta boxes or custom fields, we just need to use `- ` to add sequences (simple list).
+Please refer to [field group settings](/creating-fields-with-code/) and [field settings](/field-settings/) when defining keys.
 
-**Note:** the plugin supports all meta box and custom fields parameters.
+:::
 
-**If you register single meta box**, then enter meta box parameters and its fields like this:
+**If you register single meta box**, then enter field group settings and its fields like this:
 
 ```yml
 title: Profile
-pages: page
+post_types: customer
 fields:
   - name: Title
     id: prefix_title
@@ -164,21 +178,21 @@ fields:
       mr: Mr.
       ms: Ms.
   - name: Name
-    id: prefix_name
+    id: name
     type: text
   - name: DOB
-    id: prefix_dob
+    id: dob
     type: date
     js_options:
       dateFormat: 'd-m-y'
 ```
 
-**If you need to create multiple meta boxes**, use this template:
+**If you need to create multiple field groups**, use this template:
 
 ```yml
-#First Meta Box
+# First field group.
 - title: Profile
-  pages: page
+  post_types: customer
   fields:
     - name: Title
       id: prefix_title
@@ -188,42 +202,39 @@ fields:
         mrs: Mrs.
         ms: Ms.
     - name: Name
-      id: prefix_name
+      id: name
       type: text
-    - name: Image
-      id: prefix_image
-      type: image_advanced
     - name: DOB
       id: prefix_dob
       type: date
       js_options:
         dateFormat: 'd-m-y'
 
-# Second Meta Box
+# Second field group.
 - title: Job Description
-  pages: [post, page]
+  post_types: [customer, supplier]
   fields:
     - name: Job Title
-      id: prefix_job
+      id: job_title
       type: select_advanced
       options:
         director: Director
         manager: Marketing Manager
-        tech: Technical Supportor
+        tech: Technical Supporter
       placeholder: Please select your job title
     - name: Job Description
-      id: prefix_job_desc
+      id: job_desc
       type: wysiwyg
       options:
         media_buttons: false
         quicktags: false
 ```
 
-## Config file
+## Config files
 
-The plugin has an option that allows you to read the configuration from a specific file (`.yaml`), not only from manual input.
+The plugin has an option that allows you to read the configuration from a specific file (`.yml`), not only from manual input.
 
-To do that, in the plugin settings page, enter the absolute path to the configuration file (`.yaml`). You can put the configuration file in any folder of your website. But for convenience, the plugin supports the following path variables:
+To do that, in the plugin settings page, enter the absolute path to the configuration file (`.yml`). You can put the configuration file in any folder of your website. For convenience, the plugin supports the following path variables that you can used in the file paths:
 
 Name|Description
 --|--
@@ -233,4 +244,20 @@ Name|Description
 `%template%`|Path to current theme directory. Same as [`get_template_directory()`](https://codex.wordpress.org/Function_Reference/get_template_directory) function, without trailing slash
 `%stylesheet%`|Path to current child theme directory. Same as [`get_stylesheet_directory()`](https://codex.wordpress.org/Function_Reference/get_stylesheet_directory) function, without trailing slash
 
-**Note:** when you change the configuration file, you have to click **Save changes** in the plugin settings page to force it re-parse the file content.
+For example, if you put the config files in the theme's `meta-box` folder, then you can enter the following path:
+
+```
+%stylesheet%/meta-box/
+```
+
+If you put in the `wp-content/meta-box-yml` folder as well, then you can use both locations as follows:
+
+```
+%stylesheet%/meta-box/, %wp-content%/meta-box-yml/
+```
+
+:::tip
+
+You can put multiple files in multiple folders. The plugin will read and parse them all. This process is real-time, which means if you make any changes, they will affect immediately. This is convenient if you want to keep all your configuration files in one place and put them under version control like Git.
+
+:::
