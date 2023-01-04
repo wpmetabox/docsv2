@@ -2,7 +2,14 @@
 title: Filtering posts by custom fields and taxonomies
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 Besides using Tag and Category to filter your posts, you can also use custom fields and custom taxonomies to do it. This is a tutorial on doing it with the example of creating two filters for a bookselling site with two different features: publishers and authors.
+
+## Video Version
+
+<LiteYouTubeEmbed id='Byce7gfpZJQ' />
 
 Here are some tools we need:
 
@@ -104,7 +111,7 @@ Here is the final result. All books of that term are filtered.
 
 ## Using custom fields
 
-## 1. Creating a custom field
+### 1. Creating a custom field
 
 First of all, create a custom field named **Author** for the **Book** post type. This data saved in the custom field will be used for the filter.
 
@@ -123,7 +130,7 @@ Here is the created custom field in the post editor.
 
 ![created fields](https://i.imgur.com/luX44DB.png)
 
-## 2. Displaying the list of fields’ value
+### 2. Displaying the list of fields’ value
 
 Add these codes below in the `archive.php file` to show the custom field’s values:
 
