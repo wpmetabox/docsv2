@@ -131,3 +131,15 @@ $users = get_users( [
 ] );
 // Do something with $users.
 ```
+## Hook
+
+### `mbfp_cookie_expiration`:
+
+This filter is used to allow developers to change the cookie expiration day
+
+```php
+add_filter( 'mbfp_cookie_expiration', function( $days ) {
+    $days = '1 month';
+    return $days;
+}, 10, 3 );
+```
