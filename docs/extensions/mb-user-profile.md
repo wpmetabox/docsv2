@@ -28,6 +28,7 @@ Name|Description
 `id_password`|ID (HTML attribute) of the password input field.
 `id_password2`|ID (HTML attribute) of the confirm password input field.
 `id_submit`|ID (HTML attribute) of the submit button.
+`label_title`|Label for the title of the form. Default is empty.
 `label_username`|Label for the username input field.
 `label_email`|Label for the email input field.
 `label_password`|Label for the password input field.
