@@ -143,3 +143,14 @@ add_filter( 'mbfp_cookie_expiration', function( $days ) {
     return $days;
 }, 10, 3 );
 ```
+
+### `mbfp_max_posts`:
+
+This filter is used to define the maximum number of favorite posts
+
+```php
+add_filter( 'mbfp_max_posts', function( $posts ) {
+    $posts = 100;
+    return $posts;
+}, 10, 3 );
+```
