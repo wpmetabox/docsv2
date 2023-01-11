@@ -36,6 +36,7 @@ Attributes|Description
 ---|---
 `id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas. Optional.
 `ajax`|Enable Ajax submission. `true` or `false` (default).
+`allow_scroll`|Enable scroll to message after ajax submission. `false` or `true` (default).
 `edit`|Allow users to edit the post after submitting. `true` or `false` (default). If `true` then `ajax` attribute will be disabled, e.g. set to `false`.
 `allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
 `force_delete`|Whether to delete the submitted post permanently or temporarily (move to Trash).
