@@ -24,6 +24,7 @@ Besides the [common settings](/field-settings/), this field has the following sp
 
 Name | Key | Description
 --- | --- | ---
+Type | `type` | Allowed values: `text`, `url` or `email`. If the value is `url` or `email`, the field value will be validated accordingly.
 Placeholder | `placeholder` | Placeholder for the input. Optional.
 Size of the input box | `size` | Size of the input box. Without this setting, the input box is full-width.
 Prepend text | `prepend`|Prepend text for the input. The prepended text should be considered as an informative label. It's not saved in the database with the input value.
