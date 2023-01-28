@@ -53,7 +53,7 @@ const config = {
 
   scripts: [
 	{
-	  src: 'https://w.appzi.io/w.js?token=lmELC',
+	  src: 'https://w.appzi.io/w.js?token=mAHPU',
 	  async: true,
 	},
   ],
