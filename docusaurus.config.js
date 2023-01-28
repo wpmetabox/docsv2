@@ -56,6 +56,15 @@ const config = {
     ({
       // hideableSidebar: true,
       // autoCollapseSidebarCategories: true,
+	  scripts: [
+		// String format.
+		'https://docusaurus.io/script.js',
+		// Object format.
+		{
+		  src: 'https://w.appzi.io/w.js?token=lmELC',
+		  async: true,
+		},
+	  ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
