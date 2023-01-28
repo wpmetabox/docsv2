@@ -51,20 +51,18 @@ const config = {
     ],
   ],
 
+  scripts: [
+	{
+	  src: 'https://w.appzi.io/w.js?token=lmELC',
+	  async: true,
+	},
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // hideableSidebar: true,
       // autoCollapseSidebarCategories: true,
-	  scripts: [
-		// String format.
-		'https://docusaurus.io/script.js',
-		// Object format.
-		{
-		  src: 'https://w.appzi.io/w.js?token=lmELC',
-		  async: true,
-		},
-	  ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
