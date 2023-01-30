@@ -100,7 +100,7 @@ add_action( 'template_redirect', 'justread_ics_download' );
 
 **Explanation**:
 
-The ICS class is used to export the **ics** file when users click the **Add to Calendar** button and download this file. This class is declared in the `ICS.php` file. You can refer to this `ICS.php` file's content here.
+The ICS class is used to export the **ics** file when users click the **Add to Calendar** button and download this file. This class is declared in this `ICS.php` [file](https://github.com/wpmetabox/tutorials/blob/master/ics-calendar/ICS.php). 
 
 When going to the event's single page, you will see the result:
 
