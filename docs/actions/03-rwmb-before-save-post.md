@@ -29,6 +29,7 @@ do_action( "rwmb_{$field_group_id}_before_save_post", $object_id );
 ```php
 add_action( 'rwmb_event-details_before_save_post', function() {
     $_POST['location'] = 'United States';
+	rwmb_request()->set_post_data( $_POST );
 } );
 ```
 
@@ -39,6 +40,7 @@ add_action( 'rwmb_event-details_before_save_post', function() {
     if ( $_POST['event_type'] === 'festival' ) {
         $_POST['event_start_time'] = '09:00';
         $_POST['event_end_time'] = '17:00';
+		rwmb_request()->set_post_data( $_POST );
     }
 } );
 ```
