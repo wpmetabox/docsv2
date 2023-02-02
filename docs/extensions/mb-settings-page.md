@@ -509,27 +509,3 @@ Other parameters are the same as for posts. Please see [this documentation](/dis
 It requires the extension version 1.2+ to use the helper function. If you're using an older version, please [update now](/updates/).
 
 :::
-
-In case you use an older version than 1.2, you can get the settings manually:
-
-```php
-$settings = get_option( 'option_name' );
-$field_id = 'your_field_id';
-if ( isset( $settings[$field_id] ) ) {
-    return $settings[$field_id];
-}
-```
-
-Note that this code returns only raw data of field value. It doesn't return meaningful information for images, file, etc. To do that, please add a small piece of code as follow:
-
-```php
-// Getting images
-$settings = get_option( 'option_name' );
-$image_ids = $settings['images'];
-foreach ( $image_ids as $image_id ) {
-    $image = RWMB_Image_Field::file_info( $image_id, array( 'size' => 'thumbnail' ) );
-    echo '<img src="' . $image['url'] . '">';
-}
-```
-
-<Helpers />

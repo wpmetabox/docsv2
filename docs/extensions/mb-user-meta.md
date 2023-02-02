@@ -93,29 +93,3 @@ Other parameters are the same as for posts. Please see [this documentation](/dis
 It requires the extension version 1.1+ to use the helper function. If you're using an older version, please [update now](/updates/).
 
 :::
-
-In case you use an older version than 1.1, you can get the field value manually:
-
-```php
-$meta = get_user_meta( $user_id, $field_id, true );
-echo $meta;
-
-// Or use this code if field has multiple value
-$meta = get_user_meta( $user_id, $field_id, false );
-foreach ( $meta as $value ) {
-    echo $value;
-}
-```
-
-Note that the code above returns only raw data of user meta value. It doesn't return meaningful information for images, file, etc. To do that, please add a small piece of code as follow:
-
-```php
-// Getting images
-$image_ids = get_user_meta( $user_id, $field_id, false ); // Media fields are always multiple.
-foreach ( $image_ids as $image_id ) {
-    $image = RWMB_Image_Field::file_info( $image_id, array( 'size' => 'thumbnail' ) );
-    echo '<img src="' . $image['url'] . '">';
-}
-```
-
-<Helpers />
