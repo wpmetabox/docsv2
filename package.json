@@ -38,6 +38,6 @@
     ]
   },
   "devDependencies": {
-    "@docusaurus/plugin-sitemap": "^2.0.1"
+    "@docusaurus/plugin-sitemap": "^2.3.0"
   }
 }

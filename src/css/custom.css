@@ -766,11 +766,4 @@ html[data-theme='dark'] .tutorials_trending{
 		max-height: unset;
 		height: auto;
 	}
-
-}
-
-/* hide menu */
-.menu__list-item:last-child .menu__list >li:nth-child(n+7){
-	display: none !important;
-
 }
