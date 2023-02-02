@@ -41,21 +41,45 @@ Meta Box **removes all scripts and iframes** from the value. If you want to ente
 ```php
 <section>
     <h2>About Us</h2>
-    <p><?php rwmb_the_value( 'my_field_id' ) ?></p>
+    <p><?php rwmb_the_value( 'field_id' ) ?></p>
+</section>
+```
+
+**Getting the value:**
+
+```php
+<section>
+    <h3>About Us</h3>
+    <?php $value = rwmb_meta( 'field_id' ) ?>
+    <p><?= $value ?></p>
 </section>
 ```
 
 **Auto adding paragraphs to the text:**
 
 ```php
-<?php $value = rwmb_meta( 'my_field_id' ) ?>
+<?php $value = rwmb_meta( 'field_id' ) ?>
 <?= wpautop( $value ) ?>
+```
+
+**Parse shortcodes:**
+
+```php
+<?php $value = rwmb_meta( 'field_id' ) ?>
+<?= do_shortcode( $value ) ?>
+```
+
+**Parse blocks:**
+
+```php
+<?php $value = rwmb_meta( 'field_id' ) ?>
+<?= do_blocks( $value ) ?>
 ```
 
 **Displaying cloneable values:**
 
 ```php
-<?php $values = rwmb_meta( 'my_field_id' ) ?>
+<?php $values = rwmb_meta( 'field_id' ) ?>
 <?php foreach ( $values as $value ) : ?>
     <p><?= $value ?></p>
 <?php endforeach ?>
