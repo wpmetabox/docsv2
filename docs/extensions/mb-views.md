@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 MB Views helps you to get Meta Box fields and build your templates in the front end fast and easily.
 
-With MB Views, you can just select fields you want to show, fill in some parameters and done! The extension supports all custom fields built with Meta Box, and also post fields (such as post title and post content), site settings, user fields, and even query fields.
+With MB Views, you can just select the fields you want to show, fill in some parameters and done! The extension supports all custom fields built with Meta Box, and also post fields (such as post title and post content), site settings, user fields, and even query fields.
 
 You can also customize all templates in WordPress, even for post types that don't have Meta Box fields.
 
@@ -21,11 +21,11 @@ In this video, we show you step-by-step how to use *MB Views* to create singular
 
 To create a view, go to **Meta Box > Views** and click the **Add New** button.
 
-![creat a new view](https://i.imgur.com/VO5oV2T.png)
+![create a new view](https://i.imgur.com/VO5oV2T.png)
 
 In the view screen, you'll see 2 areas:
 
-- Template editors: where you can enter template code for the view. It contains 3 editors for the template, CSS and JavaScript.
+- Template editors: where you can enter template code for the view. It contains 3 editors for the template, CSS, and JavaScript.
 - Settings: where you can set location rules for the view.
 
 In the main editor, you can enter any HTML or *shortcodes* for the template. All shortcodes will be parsed automatically in the front end.
@@ -41,17 +41,17 @@ Fields are categorized into 4 tabs:
 - User: contains all user fields and custom fields for users (created by [MB User Meta](/extensions/mb-user-meta/) plugin).
 - Query: contains loop and pagination for archive pages.
 
-To insert a field, click on the field title to insert it. The field might have additional parameters (such as choose image size for image field). And in that case, the plugin will open a popup for you to enter or select options.
+To insert a field, click on the field title to insert it. The field might have additional parameters (such as choosing image size for the image field). And in that case, the plugin will open a popup for you to enter or select options.
 
 ![enter field options](https://i.imgur.com/MUsLgWu.png)
 
-When you're done entering the field options, click **Insert** button to insert the field in the editor. The plugin will generate a snippet and insert it into the editor.
+When you're done entering the field options, click the **Insert** button to insert the field in the editor. The plugin will generate a snippet and insert it into the editor.
 
 If a field doesn't have options, then the plugin will insert a snippet into the editor immediately without opening a popup.
 
 ### Main query
 
-The items on the Insert Field tab only works with the main query. We can understand when setting Type and Location for the View. For example: You can only use the item "Term ID" when Type is Archive and Location is Taxonomy Archive, if you use the item "Post ID", it will not work.
+The items on the Insert Field tab only work with the main query. We can understand when setting Type and Location for the View. For example, you can only use the item "Term ID" when the Type is Archive and Location is Taxonomy Archive, if you use the item "Post ID", it will not work.
 
 ![main query](https://i.imgur.com/HAkP7Ci.png)
 
@@ -67,15 +67,15 @@ The plugin will generate a snippet for the field, like this:
 
 ```
 {% for clone in post.tickets %}
-    Content here might be different depends on the field type
+    Content here might be different depending on the field type
 {% endfor %}
 ```
 
-This is a `for` loop, created by using Twig template engine. You'll find more details about it below. The content inside the `for` loop might be different depending on the field type.
+This is a `for` loop, created by using the Twig template engine. You'll find more details about it below. The content inside the `for` loop might be different depending on the field type.
 
 ### Group fields
 
-Group fields are marked with an arrow on the left, just like the image above. Clicking on the arrow will toggle the group sub-fields.
+Group fields are marked with an arrow on the left, just like in the image above. Clicking on the arrow will toggle the group sub-fields.
 
 To insert a sub-field, click on the sub-field title, like inserting a normal field. Depending on the field type, it will open a popup for additional options or not.
 
@@ -89,15 +89,15 @@ If you have a cloneable group, before inserting sub-fields, you **must** insert 
 
 Relationships created with [MB Relationships](/extensions/mb-relationships/) extension can be inserted in the tab **Query**.
 
-Once you registered a relationship, it will show 2 fields here: one for "from" side, and one for "to" side. Clicking a field will insert a loop of connected items, and inside the loop, you can insert post/term/user fields as usual.
+Once you registered a relationship, it will show 2 fields here: one for the "from" side, and one for the "to" side. Clicking a field will insert a loop of connected items, and inside the loop, you can insert post/term/user fields as usual.
 
 See tutorial: [How To Display Relationships?](https://metabox.io/mb-views-how-to-display-relationships/)
 
 ## Include other views
 
-The plugin allows you to include other views, which helps you to break down a large templates into smaller ones and re-use them in other views.
+The plugin allows you to include other views, which helps you to break down large templates into smaller ones and reuse them in other views.
 
-To insert a view, go to tab tab **Query**, and click on the view you want to insert. Note that when you include view into another view, they have access to the same context as the current view. This means that any variable defined in the main view will be available in the included view.
+To insert a view, go to the tab **Query**, and click on the view you want to insert. Note that when you include a view into another view, they have access to the same context as the current view. This means that any variable defined in the main view will be available in the included view.
 
 See tutorial: [Creating and Including Template Parts in MB Views](https://metabox.io/mb-views-creating-including-template-parts/)
 
@@ -229,13 +229,13 @@ With the combination of `OR` and `AND`, you can build complex rules for views.
 
 After choosing location rules, you can decide where to render the view for those chosen pages. You have 2 options:
 
-- Render for the whole page layout, including header and footer. This option is useful when you want to build a complete new page on your site.
-- Render for the whole layout between header and footer. Using this option, you have full control to build the layout.
+- Render the whole page layout, including the header and footer. This option is useful when you want to build a completely new page on your site.
+- Render the whole layout between the header and footer. Using this option, you have full control to build the layout.
 - Render only for the post content area. Using this option, you leave the layout to the theme and control only the post content area.
 
 ### Position
 
-If you choose to render the view for the post content area, then you can set it to appear before, after or replace the content area.
+If you choose to render the view for the post content area, then you can set it to appear before, after, or replace the content area.
 
 ### Order
 
@@ -251,7 +251,7 @@ This filter is used to allow developers to create custom rules for location vali
 - `$view`: the view object (which is a post object)
 - `$type`: the view type
 
-For example, if you have a view that display for all archive pages, but you don't want it to appear on pages that have query string `?custom_var=1`, you can do like this:
+For example, if you have a view that displays for all archive pages, but you don't want it to appear on pages that have query string `?custom_var=1`, you can do like this:
 
 ```php
 add_filter( 'mbv_location_validate', function( $result, $view, $type ) {
@@ -269,13 +269,13 @@ add_filter( 'mbv_location_validate', function( $result, $view, $type ) {
 
 ### `mbv_location_action_active`
 
-This filter is used to allow developers to create custom rules for location validation for the views that has displayed on a specific action (type = action). It accepts 3 parameters:
+This filter is used to allow developers to create custom rules for location validation for the views that have been displayed on a specific action (type = action). It accepts 3 parameters:
 
 - `$active`: is the view active
 - `$view`: the view object (which is a post object)
 - `$action`: the action name
 
-For example, if you have a view that display on `wp_footer`, but you don't want it to appear on pages that have query string `?custom_var=1`, you can do like this:
+For example, if you have a view that displays on `wp_footer`, but you don't want it to appear on pages that have query string `?custom_var=1`, you can do like this:
 
 ```php
 add_filter( 'mbv_location_action_active', function( $active, $view, $action ) {
@@ -321,7 +321,7 @@ When editing a template for views, you can use any HTML/CSS/JavaScript.
 
 In some cases, when you need to set a condition for an HTML section or loop through all values of an array, then you can use Twig.
 
-[Twig](https://twig.symfony.com/) is a powerful template engine for PHP, which allows you to write conditions (`if..else`), control structure (`for`) and use filters to transform the output.
+[Twig](https://twig.symfony.com/) is a powerful template engine for PHP, which allows you to write conditions (`if..else`), control structure (`for`), and use filters to transform the output.
 
 For example, if you want to output an image if the post doesn't have a featured image, then you can use the following snippet:
 
@@ -341,7 +341,7 @@ If a field has multiple values, then you can use `for`-loop to render all the va
 {% endfor %}
 ```
 
-You can also use filter to transform the value, like this:
+You can also use filters to transform the value, like this:
 
 ```
 {{ post.date | date( 'm/d/Y' ) }}
@@ -351,13 +351,13 @@ For details about using Twig, please see the [documentation](https://twig.symfon
 
 ## External template files
 
-Since version 1.10, MB Views allows you to write template in the extenal files in your themes/plugins and include or use it inside views or with `[mbv]` shortcode.
+MB Views also allows you to write templates in external files in your themes/plugins and include or use it inside views or with `[mbv]` shortcode.
 
 Using external template files has some benefits:
 
 - You can write templates in Twig instead of PHP, which is a beautiful syntax. Twig templates also support getting WordPress and Meta Box's values easier
-- You can put template files under a version control like Git to track changes and never loose anything
-- You can deploy (upload) templates to other websites with ease via (S)FTP, Git or any CI/CD
+- You can put template files under version control like Git to track changes and never lose anything
+- You can deploy (upload) templates to other websites with ease via (S)FTP, Git, or any CI/CD
 
 Let's see how to do that:
 
@@ -399,12 +399,12 @@ add_action( 'mbv_fs_loader_init', function( $fs_loader ) {
     // Add a path.
 	$fs_loader->addPath( get_template_directory() . '/views' );
 
-    // Prepent a path, which change the order of registered paths and thus the order to load template files.
+    // Prepend a path, which changes the order of registered paths and thus the order to load template files.
     $fs_loader->prepend( get_template_directory() . '/default' );
 } );
 ```
 
-### Using extenal views
+### Using external views
 
 You can include external views in your views using this snippet:
 
@@ -420,11 +420,11 @@ You can also render the template with the `[mbv]` shortcode as follows:
 [mbv name="header.twig"]
 ```
 
-Note that the file extension doesn't matter. You can name the file `header.twig`, `header.html` or anything. It's only used to search for the template files.
+Note that the file extension doesn't matter. You can name the file `header.twig`, `header.html`, or anything. It's only used to search for the template files.
 
 ### Namespace
 
-When loading template files, the order of registered paths define the order of paths where the plugin search for a template. However, there are some cases when you have templates with a same name, but used for different purpose, such as a `header.twig` for the homepage and another `header.twig` for the rest of the website. You might use different names for files, but there's a better option is using namespace.
+When loading template files, the order of registered paths define the order of paths where the plugin search for a template. However, there are some cases when you have templates with the same name but used for a different purpose, such as a `header.twig` for the homepage and another `header.twig` for the rest of the website. You might use different names for files, but there's a better option is using namespaces.
 
 To add a template with a namespace, use the code below:
 
@@ -444,7 +444,7 @@ Usage:
 {% include '@home/header.twig' %}
 {% include '@default/header.twig' %}
 
-// or with shortcode
+// or with shortcodes
 
 [mbv name="@home/header.twig"]
 [mbv name="@default/header.twig"]
