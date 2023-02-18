@@ -2,198 +2,140 @@
 title: Meta Box Tabs
 ---
 
-Meta Box Tabs helps you to put custom fields into tabs for a better view.
+Meta Box Tabs helps you to put custom fields into tabs for a better view. Tabs can have icons and can be put on the left side of the meta box.
 
 ![tab styles](https://i.imgur.com/7Oi5dx1.jpg)
 
-## Using Meta Box Builder
+:::info Tabs in settings pages
 
-Tab field must be added first then other fields.
+Tabs in the settings pages are created separately with different settings by the [MB Settings Page](/extensions/mb-settings-page) extension. This extension is for grouping fields inside a field group only.
 
-![tab field](https://i.imgur.com/R2N75ny.png)
+:::
+
+## Creating tabs
+
+First, you need to create custom fields as usual. Go to **Meta Box » Custom Fields** and [create a field group](/custom-fields/#how-to-create-custom-fields) with the custom fields you need.
+
+![Creating a field group with some custom fields](https://i.imgur.com/YK5nBYz.png)
+
+Then adding tabs to the field group. **Tab is a special field type** and is available in the field list.
+
+:::info Not a premium user?
+
+This instruction uses **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
+
+:::
+
+To add a tab, click the **+ Add Field** button and search for **Tab**:
+
+![Adding a tab field](https://i.imgur.com/GzGX7xE.png)
+
+After adding tabs, you need to **reorder** tabs among the fields. **The fields that follow a tab will belong to this tab**.
+
+![Reorder tabs](https://i.imgur.com/Tb0mxsJ.png)
+
+## Tab settings
+
+Each tab has its own settings like label or icon. To see and change the tab settings, click the tab title bar:
+
+![View tab settings](https://i.imgur.com/Pa8zlAD.png)
+
+Below is the meaning of each setting:
+
+Name|Description
+---|---
+Label|The tab label
+ID|The tab ID, which is used internally by the plugin
+Type|The field type, must be "Tab"
+Icon type|The icon type, you can choose between Dashicons (default), Font Awesome, or custom URL. Optional.
+
+If you choose the tab icon type Dashicons, you'll see a list of icons to pick from (as in the screenshot above).
+
+If you want to use a FontAwesome icon for the tab, then select Icon type "Font Awesome" and enter the [icon CSS class](https://fontawesome.com/icons?d=gallery&m=free) in the next input.
+
+If you have a custom image for the tab icon, then select Icon type "Custom URL" and enter the icon URL in the next input.
+
+## Tab style
+
+The plugin provides 3 styles for tabs: "default", "box", and "left" as you can see below:
+
+![Tab style](https://i.imgur.com/7Oi5dx1.jpg)
+
+To change a tab style, go to the **Settings** tab and choose one style in the **Tab style** dropdown:
+
+![Select a tab style](https://i.imgur.com/lYqoEWF.png)
+
+You can also set the default active tab here by entering the tab ID in the **Default active tab ID**.
+
+Now you have your tabs ready. Please edit a post to see them in action!
 
 ## Using code
 
-### Settings
+If you're a developer and prefer using code to create tabs, this is a sample code to create simple tabs:
+
+```php
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+	$meta_boxes[] = [
+		'title'     => 'Meta Box Tabs Demo',
+
+        // highlight-start
+        'tabs'      => [
+			'contact' => 'Contact',
+			'social'  => 'Social Media',
+		],
+        // highlight-end
+		'fields'    => [
+			[
+				'name' => 'Name',
+                // highlight-next-line
+				'tab'  => 'contact',
+			],
+			[
+				'name' => 'Email',
+                // highlight-next-line
+				'tab'  => 'contact',
+			],
+			[
+				'name' => 'Facebook',
+                // highlight-next-line
+				'tab'  => 'social',
+			],
+			[
+				'name' => 'Twitter',
+                // highlight-next-line
+				'tab'  => 'social',
+			],
+		],
+	];
+
+	return $meta_boxes;
+} );
+```
 
 To create tabs for your meta box, you need to add these parameters to your meta box settings:
 
 Parameter|Description
 ---|---
 `tabs`|Array of tabs. See below for details.
-`tab_style`|The tab style: `default` (like tabs for Categories), `box` (like tabs for Visual and Text modes of the main editor) or `left` (like tabs in Help screen)
-`tab_wrapper`|Whether or not show the meta box wrapper around tabs (deprecated). Please use `'style' => 'seamless'` parameter for the meta box instead.
+`tab_style`|The tab style: `default` (like tabs for Categories), `box` (like tabs for Visual and Text modes of the main editor) or `left` (like tabs in the Help screen)
 `tab_default_active`|Default active tab ID.
 
-### Defining tabs
-
-List of tabs are defined in the `tabs` parameter, in one of the following formats:
-
-- `'tab-id' => 'Tab label'`, or
-- `'tab-id' => ['label' => 'Tab label', 'icon' => 'Tab icon']`
-
-Where `tab-id` will be used in fields (below) to put fields under a tab.
-
-If use the 2nd format, then `icon` is the tab icon. Icons are taken from [Dashicons](https://developer.wordpress.org/resource/dashicons/). The value of `icon` is the class name of Dashicons, e.g. `dashicons-email`.
-
-If you want to use another icon (not Dashicons), either:
-
-- set `icon` to the font icon class name. For example, if you want to use Font Awesome, set `'icon' => 'fa fa-home'`. Note that you have to enqueue the CSS for your custom font icon yourself. The plugin only supports Dashicons by default.
-- set `icon` to URL of icon image, in case you want to use a custom image for tab icon
-
-(Take a look at demo code to see how to implement)
-
-Then for each field in the meta box, you need to specify which tab it belongs to by adding a parameter `'tab' => 'tab-id'` where `tab-id` is one of the tab IDs you have registered above.
-
-### Sample code
+The list of tabs is defined in the `tabs` parameter. A tab can have or doesn't have an icon and can be set like this:
 
 ```php
-add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
-    // 1st Meta Box
-    $meta_boxes[] = array(
-        'title'     => 'Meta Box Tabs Demo',
-
-        // List of tabs, in one of the following formats:
-        // 1) key => label
-        // 2) key => array( 'label' => Tab label, 'icon' => Tab icon )
-        'tabs'      => array(
-            'contact' => array(
-                'label' => 'Contact',
-                'icon'  => 'dashicons-email', // Dashicon
-            ),
-            'social'  => array(
-                'label' => 'Social Media',
-                'icon'  => 'dashicons-share', // Dashicon
-            ),
-            'note'    => array(
-                'label' => 'Note',
-                'icon'  => 'https://i.imgur.com/nJtag1q.png', // Custom icon, using image
-            ),
-        ),
-
-        // Tab style: 'default', 'box' or 'left'. Optional
-        'tab_style' => 'default',
-
-        // Show meta box wrapper around tabs? true (default) or false. Optional
-        'tab_wrapper' => true,
-
-        'fields'    => array(
-            array(
-                'name' => 'Name',
-                'id'   => 'name',
-                'type' => 'text',
-
-                // Which tab this field belongs to? Put tab key here
-                'tab'  => 'contact',
-            ),
-            array(
-                'name' => 'Email',
-                'id'   => 'email',
-                'type' => 'email',
-                'tab'  => 'contact',
-            ),
-            array(
-                'name' => 'Facebook',
-                'id'   => 'facebook',
-                'type' => 'text',
-                'tab'  => 'social',
-            ),
-            array(
-                'name' => 'Note',
-                'id'   => 'note',
-                'type' => 'textarea',
-                'tab'  => 'note',
-            ),
-        ),
-    );
-
-    // 2nd Meta Box: Tab style - boxed
-    $meta_boxes[] = array(
-        'title'     => 'Meta Box Tabs 2',
-        'tabs'      => array(
-            'bio'      => 'Biography',
-            'interest' => 'Interest',
-        ),
-        'tab_style' => 'box',
-        'fields'    => array(
-            array(
-                'name' => 'Bio',
-                'id'   => 'bio',
-                'type' => 'textarea',
-                'tab'  => 'bio',
-            ),
-            array(
-                'name' => 'Interest',
-                'id'   => 'interest',
-                'type' => 'textarea',
-                'tab'  => 'interest',
-            ),
-        ),
-    );
-
-    // 3rd Meta Box: Tab style - left
-    $meta_boxes[] = array(
-        'title'     => 'Meta Box Tabs 3',
-
-        'tabs'      => array(
-            'bio'      => 'Biography',
-            'interest' => 'Interest',
-            'job'      => 'Job',
-        ),
-        'tab_style' => 'left',
-        'fields'    => array(
-            array(
-                'name' => 'Bio',
-                'id'   => 'bio',
-                'type' => 'textarea',
-                'tab'  => 'bio',
-            ),
-            array(
-                'name' => 'Interest',
-                'id'   => 'interest',
-                'type' => 'textarea',
-                'tab'  => 'interest',
-            ),
-            array(
-                'name' => 'Job Description',
-                'id'   => 'job_desc',
-                'type' => 'textarea',
-                'tab'  => 'job',
-            ),
-        ),
-    );
-
-    // 4th Meta Box: No wrapper
-    $meta_boxes[] = array(
-        'title'       => 'Meta Box Tabs 4',
-        'tabs'        => array(
-            'contact' => array(
-                'label' => 'Info',
-                'icon'  => 'dashicons-email',
-            ),
-            'social'  => array(
-                'label' => 'Social',
-                'icon'  => 'dashicons-share',
-            ),
-        ),
-        'tab_style'   => 'box',
-        'tab_wrapper' => false,
-        'fields'      => array(
-            array(
-                'name' => 'Name',
-                'id'   => 'name2',
-                'type' => 'text',
-                'tab'  => 'contact',
-            ),
-            array(
-                'name' => 'Google+',
-                'id'   => 'googleplus2',
-                'type' => 'text',
-                'tab'  => 'social',
-            ),
-        ),
-    );
-
-    return $meta_boxes;
-} );
+'tabs'      => [
+    'contact' => 'Contact',       // No icon
+    'social'  => [                // With icon
+        'label' => 'Social Media',
+        'icon'  => 'dashicons-share',
+    ]
+],
 ```
+
+The plugin supports the following icon type for tabs:
+
+- [Dashicons](https://developer.wordpress.org/resource/dashicons/): set `icon` to the class name of Dashicons, e.g. `dashicons-email`.
+- Icon font: set `icon` to the icon class name. For example, if you want to use Font Awesome, set `'icon' => 'fa fa-home'`. Note that you have to enqueue the CSS for your custom font icon yourself. The plugin only supports Dashicons by default.
+- Custom URL: set `icon` to the URL of the image
+
+Then for each field in the meta box, you need to **specify which tab it belongs to** by adding a parameter `'tab' => 'tab-id'` where `tab-id` is one of the tab IDs you have registered above.
