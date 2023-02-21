@@ -3,70 +3,101 @@ title: MB Settings Page
 ---
 
 import Helpers from '../_parts/_helpers.md';
-
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-MB Settings Page helps you to create settings pages for your website. You can use it to create a theme options page, or a settings page for your plugin, or a custom settings page for clients' websites.
+MB Settings Page helps you create settings pages for your website. You can use it to create a theme options page, or a settings page for your plugin, or a custom settings page for clients' websites.
 
-Screenshots:
+The plugins provide several styles for settings pages where you can have tabs or meta boxes. We try to keep the styles similar to the default WordPress UI as much as possible.
 
-**Tab style** (the default WordPress style for settings page):
+<div className="gallery">
+    <div className="gallery_col1">
+        <figure>
+            <img src="https://i.imgur.com/yb9Admk.png" alt="Settings page with WordPress-native tabs" />
+            <figcaption>Settings page with WordPress-native tabs</figcaption>
+        </figure>
+        <figure>
+            <img src="https://i.imgur.com/QoaD4la.png" alt="Settings page with left tabs" />
+            <figcaption>Settings page with left tabs</figcaption>
+        </figure>
+    </div>
+    <div className="gallery_col2">
+        <figure>
+            <img src="https://i0.wp.com/metabox.io/wp-content/uploads/2015/12/settings-page.jpg" alt="Settings page with meta boxes" />
+            <figcaption>Settings page with meta boxes</figcaption>
+        </figure>
+    </div>
+</div>
 
-![settings page with tabs](https://i.imgur.com/yb9Admk.png)
+:::success
 
-**Left tab navigation** (often seen in theme options page):
+You can also combine styles, for example using tabs with meta boxes.
 
-![left tab navigation for theme options](https://i.imgur.com/QoaD4la.png)
-
-**Boxed style** (the WordPress style for meta boxes):
-
-![settings page boxed style](https://i0.wp.com/metabox.io/wp-content/uploads/2015/12/settings-page.jpg)
+:::
 
 ## Creating settings pages
 
-Creating a setting page is done by either of the following methods:
+To create a settings page, go to **Meta Box » Settings Pages** and click **Add New**.
 
-- **Using Meta Box Builder extension**, which helps you create settings pages with UI. This extension is already bundled in Meta Box AIO/MB Core.
-- **Using code**.
+![Creating settings pages](https://i.imgur.com/HOzTabH.png)
 
-### Using Meta Box Builder
+On the new screen, you'll see all details for the settings page.
 
-To start, go to **Meta Box > Settings Pages** and click **Add New**.
+:::info Not a premium user?
 
-![create settings pages](https://i.imgur.com/LXHfSkP.png)
+This instruction uses **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
 
-Here you can enter all the settings for the settings page:
+:::
+
+### Settings
+
+There are several settings for a settings page. All of them are self-explained. We also add some tooltips next to the setting title to give you more information if needed. Here is the list of the settings with the explanation:
+
 
 Name | Description
 ---|---
-Option name | Option name where settings data is saved to. If you want to use theme mods, then set this to `theme_mods_$themeslug`.
 Menu type | Whether to show the settings page as a top-level menu or a submenu of an existing menu. Depending on the menu type, several settings below will appear.
 Show menu after | Select the position of the menu. Available only when menu type is Top-level menu.
 Default first submenu title | If you create a top-level settings page with some sub-settings pages, you can set the default first submenu title here.
-Icon type | What type of menu icon. Available only when menu type is Top-level menu.
-Icon | The Dashicons for the menu. Available only when icon type is Dashicons.
-Icon SVG | The custom SVG icon for the menu. Available only when icon type is SVG.
-Icon URL | The URL for the custom icon. Available only when icon type is Custom URL.
+Icon type | What type of menu icon. Available only when menu type is Top-level menu. Supports Dashicons, Font Awesome, SVG, and custom URL.
+Icon | The icon for the menu. Available only when the icon type is Dashicons or Font Awesome.
+Icon SVG | The custom SVG icon for the menu. Available only when the icon type is SVG.
+Icon URL | The URL for the custom icon. Available only when the icon type is Custom URL.
 Parent menu | If you select menu type "Submenu", then you can select the parent menu for this sub-menu here.
 Required capability | The required capability to access the settings page.
 Custom CSS class | Custom CSS for the wrapper div in the settings page, so you can add your styling.
-Style | How do you want to style the settings page. Supports "Boxes" which has same the style as normal WordPress meta boxes (like in the edit post screen) and "No boxes" which has the same style as WordPress settings pages.
-Columns | The number of columns in the meta boxes. Can be 1 or 2. You might want to use 1 column with style "No boxes" style to match WordPress style.
-Tabs | This settings helps you to organize meta boxes of a settings page in tabs. Add a key-value of tabs here. Note that: when registering meta boxes for the settings page, you must specify which tab the meta box belongs to. See the "Using Tabs" section below for details.
-Tab style | Specify the tab style, which can be "Top" (WordPress-native style where tabs are horizontal) or "Left" (tabs are put on the left of the settings page). See the "Using Tabs" section below for details.
+Style | How do you want to style the settings page? Supports "Boxes" which has same the style as normal WordPress meta boxes (like in the edit post screen with the classic editor) and "No boxes" which has the same style as WordPress settings pages.
+Columns | The number of columns in the meta boxes. Can be 1 (the same as WordPress settings pages) or 2 (the same as the edit post screen).
+Tabs | Array of tabs (key => label) for the settings page.
+Tab style | Specify the tab style, which can be "Top" (WordPress-native style) or "Left".
 Custom submit button | The custom text for submit button.
-Custom message | The custom message displayed when saving options.
-Help content | The content displayed when clicking on the Help button on the top right (near the Screen Options button).
+Custom message | The custom message is displayed when saving options.
+Help content | The content displayed when clicking on the "Help" button on the top right (near the "Screen Options" button) and is organized in tabs. Each tab has its own title and content.
 Customizer | Whether to show the settings page in the Customizer as a panel. See the "Creating Customizer settings" section for details.
 Customizer only | Whether to show only as a Customizer panel, no admin settings page.
 Network | Make the settings page network-wide (in a multisite environment).
 
-Please note that you can create as many settings pages as you want. You can also create a top-level settings page and several sub-settings pages.
+Each settings page also has its own ID and option that specifies which option in the database to store data into. By default, the plugin set the option name the same as the ID. You can change it if you want on the **Settings Page** on the right:
 
-### Using code
+![Changing settings page ID and option name](https://i.imgur.com/8rjobtU.png)
 
-Creating a settings page is done by filter `mb_settings_pages`. The code to add a settings page looks like this (this registers a theme options page under Appearance menu):
+:::info ID vs. option name
+
+ID is for internal use for Meta Box, like the settings page URL or reference in the field group definition. The option name is for storing and getting data from the database. They can be the same (works in most cases) or different.
+
+:::
+
+:::success
+
+If you want to use make the data of the settings page compatible with Customizer settings for the current theme, e.g. using theme mods to store the data, then set the option name to `theme_mods_$themeslug`.
+
+:::
+
+You can create as many settings pages as you want. You can also create a top-level settings page and several sub-settings pages.
+
+## Using code
+
+If you're a developer and prefer using code to create settings pages, use the filter `mb_settings_pages`. This is a sample code to create a theme options page under the Appearance menu:
 
 ```php
 add_filter( 'mb_settings_pages', function ( $settings_pages ) {
@@ -80,93 +111,80 @@ add_filter( 'mb_settings_pages', function ( $settings_pages ) {
 } );
 ```
 
-The filter takes an array of defined settings pages as the argument. The callback function must return an array of settings pages.
+The `mb_settings_pages` filter takes an array of settings pages as the argument. The callback function must return an array of settings pages.
 
-Each settings page is defined by an array of the following options:
+Each settings page is defined by an array of the following options, which is similar to the UI in the **Meta Box Builder** extension above:
 
 Name|Description
 ---|---
-`id`|Page ID. Required. Will be used as the slug in URL and option name (if `option_name` missed).
+`id`|Settings page ID. Required.
 `option_name`|Option name where settings data is saved to. Optional. Takes `id` if missed. If you want to use theme mods, then set this to `theme_mods_$themeslug`.
 `class`|Custom CSS for the wrapper div.
 `menu_title`|Menu title. Optional. Takes `page_title` if missed.
 `page_title`|Page title. Optional. Takes `menu_title` if missed. Note: either `menu_title` or `page_title` (or both) must have value.
 `capability`|Required capability to access the settings page. Optional. Default `edit_theme_options`.
-`icon_url`|The icon for the menu. To use [a Dashicon](https://developer.wordpress.org/resource/dashicons/), set this to `dashicons-icon-name`. To use a SVG data image as a CSS background, set this to `data:image/svg+xml;base64...`. To use an image, set this to image URL. See `icon_url` parameter of [add_menu_page()](https://codex.wordpress.org/Function_Reference/add_menu_page) function.
-`position`|Menu position. See `position` parameter of [add_menu_page()](https://codex.wordpress.org/Function_Reference/add_menu_page) function.
-`parent`|ID of the parent page. Optional. Can be a WordPress menu or custom settings page menu. See below for the list of WordPress page IDs.
+`icon_url`|The icon for the menu. Supports [Dashicons](https://developer.wordpress.org/resource/dashicons/) (`dashicons-icon-name`), [FontAwesome free](https://fontawesome.com/search?o=r&m=free) (`fa fa-home`), SVG (`data:image/svg+xml;base64...`) and custom URL.
+`position`|Menu position (number). See below for the list of default WordPress menu positions.
+`parent`|The ID of the parent page, if you want the settings page to be a submenu. Optional. Can be a WordPress menu or custom settings page menu. See below for the list of WordPress page IDs.
 `submenu_title`|Set this to the default submenu title (first submenu) if the settings page is a top-level menu. Optional.
-`help_tabs`|The content displayed when clicking on the Help button on the top right (near the Screen Options button). See below for details.
-`style`|How do you want to style the settings page. Supports `boxes` which has same the style as normal WordPress meta boxes (like in the edit post screen) and `no-boxes` which has the same style as WordPress settings pages. In `no-boxes` style, each meta box is a section of the settings page.
-`columns`| The number of columns in the meta boxes. Can be 1 or 2. You might want to use 1 column with `no-boxes` style to match WordPress style.
-`tabs`|Organized meta boxes and fields in tabs. This param takes an array of tab in either format `['tab-id' => 'Tab Label']` or `['tab-id' => ['label' => 'Tab Label', 'icon' => 'dashicons-email']]`. Note: when using this param, you must specify which tab the meta box belongs to by adding a new parameter `'tab' => tab_id`. See the "Using Tabs" section below for details.
-`tab_style`|Specify the tab style, value can be `default` (WordPress-native style where tabs are horizontal) or `left` (tabs are put on the left of the settings page). See the "Using Tabs" section below for details.
+`help_tabs`|The content is displayed when clicking on the Help button on the top right (near the Screen Options button). See below for details.
+`style`|How do you want to style the settings page? Supports `boxes` which has same the style as normal WordPress meta boxes (like in the edit post screen) and `no-boxes` which has the same style as WordPress settings pages. In `no-boxes` style, each meta box is a section of the settings page.
+`columns`| The number of columns in the meta boxes. Can be 1 (the same as WordPress settings pages) or 2 (the same as the edit post screen).
+`tabs`|Array of tabs for the settings page. See the "Tabs" section for more details.
+`tab_style`|Specify the tab style, which can be `default` (WordPress-native style) or `left` (tabs are put on the left of the settings page). See the "Tabs" section below for details.
 `submit_button`|The custom text for submit button. Optional.
 `message`|The custom message displayed when saving options. Optional.
 `customizer`|Whether to show the settings page in the Customizer as a panel. `true` or `false` (default). Optional. See below for details.
 `customizer_only`|Whether to show only as a Customizer panel, no admin settings page. `true` or `false` (default). Optional.
 `network`|Make the settings page network-wide (in a multisite environment). `true` or `false` (default). Optional.
 
-In case you want to add a submenu to existing WordPress pages, set the `parent` option to:
+### WordPress menus
 
-Value|Page
----|---
-`index.php`|Dashboard
-`edit.php`|Posts
-`upload.php`|Media
-`link-manager.php`|Links
-`edit.php?post_type=page`|Pages
-`edit-comments.php`|Comments
-`edit.php?post_type=your_post_type`|Custom post type
-`themes.php`|Apperance
-`plugins.php`|Plugins
-`users.php`|Uses
-`tools.php`|Tools
-`options-general.php`|Settings
+This is the list of default WordPress menus with their ID (used for the `parent` parameter) and position (used for the `position` parameter):
 
-#### Examples
+Menu|ID|Position
+---|---|---
+Dashboard|`index.php`|2
+Posts|`edit.php`|5
+Media|`upload.php`|10
+Links|`link-manager.php`|15
+Pages|`edit.php?post_type=page`|20
+Comments|`edit-comments.php`|25
+Appearance|`themes.php`|60
+Plugins|`plugins.php`|65
+Uses|`users.php`|70
+Tools|`tools.php`|75
+Settings|`options-general.php`|80
 
-This example registers a top-level menu page and 2 sub settings pages:
+### Tabs
+
+The list of tabs is defined in the `tabs` parameter. A tab can have or doesn't have an icon and can be set like this:
 
 ```php
-add_filter( 'mb_settings_pages', function ( $settings_pages ) {
-    $settings_pages[] = [
-        'id'            => 'my-options',
-        'menu_title'    => 'Options',
-        'option_name'   => 'my_options',
-        'icon_url'      => 'dashicons-images-alt',
-        'submenu_title' => 'Options', // Note this
-    ];
-    $settings_pages[] = [
-        'id'          => 'my-options-im',
-        'option_name' => 'my_options',
-        'menu_title'  => 'Import',
-        'parent'      => 'my-options', // Note this
-    ];
-    $settings_pages[] = [
-        'id'          => 'my-options-ex',
-        'option_name' => 'my_options',
-        'menu_title'  => 'Export',
-        'parent'      => 'my-options',
-    ];
-    return $settings_pages;
-} );
+'tabs'        => [
+    'general' => 'General Settings',         // No icon
+    'design'  => [                           // With icon
+        'label' => 'Design Customization',
+        'icon'  => 'dashicons-admin-customizer',
+    ],
+],
 ```
 
-Here is the result:
+The `icon` parameter can be a [Dashicons](https://developer.wordpress.org/resource/dashicons/) icon or the URL of your custom icon. You can also use another icon library like FontAwesome by specifying its class (e.g. `fa fa-home`), but in that case, you have to enqueue the font yourself.
 
-![registrer settings pages](https://i.imgur.com/5M3cwut.png)
+This screenshot shows the left tab navigation with icons:
 
-Note that:
+![left tab navigation](https://i.imgur.com/QoaD4la.png)
 
-- The `submenu_title` allows us to set the first submenu text which can be different from the top-level menu text.
-- The `parent` of submenus are set to the ID of top-level menu (`my-options`).
+### Help tabs
 
-#### Help tabs
+WordPress has a nice feature that allows us to define instructions, and guidelines in the "Help" section of each admin screen. To see the help content, click the "Help" button on the top right, near the "Screen Options" button.
 
-WordPress has a nice feature that allows us to define instruction, guidelines in the "Help" section of each admin screen. To see the help content, click the "Help" button on the top right, near the "Screen Options" button. Note that, the button appears only when there's some help content.
+![Help tabs in the Posts screen](https://i.imgur.com/B7YRruB.png)
 
-With **MB Settings Page**, you're able to define the help content. The content is divided into tabs. To define the tabs and their content, use the following structure:
+The content is organized into tabs and you can set it in the Meta Box Builder's UI or with code.
+
+If you use code, set the help tabs as follows:
 
 ```php
 'help_tabs' => [
@@ -176,61 +194,24 @@ With **MB Settings Page**, you're able to define the help content. The content i
     ],
     [
         'title'   => 'Homepage',
-        'content' => '<p>This tab displays the instruction for setting up the homepage.</p>',
+        'callback' => 'my_custom_function',
+        'priority' => 10,
     ],
 ],
 ```
 
-In short, each tab is an array of `title` and `content`. You can pass more parameters just like the [add_help_tab()](https://codex.wordpress.org/Class_Reference/WP_Screen/add_help_tab) function. However, the `title` and `content` are the most important parameters and they're required.
+Each tab has the following parameters:
 
-Then when clicking the "Help" button, you'll see:
+Parameter|Description
+---|---
+`title`|The tab title.
+`content`|The tab content.
+`callback`|Custom callback to render the tab content. Optional.
+`priority`|The priority of the tab, used for ordering. Optional. Default 10.
 
-![wordpress admin page help tabs](https://i.imgur.com/c7bIf3P.png)
+## Settings fields
 
-### Using tabs
-
-In the sections above, you can create tabs either with UI or with code. Creating tabs with code allows you to set label and icon as follows:
-
-```php
-'tabs'        => [
-    'general' => [
-        'label' => 'General Settings',
-        'icon'  => 'dashicons-admin-settings',
-    ],
-    'design'  => [
-        'label' => 'Design Customization',
-        'icon'  => 'dashicons-admin-customizer',
-    ],
-    'faq'    => [
-        'label' => 'FAQ & Help',
-        'icon'  => 'http://i.imgur.com/nJtag1q.png',
-    ],
-],
-```
-
-The `icon` parameter can be a [Dashicons](https://developer.wordpress.org/resource/dashicons/) icon or URL of your custom icon. You can also use another icon library like FontAwesome by specifying its class (e.g. `fa fa-home`), but in that case, you have to enqueue the font yourself.
-
-You can also make your settings page looks exactly like a normal WordPress page by setting the `style` to `no-boxes` and `columns` to `1`. See this screenshot:
-
-![settings page with tabs](https://i.imgur.com/yb9Admk.png)
-
-In combination with `tabs`, you can set the `tab_style` parameter to specify the position of the tab navigation, which can be `default` or `left`.
-
-This screenshot shows the left tab navigation with icons:
-
-![left tab navigation](https://i.imgur.com/QoaD4la.png)
-
-:::caution
-
-When using tabs, you must define `tab` attribute for all meta boxes to make them appear in corresponding tabs. Missing `tab` attribute makes the meta boxes hidden.
-
-:::
-
-## Creating settings fields
-
-After creating a settings page, you need to create meta boxes and fields for it.
-
-Creating meta boxes and fields for settings pages is similar as for posts. [You can do it with UI using the Meta Box Builder extension or with code](/creating-fields-with-code/).
+After creating a settings page, you need to create settings fields for it. Creating settings fields for settings pages is [similar as for posts](/custom-fields/#how-to-create-custom-fields). You can do it [with UI using Meta Box Builder](/extensions/meta-box-builder/#creating-custom-fields) or [with code](/creating-fields-with-code/).
 
 If you use Meta Box Builder to create fields, make sure to select the correct settings page in the Location settings, under the Settings tab:
 
@@ -243,23 +224,16 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
     $meta_boxes[] = [
         'id'             => 'general',
         'title'          => 'General',
-        'settings_pages' => 'theme-slug',
         'context'        => 'normal',
+        // highlight-start
+        'settings_pages' => 'theme-slug',
+        'tab'            => 'general',
+        // highlight-end
         'fields'         => [
             [
                 'name' => 'Logo',
                 'id'   => 'logo',
                 'type' => 'file_input',
-            ],
-            [
-                'name'    => 'Layout',
-                'id'      => 'layout',
-                'type'    => 'image_select',
-                'options' => [
-                    'sidebar-left'  => 'https://i.imgur.com/Y2sxQ2R.png',
-                    'sidebar-right' => 'https://i.imgur.com/h7ONxhz.png',
-                    'no-sidebar'    => 'https://i.imgur.com/m7oQKvk.png',
-                ],
             ],
         ],
     ];
@@ -267,23 +241,53 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
+:::caution
+
+When using tabs, you must define the `tab` parameter for all meta boxes to make them appear in corresponding tabs. Missing the `tab` parameter makes the meta boxes hidden.
+
+:::
+
 Note:
 
-- You must set `settings_pages` to the ID of the settings page. If you want to add meta boxes to 2 or more settings pages, set it to an array of settings pages' IDs
-- [All fields settings](/creating-fields-with-code/#fields) are the same as for posts.
-- The settings page uses 2 columns layout, which mimics the WordPress post screen, and the value for `context` has the same meaning.
+- If you want to add the meta box to 2 or more settings pages, set it to an array of settings pages' IDs.
+- If you set the settings page to have 2 columns, then the value for `context` accepts `normal` for the main content area and `side` for the right sidebar.
 
-## Creating Customizer settings
+## Customizer
 
-This is a quick video that demonstrates how to use MB Settings Page to create custom panels, sections, and fields in the Customizer. You'll see how easy it is to turn a settings page into a Customizer panel.
+**MB Settings Pages** allows you to create settings panels & sections for the Customizer. Using Customizer gives users a better experience because they can preview the settings in real time.
 
-<LiteYouTubeEmbed id='LeV0CsiTe74' />
+### Panels & sections
 
-### Creating a Customizer panel
+When creating Customizer settings, it's important to understand that:
 
-The idea behind Customizer support is to map a settings page to a Customizer panel. And each meta box in the settings page will be a Customizer section. The mapping is quite simple, clear, and extreme powerful. It allows you to bring everything in a settings page into the Customizer with a single line of code.
+- A settings page is mapped to a Customizer panel
+- Each meta box in the settings page is mapped to a Customizer section
 
-To bring a settings page to the Customizer, select the "Customizer" settings if you use Meta Box Builder, or add `'customizer' => true` if you use code as follows:
+To bring a settings page to the Customizer, select the **Customizer** settings when you create the settings page as follows:
+
+![Set a settings page as a Customizer panels](https://i.imgur.com/w4hGa1Z.png)
+
+Then go to the **Appearance » Customize** and you'll see the settings page is available as follows:
+
+<div className="gallery">
+    <div className="gallery_col1">
+        <figure>
+            <img src="https://i.imgur.com/D78hKyG.png" alt="A new panel in the Customizer" />
+            <figcaption>A new panel in the Customizer</figcaption>
+        </figure>
+    </div>
+    <div className="gallery_col2">
+        <figure>
+            <img src="https://i.imgur.com/AfaWiGK.png" alt="Meta boxes become Customize sections" />
+            <figcaption>Meta boxes become Customize sections</figcaption>
+        </figure>
+    </div>
+</div>
+
+By default, the settings page is available in the both Customizer as well as in the admin area. If you don't want it in the admin area, tick the checkbox **Customizer only**.
+
+If you use code, use the following code:
+
 
 ```php
 add_filter( 'mb_settings_pages', function ( $settings_pages ) {
@@ -292,45 +296,29 @@ add_filter( 'mb_settings_pages', function ( $settings_pages ) {
         'option_name' => 'theme_mods_justread',
         'menu_title'  => 'Theme Options',
         'parent'      => 'themes.php',
-        'customizer'  => true, // THIS
+        // highlight-start
+        'customizer'  => true,
+        'customizer_only'  => true,
+        // highlight-end
     ];
+
     return $settings_pages;
 } );
 ```
 
-And you’ll see a new panel in the Customizer as follows:
+This is a quick video that demonstrates how to use MB Settings Page to create custom panels, sections, and fields in the Customizer with code:
 
-![A new panel in the Customizer](https://i.imgur.com/D78hKyG.png)
+<LiteYouTubeEmbed id='LeV0CsiTe74' />
 
-And each meta box in the settings page now are the Customize section:
-
-![Meta boxes become Customize sections](https://i.imgur.com/AfaWiGK.png)
-
-### Disabling admin settings pages
-
-When you have Customizer panels, sections, and fields, you might not want to use settings pages in the WordPress admin anymore. The Customizer now becomes the all-in-one place for entering the settings and customization.
-
-To do that, select "Customizer only" settings if you use Meta Box Builder, or add `'customizer_only' => true` if you use code as follows:
-
-```php
-add_filter( 'mb_settings_pages', function ( $settings_pages ) {
-    $settings_pages[] = [
-        'id'               => 'rubik',
-        'option_name'      => 'theme_mods_justread',
-        'menu_title'       => 'Theme Options',
-        'parent'           => 'themes.php',
-        'customizer'       => true,
-        'customizer_only'  => true, // THIS
-    ];
-    return $settings_pages;
-} );
-```
-
-### Creating top-level Customizer sections
+### Top-level sections
 
 Sometimes you don't want the top-level panel that creates too much hierarchy (panel → sections → fields). You just want top-level sections (sections → fields). That will help users to navigate to your settings in the Customizer faster and easier.
 
-Note that this can be done with code only.
+:::caution
+
+This can be done with code only.
+
+:::
 
 In that case, you need to do 2 steps:
 
@@ -343,22 +331,13 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
     $meta_boxes[] = [
         'id'             => 'general',
         'title'          => 'General',
-        'panel'          => '', // THIS
+        // highlight-next-line
+        'panel'          => '',
         'fields'         => [
             [
                 'name' => 'Logo',
                 'id'   => 'logo',
                 'type' => 'file_input',
-            ],
-            [
-                'name'    => 'Layout',
-                'id'      => 'layout',
-                'type'    => 'image_select',
-                'options' => [
-                    'sidebar-left'  => 'http://i.imgur.com/Y2sxQ2R.png',
-                    'sidebar-right' => 'http://i.imgur.com/h7ONxhz.png',
-                    'no-sidebar'    => 'http://i.imgur.com/m7oQKvk.png',
-                ],
             ],
         ],
     ];
@@ -374,19 +353,25 @@ What if you want the _section to be inside another panel_? Like inside another p
 
 ### Compatibility
 
-At the moment, all Meta Box fields are supported in the Customizer, except [file](/fields/file/) and [image](/fields/image/) field types. But other upload field types such as [file_advanced](/fields/file-advanced/), [file_upload](/fields/file-upload/), [image_advanced](/fields/image-advanced/), [image_upload](/fields/image-upload/), [single_image](/fields/single-image/) still work very well. (The reason is that the Customizer doesn't handle file uploads and the submission is performed via Ajax)
+At the moment, all Meta Box fields are supported in the Customizer, except [file](/fields/file/) and [image](/fields/image/) field types. But other upload field types such as [file_advanced](/fields/file-advanced/), [file_upload](/fields/file-upload/), [image_advanced](/fields/image-advanced/), [image_upload](/fields/image-upload/), [single_image](/fields/single-image/) still work well.
 
 The good news is all the extensions such as [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/), [Meta Box Tabs](/extensions/meta-box-tabs/) are supported. That will help you create much better experiences for your users.
 
-Known issues: because of the complexity, the `postMessage` transport for the Customizer is not supported yet. Your browser will refresh the whole page to see the updated settings.
+:::caution postMessage transport
 
-## Creating network settings pages
+The `postMessage` transport for the Customizer is not supported yet, which means changes are updated by refreshing the whole page instead of updating only the needed part of the page.
+
+:::
+
+## Network settings pages
 
 A network settings page is a settings page that provides settings for all the websites in the network (multisite environment). For example, you might want to enter a Google Maps API key for all the websites or set the contact phone number for all of them.
 
 ![Sample network settings page](https://i.imgur.com/pjZzrKf.png)
 
-Using _MB Settings Page_, you’re now able to do that easily. If you use Meta Box Builder to create the settings page, select the "Network" settings checkbox.
+Using _MB Settings Page_, you’re now able to do that easily. If you use Meta Box Builder to create the settings page, select the "Network" settings checkbox:
+
+![Set as a network settings page](https://i.imgur.com/LgQ1S0Q.png)
 
 If you use code, add `'network' => true` to the settings pages args, like this:
 
@@ -397,7 +382,8 @@ add_filter( 'mb_settings_pages', function ( $settings_pages ) {
         'option_name' => 'custom_options',
         'menu_title'  => 'Custom Options',
         'icon_url'    => 'dashicons-welcome-widgets-menus',
-        'network'     => true, // THIS
+        // highlight-next-line
+        'network'     => true,
     ];
 
     return $settings_pages;
@@ -408,9 +394,9 @@ Don't forget to _network activate_ Meta Box and MB Settings Pages. And now, when
 
 ## Backup & restore settings
 
-Backup is a special field type added by the plugin that allows you to backup and restore the settings.
+Backup is a **special field type** added by the plugin that allows you to back up and restore the settings.
 
-If you use Meta Box Builder to create fields, please add a normal textarea field, and go to tab Advanced of the field settings and add a custom settings with key "type" and value "backup" as follows:
+If you use Meta Box Builder to create fields, please add a normal textarea field, go to tab Advanced of the field settings, and add a custom settings with the key "type" and value "backup" as follows:
 
 ![create a backup field in Meta Box Builder](https://i.imgur.com/ISMmm0p.png)
 
@@ -423,17 +409,13 @@ $meta_boxes[] = [
     'settings_pages' => 'theme-slug',
     'fields'         => [
         [
-            'name' => 'Heading Color',
-            'id'   => 'heading-color',
-            'type' => 'color',
-        ],
-        [
             'name' => 'Text Color',
             'id'   => 'text-color',
             'type' => 'color',
         ],
         [
             'name' => 'Backup',
+            // highlight-next-line
             'type' => 'backup',
         ],
     ],
@@ -444,7 +426,7 @@ It will show a textarea field in your settings page like this:
 
 ![backup and restore settings](https://i.imgur.com/n6d6v1n.png)
 
-When you add it to your settings page, it will show all of your settings in JSON. And you can just copy it and save to to a file to backup the settings. To restore the settings, just paste the JSON again and click the Save Settings button.
+When you add it to your settings page, it will show all of your settings in JSON. And you can just copy it and save it to a file to back up the settings. To restore the settings, just paste the JSON again and click the Save Settings button.
 
 The backup field inherits from [`textarea`](/fields/textarea/) so you can customize it the way you want: change the field name, description, input size, etc. This field doesn't require an `ID`. And of course, you should have only one backup field on your settings page.
 
