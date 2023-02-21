@@ -767,3 +767,9 @@ html[data-theme='dark'] .tutorials_trending{
 		height: auto;
 	}
 }
+
+
+/* Hide tutorial items */
+.menu__list-item:nth-child(4) .menu__list >li:nth-child(n+7){
+	display: none;
+}
