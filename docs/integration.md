@@ -17,7 +17,7 @@ Meta Box and extensions can be used as standalone plugins or integrated with oth
 
 It's recommended to use the [TGM Plugin Activation](http://tgmpluginactivation.com) to declare Meta Box as a dependency for your themes or plugins. This way, Meta Box can be auto-updated to the latest version.
 
-![using Meta Box in eStar theme](https://i.imgur.com/dS3a6pe.png)
+![Using Meta Box in eStar theme](https://i.imgur.com/dS3a6pe.png)
 
 To use the, follow these steps:
 
@@ -61,7 +61,7 @@ Integrating extensions into your products disables the Meta Box auto-update. Thu
 
 ### Bundling extensions
 
-This way, you include extensions directly in your products and use them as a library.
+Bundling extensions is that you include extensions directly in your products and use them as a library.
 
 1. Copy the extension folder to your theme or plugin. You can put it in the theme root folder or a subfolder.
 1. Include the extension's main file in the `functions.php` of your theme or your plugin's file:
@@ -78,14 +78,14 @@ To use Composer to install Meta Box extensions, add `repositories` rule to your 
 
 ```json
 "repositories":[
-  {
-    "type": "composer",
-    "url": "https://wpackagist.org"
-  },
-  {
-    "type": "composer",
-    "url": "https://packages.metabox.io/YOUR_LICENSE_KEY"
-  }
+	{
+		"type": "composer",
+		"url": "https://wpackagist.org"
+	},
+	{
+		"type": "composer",
+		"url": "https://packages.metabox.io/YOUR_LICENSE_KEY"
+	}
 ],
 ```
 
@@ -111,29 +111,34 @@ Notes:
 
 ```json
 {
-  "repositories": [ {
-    "type": "composer",
-    "url": "https://packages.metabox.io/YOUR_LICENSE_KEY"
-  }],
-  "require": {
-    "wpackagist-plugin/mb-custom-post-type": "^2.3",
-    "meta-box/meta-box-group": "dev-master",
-    "meta-box/mb-settings-page": "dev-master",
-  },
-  // highlight-start
-  "extra": {
-    "installer-paths": {
-      "vendor/meta-box/{$name}": ["vendor:wpackagist-plugin", "vendor:meta-box"]
-    },
-  },
-  // highlight-end
-  "autoload": {
-    "files": [
-      "vendor/meta-box/mb-custom-post-type/mb-custom-post-type.php",
-      "vendor/meta-box/mb-settings-page/mb-settings-page.php",
-      "vendor/meta-box/meta-box-group/meta-box-group.php",
-    ]
-  }
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://packages.metabox.io/YOUR_LICENSE_KEY"
+		}
+	],
+	"require": {
+		"wpackagist-plugin/mb-custom-post-type": "^2.3",
+		"meta-box/meta-box-group": "dev-master",
+		"meta-box/mb-settings-page": "dev-master",
+	},
+	// highlight-start
+	"extra": {
+		"installer-paths": {
+			"vendor/meta-box/{$name}": [
+				"vendor:wpackagist-plugin",
+				"vendor:meta-box"
+			]
+		},
+	},
+	// highlight-end
+	"autoload": {
+		"files": [
+			"vendor/meta-box/mb-custom-post-type/mb-custom-post-type.php",
+			"vendor/meta-box/mb-settings-page/mb-settings-page.php",
+			"vendor/meta-box/meta-box-group/meta-box-group.php",
+		]
+	}
 }
 ```
 
