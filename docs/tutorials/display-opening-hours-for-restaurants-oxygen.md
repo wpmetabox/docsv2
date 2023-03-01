@@ -2,12 +2,18 @@
 title: Displaying opening hours for restaurants - Meta Box + Oxygen
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 In a website for booking restaurants, there will be a lot of different restaurants. Definitely, each restaurant has its own opening hours and you may want to create a section for the opening time for each one. So, in this next part of the series, we’re going to figure out how to add an opening hours section into the singular page by Meta Box and Oxygen.
 
 This section will be the same as the last ones we created in the [previous tutorial](https://docs.metabox.io/tutorials/display-opening-hours-restaurant-mb-views/).
 
 ![Example of opening hours section](https://i.imgur.com/NjSFCse.png)
+
+## Video vesion
+
+<LiteYouTubeEmbed id='Q6xb17yaXag' />
 
 ## Preparation
 
@@ -35,384 +41,212 @@ This step is the same as what I showed in the prior tutorial about displaying op
 
 Go to **Meta Box > Custom Fields > Add New** to create a new field group. Then, add custom fields with the structure like this:
 
-<table style="height: 2117px;" width="1170">
-
+<table>
 <thead>
-
 <tr>
-
-<th><b>Name</b></th>
-
-<th><b>ID</b></th>
-
-<th><b>Type</b></th>
-
-<th><b>Options</b></th>
-
-<th><b>Condition</b></th>
-
+<th> Name </th>
+<th> ID </th>
+<th> Type </th>
+<th> Options </th>
+<th> Condition </th>
 </tr>
-
 </thead>
-
 <tbody>
-
 <tr>
+<td>Choose an option</td>
+<td>choose_an_option</td>
+<td>select</td>
+<td> 
 
-<td><span style="font-weight: 400;">Choose an option</span></td>
+1. all_days_are_the_same
 
-<td><span style="font-weight: 400;">choose_an_option</span></td>
+2. difference_between_weekdays_and_weekend
 
-<td><span style="font-weight: 400;">select</span></td>
-
-<td><span style="font-weight: 400;">1. all_days_are_the_same</span>
-
-<span style="font-weight: 400;">2. difference_between_weekdays_and_weekend</span>
-
-<span style="font-weight: 400;">3. custom</span></td>
-
-<td></td>
+3. custom</td>
 
 </tr>
-
 <tr>
+<td>All days have the same opening hours</td>
+<td>all_days_have_the_same_opening_hours</td>
+<td>group</td>
 
-<td><span style="font-weight: 400;">All days have the same opening hours</span></td>
+<td>display only when:
 
-<td><span style="font-weight: 400;">all_days_have_the_same_opening_hours</span></td>
+the choose_an_option field = the all_days_are_the_same option</td>
+</tr>
+<tr>
+<td>Type of opening hours</td>
+<td>type_of_opening_hours</td>
+<td>select</td>
+<td>
 
-<td><span style="font-weight: 400;">group</span></td>
+1. open_all_day
 
-<td></td>
+2. close_all_day
 
-<td><span style="font-weight: 400;">display only when:</span>
+3. by_appointment_only
 
-<span style="font-weight: 400;">the </span><i><span style="font-weight: 400;">choose_an_option</span></i><span style="font-weight: 400;"> field = the </span><i><span style="font-weight: 400;">all_days_are_the_same</span></i><span style="font-weight: 400;"> option</span></td>
+4. enter_hours</td>
 
 </tr>
-
 <tr>
+<td>Choose time slots</td>
+<td>choose_time_slots</td>
+<td>group</td>
 
-<td><span style="font-weight: 400;">Type of opening hours</span></td>
-
-<td><span style="font-weight: 400;">type_of_opening_hours</span></td>
-
-<td><span style="font-weight: 400;">select</span></td>
-
-<td><span style="font-weight: 400;">1. open_all_day</span>
-
-<span style="font-weight: 400;">2. close_all_day</span>
-
-<span style="font-weight: 400;">3. by_appointment_only</span>
-
-<span style="font-weight: 400;">4. enter_hours</span></td>
-
-<td></td>
+<td>display only when: the type_of_opening_hours field = the enter_hours option</td>
+</tr>
+<tr>
+<td>Start time</td>
+<td>start_time</td>
+<td>time picker</td>
 
 </tr>
-
 <tr>
-
-<td><span style="font-weight: 400;">Choose time slots</span></td>
-
-<td><span style="font-weight: 400;">choose_time_slots</span></td>
-
-<td><span style="font-weight: 400;">group</span></td>
-
-<td></td>
-
-<td><span style="font-weight: 400;">display only when: the </span><i><span style="font-weight: 400;">type_of_opening_hours</span></i><span style="font-weight: 400;"> field = the </span><i><span style="font-weight: 400;">enter_hours</span></i><span style="font-weight: 400;"> option</span></td>
+<td>End time</td>
+<td>end_time</td>
+<td>time picker</td>
 
 </tr>
-
 <tr>
+<td>Weekdays</td>
+<td>weekdays</td>
+<td>group</td>
 
-<td><span style="font-weight: 400;">Start time</span></td>
+<td>display only when: the choose_an_opton field = the difference_between_weekdays_and_weekend option</td>
+</tr>
+<tr>
+<td>Type of opening hours</td>
+<td>type_of_opening_hours_weekdays</td>
+<td>select</td>
+<td>
 
-<td><span style="font-weight: 400;">start_time</span></td>
+1. open_all_day
 
-<td><span style="font-weight: 400;">time picker</span></td>
+2. close_all_day
 
-<td></td>
+3. by_appointment_only
 
-<td></td>
+4. enter_hours</td>
 
 </tr>
-
 <tr>
+<td>Choose time slots</td>
+<td>choose_time_slots_weekdays</td>
+<td>group</td>
 
-<td><span style="font-weight: 400;">End time</span></td>
-
-<td><span style="font-weight: 400;">end_time</span></td>
-
-<td><span style="font-weight: 400;">time picker</span></td>
-
-<td></td>
-
-<td></td>
+<td>display only when: the type_of_opening_hours_weekdays field = the enter_hours option</td>
+</tr>
+<tr>
+<td>Start time</td>
+<td>start_time_weekdays</td>
+<td>time picker</td>
 
 </tr>
-
 <tr>
-
-<td><span style="font-weight: 400;">Weekdays</span></td>
-
-<td><span style="font-weight: 400;">weekdays</span></td>
-
-<td><span style="font-weight: 400;">group</span></td>
-
-<td></td>
-
-<td><span style="font-weight: 400;">display only when: the </span><i><span style="font-weight: 400;">choose_an_opton</span></i><span style="font-weight: 400;"> field = the </span><i><span style="font-weight: 400;">difference_between_weekdays_and_weekend</span></i><span style="font-weight: 400;"> option</span></td>
+<td>End time</td>
+<td>end_time_weekdays</td>
+<td>time picker</td>
 
 </tr>
-
 <tr>
+<td>Weekend</td>
+<td>weekend</td>
+<td>group</td>
 
-<td><span style="font-weight: 400;">Type of opening hours</span></td>
+<td>display only when: the choose_an_opton field = the difference_between_weekdays_and_weekend option</td>
+</tr>
+<tr>
+<td>Type of opening hours</td>
+<td>type_of_opening_hours_weekend</td>
+<td>select</td>
+<td>
+	
+1. open_all_day
 
-<td><span style="font-weight: 400;">type_of_opening_hours</span><b>_weekdays</b></td>
+2. close_all_day
 
-<td><span style="font-weight: 400;">select</span></td>
+3. by_appointment_only
 
-<td><span style="font-weight: 400;">1. open_all_day</span>
-
-<span style="font-weight: 400;">2. close_all_day</span>
-
-<span style="font-weight: 400;">3. by_appointment_only</span>
-
-<span style="font-weight: 400;">4. enter_hours</span></td>
-
-<td></td>
+4. enter_hours</td>
 
 </tr>
-
 <tr>
+<td>Choose time slots</td>
+<td>choose_time_slots_weekend</td>
+<td>group</td>
 
-<td><span style="font-weight: 400;">Choose time slots</span></td>
-
-<td><span style="font-weight: 400;">choose_time_slots</span><b>_weekdays</b></td>
-
-<td><span style="font-weight: 400;">group</span></td>
-
-<td></td>
-
-<td><span style="font-weight: 400;">display only when: the </span><i><span style="font-weight: 400;">type_of_opening_hours_weekdays</span></i><span style="font-weight: 400;"> field = the </span><i><span style="font-weight: 400;">enter_hours</span></i><span style="font-weight: 400;"> option</span></td>
+<td>display only when: the type_of_opening_hours_weekend field = the enter_hours option</td>
+</tr>
+<tr>
+<td>Start time</td>
+<td>start_time_weekend</td>
+<td>time picker</td>
 
 </tr>
-
 <tr>
-
-<td><span style="font-weight: 400;">Start time</span></td>
-
-<td><span style="font-weight: 400;">start_time</span><b>_weekdays</b></td>
-
-<td><span style="font-weight: 400;">time picker</span></td>
-
-<td></td>
-
-<td></td>
+<td>End time</td>
+<td>end_time_weekend</td>
+<td>time picker</td>
 
 </tr>
-
 <tr>
+<td>Monday</td>
+<td>monday</td>
+<td>group</td>
 
-<td><span style="font-weight: 400;">End time</span></td>
+<td>display only when: the choose_an_option field = the custom_ option</td>
+</tr>
+<tr>
+<td>Type of opening hours</td>
+<td>type_of_opening_hours_monday</td>
+<td>select</td>
+<td>
 
-<td><span style="font-weight: 400;">end_time</span><b>_weekdays</b></td>
+1. open_all_day
 
-<td><span style="font-weight: 400;">time picker</span></td>
+2. close_all_day
 
-<td></td>
+3. by_appointment_only
 
-<td></td>
+4. enter_hours</td>
 
 </tr>
-
 <tr>
+<td>Choose time slots</td>
+<td>choose_time_slots_weekend</td>
+<td>group</td>
 
-<td><span style="font-weight: 400;">Weekend</span></td>
-
-<td><span style="font-weight: 400;">weekend</span></td>
-
-<td><span style="font-weight: 400;">group</span></td>
-
-<td></td>
-
-<td><span style="font-weight: 400;">display only when: the </span><i><span style="font-weight: 400;">choose_an_opton</span></i><span style="font-weight: 400;"> field = the </span><i><span style="font-weight: 400;">difference_between_weekdays_and_weekend</span></i><span style="font-weight: 400;"> option</span></td>
+<td>display only when: the type_of_opening_hours_monday field = the enter_hours option</td>
+</tr>
+<tr>
+<td>Start time</td>
+<td>start_time_weekend</td>
+<td>time picker</td>
 
 </tr>
-
 <tr>
-
-<td><span style="font-weight: 400;">Type of opening hours</span></td>
-
-<td><span style="font-weight: 400;">type_of_opening_hours</span><b>_weekend</b></td>
-
-<td><span style="font-weight: 400;">select</span></td>
-
-<td><span style="font-weight: 400;">1. open_all_day</span>
-
-<span style="font-weight: 400;">2. close_all_day</span>
-
-<span style="font-weight: 400;">3. by_appointment_only</span>
-
-<span style="font-weight: 400;">4. enter_hours</span></td>
-
-<td></td>
+<td>End time</td>
+<td>end_time_weekend</td>
+<td>time picker</td>
 
 </tr>
-
 <tr>
-
-<td><span style="font-weight: 400;">Choose time slots</span></td>
-
-<td><span style="font-weight: 400;">choose_time_slots</span><b>_weekend</b></td>
-
-<td><span style="font-weight: 400;">group</span></td>
-
-<td></td>
-
-<td><span style="font-weight: 400;">display only when: the </span><i><span style="font-weight: 400;">type_of_opening_hours_weekend</span></i><span style="font-weight: 400;"> field = the </span><i><span style="font-weight: 400;">enter_hours</span></i><span style="font-weight: 400;"> option</span></td>
-
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
 </tr>
-
 <tr>
-
-<td><span style="font-weight: 400;">Start time</span></td>
-
-<td><span style="font-weight: 400;">start_time</span><b>_weekend</b></td>
-
-<td><span style="font-weight: 400;">time picker</span></td>
-
-<td></td>
-
-<td></td>
-
+<td>Sunday</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
 </tr>
-
-<tr>
-
-<td><span style="font-weight: 400;">End time</span></td>
-
-<td><span style="font-weight: 400;">end_time</span><b>_weekend</b></td>
-
-<td><span style="font-weight: 400;">time picker</span></td>
-
-<td></td>
-
-<td></td>
-
-</tr>
-
-<tr>
-
-<td><span style="font-weight: 400;">Monday</span></td>
-
-<td><span style="font-weight: 400;">monday</span></td>
-
-<td><span style="font-weight: 400;">group</span></td>
-
-<td></td>
-
-<td><span style="font-weight: 400;">display only when: the </span><i><span style="font-weight: 400;">choose_an_option</span></i><span style="font-weight: 400;"> field = the </span><i><span style="font-weight: 400;">custom</span></i><span style="font-weight: 400;"> option</span></td>
-
-</tr>
-
-<tr>
-
-<td><span style="font-weight: 400;">Type of opening hours</span></td>
-
-<td><span style="font-weight: 400;">type_of_opening_hours</span><b>_monday</b></td>
-
-<td><span style="font-weight: 400;">select</span></td>
-
-<td><span style="font-weight: 400;">1. open_all_day</span>
-
-<span style="font-weight: 400;">2. close_all_day</span>
-
-<span style="font-weight: 400;">3. by_appointment_only</span>
-
-<span style="font-weight: 400;">4. enter_hours</span></td>
-
-<td></td>
-
-</tr>
-
-<tr>
-
-<td><span style="font-weight: 400;">Choose time slots</span></td>
-
-<td><span style="font-weight: 400;">choose_time_slots</span><b>_weekend</b></td>
-
-<td><span style="font-weight: 400;">group</span></td>
-
-<td></td>
-
-<td><span style="font-weight: 400;">display only when: the </span><i><span style="font-weight: 400;">type_of_opening_hours_monday</span></i><span style="font-weight: 400;"> field = the </span><i><span style="font-weight: 400;">enter_hours</span></i><span style="font-weight: 400;"> option</span></td>
-
-</tr>
-
-<tr>
-
-<td><span style="font-weight: 400;">Start time</span></td>
-
-<td><span style="font-weight: 400;">start_time</span><b>_weekend</b></td>
-
-<td><span style="font-weight: 400;">time picker</span></td>
-
-<td></td>
-
-<td></td>
-
-</tr>
-
-<tr>
-
-<td><span style="font-weight: 400;">End time</span></td>
-
-<td><span style="font-weight: 400;">end_time</span><b>_weekend</b></td>
-
-<td><span style="font-weight: 400;">time picker</span></td>
-
-<td></td>
-
-<td></td>
-
-</tr>
-
-<tr>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-</tr>
-
-<tr>
-
-<td><span style="font-weight: 400;">Sunday</span></td>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-<td><span style="font-weight: 400;">...</span></td>
-
-</tr>
-
 </tbody>
-
 </table>
-
 
 As you saw in the table above, the first field is a **Select** field and there are 3 options that I filled in the **Choice** box as below.
 
@@ -489,40 +323,43 @@ Then, choose the **PHP&HTML** and you will see a space to add code.
 
 The code is quite long, so I put it in my Github [here](https://github.com/wpmetabox/tutorials/blob/master/display-opening-hours-with-Oxygen/template.php). You can refer to it for more details. The code is divided into several parts to get corresponding group data. Because of the same concept in all parts, I’ll explain a typical part to be more clear about the logic.
 
+
 ```php
 <?php $options = rwmb_meta( 'choose_an_option' ); ?>
 <?php if ( $options == "all_days_are_the_same" ): ?>
     <?php $same_days = rwmb_meta( 'all_days_have_the_same_opening_hours' ); ?>
-		<?php $same_days_option = $same_days['type_of_opening_hours']; ?>
-		<?php $choose_time_slots = $same_days['choose_time_slots'] ?>
-		<?php if ( $same_days_option == "enter_hours" ): ?>
-					<?php foreach ( $choose_time_slots as $time_slots ): ?>
-						<?php echo $time_slots['start_time'] ?>
-						<?php echo $time_slots['end_time'] ?>
-					<?php endforeach; ?>
-		<?php else: ?>
-				<?php 
-					$select_field = isset( $same_days['type_of_opening_hours'] ) ? $same_days['type_of_opening_hours'] : '';
-					$group_field = rwmb_get_field_settings( 'all_days_have_the_same_opening_hours' );
-					foreach ( $group_field['fields'] as $field ) {
-						if ( empty( $field['options'] ) ) {
-							continue;
-						}
-				?>
-					<?php if($field['options'][$select_field]): ?>
-						<?= $field['options'][$select_field]; ?>
-					<?php endif; ?>
-							<?php
-					}
-				?>
-		<?php endif; ?>
+	<?php $same_days_option = $same_days['type_of_opening_hours']; ?>
+	<?php $choose_time_slots = $same_days['choose_time_slots'] ?>
+	<?php if ( $same_days_option == "enter_hours" ): ?>
+		<?php foreach ( $choose_time_slots as $time_slots ): ?>
+			<?php echo $time_slots['start_time'] ?>
+			<?php echo $time_slots['end_time'] ?>
+		<?php endforeach; ?>
+	<?php else: ?>
+		<?php 
+			$select_field = isset( $same_days['type_of_opening_hours'] ) ? $same_days['type_of_opening_hours'] : '';
+			$group_field = rwmb_get_field_settings( 'all_days_have_the_same_opening_hours' );
+			foreach ( $group_field['fields'] as $field ) {
+				if ( empty( $field['options'] ) ) {
+					continue;
+				}
+		?>
+			<?php if($field['options'][$select_field]): ?>
+				<?= $field['options'][$select_field]; ?>
+			<?php endif; ?>
+					<?php
+			}
+		?>
+	<?php endif; ?>
 ```
 
 Let’s get through each line with me.
 
+
 ```php
 <?php $options = rwmb_meta( 'choose_an_option' ); ?>
 ```
+
 
 I created a variable to get the value of the field **Choose an Option** which has the **ID** is `choose_an_option`. We will create a condition based on the returned value to decide which fields will be got the value from.
 
@@ -530,38 +367,41 @@ I created a variable to get the value of the field **Choose an Option** which ha
 <?php if ( $options == "all_days_are_the_same" ): ?>
     <?php $same_days = rwmb_meta( 'all_days_have_the_same_opening_hours' ); ?>
 ```
+
 If the returned value is the first option, we will get the value of **All days have the same opening hours** group.
+
 ```php
-		<?php $same_days_option = $same_days['type_of_opening_hours']; ?>
-		<?php $choose_time_slots = $same_days['choose_time_slots'] ?>
+<?php $same_days_option = $same_days['type_of_opening_hours']; ?>
+<?php $choose_time_slots = $same_days['choose_time_slots'] ?>
 ```
 I also have 2 following variables that obtain the value of two fields: **Type of Opening Hour** and **Choose Time Slots**. They are the subfields of the **All days have the same opening hours** group.
 
 Since the **Type of Opening Hour** is a **Select** field with some options as the image below, based on the returned value of this field, we’ll get value from the **Choose Time Slots** group or not.
 ```php
 <?php if ( $same_days_option == "enter_hours" ): ?>
-					<?php foreach ( $choose_time_slots as $time_slots ): ?>
-						<?php echo $time_slots['start_time'] ?>
-						<?php echo $time_slots['end_time'] ?>
-					<?php endforeach; ?>
+	<?php foreach ( $choose_time_slots as $time_slots ): ?>
+		<?php echo $time_slots['start_time'] ?>
+		<?php echo $time_slots['end_time'] ?>
+	<?php endforeach; ?>
 ```
 If the returned value of the **Type of Opening Hour** field is **Enter hours**, we’ll display the value from the **Choose Time Slots** group field with its subfields: **Start Time** and **End Time** fields. Since the **Choose Time Slots** group is cloneable, we have a loop here.
 ```php
 <?php 
-					$select_field = isset( $same_days['type_of_opening_hours'] ) ? $same_days['type_of_opening_hours'] : '';
-					$group_field = rwmb_get_field_settings( 'all_days_have_the_same_opening_hours' );
-					foreach ( $group_field['fields'] as $field ) {
-						if ( empty( $field['options'] ) ) {
-							continue;
-						}
-				?>
-					<?php if($field['options'][$select_field]): ?>
-						<?= $field['options'][$select_field]; ?>
-					<?php endif; ?>
-							<?php
-					}
-				?>
+	$select_field = isset( $same_days['type_of_opening_hours'] ) ? $same_days['type_of_opening_hours'] : '';
+	$group_field = rwmb_get_field_settings( 'all_days_have_the_same_opening_hours' );
+	foreach ( $group_field['fields'] as $field ) {
+		if ( empty( $field['options'] ) ) {
+			continue;
+		}
+?>
+	<?php if($field['options'][$select_field]): ?>
+		<?= $field['options'][$select_field]; ?>
+	<?php endif; ?>
+			<?php
+	}
+?>
 ```
+
 For other options in the **Type of opening hours** field, the above is used to display the label of that selected option.
 
 That's the end of the first section, corresponding to the first option of the **Choose an Option** field. 
