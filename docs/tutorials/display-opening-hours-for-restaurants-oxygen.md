@@ -299,4 +299,3 @@ Let’s see how the opening hour section displays on the frontend. It’s much m
 ![The final result](https://i.imgur.com/NjSFCse.png)
 
 To refer to all the code that I used, you can visit here.
-
