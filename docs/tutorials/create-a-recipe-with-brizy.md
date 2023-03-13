@@ -2,6 +2,9 @@
 title: Creating a recipe - Meta Box + Brizy
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 In the [previous tutorials](https://docs.metabox.io/tutorials/create-recipes-meta-box-zion/) of this series, we’ve found out how to create a recipe page using some of the page builders. In this practice, we’ll use another one - Brizy to do it with the help of Meta Box.
 
 This is the page that I created as an example:
@@ -10,7 +13,7 @@ This is the page that I created as an example:
 
 ## Video version
 
-(link)
+<LiteYouTubeEmbed id='wCKxZEQ4uRE' />
 
 ## Preparation
 
