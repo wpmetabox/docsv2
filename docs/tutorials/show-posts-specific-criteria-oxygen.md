@@ -4,7 +4,7 @@ title: Showing posts with specific criteria - Meta Box + Oxygen
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-If you’re having an e-commerce website and there are some on-sale products, you may want to display them on a page for the promotion campaign only. In this practice, we’ll find out how to show posts with this kind of specific criteria using Meta Box and Oxygen.
+In this practice, we’ll find out how to show posts with this kind of specific criteria using Meta Box and Oxygen.
 
 This is the archive page that I created as an example. Only products are on sale will be displayed:
 
@@ -26,8 +26,7 @@ In this practice, we need these tools:
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types named Cuisines;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend to save information about the price of products;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display custom fields as an admin column.
-
-Since we will use Oxygen to build the page, make sure you have it on your site and use version 3.9 or upper to have full integration with Meta Box.
+* **Oxygen**: to build the page.
 
 ## 1. Creating a custom post type
 
