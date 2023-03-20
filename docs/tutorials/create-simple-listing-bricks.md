@@ -1,5 +1,5 @@
 ---
-title: Creating a simple listing site with Bricks
+title: Creating a simple listing site - Meta Box + Bricks
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
