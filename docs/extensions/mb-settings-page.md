@@ -455,6 +455,10 @@ add_action( 'mb_settings_page_load', function ( $args ) {
 }, 20 );
 ```
 
+**`mb_settings_page_after_title` action**
+
+This action fires after outputting the page title. You can use it to output anything like instructions to users.
+
 **`mb_settings_page_submit_buttons` action**
 
 This action fires after the submit button is rendered, which allows you to add more custom buttons next to the submit button.
