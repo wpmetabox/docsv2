@@ -7,7 +7,7 @@ import FAQ from '@site/src/components/FAQ';
 If you're a developer and familiar with changing template file with PHP code, you can use Meta Box helper functions to display fields:
 
 - [`rwmb_get_value()`](/functions/rwmb-get-value/): to get a field value as a variable
-- [`rwmb_the_field()`](/functions/rwmb-the-value/): to display a field
+- [`rwmb_the_value()`](/functions/rwmb-the-value/): to display a field
 
 In addition, we also provide [`rwmb_meta()`](/functions/rwmb-meta/) function, which is a wrapper of the 2 functions above which:
 
