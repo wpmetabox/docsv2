@@ -1,7 +1,6 @@
 ---
 title: Creating a video gallery page - Meta Box + Bricks
 ---
-
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
