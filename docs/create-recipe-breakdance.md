@@ -68,7 +68,7 @@ I’ll use some **Div** tags to divide content into sections and columns as you 
 
 ![Add some Div tags to divide content into sections and columns](https://i.imgur.com/rpzhu6a.png) 
 
-Then, add the **Post Featured Image** element to display the picture.
+Then, add the **Post Featured Image** element to display the picture. 
 
 ![Add a Post Featured Image element to display the picture](https://i.imgur.com/HWqygXv.png)
 
