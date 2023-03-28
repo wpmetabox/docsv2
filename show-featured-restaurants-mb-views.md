@@ -5,7 +5,7 @@ title: Showing the featured restaurants - P4 - MB Views
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-In this practice, we’re going to display the featured restaurants using Meta Box only with the help of MB Views. Let’s see how to do it.
+In this practice, we’re going to display the featured restaurants using **Meta Box** only with the help of **MB Views**. Let’s see how to do it.
 
 This is a section on homepage that I created as an example to show the featured restaurants:
 
@@ -88,22 +88,24 @@ In the **Template** tab, add some code to display the featured restaurants:
 ``` {% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
 {% set posts = mb.get_posts( args ) %}
 	{% for post in posts %}
-	{% endfor %} ```
+	{% endfor %} 
+```
 
-```In there:
+In there:
 
-{% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
+``` {% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
 ```
 
 This line of code is to declare to get posts from the '**restaurant**' post type.
 
-The function ``` mb.get_posts( ) ``` is to get posts. And I also have a loop to get multiple posts as above.
+The function ` mb.get_posts( ) ` is to get posts. And I also have a loop to get multiple posts as above.
 
 Since we just want to display only the restaurants which are featured, we need to add a condition inside the loop.
 
 ![Add a condition inside the loop](https://i.imgur.com/jWjxEP2.png)
 
- ``` {% if post.feature_the_restaurant == 1 %}
+ ```
+{% if post.feature_the_restaurant == 1 %}
 {% endif %} 
 ```
 
