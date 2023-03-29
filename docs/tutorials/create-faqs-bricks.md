@@ -1,7 +1,10 @@
 ---
 title: Creating an FAQs page - Meta Box + Bricks
 ---
-import LiteYouTubeEmbed from 'react-lite-youtube-embed'; import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
+import LiteYouTubeEmbed from 'react-lite-youtube-embed'; 
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 In today’s practice, let me show you a way to create an FAQs page using Meta Box and Bricks.
 
 This image below is a specific example:
