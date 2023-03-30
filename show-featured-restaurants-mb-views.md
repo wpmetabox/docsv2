@@ -134,7 +134,7 @@ Now, set this template type as shortcode. After publishing, there will be a shor
 
 Let’s display the section on the homepage. Go to edit the homepage and choose the area where you want to add the section. In there, add a Heading block to name the section.
 
-![Add a Heading element](https://i.imgur.com/iLf9v0R.png)
+![Add a Heading element](https://i.imgur.com/BX1AzGP.png)
 
 Next, add a **Shortcode** block, paste the one you’ve just copied from the view.
 
