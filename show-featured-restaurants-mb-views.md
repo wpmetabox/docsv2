@@ -85,7 +85,8 @@ In the **Template** tab, add some code to display the featured restaurants:
 
 ![Add some code](https://i.imgur.com/JWsovKT.png)
 
-``` {% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
+``` 
+{% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
 {% set posts = mb.get_posts( args ) %}
 	{% for post in posts %}
 	{% endfor %} 
@@ -93,7 +94,8 @@ In the **Template** tab, add some code to display the featured restaurants:
 
 In there:
 
-``` {% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
+``` 
+{% set args = { post_type: 'restaurant', posts_per_page: -1 } %} 
 ```
 
 This line of code is to declare to get posts from the '**restaurant**' post type.
