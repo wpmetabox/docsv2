@@ -312,8 +312,7 @@ If your custom table has many fields, you can split them into multiple meta boxe
 
 ```php
 // Step 3: Register fields for model, corresponding to the custom table structure.
-add_filter( 'rwmb_meta_boxes', 'prefix_register_transaction_fields' );
-function prefix_register_transaction_fields( $meta_boxes ) {
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 	$meta_boxes[] = [
 		'title'        => 'Transaction Details',
 		// highlight-start
