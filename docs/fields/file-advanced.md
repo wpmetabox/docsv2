@@ -24,7 +24,7 @@ Name | Key | Description
 --- | --- | ---
 Max number of files | `max_file_uploads` | Max number of uploaded files. Optional.
 Force delete | `force_delete` | Whether or not delete the files from Media Library when deleting them from post meta. `true` or `false` (default). Optional. Note: it might affect other posts if you use the same file for multiple posts.
-MIME types | `mime_type` | MIME type of files which we want to show in the Media Library. Note: this is a filter for items in the media popup, it doesn't restrict file types when uploading.
+MIME types | `mime_type` | The MIME type of files which you want to show in the Media Library. Note: this is a filter for items in the media popup, it doesn't restrict file types when uploading. See [common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 Show status | `max_status` | Display how many files uploaded/remaining. Applied only when "Max number of files" is defined. `true` (default) or `false`. Optional.
 
 This is a sample field settings array when creating this field with code:
@@ -36,7 +36,7 @@ This is a sample field settings array when creating this field with code:
     'type'             => 'file_advanced',
     'force_delete'     => false,
     'max_file_uploads' => 2,
-    'mime_type'        => 'application,audio,video',
+    'mime_type'        => 'application/pdf',
     'max_status'       => false,
 ],
 ```
