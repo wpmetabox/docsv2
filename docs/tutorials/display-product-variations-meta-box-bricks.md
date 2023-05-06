@@ -92,7 +92,7 @@ And then, you can set the preview of the products page in the **Populate Content
 
 ![Set the preview of the products page in the populate content section](https://i.imgur.com/RdA38OI.png)
 
-### 3.2 Displaying products’ information
+### 3.2 Displaying product's information
 
 First, add a **Section** element to have a container for covering all the product information.
 
