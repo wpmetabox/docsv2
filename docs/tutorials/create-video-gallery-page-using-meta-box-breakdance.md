@@ -6,7 +6,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 In today's practice, we're going to find out how to create a video gallery page with the help of Meta Box and Breakdance.
 
-This is an akai page that I created as an example:
+This is an archive page that I created as an example:
 
 ![The example of creating a video gallery page with Meta Box and Breakdance](https://imgur.com/Otnspcw.png)
 
@@ -33,7 +33,7 @@ Go to **Meta Box** > **Post Types** > **Add New**.
 
 Since I want to show the author information for each video, I’ll go to the **Support** tab, and check this box.
 
-![In the settings of the post type, choose some features of the Supports tab to add them to the post type](https://imgur.com/91yxnP.png)
+![In the settings of the post type, choose some features of the Supports tab to add them to the post type](https://i.imgur.com/OHlexXv.png)
 
 After publishing, you will see a new **Videos** menu like this in the **Admin Dashboard**.
 
