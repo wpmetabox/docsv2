@@ -4,11 +4,50 @@ title: MB Frontend Submission
 
 import FAQ from '@site/src/components/FAQ';
 
-MB Frontend Submission helps you create a front-end forms for users to submit posts to your website. It allows you to submit post fields (title, content, etc.) and also custom fields created by Meta Box. It works with all extensions like [Meta Box Group](/extensions/meta-box-group/) or [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/).
+MB Frontend Submission helps you create front-end forms for users to submit posts to your website. It allows you to submit post fields (title, content, etc.) and also custom fields created by Meta Box. It works with all extensions like [Meta Box Group](/extensions/meta-box-group/) or [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/).
 
 ![submission form](https://i.imgur.com/jfXHqSc.png)
 
 ## Submission form
+
+### Gutenberg block
+
+To add a submission form to a page, select the **Submission Form** block from the block inserter. And you'll see the form preview like this:
+
+![Adding a form submission to a page with the Gutenberg block](https://i.imgur.com/PEI5I91.png)
+
+Clicking on the block will reveal the form settings on the right. Although all settings are self-explained and have their description, we list them here with more details. The key is used for reference in the shortcode which will be described in the next section.
+
+Name|Key|Description
+---|---|---
+ID|`id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas. Optional.
+Ajax|`ajax`|Enable Ajax submission. `true` or `false` (default).
+Allow scroll|`allow_scroll`|Enable scroll to message after ajax submission. `false` or `true` (default).
+Edit|`edit`|Allow users to edit the post after submitting. `true` or `false` (default). If `true` then ajax submission will be disabled.
+Allow delete|`allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
+Force delete|`force_delete`|Whether to delete the submitted post permanently or temporarily (move to Trash).
+Show add more|`show_add_more`|Show add new button after submit. `true` or `false` (default).
+Post type|`post_type`|The submitted post type. Optional. Default is the first post type defined in the meta box. If the meta box is made for multiple post types, you should set this attribute to the correct one.
+Post ID|`post_id`|The post ID. Optional. Used when you want to update an existing post. If you want to pass the ID of the current post, set it to `current`.
+Post status|`post_status`|The status for submitted posts. See [the list here](https://wordpress.org/documentation/article/post-status/).
+Post fields|`post_fields`|List of post fields you want to show in the frontend, separated by commas. Supported the following fields: `title`, `content`, `excerpt`, `date`, and `thumbnail`.
+Title field label|`label_title`| Label for the post title field.
+Content field label|`label_content` | Label for the post content field.
+Excerpt field label|`label_excerpt`| Label for the post excerpt field.
+Date field label|`label_date` | Label for the post date field.
+Thumbnail field label|`label_thumbnail` | Label for the post thumbnail field.
+Submit button text|`submit_button`|The submit button text.
+Add new button text|`add_button`|The add new button text.
+Delete button text|`delete_button`|The delete button text.
+Custom redirect URL|`redirect`|Custom redirect URL.
+Confirmation text|`confirmation`|The text for the confirmation message when the form is successfully submitted.
+Delete confirmation text|`delete_confirmation`|The text for the confirmation message when the post is deleted.
+reCaptcha key|`recaptcha_key`|Google reCaptcha site key (version 3). Optional.
+reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Optional.
+
+### Shortcode
+
+MB Frontend Submission also provides a shortcode to insert the submission form into a page.
 
 If you're using [Meta Box Builder](/extensions/meta-box-builder/) to [create custom fields](/custom-fields/), then go to **Meta Box > Custom Fields** admin page and copy the content in the **Shortcode** column for the field group that you created:
 
@@ -22,50 +61,15 @@ The shortcode has the following format:
 [mb_frontend_form id="field-group-id" post_fields="title,content"]
 ```
 
-It will show the submission form with 2 post fields for post title and post content, and the custom fields that you created for the field group.
-
-If you only want to **submit posts without custom fields**, then change the shortcode to:
-
-```php
-[mb_frontend_form post_fields="title,content"]
-```
-
-**Shortcode attributes**
-
-Attributes|Description
----|---
-`id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas. Optional.
-`ajax`|Enable Ajax submission. `true` or `false` (default).
-`allow_scroll`|Enable scroll to message after ajax submission. `false` or `true` (default).
-`edit`|Allow users to edit the post after submitting. `true` or `false` (default). If `true` then `ajax` attribute will be disabled, e.g. set to `false`.
-`allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
-`force_delete`|Whether to delete the submitted post permanently or temporarily (move to Trash).
-`show_add_more`|Show add new button after submit. Default is false.
-`post_type`|The submitted post type. Optional. Default is the first post type defined in the meta box. If meta box is made for multiple post types, you should set this attribute to the correct one.
-`post_id`|The post ID. Optional. Used when you want to update an existing post. If you want to pass the ID of the current post, set it to `current`.
-`post_status`|The status for submitted posts. See [the list here](https://codex.wordpress.org/Post_Status).
-`post_fields`|List of post fields you want to show in the frontend, separated by comma. Supported following fields: `title`, `content`, `excerpt`, `date`, `thumbnail`.
-`label_title`| Label for post title field.
-`label_content` | Label for post content field.
-`label_excerpt`| Label for post excerpt field.
-`label_date` | Label for post date field.
-`label_thumbnail` | Label for post thumbnail field.
-`submit_button`|The submit button text.
-`add_button`|The add new button text.
-`delete_button`|The delete button text.
-`redirect`|Custom redirect URL.
-`confirmation`|The text for the confirmation message when the form is successfully submitted.
-`delete_confirmation`|The text for the confirmation message when the post is deleted.
-`recaptcha_key`|Google reCaptcha site key (version 3). Optional.
-`recaptcha_secret`|Google reCaptcha secret key (version 3). Optional.
+Shortcode attributes are the same as block settings and are described above.
 
 ### Dynamic population
 
-The dynamic population feature allows you to dynamically populate a shortcode attribute with a value. This value can be passed via query string and/or hook.
+The dynamic population feature allows you to dynamically populate a shortcode attribute with a value. This value can be passed via the query string and/or hook.
 
 #### Query string
 
-You can populate post ID for the shortcode via the query string by appending the dynamic population parameter for the attribute to the end of your form URL along with your custom value.
+You can populate the post ID for the shortcode via the query string by appending the dynamic population parameter for the attribute to the end of your form URL along with your custom value.
 
 ```
 http://siteurl.com/form-url/?rwmb_frontend_field_post_id=123
@@ -77,7 +81,7 @@ Note that *only* post ID is supported for populating via query string since vers
 
 #### Hooks
 
-Shortcode attributes can also be populated via WordPress hooks. This example below change the `post_id` to `123`:
+Shortcode attributes can also be populated via WordPress hooks. This example below changes the `post_id` to `123`:
 
 ```php
 add_filter( 'rwmb_frontend_field_value_post_id', 'my_custom_population_function', 10, 2 );
@@ -97,27 +101,27 @@ The filter has the following format:
 $value = apply_filters( "rwmb_frontend_field_value_{$attribute}", $value, $args );
 ```
 
-The callback function accepts 2 parameters: the attribute value and the array of all attributes. You should use `$args['id]` to check if you're filter for the right form.
+The callback function accepts 2 parameters: the attribute value and the array of all attributes. You should use `$args['id]` to check if you're filtering for the right form.
 
 ### Templates
 
-The plugin allows you to use a custom template files for post fields and the confirmation message.
+The plugin allows you to use custom template files for post fields and the confirmation message.
 
-The plugin will look for a template file with the following order:
+The plugin will look for a template file in the following order:
 
 - Inside a folder `mb-frontend-submission` of your child theme
 - Inside a folder `mb-frontend-submission` of your parent theme
 - In the plugin's `templates` folder
 
-In order to overwrite the output of post fields, please following the steps below:
+To overwrite the output of post fields, please follow the steps below:
 
 - Create a folder `mb-frontend-submission` in your theme.
-- Copy a template file that you want to change from plugins's `templates` folder to the new `mb-frontend-submission` folder, keeping the same folder structure.
+- Copy a template file that you want to change from the plugin's `templates` folder to the new `mb-frontend-submission` folder, keeping the same folder structure.
 - Modify the new template file.
 
 ### Field order
 
-Sometimes you want to **mix post fields with custom fields**, or change post content to `textarea` field. You can do that with the following steps:
+Sometimes you want to **mix post fields with custom fields** or change post content to a `textarea` field. You can do that with the following steps:
 
 - Remove the `post_fields` attribute from the shortcode
 - Add post fields as normal custom fields to your meta box settings, like this:
@@ -162,7 +166,7 @@ $meta_boxes[] = [
 ]
 ```
 
-In order to make the plugin recognize the post fields, you need to set correct ID for them. See the table below:
+To make the plugin recognize the post fields, you need to set correct IDs for them as follows:
 
 Field|ID
 ---|---
@@ -172,11 +176,11 @@ Post excerpt|`post_excerpt`
 Post date|`post_date`
 Post thumbnail|`_thumbnail_id`
 
-With this method, you're able to set the label for post fields, or change settings (even field type) for them easily using any [field settings](/field-settings/).
+With this method, you're able to set the label for post fields or change settings (even field type) for them easily using any [field settings](/field-settings/).
 
 ### Validation
 
-There are 2 ways to validate fields: on the front end with JavaScript and on the back end with PHP.
+There are 2 ways to validate fields: on the front end with JavaScript and the back end with PHP.
 
 For front-end validation with JavaScript, please see [this documentation](/validation/).
 
@@ -215,33 +219,32 @@ add_filter( 'rwmb_frontend_validate', function( $validate, $config ) {
 
 #### User capability
 
-To be able to upload files or images with the media popup (via fields `file_advanced`, `file_upload`, `image_advanced`, `image_upload`), users have to login and proper capability `upload_files` to access the Media Library. If your users don't have that capability (if they have subscriber role), then the upload fields don't work. In that case, you can add the capability for that role as follows:
+To be able to upload files or images with the media popup (via fields `file_advanced`, `file_upload`, `image_advanced`, `image_upload`), users have to log in and proper capability `upload_files` to access the Media Library. If your users don't have that capability (like if they have the "subscriber" role), then the upload fields don't work. In that case, you can add the capability for that role as follows:
 
 ```php
 add_action( 'init', function () {
-    // Replace 'subscriber' with the required role to update, can also be contributor.
     $subscriber = get_role( 'subscriber' );
     $subscriber->add_cap( 'upload_files' );
 } );
 ```
 
-Another solution is using `file` or `image` fields. Both of them works similar. They just don't have a nice UI, but they do the job very well.
+Another solution is using `file` or `image` fields. Both of them work similarly. They just don't have a nice UI, but they do the job very well.
 
 #### Post thumbnail
 
-Another improvement you might want to add is use the media popup to pick an image as the post thumbnail. By default, it uses `image` field, which provides a simple input for image.
+Another improvement you might want to add is to use the media popup to pick an image as the post thumbnail. By default, it uses the `image` field, which provides a simple input for an image.
 
-To do that, you need to change the field type for thumbnail from `image` to `single_image`. Here are the steps:
+To do that, you need to change the field type for the thumbnail from `image` to `single_image`. Here are the steps:
 
 - Create a folder `mb-frontend-submission` in your theme, inside that folder, create a sub-folder `post`.
 - Copy the file `thumbnail.php` from the plugin's `templates/post` folder to the `post` folder above.
 - Replace the content of the copied `thumbnail.php` with [this code](https://pastebin.com/6AFcPF7b).
 
-Please note that, in order to open the media popup, users need to log in and have proper capability. See the section above for how to do that.
+Please note that to open the media popup, users need to log in and have the proper capability. See the section above for how to do that.
 
 ### Embedding forms
 
-If you have a front-end submission form on site A, then you want to output it on site B by embedding the form within an iframe, there might be a problem with the cookie policy on browsers that prevent the from from submitting.
+If you have a front-end submission form on site A, then you want to output it on site B by embedding the form within an iframe, there might be a problem with the cookie policy on browsers that prevent it from submitting.
 
 To make it work please add this snippet to `functions.php` in your theme on site A:
 
@@ -257,15 +260,31 @@ add_action( 'template_redirect', function () {
 }, 9 );
 ```
 
-The snippet above will set the cookie setting `samesite=None` and `Security=true`. Note that you can only use it on the sites that use HTTPS (connection security) and on Chrome and Firefox. It doesn't work on Safari because Safari is blocking third party cookies. Setting `samesite=None` also might be a security issue, so please be sure you really want to do that. For more details, please [see this article](https://web.dev/samesite-cookies-explained/).
+The snippet above will set the cookie setting `samesite=None` and `Security=true`. Note that you can only use it on sites that use HTTPS (connection security) and on Chrome and Firefox. It doesn't work on Safari because Safari is blocking third-party cookies. Setting `samesite=None` also might be a security issue, so please be sure you want to do that. For more details, please [see this article](https://web.dev/samesite-cookies-explained/).
 
 ## User dashboard
 
-To let users **view and edit their submitted posts**, create a normal WordPress page, and insert the following shortcode into the page content:
+### Gutenberg block
 
-```php
-[mb_frontend_dashboard edit_page="124"]
-```
+Similar to the submission form, MB Frontend Submission also provides a Gutenberg block for you to insert into a page. The block let users view and edit their submitted posts.
+
+To insert a block, select the **User dashboard** block from the block inserter:
+
+![User dashboard block](https://i.imgur.com/didLg44.png)
+
+The block has the following settings. The key is used for reference in the shortcode which will be described in the next section.
+
+Name|Key|Description
+---|---|--
+Edit page|`edit_page`|The ID of the page, where users can submit posts.
+Show welcome message|`show_welcome_message`|Show the welcome message `true` (default) or `false`.
+Columns|`columns`|List of columns to be displayed in the dashboard, separated by commas. Supported values are `title`, `date`, and `status`.
+Label title|`label_title`|The header label for the title column.
+Label date|`label_date`|The header label for the date column.
+Label status|`label_status`|The header label for the status column.
+Label actions|`label_actions`|The header label for the actions column.
+Title link|`title_link`|The link action for the post titles. Supported values are: `edit` or `view` (default)
+Label add new|`add_new`|Label for the add new button.
 
 :::caution
 
@@ -273,43 +292,37 @@ You **must** create a page for submitting posts first, then use its ID in the `e
 
 :::
 
-**Shortcode attributes**
-
-Attributes|Description
----|---
-`edit_page`|The ID of the page, where users can submit posts.
-`show_welcome_message`|Show the welcome message `true` (default) or `false`.
-`columns`|List of columns to be displayed in the dashboard, separated by comma. Supported values are: `title`, `date`, `status`.
-`label_title`|The header label for the title column.
-`label_date`|The header label for the date column.
-`label_status`|The header label for the status column.
-`label_actions`|The header label for the actions column.
-`title_link`|The link action for the post titles. Supported values are: `edit` or `view` (default)
-`add_new`|Label for the add new button.
-
-And when users visit this page, they'll see a dashboard like this:
+When users visit this page, they'll see a dashboard like this:
 
 ![user posts dashboard](https://i.imgur.com/LxPh4xH.png)
 
 On this dashboard, users can:
 
-- View list of their submitted posts with the corresponding statuses
+- View a list of their submitted posts with the corresponding statuses
 - Edit or delete submitted posts
 - Or submit a new post
 
-There's no settings or coding required from users!
+The plugin is smart enough to detect the correct settings from the submission form to the correct posts. So you can have *multiple* submission forms and multiple dashboards on the same website.
 
-And the plugin is smart enough to detect the correct settings from the submission form to correct posts. So you can have *multiple* submission forms and multiple dashboards on a same website.
+### Shortcode
+
+If you prefer to use shortcodes, then create a normal WordPress page, and insert the following shortcode into the page content:
+
+```php
+[mb_frontend_dashboard edit_page="124"]
+```
+
+Shortcode attributes are the same as block settings and are described above.
 
 ## Hooks
 
-In order to allow developers to do other things when the form is submitted, we have created some actions and filters.
+To allow developers to do other things when the form is submitted, we have created some actions and filters.
 
 ### General hooks
 
 `rwmb_frontend_redirect`
 
-This filter allows you to change the URL of the redirect page after form is submitted. It accepts 1 parameter `$config` - the shortcode attributes.
+This filter allows you to change the URL of the redirect page after the form is submitted. It accepts 1 parameter `$config` - the shortcode attributes.
 
 ```php
 $redirect = apply_filters( 'rwmb_frontend_redirect', $redirect, $config );
@@ -337,13 +350,13 @@ add_filter( 'rwmb_frontend_redirect', function( $redirect, $config ) {
 
 `rwmb_frontend_validate`
 
-This filter is used to check if the form is validated. You can use this filter to add custom check for the data before it's processed.
+This filter is used to check if the form is validated. You can use this filter to add a custom check for the data before it's processed.
 
 ```php
 apply_filters( 'rwmb_frontend_validate', $validate, $config );
 ```
 
-The filter has 2 parameter:
+The filter has 2 parameters:
 
 - `$validate`: the returned value of validation. If `true`, then the validation is successful. `false` - if not and the plugin will show a default error message. If you want to show a custom error message, just return it as a string. See the **Validation** section above.
 - `$config`: the form configuration.
@@ -433,7 +446,7 @@ $data = apply_filters( 'rwmb_frontend_update_post_data', $data, $config );
 
 ### Post field filters
 
-Sometimes you want to add more things to the post fields, such as make post title required, add description for post content, or even add a custom HTML before the post thumbnail. You can do that with the following post filter:
+Sometimes you want to add more things to the post fields, such as making the post title required, adding a description for post content, or even adding a custom HTML before the post thumbnail. You can do that with the following post filter:
 
 ```php
 // Post title
@@ -473,7 +486,7 @@ $field   = apply_filters( 'rwmb_frontend_post_content', [
 ] );
 ```
 
-Each post field is treated as a normal Meta Box field (see here for full list of [field settings](/field-settings/)).
+Each post field is treated as a normal Meta Box field (see here for the full list of [field settings](/field-settings/)).
 
 So, to make the post title required, you can do like this:
 
@@ -520,7 +533,7 @@ The action accepts 1 parameter: the instance of the `\MBFS\Post` class, which ha
 
 `rwmb_frontend_dashboard_query_args`
 
-This filter is used for changing the query args for getting posts in the dashboard page. By default, the plugin will get posts that have the same author as the current user. If you want to change this query, then use this filter.
+This filter is used for changing the query args for getting posts on the dashboard page. By default, the plugin will get posts that have the same author as the current user. If you want to change this query, then use this filter.
 
 ```php
 add_filter( 'rwmb_frontend_dashboard_query_args', function( $args ) {
@@ -540,7 +553,7 @@ This filter is used to change the welcome message. It accepts 3 parameters:
 
 `rwmb_frontend_dashboard_edit_page_content`
 
-This filter is used to change the edit page content. The edit page content is used for parsing the edit form configuration. It accepts only one parameter - the content in HTML.
+This filter is used to change the edited page content. The edit page content is used for parsing the edit form configuration. It accepts only one parameter - the content in HTML.
 
 `rwmb_frontend_dashboard_post_title`
 
@@ -594,7 +607,7 @@ Each relationship box has the ID `{$relationship_id}_relationships_from` and `{$
 
 </FAQ>
 
-<FAQ question="Why does frontend dashboard not display the post type?">
+<FAQ question="Why does the frontend dashboard not display the post type?">
 
 You need to add the attribute `post_type` to the frontend submission shortcode
 
@@ -606,11 +619,11 @@ You need to add the attribute `post_type` to the frontend submission shortcode
 
 ### Styling
 
-The extension outputs the default fields' HTML with CSS comes from Meta Box plugin. The style is basic and works in most cases. However, to make it match perfectly with your theme's style, you need to do some work with CSS.
+The extension outputs the default fields' HTML with CSS comes from the Meta Box plugin. The style is basic and works in most cases. However, to make it match perfectly with your theme's style, you need to do some work with CSS.
 
 ### Caching
 
-As you might know, Meta Box uses [nonces](https://developer.wordpress.org/apis/security/nonces/) to prevent misuse or malicious requests. As the nonce fields are outputted directly in the HTML, they might be cached by caching plugins such as W3 Total Cache, WP Super Cache, etc. And thus, the verification of the nonce might not work properly and break the form submission. In this case, please do not cache the page where the form is embeded (both caching plugins allow you to do that).
+As you might know, Meta Box uses [nonces](https://developer.wordpress.org/apis/security/nonces/) to prevent misuse or malicious requests. As the nonce fields are outputted directly in the HTML, they might be cached by caching plugins such as W3 Total Cache, WP Super Cache, etc. And thus, the verification of the nonce might not work properly and break the form submission. In this case, please do not cache the page where the form is embedded (both caching plugins allow you to do that).
 
 ## Tutorials
 
