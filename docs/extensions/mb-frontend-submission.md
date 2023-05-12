@@ -302,6 +302,17 @@ On this dashboard, users can:
 
 The plugin is smart enough to detect the correct settings from the submission form to the correct posts. So you can have *multiple* submission forms and multiple dashboards on the same website.
 
+## Integrations
+
+MB Frontend Submission has integrations with the following page builder plugins:
+
+- Bricks
+- Elementor
+
+![Adding submission form and user dashboard in Bricks and Elementor](https://i.imgur.com/oH7RBcv.png)
+
+For these page builders, there is a new section named Meta Box when you add an element. There’ll be two new elements in this section, one is **Submission Form** and another is **User Dashboard**. They work the same way as in the corresponding blocks in Gutenberg with the live preview on the page and visually settings.
+
 ## Hooks
 
 To allow developers to do other things when the form is submitted, we have created some actions and filters.
