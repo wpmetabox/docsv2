@@ -10,15 +10,27 @@ MB Frontend Submission helps you create front-end forms for users to submit post
 
 ## Submission form
 
-### Gutenberg block
+### Adding the submission form
 
 To add a submission form to a page, select the **Submission Form** block from the block inserter. And you'll see the form preview like this:
 
 ![Adding a form submission to a page with the Gutenberg block](https://i.imgur.com/PEI5I91.png)
 
-Clicking on the block will reveal the form settings on the right. Although all settings are self-explained and have their description, we list them here with more details. The key is used for reference in the shortcode which will be described in the next section.
+Clicking on the block will reveal the form settings on the right. All settings are self-explained and have their description.
 
-Name|Key|Description
+The plugin also provides a shortcode to insert the submission form into a page:
+
+```php
+[mb_frontend_form id="field-group-id" post_fields="title,content"]
+```
+
+If you're using [Meta Box Builder](/extensions/meta-box-builder/), go to **Meta Box > Custom Fields** admin page and copy the content in the **Shortcode** column for the field group that you created:
+
+![Copy submission form shortcode in Meta Box Builder](https://i.imgur.com/sfeWhBA.png)
+
+Below is the list of the settings. The attribute is used for the shortcode.
+
+Name|Attribute|Description
 ---|---|---
 ID|`id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas. Optional.
 Ajax|`ajax`|Enable Ajax submission. `true` or `false` (default).
@@ -44,24 +56,6 @@ Confirmation text|`confirmation`|The text for the confirmation message when the 
 Delete confirmation text|`delete_confirmation`|The text for the confirmation message when the post is deleted.
 reCaptcha key|`recaptcha_key`|Google reCaptcha site key (version 3). Optional.
 reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Optional.
-
-### Shortcode
-
-MB Frontend Submission also provides a shortcode to insert the submission form into a page.
-
-If you're using [Meta Box Builder](/extensions/meta-box-builder/) to [create custom fields](/custom-fields/), then go to **Meta Box > Custom Fields** admin page and copy the content in the **Shortcode** column for the field group that you created:
-
-![Copy submission form shortcode in Meta Box Builder](https://i.imgur.com/sfeWhBA.png)
-
-Then paste the shortcode into a page. When viewing the page, you'll see the submission form.
-
-The shortcode has the following format:
-
-```php
-[mb_frontend_form id="field-group-id" post_fields="title,content"]
-```
-
-Shortcode attributes are the same as block settings and are described above.
 
 ### Dynamic population
 
@@ -264,17 +258,21 @@ The snippet above will set the cookie setting `samesite=None` and `Security=true
 
 ## User dashboard
 
-### Gutenberg block
-
-Similar to the submission form, MB Frontend Submission also provides a Gutenberg block for you to insert into a page. The block let users view and edit their submitted posts.
+Similar to the submission form, MB Frontend Submission provides a Gutenberg block for you to insert into a page. The block let users view and edit their submitted posts.
 
 To insert a block, select the **User dashboard** block from the block inserter:
 
 ![User dashboard block](https://i.imgur.com/didLg44.png)
 
-The block has the following settings. The key is used for reference in the shortcode which will be described in the next section.
+If you prefer to use shortcodes, use the following shortcode:
 
-Name|Key|Description
+```php
+[mb_frontend_dashboard edit_page="124"]
+```
+
+Below is the list of the settings. The attribute is used for the shortcode.
+
+Name|Attribute|Description
 ---|---|--
 Edit page|`edit_page`|The ID of the page, where users can submit posts.
 Show welcome message|`show_welcome_message`|Show the welcome message `true` (default) or `false`.
@@ -303,16 +301,6 @@ On this dashboard, users can:
 - Or submit a new post
 
 The plugin is smart enough to detect the correct settings from the submission form to the correct posts. So you can have *multiple* submission forms and multiple dashboards on the same website.
-
-### Shortcode
-
-If you prefer to use shortcodes, then create a normal WordPress page, and insert the following shortcode into the page content:
-
-```php
-[mb_frontend_dashboard edit_page="124"]
-```
-
-Shortcode attributes are the same as block settings and are described above.
 
 ## Hooks
 
