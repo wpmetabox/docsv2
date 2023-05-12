@@ -2,6 +2,9 @@
 title: MB Relationships
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 MB Relationships helps you to create relationships between posts, terms, and users in WordPress.
 
 The plugin uses a custom table for storing relationships and integrates with default WordPress queries to retrieve the connected items easily. Using a custom table has several benefits:
@@ -44,7 +47,8 @@ For each side, there are 3 tabs of settings:
 - Meta Box: for extra meta box settings. These settings are the same as the field group settings when creating custom fields.
 - Field: for extra field settings. These settings are the same as the field settings (post, term, or user depending on the object type).
 
-#### General settings
+<Tabs>
+  <TabItem value="general" label="General" default>
 
 ![general settings for a relationship side](https://i.imgur.com/aZdXHhf.png)
 
@@ -59,7 +63,8 @@ Column position | Select the position of the admin column. You need to set it af
 Column title | Custom admin column title. Leaving this setting blank will show the default title from the relationship meta box.
 Item link type | For each connected item, you can set how it shows in the admin column: with a link to the edit page, with a link to the view it on the frontend, or without links.
 
-#### Meta box settings
+  </TabItem>
+  <TabItem value="meta-box" label="Meta Box">
 
 The plugin automatically creates meta boxes to let you select connected items. The meta box settings are very much like a [normal meta box](/creating-fields-with-code/#field-group-settings) when you create custom fields, but simpler.
 
@@ -74,7 +79,8 @@ Style | The meta box style: default (with wrapper) and seamless (no wrapper).
 Collapse by default | Whether to collapse the meta box when the edit page loads.
 Custom CSS class | If you want to style your meta box, then enter a custom CSS class here.
 
-#### Field settings
+  </TabItem>
+  <TabItem value="field" label="Field">
 
 To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/) or [user](/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
 
@@ -93,9 +99,12 @@ Before | A custom HTML to output before the field.
 After | A custom HTML to output after the field.
 Custom CSS class | If you want to style the field, then enter a custom CSS class here.
 
+  </TabItem>
+</Tabs>
+
 ### Using code
 
-The code below registers a relationship **from posts to pages**. Open your theme's `functions.php` file and add:
+The code below registers a relationship **from posts to pages**:
 
 ```php
 add_action( 'mb_relationships_init', function() {
@@ -119,8 +128,10 @@ add_action( 'mb_relationships_init', function () {
     MB_Relationships_API::register( [
         'id'   => 'categories_to_posts',
         'from' => [
+            // highlight-start
             'object_type' => 'term',
             'taxonomy'    => 'category',
+            // highlight-end
         ],
         'to'   => 'post',
     ] );
@@ -134,6 +145,7 @@ add_action( 'mb_relationships_init', function () {
     MB_Relationships_API::register( [
         'id'   => 'users_to_posts',
         'from' => [
+            // highlight-next-line
             'object_type' => 'user',
         ],
         'to'   => 'post',
@@ -150,6 +162,7 @@ Name|Description
 `id`|The relationship ID (or type). It's used to identify a relationship with others. Required.
 `from`|The "from" side of the relationship. Required. See below for details.
 `to`|The "to" side of the relationship. Required. See below for details.
+`reciprocal`|Whether the relationship is reciprocal (`true` or `false`). Optional.
 
 Both sides `from` or `to` accept various parameters for the connection and meta box:
 
@@ -171,22 +184,6 @@ Name|Description
 -- `max_clone` | Maximum number of connections.
 
 The field settings apply from object `from` to object `to`. That means the custom field (relationship) shows on the object `from` get object type, post type, and field settings from object `to`.
-
-#### Reciprocal relationships
-
-To make reciprocal relationships, add another parameter `'reciprocal' => true`:
-
-```php
-add_action( 'mb_relationships_init', function() {
-    MB_Relationships_API::register( [
-        'id'         => 'posts_to_pages',
-        'from'       => 'post',
-        'to'         => 'post',
-        // highlight-next-line
-        'reciprocal' => true,
-    ] );
-} );
-```
 
 #### Admin column
 
@@ -211,37 +208,9 @@ MB_Relationships_API::register( [
 
 Similar to [MB Admin Columns](/extensions/mb-admin-columns/), the plugin supports 3 formats of the parameter:
 
-**Enable admin column**
-
-```php
-'admin_column' => true,
-```
-
-In this case, the column will be added to the end of the list table. And the title of the column will be the title of the connection meta box (when you edit a post).
-
-**Column position**
-
-```php
-'admin_column' => 'after title'
-```
-
-The format is `'admin_column' => 'type column'` where:
-
-Param|Description
----|---
-`type`|Must be `before`, `after`, or `replace`. Specify the position of the custom column.
--- `before`|Insert the column before an existing column
--- `after`|Insert the column after an existing column
--- `replace`|Replace an existing column with the new one
-`column`|The target existing column
-
-Using this configuration, you can insert the column in any position you want.
-
-In this case, the title of the column will be the title of the connection meta box (when you edit a post).
-
-**Advanced configuration**
-
-To add more rules for the admin column, you can declare the `admin_column` parameter as an array that accepts the following keys:
+1. A boolean `true`: to simply display the admin column. The column will be added to the end of the list table. And the title of the column will be the title of the connection meta box (when you edit a post).
+1. A string "before title": to specify the column position. It accepts 2 words: the first one is the placement ("before", "after" or "replace") and the last one is the target existing column ID.
+1. An array of advanced configurations, as below:
 
 ```php
 'admin_column' => [
@@ -250,8 +219,6 @@ To add more rules for the admin column, you can declare the `admin_column` param
     'link'     => 'edit',
 ],
 ```
-
-The meaning of keys is described below:
 
 Key|Description
 ---|---
@@ -375,17 +342,7 @@ We use WordPress function `get_users()` with an additional parameter `relationsh
 
 For the full list of supported parameters for `get_users()`, please see the [documentation](https://codex.wordpress.org/Function_Reference/get_users).
 
-### Syntax
-
-The `relationship` parameter for querying accepts the following parameters:
-
-Name|Description
----|---
-`id`|The relationship ID.
-`from`|The object(s) that you want to get connected items from. Accept single or array of object(s) or object ID(s).
-`to`|The object(s) that you want to get connected items to. Accept single or array of object(s) or object ID(s).
-
-**How to get the ID of the current item**
+### Current item
 
 In the examples above, we use `get_the_ID()` to get the ID of the current post. But if we query for connected posts from a relationship `terms_to_posts`, then that function doesn't work.
 
@@ -401,7 +358,7 @@ Function|Description
 
 Assume you have 2 custom post types: student and class. Each student can join 1 or more classes (many-to-many relationship). Now how to get the classmates of the given student A?
 
-Since version 1.2.0, the plugin introduces new API to get sibling items. To get sibling of a post, add `'sibling' => true` to the query as follows:
+To get sibling of a post, add `'sibling' => true` to the query as follows:
 
 ```php
 $siblings = new WP_Query( [
@@ -642,8 +599,8 @@ Name|Description
 `id`|Relationship ID. Required.
 `items`|List of items for getting connected items from/to. Optional. If missed, the shortcode will get the current object ID.
 `direction`|Get connected items `from` (default) or `to`. Optional.
-`mode`|How to display connected items? `ul` (unordered list - default), `ol` (ordered list) or `inline`.
-`separator`|The separator between connected items if `mode` is set to `inline`. Optional.
+`mode`|How to display connected items? `ul` (unordered list - default), `ol` (ordered list), `inline` (display items joined by commas), or `custom`.
+`separator`|The separator between connected items if `mode` is set to `custom`. Optional.
 
 ## Database
 

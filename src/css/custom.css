@@ -322,7 +322,7 @@ table th {
 .tabs {
 	gap: .25rem;
 	z-index: 2;
-	margin-bottom: -3px;
+	margin-bottom: -1px;
 }
 
 .tabs__item {
@@ -332,6 +332,7 @@ table th {
 	border-radius: var(--ifm-global-radius) var(--ifm-global-radius) 0 0;
 	border-bottom: none;
 	background: var(--ifm-hover-overlay);
+	font-weight: normal;
 }
 
 .tabs__item--active,
@@ -340,10 +341,15 @@ table th {
 }
 
 .tabs-container>div {
-	margin: 0 !important;
-	padding: 1rem;
-	border: 3px solid var(--ifm-hover-overlay);
+	margin-top: 0 !important;
+	padding: 1rem 1rem 0 1rem;
+	border: 1px solid var(--ifm-hover-overlay);
 	z-index: 1;
+}
+
+.tabs-container table {
+	margin-inline: -1rem;
+	width: calc(100% + 2rem);
 }
 
 /* FAQ */
