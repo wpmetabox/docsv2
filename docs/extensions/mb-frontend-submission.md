@@ -304,6 +304,24 @@ On this dashboard, users can:
 
 The plugin is smart enough to detect the correct settings from the submission form to the correct posts. So you can have *multiple* submission forms and multiple dashboards on the same website.
 
+<FAQ question="How to manually set edit page attributes?">
+
+By default, the plugin **implicitly** gets the attributes for the submission form from the edit page. That's why you must set the edit page in the block, shortcode or page builder elements.
+
+However, there are cases you want to **explicitly** set these attributes, you can do so by setting the **Field group ID(s)** or the **Post type** attributes from the block, shortcode or page builder elements settings. These values will overwrite the values in the edit page.
+
+You can also set these attributes with a filter like this:
+
+```php
+add_filter( 'rwmb_frontend_dashboard_edit_page_atts', function( $attributes, $edit_page_id ) {
+    $attributes['post_type'] = 'book';
+    return $attributes;
+}, 10, 2 );
+```
+
+Note that the plugin only needs the field group ID(s) (`id`) and/or post type (`post_type`) attributes.
+</FAQ>
+
 ## Integrations
 
 MB Frontend Submission has integrations with the following page builder plugins:
@@ -531,6 +549,17 @@ The action accepts 1 parameter: the instance of the `\MBFS\Post` class, which ha
 - `$config`: The configuration, taken from the shortcode attributes
 
 ### Dashboard
+
+`rwmb_frontend_dashboard_edit_page_atts`
+
+This filter allows you to explicitly set the attributes for the edit page. See **User Dashboard** section above.
+
+```php
+add_filter( 'rwmb_frontend_dashboard_edit_page_atts', function( $attributes, $edit_page_id ) {
+    $attributes['post_type'] = 'book';
+    return $attributes;
+}, 10, 2 );
+```
 
 `rwmb_frontend_dashboard_query_args`
 
