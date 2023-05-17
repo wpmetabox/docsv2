@@ -275,14 +275,16 @@ Below is the list of the settings. The attribute is used for the shortcode.
 Name|Attribute|Description
 ---|---|--
 Edit page|`edit_page`|The ID of the page, where users can submit posts.
+Field group ID(s)|`id`|Overwrite field group ID(s) from the edit page. If multiple field groups, enter their IDs separated by commas.
+Post type|`post_type`|Overwrite the submitted post type from the edit page.
 Show welcome message|`show_welcome_message`|Show the welcome message `true` (default) or `false`.
 Columns|`columns`|List of columns to be displayed in the dashboard, separated by commas. Supported values are `title`, `date`, and `status`.
-Label title|`label_title`|The header label for the title column.
-Label date|`label_date`|The header label for the date column.
-Label status|`label_status`|The header label for the status column.
-Label actions|`label_actions`|The header label for the actions column.
-Title link|`title_link`|The link action for the post titles. Supported values are: `edit` or `view` (default)
-Label add new|`add_new`|Label for the add new button.
+Title column label|`label_title`|The label for the title column.
+Date column label|`label_date`|The label for the date column.
+Status column label|`label_status`|The label for the status column.
+Actions column label|`label_actions`|The label for the actions column.
+Post Action Link|`title_link`|The link action when clicking post titles: `edit` or `view` (default).
+Add new button text|`add_new`|The add new button text.
 
 :::caution
 
