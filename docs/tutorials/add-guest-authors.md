@@ -17,7 +17,7 @@ In this practice, we need some tools below:
 
 :::tip
 
-You can follow [this tutorial](https://docs.metabox.io//tutorials/create-user-profile-page/) for more details on how to create a user profile page on the frontend.
+You can follow [this tutorial](https://docs.metabox.io/tutorials/create-user-profile-page/) for more details on how to create a user profile page on the frontend.
 
 :::
 
