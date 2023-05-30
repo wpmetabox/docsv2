@@ -1,5 +1,5 @@
 ---
-Creating Relationships - Meta Box + Oxygen
+title: Creating Relationships - Meta Box + Oxygen
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
