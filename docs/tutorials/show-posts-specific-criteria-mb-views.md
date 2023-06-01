@@ -144,7 +144,7 @@ You also can add some **CSS** in the **CSS** tab of the view as follows.
 
 ![Add some CSS in the CSS tab of the view](https://i.imgur.com/w1JXHRW.png)
 
-This code is available on **GitHub**, so you can refer to it for more details.
+This code is available on [GitHub](https://github.com/wpmetabox/tutorials/tree/master/show-posts-with-a-specific-criteria-with-mb-views), so you can refer to it for more details.
 
 Now, you will see a new look of the page on the frontend.
 
