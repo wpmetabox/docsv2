@@ -188,7 +188,8 @@ To remove them, add a **Code Block** to the template and input following JavaScr
 
 ![input JavaScript code](https://i.imgur.com/EN8DIOP.png)
 
-``` jQuery('.ee-post').filter(function() {
+```
+jQuery('.ee-post').filter(function() {
 return jQuery(this).text().trim() == ""
 }).remove();
 ```
