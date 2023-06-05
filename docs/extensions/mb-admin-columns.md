@@ -51,25 +51,25 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 				'name'          => 'Cover',
 				'id'            => 'cover',
 				'type'          => 'image_advanced',
-                // highlight-start
+				// highlight-start
 				'admin_columns' => [
-                    'position' => 'before title', // Show before the 'Title' column
-                    'link'     => 'edit',         // Link to the edit post screen
-                ],
-                // highlight-end
+					'position' => 'before title', // Show before the 'Title' column
+					'link'     => 'edit',         // Link to the edit post screen
+				],
+				// highlight-end
 			],
 			[
 				'name'          => 'Author',
 				'id'            => 'book_author',
 				'type'          => 'text',
-                // highlight-next-line
+				// highlight-next-line
 				'admin_columns' => 'after title', // Show after the 'Title' column
 			],
 			[
 				'name'          => 'Pages',
 				'id'            => 'pages',
 				'type'          => 'number',
-                // highlight-next-line
+				// highlight-next-line
 				'admin_columns' => true,          // Just show this column
 			],
 		],
@@ -103,7 +103,7 @@ Key|Description
 `title`|Column title. Optional. Default is the field name.
 `before`|Custom HTML outputted before the column content. Optional.
 `after`|Custom HTML outputted after the column content. Optional.
-`sort`|Whether to sort the column by meta value? Optional. Default `false`.
+`sort`|Whether to sort the column by meta value? Set to `true` to just enable sorting. Set to `numeric` to sort values as numeric. Default `false`.
 `searchable`|Allow searching posts by meta value. Optional. Default `false`.
 `filterable`|Allow filtering posts by the custom taxonomy. Applied only if the field is the `taxonomy` field. Default `false`.
 `link`|Whether to link the value to the post edit screen (value `edit`) or post view on the front end (value `view`) or no link (`none`).
