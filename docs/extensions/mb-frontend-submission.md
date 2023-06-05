@@ -174,7 +174,7 @@ With this method, you're able to set the label for post fields or change setting
 
 ### Validation
 
-There are 2 ways to validate fields: on the front end with JavaScript and the back end with PHP.
+There are 2 ways to validate fields: on the front end with JavaScript and on the back end with PHP.
 
 For front-end validation with JavaScript, please see [this documentation](/validation/).
 
