@@ -211,6 +211,9 @@ add_filter( 'rwmb_frontend_validate', function( $validate, $config ) {
 
 ### File upload
 
+#### File upload with Media popup
+To be able to upload files or images with the media popup (via fields `file_advanced`, `file_upload`, `image_advanced`, `image_upload`), the standard WordPress content field must exist on the page.
+
 #### User capability
 
 To be able to upload files or images with the media popup (via fields `file_advanced`, `file_upload`, `image_advanced`, `image_upload`), users have to log in and proper capability `upload_files` to access the Media Library. If your users don't have that capability (like if they have the "subscriber" role), then the upload fields don't work. In that case, you can add the capability for that role as follows:
