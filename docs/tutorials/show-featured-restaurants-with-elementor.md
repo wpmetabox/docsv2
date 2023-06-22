@@ -8,7 +8,7 @@ In today’s practice, we're going to show the featured products using **Meta Bo
 
 I’m getting restaurants as an example for the products and this is the section I’ll create in this tutorial: 
 
-![The featured products using Meta Box and Elementor](https://i.imgur.com/RdtsKgK.png)
+![The featured products using Meta Box and Elementor](https://i.imgur.com/1wdDGxA.png)
 
 ## Video Version
 
@@ -219,23 +219,23 @@ Now, move on to display posts on the homepage.
 
 Go to edit the homepage with **Elementor**.
 
-![Go to edit the homepage with Elementor](https://i.imgur.com/mTzAVMm.png)
+![Go to edit the homepage with Elementor](https://i.imgur.com/oExPxZZ.png)
 
 Add a **Section** elemento to the page as usual.
 
-![Add a Section element to the page as usual](https://i.imgur.com/7EfUe1U.png)
+![Add a Section element to the page as usual](https://i.imgur.com/RMKOR3B.png)
 
 Then, insert a **Heading** for it.
 
-![Insert a Heading for it](https://i.imgur.com/p2r5jtt.png)
+![Insert a Heading for it](https://i.imgur.com/eoaDCLB.png)
 
 Add the **Loop Grid** element to get posts.
 
-![Add the Loop Grid element to get posts](https://i.imgur.com/jla57bC.png)
+![Add the Loop Grid element to get posts](https://i.imgur.com/W8i8c6q.png)
 
 Choose the created template, but some blog posts will be displayed in the form.
 
-![Choose the created template](https://i.imgur.com/ObKCfI3.png)
+![Choose the created template](https://i.imgur.com/UCiXVWL.png)
 
 To display the wanted posts from your product post type, go to the **Query** section. Set the **Source** as your product’s post type. Then **all the posts** from that post type will be displayed.
 
@@ -243,10 +243,10 @@ To display the wanted posts from your product post type, go to the **Query** sec
 
 Fill in the **Query ID** box with the name of the created custom query to apply the condition that we want. The displaying posts will be changed.
 
-![Fill in the Query ID box with the name of the created custom query](https://i.imgur.com/5DSJEBL.png)
+![Fill in the Query ID box with the name of the created custom query](https://i.imgur.com/LAzmQi0.png)
 
 To style the way each information of the post displays, go back to edit the created template as the **Loop Item** and customize each element’s settings.
 
 Then the section will display with a nice look on the frontend.
 
-![The featured products displayed on the homepage](https://i.imgur.com/Q1wkD0l.png)
+![The featured products displayed on the homepage](https://i.imgur.com/1wdDGxA.png)
