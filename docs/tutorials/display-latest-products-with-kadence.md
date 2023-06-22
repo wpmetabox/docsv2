@@ -23,18 +23,18 @@ The name of the restaurant and its image are the title and featured image of the
 
 For this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/mb-custom-post-type/): to have the framework for creating custom post types and custom fields;
-* [MB Custom Post Types](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the products;
+* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields;
+* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the products;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * **Kadence**: to build the page and create a section to display the latest posts. In this practice, I also use the pro version of Kadence.
 
-## Creating a new custom post type
+## 1. Creating a new custom post type
 
 Go to **Meta Box** > **Post Types** > **New Post Type** to create a new post type for the products.
 
 ![Create a new custom post type](https://i.imgur.com/pcT8HOJ.png)
 
-## Creating custom fields
+## 2. Creating custom fields
 
 Go to **Meta Box** > **Custom Fields** to create fields to save some extra information. These are the fields that I’ll create:
 
@@ -50,7 +50,7 @@ Go to the post editor, you will see all of the created custom fields.
 
 Just fill in the information.
 
-## Adding the section to the homepage
+## 3. Adding the section to the homepage
 
 Let’s edit the homepage to create a section for the latest restaurants.
 
@@ -128,7 +128,7 @@ Go to the homepage, you can see all of the information about the restaurants dis
 
 ![All of the information about the restaurants displayed correctly.](https://i.imgur.com/EYqkotZ.png)
 
-## Styling the section
+## 4. Styling the section
 
 Go back to edit the homepage. You can add some classes for the blocks if you want to use some CSS to style them.
 
