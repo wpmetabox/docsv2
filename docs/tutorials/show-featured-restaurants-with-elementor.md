@@ -23,7 +23,7 @@ All of the featured restaurants in the section are chosen manually by a custom f
 So, to get started, we need these tools:
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to create the switch field. In addition, you may want to add some extra information about your product, so custom fields also come handy.
-* [MB Custom Post Types](https://metabox.io/plugins/custom-post-type/): to create custom post type for the products;
+* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post type for the products;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the custom fields as an admin column to easily see the information. I use it to show you which restaurants will be featured to easily compare with the result.
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them on the page easily.
