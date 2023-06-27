@@ -1,5 +1,5 @@
 ---
-Title: Showing posts with specific criteria - Meta Box + Breakdance
+title: Showing posts with specific criteria - Meta Box + Breakdance
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
