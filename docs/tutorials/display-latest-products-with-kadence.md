@@ -13,7 +13,7 @@ We take the restaurants as an example for the posts as well as for the products:
 
 ## Video version
 
-<LiteYouTubeEmbed id='jStMnLbfk-Q'/>
+<LiteYouTubeEmbed id='XdOk6JDqsz8'/>
 
 ## Preparation
 
