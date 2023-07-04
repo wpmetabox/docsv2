@@ -12,7 +12,7 @@ I’m getting restaurants as an example for the products and this is the section
 
 ## Video Version
 
-<LiteYouTubeEmbed id='ski5c4SxePg' />
+<LiteYouTubeEmbed id='cdn8muN_yQ4' />
 
 ## Preparation
 
