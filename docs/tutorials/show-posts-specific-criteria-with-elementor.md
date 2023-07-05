@@ -94,7 +94,7 @@ To get the dish’s name, select the **Post Title** element.
 
 Next, choose an **Insert Section** element to cover the price, including the original price and the promotional price.
 
-For the original price information, choose the **Text Editor** element. Since this information is saved in custom fields created by Meta Box, use the Dynamics Tags and find the Meta Box Field in the Post section, then choose the corresponding fields like in the image below.
+For the original price information, choose the **Text Editor** element. Since this information is saved in custom fields created by Meta Box, use the **Dynamics Tags** and find the **Meta Box Field** in the **Post** section, then choose the corresponding fields like in the image below.
 
 ![Add a Text Basic element and insert dynamic data from the field](https://i.imgur.com/zSjsqln.gif)
 
