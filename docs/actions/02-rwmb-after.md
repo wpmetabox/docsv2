@@ -21,7 +21,7 @@ do_action( "rwmb_after_{$field_group_id}", $meta_box );
 This code wraps a field group with ID `event-details` into a custom div:
 
 ```php
-add_action( 'rwmb_after_event-details', function( $meta_box ) {
+add_action( 'rwmb_before_event-details', function( $meta_box ) {
 	echo '<div class="my-div">';
 } );
 
