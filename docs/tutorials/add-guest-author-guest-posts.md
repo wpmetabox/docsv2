@@ -13,7 +13,7 @@ Here is my example.
 
 ## Video version
 
-<LiteYouTubeEmbed id='i08rM-4PJQA'/>
+<LiteYouTubeEmbed id='TXcpsVf8ZZg'/>
 
 ## Preparation
 
