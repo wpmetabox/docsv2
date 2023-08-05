@@ -4,7 +4,7 @@ title: File Input
 
 import Screenshots from '@site/src/components/Screenshots';
 
-The file input field creates a simple text input for uploading a single file. You can select a file from the Media Library or enter a file URL directly (even a URL for a file hosted on another website).
+The file input field creates a simple text input for uploading a single file. You can select a file from the Media Library or enter a file URL directly (even a URL for a file hosted on another website). After selecting from the Media Library, the input file URL will be pasted into the input and is saved into the database.
 
 ## Screenshots
 
@@ -21,7 +21,7 @@ This field doesn't have any specific settings. It only uses [common settings](/f
 
 ## Data
 
-This field saves the file URL in the database.
+This field saves the input file URL in the database.
 
 ## Template usage
 
