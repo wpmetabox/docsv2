@@ -14,7 +14,7 @@ The number field creates a simple HTML5 number input. You can enter a number or 
 
 ## Settings
 
-This field inherits all settings from the [text field](/fields/text/). Besides, it has the following specific settings, the keys are for use with code:
+This meta number field inherits all settings from the [text field](/fields/text/). Besides, it has the following specific settings, the keys are for use with code:
 
 Name | Key | Description
 --- | --- | ---
@@ -36,7 +36,7 @@ This is a sample field settings array when creating this field with code:
 
 ## Data
 
-This field saves the entered value into the database.
+This meta number field saves the entered value into the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
