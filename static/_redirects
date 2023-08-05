@@ -5,6 +5,7 @@
 /mb-admin-columns/                                                      /extensions/mb-admin-columns/
 /mb-term-meta/                                                          /extensions/mb-term-meta/
 /meta-box-group/                                                        /extensions/meta-box-group/
+/meta-box-geolocation/                                                  /extensions/meta-box-geolocation/
 /meta-box-builder/                                                      /extensions/meta-box-builder/
 /meta-box-tabs/                                                         /extensions/meta-box-tabs/
 /meta-box-template/                                                     /extensions/meta-box-template/
@@ -31,6 +32,7 @@
 /hide-group-conditional-logic/                                          /extensions/meta-box-conditional-logic/#using-with-group
 
 # v2
+/getting-started/                                                       /introduction/
 /quick-start/                                                           /introduction/
 /creating-post-types/                                                   /custom-post-types/
 /creating-taxonomies/                                                   /custom-post-types/#creating-custom-taxonomies
