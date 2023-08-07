@@ -428,7 +428,9 @@ This action fires before the submit button is displayed. It accepts one paramete
 
 `rwmb_frontend_submit_button`
 
-This filter allows you to change the submit button HTML. It accepts 2 parameters: `$submit_button` - the submit button HTML; and `$config` - the form configuration.
+This filter allows you to change the submit button HTML. It accepts 2 parameters:
+- `$submit_button` - the submit button HTML.
+- `$post_id` - the post ID
 
 `rwmb_frontend_after_submit_button`
 
