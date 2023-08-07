@@ -5,7 +5,7 @@ title: Creating download and preview buttons - Meta Box + Oxygen
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-In today's post, we'll walk you through the way to c**reate an e-book page with download and preview buttons using Meta Box and Oxygen**. The e-book files can be downloaded easily ỏ viewed online by website visitors with just one click.
+In today's post, we'll walk you through the way to create an e-book page with download and preview buttons using Meta Box and Oxygen**. The e-book files can be downloaded easily or viewed online by website visitors with just one click.
 
 Take a look through the e-book page with two kinds of buttons that I created:
 
