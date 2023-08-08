@@ -107,5 +107,4 @@ Now, we have 2 buttons. Change the spacing a little bit, and then you get the fi
 
 On the frontend, you can click the buttons for testing. They work well, as you can see in the gif.
 
-
-![The Download and Preview buttons work well.](https://i.imgur.com/pci7S6F.gif)
+![The Download and Preview buttons work well.](https://i.imgur.com/9Ue0u7D.gif)
