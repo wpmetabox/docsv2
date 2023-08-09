@@ -65,7 +65,7 @@ And this is how it displays on the admin dashboard.
 
 After having all the fields, go to the **Settings** tab, choose **Location** as **Post type**, and select **Restaurant** to apply the fields to it.
 
-![Go to the Settings tab, choose Location as Post type, and select Restaurant to apply the fields to it.](://i.imgur.com/2Vq031r.png)
+![Go to the Settings tab, choose Location as Post type, and select Restaurant to apply the fields to it](https://i.imgur.com/2Vq031r.png)
 
 In the post editor, you’ll see the created custom fields. The switch field is also displayed. You can turn on or turn off the button to choose to feature the restaurant or not.
 
