@@ -159,7 +159,7 @@ We’ve displayed the wanted posts along with their information.
 
 For styling, go back to the page editor with **Zion**, choose each element inside the section to change its settings. Do it one by one. 
 
-![Choose each element inside the section to change its settings.](://i.imgur.com/58aYPoU.png)
+![Choose each element inside the section to change its settings.](https://i.imgur.com/58aYPoU.png)
 
 Now we have a new look of the section.
 
