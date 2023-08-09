@@ -41,7 +41,7 @@ After publishing, you will see your post type displayed as a menu.
 
 Go to **Meta Box** > **Custom Fields** to create fields to save extra information for the restaurants as usual.
 
-![The post type displayed as a menu](https://i.imgur.com/BEilkwt.png
+![The post type displayed as a menu](https://i.imgur.com/BEilkwt.png)
 
 Here are all the custom fields that I created.
 
