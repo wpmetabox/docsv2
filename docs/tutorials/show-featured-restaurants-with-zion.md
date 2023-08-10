@@ -131,7 +131,7 @@ To display the restaurant image, add an **Image** element. Then, click on the **
 
 You see that the restaurant's images have been obtained.
 
-![The restaurant's images have been obtained](://imgur.com/DMKVPmu)
+![The restaurant's images have been obtained](https://i.imgur.com/Xx4VQV9.png)
 
 For displaying the restaurant name that saves in the post title, add a **Heading** element, and also use dynamic data to get information from the **Post Title**.
 
