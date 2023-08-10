@@ -26,7 +26,7 @@ So, in this practice, we need these tools:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to store the PDF files;
 * **Oxygen**: to build the page.
 
-## 1. Create a custom post type
+## 1. Creating a custom post type
 
 Go to **Meta Box** > **Post Types** to create a new post type for the e-books.
 
@@ -36,7 +36,7 @@ After publishing, you’ll see a new item appear in the admin dashboard.
 
 ![A new item appear in the admin dashboard](https://i.imgur.com/5AIygzf.png)
 
-## 2. Create custom fields
+## 2. Creating custom fields
 
 I’ll create only one custom field to store the PDF file of the e-book. So choose the **File Advanced** type to save this kind of data. The file will be used for both Download and Preview buttons.
 
@@ -50,7 +50,7 @@ Go to the post editor, you will see the created custom fields.
 
 ![The created custom fields](https://i.imgur.com/19yLKXp.png)
 
-## 3. Create the page
+## 3. Creating the page
 
 Go to **Oxygen** > **Templates** to add a new template.
 
@@ -86,7 +86,7 @@ Then, add a **Heading** and insert data from the page title.
 
 We will display all the e-books first, then add buttons later.
 
-### 3.1. Display e-books information
+### 3.1. Displaying e-books information
 
 Inside the **Section**, add a **Repeater** component to get all the posts of the `e-book` post type.
 
@@ -140,7 +140,7 @@ And insert data from **Post Content**.
 
 Now, move ahead to create the buttons.
 
-### 3.2. Create the buttons
+### 3.2. Creating the buttons
 
 Add a **Button** component.
 
@@ -184,7 +184,7 @@ After getting all the data, we have an e-book page with buttons like this.
 
 ![An e-book page with buttons](https://i.imgur.com/TX0F5Y9.png)
 
-## 4. Style the page
+## 4. Styling the page
 
 Just change the settings of each component to have a better look for them.
 

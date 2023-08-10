@@ -27,7 +27,7 @@ In this practice, we need these tools:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI on the backend to create custom fields and relationships;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the related courses and related instructors in the dashboard.
 
-## 1. Create new custom post types
+## 1. Creating new custom post types
 
 Go to **Meta Box** > **Post Types** to create a new post type for the instructors, and another one for the courses.
 
@@ -37,7 +37,7 @@ After publishing, you will see your new post types in the **Admin Dashboard**.
 
 ![your new custom post types in the Admin Dashboard](https://i.imgur.com/WtyRval.png)
 
-## 2. Create custom fields
+## 2. Creating custom fields
 
 If you need to save some extra information for each post type, just go to **Meta Box** > **Custom Fields** > **Add New** to create custom fields as usual. In this case, I just create some for the courses as follows.
 
@@ -47,7 +47,7 @@ After creating all the wanted fields, go to the **Settings** tab, set the **Loca
 
 ![go to the Settings tab, set the Location as Post type, and select the Course to apply created custom fields to it](https://i.imgur.com/BwFj3xU.png)
 
-## 3. Create relationships
+## 3. Creating the relationships
 
 Go to **Meta Box** > **Relationships** to create the relationships between the Courses and Instructors post types.
 
@@ -89,11 +89,11 @@ In the dashboard, all the information will display like this.
 
 ![In the dashboard, all the information will display like this](https://i.imgur.com/IzrftMS.png)
 
-## 4. Display the relationship
+## 4. Displaying the relationship
 
 In this practice, we’ll display this relationship on both singular pages of the Course post type and Instructor post type, also on the archive page where all the courses are listed.
 
-### 4.1 Display the relationship on the singular page of Instructors
+### 4.1 Displaying the relationship on the singular page of Instructors
 
 This is an example of the **Instructor** post type. It shows detailed information about one instructor. There will be a section to show all the courses that the instructor contributed to.
 
@@ -166,7 +166,7 @@ Back to the page on frontend, the new look has been done.
 
 ![the final look of the Singular Page of Instructors](https://i.imgur.com/fyz8xqi.png)
 
-### 4.2. Display the relationship on the singular page of Courses
+### 4.2. Displaying the relationship on the singular page of Courses
 
 We’ll show each course information and the instructor who contributed to them on the page. It uses the relationship we created.
 
@@ -216,7 +216,7 @@ And this is the result.
 
 ![the final look of the singular page of course](https://i.imgur.com/qm4T7im.png)
 
-### 4.3. Display the relationship on an archive page
+### 4.3. Displaying the relationship on an archive page
 
 We’ll create an archive page showing all the courses. On the page, we also display the instructor who contributed to each course.
 
@@ -314,7 +314,7 @@ $connected = new WP_Query( [
 ],
 ```
 
-These code are to stipulate that we will get data from the relationship that connects to the current post and has the “instructor-to-course” ID.
+These code are to stipulate that we will get data from the relationship that connects to the current post and has the `instructor-to-course` ID.
 
 ```
 $resultstr = array(); 
