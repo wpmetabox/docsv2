@@ -2,12 +2,13 @@
 title: rwmb_outer_html
 ---
 
-This filter is used to change the outer HTML output of a field. Outer HTML is the surrounding div (the most outside) of the field. By default it has the following markup:
+import FieldHTML from '../_parts/_field-html.md';
 
-```php
-$outer_html = $field['before'] . "<div class='{$field_classes}'>{$wrapper_html}</div>" . $field['after'];
-```
-Syntax:
+This filter is used to change the outer HTML output of a field. Outer HTML is the surrounding div (the most outside) of the field.
+
+<FieldHTML />
+
+This filter is used to change the **field outer HTML**, e.g. the wrapper div of everything for the field.
 
 ```php
 apply_filters( 'rwmb_outer_html', $html, $field, $value );

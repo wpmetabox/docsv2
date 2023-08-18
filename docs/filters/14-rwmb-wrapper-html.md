@@ -2,7 +2,13 @@
 title: rwmb_wrapper_html
 ---
 
-This filter is used to change the wrapper HTML of a field.
+import FieldHTML from '../_parts/_field-html.md';
+
+This filter is used to change the wrapper HTML of a field, e.g. the HTML content **inside the `<div class="rwmb-field..."></div>`**.
+
+<FieldHTML />
+
+Syntax:
 
 ```php
 apply_filters( 'rwmb_wrapper_html', $html, $field, $meta );

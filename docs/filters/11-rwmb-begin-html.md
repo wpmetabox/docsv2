@@ -2,11 +2,21 @@
 title: rwmb_begin_html
 ---
 
-This filter is used to change the beginning HTML output of a field. The default beginning HTML of a field is:
+import FieldHTML from '../_parts/_field-html.md';
 
-```php
-<div class="rwmb-label">
-    <label for="{$field_id}">{$field_name}</label>
+This filter is used to change the beginning HTML output of a field.
+
+<FieldHTML />
+
+The default beginning HTML of a field is:
+
+```html
+<div class="rwmb-label" id="{$field['id]}-label">
+    <label for="{$field['id']}">
+        {$field['name']}
+        <span class="rwmb-required">*</span>
+    </label>
+    <p id="{$field['id']}-label-description" class="description">{$field['label_description']}</p>
 </div>
 <div class="rwmb-input">
 ```

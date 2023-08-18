@@ -2,11 +2,17 @@
 title: rwmb_end_html
 ---
 
-This filter is similar to [rwmb_begin_html](/filters/rwmb-begin-html/) and is used to change the ending HTML output of a field. The ending HTML for a field looks like this:
+import FieldHTML from '../_parts/_field-html.md';
 
-```php
-{$clone_button}
-{$field_description}
+This filter is similar to [rwmb_begin_html](/filters/rwmb-begin-html/) and is used to change the ending HTML output of a field.
+
+<FieldHTML />
+
+The ending HTML for a field looks like this:
+
+```html
+	{$add_clone_button}
+	<p id="{$field['id']}-description" class="description">{$field['desc']}</p>
 </div><!-- .rwmb-input -->
 ```
 

@@ -8,7 +8,7 @@ This filter is used to change the HTML of the **field input**.
 
 <FieldHTML />
 
-This filter is used to change the **Field input HTML**, e.g. the HTML of the inputs to enter data.
+This filter is used to change the **field input HTML**, e.g. the HTML of the inputs to enter data.
 
 The HTML of a field input is various and depends on the field type. For example, a text field outputs an `input` tag, while a wysiwyg field outputs a complex `div`.
 
