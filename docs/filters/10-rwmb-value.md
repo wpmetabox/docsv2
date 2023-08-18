@@ -19,9 +19,9 @@ Name|Description
 
 This filter has variations:
 
-- `rwmb_value`: apply for all fields
-- `rwmb_{$field_type}_value`: apply for fields with a specific type
-- `rwmb_{$field_id}_value`: apply for a field with a specific id
+- `rwmb_value`: apply to all fields
+- `rwmb_{$field_type}_value`: apply to fields with a specific type
+- `rwmb_{$field_id}_value`: apply to a field with a specific id
 
 :::info
 If you return an empty string or an empty array (for cloneable fields or fields with multiple values like file, image, checkbox list), the field won't be saved in the database.

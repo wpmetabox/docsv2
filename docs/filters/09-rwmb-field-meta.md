@@ -18,6 +18,6 @@ Name|Description
 
 This filter has variations:
 
-- `rwmb_field_meta`: apply for all fields
-- `rwmb_{$field_type}_field_meta`: apply for fields with a specific type
-- `rwmb_{$field_id}_field_meta`: apply for a field with a specific id
+- `rwmb_field_meta`: apply to all fields
+- `rwmb_{$field_type}_field_meta`: apply to fields with a specific type
+- `rwmb_{$field_id}_field_meta`: apply to a field with a specific id

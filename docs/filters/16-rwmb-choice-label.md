@@ -18,9 +18,9 @@ Name|Description
 
 This filter has variations:
 
-- `rwmb_choice_label`: apply for all choice fields
-- `rwmb_{$field_type}_choice_label`: apply for choice fields with a specific type
-- `rwmb_{$field_id}_choice_label`: apply for a field with a specific id
+- `rwmb_choice_label`: apply to all choice fields
+- `rwmb_{$field_type}_choice_label`: apply to choice fields with a specific type
+- `rwmb_{$field_id}_choice_label`: apply to a field with a specific id
 
 ## Examples
 

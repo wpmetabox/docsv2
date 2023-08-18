@@ -12,9 +12,9 @@ It accepts one parameter - an array of field settings.
 
 This filter has variations:
 
-- `rwmb_normalize_field`: apply for all fields
-- `rwmb_normalize_{$field_type}_field`: apply for fields with a specific type
-- `rwmb_normalize_{$field_id}_field`: apply for a field with a specific id
+- `rwmb_normalize_field`: apply to all fields
+- `rwmb_normalize_{$field_type}_field`: apply to fields with a specific type
+- `rwmb_normalize_{$field_id}_field`: apply to a field with a specific id
 
 ## Examples
 

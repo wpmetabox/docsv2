@@ -73,7 +73,7 @@ After creating all the fields for each section, go to the **Settings** tab of ea
 
 ![Set location for the fields](https://i.imgur.com/HHQjxXD.png)
 
-These settings will apply for all the field groups.
+These settings will apply to all the field groups.
 
 When you go to edit the landing page, you will see all the created field groups and its fields as below:
 

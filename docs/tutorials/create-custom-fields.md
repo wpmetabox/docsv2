@@ -201,7 +201,7 @@ In the field group editor, go to the **Settings** tab and set up the attributes 
 
 ![go to the Settings tab and set up the attributes for the field group](https://i.imgur.com/oSG9ZE7.png)
 
-There are also some settings such as **Conditional Logic**, **Custom CSS class** and **Custom settings** that are the same as settings for the fields in the **Advanced** tab of it. But, the difference is that these settings apply for the whole field group.
+There are also some settings such as **Conditional Logic**, **Custom CSS class** and **Custom settings** that are the same as settings for the fields in the **Advanced** tab of it. But, the difference is that these settings apply to the whole field group.
 
 The **Location** settings is the most-used setting in every case. It allows you to choose the location where you want to display the field group.
 

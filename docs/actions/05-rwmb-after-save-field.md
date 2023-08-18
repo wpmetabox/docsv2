@@ -20,9 +20,9 @@ Name|Description
 
 This action has variations:
 
-- `rwmb_after_save_field`: apply for all fields
-- `rwmb_{$field_type}_after_save_field`: apply for fields with a particular type
-- `rwmb_{$field_id}_after_save_field`: apply for a field with a particular id
+- `rwmb_after_save_field`: apply to all fields
+- `rwmb_{$field_type}_after_save_field`: apply to fields with a particular type
+- `rwmb_{$field_id}_after_save_field`: apply to a field with a particular id
 
 ## Examples
 

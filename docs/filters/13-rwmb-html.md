@@ -26,6 +26,6 @@ Name|Description
 
 This filter has variations:
 
-- `rwmb_html`: apply for all fields
-- `rwmb_{$field_type}_html`: apply for fields with a specific type
-- `rwmb_{$field_id}_html`: apply for a field with a specific id
+- `rwmb_html`: apply to all fields
+- `rwmb_{$field_type}_html`: apply to fields with a specific type
+- `rwmb_{$field_id}_html`: apply to a field with a specific id
