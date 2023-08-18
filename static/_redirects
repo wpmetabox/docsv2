@@ -67,3 +67,7 @@
 /tutorials/show-featured-products-meta-box-elementor-wp-grid-builder/	/tutorials/displaying-featured-posts-with-wp-grid-builder/
 /tutorials/create-custom-post-type-taxonomies/							/tutorials/create-custom-post-types-taxonomies/
 /tutorials/mb-with-builders/											/tutorials/builders/
+
+
+/filters/rwmb-field-type-value/											/filters/rwmb-value/
+/filters/rwmb-field-type-html/											/filters/rwmb-html/
