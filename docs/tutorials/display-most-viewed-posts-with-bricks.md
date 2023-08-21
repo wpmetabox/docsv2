@@ -85,7 +85,7 @@ In the **Container** element inside the section, select the **Div** element to c
 
 To get the data of restaurants, in the Div element that I mentioned above, enable the **Use query loop** button. And in the **Query** section, choose the **Type** as **Posts**. Then, choose the post type you want to get data from.
 
-![Get the data of restaurants](https://imgur.com/5wBt9WP)
+![Get the data of restaurants](https://i.imgur.com/5wBt9WP.png)
 
 In this case, I would sort the posts by post views to get the posts with the most views. So, in the **Order By** section, choose the **Meta numeric value** option to get the value in numeric. 
 
