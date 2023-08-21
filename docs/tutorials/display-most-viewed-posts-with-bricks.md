@@ -121,8 +121,7 @@ As you can see, the image is displayed in the preview.
 
 For the voucher information, choose the **Basic Text** element. As the restaurant’s voucher is saved in the custom field created by **Meta Box**, also use the **Select dynamic data** icon and select the right field. Then, you’ll see the restaurant’s voucher displayed immediately.
 
-![Get the voucher information](https://i.imgur.com/N8Mbd5y.gif)
-![Get the voucher information](https://i.imgur.com/N8Mbd5y.gif)
+![Get the voucher information](https://i.imgur.com/ZHlAeOZ.gif)
 
 To get the restaurant’s name automatically, add the **Post Title** element.
 
