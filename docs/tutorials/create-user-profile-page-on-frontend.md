@@ -73,7 +73,7 @@ Once you have published, the field group ID will be generated automatically. But
 
 ![The field group ID](https://i.imgur.com/EJg3hjL.png)
 
-## Creating the Registration Page
+## Creating the registration page
 
 Let’s create a new page for registration.
 
@@ -165,7 +165,7 @@ Go back to the frontend, and you can see the user profile page with some persona
 
 It already has the account information that I have logged in to, and you can completely edit it.  Next, let’s add some additional fields to this page.
 
-### Creating and Displaying additional fields
+### Creating and displaying additional fields
 
 Go to **Meta Box** and create a new field group.
 
