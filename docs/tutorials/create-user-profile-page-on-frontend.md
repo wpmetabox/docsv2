@@ -193,7 +193,7 @@ On the frontend, you will see these fields appear.
 
 Now, you can fill in the additional information and save it on this user profile page.
 
-## Final Words
+## Final words
 
 To finalize all the forms, you should change the settings of each block provided by [MB User Profile](https://docs.metabox.io/extensions/mb-user-profile/) as well as style the fields for better display. For your quick reference, we have a tutorial for styling custom fields using CSS in [this post](https://metabox.io/style-meta-boxs-custom-fields-using-css/).
 
