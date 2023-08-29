@@ -11,7 +11,7 @@ In this case, I use the restaurants as an example of the products. This is the s
 
 ## Video version
 
-<LiteYouTubeEmbed id='cgsmhm-JUXg'/>
+<LiteYouTubeEmbed id='4oIZSLeek6s'/>
 
 ## Preparation
 
