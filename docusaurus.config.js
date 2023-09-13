@@ -73,6 +73,7 @@ const config = {
           alt: 'Meta Box Documentation',
           src: 'img/logo.svg',
           srcDark: 'img/logo-white.svg',
+          href: 'https://metabox.io'
         },
         items: [
           {
