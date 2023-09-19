@@ -128,7 +128,7 @@ For the image of the dish, add the **Image** element. Then, connect it to the fe
 
 Now, all the featured images have been obtained.
 
-![All the featured images have been obtained.](https://i.imgur.com/iemS9sG.png)
+![All the featured images have been obtained.](https://i.imgur.com/uttYzf0.png)
 
 Next, select the **Column** element to contain the remaining information about the dish.
 
