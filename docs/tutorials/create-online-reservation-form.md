@@ -197,8 +197,8 @@ wp_localize_script( 'theme-script', 'ReservationParams', array( 'ajaxURL' => adm
 
 **Note**:
 
-* 'theme-script': this name is the one you created, please pay attention that you must set it be the same in both lines;
-* 'ReservationParams' and 'ajaxURL' are from url : ReservationParams'.ajaxURL, you can change them, but do it at both.
+* `'theme-script'`: this name is the one you created, please pay attention that you must set it be the same in both lines;
+* `'ReservationParams'` and `'ajaxURL'` are from url : `ReservationParams'.ajaxURL`, you can change them, but do it at both.
 
 That’s all for the fields.
 
