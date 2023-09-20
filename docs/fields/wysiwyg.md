@@ -6,7 +6,7 @@ import Screenshots from '@site/src/components/Screenshots';
 
 The WYSIWYG field creates an editor to enter rich content. You can enter headings, paragraphs, lists, and insert media.
 
-:::tip Why WYSIWYG?
+:::tip What is WYSIWYG?
 
 "WYSIWYG" stands for **W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et, a general term of visual editor, where you see the formatted content as you type.
 
@@ -67,8 +67,10 @@ If `raw` is `true`, this field saves exactly what you enter into the database. O
 Note that the helper function doesn't format the value of this field nor run shortcodes in the content. In case you want to make it behaves similar to the post content (e.g. format and shortcodes), use this code:
 
 ```php
+global $wp_embed;
 $value = rwmb_meta( 'my_field_id' );
-echo do_shortcode( wpautop( $value ) );
+$value = do_shortcode( wpautop( $wp_embed->autoembed( $value ) ) );
+echo $value;
 ```
 
 :::
