@@ -201,7 +201,7 @@ To validate fields remotely with PHP, use the `remote` parameter for the validat
     'messages' => [
         'field_id1' => [
             // highlight-next-line
-            'remote'  => 'Value is not invalid.',
+            'remote'  => 'Value is not valid.',
         ],
     ],
 ],
