@@ -9,7 +9,7 @@ As you know, each WordPress user account has a unique avatar. And, you can compl
 
 This is the example look.
 
-![Example of a custom avatar.](https://i.imgur.com/nDAnx3y.png)
+![Example of the custom avatar for users](https://i.imgur.com/nDAnx3y.png)
 
 ## Video version
 
@@ -32,15 +32,15 @@ I will add a custom field in the type of Single Image that allows the user uploa
 
 The **ID** of this field will be used in the next steps, so you can change it to an easy-to-remember one.
 
-![Go to Meta Box > Custom Fields > Add new. Add Single Image fields to upload image. Then change the ID is Custom Avatar.](https://i.imgur.com/VuJxEmP.png)
+![Change ID of the custom field to an easy-to-remember one since we will use it in the next step](https://i.imgur.com/VuJxEmP.png)
 
 Next, move to the **Settings** tab, set the **Location** as **User**.
 
-![Choose Settings tab, set the Location as User](https://i.imgur.com/wAIXSKl.png)
+![Set the Location of the field group as User to apply it for users](https://i.imgur.com/wAIXSKl.png)
 
 Go to the user profile page, you will see the new custom field. Let’s try to add an image.
 
-![Go to the user profile page, add an image in new custom field.](https://i.imgur.com/dgFPO3M.png)
+![The created custom field displays in the user profile page](https://i.imgur.com/dgFPO3M.png)
 
 But now, the **Profile Picture** field hasn't received it and recognized it as the user avatar. Thus, we should take some further actions.
 
@@ -78,13 +78,14 @@ function mb_get_avatar_url( $url, $id_or_email, $args ) {
 }
 ```
 
-![Go to the theme’s functions.php file and add code](https://i.imgur.com/vNiMzXi.png)
+![The code that we add to the functions.php file to set the image saved in the custom field to be the profile picture](https://i.imgur.com/vNiMzXi.png)
 
 **Explanation**
 
 ```
 add_filter( 'get_avatar_url', 'mb_get_avatar_url', 10, 3 );
 ```
+
 This is to declare that we will add a filter named `mb_get_avatar_url' to the` `get_avatar_url` hook provided by WordPress. And, you can set the filter name as anything you want.
 
 ```
@@ -137,12 +138,10 @@ $url = $custom_avatar['full_url'];
 
 Now just back to the user profile page. The avatar is now like this.
 
-
-![This is the user profile page](https://i.imgur.com/ctjmQEY.jpg)
+![The profile picture is now as default since we didn't set any image into the field](https://i.imgur.com/ctjmQEY.jpg)
 
 Let’s try to upload an image to the custom field and check if this one will change or not.
 
 It works already.
 
-![This is a profile page with unique avatar for users.](https://i.imgur.com/GjtYfKx.png)
-
+![Upload an image to the custom field, then the profile picture will automatically change to be the same one](https://i.imgur.com/GjtYfKx.png)
