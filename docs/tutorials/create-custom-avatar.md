@@ -2,51 +2,58 @@
 title: Creating a custom avatar for users
 ---
 
-Normally, to change your avatar on WordPress, you have to use your Gravatar account and change your avatar on it. After that, it will automatically link to your account on the website. However, this method may be time-consuming for some. For users to be able to change their avatar directly on the website, we can create a field where we can upload an image and link it so that you can apply it to your avatar. It is called a custom avatar.
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-![Example of a custom avatar](https://i.imgur.com/G18RnMP.png)
+As you know, each WordPress user account has a unique avatar. And, you can completely **add or change the avatar by creating a custom field** that allows users to **upload photos right on the website**.
+
+This is the example look.
+
+![Example of the custom avatar for users](https://i.imgur.com/nDAnx3y.png)
+
+## Video version
+
+<LiteYouTubeEmbed id='FbjNorcc9Js' />
 
 ## Preparation
 
-In addition to using [Meta Box](https://metabox.io/), make sure you already have these extensions:
+You’ll need to use the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) for this practice. You can download it directly from [wordpress.org.](https://wordpress.org/plugins/meta-box/)
 
-* [MB User Meta](https://metabox.io/plugins/mb-user-meta/) or[ MB User Profile](https://metabox.io/plugins/mb-user-profile/): to create fields for your user profiles. It’s okay to use one of them only.
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields with an intuitive UI without having to code yourself. In addition, you can also use another tool to do that - Online Generator.
+We also need some Meta Box extensions to have some advanced features:
 
-## 1. Creating a field to upload avatar picture
+* [MB User Meta](https://metabox.io/plugins/mb-user-meta/) or [MB User Profile](https://metabox.io/plugins/mb-user-profile/): They allow you to create fields for users. You can choose to use one of them;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields with an intuitive UI right in the backend.
+
+## 1. Creating a custom field to upload avatar picture
 
 Go to **Meta Box > Custom Fields > Add new**.
 
-Then, click **Add Field** button and select **Single Image** field type to create your needed field.
+I will add a custom field in the type of Single Image that allows the user upload only one image to the field.
 
-![Create the wanted fields](https://i.imgur.com/qJImjuJ.png)
+The **ID** of this field will be used in the next steps, so you can change it to an easy-to-remember one.
 
-Since the ID of the Single Image field will be used in the next steps, change it to something easy to remember, e.g., custom_avatar.
+![Change ID of the custom field to an easy-to-remember one since we will use it in the next step](https://i.imgur.com/VuJxEmP.png)
 
-Next, move to the **Settings** tab and set the **Location** as **Users**.
+Next, move to the **Settings** tab, set the **Location** as **User**.
 
-![set location for the created fields](https://i.imgur.com/csuPTND.png)
+![Set the Location of the field group as User to apply it for users](https://i.imgur.com/wAIXSKl.png)
 
-Finally, click **Save Changes** to save the created custom field.
+Go to the user profile page, you will see the new custom field. Let’s try to add an image.
 
-When you go to edit a user profile in the **Users** section, you will see the **Custom Avatar** field appear.
+![The created custom field displays in the user profile page](https://i.imgur.com/dgFPO3M.png)
 
-![Custom avatar field appear](https://i.imgur.com/YzeZDmQ.png)
+But now, the **Profile Picture** field hasn't received it and recognized it as the user avatar. Thus, we should take some further actions.
 
-You can upload an image to the field.
+## 2. Adding code to theme files
 
-## 2. Getting data from the custom avatar field to set
+To set the image in the custom field to be the avatar, we should add some code to the theme file.
 
-Now, your **Profile Picture** hasn't got the uploaded picture from your **Custom Avatar** field automatically yet.
+Go to the theme’s **functions.php** file and add code like this:
 
-![The profile picture hasn't got the uploaded picture](https://i.imgur.com/5EYCABo.png)
+```
+add_filter( 'get_avatar_url', 'mb_get_avatar_url', 10, 3 );
 
-To make it happen, you need to put this code into the `functions.php` file:
-
-```php
-add_filter( 'get_avatar_url', 'mbua_get_avatar_url', 10, 3 );
-
-function mbua_get_avatar_url( $url, $id_or_email, $args ) {
+function mb_get_avatar_url( $url, $id_or_email, $args ) {
     if ( is_numeric( $id_or_email ) ) {
         $user_id = $id_or_email;
     } elseif ( is_string( $id_or_email ) && ( $user = get_user_by( 'email', $id_or_email ) ) ) {
@@ -70,10 +77,71 @@ function mbua_get_avatar_url( $url, $id_or_email, $args ) {
     return $url;
 }
 ```
-After adding the code, you will see that the **Profile Picture** has been automatically replaced with the similar image that you uploaded in the **Custom Avatar** field.
 
-![After adding the code there will be uploaded custom avatar](https://i.imgur.com/G18RnMP.png)
+![The code that we add to the functions.php file to set the image saved in the custom field to be the profile picture](https://i.imgur.com/vNiMzXi.png)
 
-## Last Words
+**Explanation**
 
-Using a custom field to have a custom avatar may save time and effort more than manually changing the avatar in Gravatar. Did you see that? Keep track of our tutorial section for more useful tips.
+```
+add_filter( 'get_avatar_url', 'mb_get_avatar_url', 10, 3 );
+```
+
+This is to declare that we will add a filter named `mb_get_avatar_url' to the` `get_avatar_url` hook provided by WordPress. And, you can set the filter name as anything you want.
+
+```
+function mb_get_avatar_url( $url, $id_or_email, $args ) {
+```
+
+This is to declare that the added filter will have these three parameters: `$url`, `$id_or_email`, and `$args`.
+
+```
+if ( is_numeric( $id_or_email ) ) {
+    $user_id = $id_or_email;
+} elseif ( is_string( $id_or_email ) && ( $user = get_user_by( 'email', $id_or_email ) ) ) {
+    $user_id = $user->ID;
+} elseif ( is_object( $id_or_email ) && ! empty( $id_or_email->user_id ) ) {
+    $user_id = (int) $id_or_email->user_id;
+}
+```
+
+These above lines of code is to get the ID of the current user. Then assign it to the `$user_id` variable.
+
+```
+if ( empty( $user_id ) ) {
+    return $url;
+}
+```
+
+This one is to check if the `$user_id` variable has value or not. If not, the avatar is still the image that is currently set in the Profile Picture field.
+
+Otherwise, if there is any image in the custom field which has the ID as `custom_avatar` and is used for the User object, we’ll use the `rwmb_meta( )` function to get the value of that field in the next line of code.
+
+```
+$custom_avatar = rwmb_meta( 'custom_avatar', [ 'object_type' => 'user' ], $user_id );
+```
+
+And, only the value saved in the field which matches the ID of the current user (based on the `$user_id` variable) will be obtained. Then that value will be transferred to the `$custom_avatar_user` variable.
+
+```
+if ( ! $custom_avatar_user ) {
+    return $url;
+}
+```
+
+These above lines of code is to check if the `$custom_avatar_user` variable is empty, it means that there is no image in the custom field, the avatar still being the image that is currently set in the Profile Picture field.
+
+Otherwise, if there is any value in the `$custom_avatar_user` variable, means you did upload any image to the field, the `$url` variable will be assigned the value from the `$custom_avatar_user` variable. Then, the avatar will be the one from the custom field.
+
+```
+$url = $custom_avatar['full_url'];
+```
+
+Now just back to the user profile page. The avatar is now like this.
+
+![The profile picture is now as default since we didn't set any image into the field](https://i.imgur.com/ctjmQEY.jpg)
+
+Let’s try to upload an image to the custom field and check if this one will change or not.
+
+It works already.
+
+![Upload an image to the custom field, then the profile picture will automatically change to be the same one](https://i.imgur.com/GjtYfKx.png)
