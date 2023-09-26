@@ -121,11 +121,11 @@ For the section that shows the name and description of the term, I use another *
 
 Now, also add dynamic data, then choose the **Term name** option from the list.
 
-![Add dynamic data, then choose the Term name option from the list.](https://i.imgur.com/HtUqWan.gif)
+![Add dynamic data, then choose the Term name option from the list.](https://i.imgur.com/FDZTGFA.gif)
 
 For the term’s description, also add dynamic data to the remaining **Basic Text** element, and choose the **Term description** option.
 
-![Add dynamic data to the remaining Basic Text element, and choose the Term description option.](https://i.imgur.com/MEbwuiS.gif)
+![Add dynamic data to the remaining Basic Text element, and choose the Term description option](https://i.imgur.com/hRQn8gK.gif)
 
 Finally, you may want to add a button to navigate users to the archive page of each term. So add a **Button** element. Then, set the **Link type** of the button as **Dynamic Data**.
 
