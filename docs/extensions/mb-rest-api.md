@@ -177,7 +177,7 @@ curl --request POST \
   --header 'Authorization: Basic YWRtaW46Zmx2ZCBiUlhtIDR3Z04gVUxzWCBNbGxXIDJHbGg=' \
   --header 'Content-Type: application/json' \
   --data '{
-	"post_title": "London PHP Day 2023",
+	"title": "London PHP Day 2023",
 	"meta_box": {
 		"price": "45",
 		"buy_ticket_url": "https://ticketbox.com/e/5837"
@@ -187,7 +187,7 @@ curl --request POST \
 
 Or if you prefer to use an API testing tool like Postman or Insomnia, you can do that as well (click the image to enlarge):
 
-![Updating custom fields via Rest API with Insomnia](https://i.imgur.com/N05F1TJ.png)
+![Updating custom fields via Rest API with Insomnia](https://i.imgur.com/y73ru89.png)
 
 When updating data via Rest API:
 
@@ -200,7 +200,7 @@ In case you use [a group field](/extensions/meta-box-group/), and you want to up
 
 ```json
 {
-	"post_title": "London PHP Day 2023",
+	"title": "London PHP Day 2023",
 	"meta_box": {
 		"price": "45",
 		"buy_ticket_url": "https://ticketbox.com/e/5837",
