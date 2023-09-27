@@ -4,7 +4,7 @@ title: Creating a Product Page - Meta Box + Kadence
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-There are numerous ways to build ecommerce product pages that I shared in [this series](https://metabox.io/series/product-page/). In this article, we’ll share some best practices for product page design by using Meta Box and Breakdance.
+There are numerous ways to build ecommerce product pages that I shared in [this series](https://metabox.io/series/product-page/). In this article, we’ll share some best practices for product page design by using Meta Box and Kadence.
 
 This is my product page that I’ve created for illustration, you can see as below:
 
