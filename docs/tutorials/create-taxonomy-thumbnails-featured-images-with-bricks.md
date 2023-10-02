@@ -7,15 +7,15 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 In today’s practice, we are going to find out **how to create thumbnails for a taxonomy and featured images for a portfolio page combining Meta Box and Bricks.**
 
-This is my demo portfolio page.
+This is an example for the portfolio page that we will create in this practice.
 
-![This is an example for the portfolio page](https://i.imgur.com/Z2WCZ7V.png)
+![This is an example for the portfolio page created by Meta Box and Bricks](https://i.imgur.com/Z2WCZ7V.png)
 
 Each part on the page, which is about an accommodation type with its own thumbnail, is from a term of a taxonomy.
 
 The image used for the thumbnail also will be used to be the featured image of the archive page of the taxonomy’s term.
 
-![This is the featured image of the archive page of the taxonomy’s term](https://i.imgur.com/hTPdzAW.png)
+![The featured image of the archive page of the taxonomy’s term](https://i.imgur.com/hTPdzAW.png)
 
 ## Video version
 
@@ -35,11 +35,11 @@ We also need some advanced features from **Meta Box** which is from some of its 
 
 Go to **Meta Box > Post Types > Add New**.
 
-![Go to Meta Box > Post Types > Add New](https://i.imgur.com/Wpk4BEM.png)
+![Go to Meta Box > Post Types > Add New to create custom post type](https://i.imgur.com/Wpk4BEM.png)
 
 After publishing, you will see a new menu displayed. It's your post type.
 
-![Here is a new menu displayed. It's your post type](https://i.imgur.com/Geumgm5.png)
+![the created custom post type displayed as a menu](https://i.imgur.com/Geumgm5.png)
 
 ## 2. Creating a custom taxonomy 
 
@@ -49,15 +49,15 @@ Go to **Meta Box > Taxonomies > Add New** to create a new taxonomy.
 
 When creating the wanted taxonomy, move to the **Post Types** tab and choose **Portfolio** to apply this taxonomy to the post type.
 
-![To create the wanted taxonomy, move to the Post Types tab and choose Portfolio](https://i.imgur.com/3KPMyWR.png)
+![Assign the custom taxonomy to the Portfolio post type](https://i.imgur.com/3KPMyWR.png)
 
 Now, In the created post type editor, you can see a new submenu here.
 
-![Here is a new submenu](https://i.imgur.com/yHXlWp3.png)
+The taxonomy is a new submenu in the created post type
 
 Then, you can add some terms for the taxonomy. Here are some terms that I created for illustration.
 
-![This is some terms for the taxonomy](https://i.imgur.com/CQP6S7Y.png)
+![This is some terms that I created for the taxonomy](https://i.imgur.com/CQP6S7Y.png)
 
 But now, there is no place to set an image for each term. So, let’s go ahead to create one.
 
@@ -67,15 +67,15 @@ We will create a custom field that allows users to upload an image for each term
 
 Choose the field in the type as **URL**. It allows you save links for the images so that your site won't carry those images.
 
-![Go to Meta Box > Custom Fields to create the field. Choose the field in the type as URL](https://i.imgur.com/LX7ZwNf.png)
+![Create a new custom field in the type as URL](https://i.imgur.com/LX7ZwNf.png)
 
 After having the field, move to the **Settings** tab, choose **Location** as **Taxonomy**, and select **Portfolio Type** that is the created taxonomy.
 
-![Move to the Settings tab, choose Location as Taxonomy, and select Portfolio Type that is the created taxonomy](https://i.imgur.com/Ua4xg3m.png)
+![Assign the custom field to the Portfolio Type that is the created taxonomy](https://i.imgur.com/Ua4xg3m.png)
 
 Then, you’ll see the created custom field when creating a new term for the taxonomy of the portfolio.
 
-![Here is a custom field when creating a new term for the taxonomy of the portfolio](https://i.imgur.com/bHXIVwW.png)
+![The created custom field display when creating a new term for the taxonomy of the portfolio](https://i.imgur.com/bHXIVwW.png)
 
 Now, you can edit some terms, and add a **URL** of an image for each one of them.
 
@@ -101,7 +101,7 @@ Next, add a **Heading** element to display the page's title.
 
 Now, I will add a **Div** element for the page content, when we will display the term’s information.
 
-![Add a Div element for the page content, when we will display the term’s information](https://i.imgur.com/p9yagTt.png)
+![Add a Div element for the page content, where we will display the term’s information](https://i.imgur.com/p9yagTt.png)
 
 We should set a query in this **Div** to get all the terms of the **Portfolio Type** taxonomy. So, turn on the **Use query loop** button, and set the type of the query as **Terms**. Then, choose the name of the taxonomy that you use for the portfolio.
 
@@ -137,7 +137,7 @@ And select dynamic data for it as well. In the **Terms** section on the dropdown
 
 So that we have got and displayed all the information of each term on the portfolio page. Your work now just is styling them in your own way by changing the settings of each element. This is one of my own after styling.
 
-![This is the information of each term on the portfolio page](https://i.imgur.com/Z2WCZ7V.png)
+![The better look of the portfolio page after styling](https://i.imgur.com/Z2WCZ7V.png)
 
 The image I’m using for the thumbnail of each term is the image that I save the URL in the created custom field.
 
@@ -145,7 +145,7 @@ The image I’m using for the thumbnail of each term is the image that I save th
 
 My archive page of each term is now like this.
 
-![This is an archive page of each term](https://i.imgur.com/SeQKO8m.jpg)
+![This is an archive page of each term with no featured image](https://i.imgur.com/SeQKO8m.jpg)
 
 There is no featured image for the term as default. I will use the image saved in the custom field to be the featured image and display it on the top of this page.
 
@@ -161,10 +161,8 @@ Let’s select dynamic data for this **Image** element from the custom field. Ch
 
 Then, you can see the image display immediately.
 
-![The featured image displayed like this](https://i.imgur.com/NRR78ea.png)
+![The featured image display on the archive page of each term of the taxonomy like this](https://i.imgur.com/NRR78ea.png)
 
 Now, you can style it in your own way for a better look. And, here it is on the page on the frontend.
 
-![Here is on the page with a better look](https://i.imgur.com/8W4LbiS.jpg)
-
-
+![The final look of the archive page](https://i.imgur.com/8W4LbiS.jpg)
