@@ -1,67 +1,90 @@
 ---
 title: Creating notification using custom HTML field
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-With the help of Meta Box, you can easily create a notification when users input data on the backend using Custom HTML field and styling to make it display as an alert message.
+When input data to custom fields, you definitely can use the field's description to notice or warn users about something. But it is not attractive enough so they can skip it. That’s when you should use an alert message for your custom fields. With Meta Box, you can do it easily with the help of the Custom HTML field type. Let’s explore how to create a notification using this field.
 
-I made an example like this:
+This is a notification that I created for example.
 
-![Example of notification](https://i.imgur.com/gVaxcXe.png)
+![An example of notification was created by custom HTML field from Meta Box](https://i.imgur.com/VXxEXSC.png)
+
+## Video version
+
+<LiteYouTubeEmbed id='TljB_BIbJBY' />
 
 ## Preparation
 
 We need the following tools for this practice:
 
-* [Meta Box](https://metabox.io/): to have a framework to create custom fields;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the fields along with the Custom HTML field using for the notification together;
-* [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) (optional): to show the alert message only when users choose an option in another field.
+* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom fields. It’s free, and you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields;
+* [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) (optional): to show or hide custom fields based on the data users fill in another field. It is just optional if you need to show or hide fields in your case.
+* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to group together the fields along with the Custom HTML field that we use for the notification. This is optional as well. In fact, you obviously can set the Custom HTML field stand alone.
 
-## 1.  Creating custom fields
+## 1. Creating custom fields
 
-Go to **Meta Box > Custom Fields > Add New** to create a new field group.
+Go to **Meta Box** > **Custom Fields** and create some custom fields.
 
-![Create custom fields](https://i.imgur.com/yNVUXjI.png)
+![Go to Meta Box > Custom Fields to create some custom fields](https://i.imgur.com/5TOOpkY.png)
 
-For the **Contraindication** field, choose it as the **Radio** field. Then, you can fill in some data into the **Choices** box.
+For the first field, choose the type as the **Radio** field. Then, you can fill in some options for choosing into the **Choices** box.
 
-![Fill in data into the box](https://i.imgur.com/QcESv1D.png)
+![choose the type as the Radio field, then fill in some options for choosing into the Choices box.](https://i.imgur.com/nZC8zqM.png)
 
-Since I want the alert message to go along with the subject, create a **Group** field to contain them.
+Since I want the alert message to go along with another field, I will put both of them into a group. There is no need to have a label for this group, so leave it blank.
 
-![Create group field to contain the alert message](https://i.imgur.com/CgqH8ac.png)
+![the alert message to go along with another field, so put both of them into a group with blank label](https://i.imgur.com/nsMdVS9.png)
 
-In the settings of the **Custom HTML** field, there is a box named **Content (HTML allowed)**, insert this text:
+This group will appear only when the user chooses the **Yes** option in the **Radio** field, so we will set a conditional logic for this group. Go to the **Advanced** tab in the settings of the group and add the rule.
 
-<div class="alert alert-info"><span class="dashicons dashicons-warning"></span> Write all detailed information about contraindication subjects. Each subject is in one box below</div>
+![Go to the Advanced tab in the settings of the group and add the rule to set the rule when does the alert message apear](https://i.imgur.com/RNVU3RY.png)
 
-![Insert the text](https://i.imgur.com/aatz2pr.png)
+Fill in the ID of the **Radio** field and the value of the Yes option.
 
-This text is the content of the notification which we will show for users in the next step.
+![Fill in the ID of the Radio field and the value of the Yes option](https://i.imgur.com/QsSFDQG.png)
 
-Note that I set the classes for this text as `<div class="alert alert-info">`. We’ll use these classes for styling later.
+Now, add a **Custom HTML** field for the alert. It’ll be a subfield of the group.
 
-After creating all the subfields, move to the **Advanced** tab of the **Group** field to set conditional logic for it as below:
+![Add the first subfield of the group which has the type as Custom HTML](https://i.imgur.com/16tFtXs.png)
 
-![Set conditional logic for all the subfields](https://i.imgur.com/BGBw2B4.png)
+Add content for it in the box named **Content (HTML allowed)**.
 
-Then, the fields will show/hide like this:
+![Add content for it in the box named Content (HTML allowed)](https://i.imgur.com/r0F2LOY.png)
 
-![the fields will show/hide like this](https://i.imgur.com/iQqMgqM.gif)
+I also added a div tag and classes for this text as `<div class="alert alert-info">` for styling this notification later.
 
-Before publishing the field group, remember to go to the **Settings** tab of the field group and set the **Location** as you want. Here, I choose **Location** as **Post Type** and select **Post** to apply these fields.
+Add the remaining field.
 
-![Set location for the custom fields](https://i.imgur.com/FuYbEEk.png)
+![Add the remaining field. Here is the Text field with the Label is Subject](https://i.imgur.com/DWhaLx5.png)
 
-This is how it displays when we edit any post. You will see the notification from the **Custom HTML** field display as well.
+Let’s set the location for these fields. Go to the **Settings** tab, set **Location** as **Post Type**, then choose any post type you want.
 
-![The notification from the custom HTML](https://i.imgur.com/21LZcyJ.png)
+![Go to the Settings tab, set Location as Post Type, then choose any post type to set the location of created custom fields](https://i.imgur.com/EPpp7rC.png)
 
-## 2. Styling the Custom HTML field
+Go to the post editor, you will see the fields with the notification.
 
-In the css folder of the themes, create a new file named `admin.css` with the content as follows:
+![the fields with the notification displayed in the post editor](https://i.imgur.com/P3U0PpI.png)
 
-```css
+The notification is quite not prominent compared to other texts. So, let's style it a little bit.
+
+## 2. Styling the notification
+
+I will use CSS to style the notification. So, go to the theme's files, add this code to declare and create a file named `admin.css`:
+
+```
+add_action( 'rwmb_enqueue_scripts', 'enqueue_custom_style' );
+function enqueue_custom_style() {
+    wp_enqueue_style( 'custom-css', get_template_directory_uri() . '/assets/css/admin.css' );
+}
+```
+
+![add the code to declare and create a file named admin.css](https://i.imgur.com/07s2RAn.png)
+
+Next, go to the file and add some CSS code with the content as follows:
+
+```
 .alert-info {
 background-color: #d9edf7;
 border-color: #bcdff1;
@@ -78,19 +101,11 @@ display: flex;
 align-items: center;
 }
 ```
-That’s the rule for styling that we set for two classes: `alert` and `alert-info` of the **Custom HTML** field.
 
-Next, go to the `functions.php` file and add this code to declare the `admin.css` file:
+The `alert` and `alert-info` are two classes that I added in the content of the notification when creating its custom field.
 
-```php
-add_action( 'rwmb_enqueue_scripts', 'enqueue_custom_style' );
-function enqueue_custom_style() {
-wp_enqueue_style( 'custom-css', get_template_directory_uri() . '/assets/css/admin.css' );
-}
-```
-![The message has different look](https://i.imgur.com/hvO2BeO.png)
+![go to the file, add some CSS code for 2 classes to style the notification](https://i.imgur.com/weBA0Mt.png)
 
-Now, you will see that the message has a different look.
+Now, go back to a post editor, you will see the message has a new look.
 
-![The final result](https://i.imgur.com/21LZcyJ.png)
-
+![the final look of the notification](https://i.imgur.com/VXxEXSC.png)
