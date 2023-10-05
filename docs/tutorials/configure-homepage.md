@@ -1,128 +1,146 @@
 ---
-title: Configuring the homepage
+title: Configuring homepage using MB Views
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-With the help of [Meta Box plugin](https://metabox.io/), you can create custom fields to save the content to display on the Homepage. And then, you can easily configure the homepage by changing the content in the custom field without changing the page layout.
+**Regularly updating the homepage brings fresh content** and helps impress website visitors easier. However, it may take time and effort to change its content. You definitely can avoid it with the help of custom fields created with Meta Box and MB Views. Let’s say goodbye to the hassle of coding in theme files! 
 
-We’ll need the support of [MB Views](https://metabox.io/plugins/mb-views/) to have a template and get content from the custom fields to display on the homepage instead of touching any themes files or accessing the server or host.
+I’ve just made a simple page with a carousel for the demo like this. Whenever I want to change the images, texts, and buttons but keep the layout, I **just update content in the custom field, then the homepage’s content also change** following without touching to the code.
 
-In this post, I’ll use a homepage with a template example from [Bootstrap](https://getbootstrap.com/). Let’s see how it does.
+![The demo of a homepage with a carousel.](https://i.imgur.com/G88TAbH.gif)
+
+## Video version
+
+<LiteYouTubeEmbed id='1hTOwWd3y3M'/>
+
+## Preparation
+
+As I said, we will change content in custom fields, then the homepage content will be changed as well. It means that we must create custom fields corresponding to every content on your homepage. Each element will have its own custom field.
+
+For instance, each slider in my carousel contains some information such as the image, title, description, and button. Instead of adding those contents directly into the code, I will create custom fields for each one of them. Then, just get values from those fields to display the content.
+
+These are some tools we need for this practice:
+
+First, we need the [Meta Box framework](https://wordpress.org/plugins/meta-box/). It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/). We also need some advanced features from some extensions of **Meta Box**. You can download them individually or use **Meta Box AIO** to have them all.
+
+* [MB Views](https://metabox.io/plugins/mb-views/): to have a template for the page and get content from the custom fields to display on the homepage instead of touching any theme files or accessing the server or host;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI to create custom fields to save the content of the homepage.
+
+Finally, I’ll use a pre-built template from [Bootstrap](https://getbootstrap.com/2.3.2/examples/carousel.html). In the event that you are using your own template, you can also follow this practice.
 
 ## Creating the homepage
 
-### Creating a template for the homepage
+Go to **Pages** > **Add New** to create a new page as usual.
 
-In the **Admin Dashboard**, go to **Pages > Add New** to create a new page. I’ll set it's name as **Home**. 
+![Create a new page](https://i.imgur.com/DzF1s4O.png)
 
-![create template for the homepage](https://i.imgur.com/DzF1s4O.png)
+Then, go to the **Settings** menu > **Reading** to set the created page as the homepage.
 
-Then, go to the **Settings** menu > **Reading**, choose **A Static Page** in the **Your homepage displays** section, and then select **Home** which is the name of the expected page to make it the homepage.
+![Set the created page as the homepage.](https://i.imgur.com/2MeNFUs.png)
 
-![go to the Settings menu > Reading, choose A Static Page in the Your homepage displays section, and then select Home](https://i.imgur.com/2MeNFUs.png)
+## Creating template for the homepage
 
-### Configuring a template for the homepage
+Instead of adding code to the theme files, you can use **MB Views** to create a template. Go to **Meta Box** > **Views** and add a new one.
 
-To avoid touching the theme files or accessing the server or host, I will use MB Views to create this template. Go to **Meta Box > Views**, then click **Add New**.
+![Create a new template](https://i.imgur.com/EAgllAD.png)
 
-![Add new views](https://i.imgur.com/kXYDegz.png)
+As mentioned before, I will use a pre-build template from **Bootstrap**, so just go to **Bootstrap** and download the template.
 
-Leave the view blank now. We’ll copy the template from the Bootstrap then paste to this view later.
+![Download the template from Bootstrap.](https://i.imgur.com/Ozj83J4.png)
 
-Then, scroll down to the **Settings** section, set the **Singular** type for this view. Since we’ll apply this template for the homepage, choose the location as **Page** and choose the name of the page you set to be the homepage. It’s **Home** in this case.
+Open the downloaded file, look for the folder of the template you want, copy all the code or a part, then paste it to the **Template** tab on the view. **Note**: In the event that you build the template yourselves, add code to the box as well.
 
-![Set the singular type for the created view](https://i.imgur.com/byK4jys.png)
+![Paste all the code or a part to the Template tab on the view.](https://i.imgur.com/1OFW4MG.png)
 
-### Copying the template from Bootstrap to the view
+You can see that the underlined information in the image below is the content displayed on the page.
 
-Go to [this page](https://getbootstrap.com/) and download a template you want.
+![The content displayed on the page](https://i.imgur.com/4R2idK7.png)
 
-![Download the wanted template](https://i.imgur.com/KPjcSXX.png)
+You can also add CSS and JS code to the **CSS** tab and **JavaScript** tab of the view for styling.
 
-In the preview of the Bootstrap template, you can see that there are 3 main parts:
+![Add CSS and JS code to the CSS tab and JavaScript tab of the view for styling.](https://i.imgur.com/bMp6dms.png)
 
-1. A Carousel in the first section
-2. Content
-3. Section for features
+Finally, scroll down to set the location for this template to apply it to the homepage.
 
-Open the downloaded file, look for the folder of the sections you want. Then, copy the **HTML** of these sections then paste to the created view. Here, I just copy the carousel section for example.
+![Set the location for the template](https://i.imgur.com/Vf5gGkF.png)
 
-![Cope the carousel section](https://i.imgur.com/KdQvc0i.png)
+For using Bootstrap template, you should add some lines of code to the theme’s file to declare the online libraries of CSS and JS from **Bootstrap**.
 
-You need to include Bootstrap’s CSS and JS in your site as well. 
+![Add code to the theme’s file to declare the online libraries of CSS from Bootstrap.](https://i.imgur.com/ZmK2eFp.png)
 
-Place the `<link>` tag in the `header.php` file for your CSS.
+![Add code to the theme’s file to declare the online libraries of JS from Bootstrap.](https://i.imgur.com/aW0cxcw.png)
 
-![Place the link tag](https://i.imgur.com/Kx3ZDxY.png)
+This’s how the carousel is on my homepage on the frontend right now.
 
-Add the `<script>` tag for your JavaScript in the footer.php file before the closing `</body>`
+![The carousel is on my homepage on the frontend](https://i.imgur.com/sAXcU47.gif)
 
-![Add the script tag](https://i.imgur.com/0jizj6j.png)
+The content is now static. Whenever you want to change it, you should go to the view editor and change the text in code. To make it dynamic, let’s move on to the next step.
 
-Then, move to the **CSS** tab of the created template in the **Views** and add some CSS code to style the template.
+## Creating custom fields
 
-![Move to the CSS tag of the creatd template](https://i.imgur.com/wz1XLWh.png)
+We should **create custom fields corresponding to the content that we want to have on the page**. Since I created only the carousel, for example, I'll have a group field for it like this.
 
-This is the homepage on our site that we’ve just copied from Bootstrap.
+![A group field saves the homepage information.](https://i.imgur.com/3syhIjD.png)
 
-![The homepage on the site](https://i.imgur.com/sAXcU47.gif)
+Each slider has its own information with the same structure, so I’ll create subfields inside the group for each kind of information, then make this group cloneable.
 
-## Creating custom fields for the homepage
+![Make the group cloneable](https://i.imgur.com/UGukjKf.gif)
 
-In the carousel, there are multiple sliders. Each slider will have its own image background, title, description, and button link.
+Let’s create them.
 
-![Create custom fields for the homepage](https://i.imgur.com/QFUelKt.png)
+Go to **Meta Box** and create a group field, and then add some subfields inside the group.
 
-I will create custom fields to save those content. Besides that, the carousel has more than one slider, so we will create them inside a **cloneable** group.
+![Add some subfields inside the group](https://i.imgur.com/7GbdRmo.png)
 
-![Set the custom fields to be cloneble](https://i.imgur.com/mQy3Hxy.png)
+Back to the settings of the group, remember to set the group to be cloneable. It will help us add more sliders.
 
-And the subfields of the group will be corresponding to parts of each slider.
+![Set the group to be cloneable](https://i.imgur.com/tzbNQi5.png)
 
-![The subfields will be corresponding to parts of each slider](https://i.imgur.com/7GbdRmo.png)
+That’s all the custom fields that I’m using for this practice. In the real case, you may want to have more content on the homepage, so just add as many fields as you want.
 
-After creating fields, move to the **Settings** tabs, choose **Location** as **Post Type** and select **Page**. Since these fields will be applied for the homepage, go to the **Advanced location rules** options > choose **Post** and select **Home** which is the name of the homepage.
+After creating fields, move to the **Settings** tabs, choose **Location** as **Post type**, and select **Page**. Since these fields will be applied to the homepage, go to the **Advanced location rules** options > **Post** and select the name of the homepage.
 
-![Set location for the created fields](https://i.imgur.com/1sFm4Qg.png)
+![Set up the display of the created fields for the homepag](https://i.imgur.com/1sFm4Qg.png)
 
-Now, go to the homepage, you will see the fields. Just add some content to see how it looks when we finish this practice.
+Now, on the homepage editor, you will see the fields. Whenever you click the **Add more** button, you create a new slider for the carousel.
 
-![The fields in the post editor](https://i.imgur.com/gb9y9js.png)
+![On the homepage editor, you will see the fields.](https://i.imgur.com/cMdzemv.png)
 
-Whenever you click the **Add more** button, you create a new slider for the carousel.
+## Customizing the template
 
-## Rendering the field’s value into the homepage
+Go back to edit the template with **MB Views**.
 
-Go to the created template in the **Views**, look for the section for each content of the carousel in the code. They are static data with fixed texts.
+My carousel now has 3 slides with the same structure of content. So, I have three parts of the code that are quite the same.
 
-It now has 3 sliders, so will have three parts in the code with the same structure corresponding to those sliders.
+![Three parts of the code correspond to 3 sliders](https://i.imgur.com/bYkNMDq.png)
 
-![Three parts in the code with the same structure](https://i.imgur.com/bYzcLxZ.png)
+When using custom fields, we will use loops to get all the content from the sliders since we save it in a cloneable group. Therefore, just keep the first part and remove the second and third parts.
 
-You should change those parts to data from the custom fields. Just replace those text by inserting the wanted field from the list. However, the group of fields is cloneable so we will use a loop for it and add the field one time only.
+![Keep the first part and remove the second and third parts](https://i.imgur.com/eswPJbO.gif)
 
-First, delete 2 slides in the code.
+Next, just insert fields from the list on the right sidebar to get and display data from those fields. Click on the name of the created cloneable group, and a loop will be generated. Then, move the code of the slide inside the loop.
 
-![Delete 2 slides in the code](https://i.imgur.com/jpTKCXP.gif)
+![Create loop and move the code of the slide inside the loop](https://i.imgur.com/2aQcCmw.gif)
 
-Next, add a loop then move the code of the rest slide inside the loop.
+Now, replace content of each element with the corresponding field.
 
-![Add a loop then move the code](https://i.imgur.com/WJCwlxV.gif)
+![Replace content with the image save in the Single Image field](https://i.imgur.com/KwyQIsp.gif)
 
-Now, replace each part by the corresponding field. 
-
-![Replace each part by the corresponding field](https://i.imgur.com/BHXWrl8.gif)
+![Replace the text by inserting data from the corresponding field](https://i.imgur.com/ujnrjz3.gif)
 
 We should edit the div tag a little bit.
 
-![Edit the dic tag](https://i.imgur.com/lRLxpAR.png)
+![Edit the div tag a little bit](https://i.imgur.com/gW9tz8F.png)
 
-This is how the code is after replacing all the elements.
+**In there**:
 
-![Apply the code](https://i.imgur.com/A7EXdTk.png)
+* `{% if loop.first %}active{% endif %}`: to check if it is the first slider or not. This is to activate the style that we will apply to the slider.
+* `{% if loop.first %}text-start{% endif %} {% if loop.last %}text-end{% endif %}`: This code is to check the first slider.
 
-This is the full code after we modified it:
+Here is the full code after I modified it:
 
-```php
+```css
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -130,18 +148,18 @@ This is the full code after we modified it:
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-		{% for clone in post.homepage_fields %}
-		<div class="carousel-item {% if loop.first %}active{% endif %}">
-			<img src="{{ clone.single_image.full.url }}" width="{{ clone.single_image.full.width }}" height="{{ clone.single_image.full.height }}" alt="{{ clone.single_image.full.alt }}">
-			<div class="container">
-          		<div class="carousel-caption  {% if loop.first %}text-start{% endif %} {% if loop.last %}text-end{% endif %}">
-					<h1>{{ clone.title }}</h1>
-					<p>{{ clone.description }}</p>
-					<p><a class="btn btn-lg btn-primary" href="{{ clone.button_link }}">{{ clone.button_text }}</a></p>
-				</div>
-			</div>
-		</div>
-		{% endfor %}
+        {% for clone in post.homepage_fields %}
+        <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <img src="{{ clone.single_image.full.url }}" width="{{ clone.single_image.full.width }}" height="{{ clone.single_image.full.height }}" alt="{{ clone.single_image.full.alt }}">
+            <div class="container">
+                <div class="carousel-caption  {% if loop.first %}text-start{% endif %} {% if loop.last %}text-end{% endif %}">
+                    <h1>{{ clone.title }}</h1>
+                    <p>{{ clone.description }}</p>
+                    <p><a class="btn btn-lg btn-primary" href="{{ clone.button_link }}">{{ clone.button_text }}</a></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -153,10 +171,21 @@ This is the full code after we modified it:
     </button>
   </div>
 ```
-In the event that you want to know more about how to use the **Insert Field** button, you can refer to [this documentation and video](https://docs.metabox.io/extensions/mb-views/).
 
-Update the template, then you’ll see the carousel section display with new content from the custom fields:
+To style the carousel a little bit more, you can add some CSS.
 
-![the carousel section](https://i.imgur.com/ESYlYHI.gif)
+![Add CSS to style the carousel a little bit more](https://i.imgur.com/Q7LfgLP.png)
 
-From now on, whenever you want to change the content in the carousel, just go to the home page editor in the back end and change the information in the custom fields. There is no need to touch the code anymore.
+Now, go to the homepage, you will see the content has been changed to the ones that are saved in the custom fields.
+
+![The content has been changed to the ones that are saved in the custom fields](https://i.imgur.com/G88TAbH.gif)
+
+From now on, whenever you want to change it, just go to the page in the backend, change the information.
+
+![To change content of the homepage, change the information in the page editor.](https://i.imgur.com/MtxiYcs.png)
+
+There is no need to touch the code anymore. And the content on the homepage will be replaced with new ones.
+
+![The content on the homepage will be replaced with new ones](https://i.imgur.com/sRzQOS5.png)
+
+In the case that you are using a page builder to build your page, you also can **use custom fields created with Meta Box for dynamic content**. That will help a lot to save time and effort to change the content. Those cases or configuring the homepage using **MB Views** in this practice are much like [creating landing pages](https://docs.metabox.io/tutorials/create-dynamic-landing-page/) using [Meta Box](https://metabox.io/). You can refer to it and give it a try.
