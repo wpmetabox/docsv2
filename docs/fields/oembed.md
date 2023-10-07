@@ -4,13 +4,17 @@ title: oEmbed
 
 import Screenshots from '@site/src/components/Screenshots';
 
-The oEmbed field creates a simple text input for entering a media URL. This field offers a live preview of the media content. It supports [many media websites](https://codex.wordpress.org/Embeds).
+The oEmbed field creates a simple text input for entering a media URL. This field offers a live preview of the media content such as videos, audios, images, tweets, polls, podcasts, etc. from [many 3rd-party services](https://codex.wordpress.org/Embeds).
+
+It helps to show the live preview below the field when input data, and also display the media’s preview on frontend much easier in most cases.
 
 ## Screenshots
 
 <Screenshots name="oEmbed" col1={[
     ['https://i.imgur.com/TjOrOMM.png', 'The oEmbed field interface']
 ]} />
+
+This is an easy way to add videos from [Youtube](http://www.youtube.com/), [Vimeo](http://vimeo.com/), or [Tiktok](https://www.tiktok.com/en), musics from [Spotify](http://www.spotify.com/) or [SoundCloud](http://soundcloud.com/), presentation slideshows from [SlideShare](http://www.slideshare.net/), and so much other content from third-party services into your WordPress site.
 
 ## Settings
 
@@ -33,11 +37,11 @@ This is a sample field settings array when creating this field with code:
 
 ## Data
 
-This field saves the media URL to the database.
+This field **saves the URL** of the media (video, music, slideshow, podcast, etc.) to the database.
 
 ## Template usage
 
-**Displaying the embedded media:**
+**Displaying the embedded media**:
 
 ```php
 <h3>Youtube video</h3>
@@ -53,9 +57,11 @@ echo $url;
 
 ## Filters
 
+To change the message for all oEmbed field when no embed is available, use this filters:
+
 ### `rwmb_oembed_not_available_string`
 
-To change the message for all oembed field when no embed is available:
+Follow this template:
 
 ```php
 add_filter( 'rwmb_oembed_not_available_string', function( $message ) {
