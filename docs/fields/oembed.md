@@ -8,7 +8,7 @@ The oEmbed field creates a simple text input for entering a media URL. This fiel
 
 ## Screenshots
 
-<Screenshots name="osm" col1={[
+<Screenshots name="oEmbed" col1={[
     ['https://i.imgur.com/F64cxNe.png', 'The oEmbed field interface']
 ]} />
 
