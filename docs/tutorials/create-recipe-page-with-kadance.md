@@ -49,7 +49,7 @@ After creating all the fields, move to the **Settings** tabs, choose **Location*
 
 When creating a new post in Recipes, you’ll see all the created custom fields. 
 
-![All the created custom fields](https://i.imgur.com/JLYUTHX.png)
+![All the created custom fields displayed on the post editor](https://i.imgur.com/JLYUTHX.png)
 
 Just fill in some information.
 
@@ -57,7 +57,7 @@ Just fill in some information.
 
 Go to **Appearance > Kadence > Elements > Add New** to create a template for the recipe page.
 
-![Go to Appearance > Kadence > Elements > Add New to create a template for the recipe page.](https://i.imgur.com/90DlAxg.png)
+![Create a template with Kadence for the recipe page.](https://i.imgur.com/90DlAxg.png)
 
 ### 3.1. Settings for the template
 
@@ -67,11 +67,11 @@ Choose the element type as **Template**.
 
 Set a **preview** for easy following.
 
-![Set a preview](https://i.imgur.com/q7knq81.png)
+![Set a preview for easy following.](https://i.imgur.com/q7knq81.png)
 
 In the **Placement** section, choose **Replace Single Post Content** and choose to assign the template to the single page of the **Recipes** post type.
 
-![In the Placement section, choose Replace Single Post Content](https://i.imgur.com/1vkPfK6.png)
+![In the Placement section, choose Replace Single Post Content to apply this template for the single page of the Recipe post type](https://i.imgur.com/1vkPfK6.png)
 
 ### 3.2. Displaying recipe information
 
@@ -81,7 +81,7 @@ For the recipe name information, add a **Heading** block.
 
 Then, add **Dynamic data** from the **Post Title** to display the recipe name.
 
-![Add Dynamic data from the Post Title to display the recipe name.](https://i.imgur.com/RLcRTDy.png)
+![Add data from the Post Title to display the recipe name.](https://i.imgur.com/RLcRTDy.png)
 
 I have two sections for the recipe information.
 
@@ -91,7 +91,7 @@ For this first section, there are 2 columns to show the image and the time infor
 
 So, add a **Row Layout** block and choose the layout you want.
 
-![add a Row Layout block and choose the layout you want.](https://i.imgur.com/Rq02Ila.png)
+![Add a Row Layout block and choose the layout you want for the image and timing information.](https://i.imgur.com/Rq02Ila.png)
 
 In the first column, add an **Advanced Image** block to display the dish image.
 
@@ -131,7 +131,7 @@ Add a **Heading** inside it and type the name of the next information.
 
 After that, insert a **Paragraph**. Click on the** Dynamic** button, choose **Post Custom Field**, and select the wanted field from the list.
 
-![Insert a Paragraph then Click on the Dynamic button, choose Post Custom Field](https://i.imgur.com/u8I83rh.gif)
+![Click on the Dynamic button, choose Post Custom Field](https://i.imgur.com/u8I83rh.gif)
 
 All the sections are quite the same, so just clone the created section, change the heading, and change the field as well. The information will be obtained and displayed correctly step by step.
 
@@ -157,6 +157,6 @@ For styling, go back to the page editor with **Kadence**. Then, choose each comp
 
 This is how my page in the final look.
 
-![This is final look](https://i.imgur.com/UCn1kj5.png)
+![This is final look of a recipe page which also is a singular page](https://i.imgur.com/UCn1kj5.png)
 
 
