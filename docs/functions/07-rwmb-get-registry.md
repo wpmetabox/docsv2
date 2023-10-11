@@ -84,8 +84,8 @@ $field = $field_registry->get( $field_id, $sub_type, $object_type );
 Parameter|Description
 ---|---
 `$field_id`|Field ID
+`$sub_type`|The sub-type of the field.<br />For posts, sub-type is the post type slug.<br />For terms, it's the taxonomy slug.<br />For users, it's always `user`.<br />For settings, it's the option name.
 `$object_type`|The object type of the field, which is either: `post` (default), `term`, `user` or `setting`. Optional.
-`$sub_type`|The sub-type of the field.<br />For posts, sub-type is the post type slug.<br />For terms, it's the taxonomy slug.<br />For users, it's always `user`.<br />For settings, it's the settings page ID.
 
 ```php
 $field = $field_registry->get( 'my_field_id', 'my_custom_post_type' );
