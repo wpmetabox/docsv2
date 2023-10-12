@@ -69,7 +69,7 @@ With **Breakdance**, you should create a global block to get and display informa
 
 Go to **Breakdance** and create a new global block.
 
-![Create a new global block](https://i.imgur.com/qR1uaPj.png)
+![Create a new global block](https://i.imgur.com/PmYOWnj.png)
 
 Remember to set a post for the live preview.
 
