@@ -77,7 +77,7 @@ Remember to set a post for the live preview.
 
 My global block is to display the information of each post in a box like this.
 
-![The information of a restaurant](https://i.imgur.com/av6oEk5.png)
+![The information of a restaurant](https://i.imgur.com/qR1uaPj.png)
 
 ### 3.1 Setting the condition to get featured posts
 
@@ -196,6 +196,6 @@ Then back to the homepage, you will see all the featured restaurants are display
 
 ## Last Words
 
-Let’s try out this simple tutorial and effortlessly **showcase your featured products** using **Meta Box** and **Breakdance**. In the event that you’re using another page builder or just do it without any page builder, just go to [our documentation]([url](https://docs.metabox.io/tutorials/case-studies/)) and look for the one that fits your case.
+Let’s try out this simple tutorial and effortlessly **showcase your featured products** using **Meta Box** and **Breakdance**. In the event that you’re using another page builder or just do it without any page builder, just go to [our documentation](https://docs.metabox.io/tutorials/case-studies/) and look for the one that fits your case.
 
 If you like an automated approach for selecting and displaying products based on specific conditions instead of doing it manually, the tut ‘[Showing posts with specific criteria - Meta Box + Breakdance](https://docs.metabox.io/tutorials/show-posts-specific-criteria-meta-box-breakdance/)’ will give you a hand.
