@@ -223,4 +223,4 @@ From now on, whenever you change the values saved in the custom fields, the cont
 
 It’s not difficult to **create dynamic banners using Meta Box and Bricks**, right? From now on, you can have banners in different sizes on your website with the same content and settings. You can apply this way to put banners with the same content in multiplace on your website without designing too many ones. This saves more time and effort. Hope this tutorial will be helpful for you!
 
-In the case that you are not using Bricks or any page builder, we also have [another tutorial](https://docs.metabox.io/tutorials/create-dynamic-banners/)https://docs.metabox.io/tutorials/create-dynamic-banners/ for you. Just take a look and follow the guides.
+In the case that you are not using Bricks or any page builder, we also have [another tutorial](https://docs.metabox.io/tutorials/create-dynamic-banners/) for you. Just take a look and follow the guides.
