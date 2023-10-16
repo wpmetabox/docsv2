@@ -12,7 +12,7 @@ This is a notification that I created for example.
 
 ## Video version
 
-<LiteYouTubeEmbed id='TljB_BIbJBY' />
+<LiteYouTubeEmbed id='ZrerziToyrc' />
 
 ## Preparation
 
