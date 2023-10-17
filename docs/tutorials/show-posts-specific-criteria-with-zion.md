@@ -12,7 +12,7 @@ This is an example archive page that only displays the dishes on sale.
 
 ## Video version
 
-<LiteYouTubeEmbed id='lpaxGKV97d4' />
+<LiteYouTubeEmbed id='t4yXHWkwbhk' />
 
 ## Preparation 
 

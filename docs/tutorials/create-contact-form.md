@@ -1,126 +1,130 @@
 ---
-title: Creating a contact form
+title: Creating a contact form using Meta Box
 ---
 
-With the help of the **MB Frontend Submission** extension from Meta Box, you can easily create forms for users to submit their posts from the frontend. Let’s see how it does!
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
+The contact form makes it simple and reliable for anyone to **leave their information** for buying your product, looking for consulting, or just contacting your brand. And you know what, **Meta Box can help you create a contact form in WordPress very easily**.
+
+I made an example with the most popular form as you can see in the Contact page:
+
+![Contact forms page](https://i.imgur.com/UzbIwwc.png)
+
+## Video Version
+
+<LiteYouTubeEmbed id='tbbdBTcuBBo' />
 
 ## Preparation
 
-To get started, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/).
+To get started, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating a custom post type for the contacts and custom fields for the form. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
 For the advanced features from Meta Box, we need some of its extensions:
 
-* [MB Custom Post Types](https://metabox.io/plugins/custom-post-type): to create a custom post type for contacts;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for the contact form;
-* [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create forms for users to submit their posts from the frontend.
-* [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to create a professional admin list screen.
+* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the contacts;
+* [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create forms that allow users to submit their information from the front end;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields;
+* [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display contact’s information in the admin screen.
 
-## 1. Creating a custom post type
+## 1. Creating a custom post type for contacts
 
-Each contact submitted in the form will be saved in a post of a custom post type. So, let’s create one. Go to **Meta Box > Post Types > Add New**.
+Go to **Meta Box** and create a new post type to save the contacts.
 
-![Create a custom post type](https://i.imgur.com/Y9djekf.png)
+![Create a new post type to save the contacts](https://i.imgur.com/gv6YtCj.png)
 
-Then, move to the **Supports** tab, choose only **Title**
+After that, you will see a new menu for the post type in the admin dashboard.
 
-![Choose only Title option](https://i.imgur.com/6Gep8PQ.png)
+![A new menu for the post type in the admin dashboard](https://i.imgur.com/R3Aghmg.png)
 
-After that, you will see a new **Contacts** menu in the admin dashboard.
+## 2. Creating custom fields for the form
 
-![Contacts menu in the admin dashboard](https://i.imgur.com/wSHn3lP.png)
+My form will have some fields as below. In your own case, you may have any other kind of field for users to fill in information. Meta Box has [more than 40 field types](https://youtu.be/WWeaM5vIAwM?feature=shared) that can meet your needs.
 
-## 2. Creating custom fields
+![These are some fields that I created](https://i.imgur.com/ZcAZvm0.png)
 
-Go to **Meta Box > Custom Fields** to create a new field group.
+Go to **Meta Box** and create them.
 
-![Create custom fields](https://i.imgur.com/AFrApcm.png)
+![Go to Meta Box and create custom fields](https://i.imgur.com/zWrW6ac.png)
 
-Since a contact form will have some information such as contact’s name, contact email, message and so on, I created the fields as below:
+You should set some or all the fields as required, and show them as an admin column to have a clear overview of all the contact information in the admin dashboard.
 
-![Contact form information](https://i.imgur.com/WeftiIa.png)
+![Set some or all the fields as required, and show them as an admin column](https://i.imgur.com/ORtOrFI.png)
 
-After creating all the fields, move to the **Settings** tab, choose the **Location** as **Post type** and select **Contacts** to apply these fields to it.
+If you want to set this field display as the **Title**, you can set this option as **Replace**, and `title`. It helps to display the field in the place of the title in the admin dashboard, not replace the data saved in the title.
 
-![Set location for the created fields](https://i.imgur.com/bBORmVw.png)
+![Set this field display as the Title and set this option as Replace](https://i.imgur.com/O6uphzB.png)
 
-Pay attention to the **ID** of the field group since we’ll use it in the next step.
+In the event that you want the name filled in the field to be the title of the post, you should replace the **ID** of this field to _post_title_.
 
-![Pay attention to the ID of the created field group](https://i.imgur.com/1z7qIfC.png)
+![You should replace the ID of this field to post_title](https://i.imgur.com/xG61wbo.png)
 
-## 3. Displaying contact form on the frontend
+After creating all the wanted fields for the form, move to the **Settings tab**, set the **Location** as **Post type**, and select **Contacts** to apply these fields to it.
 
-Go to **Pages > Add New** to create a new page named **Contact Us**.
+![Select Contacts to apply these fields](https://i.imgur.com/DxLRYHB.png)
 
-![Created a new page](https://i.imgur.com/GzjVWV5.png)
+Now, when adding a new post on the **Contacts** post type, you’ll see the fields.
 
-Go back to **Meta Box > Custom Fields**, you’ll see the shortcodes column will be there. Just copy the shortcode of the field group you want to use for the contact form.
+![The Fields after adding a new post on the Contacts post type](https://i.imgur.com/DQhIT2a.png)
 
-![Copy the shortcode](https://i.imgur.com/5gCndfp.png)
+After filling in the information, you will see the information display on the admin dashboard as well.
 
-It’ll be in the form like this:
+![The information display on the admin dashboard](https://i.imgur.com/R6BbruY.png)
+
+But, this form is just in the backend now. Users must access the admin page to fill in the form. So, we should bring it to the frontend.
+
+## 3. Displaying the form
+
+Create a page for the **Contact page** as usual.
+
+![Create a page for the Contact page](https://i.imgur.com/IDgY5sF.png)
+
+I will bring the custom fields as the form into the content section of this page. So, look for a block named **Submission Form**. This block is available only when you activate the [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/) extension from **Meta Box**.
+
+![Look for a block named Submission Form](https://i.imgur.com/JBD7k1G.png)
+
+As default, just the **Title** and **Content** fields display.
+
+![The Title and Content fields display](https://i.imgur.com/7Ab4l1C.png)
+
+To have the fields on the page, move to the block’s settings, and fill in the **ID** of the field group that we created for the form. All the fields will be displayed immediately.
+
+![ Fill in the ID of the field group to have the fields on the page](https://i.imgur.com/7vlAtaA.png)
+
+I recommend you turn on the option ‘**Enable ajax submission**’. It helps to avoid refreshing the entire page during the submitting process.
+
+![Turn on the option ‘Enable ajax submission’](https://i.imgur.com/dlybQAu.png)
+
+Next, choose the post type as **Contact** to stipulate that the submission will be saved as a post in this post type.
+
+![Choose the post type as Contact to stipulate that the submission will be saved as a post in this post type](https://i.imgur.com/4sxIrY6.png)
+
+You also can remove the **Title** and **Content** field since we do not need them for the contact form.
+
+![Remove the Title and Content field](https://i.imgur.com/CBTanKU.png)
+
+These notification texts also can be changed as you want.
+
+![These notification texts also can be changed as you want](https://i.imgur.com/ilXQC57.png)
+
+Now, go to the page on the frontend. You'll see the form with the custom fields we created.
+
+![The form with the custom fields we created](https://i.imgur.com/Ms1BDlt.png)
+
+Let’s check if the ones I fill into the form are saved or not.
+
+![Fill into the form are saved or not](https://i.imgur.com/TAfCWlz.gif)
+
+It works perfectly!
+
+## 4. Sending email notification
+
+Whenever someone submits the form, the website’s admin should notice it. You can set it to automatically send them an email to notify it.
+
+We should add some lines of code in the theme’s file.
+
+![Add some lines of code in the theme’s file](https://i.imgur.com/qctHKA1.png)
 
 ```
-[mb_frontend_form id='contact-form' post_fields='title,content']
-```
-
-In there, `contact_form` is the **ID** of the field group that we created in the previous step.
-
-This shortcode is automatically generated after publishing the field group due to the help of **MB Frontend Submission**. Just paste it to anywhere you want to display your form. You also can edit the shortcode a little bit by adding/removing some attributes to customize your form.
-
-Here, I don’t want to show the title and content fields so I deleted the `post_fields='title,content'` attribute as follow:
-
-![Delete the attribute](https://i.imgur.com/L8f5EMM.png)
-
-Now, go to the page in the frontend and you'll see the form with the custom fields as we created:
-
-![The form with the created custom fields](https://i.imgur.com/XwFBlaO.png)
-
-Just fill in some information and click the **Submit** button.
-
-Now, go to the admin dashboard > **Contacts** and you'll see your test message is there as a post. Open the post editor will show you full contact message:
-
-![Full contact message](https://i.imgur.com/dubiy3v.png)
-
-Your contact form is ready for use. However, I want to see the details of the submitted contacts directly in the admin dashboard, so I will show them as columns in the next step.
-
-## 4. Showing contact information in the admin column
-
-To have a page listing all the contacts information in the admin dashboard, you need the help of the **MB Admin Columns** extension. Go back to the created custom field group, and set up for each field.
-
-For example, choose the **Your Name** field and tick the **Show as an admin columns** option. Then, there are additional settings to set up for the position and title of the column as below:
-
-![Contact information in the admin column](https://i.imgur.com/YZSdTky.png)
-
-With the **Replace** option, you can choose to replace the **Title** column with **Your Name** field. And, it will display as follow:
-
-![Replace the Title column with Your Name field](https://i.imgur.com/tzN7b4c.png)
-
-For other information such as **Your Email** field, also tick to show it as an admin column. Then, choose **Column position** as **After** and then fill in `your_name` in the beside box. `your_name` is the ID of the **Your Name** field.
-
-![Choose Column position as After](https://i.imgur.com/UuilZSJ.png)
-
-And then, you’ll see it displayed as a column after the **From** column.
-
-![Form column](https://i.imgur.com/4yh82t1.png)
-
-For the remaining fields, do likewise.
-
-![Do likewise with the remaining fields](https://i.imgur.com/w9nFpoq.png)
-
-![The remaining fields](https://i.imgur.com/VmwqUoJ.png)
-
-Now, go to the **Contacts** post type and you’ll see a better list for easier management.
-
-![The created post type show in a tiny way](https://i.imgur.com/rsh8CkK.png)
-
-## 5. Sending email notification
-
-If you want to send the contacts to your email right after it’s submitted, follow this step.
-
-We need some coding now. We'll use the hook `rwmb_frontend_after_process` to run our custom code to send an email. This has been documented quite well [here](https://docs.metabox.io/extensions/mb-frontend-submission/?swcfpc=1#hooks-1).
-
-Add this following code to the `functions.php` file:
-```php
 add_action( 'rwmb_frontend_after_process', function( $config, $post_id ) {
     if ( 'contact-form' !== $config['id'] ) {
         return;
@@ -134,16 +138,35 @@ add_action( 'rwmb_frontend_after_process', function( $config, $post_id ) {
         <p>Subject: $subject</p>
         <p>Message: $message</p>";
 
-    $headers = ['Content-type: text/html', "Reply-To: $email"];
-    wp_mail( 'admin@domain.com', 'New contact message', $body );
+    $headers = ['Content-Type: text/html; charset=UTF-8', 'From: My Site Name <support@example.com>',"Reply-To: $email"];
+    wp_mail( 'admin@domain.com', 'New contact message', $body,$headers );
 }, 10, 2 );
-
 ```
-![Add the code](https://i.imgur.com/MoaFDWT.png)
 
-**Explanation**:
+This means that we'll add the hook ``` rwmb_frontend_after_process ``` to run our custom code to send the email.
 
-* `your_email`, `your_name`, `subject`, `message`: these are the ID of the created custom fields;
-* `admin@domain.com`: replace this with any email that you want to receive the notification about the contact submission.
+![Add the hook rwmb_frontend_after_process to run our custom code to send the email](https://i.imgur.com/geDOXKZ.png)
 
-From now on, whenever someone submits the form, you will see a new contact in both the admin and a new email in your inbox. That’s done!
+In the email, I want to let the admin know the contact information, so I will get the data submitted to the fields using the ``` rwmb_meta() ``` function.
+
+![Using the rwmb_meta()  function to get the data submitted to the fields ](https://i.imgur.com/rF95EiH.png)
+
+These are the **IDs** of the custom fields that we’ve just created for the form.
+
+![The IDs of the custom fields that we’ve just created for the form](https://i.imgur.com/Cxeay2R.png)
+
+These following lines of code are to display that information in the email.
+
+![Following lines of code are to display that information in the email](https://i.imgur.com/9ykaROD.png)
+
+This line is to set the type of email, how it displays the sender name, and how to reply.
+
+![This line is to set the type of email, how it displays the sender name, and how to reply](https://i.imgur.com/3UmAVSi.png)
+
+'_admin@domain.com_' is the receiver's address who will receive all the notifications about every submission. It should be the email of the admin or anyone who manages the contacts.
+
+![The receiver's address who will receive all the notifications about every submission](https://i.imgur.com/uZty8Bc.png)
+
+From now on, whenever someone submits the form, they will see a new contact in both the admin dashboard and their inbox.
+
+![A new contact will display in both the admin dashboard and their inbox](https://i.imgur.com/P5UonaW.gif)

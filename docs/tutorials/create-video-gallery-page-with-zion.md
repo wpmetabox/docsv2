@@ -14,7 +14,7 @@ Let’s do it step by step.
 
 ## Video version
 
-<LiteYouTubeEmbed id='SbQA8vWrVI4' />
+<LiteYouTubeEmbed id='vjdOhrsmS7Y' />
 
 ## Preparation
 
