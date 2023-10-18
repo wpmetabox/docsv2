@@ -85,7 +85,7 @@ Now, scroll down to the **Settings** section of the view.
 
 As I said, we will use a hook provided by WooCommerce. So, we will add this template as an action to that hook.
 
-Set the **Type** of the view as **Action**. In the **Action** name** box, as _'woocommerce_product_meta_end'_ which is the name of the hook. You can read more about this hook in WooCommerce documentation for more details.
+Set the **Type** of the view as **Action**. In the **Action name** box, as **_'woocommerce_product_meta_end'_** which is the name of the hook. You can read more about this hook in WooCommerce documentation for more details.
 
 ![Set the Type of the view as Action. In the Action name box, as 'woocommerce_product_meta_end' which is the name of the hook](https://i.imgur.com/BG80UKj.png)
 
