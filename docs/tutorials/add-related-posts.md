@@ -13,7 +13,7 @@ This is a typical section for related posts as you can see somewhere.
 
 ## Video Version
 
-<LiteYouTubeEmbed id='TXcpsVf8ZZg'/>
+<LiteYouTubeEmbed id='2PQjjJdNiK0'/>
 
 ## Preparation
 
