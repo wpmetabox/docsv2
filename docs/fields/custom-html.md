@@ -21,7 +21,7 @@ Besides the [common settings](/field-settings/), this field has the following sp
 Name | Key | Description
 --- | --- | ---
 Content | `std` | The custom HTML content.
-PHP Callback | `callback` | The PHP function that shows the custom HTML content. Optional.
+PHP Callback | `callback` | The PHP function that returns the custom HTML content. Optional.
 
 This is a sample field settings array for registering this field with code:
 
@@ -38,10 +38,9 @@ This is a sample field settings array for registering this field with code:
 Because this field is usually used to display custom content, it requires some CSS to make the content looks good. To enqueue a CSS file to the admin editing page, use the [rwmb_enqueue_scripts](/actions/rwmb-enqueue-scripts/) hook:
 
 ```php
-add_action( 'rwmb_enqueue_scripts', 'prefix_enqueue_custom_style' );
-function prefix_enqueue_custom_style() {
+add_action( 'rwmb_enqueue_scripts', function () {
     wp_enqueue_style( 'style-id', get_template_directory_uri() . '/css/admin.css' );
-}
+} );
 ```
 
 And in the `admin.css` you can put your custom styles.
