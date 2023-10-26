@@ -1,5 +1,5 @@
 ---
-title: Creating Dynamic Landing Page in WordPress - Meta Box + Elementor
+title: Creating dynamic landing page in WordPress - Meta Box + Elementor
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
