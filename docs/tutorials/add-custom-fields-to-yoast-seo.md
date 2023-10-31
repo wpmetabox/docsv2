@@ -1,79 +1,96 @@
 ---
-title: Adding custom fields to Yoast SEO meta tags
+title: Adding custom fields to yoast SEO meta tags
 ---
 
-We are going to find out how to add custom fields to meta tags in Yoast SEO.
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
+Normally, when you use Yoast SEO on your site, there will be a section to fill in the title, and description that **helps search engines index them easier**. You can fill in static content or dynamic content in these sections. But in some cases, you may want to get content not only from those default fields but from custom fields. So, how to **add content from custom fields created with Meta Box to Yoast SEO meta tags**, just follow these practices.
+
+I'll get data from Meta Box custom fields, then add to Yoast SEO meta tags as title and description.
+
+![add content to Yoast SEO meta tags as title and description](https://i.imgur.com/9Kux9hY.png)
+
+## Video version
+
+<LiteYouTubeEmbed id='0oMK9bXmkPI'/>
 
 ## Preparation
 
-Here are all the tools we need for this practice:
+If you want to add a simple custom field to meta tags, you can use the Yoast SEO snippet variables. It works in 90% of cases. However, if your custom field has complex data such as a list of text (cloneable text field) or a sub-field of a group, then you should use the custom snippet variables.
 
-* [Meta Box](https://metabox.io): to have framework to create custom fields;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI on the backend to create custom fields easier;
-* [Meta Box for Yoast SEO](https://metabox.io/plugins/meta-box-yoast-seo): to add content of custom fields to Yoast SEO Content Analysis to have better SEO score.
+In this practice, I will create both of these field types with all these methods for easier applying in real cases.
 
-If you want to add a simple custom field to meta tags, you can use the Yoast SEO snippet variables. It works in 90% cases. However, if your custom field has complex data such as a list of text (cloneable text field) or a sub-field of a group, then you should use the custom snippet variables.
+To get started, you would have to use Yoast SEO on your site to use Yoast SEO meta tags. We also need some tools:
 
-In this practice, I will create both of these field types with all these methods for easier appling in the real cases.
+* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [Meta Box for Yoast SEO](https://metabox.io/plugins/meta-box-yoast-seo/): to add the content of custom fields to Yoast SEO Content Analysis;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields more easily;
+* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to group fields together. I’m using it for demonstration and gives you some typical examples to see clearer how to do it with multiple types of fields.
 
-## Creating custom fields
+## 1. Creating custom fields
 
-Go to **Meta Box > Custom fields** to create fields. The data input to these fields will be used to add to the meta tags in this tutorial.
+There is little difference between getting content from the normal field, group, cloneable field, and cloneable group. So I’ll have 4 kinds of them as an example.
 
-![Create fields](https://i.imgur.com/CtKt0Dw.png)
+![4 kinds of custom fields as an example](https://i.imgur.com/hBqdgMy.png)
 
-After publishing the custom fields, you will see the field in the post editor. Just add some text for testing.
+Go to **Meta Box** and create them.
 
-For the next step, we have two methods to add these texts to the meta tags of Yoast SEO.
+![Go to Meta Box and create custom fields](https://i.imgur.com/YhvfOb5.png)
 
-In this case, the **Product Title** field is in the simple type without cloneable or any other complex settings, so you can use the Yoast SEO snippet variables for it.
+After creating all the fields, move to the **Settings tab**, choose **Location** as **Post type**, and select any post type you want to apply these fields for it.
 
-For the **Product Information** group field, you should use the custom snippet variables.
+![Move to the Settings tab, choose Location as Post type, and select any post type you want to apply](https://i.imgur.com/DwkQXTA.png)
 
-## Using Yoast SEO snippet variables
+After publishing the custom fields, you will see the field in the post editor. Just input some data.
 
-Yoast SEO provides [snippet variables](https://kb.yoast.com/kb/yoast-wordpress-seo-titles-metas-template-variables/) to add data from custom fields to meta tags. It’s in the form of `%%cf_<custom-field-name>%%`.
+![The field in the post editor](https://i.imgur.com/qP0wIXD.png)
 
-Just get the ID of the field, and replace `<custom-field-name>` with that ID.
+## 2. Outputing the custom fields values to be the meta tags
 
-For example, in the Yoast SEO section in the post/page editor, enter the variable to the **Meta description** box like this:
+There are two ways to get values from custom fields then add those content to Yoast SEO meta tags:
 
-`%%cf_product-title%%`
+1. One is using Yoast SEO snippet variables. But it is just for the field which is non-cloneable and stand alone, which means that it’s not in any group.
+2. Another one is using custom snippet variables to output content from group, clonable field, cloneable group, or some other special field type.
 
-Or, just type % then Yoast will suggest field’s ID in a dropdown list like this:
+## 2.1. Using Yoast SEO Snippet Variables
 
-![Just type % then Yoast will suggest field's ID](https://i.imgur.com/p8W7BZo.png)
+Yoast SEO provides [snippet variables](https://yoast.com/help/list-available-snippet-variables-yoast-seo/) to add data from custom fields to meta tags. Go to the Yoast SEO section and add a variable with a structure like this:
 
-Then, the variable will be displayed like this.
+_%%cf_<custom-field-name>%%_
 
-![The variale will be displayed like this](https://i.imgur.com/nOAgtmc.png)
+_cf__ is the prepend text for variables that get data from custom fields. Just get the **ID** of the field, and replace _<custom-field-name>_ with that **ID**.
 
-It also means that the content from the Product Title field is recognized as a meta description of the post by Yoast.
+In the **Yoast SEO** section in the post/page editor, enter that variable to the Meta title box like this:
 
-## Using custom snippet variables
+![Enter that variable to the Meta title box](https://i.imgur.com/fPlhZg0.png)
 
-The task is **getting the product short description and rating from the Product Information group and output them to the post description meta tag**. Follow the steps below.
+In this case, I did input the variable as _%%cf_product_title%%_. In there, product_title is the ID of my custom field.
 
-### Registering a custom snippet variable
+Please note that this way makes sense only when the field is non-clonable and NOT in any group.
 
-First, register a custom snippet variable for Yoast by adding the following code in `functions.php` file:
+When you add the variable, the preview will show the text immediately. It’ll be exactly the same with the content saved in the custom field.
 
-```php
-add_action( 'wpseo_register_extra_replacements', function() {
-    wpseo_register_var_replacement( '%%my_var%%', 'my_callback_function', 'advanced', 'Some help text' );
-} );
+![When you add the variable, the preview will show the text immediately](https://i.imgur.com/MoFgzCT.png)
+
+To double check if it is in the meta tag or not, just go to the post on the front end and inspect it.
+
+![Go to the post on the front end and inspect to double check if it is in the meta tag or not](https://i.imgur.com/ks1LXSz.png)
+
+## 2.2. Using Custom Snippet Variables
+
+To get data from some special custom fields, for example, group or cloneable ones, we should add code to the theme’s file to create custom snippet variables.
+
+![Add code to the theme’s file to create custom snippet variables](https://i.imgur.com/3ggMKzF.png)
+
 ```
-The hook `wpseo_register_extra_replacements` is used to register a custom replacing variable (snippet variables). Inside the callback function, we use Yoast SEO's function `wpseo_register_var_replacement()` function to register a new variable. This function has 4 parameters:
+add_action( 'wpseo_register_extra_replacements', function() {
+           wpseo_register_var_replacement( '%%my_information%%', 'my_information_funciton', 'advanced', 'Some help text' );
+	wpseo_register_var_replacement( '%%my_features%%', 'my_features_function', 'advanced', 'Some help text' );
+	wpseo_register_var_replacement( '%%my_promotions%%', 'my_promotions_function', 'advanced', 'Some help text' );
+} );
 
-* Variable name: The name of the variable to replace, i.e. '%%var%%', the surrounding %% are optional, name can only contain [A-Za-z0-9_-]. Note that your variable cannot start with `cf_ or ct_ as` they're used by Yoast SEO for custom fields and custom taxonomies.
-* Callback function: Callback function to retrieve the replacement value for the variable.
-* Type of variable: `basic` or `advanced`, `defaults` to `advanced`.
-* Help text: Help text to be added to the help tab for this variable.
-
-Here is the callback function to retrieve the replacement value for the variable. Copy and insert this code to `functions.php`.
-
-```php
-function my_callback_function() {
+function my_information_funciton() {
     $value = '';
 
     // Get product information.
@@ -87,27 +104,86 @@ function my_callback_function() {
 
     return $value;
 }
+
+function my_features_function(){
+	$value = '';
+	$features = rwmb_meta( 'features' ) ?: [] ;
+	$value .= ' Features: ';
+
+	foreach ( $features as $item ){
+		$value.=$item.', ';
+	}
+	return $value;
+}
+
+function my_promotions_function(){
+	$value = '';
+	$promotions = rwmb_meta( 'promotions' ) ?: [] ;
+	$value .= ' Promotions: ';
+	
+	foreach ( $promotions as $group ) {
+
+		// Field promotion_program:
+		$value .= $group[ 'promotion_program' ] ?? '';
+
+		// Field expired_date:
+		$value .= $group[ 'expired_date' ] ?? '';
+
+	}
+	return $value;
+}
 ```
 
-This function gets the product information using the [rwmb_meta() helper function](https://docs.metabox.io/displaying-fields/). As it's a group, we have to get the group value and from that, get the values of sub-fields (short description and rating). Then it returns the value.
+We will use the hook ` wpseo_register_extra_replacements ` to create the custom variables.
 
+![We will use this hook to create the custom variables.](https://i.imgur.com/hG6q0Y3.png)
 
-### Using the created snippet variable
+I use the ` wpseo_register_var_replacement ` function from **Yoast SEO** to register that I will create three new variables since I have three fields for example.
 
-After registering the custom snippet variable, go to **SEO > Search Appearance** and enter the new variable into the **Meta description** box:
+![I use this function from Yoast SEO to register that I will create three new variables since I have three fields for example.](https://i.imgur.com/fxCPTsS.png)
 
-![Enter the new variable into the Meta description box](https://i.imgur.com/I2unxzu.png)
+These are the names of the variables that you can name as you want.
 
-Then, just go to edit a product and enter all the information for custom fields:
+![The names of the variables](https://i.imgur.com/uWvFz3Y.png)
 
-![Go to edit a product and enter all the information for custom fields](https://i.imgur.com/kXWQRXr.png)
+Notice that '_advanced_' and '_Some help text_' parameters follow **Yoast SEO** documentation, so you can look for a more detailed guide about these parameters in [there](https://yoast.com/help/list-available-snippet-variables-yoast-seo/).
 
-Unfortunately, Yoast SEO **does not render custom snippet variables in the snippet preview**. So, the only way to check it is **viewing the source code** of the page on the front end.
+Corresponding to each variable, we will have a function to get data from custom fields. You also can name those functions.
 
-![View the source code](https://i.imgur.com/K9BpMcp.png)
+![Each variablewill have a function to get data from custom fields](https://i.imgur.com/vSXegRm.png)
 
-:::tip
+In these functions, you should use the [_rwmb_meta_ helper function](https://docs.metabox.io/filters/rwmb-meta/) to get data or settings of the custom fields no matter which kind of them.
 
-If the settings of SEO plugins make you exhausted, and you want something simple and just works, then try our plugin [Slim SEO](https://wordpress.org/plugins/slim-seo/). It does all the SEO jobs for your WordPress websites automatically without getting lost in the configuration.
+![Use the rwmb_meta helper function to get data or settings of the custom fields](https://i.imgur.com/Dlc2zFR.png)
 
-:::
+These lines of code to get data from a **group which is non-clonable**.
+
+![These lines of code to get data from a group which is non-clonable](https://i.imgur.com/eEy4I7e.png)
+
+In there, this is the **ID** of the group.
+
+![The ID of the group](https://i.imgur.com/ZPktVou.png)
+
+These are the **IDs** of the subfields inside that group.
+
+![The IDs of the subfields inside that group](https://i.imgur.com/gsaCCgg.png)
+
+This one is to get data from a **cloneable field** that has the ID as '_features_'. Since it is cloneable, there’ll be a loop in the function.
+
+![A loop in the function to get data from a cloneable field](https://i.imgur.com/KYGITZp.png)
+
+These are to get data from a **clonable group** (ID as '_promotions_') which has two subfields inside with the IDs are '_promotion_program_' and '_expired_date_'.
+
+![Get data from a clonable group which has two subfields inside](https://i.imgur.com/VN7qXm6.png)
+
+Since the group is cloneable, you can see there also is a loop in the above function.
+
+Now, go to the post editor, and enter the created variables into the box with the structure like this:
+
+_%%<your_custom_variable>%%_
+
+![Enter the created variables into the box with the structure](https://i.imgur.com/uVsX0TR.png)
+
+Although **Yoast SEO** does not render content from custom snippet variables in the snippet preview, you can inspect the post and see it.
+
+![Inspect the post and see the result](https://i.imgur.com/1H267WO.png)
