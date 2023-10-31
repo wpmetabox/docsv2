@@ -57,7 +57,7 @@ There are two ways to get values from custom fields then add those content to Yo
 
 Yoast SEO provides [snippet variables](https://yoast.com/help/list-available-snippet-variables-yoast-seo/) to add data from custom fields to meta tags. Go to the Yoast SEO section and add a variable with a structure like this:
 
-_%%cf_<custom-field-name>%%_
+` %%cf_<custom-field-name>%% `
 
 _cf__ is the prepend text for variables that get data from custom fields. Just get the **ID** of the field, and replace _<custom-field-name>_ with that **ID**.
 
