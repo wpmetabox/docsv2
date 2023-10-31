@@ -59,7 +59,7 @@ Yoast SEO provides [snippet variables](https://yoast.com/help/list-available-sni
 
 ` %%cf_<custom-field-name>%% `
 
-_cf__ is the prepend text for variables that get data from custom fields. Just get the **ID** of the field, and replace _<custom-field-name>_ with that **ID**.
+_cf__ is the prepend text for variables that get data from custom fields. Just get the **ID** of the field, and replace ` _<custom-field-name>_ ` with that **ID**.
 
 In the **Yoast SEO** section in the post/page editor, enter that variable to the Meta title box like this:
 
