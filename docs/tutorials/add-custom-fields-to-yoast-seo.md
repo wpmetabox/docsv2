@@ -57,15 +57,15 @@ There are two ways to get values from custom fields then add those content to Yo
 
 Yoast SEO provides [snippet variables](https://yoast.com/help/list-available-snippet-variables-yoast-seo/) to add data from custom fields to meta tags. Go to the Yoast SEO section and add a variable with a structure like this:
 
-_%%cf_<custom-field-name>%%_
+`%%cf_<custom-field-name>%%`
 
-_cf__ is the prepend text for variables that get data from custom fields. Just get the **ID** of the field, and replace _<custom-field-name>_ with that **ID**.
+_cf__ is the prepend text for variables that get data from custom fields. Just get the **ID** of the field, and replace `<custom-field-name>` with that **ID**.
 
 In the **Yoast SEO** section in the post/page editor, enter that variable to the Meta title box like this:
 
 ![Enter that variable to the Meta title box](https://i.imgur.com/fPlhZg0.png)
 
-In this case, I did input the variable as _%%cf_product_title%%_. In there, product_title is the ID of my custom field.
+In this case, I did input the variable as `%%cf_product_title%%`. In there, product_title is the ID of my custom field.
 
 Please note that this way makes sense only when the field is non-clonable and NOT in any group.
 
@@ -83,7 +83,7 @@ To get data from some special custom fields, for example, group or cloneable one
 
 ![Add code to the theme’s file to create custom snippet variables](https://i.imgur.com/3ggMKzF.png)
 
-```
+```php
 add_action( 'wpseo_register_extra_replacements', function() {
            wpseo_register_var_replacement( '%%my_information%%', 'my_information_funciton', 'advanced', 'Some help text' );
 	wpseo_register_var_replacement( '%%my_features%%', 'my_features_function', 'advanced', 'Some help text' );
@@ -180,7 +180,7 @@ Since the group is cloneable, you can see there also is a loop in the above func
 
 Now, go to the post editor, and enter the created variables into the box with the structure like this:
 
-_%%<your_custom_variable>%%_
+`%%<your_custom_variable>%%`
 
 ![Enter the created variables into the box with the structure](https://i.imgur.com/uVsX0TR.png)
 
