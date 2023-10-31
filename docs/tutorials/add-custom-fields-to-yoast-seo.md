@@ -65,7 +65,7 @@ In the **Yoast SEO** section in the post/page editor, enter that variable to the
 
 ![Enter that variable to the Meta title box](https://i.imgur.com/fPlhZg0.png)
 
-In this case, I did input the variable as _%%cf_product_title%%_. In there, product_title is the ID of my custom field.
+In this case, I did input the variable as `%%cf_product_title%%`. In there, product_title is the ID of my custom field.
 
 Please note that this way makes sense only when the field is non-clonable and NOT in any group.
 
