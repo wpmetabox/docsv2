@@ -2,18 +2,11 @@
 title: Creating a contact form using Meta Box
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-
 The contact form makes it simple and reliable for anyone to **leave their information** for buying your product, looking for consulting, or just contacting your brand. And you know what, **Meta Box can help you create a contact form in WordPress very easily**.
 
 I made an example with the most popular form as you can see in the Contact page:
 
 ![Contact forms page](https://i.imgur.com/UzbIwwc.png)
-
-## Video Version
-
-<LiteYouTubeEmbed id='tbbdBTcuBBo' />
 
 ## Preparation
 
