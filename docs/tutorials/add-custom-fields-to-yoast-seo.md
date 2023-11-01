@@ -2,18 +2,11 @@
 title: Adding custom fields to yoast SEO meta tags
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-
 Normally, when you use Yoast SEO on your site, there will be a section to fill in the title, and description that **helps search engines index them easier**. You can fill in static content or dynamic content in these sections. But in some cases, you may want to get content not only from those default fields but from custom fields. So, how to **add content from custom fields created with Meta Box to Yoast SEO meta tags**, just follow these practices.
 
 I'll get data from Meta Box custom fields, then add to Yoast SEO meta tags as title and description.
 
 ![add content to Yoast SEO meta tags as title and description](https://i.imgur.com/9Kux9hY.png)
-
-## Video version
-
-<LiteYouTubeEmbed id='0oMK9bXmkPI'/>
 
 ## Preparation
 
@@ -59,7 +52,7 @@ Yoast SEO provides [snippet variables](https://yoast.com/help/list-available-sni
 
 `%%cf_<custom-field-name>%%`
 
-_cf__ is the prepend text for variables that get data from custom fields. Just get the **ID** of the field, and replace `<custom-field-name>` with that **ID**.
+` cf_ ` is the prepend text for variables that get data from custom fields. Just get the **ID** of the field, and replace `<custom-field-name>` with that **ID**.
 
 In the **Yoast SEO** section in the post/page editor, enter that variable to the Meta title box like this:
 
@@ -146,7 +139,7 @@ These are the names of the variables that you can name as you want.
 
 ![The names of the variables](https://i.imgur.com/uWvFz3Y.png)
 
-Notice that '_advanced_' and '_Some help text_' parameters follow **Yoast SEO** documentation, so you can look for a more detailed guide about these parameters in [there](https://yoast.com/help/list-available-snippet-variables-yoast-seo/).
+Notice that ` advanced and ` ` Some help text ` parameters follow **Yoast SEO** documentation, so you can look for a more detailed guide about these parameters in [there](https://yoast.com/help/list-available-snippet-variables-yoast-seo/).
 
 Corresponding to each variable, we will have a function to get data from custom fields. You also can name those functions.
 
@@ -168,11 +161,11 @@ These are the **IDs** of the subfields inside that group.
 
 ![The IDs of the subfields inside that group](https://i.imgur.com/gsaCCgg.png)
 
-This one is to get data from a **cloneable field** that has the ID as '_features_'. Since it is cloneable, there’ll be a loop in the function.
+This one is to get data from a **cloneable field** that has the ID as ` features `. Since it is cloneable, there’ll be a loop in the function.
 
 ![A loop in the function to get data from a cloneable field](https://i.imgur.com/KYGITZp.png)
 
-These are to get data from a **clonable group** (ID as '_promotions_') which has two subfields inside with the IDs are '_promotion_program_' and '_expired_date_'.
+These are to get data from a **clonable group** (ID as ` promotions `) which has two subfields inside with the IDs are ` promotion_program ` and ` expired_date `.
 
 ![Get data from a clonable group which has two subfields inside](https://i.imgur.com/VN7qXm6.png)
 
@@ -186,4 +179,4 @@ Now, go to the post editor, and enter the created variables into the box with th
 
 Although **Yoast SEO** does not render content from custom snippet variables in the snippet preview, you can inspect the post and see it.
 
-![Inspect the post and see the result](https://i.imgur.com/1H267WO.png)
+![Inspect the post and see the result](https://i.imgur.com/qXMMooB.png)
