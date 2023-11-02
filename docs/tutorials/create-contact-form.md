@@ -11,9 +11,9 @@ I made an example with the most popular form as you can see in the Contact page:
 
 ![Contact forms page](https://i.imgur.com/UzbIwwc.png)
 
-## Video Version
+## Video version
 
-<LiteYouTubeEmbed id='tbbdBTcuBBo' />
+<LiteYouTubeEmbed id='tbbdBTcuBBo'/>
 
 ## Preparation
 

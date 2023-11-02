@@ -2,18 +2,11 @@
 title: Adding related posts
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-
 Adding related ports is a common way to keep your visitor stay on your site and help them find more useful content. In this practice, we will find out how to **choose a specific post to be related to another one using custom fields** created with Meta Box.
 
 This is a typical section for related posts as you can see somewhere.
 
 ![This is a typical section for related posts](https://i.imgur.com/VtkA5bQ.png)
-
-## Video Version
-
-<LiteYouTubeEmbed id='2PQjjJdNiK0'/>
 
 ## Preparation
 
@@ -52,7 +45,7 @@ You can turn on the **Multiple** option if you want to allow users to add more t
 
 After configuring all options for the field, move to the **Settings** tab, set **Location** as **Post type**, then choose a post type of the post where you want to show related posts.
 
-![Move to the Settings tab and remember to set Location as Post type](https://i.imgur.com/Mq0QoOF.png)
+![move to the Settings tab, set Location as Post type, then choose a post type of the post where you want to show related posts](https://i.imgur.com/Mq0QoOF.png)
 
 Back to the post editor of your post type, you will see the created field.
 
@@ -108,7 +101,7 @@ After adding all the wanted post information, you should re-arrange the code to 
 
 ![The code with syntax added to the template](https://i.imgur.com/7YTqm2z.png)
 
-You also can change the code to output the data as you want. I changed this **{{ item.content}}** variable into **{{ mb.wp_trim_words(item.content,20,'...') }}** variable to limit the number of displaying characters.
+You also can change the code to output the data as you want. I changed this `{{ item.content}}` variable into `{{ mb.wp_trim_words(item.content,20,'...') }}` variable to limit the number of displaying characters.
 
 ![Change {{ item.content}} variable into {{ mb.wp_trim_words(item.content,20,'...') }} variable to limit the number of displaying characters.](https://i.imgur.com/iXuP9zR.png)
 
