@@ -19,23 +19,29 @@ If you are using [Meta Box Builder](/extensions/meta-box-builder/) extension, yo
 
 ![conditional logic in Meta Box Builder](https://i.imgur.com/xOPcH0N.png)
 
-In this section, you can choose to show or hide a field when all or any conditions match. For each rule, you need to select a dependency field ID, the operator and enter the field value. The dependency field ID is auto-suggested from the list of current fields and you can add as many rules as you want:
+In this section, you can choose to show or hide a field when all or any conditions match. For each rule, you need to select or enter a dependency field ID, the operator and enter the field value. The dependency field ID is auto-suggested from the list of current fields and you can add as many rules as you want:
 
 ![conditional logic rules](https://i.imgur.com/WzTf0Ka.png)
+
+Using Meta Box Builder is intuitive and self-explained.
+
+For advanced usage (like with custom conditions or using outside field groups), please use code which are explained in detailed below.
 
 ### With code
 
 In case you use code to register meta boxes, you need to add an extra parameter `visible` or `hide` to a field (or a meta box if you want to hide the whole meta box) to set the conditional logic for it.
 
-For example, Tthe code below registers a meta box that is hidden when the post format is `aside`. The meta box also have 2 custom fields: Brand and Product. The Product field will be hidden if user select a brand that's not "Apple".
+For example, Tthe code below registers a meta box that is **hidden when the post format is "aside"**. The meta box also have 2 custom fields: Brand and Product. **The Product field will be hidden if user select a brand that's not "Apple"**.
 
 ```php
 add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 	$meta_boxes[] = [
 		'title' => 'Brands and Products',
 
+		// highlight-start
 		// Hide this meta box when post format is aside
 		'hidden' => [ 'post_format', 'aside' ],
+		// highlight-end
 
 		'fields' => [
 			[
@@ -56,8 +62,10 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 					'iPad'   => 'iPad',
 				],
 
+				// highlight-start
 				// Hide this field when user selected a brand that's not 'Apple'
 				'hidden' => [ 'brand', '!=', 'Apple' ]
+				// highlight-end
 			],
 		],
 	];
@@ -72,10 +80,10 @@ To make a meta box or a field visible/hidden, please add a setting for the meta 
 
 ```php
 // Condition to show.
-'visible' => array( 'field', 'operator', 'value' ),
+'visible' => [ 'field', 'operator', 'value' ],
 
 // Condition to hide
-'hidden' => array( 'field', 'operator', 'value' )
+'hidden' => [ 'field', 'operator', 'value' ],
 ```
 
 Name|Description
@@ -83,6 +91,18 @@ Name|Description
 `field`| Meta Box field ID or ID of a DOM element to compare.
 `operator` | Comparison operators: `=`, `>=`, `<=`, `>`, `<`, `!=`, `in`, `contains`, `between`, `starts with`, `ends with`, `match`. All of them can combine with `not` operator to become negate operator. Default: `=`. Optional.
 `value` | Value to compare with.
+
+:::info
+
+You can bypass `operator` if it's `=`, which is the default value. So you can write:
+
+```php
+'visible' => [ 'field', 'value' ],
+// or
+'hidden' => [ 'field', 'value' ],
+```
+
+:::
 
 The normal operators like `=`, `!=`, etc. are pretty clear. Let's see the advanced operators like `contains`, `starts with`, etc.
 
@@ -135,7 +155,7 @@ This operator check if the field value is between minimum and maximum values.
 Let say that we have a date field `released_date` and we want to show another field only when `released_date` is between "2015-06-01" and "2015-12-01":
 
 ```php
-'visible' => array( 'released_date', 'between', array( '2015-06-01', '2015-12-01' ) )
+'visible' => [ 'released_date', 'between', [ '2015-06-01', '2015-12-01' ] ]
 ```
 
 Please note that the `between` operator does not only compare numeric fields but also date and time fields.
@@ -145,7 +165,7 @@ Please note that the `between` operator does not only compare numeric fields but
 This operator checks if field value starts with a string:
 
 ```php
-'visible' => array( 'brand', 'starts with', 'App' ) // Apple, App
+'visible' => [ 'brand', 'starts with', 'App' ] // Apple, App
 ```
 
 ### `ends with`
@@ -153,7 +173,7 @@ This operator checks if field value starts with a string:
 This operator checks if field value ends with a string:
 
 ```php
-'visible' => array( 'brand', 'ends with', 'le' ) // Apple, Google
+'visible' => [ 'brand', 'ends with', 'le' ] // Apple, Google
 ```
 
 ### `match`
@@ -161,7 +181,7 @@ This operator checks if field value ends with a string:
 This operator checks if field value matches a regular expression:
 
 ```php
-'visible' => array( 'brand', 'match', '[a-z]$' )
+'visible' => [ 'brand', 'match', '[a-z]$' ],
 ```
 
 ### `not`
@@ -174,26 +194,26 @@ Sometimes, you'll need to use more than one conditional logic. To do that, you c
 
 ```php
 // Visible when 'brand' is 'Apple' AND 'released_year' is between 2010 and 2015
-'visible' => array(
-    array( 'brand', 'Apple' ),
-    array( 'released_year', 'between', array( 2010, 2015 ) )
-)
+'visible' => [
+    [ 'brand', 'Apple' ],
+    [ 'released_year', 'between', [ 2010, 2015 ] ],
+],
 ```
 
 By default, if you define compound statement, the logic will correct if **ALL** of them are correct. In case you want to visible a field if **ONE** of them is correct, move all statements to `when` key and put new `relation` key like this example:
 
 ```php
 // Visible when 'brand' is 'Apple' OR 'released_year' is between 2010 and 2015
-'visible' => array(
-    'when' => array(
-         array( 'brand', 'in', array( 'Apple', 'Microsoft' ) ),
-         array( 'released_year', 'between', array( 2010, 2015 ) )
-     ),
+'visible' => [
+    'when' => [
+         [ 'brand', 'Apple' ],
+         [ 'released_year', 'between', [ 2010, 2015 ] ],
+     ],
      'relation' => 'or'
-)
+],
 ```
 
-## Getting values for special fields
+## Special values
 
 This section shows you how to specify the `value` in the conditions for some specific fields.
 
@@ -202,7 +222,7 @@ This section shows you how to specify the `value` in the conditions for some spe
 For checkboxes, use `0` or `false` if it's not checked, `1` or `true` if it's checked.
 
 ```php
-'visible' => array( 'checkbox_field', true ) // Visible if checkbox_field is checked
+'visible' => [ 'checkbox_field', true ], // Visible if checkbox_field is checked
 ```
 
 ### Media fields
@@ -213,10 +233,10 @@ This example shows or hides a field depends on there's a file uploaded:
 
 ```php
 // Visible when file_advanced field is has file
-'visible' => array( 'file_advanced', '>', 0 )
+'visible' => [ 'file_advanced', '>', 0 ],
 
 // Or hidden if image_advanced doesn't contains anything
-'hidden' => array( 'image_advanced', 0 )
+'hidden' => [ 'image_advanced', 0 ],
 ```
 
 ## Toggle by other elements
@@ -239,44 +259,44 @@ Examples:
 Display a meta box (or a field) if page template is `template-custom.php`:
 
 ```php
-'visible' => array( 'page_template', 'template-custom.php' )
+'visible' => [ 'page_template', 'template-custom.php' ],
 ```
 
 ### Featured image
 
-Featured image is a special HTML element. It has the field name/ID `_thumbnail_id` and when empty, WordPress sets the value to `-1`. Since version 1.5.3, the plugin can detect changes for featured image and let you define conditions with it.
+Featured image is a special HTML element. It has the field name/ID `_thumbnail_id` and when empty, WordPress sets the value to `-1`. The plugin can detect changes for featured image and let you define conditions with it.
 
 Examples:
 
 Make a field visible if no featured image:
 
 ```php
-'visible' => array( '_thumbnail_id', '=', '-1' ),
+'visible' => [ '_thumbnail_id', '=', '-1' ],
 ```
 
 Make a field visible if featured image is set:
 
 ```php
-'visible' => array( '_thumbnail_id', '!=', '-1' ),
+'visible' => [ '_thumbnail_id', '!=', '-1' ],
 ```
 
 Or make a field visible only if featured image is a specific image with ID `123`:
 
 ```php
-'visible' => array( '_thumbnail_id', '=', '123' ),
+'visible' => [ '_thumbnail_id', '=', '123' ],
 ```
 
-## Using outside meta boxes
+## Using outside field groups
 
-The extension can even work with elements outside meta boxes. Let's say you want to hide an element `.custom-div` when a field with ID `brand` is `Microsoft`, then you can do that with the following code:
+The extension can even work with elements outside field groups. Let's say you want to hide an element `.custom-div` when a field with ID `brand` is `Microsoft`, then you can do that with the following code:
 
 ```php
 add_filter( 'rwmb_outside_conditions', function( $conditions ) {
-    $conditions['.custom-div'] = array(
+    $conditions['.custom-div'] = [
         'hidden' => ['brand', 'Microsoft'],
         // or you can write this for clarity
         'hidden' => ['#brand', 'Microsoft'],
-    );
+	];
     return $conditions;
 } );
 ```
@@ -306,7 +326,7 @@ For post category, use `post_category` as the first parameter:
 'visible' => ['post_category', 'in', [4, 5, 6]]
 ```
 
-By default, the extension uses category IDs to check. Since 1.3, you can define the condition's value using `slug`:
+By default, the extension uses category IDs to check. If you want to use slug, use the following code:
 
 ```php
 'visible' => ['slug:post_category', 'in', ['fashion', 'gaming', 'technology']]
@@ -314,7 +334,7 @@ By default, the extension uses category IDs to check. Since 1.3, you can define 
 
 ### Post tag
 
-Support for post tag is added in version 1.6.5 and works only for Gutenberg editor.
+Support for post tag is available only for Gutenberg editor.
 
 To add conditions by post tag, use `tags` as the first parameter:
 
@@ -332,7 +352,7 @@ For custom taxonomies, use `tax_input[taxonomy_slug]` as the first parameter:
 'hidden' => ['tax_input[product]', 'in', [5, 6, 7]],
 ```
 
-Similarly to post category, it works with `slug`, too.
+Similarly to post category, it works with slug, too.
 
 ```php
 'hidden' => ['slug:tax_input[product]', '!=', 'drones']
@@ -340,7 +360,7 @@ Similarly to post category, it works with `slug`, too.
 
 ## Using with Group
 
-The extension MB Conditional Logic uses jQuery to check the field ID and value to match the condition. For the sub-fields in a **non-cloneable** group, the field ID actually has the format `groupID_fieldID` and called input ID. In this case, you need to add the input ID to the condition like this:
+The extension uses jQuery to check the field ID and value to match the condition. For the sub-fields in a **non-cloneable** group, the field ID actually has the format `groupID_fieldID`. You need to use that format for the condition like this:
 
 ```php
 [
@@ -367,13 +387,13 @@ The extension MB Conditional Logic uses jQuery to check the field ID and value t
 				'Macbook' => 'Macbook',
 			],
 
-			// Show this field when user selected a brand 'Apple'
+			// highlight-next-line
 			'visible' => [ 'group_brand', '=', 'apple' ]
 		],
 	],
 ],
 ```
-If the group is **cloneable**, the conditional logic runs inside the clone only. In this case you **don't** have to change the sub-field IDs like above.
+If the group is **cloneable**, the conditional logic **runs inside the clone only**. In this case you **don't** have to change the sub-field IDs like above.
 
 ## Custom callback
 
@@ -443,19 +463,23 @@ A | | C
 
 So, basically, we have to use CSS `visibility` property instead of `display` property. To do so, just add `'toggle_type' => 'visibility'` to your Meta Box.
 
-Since v1.5, we support `slideUp`, `slideDown`, `fadeIn`, `fadeOut` animation. In order to use these animation just set `toggle_type` to `slide` or `fade`.
+We also support **slide and fade animations**. In order to use these animation just set `toggle_type` to `slide` or `fade`.
 
-In short, we supports 4 toggle types to: `visibility`, `display`, `slide`, `fade`.
+In short, we support 4 toggle types: `visibility`, `display`, `slide`, `fade`.
 
 ## Running conditional logic manually
 
-Since v1.6.17, you can manually run (trigger) conditional logic for a scope with this code:
+There are situations where you manually modify some fields' values by code. In those cases, no events of the changes are fired, and your conditions might not be applied for other fields.
+
+To fix that, you can run the conditions manually via JavaScript like this:
 
 ```js
 let $scope = $( '.scope' );
 rwmb.runConditionalLogic( $scope );
 ```
 
+Where `.scope` is a selector of the wrapper element, which contains all the fields you want to apply conditional logic to. It might be a field group, or any `div`, or even the whole page. When running this code, the conditional logic will be applied to all fields inside this wrapper element. In other words, some fields will be visible or hidden based on the current values of other fields.
+
 ## Known issues
 
-Conditional Logic doesn't works with [autocomplete](/fields/autocomplete/) field. We'll try to update in the next release.
+Conditional Logic doesn't works with [autocomplete](/fields/autocomplete/) field.
