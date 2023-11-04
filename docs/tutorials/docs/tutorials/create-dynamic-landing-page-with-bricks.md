@@ -290,4 +290,4 @@ Go to the pages on frontend, you will see that you now have different versions o
 
 I hope that this way will help you create landing pages for multiple marketing campaigns faster, more conveniently, and more efficiently. If you want to try this with other page builders, follow [this tut](https://docs.metabox.io/tutorials/create-dynamic-landing-page-with-elementor/).
 
-Additionally, you also can apply this way to customize your homepage easily. We also have a tutorial on [configuring the homepage regularly without touching code every time](https://docs.metabox.io/tutorials/configure-homepage/)https://docs.metabox.io/tutorials/configure-homepage/. Feel free to check it out!
+Additionally, you also can apply this way to customize your homepage easily. We also have a tutorial on [configuring the homepage regularly without touching code every time](https://docs.metabox.io/tutorials/configure-homepage/). Feel free to check it out!
