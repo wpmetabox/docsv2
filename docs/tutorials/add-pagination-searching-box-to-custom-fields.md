@@ -26,7 +26,7 @@ To get started, we need some tools:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create custom fields;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to have the UI, you can install this extension individually, or use **Meta Box AIO** to enable it.
 
-## Creating custom fields
+## 1. Creating custom fields
 
 I will create two fields. One is to show some image options to choose from. The other field allows adding text to search any image that is in the below field.
 
@@ -72,7 +72,7 @@ Then, go to the post editor, you will see the fields displayed. All the images i
 
 ![All the images in the field are displayed without any pagination](https://i.imgur.com/JhjOoaN.png)
 
-## Adding functions to the fields
+## 2. Adding functions to the fields
 
 We should add code to the theme’s files to add some functions for the fields. They help to create the pagination and search features.
 
