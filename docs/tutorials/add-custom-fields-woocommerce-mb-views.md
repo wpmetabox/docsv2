@@ -12,7 +12,7 @@ These are two custom fields that I created with Meta Box and added to a product 
 
 ## Video Version
 
-<LiteYouTubeEmbed id='Af_dWSF_CrQ' />
+<LiteYouTubeEmbed id='XzymaqzE8kw' />
 
 ## Preparation
 
