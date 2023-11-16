@@ -553,6 +553,17 @@ Fire before/after adding/updating/deleting data in a custom table. Accepts 3 par
 - `$table`: the table name
 - `$row`: the associate array of data
 
+`mbct_add_data`<br />
+`mbct_update_data`<br />
+
+These are filters that let you change the data before inserting/updating into the custom table. Accepts 3 parameters:
+
+- `$row`: the associate array of data
+- `$object_id`: the object ID
+- `$table`: the table name
+
+These filters should return an array of data (e.g., the `$row`).
+
 ### Notes
 
 Each model can have only one custom table.
