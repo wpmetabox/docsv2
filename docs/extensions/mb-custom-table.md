@@ -458,6 +458,37 @@ add_filter( 'mbct_transaction_query_order', function( $order ) {
 } );
 ```
 
+`mbct_{$model}_prepare_items`
+
+Filters the SQL query in the custom model table list to get items. Accepts one parameter - the SQL.
+
+This filter is useful when you want to join the current model table with other tables to filter the results.
+
+```php
+add_filter( 'mbct_transaction_prepare_items', function( $sql ) {
+	$sql = str_replace(
+		'SELECT * FROM wp_transactions',
+		'SELECT t.*, c.ID FROM wp_transactions t JOIN wp_customers c ON t.ID = c.transaction_id'
+		$sql
+	);
+	return $sql;
+} );
+```
+
+`mbct_{$model}_total_items`
+
+Filters the SQL query in the custom model table list to get total items. Accepts 2 parameter:
+
+- `$sql`: the full SQL query,
+- `$where`: the `WHERE` statement in the query.
+
+```php
+add_filter( 'mbct_transaction_total_items', function( $sql, $where ) {
+	$sql = "SELECT COUNT(t.*) FROM wp_transactions t JOIN wp_customers c ON t.ID = c.transaction_id $where";
+	return $sql;
+}, 10, 2 );
+```
+
 `mbct_{$model}_columns`
 
 Filters the list of columns in the custom model table list. Accepts one parameter - the array of columns.
@@ -478,6 +509,10 @@ Filters the output of a column in the custom model table list. Accepts 4 paramet
 `mbct_{$model}_row_actions`
 
 Filters the list of actions for each row item in the custom model table list (default is Edit and Delete). Accepts one parameter - an associate array of actions.
+
+`mbct_{$model}_bulk_actions`
+
+Filters the list of bulk actions for each row item in the custom model table list (default is Delete). Accepts one parameter - an associate array of actions.
 
 `mbct_restrict_manage_posts`
 
