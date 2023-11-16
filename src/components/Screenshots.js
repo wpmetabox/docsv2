@@ -1,21 +1,11 @@
 import React from "react";
 
 const Screenshots = ( { name = '', col1 = [], col2 = [] } ) => {
-	if ( !Array.isArray( col1 ) ) {
-		col1 = [ col1 ];
-	}
-	if ( !Array.isArray( col2 ) ) {
-		col2 = [ col2 ];
-	}
-
-	const showCount = col1.length + col2.length > 1;
-	const desc = name.replace( '-', ' ' );
-
 	return (
 		<div className="gallery">
-			<div className="gallery_col1">
+			<div className="gallery__col">
 				{
-					col1.map( ( [src, desc], index ) => (
+					col1.map( ( [ src, desc ], index ) => (
 						<figure key={ src }>
 							<img src={ src } alt={ desc } />
 							<figcaption>{ desc }</figcaption>
@@ -23,18 +13,27 @@ const Screenshots = ( { name = '', col1 = [], col2 = [] } ) => {
 					) )
 				}
 			</div>
-			<div className="gallery_col2">
-				<figure>
-					<img src={ `/settings/${ name }.png` } alt={ `The ${ name } field settings` } />
-					<figcaption>The { desc } field settings</figcaption>
-				</figure>
+			<div className="gallery__col">
 				{
-					col2.map( ( [src, desc], index ) => (
-						<figure key={ src }>
-							<img src={ src } alt={ desc } />
-							<figcaption>{ desc }</figcaption>
+					Array.isArray( col2 )
+						? <>
+							<figure>
+								<img src={ `/settings/${ name }.png` } alt={ `The ${ name.replace( '-', ' ' ) } field settings` } />
+								<figcaption>The { name.replace( '-', ' ' ) } field settings</figcaption>
+							</figure>
+							{
+								col2.map( ( [ src, desc ], index ) => (
+									<figure key={ src }>
+										<img src={ src } alt={ desc } />
+										<figcaption>{ desc }</figcaption>
+									</figure>
+								) )
+							}
+						</>
+						: <figure>
+							<img src={ col2 } alt={ `The ${ name.replace( '-', ' ' ) } field settings` } />
+							<figcaption>The { name.replace( '-', ' ' ) } field settings</figcaption>
 						</figure>
-					) )
 				}
 			</div>
 		</div>

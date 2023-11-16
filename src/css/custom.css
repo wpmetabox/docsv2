@@ -262,14 +262,19 @@ html[data-theme='dark'] code {
 
 /* Field screenshots and settings in a gallery */
 .gallery {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	display: flex;
+	align-items: flex-start;
 	gap: 2rem;
+}
+
+.gallery__col {
+	flex: 1;
+	width: 100%;
 }
 
 @media (max-width: 767px) {
 	.gallery {
-		grid-template-columns: 1fr;
+		flex-direction: column;
 	}
 }
 
@@ -284,6 +289,7 @@ figcaption {
 
 .gallery img {
 	margin-bottom: .5rem;
+	width: 100%;
 }
 
 /* Table of contents */
@@ -554,34 +560,50 @@ summary {
 }
 
 /* Tutorials */
-.tutorials h2 , .tutorials h3{
+.tutorials h2,
+.tutorials h3 {
 	margin: 0;
 }
-.tutorials img{
+
+.tutorials img {
 	object-fit: cover;
 	object-position: center;
 	height: auto;
 	border-radius: 0;
 	box-shadow: unset;
 }
-.tutorials_banner img{
+
+.tutorials_banner img {
 	margin: 0;
 	float: left;
 	max-height: unset;
 }
-.tutorials_banner .banner_left--item1 { grid-area: item1; }
-.tutorials_banner .banner_right--item2 { grid-area: item2; }
-.tutorials_banner .banner_right--item3 { grid-area: item3; }
-.tutorials_banner .banner_right--item4 { grid-area: item4; }
-.tutorials_banner{
+
+.tutorials_banner .banner_left--item1 {
+	grid-area: item1;
+}
+
+.tutorials_banner .banner_right--item2 {
+	grid-area: item2;
+}
+
+.tutorials_banner .banner_right--item3 {
+	grid-area: item3;
+}
+
+.tutorials_banner .banner_right--item4 {
+	grid-area: item4;
+}
+
+.tutorials_banner {
 	display: grid;
 	grid-template-areas:
-    'item1 item1 item2 item2'
-    'item1 item1 item3 item4';
+		'item1 item1 item2 item2'
+		'item1 item1 item3 item4';
 	grid-gap: 0.75rem;
 }
 
-.tutorials_trending{
+.tutorials_trending {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -590,59 +612,68 @@ summary {
 	padding: 20px 22px;
 	border: 1px solid #000;
 }
-html[data-theme='dark'] .tutorials_trending img{
+
+html[data-theme='dark'] .tutorials_trending img {
 	-webkit-filter: brightness(0) invert(1);
 	filter: brightness(0) invert(1);
 }
-html[data-theme='dark'] .tutorials_trending .trending_category{
+
+html[data-theme='dark'] .tutorials_trending .trending_category {
 	background: #fff;
 	color: #000;
 }
-html[data-theme='dark'] .tutorials_trending{
+
+html[data-theme='dark'] .tutorials_trending {
 	border: 1px solid #fff;
 }
-.tutorials_trending img{
+
+.tutorials_trending img {
 	margin-inline: unset;
 	margin: 0;
 }
 
-.tutorials_trending .trending_category{
+.tutorials_trending .trending_category {
 	display: inline-block;
 	color: #fff;
 	background: #000;
-	font-size: var( --ifm-h2-font-size )  ;
+	font-size: var(--ifm-h2-font-size);
 	font-weight: bold;
 	padding: 0px 8px 4px 8px;
 }
-.tutorials_trending .trending_title{
+
+.tutorials_trending .trending_title {
 	color: var(--color-tutorius);
 	font-size: 16px;
 	line-height: 19px;
 	padding-left: 50px;
 }
-.tutorials_trending a:hover h2{
+
+.tutorials_trending a:hover h2 {
 	color: var(--ifm-menu-color-active);
 }
-.tutorials_trending .items{
+
+.tutorials_trending .items {
 	display: flex;
 	align-items: center;
 }
 
 /* Category */
-.tutorials_category{
+.tutorials_category {
 	display: grid;
-	grid-template-columns: repeat( 3, 1fr );
+	grid-template-columns: repeat(3, 1fr);
 	column-gap: 1.5rem;
 	row-gap: 3rem;
 }
-.tutorials_category .items_heading{
+
+.tutorials_category .items_heading {
 	font-size: var(--ifm-h2-font-size);
 	line-height: var(--ifm-heading-line-height);
 	color: var(--ifm-menu-color-active);
 	display: block;
 	margin: var(--ifm-heading-margin-top) 0 var(--ifm-heading-margin-bottom) 0;
 }
-.tutorials_category img{
+
+.tutorials_category img {
 	object-fit: cover;
 	object-position: center;
 	height: auto;
@@ -651,28 +682,33 @@ html[data-theme='dark'] .tutorials_trending{
 	float: left;
 	margin-bottom: 5px;
 }
-.category_wrap .tutorials_category{
+
+.category_wrap .tutorials_category {
 	margin-top: 60px;
 }
-.tutorials_category .items_title{
-	font-size: 20px ;
+
+.tutorials_category .items_title {
+	font-size: 20px;
 	line-height: 24px;
 	font-weight: 500;
 	color: #202E3C;
 }
-.tutorials_category ul{
+
+.tutorials_category ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: square;
 	clear: both;
 }
-.tutorials_category ul li{
+
+.tutorials_category ul li {
 	position: relative;
 	padding: 10px 15px;
 	list-style-type: none;
 	border-bottom: 1px solid #B4B4B4;
 }
-.tutorials_category ul li::before{
+
+.tutorials_category ul li::before {
 	content: "";
 	width: 5px;
 	height: 5px;
@@ -681,93 +717,118 @@ html[data-theme='dark'] .tutorials_trending{
 	left: 0px;
 	top: 21px;
 }
-.tutorials_category ul li a{
-	font-size: 16px ;
+
+.tutorials_category ul li a {
+	font-size: 16px;
 	line-height: 19px;
 	font-weight: 500;
 	color: var(--color-tutorius);
 	display: inline-block;
 }
-.tutorials_category ul li a:hover{
+
+.tutorials_category ul li a:hover {
 	color: var(--ifm-menu-color-active);
 }
-.tutorials_category--new{
+
+.tutorials_category--new {
 	row-gap: 1.5rem;
 }
+
 .tutorials_category--new .items_titles {
 	position: relative;
 	color: var(--color-tutorius);
-    padding: 15px 0px;
-    margin: 0;
-    clear: both;
+	padding: 15px 0px;
+	margin: 0;
+	clear: both;
 }
-.tutorials_category--new p :hover .items_titles{
-    color: var(--ifm-menu-color-active);
+
+.tutorials_category--new p :hover .items_titles {
+	color: var(--ifm-menu-color-active);
 }
-@media ( max-width: 1199px ){
-	.tutorials_trending .trending_category{
+
+@media (max-width: 1199px) {
+	.tutorials_trending .trending_category {
 		font-size: 18px;
 	}
-	.tutorials_trending .trending_title{
+
+	.tutorials_trending .trending_title {
 		padding-left: 35px;
 	}
-	.tutorials_trending .trending--third{
+
+	.tutorials_trending .trending--third {
 		display: none;
 	}
-	.tutorials_category .items_heading, .tutorials_category h2{
+
+	.tutorials_category .items_heading,
+	.tutorials_category h2 {
 		font-size: 18px;
 		line-height: 22px;
 	}
 }
-@media ( max-width:1024px ){
-	.tutorials_trending .trending_category{
+
+@media (max-width:1024px) {
+	.tutorials_trending .trending_category {
 		font-size: 1.5rem;
 	}
-	.tutorials_trending .trending_title{
+
+	.tutorials_trending .trending_title {
 		padding-left: 52px;
 	}
-	.tutorials_trending .trending--second{
+
+	.tutorials_trending .trending--second {
 		display: none;
 	}
-	.tutorials_category .items_heading, .tutorials_category h2{
+
+	.tutorials_category .items_heading,
+	.tutorials_category h2 {
 		font-size: var(--ifm-h2-font-size);
 		line-height: var(--ifm-heading-line-height);
 	}
-	.tutorials_category{
-		grid-template-columns: repeat( 2, 1fr );
+
+	.tutorials_category {
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 }
-@media ( max-width:767px ){
-	.tutorials_banner{
-		grid-template-areas:'item1''item2''item3''item4';
+
+@media (max-width:767px) {
+	.tutorials_banner {
+		grid-template-areas: 'item1' 'item2' 'item3' 'item4';
 	}
-	.tutorials img{
+
+	.tutorials img {
 		width: 100%;
 		max-height: unset;
 		height: auto;
 	}
-	.tutorials_trending{
+
+	.tutorials_trending {
 		display: block;
 		padding: 12px;
 	}
-	.tutorials_trending .trending_category{
+
+	.tutorials_trending .trending_category {
 		font-size: 22px;
 	}
-	.tutorials_trending img{
+
+	.tutorials_trending img {
 		display: none;
 	}
-	.tutorials_trending .items{
+
+	.tutorials_trending .items {
 		display: block;
 	}
-	.tutorials_trending .trending_title{
+
+	.tutorials_trending .trending_title {
 		padding: 0;
 		margin-top: 12px;
 	}
-	.tutorials_category{
-		grid-template-columns: repeat( 1, 1fr );
+
+	.tutorials_category {
+		grid-template-columns: repeat(1, 1fr);
 	}
-	.tutorials_category img{
+
+	.tutorials_category img {
 		width: 100%;
 		max-height: unset;
 		height: auto;
@@ -776,6 +837,6 @@ html[data-theme='dark'] .tutorials_trending{
 
 
 /* Hide tutorial items */
-.menu__list-item:nth-child(4) .menu__list >li:nth-child(n+7){
+.menu__list-item:nth-child(4) .menu__list>li:nth-child(n+7) {
 	display: none;
 }
