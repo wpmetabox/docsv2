@@ -2,11 +2,18 @@
 title: Adding custom fields to yoast SEO meta tags
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 Normally, when you use Yoast SEO on your site, there will be a section to fill in the title, and description that **helps search engines index them easier**. You can fill in static content or dynamic content in these sections. But in some cases, you may want to get content not only from those default fields but from custom fields. So, how to **add content from custom fields created with Meta Box to Yoast SEO meta tags**, just follow these practices.
 
 I'll get data from Meta Box custom fields, then add to Yoast SEO meta tags as title and description.
 
 ![add content to Yoast SEO meta tags as title and description](https://i.imgur.com/9Kux9hY.png)
+
+## Video version
+
+<LiteYouTubeEmbed id='0oMK9bXmkPI' />
 
 ## Preparation
 
