@@ -103,13 +103,12 @@ This is the field settings for this:
 
 ```php
 [
-	'name'       => 'Icon',
-	'id'         => 'icon',
-	'type'       => 'icon',
+	'name'      => 'Icon',
+	'id'        => 'icon',
+	'type'      => 'icon',
 	// highlight-start
-	'icon_set'   => 'your-icon-set-name',
-	'icon_file'  => '/full/path/to/icons-file',
-	'icon_style' => 'url/to/icon/style.css',
+	'icon_file' => '/full/path/to/icons-file',
+	'icon_css'  => 'url/to/icon/style.css',
 	// highlight-end
 ]
 ```
@@ -120,13 +119,12 @@ Here is a sample icon field using Boxicons:
 
 ```php
 [
-	'name'       => 'Icon',
-	'id'         => 'icon',
-	'type'       => 'icon',
+	'name'      => 'Icon',
+	'id'        => 'icon',
+	'type'      => 'icon',
 	// highlight-start
-	'icon_set'   => 'boxicons',
-	'icon_file'  => get_theme_file_path( 'assets/icons.txt' ),               // Path to icons.txt in the theme.
-	'icon_style' => 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', // Boxicon CDN.
+	'icon_file' => get_theme_file_path( 'assets/icons.txt' ),               // Path to icons.txt in the theme.
+	'icon_css'  => 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', // Boxicon CDN.
 	// highlight-end
 ]
 ```
@@ -160,10 +158,9 @@ Don't forget to update your field settings to point `icon_file` to the new `icon
 	'name'       => 'Icon',
 	'id'         => 'icon',
 	'type'       => 'icon',
-	'icon_set'   => 'boxicons',
 	// highlight-next-line
 	'icon_file'  => get_theme_file_path( 'assets/icons.json' ),
-	'icon_style' => 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
+	'icon_css' => 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
 ]
 ```
 
@@ -185,41 +182,45 @@ If you **download SVGs and put them in a specific directory**, then you need to 
 	'name'      => 'Icon',
 	'id'        => 'icon',
 	'type'      => 'icon',
-	'icon_set'  => 'your-icon-set-name',
-	// highlight-start
-	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Full path to icon file.
-	'icon_dir'  => get_theme_file_path( 'assets/icons' ),      // Full path to the icon dir.
-	// highlight-end
+	// highlight-next-line
+	'icon_dir'  => get_theme_file_path( 'assets/icons' ), // Full path to the icon dir.
 ]
 ```
 
-The icon file can be a text file of icons' names or a JSON file of name and label pairs. It's similar to the icon file when using an icon font above.
+The plugin will get the **file names** and will show them as from the dropdown:
 
-Using a text file if you simply want a list of icon names:
+![Show SVG icons in a directory](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/svg-dir.png)
 
-```txt title="assets/icons.txt"
-heart
-bookmark
-check-circle
-```
 
-Using a JSON file if you want to set icons' names and labels:
+If you want to specify labels for icons, you'll need to create a JSON file as follows:
 
 ```json title="assets/icons.json"
 {
-	"heart": "Heart",
-	"bookmark": "Bookmark",
-	"check-circle": "Check"
+	"hippo": "Hippo",
+	"tractor": "Tractor",
+	"truck-monster": "Truck Monster"
 }
 ```
 
-:::caution
+Where keys are the file names and values are the icon labels.
 
-Please note that icon names must **match** file names in the icon directory.
+Then update the field settings with `icon_file`:
 
-:::
+```php
+[
+	'name'      => 'Icon',
+	'id'        => 'icon',
+	'type'      => 'icon',
+	// highlight-next-line
+	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Full path to the icon file.
+	'icon_dir'  => get_theme_file_path( 'assets/icons' ),
+]
+```
+Then you'll see the labels as follows:
 
-If you use the SVG codes, then you only need to set the `icon_file` parameter. In this case, it **must be a JSON file that contains icon names, labels (optional), and SVG codes**.
+![Show SVG icons with labels](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/svg-icons-with-labels.png)
+
+If you **use the SVG codes**, then you only need to set the `icon_file` parameter. In this case, it **must be a JSON file that contains icon names, labels (optional), and SVG codes**.
 
 ```php
 [
@@ -271,9 +272,9 @@ Let's see a brief description of them before going into the steps of using a cus
 
 Name | Key | Description
 --- | --- | ---
-Icon set | `icon_set` | The name of your icon set. Should use only alphanumeric characters, dashes (`-`), and underscores (`_`). Should be unique.
+Icon set | `icon_set` | The name of your icon set.
 Icon file | `icon_file` | The full path to the icon file definition, which can be a text or JSON file.
-Icon style | `icon_style` | URL to the icon CSS file. It's required only when you use icons as an icon font (e.g. no SVG).
+Icon style | `icon_css` | URL to the icon CSS file. It's required only when you use icons as an icon font (e.g. no SVG).
 Icon dir | `icon_dir` | Full path to the folder that contains all SVGs of icons.
 
 ## Data
@@ -286,7 +287,7 @@ If the field is cloneable, the value is stored as a serialized array in a single
 
 ### Output format
 
-If you use an **icon font**, Meta Box will automatically enqueue the CSS file of the icon font (which you define in the `icon_style` parameter). The plugin will output an icon font in the format of:
+If you use an **icon font**, Meta Box will automatically enqueue the CSS file of the icon font (which you define in the `icon_css` parameter). The plugin will output an icon font in the format of:
 
 ```html
 <span class="my-icon-class"></span>
