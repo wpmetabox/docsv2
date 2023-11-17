@@ -274,7 +274,7 @@ Name | Key | Description
 --- | --- | ---
 Icon set | `icon_set` | The name of your icon set.
 Icon file | `icon_file` | The full path to the icon file definition, which can be a text or JSON file.
-Icon style | `icon_css` | URL to the icon CSS file. It's required only when you use icons as an icon font (e.g. no SVG).
+Icon CSS | `icon_css` | URL to the icon CSS file. It's required only when you use icons as an icon font (e.g. no SVG).
 Icon dir | `icon_dir` | Full path to the folder that contains all SVGs of icons.
 
 ## Data
