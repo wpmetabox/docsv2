@@ -71,7 +71,8 @@ add_action( 'init', function() {
 	$term_id = 123;
 	$field_id = 'my_field';
 	$value = 'My custom value';
-	rwmb_set_meta( $term_id, $field_id, $value );
+	$args = [ 'object_type' => 'term' ];
+	rwmb_set_meta( $term_id, $field_id, $value, $args );
 }, 99 );
 ```
 
@@ -82,7 +83,8 @@ add_action( 'init', function() {
 	$user_id = 123;
 	$field_id = 'my_field';
 	$value = 'My custom value';
-	rwmb_set_meta( $user_id, $field_id, $value );
+	$args = [ 'object_type' => 'user' ];
+	rwmb_set_meta( $user_id, $field_id, $value, $args );
 }, 99 );
 ```
 
@@ -93,7 +95,8 @@ add_action( 'init', function() {
 	$option_name = 'my_option';
 	$field_id = 'my_field';
 	$value = 'My custom value';
-	rwmb_set_meta( $option_name, $field_id, $value, [ 'object_type' => 'setting' ] );
+	$args = [ 'object_type' => 'setting' ];
+	rwmb_set_meta( $option_name, $field_id, $value, $args );
 }, 99 );
 ```
 
@@ -105,9 +108,10 @@ add_action( 'init', function() {
 	$post_id = 123;
 	$field_id = 'my_field';
 	$value = 'My custom value';
-	rwmb_set_meta( $post_id, $field_id, $value, [
+	$args = [
 		'storage_type' => 'custom_table',
 		'table'        => $table_name,
-	] );
+	];
+	rwmb_set_meta( $post_id, $field_id, $value, $args );
 }, 99 );
 ```
