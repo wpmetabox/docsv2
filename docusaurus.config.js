@@ -67,6 +67,12 @@ const config = {
         respectPrefersColorScheme: true,
       },
       image: 'https://i.imgur.com/wnJtgSC.jpg',
+      announcementBar: {
+        content: '<b>🔥 Black Friday Deal 🔥:</b> Up to <b>30% OFF</b> until <b>Dec 30</b>. <a target="_blank" rel="noopener noreferrer" href="https://metabox.io/pricing/">Get it now!</a>',
+        backgroundColor: '#fed7aa',
+        textColor: '#7c2d12',
+        isCloseable: false,
+      },
       navbar: {
         hideOnScroll: true,
         logo: {
