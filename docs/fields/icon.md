@@ -16,7 +16,7 @@ Depending on the icon library you use, you can output the icon on the front end 
 
 <Screenshots name="icon" col1={[
     ['https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/screenshot.png', 'The icon field interface']
-]} col2="https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/settings.png" />
+]} col2="https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/settings-in-builder.png" />
 
 ## Defining the icon library
 
@@ -59,10 +59,12 @@ Extract it and find the file `icons.json` under the `metadata` folder:
 
 This file contains all the data for icons, including CSS classes and SVG codes. We need to use it to select and output icons.
 
-Now copy it to your theme or your plugin, and then add a field with type `icon` and set the following parameters:
+Now copy it to your theme or your plugin, and then add a field with type `icon` and set the following parameters in the Meta Box Builder UI:
 
-- Icon set: must be `font-awesome-pro`
-- Icon file: full path to the `icons.json` file
+- <u>Icon set</u>: select "Font Awesome Pro"
+- <u>Icon file</u>: relative path from the WordPress root directory to the `icons.json` file
+
+![Setup Font Awesome Pro in Meta Box Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/font-awesome-pro-in-builder.png)
 
 If you use code, the field settings will look similar to this:
 
@@ -72,13 +74,17 @@ If you use code, the field settings will look similar to this:
 	'id'        => 'icon',
 	'type'      => 'icon',
 	// highlight-start
-	'icon_set'  => 'font-awesome-pro',                         // Required.
+	'icon_set'  => 'font-awesome-pro',                         // MUST.
 	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Full path to icons.json file.
 	// highlight-end
 ]
 ```
 
-What's different here is that you need to set `icon_set` to `font-awesome-pro` and set the `icon_file` parameter to the full path of the `icons.json` file.
+:::info
+
+Please note that if you use code to register fields, the `icon_file` must be the full path to the file.
+
+:::
 
 After that, go to edit your post and you'll see the select box for search and pick an icon.
 
@@ -96,10 +102,14 @@ One CSS file for all icons, no need to prepare SVG for each icon | Need to prepa
 
 To use an icon font, you need to prepare 2 files:
 
-- One CSS file to enqueue the icon font. You can use a CDN if the icon font has support for it (like [Line Awesome](https://icons8.com/line-awesome), [Boxicons](https://boxicons.com/)).
-- One JSON or text file to define the icons you want to use
+- <u>Icon CSS</u>: a CSS file to enqueue the icon font. In the Meta Box Builder UI, you can enter a relative URL to that file from the WordPress root directory or a CDN URL if the icon font has support for it (like [Line Awesome](https://icons8.com/line-awesome), [Boxicons](https://boxicons.com/)).
+- <u>Icon file</u>: a JSON or text file to define the icons you want to use. In the Meta Box Builder UI, enter the relative path from the WordPress root directory.
 
 This is the field settings for this:
+
+![Setup custom icon font in Meta Box Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/icon-font.png)
+
+If you use code, you must set **full URL/path** for these parameters:
 
 ```php
 [
@@ -108,7 +118,7 @@ This is the field settings for this:
 	'type'      => 'icon',
 	// highlight-start
 	'icon_file' => '/full/path/to/icons-file',
-	'icon_css'  => 'url/to/icon/style.css',
+	'icon_css'  => 'https://full/url/to/icon/style.css',
 	// highlight-end
 ]
 ```
@@ -177,6 +187,12 @@ Depending on how you manage icons within your project, you can *download SVGs an
 
 If you **download SVGs and put them in a specific directory**, then you need to define the field as follows:
 
+![Setup custom icon directory in Meta Box Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/icon-dir.png)
+
+Where "Icon dir" is the relative path to the icon directory from the WordPress root path.
+
+If you use code to register the field, you need to set **full path** to that parameter:
+
 ```php
 [
 	'name'      => 'Icon',
@@ -191,7 +207,6 @@ The plugin will get the **file names** and will show them as from the dropdown:
 
 ![Show SVG icons in a directory](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/svg-dir.png)
 
-
 If you want to specify labels for icons, you'll need to create a JSON file as follows:
 
 ```json title="assets/icons.json"
@@ -204,7 +219,11 @@ If you want to specify labels for icons, you'll need to create a JSON file as fo
 
 Where keys are the file names and values are the icon labels.
 
-Then update the field settings with `icon_file`:
+Then in the Meta Box Builder UI, set the "Icon file" parameter the relative path to that file from the WordPress root directory:
+
+![Show SVG icons in a directory with JSON file](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/icon-dir-with-json.png)
+
+If you use code, use the following snippet (make sure you set the **full path** to that file):
 
 ```php
 [
@@ -220,18 +239,7 @@ Then you'll see the labels as follows:
 
 ![Show SVG icons with labels](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/svg-icons-with-labels.png)
 
-If you **use the SVG codes**, then you only need to set the `icon_file` parameter. In this case, it **must be a JSON file that contains icon names, labels (optional), and SVG codes**.
-
-```php
-[
-	'name'      => 'Icon',
-	'id'        => 'icon',
-	'type'      => 'icon',
-	'icon_set'  => 'your-icon-set-name',
-	// highlight-next-line
-	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Full path to icon file.
-]
-```
+If you **use the SVG codes**, then you only need to set the "Icon file" parameter. In this case, it **must be a JSON file that contains icon names, labels (optional), and SVG codes**.
 
 This is a sample JSON file:
 
