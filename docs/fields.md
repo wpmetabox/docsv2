@@ -49,6 +49,8 @@ Learn about field types, what they are and when you should use them.
 
 [![image select](/thumbs/image-select.png) <span className="thumb_text">Image Select</span>](/fields/image-select/)
 
+[![icon](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/thumb.png) <span className="thumb_text">Icon</span>](/fields/icon/)
+
 [![key value](/thumbs/key-value.png) <span className="thumb_text">Key value</span>](/fields/key-value/)
 
 [![map](/thumbs/map.png) <span className="thumb_text">Google Maps</span>](/fields/map/)
