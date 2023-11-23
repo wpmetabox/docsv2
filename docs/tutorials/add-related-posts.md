@@ -8,7 +8,7 @@ This is a typical section for related posts as you can see somewhere.
 
 ![This is a typical section for related posts](https://i.imgur.com/VtkA5bQ.png)
 
-## Video version
+## Video Version
 
 <LiteYouTubeEmbed id='OHY6oGieFRI' />
 
