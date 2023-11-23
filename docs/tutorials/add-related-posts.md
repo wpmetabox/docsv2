@@ -8,6 +8,10 @@ This is a typical section for related posts as you can see somewhere.
 
 ![This is a typical section for related posts](https://i.imgur.com/VtkA5bQ.png)
 
+## Video version
+
+<LiteYouTubeEmbed id='OHY6oGieFRI' />
+
 ## Preparation
 
 There are different ways to add related posts but the most popular is using a tool to automatically choose some posts related by keywords, tags, categories, or taxonomies of the current post.  It’s not using custom fields. However, it might be not precise in some cases, especially when you want particularly related posts to be prior on the list. That’s why you should **use custom fields to choose exactly which posts are related** to the current post. 
