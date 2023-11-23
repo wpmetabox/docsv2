@@ -1,6 +1,8 @@
 ---
 title: Adding related posts using custom fields
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Adding related ports is a common way to keep your visitor stay on your site and help them find more useful content. In this practice, we will find out how to **choose a specific post to be related to another one using custom fields** created with Meta Box.
 
