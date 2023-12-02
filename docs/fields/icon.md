@@ -117,6 +117,22 @@ If you use code, the field settings will look similar to this:
 ]
 ```
 
+Some icon library uses JavaScript to load the icons. If you use such a library, you can set `icon_css` a callback function that enqueue the JavaScript file:
+
+```php
+[
+	'name'      => 'Icon',
+	'id'        => 'icon',
+	'type'      => 'icon',
+	'icon_file' => 'path/to/icons-file',
+	// highlight-start
+	'icon_css'  => function() {
+		wp_enqueue_script( 'my_icon_script', 'https://path/to/icon/script.js', [], '', true );
+	}
+	// highlight-end
+]
+```
+
 The `icon_file` defines a list of icons you want to use in your project. It's best if you don't want to use all icons from the icon font.
 
 Here is a sample icon field using Boxicons:
