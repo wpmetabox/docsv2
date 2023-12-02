@@ -62,7 +62,7 @@ This file contains all the data for icons, including CSS classes and SVG codes. 
 Now copy it to your theme or your plugin, and then add a field with type `icon` and set the following parameters in the Meta Box Builder UI:
 
 - <u>Icon set</u>: select "Font Awesome Pro"
-- <u>Icon file</u>: relative path from the WordPress root directory to the `icons.json` file
+- <u>Icon file</u>: absolute or relative path from the WordPress root directory to the `icons.json` file
 
 ![Setup Font Awesome Pro in Meta Box Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/font-awesome-pro-in-builder.png)
 
@@ -75,16 +75,10 @@ If you use code, the field settings will look similar to this:
 	'type'      => 'icon',
 	// highlight-start
 	'icon_set'  => 'font-awesome-pro',                         // MUST.
-	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Full path to icons.json file.
+	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Ppath to icons.json file.
 	// highlight-end
 ]
 ```
-
-:::info
-
-Please note that if you use code to register fields, the `icon_file` must be the full path to the file.
-
-:::
 
 After that, go to edit your post and you'll see the select box for search and pick an icon.
 
@@ -102,14 +96,14 @@ One CSS file for all icons, no need to prepare SVG for each icon | Need to prepa
 
 To use an icon font, you need to prepare 2 files:
 
-- <u>Icon CSS</u>: a CSS file to enqueue the icon font. In the Meta Box Builder UI, you can enter a relative URL to that file from the WordPress root directory or a CDN URL if the icon font has support for it (like [Line Awesome](https://icons8.com/line-awesome), [Boxicons](https://boxicons.com/)).
-- <u>Icon file</u>: a JSON or text file to define the icons you want to use. In the Meta Box Builder UI, enter the relative path from the WordPress root directory.
+- <u>Icon CSS</u>: a CSS file to enqueue the icon font. In the Meta Box Builder UI, you can enter an absolute URL or a relative URL to that file from the WordPress root directory or a CDN URL if the icon font has support for it (like [Line Awesome](https://icons8.com/line-awesome), [Boxicons](https://boxicons.com/)).
+- <u>Icon file</u>: a JSON or text file to define the icons you want to use. In the Meta Box Builder UI, enter the absolute or relative path from the WordPress root directory.
 
 This is the field settings for this:
 
 ![Setup custom icon font in Meta Box Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/icon-font.png)
 
-If you use code, you must set **full URL/path** for these parameters:
+If you use code, the field settings will look similar to this:
 
 ```php
 [
@@ -117,8 +111,8 @@ If you use code, you must set **full URL/path** for these parameters:
 	'id'        => 'icon',
 	'type'      => 'icon',
 	// highlight-start
-	'icon_file' => '/full/path/to/icons-file',
-	'icon_css'  => 'https://full/url/to/icon/style.css',
+	'icon_file' => 'path/to/icons-file',
+	'icon_css'  => 'https://url/to/icon/style.css',
 	// highlight-end
 ]
 ```
@@ -189,9 +183,9 @@ If you **download SVGs and put them in a specific directory**, then you need to 
 
 ![Setup custom icon directory in Meta Box Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/icon-dir.png)
 
-Where "Icon dir" is the relative path to the icon directory from the WordPress root path.
+Where "Icon dir" is the absolute or relative path to the icon directory from the WordPress root path.
 
-If you use code to register the field, you need to set **full path** to that parameter:
+If you use code to register the field, your field settings will look like this:
 
 ```php
 [
@@ -199,7 +193,7 @@ If you use code to register the field, you need to set **full path** to that par
 	'id'        => 'icon',
 	'type'      => 'icon',
 	// highlight-next-line
-	'icon_dir'  => get_theme_file_path( 'assets/icons' ), // Full path to the icon dir.
+	'icon_dir'  => get_theme_file_path( 'assets/icons' ), // Path to the icon dir.
 ]
 ```
 
@@ -219,11 +213,11 @@ If you want to specify labels for icons, you'll need to create a JSON file as fo
 
 Where keys are the file names and values are the icon labels.
 
-Then in the Meta Box Builder UI, set the "Icon file" parameter the relative path to that file from the WordPress root directory:
+Then in the Meta Box Builder UI, set the "Icon file" parameter the absolute or relative path to that file from the WordPress root directory:
 
 ![Show SVG icons in a directory with JSON file](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/icon-dir-with-json.png)
 
-If you use code, use the following snippet (make sure you set the **full path** to that file):
+If you use code, the field settings look like this:
 
 ```php
 [
@@ -231,7 +225,7 @@ If you use code, use the following snippet (make sure you set the **full path** 
 	'id'        => 'icon',
 	'type'      => 'icon',
 	// highlight-next-line
-	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Full path to the icon file.
+	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Path to the icon file.
 	'icon_dir'  => get_theme_file_path( 'assets/icons' ),
 ]
 ```
