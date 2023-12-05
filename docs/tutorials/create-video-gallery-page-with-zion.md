@@ -67,7 +67,7 @@ Pay attention to the **Author** box. This section is available since we set it t
 
 Now let’s move on to the next steps.
 
-## 3. Creating a new page
+## 3. Creating the page
 
 Go to **Pages** > **Add News** to create a new page for the video gallery, as usual.
 
