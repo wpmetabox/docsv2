@@ -104,7 +104,7 @@ Now all of the images are displayed on the page.
 
 Go to **Meta Box** > **Views** to create a new template that we will use for the gallery.
 
-![Create a new template for the gallery.](https://i.imgur.com/UfRUvDX.png
+![Create a new template for the gallery.](https://i.imgur.com/UfRUvDX.png)
 
 Click on the **Insert Field** button and look for the name of the field that we input images in the right sidebar.
 
