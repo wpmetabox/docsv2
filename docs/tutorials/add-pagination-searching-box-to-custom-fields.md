@@ -108,7 +108,7 @@ add_filter( 'rwmb_enqueue_scripts', 'estar_add_list_js_library' );
 
 ![Add some codes to declare the JS online library](https://i.imgur.com/WAiUtMP.png)
 
-**estar** is the theme that I’m using for my website (you can download this theme here for free).
+**estar** is the theme that I’m using for my website (you can download [this theme](https://gretathemes.com/wordpress-themes/estar/) here for free).
 
 ![The theme that I’m using for my website](https://i.imgur.com/EmaTEUP.png)
 
