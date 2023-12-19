@@ -1,5 +1,5 @@
 ---
-title: Adding custom fields to yoast SEO meta tags
+title: Adding custom fields to Yoast SEO meta tags
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
