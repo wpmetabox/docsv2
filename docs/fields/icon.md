@@ -75,7 +75,7 @@ If you use code, the field settings will look similar to this:
 	'type'      => 'icon',
 	// highlight-start
 	'icon_set'  => 'font-awesome-pro',                         // MUST.
-	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Ppath to icons.json file.
+	'icon_file' => get_theme_file_path( 'assets/icons.json' ), // Path to icons.json file.
 	// highlight-end
 ]
 ```
@@ -94,10 +94,9 @@ One CSS file for all icons, no need to prepare SVG for each icon | Need to prepa
 
 ### Using icon font
 
-To use an icon font, you need to prepare 2 files:
+To use an icon font, you need to prepare the **icon CSS** file, which is a CSS file to enqueue the icon font. In the Meta Box Builder UI, you can enter an absolute URL or a relative URL to that file from the WordPress root directory or a CDN URL if the icon font has support for it (like Line Awesome, Boxicons).
 
-- <u>Icon CSS</u>: a CSS file to enqueue the icon font. In the Meta Box Builder UI, you can enter an absolute URL or a relative URL to that file from the WordPress root directory or a CDN URL if the icon font has support for it (like [Line Awesome](https://icons8.com/line-awesome), [Boxicons](https://boxicons.com/)).
-- <u>Icon file</u>: a JSON or text file to define the icons you want to use. In the Meta Box Builder UI, enter the absolute or relative path from the WordPress root directory.
+By default, the plugin will try to parse the content of the icon CSS file and extract all CSS classes for you to choose from. However, if your CSS file contains more CSS classes which are not used for icons, or you want to select only some icons, you'll need to prepare the **icon file**, which is a JSON or text file to define the icons you want to use. In the Meta Box Builder UI, enter the absolute or relative path from the WordPress root directory.
 
 This is the field settings for this:
 
