@@ -544,14 +544,20 @@ Fires after the output of the submit meta box. Accepts one parameter - the model
 `mbct_after_add`<br />
 `mbct_before_update`<br />
 `mbct_after_update`<br />
-`mbct_before_delete`<br />
-`mbct_after_delete`<br />
 
-Fire before/after adding/updating/deleting data in a custom table. Accepts 3 parameters:
+These are actions that fire before/after adding/updating data in a custom table. Accepts 3 parameters:
 
 - `$object_id`: the object ID
 - `$table`: the table name
 - `$row`: the associate array of data
+
+`mbct_before_delete`<br />
+`mbct_after_delete`<br />
+
+These are actions that fire before/after deleting data in a custom table. Accepts 2 parameters:
+
+- `$object_id`: the object ID
+- `$table`: the table name
 
 `mbct_add_data`<br />
 `mbct_update_data`<br />
