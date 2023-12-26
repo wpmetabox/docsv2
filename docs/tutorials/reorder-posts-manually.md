@@ -4,7 +4,7 @@ title: Reordering posts manually using custom fields
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Arranging posts in a custom order will be much easier if you use the Meta Box plugin and the two extensions Meta Box Builder and MB Admin Columns. Compared to arranging posts by modifying the published date, which is time-consuming, Meta Box plugin and these extensions will do it more quickly in a blink of an eye for you.
+Arranging posts in a custom order will be much easier if you use custom fields. It allows you to set any post first without criteria.
 
 ![An example of arranging posts in a custom order](https://i.imgur.com/Z2Xhqlj.png)
 
@@ -18,15 +18,13 @@ This is the new order of the posts as you can see.
 
 ## Preparation
 
-Arranging posts in a custom order when using custom fields allows you to set any post first without criteria. However, if you want to display posts according to advanced conditions, you can refer to [this series](https://metabox.io/series/specific-criteria/).
+To get started, we need the **Meta Box** to have the framework for creating custom fields. It’s free, so you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
-In this practice, we need some Meta Box extensions to have some advanced features:
+Also, we’ll use some of Meta Box’s extensions:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create custom fields. You can download it directly from wordpress.org.
-* [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to manage the posts and view the order more easily in the WordPress admin dashboard. 
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to visually create a custom field for the order. 
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
 
-You can install them individually or use **Meta Box AIO**.
+* [Meta Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to manage the posts and view the order more easily in the WordPress admin.
 
 ## 1. Creating custom fields
 
