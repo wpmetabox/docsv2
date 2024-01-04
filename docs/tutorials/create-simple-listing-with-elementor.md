@@ -52,7 +52,7 @@ Go to **Meta Box** > **Post Types** to create a new post type for your products.
 
 After publishing, you will see a new menu in your dashboard. It’s your post type.
 
-## Creating custom fields
+## 2. Creating custom fields
 
 Your products may have some extra information, so we need custom fields in this case. Just go to **Meta Box** > **Custom Fields** > **Add New** to create some fields for it.
 
@@ -64,7 +64,7 @@ After creating all the needed fields, go to the **Settings** tab. Choose **Locat
 
 ![Set location to apply the fields to your product post type.](https://i.imgur.com/EI2FtmB.png)
 
-## 2. Creating a new taxonomy
+## 3. Creating a new taxonomy
 
 As mentioned, we’ll have a filter on the page based on a taxonomy. I will divide the vouchers into some discount levels, and each one of them will be a term of the taxonomy. So let’s move on to create them.
 
@@ -96,7 +96,7 @@ Here are some example posts that I've created. And you can easily view the vouch
 
 ![The voucher information from the created taxonomy directly in the admin column.](https://i.imgur.com/jUrOWvs.png)
 
-## Displaying the product information
+## 4. Displaying the product information
 
 As I mentioned before, we should create a loop item template to display all the expected information about the product first. So, go to the **Elementor Theme Builder** and create it.
 
@@ -162,13 +162,13 @@ Back to edit the template for your products, choose a **Shortcode** element. And
 
 So, we’ve done a loop item for the product. Let’s move on.
 
-## 3. Creating the page
+## 5. Creating the page
 
 Go to **Pag**es and create a new one, as usual.
 
 ![Create a new page for the products](https://i.imgur.com/AnInt80.png)
 
-### 3.1 Getting posts
+### 5.1 Getting posts
 
 For displaying posts, I meant products, we had a template for each post. So now, add the **Loop Grid** element.
 
@@ -190,7 +190,7 @@ Then, all of the posts in that post type will display.
 
 All the information about my product is displayed, except the status. We will fix it using CSS later.
 
-### 3.2 Adding filters
+### 5.2 Adding filters
 
 For the filter section, just add the **Taxonomy Filter** element to the place you want
 
