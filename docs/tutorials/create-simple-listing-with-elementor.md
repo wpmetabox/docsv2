@@ -204,7 +204,7 @@ You can see how it works on the frontend. The status doesn’t display since it 
 
 ![The status doesn’t display since it is still a class and hasn't been set to display yet.](https://i.imgur.com/A4CtYNC.gif)
 
-## Styling the page
+## 6. Styling the page
 
 Go back to the created template as a loop item for each product. Just customize each element's settings to have the best look for product information.
 
