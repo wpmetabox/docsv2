@@ -44,7 +44,7 @@ Here are the extensions we need:
 
 Finally, we’ll use **Elementor** to build the page and use **Elementor Pro**, which has integration with Meta Box, to display the information from custom fields.
 
-## Creating a new post type
+## 1. Creating a new post type
 
 Go to **Meta Box** > **Post Types** to create a new post type for your products.
 
@@ -64,7 +64,7 @@ After creating all the needed fields, go to the **Settings** tab. Choose **Locat
 
 ![Set location to apply the fields to your product post type.](https://i.imgur.com/EI2FtmB.png)
 
-## Creating a new taxonomy
+## 2. Creating a new taxonomy
 
 As mentioned, we’ll have a filter on the page based on a taxonomy. I will divide the vouchers into some discount levels, and each one of them will be a term of the taxonomy. So let’s move on to create them.
 
@@ -162,13 +162,13 @@ Back to edit the template for your products, choose a **Shortcode** element. And
 
 So, we’ve done a loop item for the product. Let’s move on.
 
-## Creating the page
+## 3. Creating the page
 
 Go to **Pag**es and create a new one, as usual.
 
 ![Create a new page for the products](https://i.imgur.com/AnInt80.png)
 
-### Getting posts
+### 3.1 Getting posts
 
 For displaying posts, I meant products, we had a template for each post. So now, add the **Loop Grid** element.
 
@@ -190,7 +190,7 @@ Then, all of the posts in that post type will display.
 
 All the information about my product is displayed, except the status. We will fix it using CSS later.
 
-### Adding filters
+### 3.2 Adding filters
 
 For the filter section, just add the **Taxonomy Filter** element to the place you want
 
