@@ -18,7 +18,7 @@ The checkbox list field creates a list of tick-able checkboxes with options. You
 
 Besides the [common settings](/field-settings/) such as Label, ID, Default value, Cloneable, etc., this field has the following specific settings:
 
-![specific settings of the field](https://i.imgur.com/wPbyaql.png)
+![specific settings of the field](https://i.imgur.com/NPeZp8B.png)
 
 Name | Key | Description
 --- | --- | ---
@@ -33,11 +33,11 @@ Display "Toggle All" button | `select_all_none` | Display "Toggle All" button to
 
 :::
 
-When creating the field with **Meta Box Builder**, just input options into the **Choices** box. They're label of the choices:
+When creating the field with **Meta Box Builder**, just input options into the **Choices** box.
 
 ![Input the label of the options in the Choices box](https://i.imgur.com/cAtrHeY.png)
 
-In some special cases, you may need both values and lables of the choices.
+In some special cases, you may want the data stored (value) to be different from the data displayed (label), you can input data with the form `value`:`label`.
 
 ![the field with settings and options](https://i.imgur.com/xfykp6k.png)
 
@@ -61,7 +61,7 @@ This is the field settings array when creating this field with code:
 ],
 ```
 
-The checkbox list on the frontend displays exactly options.
+In the post/page editor, the checkbox list will display with options.
 
 ![The field displays in the post/page editor](https://i.imgur.com/u9Wk4xH.png)
 
@@ -81,7 +81,7 @@ Note that this field stores the **values**, not labels.
 
 ### Using MB Views
 
-[MB Views](https://docs.metabox.io/extensions/mb-views/) is an extension for Meta Box, which helps you to get Meta Box fields and build your templates on the front end fast and easily. The extension supports all custom fields built with Meta Box, and also post fields (such as post title and post content), site settings, user fields, and even query fields.
+[MB Views](https://docs.metabox.io/extensions/mb-views/) is an extension for Meta Box, which helps you to get Meta Box fields and build your templates on the front end fast and easily. The extension supports all custom fields built with Meta Box, and also post fields (such as post title and post content), site settings, user fields, and even query fields. MB Views is already bundled in the **Meta Box AIO**. So it's available in the Ultimate and Lifetime plans.
 
 **Displaying selected values or labels:**
 
