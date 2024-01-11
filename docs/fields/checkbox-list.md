@@ -184,4 +184,3 @@ $values  = rwmb_meta( 'my_field_id' );
     <?php endforeach ?>
 </ul>
 ```
-
