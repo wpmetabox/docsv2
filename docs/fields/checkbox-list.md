@@ -81,9 +81,7 @@ Note that this field stores the **values**, not labels.
 
 ### Using MB Views
 
-[MB Views](https://docs.metabox.io/extensions/mb-views/) is an extension for Meta Box, which helps you to get Meta Box fields and build your templates on the front end fast and easily. The extension supports all custom fields built with Meta Box, and also post fields (such as post title and post content), site settings, user fields, and even query fields. 
-
-MB Views is already bundled in the **Meta Box AIO**. So it's available in the Ultimate and Lifetime plans.
+[MB Views](https://docs.metabox.io/extensions/mb-views/) is an extension for Meta Box, which helps you to get Meta Box fields and build your templates on the front end fast and easily. The extension supports all custom fields built with Meta Box, and also post fields (such as post title and post content), site settings, user fields, and even query fields. MB Views is already bundled in the **Meta Box AIO**. So it's available in the Ultimate and Lifetime plans.
 
 **Displaying selected values or labels:**
 
