@@ -2,49 +2,92 @@
 title: Displaying a users list on the frontend
 ---
 
-We'll show you how to display the users list on the frontend with Meta Box plugin and allow manually setting to show/hide a specific user.
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-My example user list will be shown like this:
+In this guide, I'll show you how to **use Meta Box to easily display a user list on a page** as well as publish the user accounts **only when they are allowed** by the owners, besides, hide the accounts that users don’t want to publish.
 
-![Example of a users list](https://i.imgur.com/zpNqsi1.gif)
+I’ll make the user list as a table like this:
+
+![Example of a users list](https://i.imgur.com/UiBK2AF.gif)
+
+## Video version
+
+<LiteYouTubeEmbed id='Lj7ejCAfyT4'/>
 
 ## Preparation
 
-As you can see, we’ll have extra information for users along with the default ones. Furthermore, we also have a custom field to choose to show/hide the users.
+In the user list, we can display the default information as names and some extra information. Those extra details will be saved in custom fields created with **Meta Box**.
 
-So, these are the tools we need:
+I will separate the list into pages, limit the number of users displayed on a page, have pagination for it, and also have a searching box that allows us to find any user (as you see in the above image).
 
-* [Meta Box](https://metabox.io/): to have a framework to create custom fields;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to choose publish the users’ information or not;
-* [DataTables](https://datatables.net/): is used to choose the number of users to display on the page, and create a search function for the users list.
+These are the tools we need for this practice:
+
+* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to [create custom fields with an intuitive user interface](https://docs.metabox.io/tutorials/create-custom-fields/) (UI) with easy drag-and-drop manipulations on the backend. If you can code to create a custom field, you can skip this extension. But there is another free tool if you still want to use UI, which is the [Online Genera-tor](https://metabox.io/online-generator/).
+* [DataTables](https://datatables.net/): It is a library that uses jQuery to add advanced features to tables in HTML. It helps you display and create functions (pagination and search) with tables more easily.
 
 ## 1. Creating custom fields
 
+By default, WordPress already has some fields for users to input information. But sometimes, you may need some further information from them. Then, you should create custom fields to save that extra data.
+
+These are some custom fields I will create for this practice as an example.
+
+![Some custom fields I will create for the user list](https://i.imgur.com/In9SVPb.png)
+
+In there, the **Publish or not?** field is a special one. This is to choose with two options: Yes or No, also is where users let us know if their account is allowed to display on the list or not.
+
 Go to **Meta Box > Custom Fields** to create a new field group.
 
-![Create a field group](https://i.imgur.com/3Z36jEr.png)
+![Go to Meta Box > Custom Fields to create fields.](https://i.imgur.com/MWTZe9H.png)
 
-I chose the **Radio** field to allow adding some options in the **Choices** box for users to choose from.
+For the first field, choose the **Radio** type. It allows adding some options in the **Choices** box for users to choose from. In this case, it’s just publish or not publish. So, I input two options in the Yes/No form, and set the Default value of this field to Yes.
 
-![Choose the wanted field](https://i.imgur.com/OA4gQw3.png)
+![The Publish or not? field lets us know whether the user wants to publish their account or not.](https://i.imgur.com/QKfnu3h.png)
 
-As you can see, I created two selections **Yes/No** in the **Choices** box, which means **Publish/not Publish** the user accounts. Also, I set the **Default Value** of this field to **Yes**. Depending on your needs, you can change the settings as you want.
+Instead of using the radio field, you can also use some other type, such as Switch, Checkbox, or Select field. They are quite the same for this use.
 
-In addition, you can also create more fields to fill in more users’ information as follows:
+Other fields are common and typical fields, so just create them as usual. I set no special settings for them.
 
-![Create more fields to fill in the information](https://i.imgur.com/ieSeyDO.png)
+![Create custom fields as usual for user list](https://i.imgur.com/UU5RRXu.png)
 
-After creating the fields, move to the **Settings** tab > choose **Location** as **User**.
+After creating all the fields, move to the **Settings** tab and choose **Location** as **User** to display this field group on the User page.
 
-![Set Location for the created fields](https://i.imgur.com/IPGJ3lM.png)
+![Set location to display the fields on the User page](https://i.imgur.com/xjKIlsN.png)
 
-After publishing, you will see the created field on the user profile page.
+Now, on the profile page of any user, you will see the fields we have created.
 
-![Created fields on the user profile page](https://i.imgur.com/aTn0Sdc.png)
+![The fields we have created display on the profile page of any user.](https://i.imgur.com/Ijucdis.png)
 
-## 2. Creating a template
+Just fill in the information.
 
-Go to the theme directory, create a new file named `users-listing-page.php`. Then, add the following code to it:
+## 2. Creating a new page
+
+In the real case, you can add the user list to any pre-build page with some other content. But, I will create a new page to display only the user list on the page to keep this practice playing around the main content.
+
+Go to the **Pages** and create a new one as usual.
+
+![Create new page to display a user list](https://i.imgur.com/8NMWxVV.png)
+
+I leave this page blank since I will add the user list to it later.
+
+## 3. Displaying a user list on the page
+
+In this practice, I’m providing two ways to display the user list on the page.
+
+* **Using PHP**. We’ll add some lines of code to the theme’s files. It is not as complicated as common thinking. Just follow this practice with some simple git.
+* **Using MB Views** from **Meta Box**. This way, you will not touch any theme’s file. This plugin also helps to simplify the code a little bit, even if it is simple already, and the list will not be affected when you change the theme. So, I highly recommend this method.
+
+### 3.1. Method 1: Using PHP
+
+#### 3.1.1. Creating a template
+ 
+We should create a template for the page first. So, go to the theme folder and create a new php file.
+
+![Go to the theme folder and create a new php file](https://i.imgur.com/gmCmKoG.png)
+
+Now, add some codes to the file.
+
 ```
 <?php
 /*
@@ -79,19 +122,31 @@ Go to the theme directory, create a new file named `users-listing-page.php`. The
 </table>
 <?php get_footer(); ?>
 ```
-Then, you will have a template named **Users Listing Page**.
+![Add some codes to the php file](https://i.imgur.com/OQMeTI8.png)
 
-## 3. Creating a new page
+**In there**:
 
-Go to **Pages > Add New** to create a new page.
+`<?php get_header(); ?> and <?php get_footer(); ?>`: is to display the default header and footer of your website.
 
-Look at the **Page Attributes** section, you can see the **Template** tab, choose **Users Listing Page**.
+These lines of code in the image below are for the table, and it’s quite familiar since it’s the same as the table you usually add to a post.
 
-![Choose Users Listing Page option](https://i.imgur.com/VY2PMQg.png)
+![These lines of code are for the table.](https://i.imgur.com/jHpkjNP.png)
 
-## 4. Displaying users list
+Pay attention that I named this table with an ID as `Userslist`. We will use it for JavaScript later.
 
-Open the `users-listing-page.php` file that we created previously. Then, use the following function to get users’ data only when the value of the **Publish or not?** field is **Yes**;
+Go to the page editor and apply the created template to it.
+
+![Apply the created template to the page](https://i.imgur.com/YlGdmhj.png)
+
+Then, on the frontend, you will see the page with the table like this. Just the titles of the table display.
+
+![The page with the table](https://i.imgur.com/mSKI5D3.png)
+
+#### 3.1.2. Getting the user information
+
+Now, back to the template file to edit the code. We will get the data and insert it into the body of the table.
+
+But first, we will add some code to add a condition for display users since we have a field to choose to display the user or not.
 
 ```
 $users = get_users( [
@@ -99,10 +154,15 @@ $users = get_users( [
     'meta_value' => 'yes',
 ] );
 ```
+![Add some code to add a condition for display users](https://i.imgur.com/65NNY2n.png)
 
-Next, we will use a **foreach** loop to get the user’s information and output html.
+We use the `$users = get_users` function to get the user information. This condition based on the value saved in the **Publish or not?** field. So, the key will be the ID of the field, which is `publish_account`. And `yes` is the value of the option, which means users allow us to display their information. Hence, these lines, which I have added, help to get only users who choose the **Yes** option in the field.
 
-```php
+Next, let’s get information from each user.
+
+We have multiple users, so we should use a loop to get all of them.
+
+```
 <?php
         foreach ($users as $user) { $user_id = $user->ID; ?>
         <tr>
@@ -116,44 +176,160 @@ Next, we will use a **foreach** loop to get the user’s information and output 
 <?php } ?>
 ```
 
-**Explanation**:
+![Use a loop to get all users](https://i.imgur.com/WdW5f0p.png)
 
-* `$user_id = $user->ID`: this function is used to get user ID and assign it to `$user_id`.
-* `rwmb_meta( 'position', array( 'object_type' => 'user' ), $user_id )`: this function is to get the value of the field with the position ID from the user's ID.
+**In there**:
 
-You will see the user list display like this on the frontend:
+* `$user_id = $user->ID`: this function helps to get user ID and assign it to `$user_id`.
+* `$user->display_name`: we use this function to display the user’s names since the name of each user is from a default field provided by WordPress.
+* `rwmb_meta( )`: this function helps to get the data from the fields. For example, we use `rwmb_meta( 'position', array( 'object_type' => 'user' ), $user_id )` to get the value of the field with the position ID from the user’s ID.
+* `array( 'object_type' => 'user' )`: regulates that only data from the field assigned to the User object will be obtained.
 
-![The user list display on the frontend](https://i.imgur.com/k5WVTb4.png)
+Then, the table on the frontend has this look for now.
 
-## 5. Adding search box
+![The table on the frontend](https://i.imgur.com/cexAMSU.png)
 
-If you have more than 100 users on your sites, you should separate the users information into pages. In a different way,with the **DataTables library**, you can allow the viewer to choose how many users they want to see on the page and search for any user.
+#### 3.1.3. Adding functions to the table
 
-First, import the **DataTables library**. Here, I didn’t download it but use it directly using CDN on [jsDelivr](https://jsdelivr.com/) by using its URL.
+There is a problem that my list just has under 100 users but it looks pretty long. So, if the number of users on your website is much more than that, you will not be able to display it in just one page as above. That's why we should use the DataTables library. This tool will help us paging, sorting, and searching data in tables more easily.
 
-To import the library and script file, go to the `functions.php` file to add this code:
+Back to the template file, add this line to register the CSS library of **DataTables**.
 
-```php
-function libs_import() {
-           wp_enqueue_style( 'datatable-style', 'https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/css/jquery.dataTables.min.css', '1.10.18', true );
-           wp_enqueue_script( 'datatable-script', 'https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/js/jquery.dataTables.min.js', array( 'jquery' ) );
-wp_enqueue_script( theme-script', get_template_directory_uri() . '/js/script.js' );
-}
-add_action( 'wp_enqueue_scripts', 'libs_import' );
-
-After that, create a script.js file in the js folder of the theme and add this code:
-
-$(document).ready(function() {
-    $('#Userslist').DataTable();
-} );
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/css/jquery.dataTables.min.css" />
 ```
 
-Note that *#Userslist* is the ID of the table I created from the `users-listing-page.php` file before. You can change it as you want.
+![Add code to register the CSS library of DataTables.](https://i.imgur.com/fdKJ6jJ.png)
 
-There are many customization options for you to choose from. Here, I used the datatable under the form of **Zero configuration**. If you want to have other options, you can refer to [the library](https://datatables.net/examples/index) to customize depending on your need.
+These codes below are to declare the JavaScript libraries, including the one from **DataTables**.
 
-Here is the final result:
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/js/jquery.dataTables.min.js"></script>
+```
 
-![The final result](https://i.imgur.com/zpNqsi1.gif)
+![Add code to declare the JavaScript libraries, including the one from DataTables.](https://i.imgur.com/rsrXwaJ.png)
 
-You can refer to the full code that I used [here](https://github.com/wpmetabox/tutorials/tree/master/list-users).
+Next, add the following script that helps to use the **DataTables** library.
+
+```
+(function ($) {
+    $(document).ready(function () {
+        $('#Userslist').DataTable();
+    }); 
+})(jQuery); 
+
+```
+
+![Add the script that helps to use the DataTables library.](https://i.imgur.com/hJseIp9.png)
+
+Please note that `Userslist` is the ID of the table that we added above. And, the library will do everything to add paging, sorting, and searching functions for you. However, in the event that you want to customize the tables more, there are also many [other customization options from the library](https://datatables.net/examples/index) that you can refer to!
+
+Go to the page, and you can see the user list with those functions as you want.
+
+![The user list with functions as you want.](https://i.imgur.com/UiBK2AF.gif)
+
+Visit [here](https://github.com/wpmetabox/tutorials/tree/master/list-users) to see the full source code:
+
+###  3.2. Method 2: Using MB Views
+
+We also need to create a template for the page. But, I won’t go to the theme folder. Instead, just go to **Meta Box** > **Views**, and create a new template.
+
+![Go to Meta Box > Views, and create a new template](https://i.imgur.com/w8KhHP7.png)
+
+#### 3.2.1. Getting the user information
+
+First, add the condition.
+
+![Add the condition](https://i.imgur.com/nsHtNXu.png)
+
+In the same way, in using PHP, the key will be `publish_account`, the ID of the field. And `yes` is the value of the option.
+
+Now, let’s get the user’s information. Also, use the `mb.get_users( )` function to get users.
+
+![Use the mb.get_users( ) function to get users.](https://i.imgur.com/nSC8XrZ.png)
+
+As well, add a loop.
+
+![Add a loop](https://i.imgur.com/X7M5WEO.png)
+
+Inside the loop, we will get data from default fields and custom fields. Instead of adding code for this, we will insert fields directly from the list on the right sidebar.
+
+![Insert fields directly from the list on the right sidebar.](https://i.imgur.com/dDut7Dx.png)
+
+Here are all the fields we insert:
+
+![All the fields we insert](https://i.imgur.com/1DfpUkr.png)
+
+That’s all the information about the user I will get in this practice.
+
+Go to the **Settings** section of the view, set the type of the template as **Singular**. And choose the created page.
+
+![Set the type of the template](https://i.imgur.com/meVqiTP.png)
+
+In the event that you want to input the table in any other place, it also provides other options that match your need. If not, just set the type as shortcode, then embed it anywhere. It always works.
+
+Go to the page on the frontend, you will see the data displayed without the table.
+
+![The data displayed without the table.](https://i.imgur.com/U5irC5K.png)
+
+#### 3.2.2. Adding the table format
+
+Back to the template in the views, add a heading for the table.
+
+![Add a heading for the table](https://i.imgur.com/lqN2NGh.png)
+
+ And, add some code for the table. They are exactly the same as the ones we use with PHP, also as the one we usually use for a table.
+
+![Add some code for the table](https://i.imgur.com/1c4mg3K.png)
+
+I also added the loop, which is exactly the same as the loop we created before:
+
+![Add a loop](https://i.imgur.com/misy24Z.png)
+
+Now, move each line in this image to the loop in the table.
+
+![Move each line in this image to the loop in the table](https://i.imgur.com/4frdEgB.gif)
+
+There is a table on the page now.
+
+![There is a table on the page.](https://i.imgur.com/cexAMSU.png)
+
+#### 3.2.3. Adding functions to the table
+
+Once again, go back to the template to add paging, sorting, and searching to the table.
+
+The same with the first method, add three lines at the top and bottom to declare the libraries.
+
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/css/jquery.dataTables.min.css" />
+```
+
+![Add the line at the top to declare the libraries.](https://i.imgur.com/vEB1r3F.png)
+
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables@1.10.18/media/js/jquery.dataTables.min.js"></script>
+```
+
+![Add these lines at the bottom to declare the libraries.](https://i.imgur.com/rA41uza.png)
+
+Then, go to the **JavaScript** tab, add the same script as method 1. This helps to apply the **DataTables** library to the table.
+
+```
+(function ($) {
+    $(document).ready(function () {
+        $('#Userslist').DataTable();
+    }); 
+})(jQuery);
+```
+
+![Add CSS to the JavaScript tab](https://i.imgur.com/sAdp8xM.png)
+
+`Userslist` still is the ID of the table. As mentioned, the library will do everything to add paging, sorting, and searching functions for you.
+
+And, this is the table with those functions in the final result. The pagination works well, and you can also search for any user.
+
+![The user list table with wanted functions](https://i.imgur.com/UiBK2AF.gif)
+
+We have finished **displaying a user list on the frontend** with two methods: using PHP and using MB Views. In the case that you want to do something more for your user, there's something that you may want to dig into: how to [create a custom avatar for users](https://docs.metabox.io/tutorials/create-custom-avatar/) or how to [create a custom user profile page on frontend](https://docs.metabox.io/tutorials/create-user-profile-page/) to avoid accessing the backend from unexpected users. Thanks for reading!
