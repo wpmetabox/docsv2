@@ -37,16 +37,16 @@ In the **project-demo** folder, we create a file named `composer.json` with the 
         }
     ],
     "require": {
-        "wpackagist-plugin/meta-box": "^5",
+        "wpackagist-plugin/meta-box": "^5"
     },
     "extra": {
         "installer-paths": {
-            "vendor/meta-box/meta-box": ["wpackagist-plugin/meta-box"],
+            "vendor/meta-box/meta-box": ["wpackagist-plugin/meta-box"]
         }
     },
     "autoload": {
         "files": [
-            "vendor/meta-box/meta-box/meta-box.php",
+            "vendor/meta-box/meta-box/meta-box.php"
         ]
     }
 }
@@ -77,7 +77,7 @@ Then, the `project-demo` folder will include these folders and files as follows:
 Finally, run the following code in the `project-demo.php` file to download the libraries that you’ve declared:
 
 ```php
-require 'vendor/autoload.php
+require 'vendor/autoload.php';
 ```
 
 ![The code](https://i.imgur.com/wD5bgNO.png)
