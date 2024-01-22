@@ -1,5 +1,5 @@
 ---
-title: Creating taxonomy thumbnails & featured Images - MB Views
+title: Creating taxonomy thumbnails & featured images - MB Views
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -22,7 +22,7 @@ The image used for the thumbnail also will be used to be the featured image of t
 
 ## Preparation
 
-In this practice, we need some advanced features from Meta Box:
+In this practice, we need some tools from Meta Box:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to create custom post types, taxonomies as well as a custom field to store the images for the taxonomy;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy for the portfolio;
@@ -94,7 +94,7 @@ Go to **Pages** to create a new page for the portfolio. I will add content for t
 
 ![Go to Pages to create a new page for the portfolio.](https://i.imgur.com/8m73IO1.png)
 
-Go to **Meta Box** >** Views** to create a template.
+Go to **Meta Box** > **Views** to create a template.
 
 ![Go to Views to create a new template for the portfolio page.](https://i.imgur.com/2LpUsQt.png)
 
@@ -212,9 +212,9 @@ Go to the page on the front end, you'll see the data displayed.
 
 ### 4.6. Styling the page
 
-To style the page, go back to the edit template in the Views.
+To style the page, go back to the edit template in the **Views**.
 
-Before styling, we should add some Div tags and classes to divide information into different parts.
+Before styling, we should add some **Div** tags and classes to divide information into different parts.
 
 ![Add div tags and classes to the template for styling.](https://i.imgur.com/dVIBX0z.png)
 
