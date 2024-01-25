@@ -59,7 +59,7 @@ Then, we’ll have an Add more button like this in the page editor.
 
 ![The Add more button help to add more questions and answers](https://i.imgur.com/YiqI44x.png)
 
-I also set this group as Collapsible. And I just keep the Expanded option to have the display of subfields by default.
+I also set this group as **Collapsible**. And I just keep the **Expanded** option to have the display of subfields by default.
 
 ![Also set the group as Collapsible and keep the Expanded option to have the display of subfields by default.](https://i.imgur.com/Gih2Ja4.png)
 
@@ -70,13 +70,13 @@ And you can add titles for the group as follows to identify the set of Q&A more 
 **In there**:
 
 * `{#}`: This variable is for numbering the pair.
-* `{question}`: This variable is the ID of the Question field to show the question on the title.
+* `{question}`: This variable is the ID of the **Question** field to show the question on the title.
 
 After creating all the fields and having reasonable settings, move to the **Settings** tab, choose **Location** as **Post type**, and select **Page**. To apply the fields to the page you want, go to the **Advanced location rules** section below and choose your page. In this case, I chose **FAQ**.
 
 ![Set location to apply the fields to the FAQ page.](https://i.imgur.com/N4mvoPv.png)
  
-After publishing, you will see all of the custom fields in the page editor. Just enter some questions and answers. Click Add more to add other pairs.
+After publishing, you will see all of the custom fields in the page editor. Just enter some questions and answers. Click **Add more** to add other pairs.
 
 ![All of the custom fields are displayed in the page editor, and you can click Add more to add other pairs.](https://i.imgur.com/AZCxGGV.png)
 
@@ -98,7 +98,7 @@ Now, set the location for this module as the sub-field of the group in the **Met
 
 ![Set the location for this module as the sub-field of the group](https://i.imgur.com/ldil1nQ.png)
 
-Go ahead, choose another Meta Box Field module for the Answer field, then also set the location as the Answer field as well.
+Go ahead, choose another **Meta Box Field** module for the **Answer** field, then also set the location as the **Answer** field as well.
 
 ![Choose another Meta Box Field module for the Answer field, then set the location as the sub-field](https://i.imgur.com/RiqLwkG.png)
 
