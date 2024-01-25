@@ -2,16 +2,35 @@
 title: Creating a subscription form connecting to Mailchimp
 ---
 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+
 We’re going to use the [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/) extension of Meta Box to create a subscription form and connect it with an email marketing service - Mailchimp to manage and send emails fast and easily.
+
+This is a simple subscription form.
+
+![A simple subscription form](https://i.imgur.com/MALHkE9.png)
+
+Whenever someone submits the form, their information will be saved in a post of a custom post type. So, you can see the new account in the dashboard like this.
+
+![After submitting the form, the account info will be saved in a post of a custom post type in the dashboard.](https://i.imgur.com/IFsCj8h.png)
+
+And, when you connect to the MailChimp service, you can see the account in the email list in MailChimp.
+
+![The contact submitted from the form will be in the email list in MailChimp.](https://i.imgur.com/YHtpYqZ.png)
+
+## Video version
+
+<LiteYouTubeEmbed id='dhXyYBzvQEo'/>
 
 ## Preparation
 
 We need to install the following tools:
 
-* [Meta Box](https://metabox.io): to have a framework to create a custom post type and custom fields for the form. It’s free and available on [wordpress.org](https://wordpress.org/plugins/meta-box).
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI in the back-end to create custom fields for the form.
+* [The Meta Box plugin](https://wordpress.org/plugins/meta-box): to have a framework to create a custom post type and custom fields for the form. It’s free and available on [wordpress.org](https://wordpress.org/plugins/meta-box).
+* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for subscribers.
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to visually create custom fields for the form.
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to display custom fields on the front-end as a form.
-* [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the form, each submitted form will be a post.
 
 Finally, you need to have a Mailchimp account. In case you haven’t had it, go [here](https://login.mailchimp.com/) to create a new one.
 
@@ -21,186 +40,182 @@ To save and review subscriber data easily and conveniently, firstly, you need to
 
 Go to **Meta Box > Post Types > New Post Type**. Then modify the general information for the post type and publish it.
 
-![create new post type for subscribers](https://i.imgur.com/yenctSX.png)
+![create new post type for subscribers](https://i.imgur.com/SB3KNJK.png)
 
-After publishing, a new menu named **Subscribers** will appear as below:
+After publishing, a new menu named **Subscribers** will appear. Information of each subscriber will be saved in a post of this post type.
 
-![Newly created post type appears in the menu](https://i.imgur.com/jjokucc.png)
+![Newly created post type appears in the menu](https://i.imgur.com/VttNgq4.png)
 
 ## 2. Creating a subscription form
 
-I’m going to add two basic custom fields for a subscription form: **Name** and **Email**.
+Commonly, a subscription form has at least two fields: Name and Email. You may have more fields for further information. But in this case, I just create only these two basic fields for illustration purposes only.
 
-Besides, to save the database space, I will use the name which is submitted into the form for the post title, and the email for the post content. So, the ID of the Name field will be post_title, and the ID of the Email field will be `post_content` which are two default IDs in WordPress for title and post content.
+Now, go to **Meta Box** > **Custom Fields** > **Add New** to create fields.
 
-Go to **Meta Box > Custom Fields > Add New**. Then choose the field type as **Text** for both Name and Email fields.
+![Go to Meta Box to create fields for the form](https://i.imgur.com/j8bURp6.png)
 
-![Create new custom fields](https://i.imgur.com/KlPBlbP.png)
+To save database space, I will use the name that is submitted into the form for the post title. So, the ID of the Name field will be the same as the post title.
 
-Pay attention to the ID of these fields, remember to set the right IDs as I said above.
+![The ID of the Name field will be the same as the post title.](https://i.imgur.com/WlR1pDd.png)
 
-After that, move to the **Settings** tab and in **Location**, choose the **Subscriber** post type.
+Apart from that, there are no special settings for the fields I want. Thus, I just create them as usual.
 
-![Set location for the created fields](https://i.imgur.com/U4eTWO0.png)
+After creating all the fields, go to the **Settings** tab, set the **Location** as **Post type**, and choose **Subscriber** to apply all the fields to this post type.
 
-Normally, after publishing the field group, its ID will be auto-generated in the **Field Group ID** box. You can also change the field group ID as you desire. This ID will be used in the next step.
+![Set location for the created fields](https://i.imgur.com/oUn8BIv.png)
 
-![The IDs are auto-generated](https://i.imgur.com/B4p8GvN.png)
+Once you have published the field group, its ID will be generated automatically. Just copy it since we’ll use it in the next step.
+
+![Get ID of the field group](https://i.imgur.com/ADylHdJ.png)
+
+Move to the post editor, you will see only a field for email displayed since we set the Name field as the title.
+
+![Only a field for email displays since we set the Name field as the title.](https://i.imgur.com/DXon9rF.png)
+
+I'll not input any data now, since the form will be used on the frontend, then the user can submit it.
 
 ## 3. Displaying the subscription form on the front-end
 
-To display the subscription form on the website, which means displaying the custom fields on the frontend, and allow users to fill in the fields right on the frontend, you need to use the [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/) extension.
+In the real case, you absolutely can add the form to a pre-built page, then the form will be set aside with some other content. However, I skip building those kinds of pages and just create a new blank page to show the form.
 
-I created a **Subscribe** page to display the form on page.
+Now, go to **Pages** to create a new page as usual.
 
-First, go to **Meta Box > Custom Fields** to see all the field groups that you created on site. Then, you will see a column that show shortcodes like this:
+![Create a new page as usual.](https://i.imgur.com/kAFk9pR.png)
 
-![Create a column showing shortcodes](https://i.imgur.com/9bs6zWO.png)
+Look for the **Submission Form** block, or element, or widget (in the case you’re using a page builder). It’s provided by **MB Frontend Submission** to have the subscription form display.
 
-Copy the shortcode of the field group that we use for the subscription form. This shortcode will be like this:
+![Look for the Submission Form block.](https://i.imgur.com/e8ItvU7.png)
 
-```php
-[mb_frontend_form id='subscription-form' post_fields='title,content']
-```
+Once you select this block, it’ll display the title and content fields by default. They are not what we created.
 
-Now, go to the Subscribe page and paste the shortcode into it.
+![The title and content fields display by default.](https://i.imgur.com/xUFZ31u.png)
 
-![Copy and paste the shortcode](https://i.imgur.com/DuR9u8K.png)
+To display the created custom fields for the form, add the ID of the field group to the box in the image below. The ID is the one we copied from the field group in the previous step. Then, you will see the fields displayed immediately.
 
-To customize the subscription form, you can add some attributes as following:
+![Add the ID of the field group to the ID box to display the custom fields for the form.](https://i.imgur.com/bjiq8Yg.png)
 
-```php
-[mb_frontend_form id="subscription-form" ajax="true" recaptcha_key="..." recaptcha_secret="..."]
-```
-Explanation:
-* `subscription-form`: id of the field group we’ve created
-* `ajax=”true”`: enable loading ajax
-* `recaptcha_key`: Google reCaptcha site key
-* `recaptcha_secret`: Google reCaptcha secret key
+There are some settings of this block on the right sidebar. You can set it as you go. But, you must set the post type as the one you created for the submission. Then, every submission from this form will be saved to a post in that post type.
 
-I use Google reCaptcha to avoid spamming. In addition, to integrate Google reCaptcha in the frontend form, simply enter the site key and the secret key into the shortcode above.
+![Set the post type as the one you created for the submission.](https://i.imgur.com/mrxYZ4O.png)
 
-Read [this documentation](https://docs.metabox.io/extensions/mb-frontend-submission/#shortcode-attributes) to get a detailed guide for reCaptcha and other attributes of the form.
+Next, to disable the **Title** and **Content** field in the form, remove them in the **Post Fields** section:
 
-Here is how the subscription form displays on the page.
+![Disable the Title and Content field in the form.](https://i.imgur.com/9pncrWG.png)
 
-![The subscription form displays like this](https://i.imgur.com/x4sK4RD.png)
+Go to the page on the frontend, we will see the form displayed, with two fields as we want.
 
-## 4. Styling the subscription form
+![The form displays with the Name field and Email field on the frontend.](https://i.imgur.com/tMt5uui.png)
 
-To style the form, go to **Appearance > Customize > Additional CSS**. Then add the CSS code below to make the form more appealing:
+You can go to the **Customizer** section > **Additional CSS** to add some code to beautify the subscription form.
+
 ```css
-.rwmb-form {
-	background: #e2e8f0;
-	padding: 24px;
-	border-radius: 4px;
-	max-width: 768px;
-	margin: 0 auto;
-}
 .rwmb-form .rwmb-meta-box {
-	display: flex;
-	justify-content: space-between;
-	grid-gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
 }
 .rwmb-form .rwmb-field {
-	flex: 1;
+    display: flex;
+    align-items: center;
 }
-.rwmb-form .rwmb-field:not(:last-of-type) {
-	margin: 0 0 12px;
+.rwmb-form {
+    background: #e2e8f0;
+    padding: 24px;
+    border-radius: 4px;
+    max-width: 768px;
+    margin: 0 auto;
 }
-.rwmb-form .rwmb-label,
-.rwmb-form .rwmb-field .rwmb-input {
-	float: none;
-	width: 100%;
-	margin-bottom: 5px;
-}
-.rwmb-form button, .rwmb-form input {
-	width: 100%;
+
+.rwmb-form button {
+   width: 100%;
+	 margin-top:20px;
+} 
+.rwmb-field:not(:last-of-type){
+	  margin:0px !important;
 }
 ```
 
-This is how it looks after customizing with CSS:
+![Add some CSS code to beautify the subscription form.](https://i.imgur.com/K1ait5c.png)
 
-![Customize the form with css](https://i.imgur.com/xz62Goe.png)
+You can see in the gif below the subscription form works well, but just saves the data on your website, and you can see the contact in the back end, not your MailChimp account yet.
 
-## 5. Connecting the subscription form to mailchimp
+![The subscription form works well, but just saves the data on your website so far.](https://i.imgur.com/NFH30tp.gif)
 
-We’re going to integrate the subscription form to MailChimp to send the subscriber information submitted into the form to MailChimp. With this information, you can [use MailChimp to send email marketing campaigns](https://gretathemes.com/mailchimp-send-wordpress-blog-post-email/) to these subscribers easily.
+So let’s go ahead to connect this form to MailChimp.
 
-To do it, use the library below to connect to the MailChimp API:
+## 4. Connecting the subscription form to mailchimp
+
+In this step, we’re going to **integrate the subscription form to MailChimp** to send the subscriber information submitted to the form to MailChimp. With this information, you can [use MailChimp to send email marketing campaigns](https://gretathemes.com/mailchimp-send-wordpress-blog-post-email/) to these subscribers easily.
+
+To do it, I use the following library to connect to the Mailchimp API:
 
 https://github.com/drewm/mailchimp-api
 
-Access the link and download the `Mailchimp.php` file, then insert it into your theme.
-
-For example, I’m using the [eStar](https://gretathemes.com/wordpress-themes/estar) theme and its [child theme](https://gretathemes.com/what-is-child-theme/#what-is-child-theme), so I create an inc folder and copy the `Mailchimp.php` file to it.
-
-![Use the theme for example](https://i.imgur.com/5Ocba5i.png)
+Click the link to download the `Mailchimp.php` file, and then insert it into your theme. I’m using eStar theme and its child theme, so I will create an inc folder and copy the `Mailchimp.php` file into this folder.
 
 Next, add this code to the `functions.php` file:
 
-```php
+```css
 include get_stylesheet_directory() . '/inc/MailChimp.php';
 use \DrewM\MailChimp\MailChimp;
 
 function insertList() {
-	$key = 'your API keys mailchimp';
-	$list_id = ' id of the list that you want to integrate';
-	$merge_var = array(
-		'FNAME' => $_POST['post_title'],
-		'LNAME' => '',
-	);
-	$mailchimp = new MailChimp( $key );
+    $key = 'your API keys mailchimp';
+    $list_id = 'id of the list that you want to integrate';
+    $merge_var = array(
+        'FNAME' => $_POST['post_title'],
+        'LNAME' => '',
+    );
+    $mailchimp = new MailChimp( $key );
 
-	$result = $mailchimp->post( '/lists/' . $list_id . '/members', array(
-		'email_address' => $_POST['post_content'],
-		'merge_fields'  => $merge_var,
-		'status'        => 'subscribed',
-	) );
-	return json_encode( $result );
+    $result = $mailchimp->post( '/lists/' . $list_id . '/members', array(
+        'email_address' => $_POST['email'],
+        'merge_fields'  => $merge_var,
+        'status'        => 'subscribed',
+    ) );
+    return json_encode( $result );
 }
 
 add_action( 'rwmb_frontend_after_process', function( $config, $post_id ) {
-	if ( 'subscription-form' === $config['id'] ) {
-		insertList();
-		die;
-	}
+    if ( 'subscription-form' === $config['id'] ) {
+        insertList();
+    }
 }, 10, 2 );
 ```
 
-Explanation:
+![Add code to the functions.php file.](https://i.imgur.com/mlFyq7I.png)
 
-* `'rwmb_frontend_after_process'`: the hook we have after the form is submitted;
-* `subscription-form`: id of the field group we’ve created in step 2;
-* To get the API key of MailChimp, log in to your MailChimp account, and then copy the API key in the **Your API keys** section.
+**In there**:
 
-![Copy the API key](https://i.imgur.com/rB5PK5G.png)
+* `'/inc/MailChimp.php'`: This is the direction of the file that we have just added to the theme folder;
+* We use the `rwmb_frontend_after_process` hook to do below actions after the subscriber submits the form. You can look for more details about the hook on [Meta Box documentation](https://docs.metabox.io/extensions/mb-frontend-submission/#form-hooks).
+* `'your API keys mailchimp'`: Where you can fill in your MailChimp API keys;
+* `'id of the list that you want to integrate'`: Where you can enter the ID of the list to stipulate that the contact will be sent to which contact list in your MailChimp account;
+* `$_POST[' '],`: This is to get the value stored in custom fields;
 
-* Press the **Create A Key** button to get the API key
+These lines below are the action that we put the contact information (including the email, name, and status) into the contact list into a MailChimp account.
 
-![Get the API key](https://i.imgur.com/8NJEyb2.png)
+```css
+$result = $mailchimp->post( '/lists/' . $list_id . '/members', array(
+        'email_address' => $_POST['email'],
+        'merge_fields'  => $merge_var,
+        'status'        => 'subscribed',
+    ) );
+    return json_encode( $result );
+}
+```
+And, notice that if you have separated fields for the first name and last name, just fill in the ID to these places in this image. In my case, there is only a field for names.
 
-* To get the id of the list, go to **Audience > All Contacts**, click **Settings**, and choose **Audience name and defaults**:
+![Where you can fill in the ID of the field for the first name and last name.](https://i.imgur.com/z46BF2h.png)
 
-![Get the ID of the list](https://i.imgur.com/VBh0h3H.png)
+Now, go back to the form on the page to test how it connects to our Mailchimp account. Just **add a new subscription**. This new subscriber information absolutely will be saved as a post in the backend, as well as in the Mailchimp account dashboard.
 
-* In the **Audience ID** section, the list of id will appear:
+![New subscriber information absolutely is saved as a post in the backend.](https://i.imgur.com/jHDMUrM.png)
 
-![the list appear in the Audience ID section](https://i.imgur.com/CNpTwjo.png)
+![The new contact is also on the list in my MailChimp account.](https://i.imgur.com/YHtpYqZ.png)
 
-:::info
+Do you remember that I submitted an account named Janessa before I created the integration? Since it was submitted before I made the integration, it does not appear in the MailChimp. Only the new ones will be there.
 
-Mailchimp often changes their interface, so the next time going to Account MailChimp, it may look different from this post. However, the process is still the same.
-
-:::
-
-
-After that, make a test to check whether the system works well. I filled in the subscription form with the name and email as below:
-
-![Check whether the system works well](https://i.imgur.com/xz62Goe.png)
-
-And here they are displayed in the email list of MailChimp:
-
-![The information displays in the email list](https://i.imgur.com/r54eO6D.png)
+So, it seems like the integration works well already.
 
 That’s how we have done the integration between the subscription form and your MailChimp account.
