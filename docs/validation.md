@@ -229,6 +229,7 @@ add_action( 'wp_ajax_my_action1', function () {
 
 ### Custom error message
 As mentioned above, you can return a custom error message instead of `false` to display it as the error message sent from the server. 
+
 By default, the jQuery Validation library expects a JSON response from the server, any values that are not valid JSON will be ignored
  so you'll need to set the `dataType` parameter to `text` to return a custom error message.
 
@@ -255,7 +256,6 @@ add_action( 'wp_ajax_my_action1', function () {
     ],
     'messages' => [
         'field_id1' => [
-            // highlight-next-line
             'remote'  => 'Value is not valid.',
         ],
     ],
