@@ -56,3 +56,16 @@ You can pass **other attributes** to the shortcode if you want. If you do so, th
 ```php
 [rwmb_meta id="area" object_id="15" storage_type="custom_table" table="properties"]
 ```
+
+## Bypass HTML filtering
+By default, the shortcode will be filtered by the `wp_kses_post()` function to remove all insecure HTML tags and attributes. If you want to bypass this filtering, you can use the `rwmb_meta_shortcode_secure` filter:
+
+```php
+add_filter( 'rwmb_meta_shortcode_secure', '__return_false' );
+```
+
+To bypass HTML filtering for a specific field, you can use the `rwmb_meta_shortcode_secure_{$field_id}` filter:
+
+```php
+add_filter( 'rwmb_meta_shortcode_secure_footer_script', '__return_false' );
+```

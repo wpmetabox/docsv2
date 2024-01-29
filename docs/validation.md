@@ -234,6 +234,7 @@ By default, the jQuery Validation library expects a JSON response from the serve
  so you'll need to set the `dataType` parameter to `text` to return a custom error message.
 
 ```php
+// AJAX callback
 add_action( 'wp_ajax_my_action1', function () {
     // Get the field value via the global variable $_GET
     if ( $_GET['field_id1'] === 'something' ) {
@@ -243,7 +244,10 @@ add_action( 'wp_ajax_my_action1', function () {
     }
     die;
 } );
+```
 
+```php
+// Field settings
 'validation' => [
     'rules' => [
         'field_id1' => [
@@ -261,5 +265,7 @@ add_action( 'wp_ajax_my_action1', function () {
     ],
 ],
 ```
+
+:::tip Other parameters
 
 The `remote` parameter also accepts an array of options to fully customize the request, see [jQuery.ajax](https://api.jquery.com/jQuery.ajax).
