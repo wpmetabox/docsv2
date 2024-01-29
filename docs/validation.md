@@ -226,3 +226,46 @@ add_action( 'wp_ajax_my_action1', function () {
     die;
 } );
 ```
+
+### Custom error message
+As mentioned above, you can return a custom error message instead of `false` to display it as the error message sent from the server. 
+
+By default, the jQuery Validation library expects a JSON response from the server, any values that are not valid JSON will be ignored
+ so you'll need to set the `dataType` parameter to `text` to return a custom error message.
+
+```php
+// AJAX callback
+add_action( 'wp_ajax_my_action1', function () {
+    // Get the field value via the global variable $_GET
+    if ( $_GET['field_id1'] === 'something' ) {
+        echo 'true'; // Valid
+    } else {
+        echo 'This value is invalid, please try again.'; // Custom error message
+    }
+    die;
+} );
+```
+
+```php
+// Field settings
+'validation' => [
+    'rules' => [
+        'field_id1' => [
+            'remote' => [
+                'url' => admin_url( 'admin-ajax.php?action=my_action1' ),
+                // highlight-next-line
+                'dataType' => 'text'
+            ]
+        ],
+    ],
+    'messages' => [
+        'field_id1' => [
+            'remote'  => 'Value is not valid.',
+        ],
+    ],
+],
+```
+
+:::tip Other parameters
+
+The `remote` parameter also accepts an array of options to fully customize the request, see [jQuery.ajax](https://api.jquery.com/jQuery.ajax).
