@@ -106,7 +106,7 @@ Key|Description
 `sort`|Whether to sort the column by meta value? Set to `true` to just enable sorting. Set to `numeric` to sort values as numeric. Default `false`.
 `searchable`|Allow searching posts by meta value. Optional. Default `false`.
 `filterable`|Allow filtering posts by the custom taxonomy. Applied only if the field is the `taxonomy` field. Default `false`.
-`link`|Whether to link the value to the post edit screen (value `edit`) or post view on the front end (value `view`) or no link (`none`).
+`link`|Whether to link the value to the post edit screen (value `edit`) or post view on the front end (value `view`) or no link (`false`).
 
 Note that the `sort` parameter is used to sort displayed posts by altering the WordPress query. It works only with non-clonable and non-multiple fields.
 
