@@ -154,7 +154,7 @@ To get posts, add the **Loop Grid** element.
 
 ![Add the Loop Grid element to get the posts](https://i.imgur.com/6Oopbnz.png)
 
-In the settings of the Loop Grid element, choose the created template in the Layout section.
+In the settings of the **Loop Grid** element, choose the created template in the **Layout** section.
 
 ![Choose the created template in the Layout section](https://i.imgur.com/awfcWIq.png)
 
