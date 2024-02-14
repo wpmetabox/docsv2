@@ -52,10 +52,11 @@ const config = {
   ],
 
   scripts: [
-	{
-	  src: 'https://w.appzi.io/w.js?token=mAHPU',
-	  async: true,
-	},
+    {
+      src: 'https://beamanalytics.b-cdn.net/beam.min.js',
+      'data-token': '0be0dc94-dd6f-4c51-b876-9f9b81f6ad1d',
+      defer: true,
+    },
   ],
 
   themeConfig:
