@@ -1,115 +1,187 @@
 ---
-title: Creating download buttons on the frontend
+title: Creating download buttons in WordPress
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Let’s find out how to create a download button to download a file. The file wilI be saved in a custom field and got automatically.
+The Internet allows us to chat, exchange, search for news, share experiences, and download documents, gadgets, applications, etc. Besides saving documentation from websites, you can share your documents with users on the WordPress website. **Creating a download button using custom fields** is not a bad idea - it looks beautiful, professional, and not difficult to create at all.
 
-![Use the Download button on the product page of Meta Box](https://i.imgur.com/aFZ5p6C.png)
+In this article, we’re going to show you how to create a download button using custom fields with the **Meta Box plugin**, and then **display this button on the front end** in two ways: adding code to the theme’s file and using **MB Views** - an extension from Meta Box.
+
+Here is an example.
+
+![the clickable buttons allow you to save an attached file to your device in the content area and on the right sidebar](https://i.imgur.com/fveYtBL.gif)
+
+I put the download buttons in two positions: one in the content area of a single post, and one on the right sidebar. Both of them must be **clickable** and allow you to **save an attached file** to your device.
+
+## Video version
+
+<LiteYouTubeEmbed id='PXupgf-aANA' />
 
 ## Preparation
 
 For this practice, we need the following tools:
 
-* [Meta Box](https://metabox.io): the framework to create custom fields;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI on the back end to create custom fields to save the file for downloading. Or you can use the free [Online Generator](https://metabox.io/online-generator/) tool instead.
+* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): a framework that helps us create the custom field for the download button. It’s available on wordpress.org;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): a premium extension of Meta Box that provides UI to easily create custom fields right on the back end. Or you can use the free [Online Generator](https://metabox.io/online-generator/) tool instead.
+* [MB Views](https://metabox.io/plugins/mb-views/): to display value from custom fields. You also can add code to the `functions.php` file instead of.
+* [eStar theme](https://gretathemes.com/wordpress-themes/estar/): to create a child theme 
 
 ## 1. Creating custom fields
 
-Go to **Meta Box > Custom Fields**.
+Go to **Meta Box** > **Custom Fields** > **Add New** to create a new field group.
 
-Just add a **File Advanced** field to save the downloading file.
+![Go to Meta Box, Custom Fields, Add New to create a new field group](https://i.imgur.com/hdE3SJi.png)
 
-![Create the Download Button Using Custom Fields](https://i.imgur.com/ewAMKk8.png)
+In this practice, I use only one field to save the attached files for the buttons. So, add a field with the **File Advanced** field type.
 
-Next, move to the **Settings** tab > **Location** > choose **Post Type** as the one you want.
+![add the File Advanced field to save the attached file for the buttons](https://i.imgur.com/bHACTmq.png)
 
-![Set up where the custom fields will be display in the settings of Meta Box plugin](https://i.imgur.com/iDOoLPL.png)
+Move to the **Settings** tab, choose the **Location** as **Post type**, and select the page or the post type as you want to apply the field. For the demonstration purpose, I keep it as the blog posts.
 
-Then, you will see the created field in the post editor.
+![move to the Settings tab, choose the Location as Post type, and select the page or the post type as you want to apply the field](https://i.imgur.com/FwIS4NI.png)
 
-![the custom field that we’ve created displays](https://i.imgur.com/f50SCZv.png)
+After publishing the field group, in the post editor, you’ll see the created field.
 
-Now, just upload a file you want to share by clicking the **Add Media** button. Here is the document that I’ve uploaded:
+![the created field displays in the post editor](https://i.imgur.com/pYbQ3NN.png)
 
-![The document is inserted to the custom fields](https://i.imgur.com/Iqve4Hs.png)
+Just upload the document that you want to share with readers by clicking the **Add Media** button.
+
+![clicking the Add Media button to upload the document that you want to share with readers](https://i.imgur.com/Rmbe23Y.png)
+
+This field will appear below every post editor, so each post will have its own attached file. Our buttons will allow downloading the corresponding file as well.
+
+Still, readers can’t see the download button on the front end, so let’s do it in the next step.
+
 
 ## 2. Displaying the download button on the frontend
 
-There are 2 methods to display the download button: **adding code to the theme** or **using a shortcode**. Note that the first way is helpful when you just need to display this button **in the same position on all pages**. If you want it to appear in **different positions on different pages**, the second one will make sense.
+As I mentioned before, I’m providing two ways to display the buttons for the same result. Both of them are using code:
 
-### Method 1: Adding code to the theme
+* Adding code to the theme’s files (using PHP code): I do not recommend this method since the code may be affected when we change the theme.
+* Using **MB Views** from Meta Box: with MB Views, we will not type code directly, the plugin will generate it automatically.
 
-For example, I’ll display the download button at the end of all blog posts.
+I still show both these ways, and then you can experiment yourself to choose which makes sense to you.
 
-![Display the Download Button in the end of the post content](https://i.imgur.com/nZdJ1TF.png)
+### Method 1: Using PHP code
 
-To do so, add this code to the `functions.php` file of the theme:
+#### Getting URLs of the attached files
 
-```php
-add_action( 'estar_entry_footer_before', 'estar_child_add_link' );
+In the **Theme File Editor**, add some code to the functions.php file of the [child theme](https://gretathemes.com/what-is-child-theme/#what-is-child-theme):
+
+```
 function estar_child_add_link() {
-	?>
-	<div class="document_link_download abc">
-		<?php
-		$files = rwmb_meta( 'file_download' );
-		foreach ( $files as $file ) : ?>
-
-		<a class="document_link" href="<?php echo $file['url'] ?>" target="_blank">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-			<?php esc_html_e( 'Download document', 'estar' ) ?>
-		</a>
-
-		<?php endforeach ?>
-	</div>
-	<?php
+    $files = rwmb_meta( 'file_download' );
+    foreach ( $files as $file ) :
+   		echo $file['url'];
+	endforeach;
 }
+add_action( 'estar_entry_footer_before', 'estar_child_add_link' );
 ```
-Explanation:
 
-* `'file_download'` : the ID of the custom field for saving the documents that we’ve created in step 1.
-* `'estar'`: the theme that I’m using.
-* `add_action( 'estar_entry_footer_before', 'estar_child_add_link' );function estar_child_add_link() { ?>`: the code to specify the location in which you want to display the download button. In this case, I display the download button in the `'estar_entry_footer_before'` hook of the eStar theme. This hook is created right on the tags list. You can refer to this hook [here](https://github.com/elightup/estar/blob/master/template-parts/content/post.php) (line 42).
+![add some code to the functions.php file](https://i.imgur.com/XdmyzCa.png)
 
-So, you can see the result like this:
+**Explanation**:
 
-![The download button is displayed on the front end of WordPress website](https://i.imgur.com/Oaa3J40.png)
+* `'estar'` is the theme that I’m using;
+* `rwmb_meta( )`: is the function to get data from custom field created with Meta Box;
+* `'file_download'` : the ID of the custom field for saving the documents that we’ve created;
+* `echo $file['url']`: to display the URL of the attached file;
+* `add_action( 'estar_entry_footer_before', 'estar_child_add_link' );function estar_child_add_link() { ?>`: to specify the location in which you want to display the download button. In this case, I display the download button in the `'estar_entry_footer_before'` hook of the eStar theme. This hook is created right on the tags list. You can refer to this hook [here](https://github.com/elightup/estar/blob/master/template-parts/content/post.php) (line 42).
 
-### Method 2: Using a shortcode
+Now, go to the single post page on the frontend, there will be an URL in the text format before the footer as we set.
 
-First, add this code to the `functions.php` to create the shortcode:
+![go to the single post page on the frontend, there will be an URL in the text format before the footer as we set](https://i.imgur.com/lluqjGZ.png)
 
-```php
-add_shortcode( 'estar_button_download', 'estar_button_download');
-function estar_button_download() {
-	ob_start();
-	?>
-	<div class="document_link_download abc">
-		<?php
-		$files = rwmb_meta( 'file_download' );
-		foreach ( $files as $file ) : ?>
+The URL is the one from the file that I attached to this post. We’ll turn it to a button later.
 
-		<a class="document_link" href="<?php echo $file['url'] ?>" target="_blank">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-			<?php esc_html_e( 'Download document', 'estar' ) ?>
-		</a>
+#### Creating shortcode for the button
 
-		<?php endforeach ?>
-	</div>
-	<?php
-	return ob_get_clean();
-}
+To put the download button in different positions, we should customize the code one more time to create a shortcode.
+
+Add one more line:
+
 ```
-**In there**: `estar_button_download` is the shortcode for the download button (you can name it as whatever you want). Then, you just need to insert this shortcode in the wanted positions, such as posts, pages, and widgets.
+add_shortcode( 'estar_button_download', 'estar_child_add_link');
+```
+![create a shortcode to put the download button in different positions](https://i.imgur.com/ePKacBc.png)
 
-Here is an example of how we insert that shortcode in the content of a post:
+Then, go to any page, any place to embed the shortcode (in this case, I named it as 'estar_button_download'). I’ll put it on the right sidebar.
 
-![Display the Download Button Using a Shortcode](https://i.imgur.com/8Tb6VyZ.png)
+![embed the shortcode any place you want](https://i.imgur.com/nK5Gk2h.gif)
 
-Or I can add the shortcode to a widget like this:
+After that, we had one more URL on the right sidebar.
 
-![Insert the shortcode into a widget in WordPress](https://i.imgur.com/YqFNDx8.png)
+![one more URL on the right sidebar](https://i.imgur.com/VTJsNKu.png)
 
-The download button shows up on the frontend.
+#### Styling the button
 
-![Display the download button in the sidebar of WordPress website](https://i.imgur.com/gtX5VW5.png)
+To make those URLs to be the button format, we should go back to the theme file to stipulate the style of it.
 
+I’ll do it in a simple way with an HTML tag and icon, also named the buttons.
+
+![style URLs to be the button format with an HTML tag and icon, also named the buttons](https://i.imgur.com/8JOFLsR.png)
+
+Now, go back to a post on the frontend. The download buttons are ready.
+
+![The download buttons are ready on the frontend](https://i.imgur.com/iLoPhfi.gif)
+
+### Method 2: Using MB Views
+
+If you have the Meta Box AIO, you can use **MB Views** to get and display the download button easily.
+
+Go to **Meta Box** > **Views** to create a template for the buttons.
+
+![Go to Meta Box, Views to create a template for the buttons](https://i.imgur.com/Gvoyi8j.png)
+
+In the **Template** tab, click on the **Insert Field** button.
+
+![In the Template tab, click on the Insert Field button](https://i.imgur.com/uoRiwJj.png)
+
+And, find the field you created in the previous step that stores the files.
+
+![find the field you created in the previous step to store the file](https://i.imgur.com/thDZxJl.png)
+
+There will be some options to output the files. I just keep the default option to output the URLs of the files.
+
+![some options to output the file](https://i.imgur.com/HcT8Ex7.png)
+
+Next, scroll down to the **Settings** section. Also there are multiple options for the type.
+
+![in the Settings section, also there are multiple options for the type](https://i.imgur.com/oh477Kz.png)
+
+No matter which option you choose here, this view still generates a shortcode for this template, then you can use it anywhere.
+
+So that, to display the button below the content of the post and the sidebar at the same time, I choose to set the **Type** as **Singular**, and choose the **Location** as **Post** to apply the template to all single posts.
+
+![choose to set the Type as Singular, and choose the Location as Post to apply the template to all single posts](https://i.imgur.com/1JFG2Sn.png)
+
+In the **Render for** section, select the position of the download button as you want. I also set it before the footer.
+
+![In the Render for section, select the position of the download button as you want](https://i.imgur.com/PyLotSF.png)
+
+After publishing, you can see the shortcode I mentioned before.
+
+![the shortcode displayed automatically after publishing](https://i.imgur.com/sw7K953.png)
+
+You should copy it then embed it if you want to put the button on some other place on your website.
+
+On the single post page, the download button is displayed. It’s clickable already.
+
+![On the single post page, the download button is displayed. It’s clickable already](https://i.imgur.com/38CI386.gif)
+
+I’ll also add the button to the sidebar. Just copy the shortcode and paste it to the wanted position.
+
+![copy the shortcode and paste it to the wanted position](https://i.imgur.com/PSWKJiy.png)
+
+And now, we have 2 download buttons on the page.
+
+![two download buttons on the page](https://i.imgur.com/z79F8gD.png)
+
+To rename, as well as style the button, we should go back to the view, and customize the template a little bit more.
+
+![style the buttons](https://i.imgur.com/9s2co9X.png)
+
+This is the new look of the buttons.
+
+![the new look of the buttons](https://i.imgur.com/sQel9YK.png)
