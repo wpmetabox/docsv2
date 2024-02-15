@@ -53,7 +53,6 @@ This field will appear below every post editor, so each post will have its own a
 
 Still, readers can’t see the download button on the front end, so let’s do it in the next step.
 
-
 ## 2. Displaying the download button on the frontend
 
 As I mentioned before, I’m providing two ways to display the buttons for the same result. Both of them are using code:
