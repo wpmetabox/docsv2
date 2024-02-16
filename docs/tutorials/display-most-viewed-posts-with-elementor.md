@@ -14,7 +14,7 @@ I’m getting restaurants as an example for the products.
 
 ## Video version
 
-<LiteYouTubeEmbed id='uUz_sgcvJY8' />
+<LiteYouTubeEmbed id='3cqhwSMqf1g' />
 
 ## Preparation
 
