@@ -151,7 +151,7 @@ The first one is the title, so select the **Text** module and name it. Take Car 
 
 In the second column, also add a **Text** module, then connect it to the custom field to get the data using the dynamic content.
 
-![Add a Text module, then connect it to the custom field to get the data using the dynamic content.
+![Add a Text module, then connect it to the custom field to get the data using the dynamic content.](https://i.imgur.com/CJDv7Sy.gif)
 
 You can style the row a little bit before cloning it for others. Then, just duplicate the row to have other ones.
 
