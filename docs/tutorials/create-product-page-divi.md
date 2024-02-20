@@ -182,3 +182,5 @@ I use the **Slick Slider** library to set the gallery display as a slider. To ma
 After styling, this is the final look of the product page.
 
 ![The final look of the product page](https://i.imgur.com/aIP5koT.png)
+
+
