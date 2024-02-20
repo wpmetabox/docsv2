@@ -353,7 +353,7 @@ What if you want the _section to be inside another panel_? Like inside another p
 
 ### Compatibility
 
-At the moment, all Meta Box fields are supported in the Customizer, except [file](/fields/file/) and [image](/fields/image/) field types will be converted to the [file_advanced](/fields/file-advanced/) and [image_advanced](/fields/image-advanced/). But other upload field types such as [file_advanced](/fields/file-advanced/), [file_upload](/fields/file-upload/), [image_advanced](/fields/image-advanced/), [image_upload](/fields/image-upload/), [single_image](/fields/single-image/) still work well.
+At the moment, all Meta Box fields are supported in the Customizer, except [file](/fields/file/) and [image](/fields/image/) field types. These field types will be converted to the [file_advanced](/fields/file-advanced/) and [image_advanced](/fields/image-advanced/) automatically to avoid any problems. Other upload field types such as [file_advanced](/fields/file-advanced/), [file_upload](/fields/file-upload/), [image_advanced](/fields/image-advanced/), [image_upload](/fields/image-upload/), [single_image](/fields/single-image/) still work well.
 
 The good news is all the extensions such as [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/), [Meta Box Tabs](/extensions/meta-box-tabs/) are supported. That will help you create much better experiences for your users.
 
