@@ -11,7 +11,7 @@ This is an example of a FAQs page that I created.
 
 ![An example of a FAQs page created with Kadence and data from custom fields created with Meta Box.](https://i.imgur.com/HPyWQmw.png)
 
-## Video Version
+## Video version
 
 <LiteYouTubeEmbed id='QCs6JtW0NMY' />
 
