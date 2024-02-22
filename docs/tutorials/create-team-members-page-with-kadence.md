@@ -215,6 +215,8 @@ Then, choose the query loop we created in the previous step.
 
 Go to the page on the front end, you will see the page displaying all the members’ information, along with the pagination that I added.
 
+![the page displayed all the members’ information, along with the pagination on the frontend](https://i.imgur.com/woW0VYt.gif)
+
 ## 6. Styling the page
 
 Go back to edit the query loop, you can change some parameters in each block, even each one that we use for the query card, to have a better look.
