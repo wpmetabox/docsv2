@@ -68,7 +68,7 @@ When the import finishes, you’ll see an **Import Complete** message:
 
 That’s it! You can now review your newly imported Meta Box custom fields.
 
-## Import Meta Box Custom Fields – Frequently Asked Questions
+## Import Meta Box custom fields – Frequently Asked Questions
 
 ### Are All Meta Box Custom Fields Supported?
 
