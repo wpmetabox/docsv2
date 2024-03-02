@@ -6,7 +6,7 @@ To import data into Meta Box custom fields, first install the [Meta Box Import A
 
 To start your import, navigate to **All Import** › **New Import** and use the post type or CPT with the attached Meta Box custom fields. Use the **Drag & Drop** screen to map and then import the Meta Box custom fields into WordPress.
 
-## Step 1: Starting a new import for Meta Box custom fields
+## 1. Starting a new import for Meta Box custom fields
 
 Navigate to **All Import** › **New Import** and upload your import file. Then, choose the post type or custom post type with the attached Meta Box custom fields:
 
@@ -14,7 +14,7 @@ Navigate to **All Import** › **New Import** and upload your import file. Then,
 
 In this example, we’re importing Meta Box custom fields into a “Restaurants” CPT. Proceed by clicking **Continue to Step 2**.
 
-## Step 2: Validating Meta Box import data
+## 2. Validating Meta Box import data
 
 Next, you’ll see the **Review Import File** screen, where you ensure that the data to import is correct and valid.
 
@@ -24,7 +24,7 @@ This section also lets you apply filters under **Manage Filtering Options** to f
 
 Once you’re finished reviewing, click **Continue to Step 3**.
 
-## Step 3: Mapping data into Meta Box custom fields
+## 3. Mapping data into Meta Box custom fields
 
 Next up is the **Drag & Drop** screen, where you can map the import data into their corresponding fields.
 
@@ -42,7 +42,7 @@ Here, you can enable the desired field groups to import their Meta Box data. Her
 
 After mapping all the Meta Box custom fields, click the **Continue to Step 4** button (not shown).
 
-## Step 4: Setting up import settings
+## 4. Setting up import settings
 
 Last, you see the **Import Settings** screen, where most import settings are defined.
 
@@ -54,7 +54,7 @@ This screen also lets you control other import options, such as what happens sho
 
 Near the bottom, you can also schedule your import and configure other advanced settings. Ignore these options for now and just click **Continue**.
 
-## Step 5: Running import and checking imported Meta Box fields
+## 5. Running import and checking imported Meta Box fields
 
 Before running the import process, you’ll see the **Confirm & Run** screen, which lets you review a summary of the planned import actions before proceeding.
 
