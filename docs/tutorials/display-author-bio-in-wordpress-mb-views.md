@@ -16,7 +16,7 @@ This is an example for the bio section that we will create in this practice.
 
 ## Preparation
 
-Each author will be a user on your WordPress website. We have a tutorial on [how to let users have the authority to publish posts](https://docs.metabox.io/tutorials/create-faqs-page-meta-box-elementor/) on your website without accessing the backend. In this practice, I assume that they have it already.
+Each author will be a user on your WordPress website. We have a tutorial on [how to let users have the authority to publish posts](https://docs.metabox.io/tutorials/add-guest-authors/) on your website without accessing the backend. In this practice, I assume that they have it already.
 
 Still, they have an account with some basic and default place for information as WordPress provided. As well as, we’re using custom fields for some extra information that you can flexibly input any kind of data.
 
