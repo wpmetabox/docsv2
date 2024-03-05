@@ -20,10 +20,9 @@ Each author will be a user on your WordPress website. We have a tutorial on [how
 
 Still, they have an account with some basic and default place for information as WordPress provided. As well as, we’re using custom fields for some extra information that you can flexibly input any kind of data.
 
-Since we use the custom fields to store some of the author information, we need the [Meta Box plugin](https://wordpress.org/plugins/meta-box/) for the framework to do that. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
+Since we use the custom fields to store some of the author information, we need some tools:
 
-We also need some advanced features from **Meta Box** which are from some of its extensions:
-
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/) for the framework to do that.
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create a bi-directional relationship between posts and users to know which post from which author;
 * [MB User Meta](https://metabox.io/plugins/mb-user-meta/): to assign fields to users;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the section displaying the author information on the post;
