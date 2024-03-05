@@ -22,7 +22,7 @@ Still, they have an account with some basic and default place for information as
 
 Since we use the custom fields to store some of the author information, we need some tools:
 
-* [Meta Box plugin](https://wordpress.org/plugins/meta-box/) for the framework to do that.
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): for the framework to do that.
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create a bi-directional relationship between posts and users to know which post from which author;
 * [MB User Meta](https://metabox.io/plugins/mb-user-meta/): to assign fields to users;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the section displaying the author information on the post;
