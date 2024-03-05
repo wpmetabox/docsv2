@@ -572,7 +572,7 @@ These filters should return an array of data (e.g., the `$row`).
 
 ### Bulk actions handling
 
-The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action. You can add your own custom bulk actions handler by creating a function following the naming convention `mbct_bulk_action_{$action}`. Please note that the action name are auto convert to lowercase and use hyphens instead of underscores.
+The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action. You can add your own custom bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto convert to lowercase and use hyphens instead of underscores.
 
 For example, this code adds a new a custom bulk action `my_action` with a handler:
 
@@ -583,7 +583,7 @@ add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
 	return $actions;
 } );
 
-function mbct_bulk_action_my_action( $request ) {
+function mbct_my_action_bulk_action( $request ) {
 	// Do something with the request
 	print_r($request);
 	
