@@ -592,6 +592,31 @@ function mbct_my_action_bulk_action( $request ) {
 }
 ```
 
+#### Redirection
+
+By default, the page will get reload after the bulk action is done. You can redirect the user to after the bulk action is done by passing an array in the `wp_send_json_success()` function. For example:
+
+```php
+wp_send_json_success( [
+	'redirect' => add_query_arg( 'status', 'success', admin_url('admin.php?page=transactions' ) ),
+] )
+```
+
+The above code will redirect the user to the `admin.php?page=transactions&status=success` page after the bulk action is done.
+This is useful when you want to show a success message to the user after the bulk action is done.
+
+#### Custom error message
+
+Pass an error message in the `wp_send_json_error()` function to show a custom error message to the user. For example:
+
+```php
+if ( ! current_user_can( 'manage_options' ) ) {
+	wp_send_json_error( 'Sorry, you are not allowed to do this action.' );
+}
+```
+
+The error message will be shown as an alert box to the user.
+
 ### Notes
 
 Each model can have only one custom table.
