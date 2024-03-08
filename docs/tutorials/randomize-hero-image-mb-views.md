@@ -190,7 +190,7 @@ There is a point here that I turned the image to its URL since I want it to be t
 
 Go back to the view to edit the template once again.
 
-Add some `**div**` tags and classes for the content, as well as turn the image to the background.
+Add some **`div`** tags and classes for the content, as well as turn the image to the background.
 
 ![Add some div tags and classes for the content, as well as turn the image to the background](https://i.imgur.com/J7x3njR.png)
 
