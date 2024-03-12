@@ -598,7 +598,7 @@ function mbct_my_action_bulk_action( $request ) {
 
 #### Redirection
 
-By default, the page will get reload after the bulk action is done. You can redirect the user to after the bulk action is done by passing an array in the `wp_send_json_success()` function in your callback function. For example:
+By default, the page will get reload after the bulk action is done. You can set redirect URL by passing an array in the `wp_send_json_success()` function in your callback function. For example:
 
 ```php
 // in your callback function
