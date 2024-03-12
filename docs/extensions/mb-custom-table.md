@@ -572,9 +572,9 @@ These filters should return an array of data (e.g., the `$row`).
 
 ### Bulk actions handling
 
-The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action. You can add your own custom bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto convert to lowercase and use underscores instead of hyphens in order to match with PHP function.
+The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action. 
 
-For example, this code adds a new a custom bulk action `my_action` with a handler:
+To add more custom bulk actions, you can use the `mbct_{$model}_bulk_actions` filter. This filter accepts an array of bulk actions. The key is the action name, and the value is the action label.
 
 ```php
 add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
@@ -582,10 +582,14 @@ add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
 	
 	return $actions;
 } );
+```
 
+You can add your own custom bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto convert to lowercase and use underscores instead of hyphens in order to match with PHP function. In this case, `my-action` will be `my_action`.
+
+```php
 function mbct_my_action_bulk_action( $request ) {
 	// Do something with the request
-	print_r($request);
+	print_r( $request );
 	
 	// Send response back to the client
 	wp_send_json_success();
@@ -594,11 +598,12 @@ function mbct_my_action_bulk_action( $request ) {
 
 #### Redirection
 
-By default, the page will get reload after the bulk action is done. You can redirect the user to after the bulk action is done by passing an array in the `wp_send_json_success()` function. For example:
+By default, the page will get reload after the bulk action is done. You can redirect the user to after the bulk action is done by passing an array in the `wp_send_json_success()` function in your callback function. For example:
 
 ```php
+// in your callback function
 wp_send_json_success( [
-	'redirect' => add_query_arg( 'status', 'success', admin_url('admin.php?page=transactions' ) ),
+	'redirect' => add_query_arg( 'status', 'success', admin_url( 'admin.php?page=transactions' ) ),
 ] )
 ```
 
@@ -607,9 +612,11 @@ This is useful when you want to show a success message to the user after the bul
 
 #### Custom error message
 
-Pass an error message in the `wp_send_json_error()` function to show a custom error message to the user. For example:
+You can also set custom error message by calling `wp_send_json_error( $message )` in your callback function, which `$message` is an error string. 
+For example:
 
 ```php
+// in your callback function
 if ( ! current_user_can( 'manage_options' ) ) {
 	wp_send_json_error( 'Sorry, you are not allowed to do this action.' );
 }
