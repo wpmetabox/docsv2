@@ -574,24 +574,34 @@ These filters should return an array of data (e.g., the `$row`).
 
 The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action. 
 
-To add more custom bulk actions, you can use the `mbct_{$model}_bulk_actions` filter. This filter accepts an array of bulk actions. The key is the action name, and the value is the action label.
+To add more custom bulk actions, you can use the `mbct_{$model}_bulk_actions` filter. This filter accepts an array of bulk actions with key is the action name, and the value is the action label.
 
 ```php
 add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
-	$actions['my-action'] = 'My Action';
-	
+	$actions['refund-all'] = 'Refund';
+
 	return $actions;
 } );
 ```
 
-You can add your own custom bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto convert to lowercase and use underscores instead of hyphens in order to match with PHP function. In this case, `my-action` will be `my_action`.
+You can add your own custom bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto convert to lowercase and use underscores instead of hyphens in order to match with PHP function. In this case, `refund-all` will be `refund_all`.
 
 ```php
-function mbct_my_action_bulk_action( $request ) {
-	// Do something with the request
-	print_r( $request );
+function mbct_refund_all_bulk_action( $request ) {
+	$ids        = array_map( 'absint', $request->post( 'ids' ) );
+	$model_name = sanitize_text_field( $request->post( 'model' ) );
+	$model      = MetaBox\CustomTable\Model\Factory::get( $model_name );
 	
-	// Send response back to the client
+	if ( ! $ids || ! $model_name || ! $model ) {
+		wp_send_json_error( __( 'Invalid request', 'mb-custom-table' ) );
+	}
+
+	foreach ( $ids as $id ) {
+		\MetaBox\CustomTable\API::update( $id, $model->table, [
+			'status' => 'refunded',
+		] );
+	}
+
 	wp_send_json_success();
 }
 ```
@@ -607,8 +617,8 @@ wp_send_json_success( [
 ] )
 ```
 
-The above code will redirect the user to the `admin.php?page=transactions&status=success` page after the bulk action is done.
-This is useful when you want to show a success message to the user after the bulk action is done.
+The above code will redirect the user to the `admin.php?page=transactions&status=success`.
+This is useful when you want to show a custom message to the user after the bulk action is done by matching message with the `status` query parameter.
 
 #### Custom error message
 
@@ -622,7 +632,7 @@ if ( ! current_user_can( 'manage_options' ) ) {
 }
 ```
 
-The error message will be shown as an alert box to the user.
+The error message will be shown as a browser alert box to the user.
 
 ### Notes
 
