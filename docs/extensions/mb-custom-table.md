@@ -574,7 +574,7 @@ These filters should return an array of data (e.g., the `$row`).
 
 The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action. 
 
-To add more custom bulk actions, you can use the `mbct_{$model}_bulk_actions` filter. This filter accepts an array of bulk actions with key is the action name, and the value is the action label.
+To add more custom bulk actions, you can use the `mbct_{$model}_bulk_actions` filter. This filter accepts an array with key is the action name, and value is the action label.
 
 ```php
 add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
@@ -584,7 +584,7 @@ add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
 } );
 ```
 
-You can add your own custom bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto convert to lowercase and use underscores instead of hyphens in order to match with PHP function. In this case, `refund-all` will be `refund_all`.
+You can add bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto converted to lowercase and use underscores instead of hyphens in order to match with PHP function. In this case, `refund-all` will be `refund_all`.
 
 ```php
 function mbct_refund_all_bulk_action( $request ) {
@@ -608,7 +608,7 @@ function mbct_refund_all_bulk_action( $request ) {
 
 #### Redirection
 
-By default, the page will get reload after the bulk action is done. You can set redirect URL by passing an array in the `wp_send_json_success()` function in your callback function. For example:
+By default, the page will get reload after the bulk action is completed. You can set the redirect URL by passing an array with `redirect` key in the `wp_send_json_success()` function in your callback function. For example:
 
 ```php
 // in your callback function
@@ -618,7 +618,7 @@ wp_send_json_success( [
 ```
 
 The above code will redirect the user to the `admin.php?page=transactions&status=success`.
-This is useful when you want to show a custom message to the user after the bulk action is done by matching message with the `status` query parameter.
+This is useful when you want to show a custom message to the user by matching message with the `status` query parameter.
 
 #### Custom error message
 
