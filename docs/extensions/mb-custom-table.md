@@ -608,19 +608,37 @@ function mbct_refund_all_bulk_action( $ids, $model ) {
 }
 ```
 
-#### Redirection
+#### Redirection and custom message
 
 By default, the page will get reload after the bulk action is completed. You can set the redirect URL by passing an array with `redirect` key in the `wp_send_json_success()` function in your callback function. For example:
 
 ```php
 // in your callback function
 wp_send_json_success( [
-	'redirect' => add_query_arg( 'status', 'success', admin_url( 'admin.php?page=transactions' ) ),
-] )
+	'redirect' => add_query_arg( 'model-message', 'updated', admin_url( 'admin.php?page=model-transaction' ) ),
+] );
 ```
 
-The above code will redirect the user to the `admin.php?page=transactions&status=success`.
-This is useful when you want to show a custom message to the user by matching message with the `status` query parameter.
+The above code will redirect the user to the `admin.php?page=model-transaction&model-message=updated`.
+
+Since the plugin support custom message via `model-message` query string and match it with labels in custom model.
+You can set the custom message by adding `item_updated` label in the `labels` parameter of the model registration. For example:
+
+```php
+// in your model registration
+mb_register_model( 'transaction', [
+	/// ...
+	'labels' => [
+		'name'          => 'Transactions',
+		'singular_name' => 'Transaction',
+		// highlight-next-line
+		'item_updated'  => 'Transaction updated.',
+	],
+	//...
+] );
+```
+
+As the above example. The *Transaction updated* message will be shown to the user after the bulk action is completed.
 
 #### Custom error message
 
