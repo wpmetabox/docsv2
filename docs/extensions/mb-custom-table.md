@@ -572,6 +572,8 @@ These filters should return an array of data (e.g., the `$row`).
 
 ### Bulk actions handling
 
+#### Create custom bulk actions
+
 The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action. 
 
 To add more custom bulk actions, you can use the `mbct_{$model}_bulk_actions` filter. This filter accepts an array with key is the action name, and value is the action label.
@@ -584,16 +586,19 @@ add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
 } );
 ```
 
+#### Create bulk actions handler
+
 You can add bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto converted to lowercase and use underscores instead of hyphens in order to match with PHP function. In this case, `refund-all` will be `refund_all`.
 
 The function can accepts up to 3 parameters: `$ids`, `$model`, and `$request` **regardless of the number of parameters and order**. 
+
 For example: `( $ids, $model )`, `( $model, $ids )`, `( $request, $ids, $model )`... are valid function signatures.
 
 When:
 
-`$ids`: `int[]` an array of object IDs
-`$model`: `MetaBox\CustomTable\Model` the model object. You can use this object to get the model name, table name, and other information.
-`$request`: `RWMB_Request` the request object which contains the request data. In every request, we have `action`, `bulk_action`, `ids`, `model`, and `_ajax_nonce` fields. You can get value of a field by calling `$request->post( $field_name )`. 
+`$ids`: `int[]` an array of object IDs <br>
+`$model`: `MetaBox\CustomTable\Model` the model object. You can use this object to get the model name, table name, and other information. <br>
+`$request`: `RWMB_Request` the request object which contains the request data. In every request, we have `action`, `bulk_action`, `ids`, `model`, and `_ajax_nonce` fields. You can get value of a field by calling `$request->post( $field_name )`. <br>
 
 ```php
 function mbct_refund_all_bulk_action( $ids, $model ) {
@@ -610,7 +615,8 @@ function mbct_refund_all_bulk_action( $ids, $model ) {
 
 #### Redirection and custom message
 
-By default, the page will get reload after the bulk action is completed. You can set the redirect URL by passing an array with `redirect` key in the `wp_send_json_success()` function in your callback function. For example:
+By default, the page will get reload after the bulk action is completed. You can set the redirect URL by passing an array with `redirect` key in the `wp_send_json_success()` function in your callback function. 
+For example:
 
 ```php
 // in your callback function
@@ -622,7 +628,8 @@ wp_send_json_success( [
 The above code will redirect the user to the `admin.php?page=model-transaction&model-message=updated`.
 
 Since the plugin support custom message via `model-message` query string and match it with labels in custom model.
-You can set the custom message by adding `item_updated` label in the `labels` parameter of the model registration. For example:
+You can set the custom message by adding `item_updated` label in the `labels` parameter of the model registration. 
+For example:
 
 ```php
 // in your model registration
