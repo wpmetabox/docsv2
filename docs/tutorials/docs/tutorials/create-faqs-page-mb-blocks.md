@@ -10,7 +10,6 @@ In today’s practice, we’re going to **create an FAQs page** by using custom 
 Here is my simple FAQ page with some pairs of questions and answers.
 
 ![An example of the FAQs page using MB Blocks](https://i.imgur.com/N71jB4M.png)
-()
 
 ## Video version
 
@@ -137,7 +136,7 @@ Inside this loop, enter these lines of code. (We did it following the instructio
 
 Now, go back to the FAQs page editor, and test how the data stored in the custom fields display visually on the page. Whenever you fill in the information in the field, the same information will be simultaneously displayed visually on the page.
 
-![The same information will be simultaneously displayed visually on the page when filling in the information in the field.](https://i.imgur.com/FC6QFxd.gif
+![The same information will be simultaneously displayed visually on the page when filling in the information in the field.](https://i.imgur.com/FC6QFxd.gif)
 
 These are the questions and answers that we need. However, they naturally have no style, including the display on the preview and on the frontend.
 
