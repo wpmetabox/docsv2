@@ -586,15 +586,17 @@ add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
 
 You can add bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto converted to lowercase and use underscores instead of hyphens in order to match with PHP function. In this case, `refund-all` will be `refund_all`.
 
+The function can accepts up to 3 parameters: `$ids`, `$model`, and `$request` **regardless of the number of parameters and order**. 
+For example: `( $ids, $model )`, `( $model, $ids )`, `( $request, $ids, $model )`... are valid function signatures.
+
+When:
+
+`$ids`: `int[]` an array of object IDs
+`$model`: `MetaBox\CustomTable\Model` the model object. You can use this object to get the model name, table name, and other information.
+`$request`: `RWMB_Request` the request object which contains the request data. In every request, we have `action`, `bulk_action`, `ids`, `model`, and `_ajax_nonce` fields. You can get value of a field by calling `$request->post( $field_name )`. 
+
 ```php
-function mbct_refund_all_bulk_action( $request ) {
-	$ids        = array_map( 'absint', $request->post( 'ids' ) );
-	$model_name = sanitize_text_field( $request->post( 'model' ) );
-	$model      = MetaBox\CustomTable\Model\Factory::get( $model_name );
-	
-	if ( ! $ids || ! $model_name || ! $model ) {
-		wp_send_json_error( __( 'Invalid request', 'mb-custom-table' ) );
-	}
+function mbct_refund_all_bulk_action( $ids, $model ) {
 
 	foreach ( $ids as $id ) {
 		\MetaBox\CustomTable\API::update( $id, $model->table, [
