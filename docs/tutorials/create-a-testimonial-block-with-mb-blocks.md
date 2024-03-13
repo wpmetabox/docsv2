@@ -13,7 +13,7 @@ There are three ways to create a block with Meta Box Blocks:
 
 All of them have tradeoff between simplicity and flexibility. In this tutorial, we'll go through the third way, which is the most flexible way to create a block and it's recommended by WordPress for its [benefits](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#benefits-of-using-the-metadata-file).
 
-In this tutorial, we will create a simple testimonial block with two fields: `name` and `image`, for the testimonial content, we'll use the inner blocks feature, this way we can use any block for the content. Here's how the block looks like:
+In this tutorial, we will create a simple testimonial block with two fields: `name` and `image`, for the testimonial content, we'll use the inner blocks feature, this way we can have more freedom for content. Here's how the block looks like:
 
 ![Image](https://i.imgur.com/fVTmMWi.png)
 
@@ -108,7 +108,8 @@ Create a new folder `blocks` in the root of your theme and create a new file `te
         "image": {
             "type": "object",
             "default": {
-                "full_url": "https://i0.wp.com/metabox.io/wp-content/themes/rooster/images/online-generator.png?quality=100"
+                "full_url": "https://i0.wp.com/metabox.io/wp-content/themes/rooster/images/online-generator.png?quality=100",
+				"alt": "Testimonial image",
             }
         },
         "name": {
@@ -152,7 +153,12 @@ Create a new file `blocks/testimonials/testimonial.php` with the following conte
  */
 ?>
 <div <?= get_block_wrapper_attributes(); ?>>
-	<img class="testimonial__image" loading="lazy" src="<?= esc_html( $attributes['image']['full_url'] ) ?>">
+	<img class="testimonial__image" 
+		loading="lazy" 
+		alt="<?= esc_html($attributes['image']['alt']) ?>" 
+		src="<?= esc_html( $attributes['image']['full_url'] ) ?>"
+	>
+
 	<div class="testimonial__body">
 		<div class="testimonial__content" style="min-height: 50px;">
 		<InnerBlocks
@@ -175,11 +181,11 @@ Create a new file `blocks/testimonials/testimonial.php` with the following conte
 
 MB Blocks follows exactly what WordPress recommendation, we'll have `$attributes`, `$content` and `$block` variables to get the block's attributes and settings. But we recommend using the `<InnerBlocks>` tag instead of `$content` so that can work with both editor and frontend.
 
-We use the `get_block_wrapper_attributes` function to get the block's wrapper attributes, which includes the block's alignment and color. This function is provided by the block editor and it's recommended to use it to keep the block consistent with the editor's styles.
+We use the `get_block_wrapper_attributes()` function to get the block's wrapper attributes, which includes the block's alignment and color. This function is provided by the block editor and it's recommended to use it to keep the block consistent with the editor's styles.
 
 The `InnerBlocks` component is used to render the inner blocks. We use the `allowedBlocks` parameter to allow only `core/heading` and `core/paragraph` blocks. This way, users can only add these blocks to the testimonial block. The `template` parameter is used to define the default content of the testimonial block. It includes a heading and a paragraph. The `templateLock` parameter is set to `insert` to prevent users from removing the default content.
 
-One of the best feature of MB Blocks is auto preparing data for you so you can use it directly in the template file. In this case, because we use `image` field for the block, Meta Box will save ID of the attachment like usual and then MB Blocks will automatically get the image data and prepare for you to use in the template file. You can see that we use `$attributes['image']['full_url']` to get the full URL of the image. This is very convenient and easy to use.
+One of the best feature of MB Blocks is auto preparing data for you so you can use it directly in the template file. So you won't have to manually use functions like `rwmb_meta()`, `wp_get_attachment_image()`, etc. In this case, because we use `image` field for the block, Meta Box will save ID of the attachment like usual and then MB Blocks will automatically get the image data and prepare for you to use in the template file. You can see that we use `$attributes['image']['full_url']` to get the full URL of the image. This is very convenient and easy to use.
 
 ## Step 5: Style the Block
 

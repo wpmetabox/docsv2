@@ -448,9 +448,9 @@ If you want to save the block fields into custom tables, you need to activate th
 See [MB Custom Table documentation](/extensions/mb-custom-table/) for more details.
 
 ## Block registration using block.json
-In addition to registering blocks with PHP, you can also register blocks using a `block.json` file.
+In addition to registering blocks within Meta Box array, you can also register blocks using a `block.json` file.
 
-Meta Box supports registering blocks using a `block.json` file, respect WordPress standard so the registration steps are exactly the same as normal block registration.
+MB Blocks supports registering blocks using a `block.json` file, it respects WordPress standard so the registration steps are exactly the same as native WP block registration.
 WordPress recommends using `block.json` for block registration because of [these benefits](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#benefits-of-using-the-metadata-file).
 
 Assuming we're creating a hero area block (like the first screenshot), now your `block.json` file will look like this:
@@ -533,13 +533,27 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 ### `render`
 
-By following WordPress standard, the `$attributes`, `$content` and `$block` variables are exposed to the block template file. We also parsed all meta box fields into `$attributes` so you can access them directly in the block template file.
+By following WordPress standard, the `$attributes`, `$content` and `$block` variables are exposed to the block template file. We also parsed all meta box fields into `$attributes` so you can access them directly in the block template file without using functions like `rwmb_meta()`, `wp_get_attachment_image()`, etc. This is a great improvement to make the block template file cleaner and easier to read.
 
 ```php
 <div <?php echo get_block_wrapper_attributes(); ?>>
     <?php echo esc_html( $attributes['title'] ); ?>
 </div>
 ```
+
+### other parameters
+
+#### `mode`
+
+Since `mode` is not supported in the `block.json` file, you can however set the mode in `supports` parameter.
+
+```json
+"supports": {
+	"mode": "edit"
+}
+```
+
+This way, you can set the default mode of the block to `edit` to make it shows the edit fields when loaded.
 
 ## Block fields
 
