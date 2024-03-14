@@ -25,7 +25,7 @@ These are some tools we need for this practice:
 * [MB Blocks](https://metabox.io/plugins/mb-blocks/): to allow you to create custom Gutenberg blocks. With the help of this extension, we can use PHP or the UI provided by [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to create a block. They bring the same result. However, we recommend using Meta Box Builder to limit the use of complex code.
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields for questions and answers into a group, so they will be in pairs.
 
-## Creating a new page
+## 1. Creating a new page
 
 First of all, go to **Meta Box** > **Pages** > **Add New Page** to create a totally new one for the FAQs.
 
@@ -35,13 +35,13 @@ I leave it blank, since I will get content by adding the custom block in the nex
 
 ![Just leave this page blank.](https://i.imgur.com/cYLMlzJ.png)
 
-## Creating a custom block
+## 2. Creating a custom block
 
 I’ll create a custom **Gutenberg** block that includes some custom fields like this:
 
 ![Create a custom Gutenberg block that includes some custom fields](https://i.imgur.com/c8rhyX5.png)
 
-The group includes 2 subfields inside, one for the questions, and one for the answers. When we want to add more couples of questions and answers, we can click the Add more button.
+The group includes 2 subfields inside, one for the questions, and one for the answers. When we want to add more couples of questions and answers, we can click the **Add more** button.
 
 ![The Add more button help to add more questions and answers](https://i.imgur.com/ed39KAZ.png)
 
@@ -69,7 +69,7 @@ Next, set name for the group’s title.
 
 This is just optional to identify each set of the question and answer. I use some variables to name the group dynamically.
 
-**Ịn there**:
+**In there**:
 
 * `#`: This is for numbering the questions.
 * `{question}`: This is the ID of the question field. It helps to display the content of the question on the group title.
@@ -104,9 +104,9 @@ However, no matter how many pairs of the Q&A you add, there is nothing displayed
 
 Let's move to the next step.
 
-## Displaying data of the block
+## 3. Displaying data of the block
 
-### Rendering the data
+### 3.1. Rendering the data
 
 Go back to the settings of the created block. On the **Settings** tab, the **Render** section helps to render the data saved in custom fields that we have in this block to be the content displayed on the block on the frontend.
 
@@ -144,7 +144,7 @@ These are the questions and answers that we need. However, they naturally have n
 
 ![The Q&As with no style display on the frontend](https://i.imgur.com/utAtrgh.png)
 
-### Styling the block
+### 3.2. Styling the block
 
 To have a better look for the questions and answers, those are in a block, we should go back to the settings of the block instead of the page editor. We should add some div tags and classes to the **Render code** section. And you also can use CSS as well.
 
