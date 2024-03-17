@@ -374,6 +374,16 @@ $siblings = new WP_Query( [
 
 The code is similar to the above section, except for the extra `sibling` parameter. That parameter works for all post, term, or user queries.
 
+<details>
+	
+<summary>In Development: MB_Relationships_API::each_connected</summary>	
+
+:::caution
+
+**The `each_connected` method is not yet implemented**. For the time being, use [`get_connected`](#getting-connected-items) instead.
+
+:::
+
 ## Post archive
 
 All the examples above work well with a single post, term, or user. But if you want to display connected posts on the blog archive page, this method will create a dozen of queries for each post on the archive page. That's a lot of extra queries.
@@ -502,6 +512,7 @@ while ( $my_query->have_posts() ) : $my_query->the_post();
     wp_reset_postdata();
 endwhile;
 ```
+</details>
 
 ## Query by multiple relationships
 
