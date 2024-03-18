@@ -689,8 +689,14 @@ Get all custom fields data for an object from a custom table. The returned data 
 
 The data is raw, meaning it's not formatted yet. For example: for images, you'll get the attachment IDs instead of an array of URL, width, height, size, etc. as you get via `rwmb_the_value` function.
 
+Parameters:
+
+`$object_id` (int) (required) The object ID. It can be post ID, term ID, user ID, or null for custom models. <br>
+`$table` (string) (required) The custom table name.<br>
+`$force` (bool) (optional) Whether to force to get the data from the database, not from the cache. Default is `true`.<br>
+
 ```php
-$data = \MetaBox\CustomTable\API::get( $object_id, $table );
+$data = \MetaBox\CustomTable\API::get( $object_id, $table, $force );
 
 // Inspect the data.
 print_r( $data );
