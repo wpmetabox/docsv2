@@ -290,7 +290,7 @@ add_action( 'init', function() {
 		[                                  // Table columns (without ID).
 			'created_at' => 'DATETIME',
 			'amount'     => 'BIGINT',
-			'email'      => 'VARCHAR(20)',
+			'email'      => 'VARCHAR(99)',
 			'gateway'    => 'TEXT',
 			'status'     => 'VARCHAR(20)',
 			'screenshot' => 'TEXT',
