@@ -596,9 +596,9 @@ For example: `( $ids, $model )`, `( $model, $ids )`, `( $request, $ids, $model )
 
 When:
 
-`$ids`: `int[]` an array of object IDs <br>
-`$model`: `MetaBox\CustomTable\Model` the model object. You can use this object to get the model name, table name, and other information. <br>
-`$request`: `RWMB_Request` the request object which contains the request data. In every request, we have `action`, `bulk_action`, `ids`, `model`, and `_ajax_nonce` fields. You can get value of a field by calling `$request->post( $field_name )`. <br>
+`$ids`: `int[]` an array of object IDs <br />
+`$model`: `MetaBox\CustomTable\Model` the model object. You can use this object to get the model name, table name, and other information. <br />
+`$request`: `RWMB_Request` the request object which contains the request data. In every request, we have `action`, `bulk_action`, `ids`, `model`, and `_ajax_nonce` fields. You can get value of a field by calling `$request->post( $field_name )`. <br />
 
 ```php
 function mbct_refund_all_bulk_action( $ids, $model ) {
