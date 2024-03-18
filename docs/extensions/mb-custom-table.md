@@ -691,9 +691,9 @@ The data is raw, meaning it's not formatted yet. For example: for images, you'll
 
 Parameters:
 
-`$object_id` (int) (required) The object (row) ID.<br>
-`$table` (string) (required) The custom table name.<br>
-`$force` (bool) (optional) Whether to force to get the data from the database, not from the cache. Default is `true`.<br>
+`$object_id` (int) (required) The object (row) ID.<br />
+`$table` (string) (required) The custom table name.<br />
+`$force` (bool) (optional) Whether to force to get the data from the database, not from the cache. Default is `true`.<br />
 
 ```php
 $data = \MetaBox\CustomTable\API::get( $object_id, $table, $force );
