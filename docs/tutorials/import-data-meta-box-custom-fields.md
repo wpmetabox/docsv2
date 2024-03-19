@@ -1,5 +1,5 @@
 ---
-title: Importing data into Meta Box custom fields - Complete snapshot
+title: Importing data into Meta Box custom fields - Using WP All Import
 ---
 
 To import data into Meta Box custom fields, first install the [Meta Box Import Add-On](https://www.wpallimport.com/import-meta-box-fields/). You must also create the Meta Box custom fields and attach them to the desired post type or CPT before you can import data into them.
