@@ -5,7 +5,11 @@ title: MB Relationships
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-MB Relationships helps you to create relationships between posts, terms, and users in WordPress.
+MB Relationships helps you to create relationships between posts, terms, and users in WordPress. So when you edit an item (post, term, user), you can select other items to connect to. It works with all post types, and all custom taxonomies and users, and supports many-to-many, one-to-many, or many-to-one relationships.
+
+This is an example of a many-to-many relationship between events (a custom post type) and speakers (user).
+
+![Events to speakers relationship](https://i0.wp.com/images.elightup.com/meta-box/docs/relationships/events-to-speakers.png)
 
 The plugin uses a custom table for storing relationships and integrates with default WordPress queries to retrieve the connected items easily. Using a custom table has several benefits:
 
@@ -23,11 +27,15 @@ Creating a relationship is done by either of the following methods:
 - **Using [Meta Box Builder](/extensions/meta-box-builder/)**, which helps you create relationships with UI. This extension is a premium extension and is already bundled in Meta Box AIO/MB Core.
 - **Using code**.
 
+Before going into the detailed settings of a relationships, it's important to note that: when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). And inside that meta box, there'll be a cloneable field ([post](/fields/post/), [taxonomy_advanced](/fields/taxonomy-advanced/), or [user](/fields/user/) depending on the object type) for you to select connected items. So the settings of a relationships will be divided into 3 parts: settings for the relationship, for the meta box and for the field.
+
+Now let's see how to create a relationship with Meta Box Builder.
+
 ### Using Meta Box Builder
 
 To create a relationship, go to **Meta Box > Relationships** and click **Add New**.
 
-![create relationships](https://i.imgur.com/aV0N0e2.png)
+![Create a relationship with Meta Box Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/relationships/create-relationships-with-meta-box-builder.png)
 
 Here you can enter all the settings for the relationship and each side of the relationship (**From** and **To**).
 
@@ -43,14 +51,14 @@ When editing an item, the plugin will show a meta box for selecting connected it
 
 For each side, there are 3 tabs of settings:
 
-- General: for general settings such as object type and post type.
-- Meta Box: for extra meta box settings. These settings are the same as the field group settings when creating custom fields.
-- Field: for extra field settings. These settings are the same as the field settings (post, term, or user depending on the object type).
+- **General**: for general settings such as object type and post type.
+- **Meta Box**: for extra meta box settings. These settings are the same as the field group settings when creating custom fields.
+- **Field**: for extra field settings. These settings are the same as the field settings ([post](/fields/post/), [taxonomy_advanced](/fields/taxonomy-advanced/), or [user](/fields/user/) depending on the object type).
 
 <Tabs>
   <TabItem value="general" label="General" default>
 
-![general settings for a relationship side](https://i.imgur.com/aZdXHhf.png)
+![general settings for a relationship side](https://i0.wp.com/images.elightup.com/meta-box/docs/relationships/general-settings.png)
 
 Name | Description
 ---|---
@@ -58,6 +66,7 @@ Object type | What type of object you want to set. If you choose "Term" or "User
 Post type | If you select object type = "Post", then the post type settings will appear to let you select the post type.
 Taxonomy | If you select object type = "Term", then the taxonomy settings will appear to let you select the taxonomy.
 Empty message | The custom message is displayed when there are no connections. Leaving this setting blank will use the default message "No connections".
+Show admin filter | Add a select dropdown to filter posts by this relationship. Works only for posts.
 Show as admin column | Show the connections in the admin list table of posts/terms or users. When you select this setting, the following settings will appear.
 Column position | Select the position of the admin column. You need to set it after/before or replace an existing column by selecting the option from the dropdown and selecting/entering the ID of the target column. Note that the plugin already prepares a list of common columns in WordPress, so you can just press the down arrow key to select them. If you create a [custom admin column](/extensions/mb-admin-columns/), enter the column ID here.
 Column title | Custom admin column title. Leaving this setting blank will show the default title from the relationship meta box.
