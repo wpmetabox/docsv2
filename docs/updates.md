@@ -29,12 +29,6 @@ You can also update the extensions manually by following these steps:
 
 ## FAQ
 
-<FAQ question="Why is my license key invalid when I re-save it?">
-
-Don't click the **Save Changes** button twice. The 2nd time you reload the page, the password is hidden and is replaced with **** (the actual asterisks). This prevents other people to see and steal your license key. So, when click **Save Changes** again, you actually save ****, not the actual license key.
-
-</FAQ>
-
 <FAQ question="Why can't I update even with a valid license key?">
 
 We cache the requests to check updates in a WordPress transient, which has a one-day lifetime. To force WordPress to check for updates, you need to remove this transient. To do that, please install the [WP-Sweep](https://wordpress.org/plugins/wp-sweep/) plugin and clear all transients. Then go to **Dashboard » Updates** and click the **Check again** button.
