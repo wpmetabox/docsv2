@@ -114,7 +114,7 @@ Saving values in timestamp allows you to query posts with a specific order by th
 ```php
 $query = new WP_Query( [
     'post_type' => 'event',
-    'orderby'   => 'meta_value_num',
+    'orderby'   => 'meta_value',
     'meta_key'  => 'my_field_id',
     'order'     => 'ASC',
 ] );
