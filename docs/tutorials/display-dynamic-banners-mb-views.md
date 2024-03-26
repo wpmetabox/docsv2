@@ -1,8 +1,6 @@
-
 ---
-title: Displaying the dynamic banners - MB Views
+title: Displaying dynamic banners - MB Views
 ---
-
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
