@@ -71,7 +71,7 @@ After creating all the fields, move to the **Settings** tab, choose **Location**
 
 Now the custom fields are ready on the settings page.
 
-![The custom fields on the settings page](https://i.imgur.com/So1CSTG.png)
+![The custom fields on the settings page](https://i.imgur.com/ED75X7I.png)
 
 Just add content for the banner.
 
