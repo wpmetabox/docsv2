@@ -235,7 +235,7 @@ This line is a condition for showing or hiding the banner. It means that if the 
 style="width: {{ site.banner.width }}
 ```
 
-This line helps turn data from custom fields to be an attribute to stipulate the style of the banner. In this case, it’s the width of the image `{{ site.banner.width }}` means the field has the ID as **width** in the settings page has the ID as **banner**.
+This line helps turn data from custom fields to be an attribute to stipulate the style of the banner. In this case, it’s the width of the image `{{ site.banner.width }}` means the field has the ID as `width` in the settings page has the ID as `banner`.
 
 Just update the template, and see the new look of the banner on the page. 
 
