@@ -231,7 +231,7 @@ This is how the upcoming events section displays on the page.
 
 We should style it a bit for a better look.
 
-## 6. Style the section
+## 6. Styling the section
 
 Go back to the created template as a loop item for each event. Just customize each element's settings to have a better look for the event information.
 
