@@ -1,4 +1,3 @@
-
 ---
 title: Displaying dynamic banners - MB Views
 ---
