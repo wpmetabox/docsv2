@@ -1,219 +1,264 @@
 ---
-title: Creating dynamic banners
+title: Displaying dynamic banners - MB Views
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Do you have difficulties adding, resizing, or replacing pictures or texts on your banners? Creating a backend settings page and adding custom fields can help you deal with this easily. Each custom field is a parameter to customize the banner.
+Displaying dynamic banners in multiple places on a website with the same content but varying in size and position may not be easy to design. If you are looking at how to create banners without using any page builder, we will share an easy and straightforward tip using **MB Views** that you can follow. Let’s dive in to explore the process of creating banners in detail.
+
+This is an example for the banners that we will create in this practice.
+
+![This is an example for the banners](https://i.imgur.com/Cv31dWC.png)
+
+## Video Version
+
+<LiteYouTubeEmbed id='o3vny6oma0w' />
 
 ## Preparation
 
-There are some tools we need for this practice:
+I’ll create two banners with the same content but varying in size and position. They are not rendered as images. The background, text, color, or any element of the banner are stipulated from the content saved in custom fields. So you can modify the banner context to whatever you want without having to update the layout or develop a new one.
 
-* [Meta Box](https://metabox.io): to have framework to create settings page and custom fields;
-* [MB Settings Page](https://metabox.io/plugins/mb-settings-page/):  to create settings pages with numerous options on the back end;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create custom fields;
-* [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the banner.
+So, in this practice, we need these tools:
+
+* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input banner information;
+* [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the banner. It’s just optional;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
+
+You can install these extensions individually or just use **Meta Box AIO**.
 
 ## 1. Creating a settings page
 
-Go to **Meta Box > Settings Page > New Settings Page**.
+We’ll use a settings page to include all the content, and other settings of the banner.
 
-![Create a settings page](https://i.imgur.com/TCDUMwU.png)
+Go to **Meta Box** to create a settings page.
 
-![Create a settings page](https://i.imgur.com/cZO4KME.png)
+![Go to Meta Box to create a settings page](https://i.imgur.com/oGVdL1u.png)
 
-This is the settings page I’ve created:
+There is no need for special settings for it in this practice.
 
-![Created setting page](https://i.imgur.com/SNEXZYk.png)
+After publishing, you can see a new settings page named **Banner** appeared.
 
-This page is still blank. So, we’ll add custom fields to create some options for the content and parameters of the banner.
+![A new settings page named as Banner](https://i.imgur.com/ZVDtPLy.png)
 
-## 2. Adding custom fields
+It’s blank now, so just move on to create custom fields for this page.
 
-Here are the custom fields I created:
+![The settings page for the banner is blank page so far](https://i.imgur.com/HPE9KLQ.png)
 
-![created custom fields](https://i.imgur.com/9f31jkg.png)
+## 2. Creating custom fields
 
-Note that to stipulate the position for title and description,I have two fields as in the image. They’re in the radio type, so in their settings will have a choice box to fill in options for position like this:
+Each element for the content of the banner should be put in a separate custom field. These are some fields that I’ll create for the banner.
 
-![Insert text into the choice box](https://i.imgur.com/56SuPgq.png)
+![There are some fields for banners](https://i.imgur.com/6ThnxTo.png)
 
-After creating fields, move to the **Settings** tab, set **Location** as the **Settings Page** and select **Banner**.
+The first field is to set to display the banner on the frontend or not. You can turn on or turn off the banner easily thanks to it.
 
-![Set location for the created fields](https://i.imgur.com/2bylb9R.png)
+![This field is to set to display the banner on the frontend or not](https://i.imgur.com/IcTPvCD.png)
 
-Now, back to the created settings page for our banner, you will see the fields and can now fill in the banner's information.
+All the other fields are the content of the banner. They’re just typical ones. You should create fields based on your own requirements for the banner.
 
-![Fill in the banner information](https://i.imgur.com/6VIdJKm.png)
+Now, move to the Meta Box menu to create fields.
+
+Choose the **Checkbox** type for the first field, which regulates whether to display the banner or not.
+
+![This is the Checkbox type to display the banner or not](https://i.imgur.com/vDwL8HK.png)
+
+For the other fields for the content of the banner, just create them without special settings.
+
+After creating all the fields, move to the **Settings** tab, choose **Location** as **Settings Page**, and select **Banner** to display the created fields to the settings page we use for the banner.
+
+![Move to the Settings tab, choose Location as Settings Page, and select Banner to display the created fields](https://i.imgur.com/IDyqo4O.png)
+
+Now the custom fields are ready on the settings page.
+
+![The custom fields on the settings page](https://i.imgur.com/ED75X7I.png)
+
+Just add content for the banner.
 
 ## 3. Creating a template for banner
 
-We’ll create a template and generate a shortcode for it to embed it anywhere easily.
+We’ll create a template and generate a shortcode to easily display the banner anywhere.
 
-There are two ways to create a template to display banner information. One is adding code to the theme file. And, another is creating a template in the MB Views which is an extension of Meta Box.
+There are two ways to do this. 
 
-With the first one, if you change the theme. The template as well as the shortcode will be missed. Otherwise, using the MB Views will ensure its work.
+* **Adding PHP code** into the theme’s file. If you change the theme, the template as well as the shortcode will be missed.
 
-### Method 1: Using MB Views
+* Using the **MB Views** extension from **Meta Box**. It will ensure it always works. 
 
-Go to the **Meta Box > Views** to create a new template to display the banner information.
+We’ll go through to see both of these ways, then you can experience them all.
 
-![Create new template](https://i.imgur.com/Dft6288.png)
+## 4. Creating a template for banner by adding PHP code to the Theme’s File
 
-Add this code to the **Template** tab:
+### 4.1. Getting data for banner
 
-```php
-{% set settings = mb.get_option( 'banner' ) %}
+Go to the **functions.php** file, and add some lines of code.
 
-{% if( settings.show == 1) %}
-{% set image_ids = settings.image %}
-{% set image_attributes = mb.wp_get_attachment_image_src( image_ids, 'full') %}
-<div class="banner" style="background-image: url(' {{ image_attributes[0] }}  ' )">
-	<div class= "content-banner" style="width:{{ settings.width }}">
-		<h2 style="color:{{ settings.color }} " class="title-banner {{ settings.title_position }} "> {{ settings.title }} </h2>
-		<div style="color: {{ settings.color_description }} " class="description-banner {{ settings.description_position }} ">{{ settings.description }}</div>
-	</div>
-</div>
+![Go to the functions.php file, and add some lines of code](https://i.imgur.com/KNbBgJD.png)
 
-{% endif %}
+**In there:**
+
+```
+$settings = get_option( 'banner' );
 ```
 
-![Insert the code](https://i.imgur.com/gAfryD5.png)
+This line is to get data from the page. In there, `'banner'` is the option name of the settings page.
 
-**Explanation**:
+All of these following lines are to get data from the custom fields.
 
-`{% if( settings.show == 1) %}` : This line is to check if the **Show** field is checked or not. If it’s checked that means the value of this field is set as **1**, we will display the following information on the banner.
+![These lines are to get data from the custom fields](https://i.imgur.com/HKrSvNO.png)
 
+```
+wp_get_attachment_image_src( )
+```
 
-`{% set image_ids = settings.image %}
-{% set image_attributes = mb.wp_get_attachment_image_src( image_ids, 'full') %}`:
+This function is to get the URL of the image. `'image'` is the ID of the field.
 
-These lines of code is to get the link of the image from the **Image** field.
+```
+$show = $settings['show'];
+```
 
-`{{ settings.width }}
-{{ settings.color }}
-{{ settings.color_description }}
-{{ settings.title }}
-{{ settings.title_position }}
-{{ settings.description }}
-{{ settings.description_position }}`:
+This line is to get the value saved in this field since we have a checkbox field choosing to show or hide the banner.
 
-These are to get the fields’ values. In there, the part after the `settings.` is the ID of the field.
+The `rwmb_meta( )` function is to get the data in text from fields.
 
+![This function to get the data in text from fields](https://i.imgur.com/jMVj36V.png)
 
-Then, scroll down to the **Settings** section of the view, set the **Type** as **Shortcode** to save this template as a shortcode.
+These are the ID of the fields.
 
-![Set the Type as Shortcode](https://i.imgur.com/kByvi0c.png)
+![These are the ID of the fields](https://i.imgur.com/BjGrh5n.png)
 
-After publishing the view, just copy the generated shortcode and input it to anywhere we want on your website.
+Beside that, `['object_type' => 'setting']` stipulates the object type as a settings page.
 
-![Copy the generated shortcode](https://i.imgur.com/lCSOkK8.png)
+These lines is to display the banner by using all the obtained data.
 
-### Method 2: Adding code to theme file
+![These lines is to display the banner by using all the obtained data](https://i.imgur.com/KWBESdI.png)
 
-Add the following code to the `functions.php` file:
+This if `( $show == 1 ) { }` function is the condition to check that you check the box to allow showing the banner or not. If yes, the value saved in the field will be 1.
 
-```php
-function short_code_banner() {
-    // Banner
-    $settings = get_option( 'banner' );
-    $image_ids = $settings['image'];
-    $image_attributes = wp_get_attachment_image_src( $image_ids, 'full');
+This is the banner that we will display.
 
-    $title = rwmb_meta( 'title', ['object_type' => 'setting'], 'banner' );
-    $description = rwmb_meta( 'description', ['object_type' => 'setting'], 'banner' );
+![This is the banner will be displayed](https://i.imgur.com/ADhufMW.png)
 
-    $title_position = rwmb_meta( 'title_position', ['object_type' => 'setting'], 'banner' );
-    $description_position = rwmb_meta( 'description_position', ['object_type' => 'setting'], 'banner' );
+I do not display all the obtained data directly. Some of them will be used as HTML attributes to specify how the image or the text will be.
 
-    $color = rwmb_meta( 'color', ['object_type' => 'setting'], 'banner' );
-    $color_description = rwmb_meta( 'color_description', ['object_type' => 'setting'], 'banner' );
+For example, the URL of the image used for the background by this: `background-image: url(' .  $image_attributes[0]  . ' ).`.The color and position also are used in the same way.
 
-    $width = rwmb_meta( 'width', ['object_type' => 'setting'], 'banner' );
+### 4.2. Displaying the banner
 
-    if ( !is_admin() ) {
+In the above code, I also created a shortcode for the banner, then we can embed it to any place.
 
-        echo '<div class="banner" style="background-image: url(' .  $image_attributes[0]  . ' )">';
-            echo '<div class= "content-banner" style="width: ' . $width . ' "> ';
-
-                echo '<h2 style="color: ' . $color . ' " class="title-banner ' . $title_position . ' ">' . $title . '</h2>';
-
-                echo '<div style="color: ' . $color_description . ' " class="description-banner ' . $description_position . ' ">' . $description . '</div>';
-
-            echo '</div>';
-        echo '</div>';
-    }
-}
+```
 add_shortcode( 'banner-shortcode', 'short_code_banner' );
 ```
-**In there**:
 
-This code is quite the same with the code we used with MB Views above, just change it a little bit.
+`banner-shortcode` is the name of the shortcode.
 
-* `$settings`: Create the `$setting` variable to get the value of all the fields in the settings page which has the option name as `banner`. Note that the ID of the settings page also is the option name automatically. In the case you change the option name to the other one, make sure to add it here.
+Go to the editor of any page, just paste the shortcode.
 
-* `$image_ids`: Create the `$image_ids` variable to obtain value from the field with ID as 'image'.
+For instance, I add the shortcode to a page content and will display it as full width later.
 
-* Create the `$image_attributes` variable to get the link image based on the ID of the `$image_ids` variable.
+![Go to the editor of any page, just paste the shortcode](https://i.imgur.com/uPJkkuG.png)
 
-* `'title', 'description', 'title_position', 'description_position', 'color', 'color_description', 'width'`: ID's of the fields.
+Then you’ll see the banner displayed.
 
-This time, put `[banner-shortcode]` anywhere you wish to show the banner (footer, header, article, etc.).
+![The banner displayed without styling](https://i.imgur.com/a6dtL5F.png)
 
-## 4. Displaying the banner on the frontend
+To style the banner, we should add some **CSS**.
 
-To add a product picture to the sidebar, go to **Dashboard > Appearance > Widgets** and paste the created shortcode:
+![Add some CSS for styling](https://i.imgur.com/O0GOGZR.png)
 
-![paste the created shortcode](https://i.imgur.com/6KQVRSw.png)
+Here is the new look of the banner.
 
-Then you will see the banner on the front end like this:
+![The new look of the banner](https://i.imgur.com/VIOvKhN.png)
 
-![the banner on the front end](https://i.imgur.com/KNaot7m.png)
+I also will add the banner to the right sidebar. Also use the shortcode.
 
-But the banner doesn’t look very good. So I'll style it a bit.
+![Add shortcode to the right sidebar](https://i.imgur.com/zefMSRM.png)
 
-In the case you use the **MB Views**, go back to the created template > **CSS** tab and add code.
+This is how the banner displays.
 
-![Add some CSS code](https://i.imgur.com/9n39sEN.png)
+![This is how the banner displays](https://i.imgur.com/PUYvw5X.png)
 
-Otherwise, if you use the method 2 in the previous step, go to **Customizer > Additional CSS*** then add code.
+You can see that the banners in both places are the same in the content and layout, but different in the size.
 
-No matter which the method we use, you can use the below CSS code to customize the banner:
+With dynamic banners, you can easily change the banner content and layout without spending time designing a new one, as well as place the banner in different areas and make changes of them at the same time.
 
-```css
-.banner {
-    position: relative;
-    height: 250px;
-    background-repeat: no-repeat!important;
-    background-size: cover;
-    background-position: center;
-}
+## 5. Creating a template for banner using MB Views
 
-.banner .left {
-    text-align: left;
-}
+### 5.1. Creating template and getting data
 
-.banner .right {
-    text-align: right;
-}
+Go to **Views** to create a new template.
 
-.banner .center {
-    text-align: center;
-}
+![Go to Views to create a new template](https://i.imgur.com/1H2jWOT.png)
 
-.content-banner {
-    width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+In the **Template** tab, instead of adding code, we will insert fields one by one that we want to get data from.
+
+![In the Template tab, insert fields one by one to get data from](https://i.imgur.com/cuMAk95.png)
+
+Since our fields are on a settings page, in the **Site** section, you will see the list of the fields that we use for the banner.
+
+![The list of the fields that we use for the banner](https://i.imgur.com/NFwW79K.png)
+
+Just click one by one to insert fields to the template.
+
+![Click one by one to insert fields to the template](https://i.imgur.com/4tdj274.png)
+
+After publishing this template, it will automatically generate a shortcode. We’ll use it to display the banner later.
+
+![A shortcode will be automatically generated](https://i.imgur.com/px0i2N8.png)
+
+### 5.2. Displaying the banner content
+
+The same with the method one when we have a shortcode by adding code to the theme file, now we’ll copy the shortcode from the view, then go to a page editor, paste the shortcode to any place.
+
+![Go to a page editor, paste the shortcode to any place](https://i.imgur.com/wRwLrgQ.png)
+
+On the frontend, the data will display in the form like this.
+
+![On the frontend, the data will display in the form](https://i.imgur.com/stIol7H.png)
+
+### 5.3. Beautifying the banner display
+
+Go back to the template to customize it a bit more to regulate how the data should be rendered on the page.
+
+The logic of the code is the same with method 1 with PHP, but different in detailed text.
+
+![Move some lines of code to make it seem shorter and simpler](https://i.imgur.com/l1JAmKX.png)
+
+```
+{%  if(site.banner.show) == 1 %}
 ```
 
-Here is the result:
+This line is a condition for showing or hiding the banner. It means that if the field with this ID is checked, the stored value will be 1, and then the banner will be allowed to display.
 
-![The result](https://i.imgur.com/QK9PMO3.png)
+```
+style="width: {{ site.banner.width }}
+```
 
+This line helps turn data from custom fields to be an attribute to stipulate the style of the banner. In this case, it’s the width of the image `{{ site.banner.width }}` means the field has the ID as `width` in the settings page has the ID as `banner`.
 
+Just update the template, and see the new look of the banner on the page. 
 
+![The new look of the banner on the page](https://i.imgur.com/CLdD9rw.png)
 
+To prettify the banner, go back to the template in the view, add some **CSS**.
 
+![For styling, go back to the template, add some CSS](https://i.imgur.com/0R1SxJq.png)
+
+Now, the banner displays on the frontend at full width with the right layout.
+
+![The banner displays on the frontend at full width with the right layout](https://i.imgur.com/VIOvKhN.png)
+
+### 5.4. Displaying banners on multiple positions.
+
+We have a shortcode of the template for the banner like this.
+
+![This is a shortcode of the template for the banner](https://i.imgur.com/Qv2OVn9.png)
+
+Just add it to multiple places on a page, or even different pages.
+
+![Add shortcode to multiple places on a page](https://i.imgur.com/K8IpxcW.png)
+
+Then you will have the banner in different places.
+
+![The final result of the banner with the same content but different sizes](https://i.imgur.com/PUYvw5X.png)
