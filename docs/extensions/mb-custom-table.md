@@ -7,21 +7,21 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 **MB Custom Table** helps you to save custom fields' values to a custom table instead of the default WordPress meta table. All custom fields for a post are saved in a single row, where each column contains the value of a corresponding field.
 
-This reduces the number of rows in the database which can help improve the performance when the data grows. And let you have all of your data in one place, so you can easily view, edit, import, and export it.
+This reduces the number of rows in the database which can help improve the performance when the data grows and lets you have all of your data in one place, so you can easily view, edit, import, and export it.
 
 ![custom table overview](https://i.imgur.com/BzE1Fvx.png)
 
 ## Getting started
 
-The easiest way to work with custom table is using [Meta Box Builder](/extensions/meta-box-builder/). It provides UI to create custom tables and automatically save custom fields to table columns.
+The easiest way to work with custom tables is using [Meta Box Builder](/extensions/meta-box-builder/). It provides a UI to create custom tables and automatically save custom fields to table columns.
 
 When creating a field group with Meta Box Builder, switch to the **Settings** tab and you'll see options to use a custom table as follows:
 
-![Create custom table with Meta Box Builder](https://i.imgur.com/HRZSV9w.png)
+![Create a custom table with Meta Box Builder](https://i.imgur.com/HRZSV9w.png)
 
 Enable the option to **Save data in a custom table**, and enter the **Table name**. By default, the table name doesn't contain the WordPress table prefix. If you want to use the WordPress table prefix, enable the **Include table prefix** option (and don't enter the prefix manually).
 
-If you select the option **Create table automatically**, the plugin will attempt to create the table for you. Once it's done, you'll see the custom table in your database, which have columns that match your custom field IDs, each column per field ID. To make the data compatible with the field data, the plugin uses data type `TEXT` for all columns.
+If you select the option **Create table automatically**, the plugin will attempt to create the table for you. Once it's done, you'll see the custom table in your database, which has columns that match your custom field IDs, each column per field ID. To make the data compatible with the field data, the plugin uses the data type `TEXT` for all columns.
 
 Now you can go to the edit post screen (or the edit user profile if you use the meta box for users) and save the post. You'll see the data is saved in the new custom table instead of the post meta table.
 
@@ -33,7 +33,7 @@ The plugin will map custom table columns with custom field IDs, one column per c
 
 ## Using custom tables with code
 
-Using custom tables with code is suitable if you want to have more control on the data type or index key which can help improve the performance. It's recommended when you're a developer and you're familiar with MySQL.
+Using custom tables with code is suitable if you want to have more control over the data type or index key which can help improve the performance. It's recommended when you're a developer and you're familiar with MySQL.
 
 ### Creating a custom table
 
@@ -53,7 +53,7 @@ add_action( 'init', function () {
 } );
 ```
 
-Here we use `init` hook to make sure the API is ready to use. The code will generate a SQL query for creating a custom table like this:
+Here we use the `init` hook to make sure the API is ready to use. The code will generate an SQL query for creating a custom table like this:
 
 ```php
 $sql = 'CREATE TABLE my_custom_table (
@@ -89,7 +89,7 @@ MB_Custom_Table_API::create( "{$wpdb->prefix}my_custom_table", [
 ] );
 ```
 
-D. The extension uses WordPress recommended method to create a custom table, which means if the table already exists, the code will do nothing. Although, **it's recommended to run the code that creates custom tables [only when activating your plugin](https://codex.wordpress.org/Creating_Tables_with_Plugins#Calling_the_functions)**, like this:
+D. The extension uses WordPress's recommended method to create a custom table, which means if the table already exists, the code will do nothing. Although, **it's recommended to run the code that creates custom tables [only when activating your plugin](https://codex.wordpress.org/Creating_Tables_with_Plugins#Calling_the_functions)**, like this:
 
 ```php
 register_activation_hook( __FILE__, function() {
@@ -101,11 +101,11 @@ register_activation_hook( __FILE__, function() {
 } )
 ```
 
-But if you can't run the code when activate your plugin, it's totally fine to run the code with the `init` or `plugins_loaded` hook.
+But if you can't run the code when activating your plugin, it's fine to run the code with the `init` or `plugins_loaded` hook.
 
 ### Using existing tables
 
-You can also use an existing table to store your data. The table can be [manually created](https://codex.wordpress.org/Creating_Tables_with_Plugins) by a plugin, a theme or any tool like phpMyAdmin. To use it with Meta Box:
+You can also use an existing table to store your data. The table can be [manually created](https://codex.wordpress.org/Creating_Tables_with_Plugins) by a plugin, a theme, or any tool like phpMyAdmin. To use it with Meta Box:
 
 - **The custom table must have the ID column**. It's required to connect entries in the custom table with WordPress posts, terms, or users table.
 - **The columns in the custom table much match the field IDs in your meta box**.
@@ -177,11 +177,11 @@ You can also use the [`[rwmb_meta]`](/shortcode/) shortcode to display a field v
 
 ## Group fields
 
-For group fields, it's worth mentioning that the whole group value, including sub-fields values, is saved as a serialized array in **one column**. So, they're not flat as other fields.
+For group fields, it's worth mentioning that the whole group value, including sub-field values, is saved as a serialized array in **one column**. So, they're not as flat as other fields.
 
 That means:
 
-- When you create a table, please create only one column for the group (even if that group contains many sub-fields or sub-groups). And the column name must be the group ID.
+- When you create a table, please create only one column for the group (even if that group contains many sub-fields or sub-groups). The column name must be the group ID.
 - The group value is serialized, you cannot make SQL queries against the sub-fields values. Thus, you don't benefit from the custom table structure. So, be careful to decide on what fields should be in groups and what fields should not. It's recommended to use groups only for *data storing, not for querying*.
 
 While the data of the group is serialized, it will be unserialized when getting via helper functions. So you don't have to unserialize yourself.
@@ -199,7 +199,7 @@ global $wpdb;
 $ids = $wpdb->get_col( "SELECT ID FROM your_table WHERE field1 = 'value1' OR field2 = 'value2'" );
 
 if ( empty( $ids ) ) {
-	echo 'There is no posts';
+	echo 'There are no posts';
 } else {
 	$query = new WP_Query( [
 		'post_type' => 'post',
@@ -213,7 +213,7 @@ This technique also works with terms and users.
 
 ## Custom models
 
-Besides custom tables for built-in WordPress posts, terms and users, the plugin allows you to create custom models, which mimic the WordPress posts, but store the data completely in custom tables. So you don't need to connect to posts, terms, or users anymore. And the data is stored only in one table, which is more efficient.
+Besides custom tables for built-in WordPress posts, terms, and users, the plugin allows you to create custom models, that mimic the WordPress posts, but store the data completely in custom tables. So you don't need to connect to posts, terms, or users anymore. The data is stored only in one table, which is more efficient.
 
 Pros:
 
@@ -311,7 +311,7 @@ Registering fields for models is the same as for posts. You just need to specify
 If your custom table has many fields, you can split them into multiple meta boxes, to enter the data more conveniently. The order of fields doesn't matter when saving.
 
 ```php
-// Step 3: Register fields for model, corresponding to the custom table structure.
+// Step 3: Register fields for the model, corresponding to the custom table structure.
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 	$meta_boxes[] = [
 		'title'        => 'Transaction Details',
@@ -477,7 +477,7 @@ add_filter( 'mbct_transaction_prepare_items', function( $sql ) {
 
 `mbct_{$model}_total_items`
 
-Filters the SQL query in the custom model table list to get total items. Accepts 2 parameter:
+Filters the SQL query in the custom model table list to get total items. Accepts 2 parameters:
 
 - `$sql`: the full SQL query,
 - `$where`: the `WHERE` statement in the query.
@@ -574,9 +574,9 @@ These filters should return an array of data (e.g., the `$row`).
 
 #### Create custom bulk actions
 
-The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action. 
+The plugin provides a way to handle bulk actions for custom models. By default, it already supports the `Delete` action.
 
-To add more custom bulk actions, you can use the `mbct_{$model}_bulk_actions` filter. This filter accepts an array with key is the action name, and value is the action label.
+To add more custom bulk actions, you can use the `mbct_{$model}_bulk_actions` filter. This filter accepts an array with the key as the action name and value as the action label.
 
 ```php
 add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
@@ -588,9 +588,9 @@ add_filter( 'mbct_transaction_bulk_actions', function ( $actions ) {
 
 #### Create bulk actions handler
 
-You can add bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name are auto converted to lowercase and use underscores instead of hyphens in order to match with PHP function. In this case, `refund-all` will be `refund_all`.
+You can add bulk actions handler by creating a function following the naming convention `mbct_{$action}_bulk_action`. Please note that the action name is auto-converted to lowercase and uses underscores instead of hyphens to match with PHP function. In this case, `refund-all` will be `refund_all`.
 
-The function can accepts up to 3 parameters: `$ids`, `$model`, and `$request` **regardless of the number of parameters and order**. 
+The function can accept up to 3 parameters: `$ids`, `$model`, and `$request` **regardless of the number of parameters and order**.
 
 For example: `( $ids, $model )`, `( $model, $ids )`, `( $request, $ids, $model )`... are valid function signatures.
 
@@ -598,7 +598,7 @@ When:
 
 `$ids`: `int[]` an array of object IDs <br />
 `$model`: `MetaBox\CustomTable\Model` the model object. You can use this object to get the model name, table name, and other information. <br />
-`$request`: `RWMB_Request` the request object which contains the request data. In every request, we have `action`, `bulk_action`, `ids`, `model`, and `_ajax_nonce` fields. You can get value of a field by calling `$request->post( $field_name )`. <br />
+`$request`: `RWMB_Request` is the request object which contains the request data. In every request, we have `action`, `bulk_action`, `ids`, `model`, and `_ajax_nonce` fields. You can get the value of a field by calling `$request->post( $field_name )`. <br />
 
 ```php
 function mbct_refund_all_bulk_action( $ids, $model ) {
@@ -615,7 +615,8 @@ function mbct_refund_all_bulk_action( $ids, $model ) {
 
 #### Redirection and custom message
 
-By default, the page will get reload after the bulk action is completed. You can set the redirect URL by passing an array with `redirect` key in the `wp_send_json_success()` function in your callback function. 
+By default, the page will get reloaded after the bulk action is completed. You can set the redirect URL by passing an array with the `redirect` key in the `wp_send_json_success()` function in your callback function.
+
 For example:
 
 ```php
@@ -627,12 +628,13 @@ wp_send_json_success( [
 
 The above code will redirect the user to the `admin.php?page=model-transaction&model-message=updated`.
 
-Since the plugin support custom message via `model-message` query string and match it with labels in custom model.
-You can set the custom message by adding `item_updated` label in the `labels` parameter of the model registration. 
+Since the plugin supports custom messages via the `model-message` query string and matches it with labels in the custom model.
+You can set the custom message by adding the `item_updated` label in the `labels` parameter of the model registration.
+
 For example:
 
 ```php
-// in your model registration
+// In your model registration
 mb_register_model( 'transaction', [
 	/// ...
 	'labels' => [
@@ -649,11 +651,12 @@ As the above example. The *Transaction updated* message will be shown to the use
 
 #### Custom error message
 
-You can also set custom error message by calling `wp_send_json_error( $message )` in your callback function, which `$message` is an error string. 
+You can also set a custom error message by calling `wp_send_json_error( $message )` in your callback function, in which `$message` is an error string.
+
 For example:
 
 ```php
-// in your callback function
+// In your callback function
 if ( ! current_user_can( 'manage_options' ) ) {
 	wp_send_json_error( 'Sorry, you are not allowed to do this action.' );
 }
@@ -725,6 +728,24 @@ $data = [
 ```
 
 In case you want to add a row for a custom model, set `$object_id` to `null`.
+
+Technically, this method calls the [`wpdb::insert`](https://developer.wordpress.org/reference/classes/wpdb/insert/) method, which returns the number of rows inserted (which is always `1`) or `false` on error.
+
+If you want to get the ID of the inserted row, please use this code:
+
+```php
+global $wpdb;
+$id = $wpdb->insert_id;
+```
+
+If there's an error (like the data format is not compatible with the table column format), you can get the error message like this:
+
+```php
+print_r( $wpdb->last_error );
+
+// Output:
+// WordPress database error: Processing the value for the following field failed: status. The supplied value may be too long or contain invalid data.
+```
 
 ### `update`
 
