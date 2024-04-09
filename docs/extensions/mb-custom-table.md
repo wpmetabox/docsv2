@@ -716,12 +716,24 @@ Result:
 Add an array of custom field values for an object. Make sure the data for the object doesn't exist yet in the database.
 
 ```php
+global $wpdb;
 $data = [
 	'field_1' => 'value 1',
 	'field_2' => 'value 2',
 	'field 3' => ['one', 'two', 'three'],
 ];
 \MetaBox\CustomTable\API::add( $object_id, $table, $data );
+```
+
+In case you want to return the ID of row.
+
+```php
+ return $wpdb->insert_id;
+```
+In case you want to print error messages.
+
+```php
+ print_r( $wpdb->last_error );
 ```
 
 In case you want to add a row for a custom model, set `$object_id` to `null`.
