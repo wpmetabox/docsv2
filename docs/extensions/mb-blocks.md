@@ -174,14 +174,6 @@ Add supports for the block alignment. Note that your theme must add styling for 
 'align' => [ 'left', 'right', 'full' ],
 ```
 
-#### `anchor`
-
-Anchors let you link directly to a specific block on a page. This property adds a field to define an id for the block.
-
-```php
-'anchor' => true,
-```
-
 #### `customClassName`
 
 This property adds a field to define a custom CSS class name for the block's wrapper. It's useful when you want to add custom styling for a specific instance of the block.
@@ -245,9 +237,6 @@ function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
 
 	// Unique HTML ID if available.
 	$id = 'hero-' . ( $attributes['id'] ?? '' );
-	if ( ! empty( $attributes['anchor'] ) ) {
-		$id = $attributes['anchor'];
-	}
 
 	// Custom CSS class name.
 	$class = 'hero ' . ( $attributes['className'] ?? '' );
@@ -446,6 +435,122 @@ If you want to save the block fields into custom tables, you need to activate th
 ```
 
 See [MB Custom Table documentation](/extensions/mb-custom-table/) for more details.
+
+## Block registration using block.json
+
+In addition to registering blocks within Meta Box array, you can also register blocks using a `block.json` file.
+
+MB Blocks supports registering blocks using a `block.json` file, it respects WordPress standard so the registration steps are exactly the same as native WP block registration.
+
+WordPress recommends using `block.json` for block registration because of [these benefits](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#benefits-of-using-the-metadata-file).
+
+Assuming we're creating a hero area block (like the first screenshot), now your `block.json` file will look like this:
+
+```json
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "meta-box/hero-content",
+    "title": "Hero Content",
+    "description": "A custom hero content block that uses MB fields.",
+    "style": [
+        "file:./hero-content.css"
+    ],
+    "category": "formatting",
+    "icon": "format-quote",
+    "keywords": [
+        "hero-content",
+        "quote"
+    ],
+    "supports": {
+        "anchor": true
+    },
+    "attributes": {
+        "image": {
+            "type": "object",
+            "default": {
+                "full_url": "https://example.com/photo.png"
+            }
+        },
+        "title": {
+            "type": "string",
+            "default": "Hello, World!"
+        },
+        "content": {
+            "type": "string",
+            "default": "This is a hero content block."
+        }
+    },
+    "render": "file:./hero-content.php"
+}
+```
+
+You can see the syntax is exactly same as other blocks. The only difference is that you're required to name the block start with `meta-box/` to make it works with Meta Box.
+
+For more information, see [Block Metadata](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/).
+
+Since block metadata is registered by block.json, your meta box registration will be much simpler, just a normal meta box with `type` set to `block`:
+
+```php
+add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
+    $meta_boxes[] = [
+        'title'           => 'Hero Content',
+        'id'              => 'hero-content',
+        'description'     => 'A custom hero content block',
+
+        'type'            => 'block',
+
+        // Block fields.
+        'fields'          => [
+            [
+                'type' => 'single_image',
+                'id'   => 'image',
+                'name' => 'Image',
+            ],
+            [
+                'type' => 'text',
+                'id'   => 'title',
+                'name' => 'Title',
+            ],
+            [
+                'type' => 'textarea',
+                'id'   => 'content',
+                'name' => 'Content',
+            ],
+        ],
+    ];
+    return $meta_boxes;
+} );
+```
+
+### `render`
+
+By following WordPress standard, the `$attributes`, `$content` and `$block` variables are exposed to the block template file. We also parsed all meta box fields into `$attributes` so you can access them directly in the block template file without using functions like `rwmb_meta()`, `wp_get_attachment_image()`, etc. This is a great improvement to make the block template file cleaner and easier to read.
+
+```php
+<div <?php echo get_block_wrapper_attributes(); ?>>
+    <?php echo esc_html( $attributes['title'] ); ?>
+
+	<div>
+		<?php mb_the_block_field( 'image' ) ?>
+	</div>
+</div>
+```
+
+### other parameters
+
+#### `mode` and `context`
+
+Since `mode` and `context` is not supported in the `block.json` file, you can however set the mode in `supports` parameter.
+
+```json
+"supports": {
+	"mode": "edit",
+	"context": "normal"
+}
+```
+
+This way, you can set the default mode of the block to `edit` to make it shows the edit fields when loaded.
 
 ## Block fields
 
