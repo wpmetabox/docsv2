@@ -11,7 +11,7 @@ This is an example of a single page for products in WooCommerce that we will cre
 
 ![An example about a single page for products in WooCommerce](https://i.imgur.com/W9WCFGV.png)
 
-## Video Version
+## Video version
 
 <LiteYouTubeEmbed id='Jzgd9IXj8fQ' />
 
@@ -177,7 +177,7 @@ This is all the information about the product that I expect to display on the si
 
 ![All the information about the product displayed without styling](https://i.imgur.com/aQ9DEN6.gif)
 
-## Style the Product Page
+## Styling the product page
 
 To have a better look for the product page, you should go back to the page editor with Bricks. Then, choose each element, both the element dedicated for Woo or the one for custom fields created with Meta Box, just change the settings to style them.
 
