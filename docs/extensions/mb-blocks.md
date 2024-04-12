@@ -154,7 +154,6 @@ Custom supports for the block. This parameter accepts an array like this:
 'supports' => [
 	'align'           => ['wide', 'full'],
 	'customClassName' => true,
-	'anchor'          => false,
 	'multiple'        => true,
 	'reusable'        => true,
 	'lock'            => false,
@@ -218,7 +217,7 @@ The default mode of the block: `edit` to make it show the edit fields when loade
 
 A custom PHP callback to display the block content. The callback accepts 2 parameters:
 
-- `$attributes`: the block attributes, which have all the block settings and fields' data.
+- `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
 - `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end.
 - `$post_id`: the current post ID.
 
@@ -245,20 +244,18 @@ function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
 	}
 	?>
 	<div id="<?= $id ?>" class="<?= $class ?>" style="background-color: <?= mb_get_block_field( 'background_color' ) ?>">
-		<?php $image = mb_get_block_field( 'image' ); ?>
-		<img class="hero__image" src="<?= $image['full_url'] ?>">
+		<img class="hero__image" src="<?= $attributes['image']['full_url'] ?>">
 
 		<div class="hero__body">
-			<h2><?php mb_the_block_field( 'title' ) ?></h2>
-			<h3><?php mb_the_block_field( 'subtitle' ) ?></h3>
+			<h2><?= $attributes[ 'title' ] ?></h2>
+			<h3><?= $attributes[ 'subtitle' ] ?></h3>
 			<div class="hero__line"></div>
-			<div class="hero__content"><?php mb_the_block_field( 'content' ) ?></div>
+			<div class="hero__content"><?= $attributes[ 'content' ] ?></div>
 
-			<?php $signature = mb_get_block_field( 'signature' ); ?>
-			<img class="hero__signature" src="<?= $signature['full_url'] ?>">
+			<img class="hero__signature" src="<?= $attributes['signature']['full_url'] ?>">
 
-			<?php if ( mb_get_block_field( 'button_url' ) ) : ?>
-				<p><a class="hero__button" href="<?php mb_the_block_field( 'button_url' ) ?>"><?php mb_the_block_field( 'button_text' ) ?></a></p>
+			<?php if ( $attributes[ 'button_url' ] ) : ?>
+				<p><a class="hero__button" href="<?= $attributes[ 'button_url' ] ?>"><?= $attributes[ 'button_text' ] ?></a></p>
 			<?php endif ?>
 		</div>
 	</div>
@@ -266,7 +263,21 @@ function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
 }
 ```
 
-When using the callback, you can access to the block fields' data via `$attribute['data'][$field_id]`. However, to make it convenient for you, we have created 2 helper functions: `mb_get_block_field()` and `mb_the_block_field()`.
+#### Automatically prepare attributes
+
+By default, all attributes inside `$attributes` are automatically prepared for you. 
+For example, if you have a `single_image` field, the value of that field is stored as a number (attachment ID). 
+But when you access the field value via `$attributes['image']`, you'll get the whole attachment object, which is more convenient to use.
+
+#### Accessing raw attributes
+
+In case you want to access the raw attributes (e.g., the attachment ID), you can use the `data` key inside `$attributes`. 
+
+For example, to get the attachment ID of the `image` field, you can use `$attributes['data']['image']`.
+
+#### `render_callback` with helper functions
+
+In addition to the automatic preparation of attributes, to make it easier to access the block fields' data, we have created 2 helper functions: `mb_get_block_field()` and `mb_the_block_field()`.
 
 These functions work exactly like the [`rwmb_get_value()`](/functions/rwmb-get-value/) and [`rwmb_the_value()`](/functions/rwmb-the-value/), but applied for the current block only. The first function returns the data stored for a block field, while the 2nd one outputs that data.
 
@@ -525,7 +536,9 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 ### Block rendering
 
-By following WordPress standards, the `$attributes`, `$content`, and `$block` variables are exposed to the block template file. We also parsed all meta box fields into `$attributes` so you can access them directly in the block template file without using functions like `rwmb_meta()`, `wp_get_attachment_image()`, etc. This is a great improvement to make the block template file cleaner and easier to read.
+By following WordPress standards, the `$attributes`, `$content`, and `$block` variables are exposed to the block template file. 
+Of course, like the previous examples, `$attributes` [are already prepared](#automatically-prepare-attributes).
+This is a great improvement to make the block template file cleaner and easier to read.
 
 ```php
 <div <?php echo get_block_wrapper_attributes(); ?>>
