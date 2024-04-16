@@ -216,7 +216,7 @@ Next, click the **Insert Field** button, and add the created template part as we
 
 The same line of code is generated exactly as the one added to the singular page.
 
-![The same line of code is generated exactly with the one added in the singular page.](https://i.imgur.com/68uvCkg.png)
+![The same line of code is generated exactly with the one added in the singular page.](https://i.imgur.com/GmQ3qOo.png)
 
 Save this template and go to the archive page on the frontend, you also see the extra data displayed as on the singular page. Especially, they display in the same style as the one on the singular page.
 
