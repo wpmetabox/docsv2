@@ -134,7 +134,7 @@ $group_values = rwmb_meta( 'group_id' );
 // If group is cloneable
 foreach ( $group_values as $group_value ) {
     // highlight-next-line
-    echo RWMB_Map_Field::render_map( $group_value['map_id'], $args );
+    echo RWMB_OSM_Field::render_map( $group_value['map_id'], $args );
 }
 ```
 
