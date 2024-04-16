@@ -138,7 +138,7 @@ foreach ( $group_values as $group_value ) {
 }
 ```
 
-The helper function `RWMB_Map_Field::render_map` accepts 2 parameters:
+The helper function `RWMB_OSM_Field::render_map` accepts 2 parameters:
 
 Name|Description
 `$location`|The location of the map center / marker, in format `latitude,longitude[,zoom]` (zoom is optional). It's the same format as the map field value.
