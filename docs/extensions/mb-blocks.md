@@ -234,16 +234,13 @@ function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
 		return;
 	}
 
-	// Unique HTML ID if available.
-	$id = 'hero-' . ( $attributes['id'] ?? '' );
-
 	// Custom CSS class name.
 	$class = 'hero ' . ( $attributes['className'] ?? '' );
 	if ( ! empty( $attributes['align'] ) ) {
 		$class .= " align{$attributes['align']}";
 	}
 	?>
-	<div id="<?= $id ?>" class="<?= $class ?>" style="background-color: <?= mb_get_block_field( 'background_color' ) ?>">
+	<div class="<?= $class ?>" style="background-color: <?= $attributes['background_color'] ?>">
 		<img class="hero__image" src="<?= $attributes['image']['full_url'] ?>">
 
 		<div class="hero__body">
@@ -265,15 +262,38 @@ function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
 
 #### Automatically prepare attributes
 
-By default, all attributes inside `$attributes` are automatically prepared for you. 
-For example, if you have a `single_image` field, the value of that field is stored as a number (attachment ID). 
-But when you access the field value via `$attributes['image']`, you'll get the whole attachment object, which is more convenient to use.
+By default, all attributes inside `$attributes` are automatically prepared for you. `$attributes[ $field_id ]` returns the value of the [`rwmb_get_value()`](/functions/rwmb-get-value/) function, which gives you all the data for the field.
+
+For example, if you have a `single_image` field, the value of that field is stored as a number (attachment ID). But when you access the field value via `$attributes['image']`, you'll get the whole attachment object like below, which is more convenient to use:
+
+```php
+[
+    'ID'          => 123,
+    'name'        => 'logo-150x80.png',
+    'path'        => '/var/www/wp-content/uploads/logo-150x80.png',
+    'url'         => 'https://example.com/wp-content/uploads/logo-150x80.png',
+    'width'       => 150,
+    'height'      => 80,
+    'full_url'    => 'https://example.com/wp-content/uploads/logo.png',
+    'title'       => 'Logo',
+    'caption'     => 'Logo caption',
+    'description' => 'Used in the header',
+    'alt'         => 'Logo ALT text',
+    'srcset'      => 'large.jpg 1920w, medium.jpg 960w, small.jpg 480w', // List of responsive image src
+    'sizes'       => [], // List of image sizes. See https://developer.wordpress.org/reference/functions/wp_get_attachment_metadata/
+    'image_meta'  => [], // List of image meta. See https://developer.wordpress.org/reference/functions/wp_get_attachment_metadata/
+]
+```
+
+This preparation is helpful for not-simple fields like image, file, post, taxonomy, etc.
 
 #### Accessing raw attributes
 
-In case you want to access the raw attributes (e.g., the attachment ID), you can use the `data` key inside `$attributes`. 
+In case you want to access the raw attributes (e.g., the attachment ID), you can use the `data` key inside `$attributes`. `$attributes['data']` contains all the info of fields as an array in the format of `'field_id' => 'field_value'`.
 
-For example, to get the attachment ID of the `image` field, you can use `$attributes['data']['image']`.
+Note that, unlike `$attributes[ $field_id ]`, the field value in `$attributes['data']` is *not* prepared, which means it's the raw value.
+
+For example, for a `single_image` field, the value of `$attributes['data']['image']` is the attachment ID.
 
 #### `render_callback` with helper functions
 
@@ -300,7 +320,7 @@ Sometimes you might want to separate the code that outputs a custom Gutenberg bl
 
 Inside the template file, you have full access to the 3 parameters, just like `render_callback`:
 
-- `$attributes`: the block attributes, which have all the block settings and fields' data.
+- `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
 - `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end.
 - `$post_id`: the current post ID.
 
@@ -315,33 +335,25 @@ if ( empty( $attributes['data'] ) ) {
 	return;
 }
 
-// Unique HTML ID if available.
-$id = 'hero-' . ( $attributes['id'] ?? '' );
-if ( ! empty( $attributes['anchor'] ) ) {
-	$id = $attributes['anchor'];
-}
-
 // Custom CSS class name.
 $class = 'hero ' . ( $attributes['className'] ?? '' );
 if ( ! empty( $attributes['align'] ) ) {
 	$class .= " align{$attributes['align']}";
 }
 ?>
-<div id="<?= $id ?>" class="<?= $class ?>" style="background-color: <?= mb_get_block_field( 'background_color' ) ?>">
-	<?php $image = mb_get_block_field( 'image' ); ?>
-	<img class="hero__image" src="<?= $image['full_url'] ?>">
+<div class="<?= $class ?>" style="background-color: <?= $attributes[ 'background_color' ] ?>">
+	<img class="hero__image" src="<?= $attributes['image']['full_url'] ?>">
 
 	<div class="hero__body">
-		<h2><?php mb_the_block_field( 'title' ) ?></h2>
-		<h3><?php mb_the_block_field( 'subtitle' ) ?></h3>
+		<h2><?= $attributes[ 'title' ] ?></h2>
+		<h3><?= $attributes[ 'subtitle' ] ?></h3>
 		<div class="hero__line"></div>
-		<div class="hero__content"><?php mb_the_block_field( 'content' ) ?></div>
+		<div class="hero__content"><?= $attributes[ 'content' ] ?></div>
 
-		<?php $signature = mb_get_block_field( 'signature' ); ?>
-		<img class="hero__signature" src="<?= $signature['full_url'] ?>">
+		<img class="hero__signature" src="<?= $attributes['signature']['full_url'] ?>">
 
-		<?php if ( mb_get_block_field( 'button_url' ) ) : ?>
-			<p><a class="hero__button" href="<?php mb_the_block_field( 'button_url' ) ?>"><?php mb_the_block_field( 'button_text' ) ?></a></p>
+		<?php if ( $attributes[ 'button_url' ] ) : ?>
+			<p><a class="hero__button" href="<?= $attributes[ 'button_url' ] ?>"><?= $attributes[ 'button_text' ] ?></a></p>
 		<?php endif ?>
 	</div>
 </div>
@@ -447,15 +459,17 @@ If you want to save the block fields into custom tables, you need to activate th
 
 See [MB Custom Table documentation](/extensions/mb-custom-table/) for more details.
 
-## Block registration using block.json
+## Block registration with block.json
 
-In addition to registering blocks within the Meta Box array, you can also register blocks using a `block.json` file.
+In addition to registering blocks with a Meta Box array, you can also register blocks using a `block.json` file.
 
 MB Blocks supports registering blocks using a `block.json` file, it respects WordPress standards so the registration steps are the same as native WordPress block registration.
 
 WordPress recommends using `block.json` for block registration because of [these benefits](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#benefits-of-using-the-metadata-file).
 
-Assuming we're creating a hero area block (like the first screenshot), now your `block.json` file will look like this:
+### Creating the block.json file
+
+Assuming we're creating a hero content block, which has 3 fields: title, image, and content, create a `block.json` file with the following content. It's recommended to put it in a folder `blocks/block-name` (in this example, it's `blocks/hero-content`) within your theme, but you can put it anywhere. We'll use the path for registering the block later.
 
 ```json
 {
@@ -496,11 +510,29 @@ Assuming we're creating a hero area block (like the first screenshot), now your 
 }
 ```
 
-You can see the syntax is the same as other blocks. The only difference is that you're required to name the block starting with `meta-box/` to make it work with Meta Box.
+You can see the syntax is the same as WordPress's JSON specification for the [block metadata](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/). The differences are:
 
-For more information, see [Block Metadata](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/).
+- The block name must start with `meta-box/` to make it work with Meta Box.
+- The `attributes` must be an array of fields, where the field IDs are the properties and the field types and default values are the properties' values. These fields must match the Meta Box fields that we will register below.
 
-Since block metadata is registered by `block.json`, your meta box registration will be much simpler, just a normal meta box with `type` set to `block`:
+### Registering the block
+
+After creating the `block.json` file, you must register it with WordPress. Put the following snippet in your theme or plugin.
+
+```php
+function your_prefix_register_blocks() {
+	// Specify the path to the block.json's folder.
+	register_block_type( get_template_directory() . '/blocks/hero-content' );
+}
+
+add_action( 'init', 'your_prefix_register_blocks' );
+```
+
+### Registering block fields
+
+Now you need to register block fields with Meta Box. The block fields must match the fields defined in the `block.json`'s `attributes` property above.
+
+Registering block fields is similar to [registering a field group](http://localhost:3000/creating-fields-with-code/) in Meta Box. The only difference is that you must set `type` to `block`:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
@@ -512,7 +544,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 		// highlight-next-line
         'type'        => 'block',
 
-        // Block fields.
+        // Block fields, must match block.json's attributes.
         'fields'      => [
             [
                 'type' => 'single_image',
@@ -534,34 +566,29 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 } );
 ```
 
-### Block rendering
+After that, you can go to edit a post and insert your block into the post content!
 
-By following WordPress standards, the `$attributes`, `$content`, and `$block` variables are exposed to the block template file. 
-Of course, like the previous examples, `$attributes` [are already prepared](#automatically-prepare-attributes).
-This is a great improvement to make the block template file cleaner and easier to read.
+### Rendering the block
 
-```php
-<div <?php echo get_block_wrapper_attributes(); ?>>
-    <?php echo esc_html( $attributes['title'] ); ?>
-
-	<div>
-		<?php mb_the_block_field( 'image' ) ?>
-	</div>
-</div>
-```
-
-### `mode` and `context`
-
-Since `mode` and `context` are not supported in the `block.json` file, you can however set the mode in the `supports` parameter.
+In the `block.json` file, you can specify the PHP template to render the block via the `render` parameter.
 
 ```json
-"supports": {
-	"mode": "edit",
-	"context": "normal"
-}
+"render": "file:./hero-content.php"
 ```
 
-This way, you can set the default mode of the block to `edit` to make it show the edit fields when loaded.
+(this means render the block with the PHP file `hero-content.php` in the same folder as the `block.json` file)
+
+By following WordPress standards, the `$attributes`, `$content`, and `$block` variables are exposed to the block template file. Note that `$attributes` [are already prepared](#automatically-prepare-attributes). This makes the block template file cleaner and easier to read.
+
+```php
+<div <?= get_block_wrapper_attributes(); ?>>
+    <?= esc_html( $attributes['title'] ); ?>
+
+	<img src="<?= $attributes['image']['full_url'] ?>">
+
+	<p><?= $attributes['content'] ?></p>
+</div>
+```
 
 ## Block fields
 
@@ -829,7 +856,7 @@ It has the following attributes:
 - `align`: block alignment
 - `anchor`: block anchor
 - `className`: custom CSS class for the block
-- `data`: an array of the block fields's data, in the format of `'field_id' => 'field_value'`
+- `data`: an array of the block fields' data, in the format of `'field_id' => 'field_value'`
 
 The data is passed to the `render_callback` or `render_template` as a `$attributes` parameter. So you can use it to render the block.
 
