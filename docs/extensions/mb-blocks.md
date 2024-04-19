@@ -624,6 +624,7 @@ mb_the_block_field( 'content' );
 ```
 
 ### Reserved attributes
+
 When you create a block, there are some reserved attributes that you should avoid using for field's name, unless your purpose is to override the default MB Block's behavior. These attributes are:
 
 - `id`: the auto generated ID for the block, which is unique for each block.
