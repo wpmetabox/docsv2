@@ -5,7 +5,7 @@ title: MB Blocks
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process.
+With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process. The plugin is also compatible with Full-Site Editing, so your blocks can be used to create templates in the FSE.
 
 Here is a screenshot of a custom Gutenberg block (hero area) that's created using MB Blocks:
 
@@ -139,7 +139,11 @@ In the `block.json` file, you can specify the PHP template to render the block v
 
 (this means render the block with the PHP file `hero-content.php` in the same folder as the `block.json` file)
 
-By following WordPress standards, the `$attributes`, `$content`, and `$block` variables are exposed to the block template file. Note that `$attributes` [are already prepared](#automatically-prepare-attributes). This makes the block template file cleaner and easier to read.
+By following WordPress standards, these parameters are available in the block template file:
+
+- `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
+- `$content`: the block's inner content.
+- `$block`: the block object, an instance of `WP_Block` class.
 
 ```php
 <div <?= get_block_wrapper_attributes(); ?>>
@@ -356,11 +360,13 @@ The default mode of the block: `edit` to make it show the edit fields when loade
 
 #### `render_callback`
 
-A custom PHP callback to display the block content, it accepts `$attributes`, `$content`, `$block` parameters, just like native WP block.
+A custom PHP callback to display the block content, it accepts the following parameters:
 
 - `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
 - `$content`: the block's inner content.
-- `$block`: the block object.
+- `$block`: the block object, an instance of `WP_Block` class.
+- `$is_preview`: whether previewing the block in the admin. Deprecated.
+- `$post_id`: the current post ID. Deprecated. You can get the post ID with `get_the_ID()`.
 
 Please note that you can use all of these parameters **regardless of the number of parameters and order**.
 
@@ -373,7 +379,7 @@ For example: `( $attributes, $block )`, `( $block, $attributes )`, `( $attribute
 
 ```php
 <?php
-function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
+function my_hero_callback( $attributes ) {
 	// Fields's data.
 	if ( empty( $attributes['data'] ) ) {
 		return;
@@ -405,13 +411,13 @@ Sometimes you might want to separate the code that outputs a custom Gutenberg bl
 'render_template' => get_template_directory() . '/blocks/hero/template.php',
 ```
 
-Inside the template file, you have full access to the 3 parameters, just like `render_callback`:
+Inside the template file, you have full access to these parameters, just like `render_callback`:
 
 - `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
-- `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end.
-- `$post_id`: the current post ID.
-
-You also can use the new helper functions `mb_get_block_field()` and `mb_the_block_field()` to access the block fields' data easier.
+- `$content`: the block's inner content.
+- `$block`: the block object, an instance of `WP_Block` class.
+- `$is_preview`: whether previewing the block in the admin. Deprecated.
+- `$post_id`: the current post ID. Deprecated. You can get the post ID with `get_the_ID()`.
 
 So, inside the `blocks/hero/template.php`, you can write:
 
@@ -569,7 +575,11 @@ Each field is an array of its settings. See [this guide](/field-settings/) for d
 
 ## Block rendering
 
-There are various ways to render a block (via `render` property if you use `block.json` or via `render_callback` or `render_template` if you don't use `block.json`). In any case, the plugin provides you a variable `$attributes` to access the block's fields' values.
+There are various ways to render a block (via `render` property if you use `block.json` or via `render_callback` or `render_template` if you don't use `block.json`). In any case, the plugin provides you these variables that you can use:
+
+- `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
+- `$content`: the block's inner content.
+- `$block`: the block object, an instance of `WP_Block` class..
 
 ### Automatically prepare attributes
 
@@ -874,7 +884,7 @@ When you decode the JSON string, you'll see the block data as an object like thi
 
 It has the following attributes:
 
-- `name`: the block name
+- `name`: the block name. Note that if you have a field with ID `name`, the field value will overwrite this property. In this case, if you want to get the block name, you can use the variable `$block->name`.
 - `id`: a unique ID for the block. Note that it's different from the block settings ID. This ID can be used to set the `id` parameter in the HTML if you want.
 - `align`: block alignment
 - `anchor`: block anchor
