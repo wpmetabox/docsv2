@@ -5,7 +5,7 @@ title: MB Blocks
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process.
+With the help of MB Blocks, WordPress developers are now able to create Gutenberg blocks using PHP only. There is no JavaScript configuration and build process. The plugin is also compatible with Full-Site Editing, so your blocks can be used to create templates in the FSE.
 
 Here is a screenshot of a custom Gutenberg block (hero area) that's created using MB Blocks:
 
@@ -24,7 +24,6 @@ The easiest way to create a block is using [Meta Box Builder](/extensions/meta-b
 WordPress recommends using `block.json` for block registration because of [these benefits](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#benefits-of-using-the-metadata-file).
 
 MB Blocks supports registering blocks using a `block.json` file. It respects WordPress standards so the registration steps are the same as native WordPress block registration.
-
 
 ### Creating the block.json file
 
@@ -73,6 +72,12 @@ You can see the syntax is the same as WordPress's JSON specification for the [bl
 
 - The block name must start with `meta-box/` to make it work with Meta Box.
 - The `attributes` must be an array of fields, where the field IDs are the properties and the field types and default values are the properties values. These fields must match the Meta Box fields that we will register below.
+
+:::success
+
+To create a `block.json` file, you can use our [Block Generator](https://metabox.io/block-generator/), which provides a friendly user interface to enter block data.
+
+:::
 
 ### Registering the block
 
@@ -139,7 +144,11 @@ In the `block.json` file, you can specify the PHP template to render the block v
 
 (this means render the block with the PHP file `hero-content.php` in the same folder as the `block.json` file)
 
-By following WordPress standards, the `$attributes`, `$content`, and `$block` variables are exposed to the block template file. Note that `$attributes` [are already prepared](#automatically-prepare-attributes). This makes the block template file cleaner and easier to read.
+By following WordPress standards, these parameters are available in the block template file:
+
+- `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
+- `$content`: the block's inner content.
+- `$block`: the block object, an instance of `WP_Block` class.
 
 ```php
 <div <?= get_block_wrapper_attributes(); ?>>
@@ -189,6 +198,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 		'description'     => 'A custom hero content block',
 
 		// highlight-start
+		// Block settings.
 		'type'            => 'block',
 		'icon'            => 'awards',
 		'category'        => 'layout',
@@ -222,7 +232,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 } );
 ```
 
-The block settings are inherited from the Block JavaScript API with a few differences. See the [block registration](https://developer.wordpress.org/block-editor/developers/block-api/block-registration/) page on the Gutenberg Handbook if you need more details.
+The block settings are inherited from the Block *JavaScript* API with a few differences. See the [block registration](https://developer.wordpress.org/block-editor/developers/block-api/block-registration/) page on the Gutenberg Handbook if you need more details.
 
 ### Block settings
 
@@ -356,11 +366,17 @@ The default mode of the block: `edit` to make it show the edit fields when loade
 
 #### `render_callback`
 
-A custom PHP callback to display the block content. The callback accepts 2 parameters:
+A custom PHP callback to display the block content, it accepts the following parameters:
 
 - `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
-- `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end.
-- `$post_id`: the current post ID.
+- `$content`: the block's inner content.
+- `$block`: the block object, an instance of `WP_Block` class.
+- `$is_preview`: whether previewing the block in the admin. Deprecated.
+- `$post_id`: the current post ID. Deprecated. You can get the post ID with `get_the_ID()`.
+
+Please note that you can use all of these parameters **regardless of the number of parameters and order**.
+
+For example: `( $attributes, $block )`, `( $block, $attributes )`, `( $attributes, $content )`... are valid function signatures.
 
 ```php
 // Specify a custom PHP callback to display the block.
@@ -369,7 +385,7 @@ A custom PHP callback to display the block content. The callback accepts 2 param
 
 ```php
 <?php
-function my_hero_callback( $attributes, $is_preview = false, $post_id = null ) {
+function my_hero_callback( $attributes ) {
 	// Fields's data.
 	if ( empty( $attributes['data'] ) ) {
 		return;
@@ -401,13 +417,13 @@ Sometimes you might want to separate the code that outputs a custom Gutenberg bl
 'render_template' => get_template_directory() . '/blocks/hero/template.php',
 ```
 
-Inside the template file, you have full access to the 3 parameters, just like `render_callback`:
+Inside the template file, you have full access to these parameters, just like `render_callback`:
 
 - `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
-- `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end.
-- `$post_id`: the current post ID.
-
-You also can use the new helper functions `mb_get_block_field()` and `mb_the_block_field()` to access the block fields' data easier.
+- `$content`: the block's inner content.
+- `$block`: the block object, an instance of `WP_Block` class.
+- `$is_preview`: whether previewing the block in the admin. Deprecated.
+- `$post_id`: the current post ID. Deprecated. You can get the post ID with `get_the_ID()`.
 
 So, inside the `blocks/hero/template.php`, you can write:
 
@@ -565,7 +581,11 @@ Each field is an array of its settings. See [this guide](/field-settings/) for d
 
 ## Block rendering
 
-There are various ways to render a block (via `render` property if you use `block.json` or via `render_callback` or `render_template` if you don't use `block.json`). In any case, the plugin provides you a variable `$attributes` to access the block's fields' values.
+There are various ways to render a block (via `render` property if you use `block.json` or via `render_callback` or `render_template` if you don't use `block.json`). In any case, the plugin provides you these variables that you can use:
+
+- `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
+- `$content`: the block's inner content.
+- `$block`: the block object, an instance of `WP_Block` class..
 
 ### Automatically prepare attributes
 
@@ -622,6 +642,24 @@ echo $image['full_url'];
 // Output the block content field.
 mb_the_block_field( 'content' );
 ```
+
+### Reserved attributes
+
+When you create a block, there are some reserved attributes that you should avoid using for field's ID, unless your purpose is to override the default MB Block's behavior. These attributes are:
+
+- `id`: the auto generated ID for the block, which is unique for each block.
+- `name`: the block name.
+
+These attributes are used by MB Blocks for easier to style and manipulate the block. If you a field with IDs `id` or `name`, the field's value will override the default value generated by MB Blocks.
+
+In that case, if you want to get the block name, you can use the variable `$block->name`. `$block` is a variable that is always available in your template (or callback). It's an instance of the [`WP_Block`](https://developer.wordpress.org/reference/classes/wp_block/) class.
+
+### Deprecated parameters
+
+These parameters are available in the previous versions of MB Blocks and are deprecated since 1.5.0. They're still working but will be removed in the future. Please use the alternative methods instead.
+
+- `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end. To check if the active block is in preview mode, use `defined( 'REST_REQUEST' ) && REST_REQUEST` instead.
+- `$post_id`: the current post ID. You can access via `get_the_ID()` function instead.
 
 ## Nested blocks
 
@@ -825,7 +863,7 @@ Sometimes you want to load default blocks when creating a new post. Block templa
 
 ## Block data
 
-Unlike normal custom fields, Gutenberg blocks don't save the value in the post meta (or [custom table](/extensions/mb-custom-table/)). Each block created using MB Blocks is a *dynamic Gutenberg block*. The block data is saved as a JSON string in the block content.
+Each block created using MB Blocks is a *dynamic block*. By default, the block data is saved as a JSON string in the block content.
 
 If you view the post content via a tool like PHPMyAdmin, you'll see the block is stored as a string like this:
 
@@ -854,7 +892,7 @@ When you decode the JSON string, you'll see the block data as an object like thi
 
 It has the following attributes:
 
-- `name`: the block name
+- `name`: the block name. Note that if you have a field with ID `name`, the field value will overwrite this property. In this case, if you want to get the block name, you can use the variable `$block->name`.
 - `id`: a unique ID for the block. Note that it's different from the block settings ID. This ID can be used to set the `id` parameter in the HTML if you want.
 - `align`: block alignment
 - `anchor`: block anchor
@@ -862,6 +900,60 @@ It has the following attributes:
 - `data`: an array of the block fields' data, in the format of `'field_id' => 'field_value'`
 
 The data is passed to the `render_callback` or `render_template` as a `$attributes` parameter. So you can use it to render the block. See the [block rendering](#block-rendering) section for more details.
+
+### Saving block data in post meta or custom tables
+
+Besides saving the block data as a JSON string in the block's attributes, the plugin allows you to save data in post meta or custom tables. This makes blocks behave the same as a normal field group.
+
+If you want to save block data in post meta, set the `storage_type` to `post_meta`:
+
+If you register a block with `block.json`, set it in the `block.json` file:
+
+```json
+{
+	"storage_type": "post_meta",
+	"supports": {
+		"multiple": false
+	}
+}
+```
+
+Or in the PHP array if you don't register a block with `block.json`:
+
+```php
+[
+	'storage_type' => 'post_meta',
+	'supports' => [
+		'multiple' => false,
+	],
+]
+```
+
+In this case, to prevent bugs, you *should* set `multiple` to `false` to prevent inserting the same block multiple times (the codes above already have that).
+
+If you want to save the block fields into custom tables, you need to activate the [MB Custom Table](/extensions/mb-custom-table/) extension first. Then set `storage_type` and `table` as follows:
+
+In `block.json`:
+
+```json
+{
+	"storage_type": "custom_table",
+	"table": "your_table_name",
+	"supports": {
+		"multiple": false
+	}
+}
+```
+
+```php
+[
+	'storage_type' => 'custom_table',
+	'table' => 'your_table_name',
+	'supports' => [
+		'multiple' => false,
+	],
+]
+```
 
 ## Hooks
 
@@ -885,6 +977,6 @@ To use a JavaScript hook, please refer to [this tutorial](https://metabox.io/wor
 
 See more details on [using Meta Box Builder with MB Blocks](https://metabox.io/build-gutenberg-blocks-visually-with-meta-box-builder/).
 
-## Example
+## Examples
 
 The complete code example for the video (and used to write this tutorial) is [available in the Library](https://github.com/wpmetabox/library/tree/master/extensions/mb-blocks/hero). You can copy the code and put it in your theme. Then start to modify it to create your own Gutenberg blocks.
