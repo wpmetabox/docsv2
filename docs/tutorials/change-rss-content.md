@@ -99,7 +99,7 @@ Go to the page on the frontend, the values of the fields will be displayed.
 
 Now, it’s time to include these values to the RSS feed.
 
-## 3. Adding the values of custom fields to the rss feed
+## 3. Adding the values of custom fields to the RSS feed
 
 Go to the `functions.php` file, and add these lines of code.
 
@@ -147,7 +147,7 @@ Then, go to the RSS file of your site at this address - http://yourwebsite.com/f
 
 So, you’ve finished changing the RSS feed’s content already.
 
-## 4. Extra: Displaying rss feed on your website
+## 4. Extra: Displaying RSS feed on your website
 
 If you want to show the most recent posts using the RSS feed somewhere on your site, for instance, the sidebar. So, go to **Appearance** > **Widgets**, add a new one in the **Sidebar** section. 
 
