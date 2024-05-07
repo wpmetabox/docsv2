@@ -9,7 +9,7 @@ Today, I’ll use the **MB Views** extension from Meta Box in a real case to **c
 
 ## Introducing about the MB Views
 
-MB Views is a powerful tool that helps to create and customize templates. Even though it's all based on code, it is more optimal than using PHP. You can see that clearer in several tutorials that we made before on [our channel](https://docs.metabox.io/tutorials/mb-views/). You can also see in those tutorials that it is usually **used to get and display data from custom fields created with Meta Box**. But that’s not all the things it can do.
+MB Views is a powerful tool that helps to create and customize templates. Even though it's all based on code, it is more optimal than using PHP. You can see that clearer in several tutorials that we made before on [our channel](https://www.youtube.com/playlist?list=PLIWLX0sDr8lSUGVubfRMsG6fSN42Lp1bY). You can also see in those tutorials that it is usually **used to get and display data from custom fields created with Meta Box**. But that’s not all the things it can do.
 
 You can also **customize all templates in WordPress with MB Views**, even for post types that don't have Meta Box fields.
 
