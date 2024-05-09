@@ -4,8 +4,7 @@ title: Creating reading time to your WordPress posts
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Providing a number of reading time will help the visitor know in advance how much time it takes to finish reading the post. It might be a key feature to improve the user experience.
-Let’s find out how to have this reading time number in each article on your WordPress blog. We’ll use the **MB Views** from **Meta Box**.
+Providing a number of reading time will help the visitor know in advance how much time it takes to finish reading the post. Let’s find out how to have this reading time number in each article on your WordPress blog. We’ll use the **MB Views** from **Meta Box**.
 
 This is an example for a number of reading time that we will create in this practice.
 
@@ -29,7 +28,7 @@ In this practice, we need the [Meta Box core plugin](https://wordpress.org/plugi
 
 Along with that, we also need the [MB Views](https://metabox.io/plugins/mb-views/) to create a template to display the reading time number.
 
-## Setting an area for displaying the time information
+## 1. Setting an area for displaying the time information
 
 I will create a template to show the time information in the top section of the post. We should put the reading time on the top since it should be noticed before the visitor reads the post.
 
@@ -76,7 +75,7 @@ Since I added only the icon into this template, there will be only the icon appe
 
 To have the reading time number, we need to create another view.
 
-## Calculating the reading time
+## 2. Calculating the reading time
 
 I’m creating a new template to calculate the reading time based on the number of words in the post content.
 
@@ -171,7 +170,7 @@ Go to another post, you also can see that the number has also changed. It means 
 
 ![Go to another post, the number has also changed](https://i.imgur.com/3OgVh87.png)
 
-## Styling the section for reading time
+## 3. Styling the section for reading time
 
 If you want to make the reading time display with a better look, go back to one of the views, and add some CSS.
 
