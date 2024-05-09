@@ -10,7 +10,7 @@ This is an example for a number of reading time that we will create in this prac
 
 ![An example for a number of reading time](https://i.imgur.com/NrVqdKG.png)
 
-## Video Version
+## Video version
 
 <LiteYouTubeEmbed id='5bw7wTQ78Xo' />
 
@@ -134,7 +134,7 @@ This array is to count the words.
 const wordsPerMinute = 200;
 ```
 
-This line is to have the reading time, I stipulate a number of words that people usually read in a minute. You definitely can change this 200 number.
+This line is to have the reading time, I stipulate a number of words that people usually read in a minute. You definitely can change this `200` number.
 
 ```
 const readingTime = Math.ceil(wordCount / wordsPerMinute);
