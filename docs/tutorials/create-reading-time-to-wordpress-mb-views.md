@@ -24,9 +24,9 @@ There are some plugins that can help to add code. But, if you have Meta Box on y
 
 ## Preparation
 
-In this practice, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to create custom fields. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
-
-Along with that, we also need the [MB Views](https://metabox.io/plugins/mb-views/) to create a template to display the reading time number.
+In this practice, we need some tools:
+* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to create custom fields.
+* [MB Views](https://metabox.io/plugins/mb-views/): to create a template to display the reading time number.
 
 ## 1. Setting an area for displaying the time information
 
