@@ -104,7 +104,7 @@ const readingTime = Math.ceil(wordCount / wordsPerMinute);
 time.innerHTML = `${readingTime} MIN`;
 ```
 
-![Add some lines of code in JavaScript](https://i.imgur.com/0U5zq4J.png)
+![Add some lines of code in JavaScript](https://i.imgur.com/0ldFOGd.png)
 
 **In there:**
 
