@@ -1,5 +1,5 @@
 ---
-title: Creating reading time to your WordPress posts
+title: Creating reading time to WordPress posts
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -12,7 +12,7 @@ This is an example for a number of reading time that we will create in this prac
 
 ## Video version
 
-<LiteYouTubeEmbed id='5bw7wTQ78Xo' />
+<LiteYouTubeEmbed id='UyfrImcc9Lo' />
 
 ## Why MB Views?
 
