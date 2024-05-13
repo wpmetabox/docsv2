@@ -529,7 +529,7 @@ For example, if you have a "Team Member" block (as above) that has 3 fields: ima
 
 ```php
 'preview' => [
-	'image'       => 'http://domain.com/person.jpg', // Image ID
+	'image'       => 'https://domain.com/person.jpg', // Image URL
 	'title'       => 'William Shakespeare',
 	'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
 ]
@@ -688,9 +688,9 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 		'id'              => 'testimonial',
 		'type'            => 'block',
 		'context'         => 'side',
-		'render_callback' => function( $attributes, $preview, $post_id ) {
+		'render_callback' => function( $attributes ) {
 			?>
-			<div class="testimonial testimonial--<?= mb_get_block_field( 'style' ) ?>">
+			<div class="testimonial testimonial--<?= $attributes['style'] ?>">
 				<div class="testimonial__text">
 					<InnerBlocks />
 				</div>
@@ -807,7 +807,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 		'id'              => 'testimonial',
 		'type'            => 'block',
 		'context'         => 'side',
-		'render_callback' => function( $attributes, $preview, $post_id ) {
+		'render_callback' => function( $attributes ) {
 			?>
 			<div class="testimonial testimonial--<?= mb_get_block_field( 'style' ) ?>">
 				<div class="testimonial__text">
@@ -905,20 +905,7 @@ The data is passed to the `render_callback` or `render_template` as a `$attribut
 
 Besides saving the block data as a JSON string in the block's attributes, the plugin allows you to save data in post meta or custom tables. This makes blocks behave the same as a normal field group.
 
-If you want to save block data in post meta, set the `storage_type` to `post_meta`:
-
-If you register a block with `block.json`, set it in the `block.json` file:
-
-```json
-{
-	"storage_type": "post_meta",
-	"supports": {
-		"multiple": false
-	}
-}
-```
-
-Or in the PHP array if you don't register a block with `block.json`:
+If you want to save block data in post meta, in the meta box's group, set the `storage_type` to `post_meta`:
 
 ```php
 [
@@ -932,18 +919,6 @@ Or in the PHP array if you don't register a block with `block.json`:
 In this case, to prevent bugs, you *should* set `multiple` to `false` to prevent inserting the same block multiple times (the codes above already have that).
 
 If you want to save the block fields into custom tables, you need to activate the [MB Custom Table](/extensions/mb-custom-table/) extension first. Then set `storage_type` and `table` as follows:
-
-In `block.json`:
-
-```json
-{
-	"storage_type": "custom_table",
-	"table": "your_table_name",
-	"supports": {
-		"multiple": false
-	}
-}
-```
 
 ```php
 [
