@@ -930,6 +930,14 @@ If you want to save the block fields into custom tables, you need to activate th
 ]
 ```
 
+:::caution Caveats
+
+When saving block data in post meta or custom tables, there is no attributes stored in the block itself. 
+Automatic preparation of attributes is not available, helpers functions like `mb_get_block_field()` and `mb_the_block_field()` will not work.
+You will have to use the [rwmb_meta](/functions/rwmb-meta/) function to get the block data.
+
+:::
+
 ## Hooks
 
 `mb_${blockId}_settings`
