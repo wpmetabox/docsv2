@@ -162,7 +162,7 @@ First, go to** Meta Box** > **Pages** to create a new page as usual.
 
 ### 4.2 Adding query
 
-We’ve regulated how the information displays in the **Query Card**, but haven’t stipulated where it will query from yet. So now, add the** Advanced Query Loop** block provided by Kadence, and create a new query.
+We’ve regulated how the information displays in the **Query Card**, but haven’t stipulated where it will query from yet. So now, add the **Advanced Query Loop** block provided by Kadence, and create a new query.
 
 ![Add the Advanced Query Loop block.](https://i.imgur.com/qqcP6zv.png)
 
