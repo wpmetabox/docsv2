@@ -17,7 +17,7 @@ To integrate your websites with external services like Google Analytics, Google 
 
 To do it, you can add code to the theme directly. But, it is not an optimal option. We recommend using plugins or third-party services that can help to do that indirectly. It brings two significant benefits:
 
-* The code will be not affected when you change the theme.
+* The code will be not affected when you change the theme;
 * You can manage the code more easily.
 
 **MB Views** is one of those plugins. It will come handy especially when you have Meta Box on your site.
@@ -75,7 +75,7 @@ After publishing, on the frontend, you’ll see the alert which has content spec
 
 The menu on the header also turns to red as styling.
 
-![The menu on the header also turns to red as styling](https://i.imgur.com/wVQ349b.png)
+![The menu on the header also turns to red as styling](https://i.imgur.com/8BoYrRh.png)
 
 ## 2. Adding or changing content in the footer
 
@@ -95,7 +95,7 @@ Go to the page on frontend. There is a notification since I also added it in the
 
 Also, the footer has a text section in black.
 
-![The footer has a text section in black](https://i.imgur.com/SSGWVWn.png)
+![The footer has a text section in black](https://i.imgur.com/9Y8lx10.png)
 
 ## 3. Adding code to connect with external services
 
