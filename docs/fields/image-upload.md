@@ -5,7 +5,7 @@ title: Image Upload
 import Image from '../_parts/_image.md';
 import Screenshots from '@site/src/components/Screenshots';
 
-The image upload field displays an inline upload area that you can drag and drop or select images to upload.  It doesn't open the Media Library popup for selecting existing images. You can upload new images only.
+The image upload field displays an inline upload area that you can drag and drop or select images to upload.
 
 ## Screenshots
 
