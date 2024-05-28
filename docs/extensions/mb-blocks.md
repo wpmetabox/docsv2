@@ -160,6 +160,47 @@ By following WordPress standards, these parameters are available in the block te
 </div>
 ```
 
+#### Using MB Views
+
+You can also use MB Views to render the block. This is useful when you want to create views with twig, manage JS, CSS from within the Dashboard.
+
+To do so, first, make sure you have the [MB Views](/extensions/mb-views/) plugin installed and activated. Then, instead of using `file:` prefix, use `view:` prefix.
+
+```json
+{
+    "render": "view:testimonial"
+}
+```
+
+Now create a view by going to Meta Box > Views and create a new view with the name `testimonial`. In the view, you can use twig syntax to render the block. For example:
+
+```php
+<div {{ mb.get_block_wrapper_attributes() }}>
+	<img class="testimonial__image" src="{{ attributes['image']['full_url'] }}">
+	<div class="testimonial__body">
+		<div class="testimonial__content" style="min-height: 50px;">
+		    <InnerBlocks />
+		</div>
+		<div class="testimonial__author">{{ attributes['name'] }}</div>
+	</div>
+</div>
+```
+
+:::tip
+
+You can access `{{ block }}`, `{{ attributes }}`, `{{ content }}` in the view like the above example.
+
+You can also use CSS and JS tabs in the view to add styles and scripts for the block.
+
+PHP functions need to be prefixed with `mb.` to be used in the view.
+
+:::
+
+
+Set the view's type to `Block` and name to `testimonial`. Then save the view.
+
+![Settings](https://i.imgur.com/UzauX1A.png)
+
 ### Block styles and scripts
 
 The `block.json` allows you to add styles and scripts for blocks as follows. In the value, it’s possible to pass a script handle registered with the `wp_register_script` or `wp_register_style` functions, a path to a JavaScript/CSS file relative to the `block.json` file, or a list with a mix of both.
@@ -381,6 +422,12 @@ For example: `( $attributes, $block )`, `( $block, $attributes )`, `( $attribute
 ```php
 // Specify a custom PHP callback to display the block.
 'render_callback' => 'my_hero_callback',
+
+// Or using $this class method.
+'render_callback' => [ $this, 'my_hero_callback' ],
+
+// Or using static method.
+'render_callback' => [ 'MyClass', 'my_hero_callback' ],
 ```
 
 ```php
