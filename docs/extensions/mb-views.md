@@ -214,6 +214,7 @@ What type of page do you want to set the view for? Supports:
 - Action: the view will display when an action fires
 - Code: you can use PHP or [WordPress conditional tags](https://developer.wordpress.org/themes/basics/conditional-tags/) to set the rules where to show the view.
 - Shortcode: you need to use a shortcode to insert the view to the location you want. The shortcode is available *after* you save the view.
+- Block: For [MB Blocks](/extensions/mb-blocks#using-mb-views), blocks can then use `render: "view:view-name"` to render the view.
 
 ### Location Rules
 
