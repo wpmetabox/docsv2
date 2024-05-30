@@ -407,7 +407,7 @@ The default mode of the block: `edit` to make it show the edit fields when loade
 
 #### `render_callback`
 
-A custom PHP callback to display the block content, it accepts the following parameters:
+A custom PHP callback or MB Views to display the block content, it accepts the following parameters:
 
 - `$attributes`: the block attributes, which have all the block settings and fields' data. Attributes are automatically [prepared for you](#automatically-prepare-attributes) so you can access them directly.
 - `$content`: the block's inner content.
@@ -422,6 +422,9 @@ For example: `( $attributes, $block )`, `( $block, $attributes )`, `( $attribute
 ```php
 // Specify a custom PHP callback to display the block.
 'render_callback' => 'my_hero_callback',
+
+// You can also use MB Views to render the block by prefixing the view name with `view:`.
+'render_callback' => 'view:hero-view',
 
 // Or using $this class method.
 'render_callback' => [ $this, 'my_hero_callback' ],
