@@ -164,7 +164,7 @@ By following WordPress standards, these parameters are available in the block te
 
 You can also use MB Views to render the block. This is useful when you want to create views with twig, manage JS, CSS from within the Dashboard.
 
-To do so, first, make sure you have the [MB Views](/extensions/mb-views/) plugin installed and activated. Then, instead of using `file:` prefix, use `view:` prefix.
+To do so, first, make sure you have the [MB Views](/extensions/mb-views/) plugin installed and activated. Then, instead of using `file:` prefix, use `view:` instead.
 
 ```json
 {
@@ -176,12 +176,12 @@ Now create a view by going to Meta Box > Views and create a new view with the na
 
 ```php
 <div {{ mb.get_block_wrapper_attributes() }}>
-	<img class="testimonial__image" src="{{ attributes['image']['full_url'] }}">
+	<img class="testimonial__image" src="{{ attributes.image.full_url }}">
 	<div class="testimonial__body">
 		<div class="testimonial__content" style="min-height: 50px;">
 		    <InnerBlocks />
 		</div>
-		<div class="testimonial__author">{{ attributes['name'] }}</div>
+		<div class="testimonial__author">{{ attributes.name }}</div>
 	</div>
 </div>
 ```
@@ -189,6 +189,8 @@ Now create a view by going to Meta Box > Views and create a new view with the na
 :::tip
 
 You can access `{{ block }}`, `{{ attributes }}`, `{{ content }}` in the view like the above example.
+
+Array can be accessed directly by their keys, via dot syntax e.g. `{{ attributes.image.full_url }}`, `{{ attributes.name }}`.
 
 You can also use CSS and JS tabs in the view to add styles and scripts for the block.
 
