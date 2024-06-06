@@ -10,7 +10,7 @@ This is an example for adding the icons that we will create in this practice.
 
 ## Video Version
 
-<LiteYouTubeEmbed id='aRPqEdvXxdc' />
+<LiteYouTubeEmbed id='aRPqEdvXxdc'/>
 
 ## Preparation
 
