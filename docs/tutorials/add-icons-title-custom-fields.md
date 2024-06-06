@@ -1,6 +1,8 @@
 ---
 title: Adding icons to the title of custom fields
 ---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Sometimes you may want to **embellish the fields, or have some signatures for them**. There is not only a way to do that such as adjusting size, space, color, … but also **adding icons into their title**. Instead of using only text for the meta box’s title or field name, we can **use icons for addition or alternative**. Let’s dive in to explore the process of adding icons to the title in detail.
 
