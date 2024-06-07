@@ -28,12 +28,10 @@ Besides the [common settings](/field-settings/), this field has the following sp
 Name | Key | Description
 --- | --- | ---
 Post types | `post_type` | Post types to query. Can be a string (for a single post type) or array (for multiple post types). Required.
-Query args | `query_args` | Query arguments for getting post objects. Uses same arguments as [WP_Query](https://developer.wordpress.org/reference/classes/wp_query/#parameters). Optional.
+Query args | `query_args` | Query arguments for getting post objects. Uses the same arguments as [WP_Query](https://developer.wordpress.org/reference/classes/wp_query/#parameters). Optional.
 Set as parent | `parent` | Whether or not to set the selected post as the parent for the current being edited post? `true` or `false` (default).
 Placeholder | `placeholder` | The placeholder for the select box. Default is "Select a {post label}". Applied only when the field type is a select field.
 Field type | `field_type` | How the posts are displayed? See below.
-
-The default value of **query_args** is publish. Following the WordPress documentation, the attachment post (media) can be considered a child of a post so you can use the post_status inherit or any to get the attachment posts.
 
 This field inherits the look and field (and settings) from other fields, depending on the field type, which accepts the following value:
 
@@ -41,10 +39,10 @@ Field type | Description | Settings inherited from
 --- | --- | ---
 `select` | Simple select dropdown. | [Select](/fields/select/)
 `select_advanced` | Beautiful select dropdown using the select2 library. This is the default value. | [Select advanced](/fields/select-advanced/)
-`select_tree` | Hierarchical list of select boxes which allows to select multiple items (select/deselect parent item will show/hide child items). Applied only when the post type is hierarchical (like pages). | [Select](/fields/select/)
-`checkbox_list` | Flatten list of checkboxes which allows to select multiple items. | [Checkbox list](/fields/checkbox-list/)
-`checkbox_tree` | Hierarchical list of checkboxes which allows to select multiple items (select/deselect parent item will show/hide child items). Applied only when the post type is hierarchical (like pages). | [Checkbox list](/fields/checkbox-list/)
-`radio_list` | Flatten list of radio boxes which allows to select only 1 item. | [Radio](/fields/radio/)
+`select_tree` | Hierarchical list of select boxes that allows to select multiple items (select/deselect parent item will show/hide child items). Applied only when the post type is hierarchical (like pages). | [Select](/fields/select/)
+`checkbox_list` | Flatten list of checkboxes that allows to select multiple items. | [Checkbox list](/fields/checkbox-list/)
+`checkbox_tree` | Hierarchical list of checkboxes that allows to select multiple items (select/deselect parent item will show/hide child items). Applied only when the post type is hierarchical (like pages). | [Checkbox list](/fields/checkbox-list/)
+`radio_list` | Flatten list of radio boxes that allows to select only 1 item. | [Radio](/fields/radio/)
 
 This is a sample field settings array when creating this field with code:
 
@@ -63,11 +61,17 @@ This is a sample field settings array when creating this field with code:
 ],
 ```
 
+:::info
+
+The default value of `query_args` is `['post_status' => 'publish']`. If you want to query posts with another status (`draft`, `pending`, etc.) or query attachments (which have the status `inherit`), then change the `post_status` to the corresponding value, or to `any`.
+
+:::
+
 ## Ajax load
 
-Meta Box uses ajax to increase the performance of the field query. Instead of fetching all posts at once, the plugin now fetches only some posts when the page is loaded, and then it fetches more posts when users scroll down to the list.
+Meta Box uses Ajax to increase the performance of the field query. Instead of fetching all posts at once, the plugin now fetches only some posts when the page is loaded, and then it fetches more posts when users scroll down to the list.
 
-See this video for demonstration (the UI of the Meta Box Builder was from the old version, the new version of Meta Box Builder has a better UI):
+See this video for a demonstration (the UI of the Meta Box Builder was from the old version, the new version of Meta Box Builder has a better UI):
 
 <LiteYouTubeEmbed id='2acm5gW59Mc' />
 
@@ -203,17 +207,17 @@ or simpler:
 
 **Additional options for `rwmb_the_value()`:**
 
-Using `rwmb_the_value` also has some extra options as following:
+Using `rwmb_the_value` also has some extra options as follows:
 
 ```php
 <!-- Displaying the post title without link -->
 <?php rwmb_the_value( 'my_field_id', ['link' => false] ) ?>
 
-<!-- Displaying the post title with link to view post (default) -->
+<!-- Displaying the post title with the link to view the post (default) -->
 <?php rwmb_the_value( 'my_field_id' ) ?>
 <?php rwmb_the_value( 'my_field_id', ['link' => 'view'] ) ?>
 
-<!-- Displaying the post title with link to edit post -->
+<!-- Displaying the post title with the link to edit the post -->
 <?php rwmb_the_value( 'my_field_id', ['link' => 'edit'] ) ?>
 ```
 
@@ -238,7 +242,7 @@ of simpler:
 <?php rwmb_the_value( 'my_field_id' ); ?>
 ```
 
-`rwmb_the_value()` automatically output multiple selected posts as an unordered list with links to each post.
+`rwmb_the_value()` automatically outputs multiple selected posts as an unordered list with links to each post.
 
 ## Filters
 
