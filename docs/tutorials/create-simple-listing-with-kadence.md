@@ -211,4 +211,4 @@ This is the page after taking some actions to modify.
 
 ![The page got a better look](https://i.imgur.com/vetbHVm.gif)
 
-You also can try to [create a listing page with advanced filters using UI](https://docs.metabox.io/tutorials/create-simple-listing-meta-box-wp-grid-builder/).
+You also can try to [create a listing page with advanced filters with UI](https://docs.metabox.io/tutorials/create-simple-listing-meta-box-wp-grid-builder/) provided by Meta Box Builder.
