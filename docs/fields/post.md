@@ -33,6 +33,8 @@ Set as parent | `parent` | Whether or not to set the selected post as the parent
 Placeholder | `placeholder` | The placeholder for the select box. Default is "Select a {post label}". Applied only when the field type is a select field.
 Field type | `field_type` | How the posts are displayed? See below.
 
+The default value of **query_args** is publish. Following the WordPress documentation, the attachment post (media) can be considered a child of a post so you can use the post_status inherit or any to get the attachment posts.
+
 This field inherits the look and field (and settings) from other fields, depending on the field type, which accepts the following value:
 
 Field type | Description | Settings inherited from
