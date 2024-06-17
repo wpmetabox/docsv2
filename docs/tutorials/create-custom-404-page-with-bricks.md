@@ -21,21 +21,15 @@ The page may contain any kind of information that you think is useful for visito
 
 Therefore, in this practice, we will use the following tools:
 
-First, we need [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create custom fields. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
-
-Besides, for the advanced features for custom fields, we need some Meta Box extensions:
-
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create custom fields. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input the 404 page’s information;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to organize custom fields into the group. In this case, they are the labels and URLs of the buttons.
-
-You can install them individually or just use **Meta Box AIO**.
-
-Lastly, and obviously, we use **Bricks** to build the page.
+* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to organize custom fields into the group. In this case, they are the labels and URLs of the buttons;
+* **Bricks**: to build the page.
 
 Now, let’s start!
 
-## Creating a new settings page
+## 1. Creating a new settings page
 
 Since the 404 page is not a specific page as usual, we’ll use a settings page to include all the content of the page. 
 
@@ -53,7 +47,7 @@ Then, go to the page in the **Settings** menu. It’s still blank since we haven
 
 Let’s move to the next step.
 
-## Creating custom fields
+## 2. Creating custom fields
 
 Instead of adding any specific and static content to the page, I’ll use custom fields to store them all.
 
@@ -93,7 +87,7 @@ Just input data. Here is my content for example.
 
 ![Input data for the settings page](https://i.imgur.com/Yo6qK5k.png)
 
-## Creating a template for 404 page
+## 3. Creating a template for 404 page
 
 Go to **Bricks** > **Templates** and create a new one to display the 404 page.
 
@@ -147,7 +141,7 @@ After that, you should view the page on the frontend to see how it looks.
 
 This is a simple page that I’ve made. That’s all the content that I want to have on this page. But, you might have more than that. Make sure you get and display them all.
 
-## Styling the 404 page
+## 4. Styling the 404 page
 
 The next part is to modify the layout of the page as well as style each element to have a better look. Just go back to edit the 404 page with **Bricks** to do it.
 
