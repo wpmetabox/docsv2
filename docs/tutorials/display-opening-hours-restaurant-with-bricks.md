@@ -169,7 +169,7 @@ Then, set the rule like this:
 
 **In there**:
 
-* 1: It’s the ID of the field that the condition is based on. To regulate that the value of the field will be used to compare, you need to add the :value attribute;
+* 1: It’s the ID of the field that the condition is based on. To regulate that the value of the field will be used to compare, you need to add the [:value](https://academy.bricksbuilder.io/article/dynamic-data/) attribute;
 * 2: It’s the operation we use to compare. Bricks also provides some other operations, just choose one that makes sense;
 * 3: It’s the value of the first option that we had for the Select field.
 
@@ -231,7 +231,7 @@ We also use dynamic data for them all to get data from custom fields. Since we h
 
 That’s done for the first case. Let’s go to the front end to check how the data displays. This is the result when you choose one of the three first options:
 
-(The section on the frontend when the three first options is chosen](https://i.imgur.com/XX0Og4w.png)
+![The section on the frontend when the three first options is chosen](https://i.imgur.com/XX0Og4w.png)
 
 If you choose the last one and enter multiple slots, the timing will be displayed exactly.
 
