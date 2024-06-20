@@ -425,14 +425,14 @@ For example: `( $attributes, $block )`, `( $block, $attributes )`, `( $attribute
 // Specify a custom PHP callback to display the block.
 'render_callback' => 'my_hero_callback',
 
-// You can also use MB Views to render the block by prefixing the view name with `view:`.
-'render_callback' => 'view:hero-view',
-
 // Or using $this class method.
 'render_callback' => [ $this, 'my_hero_callback' ],
 
 // Or using static method.
 'render_callback' => [ 'MyClass', 'my_hero_callback' ],
+
+// You can also use MB Views to render the block by prefixing the view name with `view:`.
+'render_callback' => 'view:hero-view',
 ```
 
 ```php
