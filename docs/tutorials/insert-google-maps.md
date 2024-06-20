@@ -1,45 +1,127 @@
 ---
-title: Inserting Google Maps using custom fields
+title: Inserting Google Maps to a website using custom fields
 ---
 
-We will use custom fields to allow users to enter an address and mark the location on Google Maps in the back end. Then, this map along with the location markup will be displayed on the single post page.
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-## 1. Getting the Google Maps API Key
+You **should insert a map to your website** to provide your physical store address to help customers reach it more quickly and easily.
 
-Following these Google’s instructions [here](https://developers.google.com/maps/documentation/javascript/get-api-key) to get the API Key. After completing all those steps, you will have an API Key as the following:
+Normally, there are 2 popular ways to add a map to show the locations: It’s embedding Google Maps scripts directly, and another way is using a plugin. However, they both do not work in the case that you are having a listing page site with a long list of different stores, and each one needs to have its own map. Then, **the custom fields with Meta Box come handy** in this way.
 
-![Get the Google Máp API Key](https://i.imgur.com/nJ7CnDf.png)
+## Video version
 
-Just copy this API Key to use in the next steps.
+<LiteYouTubeEmbed id='y2DeORtmAew'/>
 
-## 2. Creating custom fields to fill in address
+## Preparation
 
-I will add two custom fields, one for entering an address and one for displaying the location on map corresponding to the entered address.
+Assume that your website has a lot of listings as restaurants, and each one has its own location.
 
-Go to **Meta Box > Custom Fields > Add New**.
+![Your website has a lot of listings as restaurants](https://i.imgur.com/jBwuAl8.png)
 
-![Add new custom field](https://i.imgur.com/N1BBXnq.png)
+You should store the location in the post of each restaurant, using a custom field. Then, use the **Map** field from Meta Box, and code to display the location on the frontend. You can **add code directly to the theme file**, but it might not be optimal in some cases. And, we **highly recommend using MB Views from Meta Box** instead.
 
-In the settings of the Map field, you will see the **Google Maps API key** box, just enter the key which we got in the previous step. 
+So, we need these tools for this practice.
 
-Next, also in the below **Google Maps** box, enter the ID of the Address field. This action will help the Map field obtain the information put in the Address field.
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating custom fields, and a template for displaying the map on the frontend;
+* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields visually;
+* [MB Views](https://metabox.io/plugins/mb-views/): to create the template easily in the event that you don’t want to add code directly to the theme.
 
-![Enter the ID of the Address field](https://i.imgur.com/nDLJcyO.png)
+## 1. Creating custom fields to fill in address
 
-After creating all the fields, move to the **Settings** tab, choose **Location** as **Post Type** and select Post or Page, or any Post types you want to display the map.
+I will add two custom fields, one for entering an address, and one for displaying the location on a map. We will display this map on the frontend later.
 
-![Set Location for the custom field](https://i.imgur.com/kJ77NyZ.png)
+Now, go to **Meta Box** > **Custom Fields**, and create them.
 
-Then, you will see the two created information fields in the post editor. Just enter the address to check.
+![Go to Meta Box > Custom Fields, and create fields](https://i.imgur.com/KH3KFN0.png)
 
-![2 created information fields in the post editor](https://i.imgur.com/uh6akVu.gif)
+First, choose the **Text** field for saving the address.
 
-## 3. Displaying maps on the frontend
+![Choose the Text field for saving address.](https://i.imgur.com/XleJ5xy.png)
 
-In this post, I use WooCommerce for my product on my website so I need my own WooCommerce hook and place these code to `functions.php` file.
+Next, create another field to have the map. Meta Box provides 2 field types for maps. They are **Google Maps** and **Open Street Maps**.
 
-```php
-add_action( 'woocommerce_after_single_product', 'add_google_map' );
+![Meta Box provides 2 field types for maps.](https://i.imgur.com/rKhVxoF.png)
+
+If you want to use the **Google Maps** field, you should follow [Google’s instructions to get the API key](https://developers.google.com/maps/documentation/javascript/get-api-key) and insert it into the place as shown as below.
+
+![Insert the IPA key into the box](https://i.imgur.com/UBR4DH8.png)
+
+Otherwise, if you do not have the key, you can use the **Open Street Maps** field. It requests no key to use. Remember to add the ID of the **Address** field to connect this map to it. If you forgot it, the map cannot work.
+
+![Remember to add the ID of the Address field to connect this map to it](https://i.imgur.com/LG0eC05.png)
+
+After you’ve done with two custom fields, move to the **Settings** tab, set **Location** as **Post type**, and choose the post type as the listing you want to apply these fields to.
+
+![Set the location as the post type of the listing you want to apply these fields to.](https://i.imgur.com/aH2R9aa.png)
+
+Then, you will see the two created fields in the post editor.
+
+![You will see the two created fields in the post editor.](https://i.imgur.com/RFSUwhN.png)
+
+Just enter the address to check how they work. When you enter any character into the field, it will suggest some related locations to choose from. You can choose one, and then the location markup on the map will move to the place exactly as the address is.
+
+![When choosing any address, the location markup on the map will move to the place exactly as the address is.](https://i.imgur.com/ZGScci9.gif)
+
+I added some restaurants along with their own locations, for example, to see the result clearer at the end.
+
+![Some restaurants along with their own locations](https://i.imgur.com/bE0018T.png)
+
+## 2. Displaying maps on the frontend
+
+We have just created the map on the backend already, so it’s time to bring it to the frontend. As I said before, you can **add code to the theme file** or use **MB Views** for it. Since I recommend the **MB Views**, I’ll talk about it first.
+
+### 2.1 Method 1: Using MB Views
+
+When using **MB Views**, there’ll be a button to add the map to the template without touching any code. It’s so convenient, especially for those who are not familiar with code. 
+
+![When using MB Views, there’ll be a button to add the map to the template without touching any code.](https://i.imgur.com/Pv44lzb.png)
+
+Go to **Meta Box** > **Views**, and create a new template.
+
+![Create a new template.](https://i.imgur.com/HYM6Piw.png)
+
+Click on the mentioned button, and a list of fields will display to choose from. So, choose the one we use for the map.
+
+![Choose the field we use for the map](https://i.imgur.com/16hDr8D.png)
+
+For the output of the map, Meta Box also provides some options. 
+
+![Set the output of the map](https://i.imgur.com/3UZwbWL.png)
+
+There will be a line of code for the map auto-generated into the template, as you can see in the image below.
+
+![A line of code for the map auto generated into the template](https://i.imgur.com/HXCXCH7.png)
+
+You don't need to do anything else.
+
+Just move to the **Settings** section of the view, set the **Type** as **Singular**, choose the **Location** as the post type where you want the map display.
+
+![In the Settings section of the view, set the Type as Singular, choose the Location as the post type where you want the map display.](https://i.imgur.com/SwMQSF8.png)
+
+As well, you can choose a suitable position for the map on the page.
+
+![Choose a suitable position for the map on the page](https://i.imgur.com/89xmR77.png)
+
+You will see the map displayed on the single post page. The map is not static, you absolutely can interact with the map by zooming in and zooming out.
+
+![The interactive map displayed on the single post page](https://i.imgur.com/8SpCehR.gif)
+
+When you go to another post, the map displays as well, but with a different location.
+
+![In another post, the map displays as well, but with a different location.](https://i.imgur.com/UU6zoQv.png)
+
+So, we have done with MB Views.
+
+Now, let’s see another way to display the map using code.
+
+### 2.2 Method 2: Adding code to the theme file
+
+In the case that you don’t have the **MB Views** in your pocket, you also can use **PHP** to add code to the theme file directly.
+
+Head over to the **functions.php** file, and add these lines of codes.
+
+```css
 function add_google_map() {
     $args = array(
         'zoom' => 14,
@@ -48,32 +130,57 @@ function add_google_map() {
     $map = rwmb_meta( 'map', $args );
     echo $map;
 }
+add_action( 'estar_entry_content_after', 'add_google_map' );
 ```
 
-:::info
+![Add code to the functions.php file for displaying the map](https://i.imgur.com/nr8E1in.png)
 
-* `‘woocommerce_after_single_product’`: the default function in WooCommerce;
-* `'add_google_map'`: the function I’ve created, you can change name as you want;
-* `‘map’`:  the ID of the Map field above
+Let’s go through it in more detail.
 
-:::
-
-If you don’t use WooCommerce, you should add the code below to the file `single-[post-type-name].php`
-
-```php
+```css
 $args = array(
-    'zoom' => 14,
-    'marker' => true,
-);
-echo rwmb_meta( 'map', $args );
+        'zoom' => 14,
+        'marker' => true,
+    );
 ```
 
-Note that `map` also is the ID of the Map field.
+This part is to regulate the attributes that we want to use for the map, including:
 
-You can refer to some other parameters [here](https://docs.metabox.io/fields/map/#displaying-the-map) to display maps that fit your website.
+* `'zoom' => 14,`:to allow you to zoom in and zoom out.
+* `'marker' => true,`: to turn on a marker. It will be used to highlight the location on the map so that you can see it clearly.
 
-Now, you will see the map display on your website.
+You can also add more attributes as you go.
 
-![The map displays on the frontend](https://i.imgur.com/VWWEt5e.gif)
+```css
+$map = rwmb_meta( 'map', $args );
+```
+
+Next, I use the `rwmb_meta` function to get the data from the custom field that has the ID as map. The returned value is the latitude and longitude of the location that we saved in the field. Then, the code below helps to display the map from those returned values.
+
+```css
+echo $map;
+```
+
+The last line is to stipulate where the map appears.
+
+```css
+add_action( 'estar_entry_content_after', 'add_google_map' );
+```
+
+I'm using the `'estar_entry_content_after'` hook to show the map after the content section of the posts. It is a hook of the Estar theme, so if you have a different theme or use it in other places, just look for the suitable one.
+
+That’s all for the code we use for the map.
+
+Since you visit any single post page, you’ll see the map. The result is the same as we did with **MB Views**. There is also a marker. It’s on the location exactly as I saved in the field. I can zoom in and zoom out the map as well.
+
+![The map display on a single post page](https://i.imgur.com/8SpCehR.gif)
+
+When I go to another post, I’ll see the map along with another location.
+
+![In another post, I’ll see the map along with the location](https://i.imgur.com/UU6zoQv.png)
+
+So, everything on the map is going well.
+
+
 
 
