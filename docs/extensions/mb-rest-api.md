@@ -331,11 +331,7 @@ Or via JavaScript with WordPress [apiFetch](https://developer.wordpress.org/bloc
 import apiFetch from '@wordpress/api-fetch';
 
 apiFetch( {
-	path: '/meta-box/v1/settings-page',
-	method: 'GET',
-	data: {
-		id: "website-settings",
-	},
+	path: `/meta-box/v1/settings-page?id=website-settings`,
 } ).then( res => console.log( res ) );
 ```
 
