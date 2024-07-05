@@ -37,6 +37,14 @@ const config = {
         },
       }),
     ],
+    [
+      '@docusaurus/preset-classic',
+      {
+        googleTagManager: {
+          containerId: 'GTM-KX7MB6',
+        },
+      },
+    ],
   ],
 
   themes: [
@@ -49,14 +57,6 @@ const config = {
         docsRouteBasePath: "/",
       },
     ],
-  ],
-
-  scripts: [
-    {
-      src: 'https://beamanalytics.b-cdn.net/beam.min.js',
-      'data-token': '0be0dc94-dd6f-4c51-b876-9f9b81f6ad1d',
-      defer: true,
-    },
   ],
 
   themeConfig:
