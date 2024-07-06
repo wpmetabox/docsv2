@@ -46,34 +46,34 @@ If you're a developer and want to use code, then you need to add the clone setti
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
-    $meta_boxes[] = [
-        'title'      => 'Event details',
-        'post_types' => 'event',
-        'fields'     => [
-            [
-                'name'  => 'Date and time',
-                'id'    => 'datetime',
-                'type'  => 'datetime',
-                // highlight-start
-                'clone' => true,
-                // Other clone settings
-                // highlight-end
-            ],
-            [
-                'name' => 'Location',
-                'id'   => 'location',
-                'type' => 'text',
-            ],
-            [
-                'name'          => 'Map',
-                'id'            => 'map',
-                'type'          => 'osm',
-                'address_field' => 'location',
-            ],
-        ],
-    ];
+	$meta_boxes[] = [
+		'title'      => 'Event details',
+		'post_types' => 'event',
+		'fields'     => [
+			[
+				'name'  => 'Date and time',
+				'id'    => 'datetime',
+				'type'  => 'datetime',
+				// highlight-start
+				'clone' => true,
+				// Other clone settings
+				// highlight-end
+			],
+			[
+				'name' => 'Location',
+				'id'   => 'location',
+				'type' => 'text',
+			],
+			[
+				'name'          => 'Map',
+				'id'            => 'map',
+				'type'          => 'osm',
+				'address_field' => 'location',
+			],
+		],
+	];
 
-    return $meta_boxes;
+	return $meta_boxes;
 } );
 ```
 
@@ -93,16 +93,16 @@ By default, cloned values are stored as a serialized array, which doesn't allow 
 
 ```php
 $args = [
-    'post_type'  => 'event',
-    'meta_query' => [
-        // highlight-start
-        [
-            'key'     => 'start_date', // This field is cloneable
-            'value'   => ['2019-05-01', '2019-05-31']
-            'compare' => 'BETWEEN',
-        ],
-        // highlight-end
-    ],
+	'post_type'  => 'event',
+	'meta_query' => [
+		// highlight-start
+		[
+			'key'     => 'start_date', // This field is cloneable
+			'value'   => ['2019-05-01', '2019-05-31']
+			'compare' => 'BETWEEN',
+		],
+		// highlight-end
+	],
 ];
 $query = new WP_Query( $args );
 ```
@@ -111,7 +111,7 @@ Then it doesn't work.
 
 To solve this problem, you need to enable the **Clone as multiple** settings for the field.
 
-[Enable the Clone as multiple settings](https://i.imgur.com/D2gGXup.png)
+![Enable the Clone as multiple settings](https://i.imgur.com/D2gGXup.png)
 
 With that, Meta Box will **save cloneable values in multiple rows in the database**, where each row contains one value. That means if `start_date` has 2 values `['2019-05-01', '2019-04-30']`, it will be saved in 2 rows in the database, one for `2019-05-01` and one for `2019-04-30`. The data is **not serialized** anymore. And thus, your above query will work!
 
@@ -121,36 +121,36 @@ When making a field to be cloneable, its data is an array of cloned values. So, 
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
-    $meta_boxes[] = [
-        'title'      => 'Event details',
-        'post_types' => 'event',
-        'fields'     => [
-            [
-                'name'  => 'Date and time',
-                'id'    => 'datetime',
-                'type'  => 'datetime',
-                'clone' => true,
-                // highlight-start
-                'std' => [
-                    '2022-04-20',
-                    '2022-04-21',
-                ],
-                // highlight-end
-            ],
-            [
-                'name' => 'Location',
-                'id'   => 'location',
-                'type' => 'text',
-            ],
-            [
-                'name'          => 'Map',
-                'id'            => 'map',
-                'type'          => 'osm',
-                'address_field' => 'location',
-            ],
-        ],
-    ];
+	$meta_boxes[] = [
+		'title'      => 'Event details',
+		'post_types' => 'event',
+		'fields'     => [
+			[
+				'name'  => 'Date and time',
+				'id'    => 'datetime',
+				'type'  => 'datetime',
+				'clone' => true,
+				// highlight-start
+				'std' => [
+					'2022-04-20',
+					'2022-04-21',
+				],
+				// highlight-end
+			],
+			[
+				'name' => 'Location',
+				'id'   => 'location',
+				'type' => 'text',
+			],
+			[
+				'name'          => 'Map',
+				'id'            => 'map',
+				'type'          => 'osm',
+				'address_field' => 'location',
+			],
+		],
+	];
 
-    return $meta_boxes;
+	return $meta_boxes;
 } );
 ```
