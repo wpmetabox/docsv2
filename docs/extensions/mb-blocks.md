@@ -847,6 +847,53 @@ If locking is not set in an InnerBlocks area: the locking of the parent InnerBlo
 
 If the block is a top-level block: the locking of the Custom Post Type is used.
 
+### Customizing InnerBlocks structrue
+
+By default, WordPress will create a couple of wrappers `<div>` for inner blocks on the editor in order to function, this causes inconsistent styling for editor and frontend. For example, if you create inner blocks structure like this:
+
+```html
+<div class="flex">
+	<InnerBlocks />
+</div>
+```
+
+If you add items to the inner blocks, in the frontend, its structure like this:
+
+```html
+<div class="flex">
+	<div>Item 1</div>
+	<div>Item 2</div>
+</div>
+```
+
+However, in the editor, it will render like this:
+
+```html
+<div class="flex">
+	<div class="block-editor-block-list__block wp-block is-selected ...">
+		<div>
+			<div>Item 1</div>
+			<div>Item 2</div>
+		</div>
+	</div>
+</div>
+
+This causes the editor and frontend have different structures, which makes it hard to style the block. 
+To fix this, MB Blocks helps you to custom the structure of inner blocks easily by adding `class`, `id`, or `style` directly to `<InnerBlocks />`
+
+```html
+<InnerBlocks class="flex" />
+```
+
+By doing this, it tells WordPress that MB Blocks will control the output of inner blocks in the editor, so both editor and front end will rendered like:
+
+```html
+<div class="flex">
+	<div>Item 1</div>
+	<div>Item 2</div>
+</div>
+```
+
 ### Example
 
 This is a more complete example of the testimonial block with more properties:
