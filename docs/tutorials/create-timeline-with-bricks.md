@@ -1,5 +1,5 @@
 ---
-title: Creating a timeline page - P1 - Meta Box + Bricks
+title: Creating a timeline page - Meta Box + Bricks
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
