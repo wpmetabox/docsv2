@@ -877,6 +877,7 @@ However, in the editor, it will render like this:
 		</div>
 	</div>
 </div>
+```
 
 This causes the editor and frontend have different structures, which makes it hard to style the block. 
 To fix this, MB Blocks helps you to custom the structure of inner blocks easily by adding `class`, `id`, or `style` directly to `<InnerBlocks />`
