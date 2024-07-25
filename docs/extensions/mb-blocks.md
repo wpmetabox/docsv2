@@ -9,7 +9,7 @@ With the help of MB Blocks, WordPress developers are now able to create Gutenber
 
 Here is a screenshot of a custom Gutenberg block (hero area) that's created using MB Blocks:
 
-![custom Gutenberg block](https://i.imgur.com/fVTmMWi.png)
+![Custom Gutenberg block](https://i.imgur.com/fVTmMWi.png)
 
 The preview of the block is displayed in the main content area while the block configuration is displayed on the right. This allows you to edit the block content and live-preview the block in real time. Later, you can also change where the block settings are displayed (on the sidebar or right in the main content area).
 
@@ -713,7 +713,7 @@ These parameters are available in the previous versions of MB Blocks and are dep
 - `$is_preview`: a boolean variable to let you know if you're in the preview mode for Gutenberg or on the front end. It's useful when you want to display a custom message to users when they edit the block on the back end. To check if the active block is in preview mode, use `defined( 'REST_REQUEST' ) && REST_REQUEST` instead.
 - `$post_id`: the current post ID. You can access via `get_the_ID()` function instead.
 
-## Nested blocks
+## Inner blocks
 
 WordPress has an amazing feature for Gutenberg blocks called [InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/), which allows you to insert other blocks inside a block. Since version 1.4, MB Blocks also supports this feature.
 
@@ -790,7 +790,7 @@ I use [Wayfinder](https://wordpress.org/plugins/wayfinder/) plugin to show the b
 `<InnerBlocks />` must be wrapped in a `<div>` tag to avoid breaking the DOM nodes in the Block Editor.
 
 ```html
-<div class="my-inner-blocks">
+<div class="testimonial__text">
 	<InnerBlocks />
 </div>
 ```
@@ -839,115 +839,85 @@ Use the template property to define a set of blocks that prefill the InnerBlocks
 
 Template locking allows locking the InnerBlocks area for the current template. Options:
 
-- 'all' — prevents all operations. It is not possible to insert new blocks. Move existing blocks or delete them.
-- 'insert' — prevents inserting or removing blocks, but allows moving existing ones.
-- false — prevents locking from being applied to an InnerBlocks area even if a parent block contains locking. ( Boolean )
+- `all` — prevents all operations. It is not possible to insert new blocks. Move existing blocks or delete them.
+- `insert` — prevents inserting or removing blocks, but allows moving existing ones.
+- `false` — prevents locking from being applied to an InnerBlocks area even if a parent block contains locking. ( Boolean )
 
 If locking is not set in an InnerBlocks area: the locking of the parent InnerBlocks area is used.
 
 If the block is a top-level block: the locking of the Custom Post Type is used.
 
-### Customizing InnerBlocks structrue
+### Wrapper div issue
 
-By default, WordPress will create a couple of wrappers `<div>` for inner blocks on the editor in order to function, this causes inconsistent styling for editor and frontend. For example, if you create inner blocks structure like this:
-
-```html
-<div class="flex">
-	<InnerBlocks />
-</div>
-```
-
-If you add items to the inner blocks, in the frontend, its structure like this:
+By default, WordPress will create a couple of wrappers `<div>` for inner blocks **in the editor** (in the admin) to function, this causes inconsistent styling for the editor and the frontend. For example, if you create inner blocks structure like this:
 
 ```html
-<div class="flex">
-	<div>Item 1</div>
-	<div>Item 2</div>
-</div>
-```
-
-However, in the editor, it will render like this:
-
-```html
-<div class="flex">
-	<div class="block-editor-block-list__block wp-block is-selected ...">
-		<div>
-			<div>Item 1</div>
-			<div>Item 2</div>
-		</div>
+<div class="my-block">
+	<div class="my-block__inner">
+		<InnerBlocks />
 	</div>
 </div>
+```
 
-This causes the editor and frontend have different structures, which makes it hard to style the block. 
-To fix this, MB Blocks helps you to custom the structure of inner blocks easily by adding `class`, `id`, or `style` directly to `<InnerBlocks />`
+If you add items to the inner blocks, in the frontend, its structure looks like this:
 
 ```html
-<InnerBlocks class="flex" />
+<div class="my-block">
+	<div class="my-block__inner">
+		<h2>My heading</h2>
+		<p>My content</p>
+	</div>
+</div>
+```
+
+However, in the editor, it will render like this (e.g. two extra `div`):
+
+```html
+<div class="my-block">
+	<div class="my-block__inner">
+		// highlight-start
+		<div class="block-editor-block-list__block wp-block is-selected ...">
+			<div>
+			// highlight-end
+				<h2>My heading</h2>
+				<p>My content</p>
+			// highlight-start
+			</div>
+		</div>
+		// highlight-end
+	</div>
+</div>
+```
+
+This causes the editor and the frontend have different markup, which makes it hard to style the block consistently in both places using the same CSS.
+
+To fix this, MB Blocks lets you **remove two extra `div` of inner blocks** in the admin by adding `class`, `id`, or `style` directly to `<InnerBlocks />`. So, instead of writing:
+
+```html
+<div class="my-block">
+	<div class="my-block__inner">
+		<InnerBlocks />
+	</div>
+</div>
+```
+
+You should write:
+
+```html
+<div class="my-block">
+	<InnerBlocks class="my-block__inner" />
+</div>
 ```
 
 By doing this, it tells WordPress that MB Blocks will control the output of inner blocks in the editor, so both editor and front end will rendered like:
 
 ```html
-<div class="flex">
-	<div>Item 1</div>
-	<div>Item 2</div>
+<div class="my-block">
+	<div class="my-block__inner">
+		<h2>My heading</h2>
+		<p>My content</p>
+	</div>
 </div>
-```
-
-### Example
-
-This is a more complete example of the testimonial block with more properties:
-
-```php
-<?php
-add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
-	$meta_boxes[] = [
-		'title'           => 'Testimonial',
-		'id'              => 'testimonial',
-		'type'            => 'block',
-		'context'         => 'side',
-		'render_callback' => function( $attributes ) {
-			?>
-			<div class="testimonial testimonial--<?= mb_get_block_field( 'style' ) ?>">
-				<div class="testimonial__text">
-					<InnerBlocks
-						allowedBlocks="<?= esc_attr( json_encode( [
-							'core/heading',
-							'core/paragraph',
-						] ) ) ?>"
-						orientation="vertical"
-						template="<?= esc_attr( json_encode( [
-							[ 'core/heading',   [ 'placeholder' => 'Enter testimonial title...' ] ],
-							[ 'core/paragraph', [ 'placeholder' => 'Enter testimonial content...' ] ],
-						] ) ) ?>"
-						templateLock="insert"
-					/>
-				</div>
-				<div class="testimonial__image">
-					<?php mb_the_block_field( 'image' ) ?>
-				</div>
-			</div>
-			<?php
-		},
-		'fields'          => [
-			[
-				'type' => 'select',
-				'id'   => 'style',
-				'name' => 'Style',
-				'options' => [
-					'default'     => 'Default',
-					'image_above' => 'Image above',
-				],
-			],
-			[
-				'type' => 'single_image',
-				'id'   => 'image',
-				'name' => 'Image',
-			],
-		],
-	];
-	return $meta_boxes;
-} );
 ```
 
 ## Block templates
@@ -1031,7 +1001,7 @@ If you want to save the block fields into custom tables, you need to activate th
 
 :::caution Caveats
 
-When saving block data in post meta or custom tables, there is no attributes stored in the block itself. 
+When saving block data in post meta or custom tables, there is no attributes stored in the block itself.
 Automatic preparation of attributes is not available, helpers functions like `mb_get_block_field()` and `mb_the_block_field()` will not work.
 You will have to use the [rwmb_meta](/functions/rwmb-meta/) function to get the block data.
 
