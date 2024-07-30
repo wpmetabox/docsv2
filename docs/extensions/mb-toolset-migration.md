@@ -31,7 +31,7 @@ The plugin will show the process of migrating. When it's done, you'll see the te
 
 MB Toolset Migration tries to migrate all the following data from Toolset to Meta Box. Please note that not all data types and settings in Toolset have an equivalent in Meta Box. The plugin will try to migrate as much as it can. The details are explained below:
 
-## Post types and taxonomies
+### Post types and taxonomies
 
 The plugin will migrate all custom post types and custom taxonomies created in Toolset to Meta Box. This job requires the [MB Custom Post Type](/extensions/mb-custom-post-type/) extension. All the settings like labels and icons are migrated as well.
 
