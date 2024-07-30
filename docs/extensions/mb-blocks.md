@@ -787,12 +787,8 @@ I use [Wayfinder](https://wordpress.org/plugins/wayfinder/) plugin to show the b
 
 :::
 
-`<InnerBlocks />` must be wrapped in a `<div>` tag to avoid breaking the DOM nodes in the Block Editor.
-
 ```html
-<div class="testimonial__text">
-	<InnerBlocks />
-</div>
+<InnerBlocks class="testimonial__text" />
 ```
 
 To make it more powerful, MB Blocks supports the following properties of InnerBlocks. They're the same as in the [block handbook](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/).
