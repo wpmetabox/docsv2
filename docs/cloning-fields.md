@@ -37,6 +37,7 @@ Clone as multiple|`clone_as_multiple`| Whether to store cloned values in multipl
 Max number of clones|`max_clone`|Limit the number of clones. Must be greater than 2. Optional.
 Min number of clones|`min_clone`|Minimum number of clones. Optional.
 Add more text|`add_button`|The text for **Add more** clone button. Optional. Default "+ Add more".
+Clone empty start|`clone_empty_start`|Allows no fields except the **Add more** button to show up. `true` or `false` (default). Optional.
 
 After saving the field group, in the post editor, you'll see an **+ Add more** button below the field input. Clicking it allows you to enter more values:
 
