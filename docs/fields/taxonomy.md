@@ -225,7 +225,7 @@ Using `rwmb_the_value` also has some extra options as following:
 
 **Displaying multiple selected terms:**
 
-If "Multiple" is set or the field is cloneable, you can loop through the returned values like this:
+If "Multiple" is set, you can loop through the returned values like this:
 
 ```php
 <?php $terms = rwmb_meta( 'my_field_id' ); ?>

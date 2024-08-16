@@ -157,8 +157,6 @@ Unlike the [taxonomy](/fields/taxonomy/) field, this field saves terms' IDs in t
 
 If "Multiple" is not set, a single term ID is saved in the database. Otherwise, the field saves multiple term IDs in a single row in the database in the comma-separated strings (e.g. format `1,2,3`).
 
-If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
-
 ## Template usage
 
 **Getting selected term object:**
