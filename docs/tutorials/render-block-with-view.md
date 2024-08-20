@@ -4,7 +4,7 @@ title: Rendering blocks with views in Meta Box
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-[MB Blocks](https://docs.metabox.io/extensions/mb-blocks/) is a powerful plugin for creating custom Gutenberg blocks. If using a separate template file to render the block is inconvenient, we have a more optimal way for you: **render blocks using views**. Are you wondering why and how? This article will clarify those questions.
+[MB Blocks](https://docs.metabox.io/extensions/mb-blocks/) is a powerful plugin for creating custom Gutenberg blocks. If using a separate template file to render the block is inconvenient, we have a more optimal way for you: **render blocks using views**.
 
 We have this quote block with some simple content as an example. It is rendered and styled using a view provided by the **MB Views** extension from Meta Box.
 
