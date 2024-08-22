@@ -57,6 +57,26 @@ Delete confirmation text|`delete_confirmation`|The text for the confirmation mes
 reCaptcha key|`recaptcha_key`|Google reCaptcha site key (version 3). Optional.
 reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Optional.
 
+### Hiding a field
+
+When you set the form to display fields from a field group, all fields are displayed by default. If you don't want to hide a field from front-end forms, then you need to set a settings for it.
+
+If you use [Meta Box Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from front end** from the field's **General** settings tab:
+
+![Hide a field from the front end](https://i0.wp.com/images.elightup.com/meta-box/docs/frontend-submission/hide-from-front.png)
+
+If you use code to register fields, please set the field as follows:
+
+```php
+[
+    'id'              => 'event_url',
+    'name'            => 'Event URL',
+    'type'            => 'url',
+    // highlight-next-line
+    'hide_from_front' => true,
+]
+```
+
 ### Dynamic population
 
 The dynamic population feature allows you to dynamically populate a shortcode attribute with a value. This value can be passed via the query string and/or hook.
@@ -324,7 +344,7 @@ Note that the plugin only needs the field group ID(s) (`id`) and/or post type (`
 
 ## Integrations
 
-MB Frontend Submission has integrations with the following page builder plugins:
+MB Frontend Submission has integrations with **the block editor** (Gutenberg) and the following page builder plugins:
 
 - Bricks
 - Elementor
