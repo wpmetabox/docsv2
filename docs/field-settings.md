@@ -37,6 +37,7 @@ Max number of clones | `max_clone`|Maximum number of clones. Optional. Default `
 Min number of clones | `min_clone`|Minimum number of clones. Optional. Default `0`.
 Add more text | `add_button`|The text for **Add more** clone button. Optional. Default "+ Add more".
 Hide from front end | `hide_from_front`|Whether to hide the field from front-end submission forms. Required the [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/) extension to work.
+Hide from REST API | `hide_from_rest`|Whether to hide the field from REST API responses. Required the [MB REST API](https://metabox.io/plugins/mb-rest-api/) extension to work.
 
   </TabItem>
 

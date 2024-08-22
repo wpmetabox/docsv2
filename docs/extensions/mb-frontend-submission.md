@@ -59,7 +59,7 @@ reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Opt
 
 ### Hiding a field
 
-When you set the form to display fields from a field group, all fields are displayed by default. If you don't want to hide a field from front-end forms, then you need to set a settings for it.
+When you set the form to display fields from a field group, all fields are displayed by default. If you want to hide a field from front-end forms, then you need to set a settings for it.
 
 If you use [Meta Box Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from front end** from the field's **General** settings tab:
 
@@ -69,9 +69,9 @@ If you use code to register fields, please set the field as follows:
 
 ```php
 [
-    'id'              => 'event_url',
-    'name'            => 'Event URL',
-    'type'            => 'url',
+    'id'              => 'gallery',
+    'name'            => 'Gallery',
+    'type'            => 'image_advanced',
     // highlight-next-line
     'hide_from_front' => true,
 ]

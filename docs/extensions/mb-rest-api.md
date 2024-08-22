@@ -403,6 +403,26 @@ You can also perform the request in Postman or Insomnia like this:
 
 ![Update settings page with Insomnia](https://i0.wp.com/images.elightup.com/meta-box/docs/rest-api/update-settings-page-insomnia.png)
 
+## Hiding a field
+
+By default, Meta Box returns all fields for the REST API responses. If you want to hide a field from the responses, then you need to set a settings for it.
+
+If you use [Meta Box Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from REST API** from the field's **General** settings tab:
+
+![Hiding a field from REST API responses](https://i0.wp.com/images.elightup.com/meta-box/docs/rest-api/hide-a-field.png)
+
+If you use code to register fields, please set the field as follows:
+
+```php
+[
+    'id'             => 'gallery',
+    'name'           => 'Gallery',
+    'type'           => 'image_advanced',
+    // highlight-next-line
+    'hide_from_rest' => true,
+]
+```
+
 ## Authentication
 
 For **posts, terms, users, and comments**, authentication is required when you **update data** via Rest API. The plugin uses the default WordPress authentication methods. This means that if you are building something in the WordPress dashboard, the code will be run in an already logged-in session, and no specific authentication is needed.
