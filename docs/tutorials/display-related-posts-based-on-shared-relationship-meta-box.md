@@ -21,7 +21,7 @@ In this practice, we’ll have two separate custom post types: Events and Artist
 
 These are some tools we need for this tutorial:
 
-* [The Meta Box core plugin](https://wordpress.org/plugins/meta-box/): provide a framework to create custom post types and relationships.
+* [The Meta Box core plugin](https://wordpress.org/plugins/meta-box/): provide a framework to create custom post types and relationships;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the events and artists;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create relationships between these post types;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the related events and related artists in the dashboard;
