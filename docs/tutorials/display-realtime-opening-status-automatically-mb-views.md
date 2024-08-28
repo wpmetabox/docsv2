@@ -146,7 +146,7 @@ The context of the status and its style will be stipulated in the next step.
 
 ### 2.3. Step 3: Adding JavaScript to compare current time with time slots
 
-Move on to the JavaScript tab of the view, and add the following code:
+Move on to the **JavaScript** tab of the view, and add the following code:
 
 ```
 var getTimeElement = document.getElementById("time");
