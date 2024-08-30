@@ -2,7 +2,6 @@
 ---
 title: Showing upcoming events - Meta Box + Breakdance
 ---
-
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
@@ -30,7 +29,7 @@ In this case, each event will be a post of a custom post type. I’ll create som
 
 Let’s check which tools are necessary for this practice.
 
-* [The Meta Box plugin](https://wordpress.org/plugins/meta-box/):to have a framework to create a custom post type and custom fields for the events;
+* [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields for the events;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the events;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
 * **Breakdance**: to build the page, which contains the upcoming events section.
