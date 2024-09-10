@@ -1,4 +1,3 @@
-
 ---
 title: Showing upcoming events - Meta Box + Breakdance
 ---
