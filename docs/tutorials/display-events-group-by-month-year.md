@@ -69,7 +69,7 @@ These are some posts that I created for reference. The start date is shown in th
 
 ![Some created posts. The start date is shown in the admin columns as well.](https://i.imgur.com/RFkS2ci.png)
 
-##Displaying events grouped by month and year
+## Displaying events grouped by month and year
 
 There are several kinds of classifications by month and year that you can follow. We should use code to do it all, they will have the same logic and syntax but differ a little bit in details. In this practice, I’ll give the code to do in two ways: group events by month, and another by month and year.
 
