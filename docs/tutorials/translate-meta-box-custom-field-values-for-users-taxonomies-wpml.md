@@ -170,7 +170,7 @@ On the frontend, the information saved in the fields is displayed already, but i
 
 You should modify the created template a little bit to make this section more beautiful.
 
-Back to the created view. Add some `**div**` tags, classes, and a heading as in the below image:
+Back to the created view. Add some **`div`** tags, classes, and a heading as in the below image:
 
 ![Add some div tags, classes and modify the created template a little bit to make this section more beautiful.](https://i.imgur.com/FTNkZsY.png)
 
@@ -286,7 +286,7 @@ Go to **Meta Box** > **Views**, and create a new view to have a template to disp
 
 ![Go to Meta Box > Views, and create a new view for term meta translation](https://i.imgur.com/IfE6MOu.png)
 
-Then, add some code to the **Template** tab along with some `**div**` tags, and classes.
+Then, add some code to the **Template** tab along with some **`div`** tags, and classes.
 
 ```
 {% set post_id = post.ID  %}
