@@ -28,6 +28,12 @@ As its name says, this is to switch between languages. It will be a form as a bu
 
 **Notice**:
 
+:::tip
+
+From our experience, the most important settings are in the **Advanced** tab.
+
+:::
+
 :::Notice
 
 If you don’t set it up, there is nothing on the page to change the language to another one. So, the translation versions of all elements including the custom fields are not shown even when they are already existing.
