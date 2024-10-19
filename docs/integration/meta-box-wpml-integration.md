@@ -26,15 +26,7 @@ As its name says, this is to switch between languages. It will be a form as a bu
 
 ![The language switcher on the frontend allows transform the language](https://i.imgur.com/Nsnkfx9.png)
 
-**Notice**:
-
-:::Notice
-
-From our experience, the most important settings are in the **Advanced** tab.
-
-:::
-
-:::Notice
+:::caution Notice
 
 If you don’t set it up, there is nothing on the page to change the language to another one. So, the translation versions of all elements including the custom fields are not shown even when they are already existing.
 
@@ -185,7 +177,11 @@ Or, use this syntax for bulk converting:
 
 ![Or use this syntax for bulk converting](https://i.imgur.com/Qim8Kgi.png)
 
-**Remarks**: We recommend using a child theme in this case to avoid missing the strings when you update your theme.
+:::tip
+
+We recommend using a child theme in this case to avoid missing the strings when you update your theme.
+
+:::
 
 Then, go to **WPML** > **String Translation**, and choose the user roles you would like to make translatable in the **More options** section.
 
