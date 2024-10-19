@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Having a multilingual website for products, and services is more and more essential in the global economy. And, it’s undeniable that using a translation plugin is an optimal choice to build it. 
 
-One in the range of translation plugins, WPML seems like the most popular with a large number of users. You might know that it can help to [translate custom fields created with Meta Box](https://metabox.io/translate-custom-fields-with-wpml/) a long time ago. And now, the integration between the two plugins is more deep so you can also **translate the custom field values easily, especially custom fields for users and taxonomies**. We’ll delve into it in this blog. It is one of the applications of Meta Box - WPML compatibility.
+One in the range of translation plugins, WPML seems like the most popular with a large number of users. You might know that it can help to [translate custom fields created with Meta Box](https://metabox.io/translate-custom-fields-with-wpml/) a long time ago. And now, the integration between the two plugins is more deep so you can also **translate the custom field values easily, especially custom fields for users and taxonomies**. We’ll delve into it in this blog. It is one of the applications of [Meta Box - WPML compatibility](https://docs.metabox.io/integration/meta-box-wpml-integration/).
 
 For demonstration purposes, I’ll translate information about a post-author as you can see below:
 
@@ -327,4 +327,4 @@ There are two notices for translating custom field values for taxonomy which are
 
 That’s all.
 
-You can take a look at our [detailed review of the top 4 plugins to translate your site](https://metabox.io/review-translation-plugin/) or [an in-depth comparison between the Polylang plugin vs. Multisite](https://metabox.io/polylang-vs-wordpress-multisite/) to have your own choice. For custom fields of other objects, you can look at the instructions from our documentation for more details.
+You can take a look at our [detailed review of the top 4 plugins to translate your site](https://metabox.io/review-translation-plugin/) or [an in-depth comparison between the Polylang plugin vs. Multisite](https://metabox.io/polylang-vs-wordpress-multisite/) to have your own choice. For custom fields of other objects, you can look at the instructions from [our documentation](https://docs.metabox.io/integration/meta-box-wpml-integration/) for more details.
