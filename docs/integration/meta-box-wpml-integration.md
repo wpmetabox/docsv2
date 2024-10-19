@@ -28,7 +28,7 @@ As its name says, this is to switch between languages. It will be a form as a bu
 
 **Notice**:
 
-:::tip
+:::Notice
 
 From our experience, the most important settings are in the **Advanced** tab.
 
