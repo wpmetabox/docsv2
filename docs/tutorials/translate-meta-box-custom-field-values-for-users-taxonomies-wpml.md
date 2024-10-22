@@ -15,7 +15,7 @@ For demonstration purposes, I’ll translate information about a post-author as 
 ![Example of translating custom field values for users](https://i.imgur.com/vbVl6LG.gif)
 
 
-## Video vesion
+## Video version
 
 <LiteYouTubeEmbed id='ng4ZYZs6cEw' />
 
