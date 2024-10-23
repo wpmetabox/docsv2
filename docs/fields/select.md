@@ -24,6 +24,7 @@ Multiple | `multiple` | Whether to allow select multiple values? `true` or `fals
 Placeholder | `placeholder` | The placeholder text.
 Display "Toggle All" button | `select_all_none` | Display "Toggle All" button to quickly toggle choices. Applied only when "Multiple" is set.
 Flatten | `flatten` | Display sub items without indentation. `true` or `false` (default). See below to know how to define sub items.
+Callback | `_callback` | A callable function that returns an array of choices. The function should return an array of `'value' => 'Label'`.
 
 This is a sample field settings array when creating this field with code:
 
