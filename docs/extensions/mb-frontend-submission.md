@@ -4,7 +4,7 @@ title: MB Frontend Submission
 
 import FAQ from '@site/src/components/FAQ';
 
-MB Frontend Submission helps you create front-end forms for users to submit posts to your website. It allows you to submit post fields (title, content, etc.) and also custom fields created by Meta Box. It works with all extensions like [Meta Box Group](/extensions/meta-box-group/) or [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/).
+MB Frontend Submission helps you create front-end forms for users to submit data to your website. It allows you to submit data for posts like post fields (title, content, etc.) and also custom fields created by Meta Box. It also support to custom table models and works with all extensions like [Meta Box Group](/extensions/meta-box-group/) or [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/).
 
 ![submission form](https://i.imgur.com/jfXHqSc.png)
 
@@ -24,6 +24,12 @@ The plugin also provides a shortcode to insert the submission form into a page:
 [mb_frontend_form id="field-group-id" post_fields="title,content"]
 ```
 
+You can also submit data to a [MB Custom Table](/extensions/mb-custom-table/) model:
+
+```php
+[mb_frontend_form id="field-group-id" object_type="model"]
+```
+
 If you're using [Meta Box Builder](/extensions/meta-box-builder/), go to **Meta Box > Custom Fields** admin page and copy the content in the **Shortcode** column for the field group that you created:
 
 ![Copy submission form shortcode in Meta Box Builder](https://i.imgur.com/sfeWhBA.png)
@@ -39,8 +45,10 @@ Edit|`edit`|Allow users to edit the post after submitting. `true` or `false` (de
 Allow delete|`allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
 Force delete|`force_delete`|Whether to delete the submitted post permanently or temporarily (move to Trash).
 Show add more|`show_add_more`|Show add new button after submit. `true` or `false` (default).
+Object type|`object_type`|The object type for the submitted data. Can be either `post` or `model`. Default is `post`.
+Object ID|`object_id`| Optional. Used when you want to update an existing object. If you want to pass the ID of the current post, set it to `current`.
 Post type|`post_type`|The submitted post type. Optional. Default is the first post type defined in the meta box. If the meta box is made for multiple post types, you should set this attribute to the correct one.
-Post ID|`post_id`|The post ID. Optional. Used when you want to update an existing post. If you want to pass the ID of the current post, set it to `current`.
+Post ID *(deprecated)*|`post_id`|The post ID. Optional. Used when you want to update an existing post. If you want to pass the ID of the current post, set it to `current`. This attribute is deprecated, use `object_id` instead.
 Post status|`post_status`|The status for submitted posts. See [the list here](https://wordpress.org/documentation/article/post-status/).
 Post fields|`post_fields`|List of post fields you want to show in the frontend, separated by commas. Supported the following fields: `title`, `content`, `excerpt`, `date`, and `thumbnail`.
 Title field label|`label_title`| Label for the post title field.
@@ -86,12 +94,12 @@ The dynamic population feature allows you to dynamically populate a shortcode at
 You can populate the post ID for the shortcode via the query string by appending the dynamic population parameter for the attribute to the end of your form URL along with your custom value.
 
 ```
-http://siteurl.com/form-url/?rwmb_frontend_field_post_id=123
+https://example.com/form-url/?rwmb_frontend_field_object_id=123
 ```
 
-The query parameter is `rwmb_frontend_field_post_id`.
+The query parameter is `rwmb_frontend_field_object_id`.
 
-Note that *only* post ID is supported for populating via query string since version 2.2.0.
+Note that *only* object ID is supported for populating via query string since version 2.2.0.
 
 #### Hooks
 
@@ -296,9 +304,11 @@ Name|Attribute|Description
 ---|---|--
 Edit page|`edit_page`|The ID of the page, where users can submit posts.
 Field group ID(s)|`id`|Overwrite field group ID(s) from the edit page. If multiple field groups, enter their IDs separated by commas.
+Object type|`object_type`|The object type for the submitted data. Can be either `post` or `model`. Default is `post`.
+Model name|`model_name`|The model name for the submitted data. Required if `object_type` is `model`.
 Post type|`post_type`|Overwrite the submitted post type from the edit page.
 Show welcome message|`show_welcome_message`|Show the welcome message `true` (default) or `false`.
-Columns|`columns`|List of columns to be displayed in the dashboard, separated by commas. Supported values are `title`, `date`, and `status`.
+Columns|`columns`|List of columns to be displayed in the dashboard, separated by commas. For example: `title`, `date`, and `status`...
 Title column label|`label_title`|The label for the title column.
 Date column label|`label_date`|The label for the date column.
 Status column label|`label_status`|The label for the status column.
