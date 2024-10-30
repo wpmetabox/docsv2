@@ -93,10 +93,10 @@ const sidebars = {
 		},
 		{
 			type: 'category',
-			label: 'Integration',
+			label: 'Integrations',
 			link: {
 				type: 'doc',
-				id: 'integration',
+				id: 'integrations',
 			},
 			items: [
 				{

@@ -1,5 +1,6 @@
 ---
 title: Meta Box - WPML Integration
+sidebar_label: WPML
 ---
 
 WPML (**WPML Multilingual CMS**) has a native integration with Meta Box that helps translate custom fields and its data for many objects such as posts, users, taxonomies, etc. into different languages easily. Since it is native in the WPML plugin, there is no requirement to install any further plugins.

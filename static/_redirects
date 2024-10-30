@@ -71,3 +71,6 @@
 
 /filters/rwmb-field-type-value/											/filters/rwmb-value/
 /filters/rwmb-field-type-html/											/filters/rwmb-html/
+
+
+/integration/meta-box-wpml-integration/                                 /integrations/wpml/
