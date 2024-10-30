@@ -53,7 +53,7 @@ And then enter the data for an event:
 
 ![Enter data for an event](https://i.imgur.com/lrZHeJw.png)
 
-**Instead of creating extra Rest endpoints, which introduce a new API and syntax, MB Rest API extends the [existing WordPress endpoint for posts]((https://developer.wordpress.org/rest-api/reference/posts/#retrieve-a-post)) to add data for Meta Box's fields.**
+**Instead of creating extra Rest endpoints, which introduce a new API and syntax, MB Rest API extends the [existing WordPress endpoint for posts](https://developer.wordpress.org/rest-api/reference/posts/#retrieve-a-post) to add data for Meta Box's fields.**
 
 So if the event post ID is `5837`, then you'll need to make a `GET` request to retrieve post data via the standard WordPress post endpoint: `https://domain.com/wp-json/wp/v2/event/5837`.
 
