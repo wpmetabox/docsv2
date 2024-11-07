@@ -57,17 +57,13 @@ echo $url;
 
 ## Filters
 
-To change the message for all oEmbed field when no embed is available, use this filters:
-
-### `rwmb_oembed_not_available_string`
-
-Follow this template:
+To change the message for all oEmbed field when no embed is available, use the filter `rwmb_oembed_not_available_string`, which accepts 2 parameters: message and URL.
 
 ```php
-add_filter( 'rwmb_oembed_not_available_string', function( $message ) {
+add_filter( 'rwmb_oembed_not_available_string', function( $message, $url ) {
     $message = 'Sorry, what you are looking here is not available.';
     return $message;
-} );
+}, 10, 2 );
 ```
 
 You also can hide the message with CSS on the front end by putting this code into your theme or in *Customize > Additional CSS*:
