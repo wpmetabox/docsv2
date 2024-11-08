@@ -35,7 +35,7 @@ You're required to create a [text field](/fields/text/) for entering an address 
 
 :::
 
-The address field can be also a list of text input fields' IDs, separated by commas. For example: `street,city,state`. In that case, there's no autocomplete for address. Instead of that, when you click the **Find Address** button (below the map), the field will search for the address combined with the values of those fields and set the location for the map.
+The address field can be also a list of field IDs, separated by commas like `street,city,state`. In this case, you can use both text and select fields. There will be no autocomplete for address. Instead of that, the field will automatically search for the address combined with the values of those fields and set the location for the map when any of the address field changes.
 
 This is a sample field settings array when creating this field with code:
 
