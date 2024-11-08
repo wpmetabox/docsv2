@@ -523,6 +523,20 @@ When clone a group, if the group has `clone_default` set to `true`, then all sub
 
 Learn more about [`clone_default` parameter](/cloning-fields/).
 
+## Changing group title with JavaScript
+
+You can also change the group title via a JavaScript filter. To do that, use the following code in your JavaScript file:
+
+```js
+jQuery( function() {
+    // Change "myVendor/myPlugin" to your unique namespace
+    rwmb.hooks.addFilter( 'group.title', 'myVendor/myPlugin', function( title ) {
+        // Change the title and return the value here.
+        return title + ' Some random string';
+    } );
+} );
+```
+
 ## Known issues
 
 - When cloning fields or groups, `id` attribute of inputs are adjusted. In multi-level nested groups, they're changed without any rule. So please don't rely on them to perform custom JavaScript actions.
