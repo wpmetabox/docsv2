@@ -1,5 +1,5 @@
 ---
-tittle: Creating a Custom 404 Page in WordPress - P4 - Meta Box + Breakdance
+title: Creating a Custom 404 Page in WordPress - P4 - Meta Box + Breakdance
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
