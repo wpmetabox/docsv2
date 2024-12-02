@@ -1,5 +1,5 @@
 ---
-title: Creating a coming soon page with countdown - P1 - using MB Views
+title: Creating a coming soon page with countdown - Using MB Views
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -68,7 +68,7 @@ Then, on your settings page, you will see custom fields displayed.
 
 Just input some content to the fields. They will be used to display on the coming soon page later. Note that the **Time** field is to input the exact date and time when the event takes place. And after that, we’ll use JavaScript to display the countdown.
 
-## 3. Getting all content of the coming Soon Page
+## 3. Getting all content of the coming soon page
 
 Go to **Meta Box** > **Views** to create a new template for the coming soon page.
 
@@ -125,7 +125,7 @@ These IDs, as shown in the image below, will be used later in JavaScript to crea
 **Particularly**:
 
 * `main-comingsoon`: is simply for the main container that holds all content related to the coming soon page, including the countdown.
-* `run_countdown`: wraps all countdown elements
+* `run_countdown`: wraps all countdown elements.
 * `set_day`, `set_hours`, `set_minutes`, and `set_second`: are used to display the corresponding values for days, hours, minutes, and seconds in the countdown. 
 
 After including these elements, the page will have the following structure:
