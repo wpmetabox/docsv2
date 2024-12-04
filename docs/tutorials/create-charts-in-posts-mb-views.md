@@ -429,4 +429,4 @@ If you want to change the type or any data of the chart, go back to the settings
 
 All the code I use in this tutorial is updated on [GitHub](https://github.com/wpmetabox/tutorials/tree/master/create_chart) for your reference.
 
-You also can explore the power of MB Views in [other tutorials](https://metabox.io/series/mb-views-applications/).
+You also can explore the power of MB Views in [other tutorials](https://docs.metabox.io/tutorials/mb-views/).
