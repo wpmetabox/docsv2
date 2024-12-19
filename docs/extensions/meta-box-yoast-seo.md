@@ -1,8 +1,8 @@
 ---
-title: Meta Box for Yoast SEO
+title: MB Yoast SEO Integration
 ---
 
-Meta Box for Yoast SEO helps you to add content of custom fields to Yoast SEO Content Analysis to have better SEO score.
+MB Yoast SEO Integration helps you to add content of custom fields to Yoast SEO Content Analysis to have better SEO score.
 
 ![yoast seo preview](https://i2.wp.com/metabox.io/wp-content/uploads/2015/08/meta-box-yoast-seo.png?w=760)
 
