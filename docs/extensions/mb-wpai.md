@@ -1,17 +1,23 @@
-# WP All Import - Meta Box Integration
-MB WP-AI integrates WP All Import with Meta Box which ported from ACF Integration. It creates a section in WP All Import plugin to map Meta Box's fields to import data. Allows you to handle more complex fields and settings.
+---
+title: MB WPAI Integration
+---
+
+MB WPAI Integration integrates WP All Import with Meta Box which ported from ACF Integration. It creates a section in WP All Import plugin to map Meta Box's fields to import data. Allows you to handle more complex fields and settings.
 
 ![MB WP-AI](https://i.imgur.com/eFByM8U.png)
 
 ## Before you start
+
 This plugin mimic the way ACF Integration works and under the hood, so it's recommend you to read [ACF Integration documentation](https://www.wpallimport.com/documentation/how-to-import-advanced-custom-fields-acf-from-csv/) first.
 
 Also, you need to deactivate ACF Integration addon if you're using it.
 
 ## Start importing fields
+
 MB WPAI will create a section called "Meta Box Add-On" in the WP All Import, drag and drop page. Same as ACF Integration. In this section, you can drag and drop matching fields to map them together.
 
 ### Step 1: Create a new import
+
 Navigate to **All Import › New Import** and upload a valid import file. Our plugin will automatically identify the file type, i.e., CSV, Excel, XML, etc.
 
 Next, choose from the drop-down list the post type that has the Advanced Custom Fields attached.
@@ -24,6 +30,7 @@ Click **Continue to Step 2** to move on to the next step.
 Keep in mind that your Meta Box fields need to be created and defined for posts prior to importing data.
 
 ### Step 2: Review the Import File
+
 The **Review Import File** page appears next. Here, you can review and confirm that the import data looks correct:
 
 ![Review Import File](https://i.imgur.com/7yGvA1C.png)
@@ -37,6 +44,7 @@ This example uses an XML. You can also use spreadsheet files.
 Once you confirm that the data looks good, click **Continue to Step 3**.
 
 ### Step 3: Map the Incoming Data Elements to Meta Box Fields
+
 This brings you to the Drag & Drop interface, which allows you to map the data elements to their respective target fields.
 
 To map the data, drag each desired data element from the panel on the right to its corresponding field on the left.
@@ -59,6 +67,7 @@ Once all of the relevant data elements are mapped to their target fields, click 
 Before proceeding, make sure that you map all other fields related to the post type or custom post type that you're importing.
 
 ### Step 4: Configure the Remaining Settings and Run the Import
+
 The **Import Settings** interface is where you configure the remaining import settings and other options:
 
 Specifically, you need to define a **Unique Identifier** for the import. WP All Import uses the unique identifier to keep track of imported records. To create it, simply click on **Auto-detect**.
@@ -72,6 +81,7 @@ Here you can modify the import behavior if it is run again (to update, delete, o
 Click the blue **Continue** button at the end to move to the next step.
 
 ### Step 5: Verify That the Meta Box Fields Were Created Correctly
+
 Next, you see the **Confirm & Run** interface. In the **Import Summary** section, you can review the import, what's in the import file, and other import settings.
 
 ![Confirm & Run](https://i.imgur.com/U4gK4qK.png)
@@ -87,6 +97,7 @@ You can review the imported fields by checking any of the imported posts in **Po
 ## Advanced usage
 
 ### Concatenate fields
+
 You can concatenate multiple fields into one Meta Box field, or add any static text to the field. This is useful in many situations when you want to combine multiple fields into one field, or add a prefix or suffix to the field.
 
 For example, you have 2 fields: `first_name` and `last_name` and you want to concatenate them into `full_name` field. You can do it by dragging and dropping the fields to the `full_name` field like this:
@@ -95,6 +106,7 @@ Or if you have only file name in the import file, but you want to add the full U
 ![Concatenate fields](https://i.imgur.com/7Ovqkoj.png)
 
 #### Concatenate cloneable fields
+
 Concatenation also works with cloneable fields. For example, you have a cloneable field `photos` and you want to add the full URL to each photo. You can do it like this:
 
 ```
@@ -102,13 +114,16 @@ https://photo.example.com/{photos/photo}
 ```
 
 In this case, the plugin will loop through all photos and add the full URL to each photo.
+
 ### Cloneable fields
 
 #### Using "+ Add more" button (Fixed Repeater Mode)
+
 The easiest way to import cloneable fields is using the "+ Add more" button. Simply like how you do in editing post, click the button to add more fields and map them to the import file. This way is suitable for small number of fields, or files with a fixed number of columns.
 ![Using Add more button](https://i.imgur.com/Q9hYVzP.png)
 
 #### Using selector "all" and "nth" in XPath (Variable Repeater Mode)
+
 If you have a large number of fields, or the number of columns in the import file is dynamic, you can leverage XPath syntax to import them. 
 This applied for both cloneable and non-cloneable fields, groups and sub-fields.
 
@@ -145,6 +160,7 @@ Using the "dot" syntax will tell the plugin to move each item to the parent segm
 ![Cloneable Data Placements](https://i.imgur.com/ZLEYpxE.png)
 
 #### Concatenate cloneable fields
+
 We can also concatenate cloneable fields. For example, you have an XML file with the following structure:
 
 ```xml
@@ -158,15 +174,19 @@ We can also concatenate cloneable fields. For example, you have an XML file with
 You can add `https://photo.example.com/{photos/photo}` to the `photos` field to get the full URL of the photo.
 
 ### Group fields
+
 Working with group fields is similar to other fields. Except that the group fields itself is a container of other fields so we will have a new special field called "For each" to handle how we import data to the group fields.
 
 #### Map fields to group fields
+
 To map fields to group fields, simply drag and drop the fields to the group fields like we do with other fields.
 
 #### Adding cloneable group (Fixed Repeater Mode)
+
 Cloneable group fields work the same as cloneable fields. You can simply the "+ Add more" button to add more groups and map fields to them.
 
 #### For each syntax (Variable Repeater Mode)
+
 As mentioned above, the group fields is a container of other fields. So we need to tell the plugin how to import data to the group fields. This is done by using the "For each" syntax.
 
 ![For each syntax](https://i.imgur.com/IZrykr1.png)
@@ -195,6 +215,7 @@ To import each photo and its data to a new group, you can use the following XPat
 ```
 
 #### Sub-fields scope
+
 In the previous example, we have 2 sub-fields: `title` and `url`. These sub-fields are only available inside the group fields. So we need to tell the plugin to import them to the group fields. This is done by using the "dot" syntax.
 
 For example, to import the `title` field into sub-field, we can use the following XPath:
@@ -226,6 +247,7 @@ URL: {.url} (same as {photos/photo/url} but scoped to the group)
 - You can also use other features like concatenation, cloneable syntax... with sub-fields.
 
 ## Known issues
+
 - When you clone a group, the later group xpath maybe override the previous group xpath when you save the first time. 
 You'll need to save the import again to fix it. This is due to group.js file currently doesn't work well outside of the post edit screen. 
 We'll fix it in the next version.
