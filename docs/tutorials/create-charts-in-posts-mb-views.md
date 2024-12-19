@@ -34,7 +34,7 @@ Then, we use the MB Views with a bit of JavaScript to display the chart on post.
 
 So, these are some tools we need to have the charts:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and set up a template for displaying chart information. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and set up a template for displaying chart information. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for displaying the chart;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the related information of the chart visually;
 * [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to set the rule for displaying fields for each type of chart;
