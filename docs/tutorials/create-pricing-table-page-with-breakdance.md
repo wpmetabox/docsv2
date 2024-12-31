@@ -176,7 +176,7 @@ Edit the page with Breakdance.
 
 Add a **Section** element to cover the pricing section.
 
-(Add a Section element to cover the Pricing section](https://i.imgur.com/yJJ3F2R.png)
+![Add a Section element to cover the Pricing section](https://i.imgur.com/yJJ3F2R.png)
 
 Then, add a **Div** element. It’ll include the plans.
 
