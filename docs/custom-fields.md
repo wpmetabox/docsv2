@@ -11,25 +11,44 @@ Custom fields, also called metadata, are arbitrary extra data attached to posts 
 Custom fields are a very important feature of WordPress and make WordPress a powerful CMS. You'll see custom fields everywhere, for example:
 
 - On a hotel booking website: custom fields are used to add information for address, rating, or price
-- On an e-commerce website: they're used to add details for price, quantity, or size. FYI, WooCommerce uses custom fields to store these data.
+- On an e-commerce website: they're used to add details for price, quantity, or size. FYI, WooCommerce uses custom fields to store this data.
 
 ## How to create custom fields?
 
-To create custom fields, you'll need the **Meta Box Builder** extension. This premium extension is already bundled in Meta Box AIO and MB Core so you can use it right away.
+There are 2 methods to create custom fields:
 
-:::info Not a premium user?
+1. Creating custom fields and configuring them in an intuitive interface provided by the Meta Box Builder extension.
+2. Using code.
 
-Please [purchase a license](https://metabox.io/pricing/) to use this extension. This is a very powerful tool that helps you to work with custom fields in Meta Box via a user-friendly interface.
+### Method 1: Creating with the intuitive interface
 
-:::
+To have a UI for creating custom fields, you'll need the **Meta Box Builder** extension.
 
-Custom fields are organized in groups. Each group is displayed as a collapsible panel below the post editor.
+#### Getting Meta Box Builder
 
-To create a field group, go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen to add fields to the group:
+Based on the version you use, there are some ways to get Meta Box Builder:
 
-![adding custom fields to the group](https://i.imgur.com/wjtQCmc.png)
+* Using the Meta Box Plugin and Meta Box Builder: Install the Meta Box Plugin. Then download Meta Box Builder from [metabox.io](https://metabox.io) website and install it to your site.
 
-Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. After that, a new field will appear in the field list. Clicking on the field title bar will open the field settings panel where you can edit settings for the field such as title or default value.
+![Download Meta Box Builder from metabox.io website](https://i.imgur.com/0BAnVW0.png)
+
+* Using Meta Box Lite: Meta Box Builder is included in this version. Simply download Meta Box Lite and start using it.
+  
+
+
+* Using Meta Box AIO: Purchase any plan from [metabox.io](https://metabox.io), you will have the  Meta Box AIO in your [My account](https://metabox.io/my-account/) page. Then, install it on your website and enable the Meta Box Builder plugin to get it.
+
+![Get Meta Box AIO, and enable the Meta Box Builder plugin](https://i.imgur.com/dtwJfVb.png)
+
+#### Creating custom fields
+
+Go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen to add fields to the group:
+
+![Adding custom fields to the group](https://i.imgur.com/EmJZPs2.png)
+
+Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. Meta Box provides [50+ field types](https://docs.metabox.io/fields/) for all of your data types. 
+
+After that, a new field will appear in the field list. Clicking on the field title bar will open the field settings panel where you can edit settings for the field such as title or default value.
 
 Field settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed. To know more about field settings, please see [this docs](/field-settings/).
 
@@ -49,43 +68,83 @@ The technical term of field groups in WordPress is "meta box". You'll see them v
 
 :::
 
-:::tip For developers
+### Method 2: Using code
 
-You can also [create custom fields with code](/creating-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
+This method is suitable for developers, and when you want to keep everything in your themes or plugins. It doesn't matter which version you're using.
 
-:::
+To see how to create custom fields with code in details, please read [here](https://docs.metabox.io/creating-fields-with-code/).
 
-## Displaying fields
+```
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+    $meta_boxes[] = [
+        'title'      => 'Event details',
+        'post_types' => 'event',
+        'fields'     => [
+            [
+                'name' => 'Date and time',
+                'id'   => 'datetime',
+                'type' => 'datetime',
+            ],
+            [
+                'name' => 'Location',
+                'id'   => 'location',
+                'type' => 'text',
+            ],
+            [
+                'name'          => 'Map',
+                'id'            => 'map',
+                'type'          => 'osm',
+                'address_field' => 'location',
+            ],
+        ],
+    ];
+
+    // Add more field groups if you want
+    // $meta_boxes[] = ...
+
+    return $meta_boxes;
+} );
+```
+
+## Displaying field values
 
 After having all the data for custom fields, it's time to show them on the front end.
 
-We'll display the event details for the event post type that we created in the previous steps. We'll use the default theme Twenty Twenty-Two for our site. This is the single event page on the front end, and we'll display the event details below the event description:
+We'll display the event details for the event post type that we created in the previous steps for example. This is the single event page on the front end, and we'll display the event details below the event description:
 
-![event page](https://i.imgur.com/rSPicJm.png)
+![Event page](https://i.imgur.com/rSPicJm.png)
 
-To do that, we'll use the [MB Views](/extensions/mb-views/) extension, which offers a powerful and flexible way to select and display fields.
+To do that, you have 3 methods:
 
-:::info Don't have a license?
+1. Using MB Views extension from Meta Box
+2. Using a page builder
+3. Using code
 
-MB Views is a premium extension and is available for [**Ultimate** and **Lifetime** licenses](https://metabox.io/pricing/) only (not the **Basic** license). If you don't own the right license, please purchase one.
+### Method 1: Using MB Views
 
-:::
+[MB Views](https://docs.metabox.io/extensions/mb-views/) offers a powerful and flexible way to select and display fields. It is a premium extension, and only included in Meta Box AIO.
 
 To begin, we need to create a "view". A "view" is a template where we show our fields. To create a view, go to **Meta Box » Views** and click **Add New** button.
 
 On the edit view screen, enter the view title. To insert a field to the template, click the **Insert Field** button, which opens a panel with all the available fields:
 
-![insert a field in a view](https://i.imgur.com/tUtIqmp.png)
+![Click to the Insert Field button, which opens a panel with all the available fields](https://i.imgur.com/1IPcVPr.png)
 
-You'll see other WordPress fields as well such as post title or post content. In our case, we only need to insert our custom fields, so click on **Date and time** field and you'll see a popup asking for the date format:
+You'll see other WordPress fields as well such as post title or post content. For the custom fields we created, just choose one and click on its name on the list.
+
+![For the custom fields we created, just choose one and click on its name on the list](https://i.imgur.com/wydo9s9.png)
+
+For some kinds of data, Meta Box may offer some options for the output. It will show a popup asking for the output format as follows:
 
 ![selecting a date format](https://i.imgur.com/OPXkorx.png)
 
-Choose a date format from the dropdown and click the **Insert** button to insert the field to the template. After that, you'll see the template now has the following text:
+Choose an output format from the dropdown and click the Insert button to insert the field to the template. After that, you'll see the template now has the following text:
 
 ```html
 {{ post.datetime | date( 'F j, Y' ) }}
 ```
+
+![Choose an output format from the dropdown, and the text is displayed in the template](https://i.imgur.com/S0YCRfH.png)
 
 That's the value of the field which will be displayed on the front end. However, displaying only text might be confusing, so we'll a label for it by adding the `<strong>Date and time:</strong>` before the text and wrap it in a paragraph (between `<p>` and `</p>` tags) to add some space. The template now looks like:
 
@@ -115,11 +174,40 @@ Now go to the event page on the front end and you'll see the custom fields that 
 
 ![view event details on the front end](https://i.imgur.com/iOAEwBT.png)
 
-:::tip For developers
+### Method 2: Using page builders
 
-You can also [display custom fields with code](/displaying-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
+Meta Box integrated with almost all popular page builders (Elementor, Bricks Builder, Breakdance, Kadence, Oxygen, Zion Builder, Beaver Builder, Divi, etc.). The process of displaying field values is similar to getting the post title, content, or featured image. So, follow these steps:
 
-:::
+1. Add a new element/widget/component/block which corresponds to the type of data you want to retrieve.
+
+![Add a new element/widget/component/block](https://i.imgur.com/gap2fUz.png)
+
+2. Use the dynamic data feature by clicking on its icon. Each page builder has a different icon, but in most cases, you can find it in the content box.
+
+![Dynamic tag of Elementor](https://i.imgur.com/dWA7vnx.png)
+_Dynamic tag of Elementor_
+
+![The dynamic data icon of Bricks](https://i.imgur.com/SOgkA5W.png)
+_The dynamic data icon of Bricks_
+
+![The “Insert Data” button of Oxygen to get data from Meta Box field](https://i.imgur.com/VbwoWMM.png)
+_The “Insert Data” button of Oxygen to get data from Meta Box field_ 
+
+![The dynamic data icon of Breakdance](https://i.imgur.com/iGBmY9y.png)
+_The dynamic data icon of Breakdance_
+
+![The dynamic content feature of Kadence](https://i.imgur.com/wFHIKG0.png)
+_The dynamic content feature of Kadence_
+
+3. There will be a field list. Choose the field name you want to get data from. It is usually in the Meta Box section. For example, if you use Bricks Builder, the interface will be like this:
+
+![Choose the field name you want to get data from](https://i.imgur.com/uCgnya8.png)
+
+For the real case of display field values using page builders, you can refer to the [Tutorials](https://docs.metabox.io/tutorials/builders/).
+
+### Method 3: Using code
+
+[Display field values with code](https://docs.metabox.io/displaying-fields-with-code/) is suitable for developers and in the case that you want to keep everything in your themes or plugins.
 
 ## Next steps
 
