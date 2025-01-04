@@ -17,11 +17,11 @@ Custom post types are different types of content in WordPress. You should consid
 
 ## How to create a custom post type?
 
-Creating custom post types is done easily with the **MB Custom Post Types & Custom Taxonomies** extension. This extension is already bundled in Meta Box AIO, MB Core, or you can install it for free from [WordPress.org](https://wordpress.org/plugins/mb-custom-post-type/).
+Creating custom post types is done easily with the MB Custom Post Types & Custom Taxonomies extension. This extension is already bundled in the Meta Box Lite, Meta Box AIO, or you can install it for free from [WordPress.org](https://wordpress.org/plugins/mb-custom-post-type/).
 
-To create a new custom post type, go to **Meta Box » Post Types** and click **New Post Type**:
+To create a new custom post type, go to **Meta Box** > **Post Types** > **New Post Type**:
 
-![create a new custom post type](https://i.imgur.com/3GKvMnb.png)
+![create a new custom post type](https://i.imgur.com/Z7h0zMP.png)
 
 There are several settings divided into tabs. In most cases, you only need to enter the plural name, singular name, and slug in the **General** tab and click the **Publish** button to register the post type.
 
@@ -39,7 +39,7 @@ Taxonomies in WordPress is a mechanism for grouping posts, like category and tag
 
 To create a new custom taxonomy, go to **Meta Box » Taxonomies** and click **Add New**:
 
-![create a new taxonomy](https://i.imgur.com/zKK4f87.png)
+![create a new taxonomy](https://i.imgur.com/K0mVDFp.png)
 
 There are several settings divided into tabs. In most cases, you only need to enter the plural name, singular name, and slug in the **General** tab and click the **Publish** button to register the taxonomy.
 
