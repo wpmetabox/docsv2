@@ -12,28 +12,65 @@ To run Meta Box, we recommend:
 
 While Meta Box also works with PHP 7.0 and older versions of WordPress, these versions have reached the official End Of Life and as such may expose your site to security vulnerabilities.
 
-## Installing Meta Box
+## Meta Box installation guide
 
-Meta Box is [available on WordPress.org](https://wordpress.org/plugins/meta-box/). To install it, go to **Plugins &rarr; Add New** and search for **Meta Box**.
+Depending on [three Meta Box versions](https://docs.metabox.io/introduction/#meta-box-overview), the installation steps will differ a little bit. Follow the instructions below for your selected version:
 
-![install meta box](https://i.imgur.com/vhlYMjJ.png)
+### Ver 1: Meta Box plugin + individual extensions
 
-Then click the button **Install** to install it. After that, click the button **Activate** to activate the plugin.
+#### Meta Box plugin
 
-## Installing extensions
+Meta Box is available on [WordPress.org](https://wordpress.org/plugins/meta-box/). To install it, go to **Plugins** > **Add New Plugin** and search for **Meta Box**. Then, click the **Install Now** button.
 
-Meta Box extensions are normal WordPress plugins, follow these steps to install them:
+![Install meta box](https://i.imgur.com/ZwnLkg3.png)
 
-- Go to [My Account](https://metabox.io/my-account/) and download the extensions you want to use.
-- Go to **Plugins**, click **Add new**, then click **Upload plugin**.
-- Choose the `.zip` file you downloaded and click **Install now**
-- After finishing the upload, click **Activate** to finish.
+After that, click the **Activate** button to activate the plugin. So, you’ll see it in the dashboard like this:
 
-:::caution
+![The Meta Box in the admin dashboard](https://i.imgur.com/Bx4xst7.png)
 
-Before installing extensions, make sure you installed and activated Meta Box, even if you use Meta Box AIO, MB Core, or solutions.
+#### Individual extensions
 
-:::
+Meta Box extensions are also kinds of WordPress plugins. For all the extensions, you can view them one by one [here](https://metabox.io/plugins/). Once you've selected the extensions you want, you can download or purchase them, then install them by following these steps:
+
+* Download free extensions directly from [our website](https://metabox.io/plugins/) or log in to [My Account](https://metabox.io/my-account/) to access the premium extensions you’ve purchased.
+
+![Log in to My Account to access the premium extensions](https://i.imgur.com/PYBGYMy.png)
+
+* Go to **Plugins** > **Add New Plugin** > **Upload Plugin**, then upload the file and install it.
+
+![Upload the file and install](https://i.imgur.com/jxjYWsU.png)
+
+Once activated, you also see it in the dashboard.
+
+![Plugin in admin dashboard](https://i.imgur.com/HdvMXUi.png)
+
+### Ver 2: Meta Box Lite
+
+**Meta Box Lite** bundles up the **Meta Box** plugin and **all free extensions** into one package. The installation process is similar to installing any plugin.
+
+1. Download Meta Box Lite on our website.
+2. Go to **Plugins** > **Add New Plugin** > **Upload Plugin**.
+3. Upload the downloaded file and click **Install Now**.
+
+Then, click **Activate** to start using Meta Box Lite. And you can see it in the dashboard as well.
+
+### Ver 3: Meta Box AIO
+
+**Meta Box AIO** includes the **Meta Box** plugin and **all extensions (both free and paid)** in one package. The installation process is quite the same with installing a paid extension:
+
+1. Log in to [My Account](https://metabox.io/my-account/) and download the Meta Box AIO package.
+2. Go to **Plugins** > **Add New Plugin** > **Upload Plugin**.
+3. Upload the downloaded file and click **Install Now**.
+
+After the upload finishes, click **Activate** to complete the installation.
+
+We have the **Meta Box AIO** package in the dashboard, and we have all extensions (both free and paid) in one place like this:
+
+![Meta Box AIO in admin dashboard](https://i.imgur.com/WRq4XB3.png)
+
+![all extensions both free and paid in one place](https://i.imgur.com/q3X7nOE.png)
+
+You can enable the desired extensions from the list.
 
 ## Next steps
 
