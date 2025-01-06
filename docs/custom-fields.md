@@ -15,38 +15,15 @@ Custom fields are a very important feature of WordPress and make WordPress a pow
 
 ## How to create custom fields?
 
-There are 2 methods to create custom fields:
+To create custom fields, you should use the **Meta Box Builder** extension to have an intuitive interface. This extension is already bundled in the Lite version of Meta Box so you can use it right away.
 
-1. Creating custom fields and configuring them in an intuitive interface provided by the Meta Box Builder extension.
-2. Using code.
-
-### Method 1: Creating with the intuitive interface
-
-To have a UI for creating custom fields, you'll need the **Meta Box Builder** extension.
-
-#### Getting Meta Box Builder
-
-Based on the version you use, there are some ways to get Meta Box Builder:
-
-* Using the Meta Box Plugin and Meta Box Builder: Install the Meta Box Plugin. Then download Meta Box Builder from [metabox.io](https://metabox.io) website and install it to your site.
-
-![Download Meta Box Builder from metabox.io website](https://i.imgur.com/0BAnVW0.png)
-
-* Using Meta Box Lite: Meta Box Builder is included in this version. Simply download Meta Box Lite and start using it.
-  
-
-
-* Using Meta Box AIO: Purchase any plan from [metabox.io](https://metabox.io), you will have the  Meta Box AIO in your [My account](https://metabox.io/my-account/) page. Then, install it on your website and enable the Meta Box Builder plugin to get it.
-
-![Get Meta Box AIO, and enable the Meta Box Builder plugin](https://i.imgur.com/dtwJfVb.png)
-
-#### Creating custom fields
+Custom fields are organized in groups. Each group is displayed as a collapsible panel below the post editor.
 
 Go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen to add fields to the group:
 
-![Adding custom fields to the group](https://i.imgur.com/EmJZPs2.png)
+![Adding custom fields to the group](https://i.imgur.com/jDaKY4R.png)
 
-Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. Meta Box provides [50+ field types](https://docs.metabox.io/fields/) for all of your data types. 
+Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. Meta Box provides [40+ field types](https://docs.metabox.io/fields/) for all of your data types. 
 
 After that, a new field will appear in the field list. Clicking on the field title bar will open the field settings panel where you can edit settings for the field such as title or default value.
 
@@ -62,49 +39,24 @@ Now go to your post type and add a new post, you'll see the field group with cus
 
 ![editing a post with custom fields](https://i.imgur.com/TwDYnBQ.png)
 
+In the case that you don’t want to use Meta Box Lite, you have two ways to have Meta Box Builder:
+
+* Get Meta Box Builder individually. In this case, the Meta Box plugin is required to have a framework.
+* Purchase **Meta Box AIO** to have all extensions, including Meta Box Builder.
+
+For more advanced features which are not in Meta Box Lite, you can upgrade to [Meta Box Premium](https://metabox.io/pricing).
+
 :::info Do you know?
 
 The technical term of field groups in WordPress is "meta box". You'll see them via WordPress functions like `add_meta_box` or `remove_meta_box`. That's why we name our brand **Meta Box**!
 
 :::
 
-### Method 2: Using code
+:::tip For developers
 
-This method is suitable for developers, and when you want to keep everything in your themes or plugins. It doesn't matter which version you're using.
+You can also [create custom fields with code](https://docs.metabox.io/creating-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
 
-To see how to create custom fields with code in details, please read [here](https://docs.metabox.io/creating-fields-with-code/).
-
-```
-add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
-    $meta_boxes[] = [
-        'title'      => 'Event details',
-        'post_types' => 'event',
-        'fields'     => [
-            [
-                'name' => 'Date and time',
-                'id'   => 'datetime',
-                'type' => 'datetime',
-            ],
-            [
-                'name' => 'Location',
-                'id'   => 'location',
-                'type' => 'text',
-            ],
-            [
-                'name'          => 'Map',
-                'id'            => 'map',
-                'type'          => 'osm',
-                'address_field' => 'location',
-            ],
-        ],
-    ];
-
-    // Add more field groups if you want
-    // $meta_boxes[] = ...
-
-    return $meta_boxes;
-} );
-```
+:::
 
 ## Displaying field values
 
@@ -114,15 +66,13 @@ We'll display the event details for the event post type that we created in the p
 
 ![Event page](https://i.imgur.com/rSPicJm.png)
 
-To do that, you have 3 methods:
+To do that, we'll use the [MB Views](https://docs.metabox.io/extensions/mb-views/) extension, which offers a powerful and flexible way to select and display fields.
 
-1. Using MB Views extension from Meta Box
-2. Using a page builder
-3. Using code
+:::info Don't have a license?
 
-### Method 1: Using MB Views
+MB Views is a premium extension and is available for Premium licenses only. If you don't own the right license, please purchase one.
 
-[MB Views](https://docs.metabox.io/extensions/mb-views/) offers a powerful and flexible way to select and display fields. It is a premium extension, and only included in Meta Box AIO.
+:::
 
 To begin, we need to create a "view". A "view" is a template where we show our fields. To create a view, go to **Meta Box » Views** and click **Add New** button.
 
@@ -174,40 +124,13 @@ Now go to the event page on the front end and you'll see the custom fields that 
 
 ![view event details on the front end](https://i.imgur.com/iOAEwBT.png)
 
-### Method 2: Using page builders
+If you use a page builder to display the data, you can refer to the [Tutorials](https://docs.metabox.io/tutorials/builders/) for usage in real cases.
 
-Meta Box integrated with almost all popular page builders (Elementor, Bricks Builder, Breakdance, Kadence, Oxygen, Zion Builder, Beaver Builder, Divi, etc.). The process of displaying field values is similar to getting the post title, content, or featured image. So, follow these steps:
+:::tip For developers
 
-1. Add a new element/widget/component/block which corresponds to the type of data you want to retrieve.
+You can also [display custom fields with code](https://docs.metabox.io/displaying-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
 
-![Add a new element/widget/component/block](https://i.imgur.com/gap2fUz.png)
-
-2. Use the dynamic data feature by clicking on its icon. Each page builder has a different icon, but in most cases, you can find it in the content box.
-
-![Dynamic tag of Elementor](https://i.imgur.com/dWA7vnx.png)
-_Dynamic tag of Elementor_
-
-![The dynamic data icon of Bricks](https://i.imgur.com/SOgkA5W.png)
-_The dynamic data icon of Bricks_
-
-![The “Insert Data” button of Oxygen to get data from Meta Box field](https://i.imgur.com/VbwoWMM.png)
-_The “Insert Data” button of Oxygen to get data from Meta Box field_ 
-
-![The dynamic data icon of Breakdance](https://i.imgur.com/iGBmY9y.png)
-_The dynamic data icon of Breakdance_
-
-![The dynamic content feature of Kadence](https://i.imgur.com/wFHIKG0.png)
-_The dynamic content feature of Kadence_
-
-3. There will be a field list. Choose the field name you want to get data from. It is usually in the Meta Box section. For example, if you use Bricks Builder, the interface will be like this:
-
-![Choose the field name you want to get data from](https://i.imgur.com/uCgnya8.png)
-
-For the real case of display field values using page builders, you can refer to the [Tutorials](https://docs.metabox.io/tutorials/builders/).
-
-### Method 3: Using code
-
-[Display field values with code](https://docs.metabox.io/displaying-fields-with-code/) is suitable for developers and in the case that you want to keep everything in your themes or plugins.
+:::
 
 ## Next steps
 
