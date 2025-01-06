@@ -14,63 +14,22 @@ While Meta Box also works with PHP 7.0 and older versions of WordPress, these ve
 
 ## Meta Box installation guide
 
-Depending on [three Meta Box versions](https://docs.metabox.io/introduction/#meta-box-overview), the installation steps will differ a little bit. Follow the instructions below for your selected version:
+Meta Box offers [three different versions](https://docs.metabox.io/introduction/#meta-box-overview), each with slightly different installation steps. Among them, **Meta Box Lite** stands out as the best starting point, offering a free version with essential features and a user-friendly interface.
 
-### Ver 1: Meta Box plugin + individual extensions
+Here's how to install it:
 
-#### Meta Box plugin
-
-Meta Box is available on [WordPress.org](https://wordpress.org/plugins/meta-box/). To install it, go to **Plugins** > **Add New Plugin** and search for **Meta Box**. Then, click the **Install Now** button.
-
-![Install meta box](https://i.imgur.com/ZwnLkg3.png)
-
-After that, click the **Activate** button to activate the plugin. So, you’ll see it in the dashboard like this:
-
-![The Meta Box in the admin dashboard](https://i.imgur.com/Bx4xst7.png)
-
-#### Individual extensions
-
-Meta Box extensions are also kinds of WordPress plugins. For all the extensions, you can view them one by one [here](https://metabox.io/plugins/). Once you've selected the extensions you want, you can download or purchase them, then install them by following these steps:
-
-* Download free extensions directly from [our website](https://metabox.io/plugins/) or log in to [My Account](https://metabox.io/my-account/) to access the premium extensions you’ve purchased.
-
-![Log in to My Account to access the premium extensions](https://i.imgur.com/PYBGYMy.png)
-
-* Go to **Plugins** > **Add New Plugin** > **Upload Plugin**, then upload the file and install it.
-
-![Upload the file and install](https://i.imgur.com/jxjYWsU.png)
-
-Once activated, you also see it in the dashboard.
-
-![Plugin in admin dashboard](https://i.imgur.com/HdvMXUi.png)
-
-### Ver 2: Meta Box Lite
-
-**Meta Box Lite** bundles up the **Meta Box** plugin and **all free extensions** into one package. The installation process is similar to installing any plugin.
-
-1. Download Meta Box Lite on our website.
+1. Go to our website, just fill in your email, and download it.
 2. Go to **Plugins** > **Add New Plugin** > **Upload Plugin**.
 3. Upload the downloaded file and click **Install Now**.
 
-Then, click **Activate** to start using Meta Box Lite. And you can see it in the dashboard as well.
+![Install Meta Box Lite](https://i.imgur.com/oXYJZtV.png)
 
-### Ver 3: Meta Box AIO
+Then, click **Activate** to start using Meta Box Lite. Now, you can see it in the admin dashboard.
 
-**Meta Box AIO** includes the **Meta Box** plugin and **all extensions (both free and paid)** in one package. The installation process is quite the same with installing a paid extension:
+![Meta Box Lite in the admin dashboard](https://i.imgur.com/epQY3XW.png)
 
-1. Log in to [My Account](https://metabox.io/my-account/) and download the Meta Box AIO package.
-2. Go to **Plugins** > **Add New Plugin** > **Upload Plugin**.
-3. Upload the downloaded file and click **Install Now**.
-
-After the upload finishes, click **Activate** to complete the installation.
-
-We have the **Meta Box AIO** package in the dashboard, and we have all extensions (both free and paid) in one place like this:
-
-![Meta Box AIO in admin dashboard](https://i.imgur.com/WRq4XB3.png)
-
-![all extensions both free and paid in one place](https://i.imgur.com/q3X7nOE.png)
-
-You can enable the desired extensions from the list.
+::: For advanced features, get the [Meta Box AIO](https://metabox.io/pricing/) package with all extensions (both free and paid), or install individual extensions as needed from [our website](https://metabox.io/plugins/).
+:::
 
 ## Next steps
 
