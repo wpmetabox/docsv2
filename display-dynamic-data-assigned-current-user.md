@@ -1,5 +1,5 @@
 ---
-title: Displaying dynamic data assigned for the current user
+title: Displaying personalized data for users
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -15,7 +15,7 @@ In this tutorial, we’ll achieve it with **Meta Box**. In the same way, we can 
 
 ## Video version
 
-<LiteYouTubeEmbed id='link'/>
+<LiteYouTubeEmbed id='WNkqYUOSoVw'/>
 
 ## Preparation
 
