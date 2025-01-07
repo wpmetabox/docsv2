@@ -44,7 +44,7 @@ After publishing, you’ll see the created custom post type in the admin dashboa
 
 ![The created custom post type in the admin dashboard](https://i.imgur.com/gYVqamO.png)
 
-## 2. Creating custom fields for the SalesReps
+## 2. Creating custom fields for the Sales Reps
 
 Instead of inputting all the information about each sales representative into the post content, we should use custom fields to store them. Then, we can style each one easier.
 
@@ -183,7 +183,7 @@ The `salesrep_related` variable is used to query only posts that are input to th
 
 This is to get the list of matching posts and save it to the `salesreps` variable.
 
-#### 4.1.2. Displaying SalesRep information
+#### 4.1.2. Displaying Sales Rep information
 
 These lines of code are used to display the Sales Rep’s information.
 
@@ -361,7 +361,7 @@ $id_salesrep = get_the_ID();
 
 This is to get the ID of the current post.
 
-#### 4.2.3. Displaying SalesRep information
+#### 4.2.3. Displaying Sales Rep information
 
 ```
 $html  .= '<div class="mb-container"> 
@@ -382,7 +382,7 @@ We also use IDs of the fields as we did before, and `salesrep` is the slug of th
 
 ![ID of the fields](https://i.imgur.com/TxRvxMy.png)
 
-####4.2.4 Creating a shortcode
+#### 4.2.4 Creating a shortcode
 
 Finally, create a shortcode to display the Sales Rep information anywhere when the user is logged in.
 
