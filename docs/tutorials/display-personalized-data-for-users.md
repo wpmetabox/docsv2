@@ -414,4 +414,3 @@ Now, on the frontend, let's see the final result! The Sales Rep looks great alre
 So, it works the same with the first method with MB Views. Now, just choose the one that feels better to you.
 
 If you’re interested in exploring more about relationships and dynamic content, check out this guide on [displaying related posts based on shared relationships with Meta Box](https://docs.metabox.io/tutorials/create-relationships-mb-views/).
-
