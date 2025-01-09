@@ -17,9 +17,9 @@ Custom post types are different types of content in WordPress. You should consid
 
 ## How to create a custom post type?
 
-Creating custom post types is done easily with the MB Custom Post Types & Custom Taxonomies extension. This extension is already bundled in the Meta Box Lite, Meta Box AIO, or you can install it for free from [WordPress.org](https://wordpress.org/plugins/mb-custom-post-type/).
+Creating custom post types is done easily with the [MB Custom Post Types & Custom Taxonomies](/extensions/mb-custom-post-type/) extension. This extension is already bundled in [Meta Box Lite](https://metabox.io/lite/), [Meta Box AIO](/extensions/meta-box-aio/), or you can install it for free from [WordPress.org](https://wordpress.org/plugins/mb-custom-post-type/).
 
-To create a new custom post type, go to **Meta Box** > **Post Types** > **New Post Type**:
+To create a new custom post type, go to **Meta Box** » **Post Types** » **New Post Type**:
 
 ![create a new custom post type](https://i.imgur.com/Z7h0zMP.png)
 

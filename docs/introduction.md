@@ -38,8 +38,8 @@ Learn more about [Meta Box philosophy](/philosophy/).
 
 Meta Box has 3 versions:
 
-* **Meta Box plugin**: the foundation and framework of all [extensions](https://docs.metabox.io/extensions/) and features. Then, you can add individual extensions (free or premium) to have advanced features.
-* **Meta Box Lite**: the UI-free version of Meta Box including the Meta Box plugin, Meta Box Builder extension (for the UI), and all the free extensions to create custom post types, custom taxonomies, custom fields, relationships.
-* **Meta Box AIO**: a special and comprehensive plugin containing the Meta Box plugin and all the extensions (both free and premium ones). Meta Box AIO allows you to install only one plugin and have everything from Meta Box, so you can have the plugin list short and clean.
+* **Meta Box**: the foundation and framework of all [extensions](https://docs.metabox.io/extensions/) and features. Then, you can add individual extensions (free or premium) to have advanced features.
+* **Meta Box Lite**: a single free UI version of Meta Box that includes the Meta Box plugin, [Meta Box Builder](/extensions/meta-box-builder/), and all the free extensions to create custom post types, custom taxonomies, custom fields, relationships.
+* **Meta Box AIO**: a single premium plugin that includes the Meta Box plugin and all the extensions (both free and premium ones). Meta Box AIO allows you to install only one plugin and have everything from Meta Box, so you can have the plugin list short and clean.
 
 Now you know about Meta Box, let's [start using it](/installation/)!

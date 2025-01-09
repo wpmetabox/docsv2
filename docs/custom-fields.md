@@ -15,7 +15,7 @@ Custom fields are a very important feature of WordPress and make WordPress a pow
 
 ## How to create custom fields?
 
-To create custom fields, you should use the **Meta Box Builder** extension to have an intuitive interface. This extension is already bundled in the Lite version of Meta Box so you can use it right away.
+To create custom fields, you should use the [**Meta Box Builder**](/extensions/meta-box-builder/) extension to have an intuitive interface. This extension is already bundled in [**Meta Box Lite**](https://metabox.io/lite/) so you can use it right away.
 
 Custom fields are organized in groups. Each group is displayed as a collapsible panel below the post editor.
 
@@ -23,7 +23,7 @@ Go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen t
 
 ![Adding custom fields to the group](https://i.imgur.com/jDaKY4R.png)
 
-Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. Meta Box provides [40+ field types](https://docs.metabox.io/fields/) for all of your data types. 
+Enter the field group title and then click the **+ Add Field** button and select a field type to add to the group. Meta Box provides [40+ field types](/fields/) for all of your data types.
 
 After that, a new field will appear in the field list. Clicking on the field title bar will open the field settings panel where you can edit settings for the field such as title or default value.
 
@@ -39,12 +39,10 @@ Now go to your post type and add a new post, you'll see the field group with cus
 
 ![editing a post with custom fields](https://i.imgur.com/TwDYnBQ.png)
 
-In the case that you don’t want to use Meta Box Lite, you have two ways to have Meta Box Builder:
+In the case that you don't want to use [Meta Box Lite](https://metabox.io/lite/), you have two ways to have Meta Box Builder:
 
-* Get Meta Box Builder individually. In this case, the Meta Box plugin is required to have a framework.
-* Purchase **Meta Box AIO** to have all extensions, including Meta Box Builder.
-
-For more advanced features which are not in Meta Box Lite, you can upgrade to [Meta Box Premium](https://metabox.io/pricing).
+* Get [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) individually. In this case, the Meta Box plugin is required to be installed.
+* Purchase a [premium plan](https://metabox.io/pricing/) to use **Meta Box AIO** that includes all extensions, including Meta Box Builder.
 
 :::info Do you know?
 
@@ -54,11 +52,11 @@ The technical term of field groups in WordPress is "meta box". You'll see them v
 
 :::tip For developers
 
-You can also [create custom fields with code](https://docs.metabox.io/creating-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
+You can also [create custom fields with code](/creating-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
 
 :::
 
-## Displaying field values
+## Displaying fields
 
 After having all the data for custom fields, it's time to show them on the front end.
 
@@ -66,11 +64,11 @@ We'll display the event details for the event post type that we created in the p
 
 ![Event page](https://i.imgur.com/rSPicJm.png)
 
-To do that, we'll use the [MB Views](https://docs.metabox.io/extensions/mb-views/) extension, which offers a powerful and flexible way to select and display fields.
+To do that, we'll use the [MB Views](/extensions/mb-views/) extension, which offers a powerful and flexible way to select and display fields.
 
 :::info Don't have a license?
 
-MB Views is a premium extension and is available for Premium licenses only. If you don't own the right license, please purchase one.
+MB Views is a premium extension and is available for [premium licenses](https://metabox.io/pricing/) only. If you don't own the right license, please purchase one.
 
 :::
 
@@ -124,11 +122,15 @@ Now go to the event page on the front end and you'll see the custom fields that 
 
 ![view event details on the front end](https://i.imgur.com/iOAEwBT.png)
 
-If you use a page builder to display the data, you can refer to the [Tutorials](https://docs.metabox.io/tutorials/builders/) for usage in real cases.
+:::info
+
+If you use a page builder to display the data, you can refer to the [tutorials](https://docs.metabox.io/tutorials/builders/) for usage in real cases.
+
+:::
 
 :::tip For developers
 
-You can also [display custom fields with code](https://docs.metabox.io/displaying-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
+You can also [display custom fields with code](/displaying-fields-with-code/), which is suitable if you want to keep everything in your themes or plugins.
 
 :::
 
