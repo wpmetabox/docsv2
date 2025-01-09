@@ -39,13 +39,13 @@ As most WordPress websites require custom post types, let's [learn how to create
 
 ## FAQ
 
-<FAQ question="Why don't I see an admin menu after installing Meta Box?">
+<FAQ question="What is included in Meta Box Lite and is it completely free?">
 
-Meta Box (the **free version only**) is created as a library to help WordPress users work with custom post types and custom fields easier. As a library, it doesn't have admin pages for configuration or settings. Instead of that, it provides an API that you can use to speed up the process of creating meta boxes and custom fields. Developers need [use code](/creating-fields-with-code/) to create custom fields.
+Yes, **Meta Box Lite** is 100% free. It includes the Meta Box framework, all free extensions, and the Meta Box Builder, giving you powerful tools to create and manage dynamic content at no cost.
 
-For normal users and beginners, we recommend using the [Online Generator](https://metabox.io/online-generator/) to build custom fields and generate the needed code to include into your themes or plugins.
+Additionally, developers can [use code](/creating-fields-with-code/) to create custom fields.
 
-**Important**: only the free version doesn't have UI, [premium users](https://metabox.io/pricing/) have powerful and friendly UI to create [custom post types](/custom-post-types/), [custom fields](/custom-fields/) and more.
+For normal users and beginners, you also can use the [Online Generator](https://metabox.io/online-generator/) to build custom fields and generate the needed code to include into your themes or plugins.
 
 See [our philosophy](/philosophy/) to understand more about Meta Box.
 </FAQ>
