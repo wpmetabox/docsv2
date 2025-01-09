@@ -14,25 +14,25 @@ While Meta Box also works with PHP 7.0 and older versions of WordPress, these ve
 
 ## Installing Meta Box
 
-Meta Box is [available on WordPress.org](https://wordpress.org/plugins/meta-box/). To install it, go to **Plugins &rarr; Add New** and search for **Meta Box**.
+Meta Box offers [three different versions](/introduction/#meta-box-overview), each with slightly different installation steps.
 
-![install meta box](https://i.imgur.com/vhlYMjJ.png)
+We recommend using [**Meta Box Lite**](https://metabox.io/lite/), a free version with essential features and a user-friendly interface.
 
-Then click the button **Install** to install it. After that, click the button **Activate** to activate the plugin.
+Here's how to install it:
 
-## Installing extensions
+1. Go to [our website](https://metabox.io/lite/), just fill in your email, and download it.
+2. Go to **Plugins** > **Add New Plugin** > **Upload Plugin**.
+3. Upload the downloaded file and click **Install Now**.
 
-Meta Box extensions are normal WordPress plugins, follow these steps to install them:
+![Install Meta Box Lite](https://i.imgur.com/INF4fIQ.png)
 
-- Go to [My Account](https://metabox.io/my-account/) and download the extensions you want to use.
-- Go to **Plugins**, click **Add new**, then click **Upload plugin**.
-- Choose the `.zip` file you downloaded and click **Install now**
-- After finishing the upload, click **Activate** to finish.
+Then, click **Activate** to start using Meta Box Lite. Now, you can see it in the admin dashboard.
 
-:::caution
+![Meta Box Lite in the admin dashboard](https://i.imgur.com/epQY3XW.png)
 
-Before installing extensions, make sure you installed and activated Meta Box, even if you use Meta Box AIO, MB Core, or solutions.
+:::info
 
+For advanced features, please buy a [premium plan](https://metabox.io/pricing/), and install the **Meta Box AIO** plugin with all extensions (both free and paid).
 :::
 
 ## Next steps
@@ -43,13 +43,12 @@ As most WordPress websites require custom post types, let's [learn how to create
 
 ## FAQ
 
-<FAQ question="Why don't I see an admin menu after installing Meta Box?">
+<FAQ question="What is included in Meta Box Lite and is it completely free?">
 
-Meta Box (the **free version only**) is created as a library to help WordPress users work with custom post types and custom fields easier. As a library, it doesn't have admin pages for configuration or settings. Instead of that, it provides an API that you can use to speed up the process of creating meta boxes and custom fields. Developers need [use code](/creating-fields-with-code/) to create custom fields.
+Yes, **Meta Box Lite** is 100% free. It includes Meta Box, [Meta Box Builder](/extensions/meta-box-builder/), and all free extensions, giving you powerful tools to create and manage dynamic content at no cost.
+</FAQ>
 
-For normal users and beginners, we recommend using the [Online Generator](https://metabox.io/online-generator/) to build custom fields and generate the needed code to include into your themes or plugins.
+<FAQ question="Do I need to install Meta Box to use Meta Box Lite?">
 
-**Important**: only the free version doesn't have UI, [premium users](https://metabox.io/pricing/) have powerful and friendly UI to create [custom post types](/custom-post-types/), [custom fields](/custom-fields/) and more.
-
-See [our philosophy](/philosophy/) to understand more about Meta Box.
+No, **Meta Box Lite** already includes Meta Box, so there is no need to install it additionally.
 </FAQ>

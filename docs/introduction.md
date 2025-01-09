@@ -36,10 +36,10 @@ Learn more about [Meta Box philosophy](/philosophy/).
 
 ## Meta Box overview
 
-Meta Box has 3 parts:
+Meta Box has 3 versions:
 
-- **Meta Box core plugin**, which is free and available on [wordpress.org](https://wordpress.org/plugins/meta-box/). It's the foundation of all features and is always required (activated).
-- **Extensions**: provide extra features. Extensions are like modules and can be used separately. All extensions are bundled into a special plugin Meta Box AIO or MB Core (depending on [your purchase plan](https://metabox.io/pricing/)), which allows you to install only one plugin and have all features. You can enable/disable extensions in Meta Box AIO/MB Core if you want. Docs for each extension can be found in the [Extensions](/extensions/) menu.
-- **Solutions**: ready-to-use plugins for real use cases. They contain needed extensions for specific purposes and custom code to make them do the task. As they are similar to extensions, we put their docs under [Extensions](/extensions/) menu.
+* **Meta Box**: the foundation and framework of all [extensions](https://docs.metabox.io/extensions/) and features. Then, you can add individual extensions (free or premium) to have advanced features.
+* **Meta Box Lite**: a single free UI version of Meta Box that includes the Meta Box plugin, [Meta Box Builder](/extensions/meta-box-builder/), and all the free extensions to create custom post types, custom taxonomies, custom fields, relationships.
+* **Meta Box AIO**: a single premium plugin that includes the Meta Box plugin and all the extensions (both free and premium ones). Meta Box AIO allows you to install only one plugin and have everything from Meta Box, so you can have the plugin list short and clean.
 
 Now you know about Meta Box, let's [start using it](/installation/)!
