@@ -18,7 +18,7 @@ Meta Box offers [three different versions](https://docs.metabox.io/introduction/
 
 Here's how to install it:
 
-1. Go to our website, just fill in your email, and download it.
+1. Go to [our website](https://metabox.io/lite/), just fill in your email, and download it.
 2. Go to **Plugins** > **Add New Plugin** > **Upload Plugin**.
 3. Upload the downloaded file and click **Install Now**.
 
