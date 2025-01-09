@@ -49,3 +49,8 @@ For normal users and beginners, you also can use the [Online Generator](https://
 
 See [our philosophy](/philosophy/) to understand more about Meta Box.
 </FAQ>
+
+<FAQ question="Do I need to install the Meta Box plugin to use Meta Box Lite?">
+  
+No, **Meta Box Lite** already includes the Meta Box plugin, so there is no need to install it additionally.
+</FAQ>
