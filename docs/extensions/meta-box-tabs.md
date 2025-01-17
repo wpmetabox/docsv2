@@ -119,6 +119,7 @@ Parameter|Description
 `tabs`|Array of tabs. See below for details.
 `tab_style`|The tab style: `default` (like tabs for Categories), `box` (like tabs for Visual and Text modes of the main editor) or `left` (like tabs in the Help screen)
 `tab_default_active`|Default active tab ID.
+`tab_remember`|Remember the last active tab when saving the post. Boolean. Default is `false`.
 
 The list of tabs is defined in the `tabs` parameter. A tab can have or doesn't have an icon and can be set like this:
 
