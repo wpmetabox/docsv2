@@ -13,9 +13,9 @@ You can also combine conditions. It works not only for meta boxes or custom fiel
 
 ## Getting started
 
-### With Meta Box Builder
+### With UI
 
-If you are using [Meta Box Builder](/extensions/meta-box-builder/) extension, you can set conditional logic for a specific field by going to the tab **Advanced** and add rules in the **Conditional Logic** section:
+If you are using [Meta Box Builder](/extensions/meta-box-builder/) (which is included in [Meta Box Lite](https://metabox.io/lite/) or [Meta Box AIO](https://metabox.io/pricing/)), you can set conditional logic for a specific field by going to the tab **Advanced** and add rules in the **Conditional Logic** section:
 
 ![conditional logic in Meta Box Builder](https://i.imgur.com/xOPcH0N.png)
 
@@ -479,6 +479,26 @@ rwmb.runConditionalLogic( $scope );
 ```
 
 Where `.scope` is a selector of the wrapper element, which contains all the fields you want to apply conditional logic to. It might be a field group, or any `div`, or even the whole page. When running this code, the conditional logic will be applied to all fields inside this wrapper element. In other words, some fields will be visible or hidden based on the current values of other fields.
+
+## Notes
+
+### Cloneable groups
+
+It's important to note that, when you have a **cloneable group**, then all the rules are applied **within** the group clones only. It won't work if the rule refers to a field outside of the group.
+
+In other words, both the dependency and dependant of the rules must be sub-fields of the group.
+
+### Chained hidden fields
+
+Another important rule is that **if a field is hidden, then all fields depend on it will be hidden** regardless of their values.
+
+For example, if you have 3 fields A, B, C and set the rule as follow:
+
+```
+IF A = 1 or B = 1 THEN show C
+```
+
+Then if A or B is hidden, the C is always hidden, regardless values of A and B.
 
 ## Known issues
 
