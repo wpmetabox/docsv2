@@ -77,7 +77,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![rankmath](/extensions/rankmath.png) <span className="thumb_text">MB Rank Math</span>](/extensions/mb-rank-math/)
 
-<!-- [![yoast seo](/extensions/yoastseo.png) <span className="thumb_text">Meta Box for Yoast SEO</span>](/extensions/meta-box-yoat-seo/) -->
+<!-- [![yoast seo](/extensions/yoastseo.png) <span className="thumb_text">MB Yoast SEO Integration</span>](/extensions/meta-box-yoat-seo/) -->
 
 <!-- [![facetwp](/extensions/facetwp.png) <span className="thumb_text">Meta Box - FacetWP Integrator</span>](/extensions/meta-box-facetwp-integrator/) -->
 

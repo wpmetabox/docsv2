@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 We will use custom fields to add extra information for the posts / products. It also can be indexed by search engines along with the posts/products content, so we should add them to the content analysis of Yoast SEO to know if it is good for SEO or not.
 
-We’ll use the [Meta Box for Yoast SEO](https://metabox.io/plugins/meta-box-yoast-seo/) extension from Meta Box. It supports not only the Text, Textarea, and Wysiwyg fields from Meta Box but also cloneable fields (or repeated fields).
+We’ll use the [MB Yoast SEO Integration](https://metabox.io/plugins/meta-box-yoast-seo/) extension from Meta Box. It supports not only the Text, Textarea, and Wysiwyg fields from Meta Box but also cloneable fields (or repeated fields).
 
 ## Video version
 
@@ -20,7 +20,7 @@ Make sure that you installed and activated both the **Meta Box** and **Yoast SEO
 You also need these extensions of Meta Box:
 
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
-* [Meta Box for Yoast SEO](https://metabox.io/plugins/meta-box-yoast-seo/): to add content of custom fields to Yoast SEO Content Analysis to have a better/correct SEO score.
+* [MB Yoast SEO Integration](https://metabox.io/plugins/meta-box-yoast-seo/): to add content of custom fields to Yoast SEO Content Analysis to have a better/correct SEO score.
 
 Now, when you go to a post or page, the content in the custom fields hasn’t been added in the SEO analysis yet. To analyze the content in the custom fields, follow this tutorial.
 

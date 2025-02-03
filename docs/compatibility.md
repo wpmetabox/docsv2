@@ -33,7 +33,7 @@ Meta Box has official support from these plugins:
 
 - [Slim SEO](https://wpslimseo.com/)
 - Rank Math (via [MB Rank Math](https://metabox.io/plugins/mb-rank-math/) extension)
-- Yoast SEO (via [Meta Box for Yoast SEO](https://metabox.io/plugins/meta-box-yoast-seo/) extension)
+- Yoast SEO (via [MB Yoast SEO Integration](https://metabox.io/plugins/meta-box-yoast-seo/) extension)
 
 ### Multilingual plugins
 
