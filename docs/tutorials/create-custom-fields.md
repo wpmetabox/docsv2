@@ -148,7 +148,7 @@ Each row to display the fields will be divided into 12 grids. If you want the fi
 
 ![You can change the number of columns in the box](https://i.imgur.com/swehWP5.png)
 
-If you use the **Meta Box Tooltip** extension, you will have the **Tooltip** setting.
+If you use the **MB Tooltip** extension, you will have the **Tooltip** setting.
 
 ![Tooltip setting](https://i.imgur.com/akiR2vj.png)
 

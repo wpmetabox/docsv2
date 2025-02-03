@@ -1,8 +1,8 @@
 ---
-title: Meta Box Tooltip
+title: MB Tooltip
 ---
 
-Meta Box Tooltip helps you to add help information via tooltips.
+MB Tooltip helps you to add help information via tooltips.
 
 ![meta box tooltip screenshot](https://i0.wp.com/metabox.io/wp-content/uploads/2014/10/meta-box-tooltip.png)
 
@@ -30,7 +30,7 @@ This code below adds tooltip to 3 fields:
 add_filter( 'rwmb_meta_boxes', 'meta_box_tooltip_demo_register' );
 function meta_box_tooltip_demo_register( $meta_boxes ) {
     $meta_boxes[] = array(
-        'title'  => 'Meta Box Tooltip Demo',
+        'title'  => 'MB Tooltip Demo',
         'fields' => array(
             array(
                 'name'    => 'Default',

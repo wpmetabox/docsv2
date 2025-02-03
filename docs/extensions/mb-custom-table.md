@@ -430,7 +430,7 @@ This feature currently works with the following extensions:
 - Meta Box Group
 - Meta Box Columns
 - Meta Box Tabs
-- Meta Box Tooltip
+- MB Tooltip
 - Meta Box Geolocation
 - Meta Box Text Limiter
 - Meta Box Conditional Logic
