@@ -432,7 +432,7 @@ This feature currently works with the following extensions:
 - Meta Box Tabs
 - MB Tooltip
 - Meta Box Geolocation
-- Meta Box Text Limiter
+- MB Text Limiter
 - Meta Box Conditional Logic
 - Meta Box Show Hide
 

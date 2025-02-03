@@ -29,7 +29,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![show hide](/extensions/show-hide.png) <span className="thumb_text">Meta Box Show Hide</span>](/extensions/meta-box-show-hide/)
 
-[![text limiter](/extensions/text-limiter.png) <span className="thumb_text">Meta Box Text Limiter</span>](/extensions/meta-box-text-limiter/)
+[![text limiter](/extensions/text-limiter.png) <span className="thumb_text">MB Text Limiter</span>](/extensions/meta-box-text-limiter/)
 
 [![template](/extensions/template.png) <span className="thumb_text">Meta Box Template</span>](/extensions/meta-box-template/)
 

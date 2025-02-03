@@ -1,8 +1,8 @@
 ---
-title: Meta Box Text Limiter
+title: MB Text Limiter
 ---
 
-Meta Box Text Limiter helps you to limit the number of characters or words entered for text and textarea fields.
+MB Text Limiter helps you to limit the number of characters or words entered for text and textarea fields.
 
 ## Settings
 
