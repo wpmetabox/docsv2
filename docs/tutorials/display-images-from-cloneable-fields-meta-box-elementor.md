@@ -22,7 +22,7 @@ Here are some tools we need:
 * **[Meta Box](https://metabox.io)**: to have the framework for creating custom fields. It’s free, and you can download it directly from [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/);
 * **[Meta Box Settings Page](https://metabox.io/plugins/mb-settings-page/)**: to create settings pages;
 * **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an intuitive UI to create custom fields in the backend to save image and other information if any;
-* **[Meta Box Group](https://metabox.io/plugins/meta-box-group/)**: to organize custom fields into cloneable groups, where we input images;
+* **[MB Group](https://metabox.io/plugins/meta-box-group/)**: to organize custom fields into cloneable groups, where we input images;
 * **[MB Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/)**: to connect and display custom fields created by Meta Box plugin in the Elementor's dynamic tags.
 
 They’re all in the **Meta Box AIO**. If you haven’t had it, you can download and install each one individually.
@@ -95,9 +95,9 @@ Now, let’s fill in the information in the fields and move to the next step.
 
 ## 3. Creating a skin
 
-Go to **Elementor Theme Builder > Meta Box Group Skin > Add New**.
+Go to **Elementor Theme Builder > MB Group Skin > Add New**.
 
-![Go to Elementor Theme Builder > choose Meta Box Group Skin > Add new skin](https://i.imgur.com/0FTgqlB.png)
+![Go to Elementor Theme Builder > choose MB Group Skin > Add new skin](https://i.imgur.com/0FTgqlB.png)
 
 Set the settings for the skin as you want. Then, add the **Image** element to display the brand logo.
 
@@ -133,9 +133,9 @@ First, I add a widget to the homepage to create a section that contains brand in
 
 ![Add a widget to the homepage to create a section that contains brand information then add a Heading to style](https://i.imgur.com/yExxtLm.gif)
 
-Next, to display the images of logos, add the **Meta Box Group** element.
+Next, to display the images of logos, add the **MB Group** element.
 
-![Add the Meta Box Group element to display the brands’ logos](https://i.imgur.com/xfEddmE.png)
+![Add the MB Group element to display the brands’ logos](https://i.imgur.com/xfEddmE.png)
 
 Set **Object Type** as **Settings page** because we’ve just input the image into fields in a settings page.
 

@@ -4,7 +4,7 @@ title: MB Frontend Submission
 
 import FAQ from '@site/src/components/FAQ';
 
-MB Frontend Submission helps you create front-end forms for users to submit data to your website. It allows you to submit data for posts like post fields (title, content, etc.) and also custom fields created by Meta Box. It also support to custom table models and works with all extensions like [Meta Box Group](/extensions/meta-box-group/) or [MB Conditional Logic](/extensions/meta-box-conditional-logic/).
+MB Frontend Submission helps you create front-end forms for users to submit data to your website. It allows you to submit data for posts like post fields (title, content, etc.) and also custom fields created by Meta Box. It also support to custom table models and works with all extensions like [MB Group](/extensions/meta-box-group/) or [MB Conditional Logic](/extensions/meta-box-conditional-logic/).
 
 ![submission form](https://i.imgur.com/jfXHqSc.png)
 

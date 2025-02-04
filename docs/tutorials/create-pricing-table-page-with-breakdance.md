@@ -26,7 +26,7 @@ So, these are some tools we need in this practice:
 
 * The[ Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework to create custom fields. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields visually;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into the groups for plans.
+* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into the groups for plans.
 
 Last, **Breakdance** to build the pricing table page.
 

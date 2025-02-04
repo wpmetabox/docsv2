@@ -39,7 +39,7 @@ We should ensure have all of the following tools:
 * [MB Views](https://metabox.io/plugins/mb-views/): to create the views for rendering the blocks;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have UI on the backend to register and configure the block visually.
 
-Besides, you can install other extensions to have advanced features for your block and custom fields such as [Meta Box Group](https://metabox.io/plugins/meta-box-group/), [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), etc.
+Besides, you can install other extensions to have advanced features for your block and custom fields such as [MB Group](https://metabox.io/plugins/meta-box-group/), [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), etc.
 
 You can install them one by one individually or use **Meta Box AIO** to have them all.
 

@@ -23,7 +23,7 @@ These are some tools we need for this practice:
 
 * [The Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework to create custom fields as well as the block for the Q&As. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Blocks](https://metabox.io/plugins/mb-blocks/): to allow you to create custom Gutenberg blocks. With the help of this extension, we can use PHP or the UI provided by [MB Builder](https://metabox.io/plugins/meta-box-builder/) to create a block. They bring the same result. However, we recommend using MB Builder to limit the use of complex code.
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields for questions and answers into a group, so they will be in pairs.
+* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields for questions and answers into a group, so they will be in pairs.
 
 ## 1. Creating a new page
 

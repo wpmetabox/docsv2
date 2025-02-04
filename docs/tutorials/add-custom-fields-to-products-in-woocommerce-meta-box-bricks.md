@@ -2,7 +2,7 @@
 title: Adding custom fields to products in WooCommerce - Meta Box + Bricks
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed'; 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 WooCommerce is a popular platform for eCommerce in WordPress which provides some information saved in the product data section. But, you still may need some things further that it does not provide, such as custom fields for extra information about products. Let’s dive in to explore how to display them with **Meta Box** and **Bricks**.
@@ -28,7 +28,7 @@ For custom fields, we need the [Meta Box core plugin](https://wordpress.org/plug
 We also need some advanced features from Meta Box which are from some of its extensions:
 
 * [Meta Box Builde](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the fields together for better structure. It is optional;
+* [MB Group](https://metabox.io/plugins/meta-box-group/): to group the fields together for better structure. It is optional;
 * **Bricks** to help build the page.
 
 ## 1. Creating custom fields
@@ -135,7 +135,7 @@ Moreover, Bricks also has a dedicated element for a popular section that display
 
 ![Bricks also has a dedicated element for a popular section](https://i.imgur.com/6KARt3B.png)
 
-Add **Heading** element for the related products. 
+Add **Heading** element for the related products.
 
 ![Add Heading element for the related products](https://i.imgur.com/qKMnyRL.png)
 

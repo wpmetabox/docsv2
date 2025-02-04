@@ -106,11 +106,11 @@ Then, you can see all the created fields in the post editor.
 
 To style the menus later, you should create a skin to display the dishes information.
 
-Go to **Templates > Theme Builder**, add a new skin in the type of **Meta Box Group Skin**.
+Go to **Templates > Theme Builder**, add a new skin in the type of **MB Group Skin**.
 
 ![Create a skin](https://i.imgur.com/zaHjbZ7.png)
 
-![Go to Meta Box Group Skin then Add New](https://i.imgur.com/AsSMDrN.png)
+![Go to MB Group Skin then Add New](https://i.imgur.com/AsSMDrN.png)
 
 Set the settings for the skin as you want and remember to choose a post for preview. Then, add the **Heading** element for the name of the dish.
 
@@ -148,7 +148,7 @@ Back to the **Theme Builder > Single Post** to create a new template for post.
 
 Similar to the skin, remember to set the preview for this template.
 
-Find and add the **Meta Box Group** element to the template.
+Find and add the **MB Group** element to the template.
 
 ![Add Meta Box group element](https://i.imgur.com/FScgkh5.png)
 

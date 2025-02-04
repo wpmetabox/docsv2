@@ -14,7 +14,7 @@ In addition to using the <a href="https://metabox.io/">Meta Box</a>, make sure y
 
 ![Enable the necessary extentions](https://i.imgur.com/Ym7KUMY.png)
 
-Besides these above plugins, remember to install all the Meta Box extensions that correspond to the migrated features. For example, if you have fields in a group created by ACF, you have to enable **Meta Box Group** to migrate the group field data. Or, in ACF, when you set a location to display a field group in taxonomy, you have to activate the **MB Term Meta** extension in Meta Box.
+Besides these above plugins, remember to install all the Meta Box extensions that correspond to the migrated features. For example, if you have fields in a group created by ACF, you have to enable **MB Group** to migrate the group field data. Or, in ACF, when you set a location to display a field group in taxonomy, you have to activate the **MB Term Meta** extension in Meta Box.
 
 ## 1. Checking and backing up the data
 
@@ -42,7 +42,7 @@ As I said before, we need to install extensions that correspond to the features 
 
 In this case, similar to all the above features in **ACF**, I will use these extensions of Meta Box:
 
-* **Meta Box Group**: to have a group field corresponding to Group + Repeater in ACF
+* **MB Group**: to have a group field corresponding to Group + Repeater in ACF
 * **MB Conditional Logic**: to have the conditional logic feature.
 
 ![Install extensions](https://i.imgur.com/0DtTi2R.png)

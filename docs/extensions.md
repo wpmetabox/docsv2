@@ -39,7 +39,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <div className="thumbs color-green">
 
-[![group](/extensions/group.png) <span className="thumb_text">Meta Box Group</span>](/extensions/meta-box-group/)
+[![group](/extensions/group.png) <span className="thumb_text">MB Group</span>](/extensions/meta-box-group/)
 
 [![frontend submission](/extensions/frontend-submission.png) <span className="thumb_text">MB Frontend Submission</span>](/extensions/mb-frontend-submission/)
 

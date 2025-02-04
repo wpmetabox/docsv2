@@ -31,7 +31,7 @@ Sometimes you want to store some extra information of users or taxonomies in cus
 - **WPML Multilingual CMS** (means WPML core): to create and manage multilingual websites on the WordPress platform easily. It helps translate the basic content of your WordPress such as posts, pages, menus, and notifications;
 - **WPML String Translation**: to translate text strings from your theme and plugins on your WordPress, as well as special content in posts, pages, taxonomies, and taglines.
 
-Also, you may want to use other extensions to have the appropriate structure of the custom fields such as [MB Tabs](https://metabox.io/plugins/meta-box-tabs/), [Meta Box Group](https://metabox.io/plugins/meta-box-group/), and [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/).
+Also, you may want to use other extensions to have the appropriate structure of the custom fields such as [MB Tabs](https://metabox.io/plugins/meta-box-tabs/), [MB Group](https://metabox.io/plugins/meta-box-group/), and [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/).
 
 Let’s start now!
 

@@ -25,7 +25,7 @@ Besides, we’ll use some Meta Box extensions for more advanced features, as fol
 
 * [MB Divi Integrator](https://metabox.io/plugins/mb-divi-integrator/): helps you use Divi to get data from custom fields created with Meta Box more easily;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into pairs for questions and answers.
+* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into pairs for questions and answers.
 
 Finally, we need **Divi** to build the page.
 

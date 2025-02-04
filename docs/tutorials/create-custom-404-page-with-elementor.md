@@ -27,7 +27,7 @@ Therefore, in this practice, we will use the following tools:
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input the 404 page’s information;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get data from Meta Box’s custom fields, using dynamic tags of Elementor;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to organize custom fields into the group. In this case, they are the labels and URLs of the buttons;
+* [MB Group](https://metabox.io/plugins/meta-box-group/) (optional): to organize custom fields into the group. In this case, they are the labels and URLs of the buttons;
 * **Elementor** and its pro version to build the page.
 
 Now, let’s start!
@@ -98,9 +98,9 @@ Go to **Templates** > **Theme Builder**.
 
 ![Go to Templates > Theme Builder](https://i.imgur.com/ZRL5nTH.png)
 
-There will be the **Meta Box Group Skin** menu. Click on it and add a new skin.
+There will be the **MB Group Skin** menu. Click on it and add a new skin.
 
-![Click on the Meta Box Group Skin and add new skin](https://i.imgur.com/HcJkrAl.png)
+![Click on the MB Group Skin and add new skin](https://i.imgur.com/HcJkrAl.png)
 
 In the **Preview Settings** section, choose **404**.
 
@@ -170,9 +170,9 @@ Also use the **Dynamic Tags** to choose the field to get the content.
 
 ![Use the Dynamic Tags to choose the field to get the content](https://i.imgur.com/18gfHMZ.png)
 
-Next, for the buttons, we’ve had a skin for it, so look for the **Meta Box Group** element.
+Next, for the buttons, we’ve had a skin for it, so look for the **MB Group** element.
 
-![Add the Meta Box Group element for the buttons](https://i.imgur.com/7sRfaLt.png)
+![Add the MB Group element for the buttons](https://i.imgur.com/7sRfaLt.png)
 
 Since the data is from a settings page, set the **Object Type** as **Settings page**.
 

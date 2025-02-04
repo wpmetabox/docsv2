@@ -25,7 +25,7 @@ For this practice, we need these tools:
 * [Meta Box](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom fields;
 * [Meta Box Settings Page](https://metabox.io/plugins/mb-settings-page/): to create settings pages to input images;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for saving the brand information;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into cloneable groups, where we input images;
+* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into cloneable groups, where we input images;
 * **Bricks**: to build the page.
 
 ## 1. Creating a settings page

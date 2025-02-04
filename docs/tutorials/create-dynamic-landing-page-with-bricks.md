@@ -34,7 +34,7 @@ We need the following tools for this practice:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom fields. Itâ€™s free, and available on [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields easily;
 * [MB Testimonials](https://metabox.io/plugins/mb-testimonials/): a ready-to-use solution from Meta Box that helps to create a testimonial section with pre-built layouts;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) and [MB Tabs](https://metabox.io/plugins/meta-box-tabs/) (optional): to organize custom fields into groups or tabs with a clearer structure;
+* [MB Group](https://metabox.io/plugins/meta-box-group/) and [MB Tabs](https://metabox.io/plugins/meta-box-tabs/) (optional): to organize custom fields into groups or tabs with a clearer structure;
 * **Bricks**: to build the page.
 
 ## 1. Creating a new page
@@ -51,7 +51,7 @@ I leave it blank since all the content will be put in the custom fields that Iâ€
 
 We will create custom fields for every element on the page and organize them in groups and tabs based on sections on the page.
 
-![Organize custom fields in groups and tabs based on sections on the page thanks to Meta Box Group and MB Tabs](https://i.imgur.com/vQSKmeK.png)
+![Organize custom fields in groups and tabs based on sections on the page thanks to MB Group and MB Tabs](https://i.imgur.com/vQSKmeK.png)
 
 For some kinds of content, you may use cloneable fields or cloneable groups.
 

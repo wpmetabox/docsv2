@@ -21,7 +21,7 @@ In addition to using [Meta Box](https://metabox.io), make sure you already have 
 
 * **[MB Settings Page](https://metabox.io/plugins/mb-settings-page/)**: it helps you to create settings pages, we’ll need a settings page to place the custom fields into.
 * **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: It provides a UI to create custom fields.
-* **[Meta Box Group](https://metabox.io/plugins/meta-box-group/)**: this extension helps to organize custom fields into cloneable groups, where we input images.
+* **[MB Group](https://metabox.io/plugins/meta-box-group/)**: this extension helps to organize custom fields into cloneable groups, where we input images.
 
 You can install these extensions individually or use **Meta Box AIO** to have them all in one place.
 

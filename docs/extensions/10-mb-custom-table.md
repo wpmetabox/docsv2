@@ -427,7 +427,7 @@ $status = rwmb_meta( 'status', [
 This feature currently works with the following extensions:
 
 - MB Admin Columns
-- Meta Box Group
+- MB Group
 - MB Columns
 - MB Tabs
 - MB Tooltip

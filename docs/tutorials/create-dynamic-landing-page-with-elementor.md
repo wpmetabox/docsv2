@@ -26,7 +26,7 @@ We need the following tools for this practice:
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields efficiently;
 * [MB Testimonials](https://metabox.io/plugins/mb-testimonials/): a ready-to-use solution from Meta Box that helps to create a testimonial section with pre-built layouts;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them on the page easily;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) and [MB Tabs](https://metabox.io/plugins/meta-box-tabs/) (optional): to organize custom fields into groups or tabs with a clearer structure;
+* [MB Group](https://metabox.io/plugins/meta-box-group/) and [MB Tabs](https://metabox.io/plugins/meta-box-tabs/) (optional): to organize custom fields into groups or tabs with a clearer structure;
 * Elementor and Elementor Pro on your site to build the page.
 
 Let’s start now!
@@ -43,7 +43,7 @@ I leave it blank since all the content will be put in the custom fields that I�
 
 We will create custom fields for every element on the page and organize them in groups and tabs based on sections on the page.
 
-![organize custom fields in groups and tabs based on sections on the page thanks to Meta Box Group and MB Tabs](https://i.imgur.com/fBQoksC.png)
+![organize custom fields in groups and tabs based on sections on the page thanks to MB Group and MB Tabs](https://i.imgur.com/fBQoksC.png)
 
 For some kind of content, you may use cloneable fields or cloneable groups.
 
@@ -151,9 +151,9 @@ Go to **Templates** > **Theme Builder**.
 
 ![Go to Templates > Theme Builder to create skin for groups](https://i.imgur.com/PFVzdlO.png)
 
-There will be the **Meta Box Group Skin** menu. Click on it and add a new skin.
+There will be the **MB Group Skin** menu. Click on it and add a new skin.
 
-![Click on the Meta Box Group Skin menu and add a new skin.](https://i.imgur.com/iB1DIa5.png)
+![Click on the MB Group Skin menu and add a new skin.](https://i.imgur.com/iB1DIa5.png)
 
 In the **Preview Settings** section, select the **Page** and find out the name of your page.
 
@@ -217,9 +217,9 @@ After that, create another skin for the group that covers it. Just add elements 
 
 ![create another skin for the group that covers it. Just add elements as usual for other content in the group](https://i.imgur.com/PDjubZa.png)
 
-For content from the subgroup, add the **Meta Box Group** element.
+For content from the subgroup, add the **MB Group** element.
 
-![For content from the subgroup, add the Meta Box Group element](https://i.imgur.com/rVyVAW4.png)
+![For content from the subgroup, add the MB Group element](https://i.imgur.com/rVyVAW4.png)
 
 Choose the name of the subgroup. And set the skin as the one we’ve just created.
 
@@ -267,9 +267,9 @@ Then use Dynamic Tags to get data from the corresponding custom field.
 
 ### 5.2. Displaying content from the groups
 
-For the second column, since it's a menu from a group, and we’ve created a skin in the previous step, just look for the **Meta Box Group** element.
+For the second column, since it's a menu from a group, and we’ve created a skin in the previous step, just look for the **MB Group** element.
 
-![For the second column, since it's a menu from a group, and we’ve created a skin in the previous step, just look for the Meta Box Group element.](https://i.imgur.com/4mby82t.png)
+![For the second column, since it's a menu from a group, and we’ve created a skin in the previous step, just look for the MB Group element.](https://i.imgur.com/4mby82t.png)
 
 Set the name of the group as the one we created for the menu. And choose the corresponding skin. Then, you will see the menu display with all the items.
 
@@ -278,7 +278,7 @@ Set the name of the group as the one we created for the menu. And choose the cor
 So, we have a rule about getting data from the custom fields.
 
 * Firstly, for the **content from the stand-alone field**, just **add a corresponding element**, then **use Dynamic Tags to get data** from the wanted field.
-* Secondly, for the **content from the groups**, we had **skin** for each group. So, add the **Meta Box Group** element, set the name of the group that we want to get data from, and choose the corresponding skin.
+* Secondly, for the **content from the groups**, we had **skin** for each group. So, add the **MB Group** element, set the name of the group that we want to get data from, and choose the corresponding skin.
 
 Please be aware that we should follow this rule through all of these steps to get full content from custom fields.
 

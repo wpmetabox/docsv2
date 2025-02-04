@@ -21,7 +21,7 @@ To have advanced features, we need some of its extensions:
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to easily create custom fields to saved extra information about the student information;
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create editorial forms so users can submit blog posts on the frontend;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template to display the admission form;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): (optional) to group the fields;
+* [MB Group](https://metabox.io/plugins/meta-box-group/): (optional) to group the fields;
 * [MB Columns](https://metabox.io/plugins/meta-box-columns/): (optional) to divide and display the fields into columns with maximum 12 grids;
 * [MB Geolocation](https://metabox.io/plugins/meta-box-geolocation/): (optional) to automatically populates location data into the fields with the power of Google Maps/Open Street Maps Geolocation API;
 * [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): (optional) to create rules to control the display of the fields.

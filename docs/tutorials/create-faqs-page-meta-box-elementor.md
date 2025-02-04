@@ -20,7 +20,7 @@ This is the example page:
 We have a FAQs page that needs to have custom fields for saving the questions and corresponding answers for it. So we need these tools to do it:
 
 * [Meta Box](https://metabox.io) to have the framework for creating custom fields. It’s free, and you can download it directly from wordpress.org.
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into robust and intensely user-friendly groups;
+* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into robust and intensely user-friendly groups;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * [MB Include Exclude](https://metabox.io/plugins/meta-box-include-exclude/): to add more rules on where to display the field group on the FAQs page;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display data from custom fields created by Meta Box plugin in the Elementor's dynamic tags;
@@ -66,7 +66,7 @@ Then, you can easily see all the fields in the page editor. Just fill in the Q&A
 
 If you don’t use a cloneable field, you can get the data as usual, all of them will be displayed with the same style. Here, I used a cloneable field and was willing to have a different style for the questions and answers. So, I’ll create a skin to do it easily.
 
-Go to **Templates > Theme Builder > Meta Box Group Skin > Add New** to create a new skin.
+Go to **Templates > Theme Builder > MB Group Skin > Add New** to create a new skin.
 
 ![Create a skin in Template from the Menu Dashboard](https://i.imgur.com/UGJOh3h.png)
 
@@ -106,9 +106,9 @@ Go to **Pages** > edit the FAQs page with Elementor.
 
 ![Edit the FAQs page with Elementor](https://i.imgur.com/w57xWhG.png)
 
-Since all the information of the Q&A is saved in a cloneable group with subfields, add the **Meta Box Group** element to get the data from that group.
+Since all the information of the Q&A is saved in a cloneable group with subfields, add the **MB Group** element to get the data from that group.
 
-![Add the Meta Box Group element to get the data](https://i.imgur.com/6BXDc6m.png)
+![Add the MB Group element to get the data](https://i.imgur.com/6BXDc6m.png)
 
 Then, there’ll be some data displayed in the preview. However, it may not be the information correctly as you want. So, change the settings in the left sidebar to the needed ones as follows.
 

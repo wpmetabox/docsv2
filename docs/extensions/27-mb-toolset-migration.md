@@ -68,7 +68,7 @@ Most Toolset field types work well with Meta Box, such as text, radio, select, e
 1. **Convert meta keys** in the database. Toolset sets meta keys for fields with the format `wpcf-{$field_id}`. The plugin will change the meta key to just `$field_id` for simplicity.
 2. For **media fields**, Toolset stores URLs in the database. We'll change them to IDs.
 2. For **fields that have multiple values** such as checkbox list, Toolset saves their values as serialized arrays. We'll migrate them multiple rows in the database (similar to what `add_post_meta` does with the last parameter `false`).
-3. For **repeatable groups**, Toolset saves values of each sub-fields in a row in the database (in a complicated way). We'll migrate them into groups (which requires [Meta Box Group](/extensions/meta-box-group/)).
+3. For **repeatable groups**, Toolset saves values of each sub-fields in a row in the database (in a complicated way). We'll migrate them into groups (which requires [MB Group](/extensions/meta-box-group/)).
 
 :::info Field backup
 

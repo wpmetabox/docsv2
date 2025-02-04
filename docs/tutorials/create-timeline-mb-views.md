@@ -24,7 +24,7 @@ Let's take a look at the tools we'll need for this practice.
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to visually create custom fields on a UI in the backend;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the timeline page;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/) (optional): to create a custom post type if you do not want to use the blog posts for the posts we show in the timeline;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to group the fields together for better organization.
+* [MB Group](https://metabox.io/plugins/meta-box-group/) (optional): to group the fields together for better organization.
 
 Make sure these extensions are enabled before we start.
 

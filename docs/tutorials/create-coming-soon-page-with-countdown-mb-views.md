@@ -26,7 +26,7 @@ Let’s look for the detailed list of tools we need for this practice.
 * [MB Views](https://metabox.io/plugins/mb-views/): helps to create a template for displaying the coming soon page’s content;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually.
 
-Besides, you can make the most of some other extensions to have your own field structure that fits your page’s content. They may be [Meta Box Tab](https://metabox.io/plugins/meta-box-tabs/), [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), or [Meta Box Group](https://metabox.io/plugins/meta-box-group/), and so on. However, they are just optional.
+Besides, you can make the most of some other extensions to have your own field structure that fits your page’s content. They may be [Meta Box Tab](https://metabox.io/plugins/meta-box-tabs/), [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), or [MB Group](https://metabox.io/plugins/meta-box-group/), and so on. However, they are just optional.
 
 Let’s start now.
 

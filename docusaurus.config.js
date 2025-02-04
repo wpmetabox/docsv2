@@ -141,7 +141,7 @@ const config = {
             title: 'Top Extensions',
             items: [
               {
-                label: 'Meta Box Group',
+                label: 'MB Group',
                 to: 'extensions/meta-box-group',
               },
               {

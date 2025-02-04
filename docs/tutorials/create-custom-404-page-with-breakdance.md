@@ -23,7 +23,7 @@ So, these are tools we need in this practice.
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input all the information that we want to be on the 404 page;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save that information visually;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to have your own structure of fields that fit your page’s content;
+* [MB Group](https://metabox.io/plugins/meta-box-group/) (optional): to have your own structure of fields that fit your page’s content;
 * **Breakdance**: to build the page.
 
 Now, let’s go step by step.

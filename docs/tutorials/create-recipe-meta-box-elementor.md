@@ -126,11 +126,11 @@ Then, you can easily see all the created fields in the post editor. Just fill in
 
 In this case, we have a cloneable group for the instruction information. If you get the data as usual, all of them will be displayed with the same style. But, I want the data from each field in that group to have its own style. So, I'll create a skin for them.
 
-Go to **Templates > Theme Builder > Meta Box Group Skin > Add New** to create a new skin.
+Go to **Templates > Theme Builder > MB Group Skin > Add New** to create a new skin.
 
 ![move to theme builder to add new skin](https://i.imgur.com/M9fgsws.png)
 
-![add new skin in the Meta Box Group Skin](https://i.imgur.com/1peivE2.png)
+![add new skin in the MB Group Skin](https://i.imgur.com/1peivE2.png)
 
 Remember to set the preview for the skin.
 
@@ -192,7 +192,7 @@ To name the timing information, go to the Advanced section of the Text Editor el
 
 Since the content of the timing information is the same, just duplicate the previous element and then connect them to the correct field where you want to get the data.
 
-To display the **Instruction** information, search for **Meta Box Group** element and add it to the template.
+To display the **Instruction** information, search for **MB Group** element and add it to the template.
 
 ![display the Instruction information](https://i.imgur.com/fJ4LTRe.png)
 

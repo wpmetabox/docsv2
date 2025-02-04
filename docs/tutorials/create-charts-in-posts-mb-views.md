@@ -38,7 +38,7 @@ So, these are some tools we need to have the charts:
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for displaying the chart;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the related information of the chart visually;
 * [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to set the rule for displaying fields for each type of chart;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the value of the X-axis and Y-axis in an item;
+* [MB Group](https://metabox.io/plugins/meta-box-group/): to group the value of the X-axis and Y-axis in an item;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page including chart data in the case that you want to put the chart on a specific post or page.
 
 If you want to display the chart on posts of a custom post type, you should use [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/) as well to create a new custom post type.

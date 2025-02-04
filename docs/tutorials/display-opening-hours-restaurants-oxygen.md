@@ -23,7 +23,7 @@ We’ll display some extra information such as time slots for each day, and we'l
 
 * [MB Custom Post Type and Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post type named Restaurant to contain custom fields for saving restaurants’ information;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): this premium extension of Meta Box provides an intuitive UI in the back end to create and configure custom fields without using code;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): this extension helps to arrange fields into groups;
+* [MB Group](https://metabox.io/plugins/meta-box-group/): this extension helps to arrange fields into groups;
 * [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): this extension allows to create rule to control the display of the fields;
 * Oxygen: to build the section. Remember to use the 3.9 version or upper to have the native integration with Meta Box.
 

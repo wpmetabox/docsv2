@@ -21,7 +21,7 @@ The timeline page shows multiple timestamps along with the date, title of the ev
 So, in this tutorial, we need these tools:
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating custom fields to save the updated information. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to group the fields together for better organization;
+* [MB Group](https://metabox.io/plugins/meta-box-group/) (optional): to group the fields together for better organization;
 * **Bricks** to build the timeline page.
 
 When all of the tools are activated, let’s dive in step by step.

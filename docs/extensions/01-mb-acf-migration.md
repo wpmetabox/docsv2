@@ -69,7 +69,7 @@ Most ACF field types work well with Meta Box, such as text, radio, select, etc. 
 
 1. **Remove all extra keys** in the database. ACF stores an extra meta in the database for field reference. It has the format `_{$field_id}`. This is redundant and causes the database to bloat. We don't need them and thus, we remove them.
 2. For **fields that have multiple values** such as gallery, select (with multiple options), ACF saves their values as serialized arrays. We'll migrate them multiple rows in the database (similar to what `add_post_meta` does with the last parameter `false`).
-3. For **layout fields**, ACF saves values of each sub-fields in a row in the database. We'll migrate them into groups (which requires [Meta Box Group](/extensions/meta-box-group/)).
+3. For **layout fields**, ACF saves values of each sub-fields in a row in the database. We'll migrate them into groups (which requires [MB Group](/extensions/meta-box-group/)).
 
 Details are below:
 
@@ -81,9 +81,9 @@ Checkbox | Checkbox list
 Post, Page link, Relationship | Post. In the case of page link, it works only with a post is selected, archive links don't work.
 Taxonomy | Taxonomy advanced
 Google maps | A pair of address field - which is a text field, and a Google maps field
-Group | Non-cloneable group. Requires [Meta Box Group](/extensions/meta-box-group/).
-Repeater | Cloneable group. Requires [Meta Box Group](/extensions/meta-box-group/).
-Flexible content | Cloneable group with 2 sub-fields: a select field for selecting a layout, and a non-cloneable group for data. Requires [Meta Box Group](/extensions/meta-box-group/) and [MB Conditional Logic](/extensions/meta-box-conditional-logic/).
+Group | Non-cloneable group. Requires [MB Group](/extensions/meta-box-group/).
+Repeater | Cloneable group. Requires [MB Group](/extensions/meta-box-group/).
+Flexible content | Cloneable group with 2 sub-fields: a select field for selecting a layout, and a non-cloneable group for data. Requires [MB Group](/extensions/meta-box-group/) and [MB Conditional Logic](/extensions/meta-box-conditional-logic/).
 
 :::info Field backup
 

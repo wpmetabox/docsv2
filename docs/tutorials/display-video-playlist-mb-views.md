@@ -30,7 +30,7 @@ So, these are some tools are needed for this practice:
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields for storing some of the video information. You can download it directly on [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Views](https://metabox.io/plugins/mb-views/): to get data from custom fields and display them on the section of the playlist;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to group the field for better organization.
+* [MB Group](https://metabox.io/plugins/meta-box-group/) (optional): to group the field for better organization.
 
 Let’s start now!
 

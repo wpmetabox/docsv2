@@ -25,7 +25,7 @@ So, we need these tools:
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for restaurants;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the backend to create the custom fields visually;
 * [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to create the rules for displaying or hiding the fields;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into the groups for clearer structure;
+* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into the groups for clearer structure;
 * **Bricks** to build the opening hour section.
 
 ## 1. Creating a new post type

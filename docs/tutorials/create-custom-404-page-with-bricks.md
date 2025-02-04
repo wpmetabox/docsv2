@@ -24,7 +24,7 @@ Therefore, in this practice, we will use the following tools:
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create custom fields. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input the 404 page’s information;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to organize custom fields into the group. In this case, they are the labels and URLs of the buttons;
+* [MB Group](https://metabox.io/plugins/meta-box-group/) (optional): to organize custom fields into the group. In this case, they are the labels and URLs of the buttons;
 * **Bricks**: to build the page.
 
 Now, let’s start!

@@ -40,7 +40,7 @@ Except title and content, which are post fields, other items on this screen are 
 
 If the custom field has simple value (like a string), it will display fully here. If the custom field has structural value (array), it will display here as a JSON-encoded string. Using JSON allows you to see the values of each element in the array as well as the structure in general.
 
-Please note that the extension works well with [Meta Box Group](/extensions/meta-box-group/) extension.
+Please note that the extension works well with [MB Group](/extensions/meta-box-group/) extension.
 
 ## Restoring the revision
 

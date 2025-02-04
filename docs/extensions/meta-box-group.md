@@ -1,24 +1,24 @@
 ---
-title: Meta Box Group
+title: MB Group
 ---
 
 import Helpers from '../_parts/_helpers.md';
 
-**Meta Box Group** helps you to organize custom fields into repeatable and collapsible groups. You can use this extension to group similar fields into one group to create hierarchy. You can clone the whole group, or sub-group. There's no limitation on the nesting level.
+**MB Group** helps you to organize custom fields into repeatable and collapsible groups. You can use this extension to group similar fields into one group to create hierarchy. You can clone the whole group, or sub-group. There's no limitation on the nesting level.
 
 ![meta box group example](https://i1.wp.com/metabox.io/wp-content/uploads/2015/02/meta-box-group-example.png)
 
 ## Tutorial
 
-If this is the first time you use [Meta Box Group](/extensions/meta-box-group/), please follow the beginner tutorial here:
+If this is the first time you use [MB Group](/extensions/meta-box-group/), please follow the beginner tutorial here:
 
-[How to Create a Group of Custom Fields with Meta Box Group](https://metabox.io/create-group-of-custom-fields-with-meta-box-group/)
+[How to Create a Group of Custom Fields with MB Group](https://metabox.io/create-group-of-custom-fields-with-meta-box-group/)
 
-The documentation below is like a detailed reference that you can use anytime you want to look for something in Meta Box Group.
+The documentation below is like a detailed reference that you can use anytime you want to look for something in MB Group.
 
 ## Settings
 
-The Meta Box Group adds a new field type `group`. This field type has following settings:
+The MB Group adds a new field type `group`. This field type has following settings:
 
 Name|Description
 ---|---
@@ -407,7 +407,7 @@ Result:
 
 ![default sub-field value](https://i.imgur.com/pml8twS.png)
 
-However, doing that way makes you type quite a lot. And you hardly see the data of the whole group. To avoid this problem, Meta Box Group provides a better way to set default value for the whole group.
+However, doing that way makes you type quite a lot. And you hardly see the data of the whole group. To avoid this problem, MB Group provides a better way to set default value for the whole group.
 
 The idea is very simple, just use the same `std` parameter for *the group* (not for sub-fields). And set its value an array of sub-field default values.
 
