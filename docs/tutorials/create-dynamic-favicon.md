@@ -23,7 +23,7 @@ So, to get started, we need some tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type for the products and custom field for the favicons;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a **UI** on the back end to create the custom field for the favicon easily.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a **UI** on the back end to create the custom field for the favicon easily.
 
 ## 1. Creating product pages
 

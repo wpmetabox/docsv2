@@ -21,7 +21,7 @@ For this practice, we need these tools:
 
 * [Meta Box](https://metabox.io): to have framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the product;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields to save extra information of product.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields to save extra information of product.
 
 The last one is [Oxygen](https://oxygenbuilder.com/) which is used to build the page. You should use the 3.9 version or upper, which has integration with Meta Box already.
 

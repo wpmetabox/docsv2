@@ -23,7 +23,7 @@ Here are the tools we need for this practice:
 
 * [Meta Box core plugin](https://metabox.io/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the restaurants;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields for saving extra information of the restaurants;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields for saving extra information of the restaurants;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to show the status of whether the restaurants are featured or not in the list of posts.
 * **Oxygen**. You should use the 3.9 version or upper, which has integration with Meta Box already.
 

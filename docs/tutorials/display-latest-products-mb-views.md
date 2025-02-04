@@ -16,7 +16,7 @@ So, here are the tools we need.
 
 * [Meta Box](https://metabox.io/) to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to a create post type named Restaurant;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create and configure custom fields to save restaurants’ extra information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to create and configure custom fields to save restaurants’ extra information;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a WordPress template for the section.
 
 ## 1. Creating a new custom post type

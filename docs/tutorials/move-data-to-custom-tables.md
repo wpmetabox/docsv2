@@ -16,7 +16,7 @@ To move your custom fields' data to a custom table, here are the tools you need:
 
 * <a href="https://metabox.io/">Meta Box</a> to have a framework to create a custom post type and custom fields for the form. It’s free and available on <a href="https://wordpress.org/plugins/meta-box">wordpress.org</a>.
 * <a href="https://metabox.io/plugins/mb-custom-table/">MB Custom Table</a> allows saving custom fields' data in a custom table.
-* <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a> to have an UI in the back-end to create custom fields for the post type.
+* <a href="https://metabox.io/plugins/meta-box-builder/">MB Builder</a> to have an UI in the back-end to create custom fields for the post type.
 
 
 :::tip
@@ -28,7 +28,7 @@ Thus, we're going to move the data of each post type to a separate custom table.
 :::
 
 
-We already have a post type named **Companies** with **Company name**, **Address**, and **Start day** fields. This is the field group of these fields in Meta Box Builder:
+We already have a post type named **Companies** with **Company name**, **Address**, and **Start day** fields. This is the field group of these fields in MB Builder:
 
 ![Created field group](https://i.imgur.com/8lqOR5J.png)
 
@@ -48,9 +48,9 @@ After that, some options will appear, and then you have to choose **Create table
 
 ![Enter the name of custom table](https://i.imgur.com/fk6gt7A.png)
 
-So, you have just created a custom table automatically with **Meta Box Builder.** And now, in your database, you will see a new table named `wp_custom_company`.
+So, you have just created a custom table automatically with **MB Builder.** And now, in your database, you will see a new table named `wp_custom_company`.
 
-![Create a custom table automatically with Meta Box Builder](https://i.imgur.com/F6AI9Cv.png)
+![Create a custom table automatically with MB Builder](https://i.imgur.com/F6AI9Cv.png)
 
 From now on, the **new data will be automatically saved in the custom table** whenever you update.
 

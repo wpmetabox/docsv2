@@ -20,7 +20,7 @@ I have a post along with a bar chart as an example here:
 
 Let me start by outlining the general concept to provide you with an overview.
 
-First, we’ll use a custom field to regulate the type of chart, such as line, bar, or pie. All the data including items, statistics, and colors will be stored in custom fields as well. 
+First, we’ll use a custom field to regulate the type of chart, such as line, bar, or pie. All the data including items, statistics, and colors will be stored in custom fields as well.
 
 ![The type of chart and other data will be stored in custom fields](https://i.imgur.com/Whm6W0G.png)
 
@@ -36,7 +36,7 @@ So, these are some tools we need to have the charts:
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and set up a template for displaying chart information. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for displaying the chart;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the related information of the chart visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the related information of the chart visually;
 * [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to set the rule for displaying fields for each type of chart;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the value of the X-axis and Y-axis in an item;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page including chart data in the case that you want to put the chart on a specific post or page.
@@ -91,7 +91,7 @@ This field displays only when the type we chose is **Line**. To set this conditi
 
 ![Move to the Advanced tab of the field, and find out the Conditional logic section to set the condition](https://i.imgur.com/28snCYF.png)
 
-Based on the rule I said before, we should set the key of the rule as the ID of the select field. 
+Based on the rule I said before, we should set the key of the rule as the ID of the select field.
 Then, the value should be the value of the line.
 
 ![Set the key of the rule as the ID of the select field, and the value should be the value of the line](https://i.imgur.com/JpzwGH3.png)
@@ -233,7 +233,7 @@ Also, we should modify inside the loop to transfer all the values to the arrays.
 {% for clone in post.categories %}
     {% set key = key|merge([clone.key_x]) %}
     {% set value = value|merge([clone.value_y]) %}
-    {% set color = color|merge([clone.color]) %}  
+    {% set color = color|merge([clone.color]) %}
 {% endfor %}
 ```
 
@@ -244,7 +244,7 @@ Also, we should modify inside the loop to transfer all the values to the arrays.
 Also in the **Template** tab, I add some code as below:
 
 ```
-<canvas id="myChart" 
+<canvas id="myChart"
 data-type='{{type}}'
 data-title='{{title|json_encode()}}'
 data-line-color='{{line_color}}'
@@ -379,7 +379,7 @@ For the legend, we turn it on or off based on the type of chart. So, the legend 
 
 That’s all for code.
 
-After updating the template, go to a post to see how it works. 
+After updating the template, go to a post to see how it works.
 
 The chart displayed beautifully based on the statistics and colors I input in custom fields.
 
@@ -393,7 +393,7 @@ So, we’ve done creating charts for posts.
 
 ## Extra: Creating charts with data saved in a settings page
 
-Not only custom fields in posts, you also can **save data for a chart in a settings page**, then display the chart anywhere on your website. There is not much difference with fields in posts. 
+Not only custom fields in posts, you also can **save data for a chart in a settings page**, then display the chart anywhere on your website. There is not much difference with fields in posts.
 
 Create a new settings page as usual, and change the location of the created fields to the settings page.
 

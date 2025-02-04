@@ -23,12 +23,12 @@ The image used for the thumbnail also will be used to be the featured image of t
 
 ## Preparation
 
-In this practice, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to create custom post types, taxonomies as well as a custom field to store the images for the taxonomy. 
+In this practice, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to create custom post types, taxonomies as well as a custom field to store the images for the taxonomy.
 
 We also need some advanced features from **Meta Box** which is from some of its extensions:
 
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy for the portfolio;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create the custom field for the images;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create the custom field for the images;
 * **Bricks** to build the page.
 
 ## 1. Creating a new custom post type
@@ -41,7 +41,7 @@ After publishing, you will see a new menu displayed. It's your post type.
 
 ![the created custom post type displayed as a menu](https://i.imgur.com/Geumgm5.png)
 
-## 2. Creating a custom taxonomy 
+## 2. Creating a custom taxonomy
 
 Go to **Meta Box > Taxonomies > Add New** to create a new taxonomy.
 

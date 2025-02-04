@@ -407,7 +407,7 @@ You can also perform the request in Postman or Insomnia like this:
 
 By default, Meta Box returns all fields for the REST API responses. If you want to hide a field from the responses, then you need to set a settings for it.
 
-If you use [Meta Box Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from REST API** from the field's **General** settings tab:
+If you use [MB Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from REST API** from the field's **General** settings tab:
 
 ![Hiding a field from REST API responses](https://i0.wp.com/images.elightup.com/meta-box/docs/rest-api/hide-a-field.png)
 

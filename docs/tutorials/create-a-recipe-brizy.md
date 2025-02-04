@@ -24,7 +24,7 @@ To get started, we need the [Meta Box core plugin](https://wordpress.org/plugins
 For the advanced features from Meta Box, we need some of its extensions:
 
 [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type named Recipe;
-[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields to save the recipe information;
+[MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields to save the recipe information;
 [Brizy](https://www.brizy.io/) (Brizy Pro version): to build the pager.
 
 ## 1. Creating a custom post type
@@ -87,7 +87,7 @@ Next, I’ll add **Row** inside the second column. Each row will be used for eac
 
 ![Add Row inside the second column](https://i.imgur.com/sKxGm8I.png)
 
-Inside the row, add a **Text** element, then choose **Typography** to customize the text. You will see a small icon button to choose more options from a dropdown list for the text. 
+Inside the row, add a **Text** element, then choose **Typography** to customize the text. You will see a small icon button to choose more options from a dropdown list for the text.
 
 The first one is to add a custom text that you can type any text as you want into the element. All the rest ones on the list are the names of custom fields. Since we save the data about the time in custom fields, choose the corresponding ones.
 

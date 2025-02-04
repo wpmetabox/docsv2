@@ -5,7 +5,7 @@ title: Creating a custom 404 page in WordPress - Meta Box + Elementor
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-404 page is not a kind of main content on your website, since it appears only when visitors come to an unavailable page. However, for better SEO and better experience, we should pay some attention to this kind of page, to harmonize content, and drive visitors to the wanted pages. 
+404 page is not a kind of main content on your website, since it appears only when visitors come to an unavailable page. However, for better SEO and better experience, we should pay some attention to this kind of page, to harmonize content, and drive visitors to the wanted pages.
 
 So, let’s explore an interesting way to have a **custom 404 page** with flexible content using custom fields created with **Meta Box** and displaying it with **Elementor**. This will help you change the page's content easily in daily use.
 
@@ -25,7 +25,7 @@ Therefore, in this practice, we will use the following tools:
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input the 404 page’s information;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get data from Meta Box’s custom fields, using dynamic tags of Elementor;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to organize custom fields into the group. In this case, they are the labels and URLs of the buttons;
 * **Elementor** and its pro version to build the page.
@@ -122,7 +122,7 @@ Then, choose the name of the field that saved the button’s label. You will see
 
 ![Choose the name of the field that saved the button’s label](https://i.imgur.com/98EpBUi.png)
 
-For the link in the button, it also is saved in a custom field as well, so use **Dynamic Tags**. 
+For the link in the button, it also is saved in a custom field as well, so use **Dynamic Tags**.
 
 ![Use Dynamic Tags in the Link settings to get the URL of the link](https://i.imgur.com/8qUxiWf.png)
 

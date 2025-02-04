@@ -25,7 +25,7 @@ So, here are the tools we need for this practice:
 
 * [Meta Box](https://metabox.io): to have a framework to create custom post type and custom fields;
 * [MB Custom Post Types](https://metabox.io/plugins/custom-post-type/): to create custom post types for the restaurants;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the extra information of the restaurants;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the extra information of the restaurants;
 * [Elementor](https://elementor.com/): to build the page. I use the Elementor Pro;
 * [WP Grid Builder](https://wpgridbuilder.com/): to create a condition to choose which restaurants will be displayed.
 * **Integrations** between WP Grid Builder and Meta Box, and between WP Grid Builder and Elementor: you can activate them in the Add-ons section of WP Grid Builder.

@@ -22,7 +22,7 @@ So, in this practice, we need these tools:
 
 * [Meta Box](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the product information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the product information;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get the dynamic data from custom fields created by Meta Box;
 * **Elementor** to build the page.
 

@@ -33,7 +33,7 @@ MB ACF Migration tries to migrate all the following data from ACF to Meta Box. P
 
 ### Field groups
 
-ACF field groups are migrated to Meta Box's field groups, which requires [Meta Box Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
+ACF field groups are migrated to Meta Box's field groups, which requires [MB Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
 
 :::caution
 
@@ -59,7 +59,7 @@ Besides, if you use complex locations, then you'll need [MB Include Exclude](/ex
 
 ### Settings pages
 
-ACF requires you to use code to register settings pages. In Meta Box, thanks to [Meta Box Builder](/extensions/meta-box-builder/), you can create and manage settings pages with UI.
+ACF requires you to use code to register settings pages. In Meta Box, thanks to [MB Builder](/extensions/meta-box-builder/), you can create and manage settings pages with UI.
 
 During the migration, the plugin will try to create settings pages with UI if you have settings pages registered with ACF.
 

@@ -22,7 +22,7 @@ These are some tools we need in this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields for the members. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the team members;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to visually create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to visually create custom fields;
 * The pro version of **Kadence** with some extra types of blocks to build the page.
 
 ## 1. Creating a new custom post type
@@ -141,7 +141,7 @@ Then, just change the field for the link to get the right one from the correspon
 
 Next, move to the second column.
 
-To get the name of the member, you can use the **Title** block as usual. But in this case, I want to have more options to customize its style, so I choose the **Dynamic HTML** block. 
+To get the name of the member, you can use the **Title** block as usual. But in this case, I want to have more options to customize its style, so I choose the **Dynamic HTML** block.
 
 ![choose the Dynamic HTML block for the name of the member to have more options to customize its style](https://i.imgur.com/hV9EHhv.png)
 

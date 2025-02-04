@@ -22,7 +22,7 @@ Here are the tools we need for this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post type and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post type named Restaurant for the restaurants and menus;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create custom fields that save the dishes’s information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create custom fields that save the dishes’s information;
 * **Bricks Builder**: to create the singular page to display the menu.
 
 ## 1. Creating a custom post type
@@ -128,12 +128,12 @@ For the dish’s price, choose the **Basic Text** element. It’s also stored in
 ![Add a Basic text element for the dish's price](https://i.imgur.com/tmkgKhO.gif)
 
 To add the dish’s description, do likewise with the dish’s price. Just duplicate the **Basic Text** element and connect it to the corresponding field to get the right information..
- 
+
 For the last information - the dish’s image, choose the **Image** element. Since the images are also saved in the custom field as well, choose the **Select Dynamic data** button and select the right field. Here, you see that the dish’s image has just been obtained already.
 
 ![Add a Image element for the dish's image](https://i.imgur.com/QPOYEiH.gif)
 
-We have just displayed all the wanted information of the dishes. 
+We have just displayed all the wanted information of the dishes.
 
 Go to the frontend, you’ll see all of the menu information.
 

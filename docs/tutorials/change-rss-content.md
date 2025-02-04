@@ -14,8 +14,8 @@ This article will show you how to **get information from a custom field created 
 ## Preparation
 
 First, you might have some custom fields with content on your site. As well as, you might have [the Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create them.
- 
-Besides, in this tutorial, we’ll use the [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) extension (premium) to have an intuitive UI in the backend to create the fields visually. However, you can also add code or use the [Online Generator](https://metabox.io/online-generator/) tool (free) from Meta Box to create fields.
+
+Besides, in this tutorial, we’ll use the [MB Builder](https://metabox.io/plugins/meta-box-builder/) extension (premium) to have an intuitive UI in the backend to create the fields visually. However, you can also add code or use the [Online Generator](https://metabox.io/online-generator/) tool (free) from Meta Box to create fields.
 
 ## 1. Creating custom fields
 
@@ -35,7 +35,7 @@ Now, in the post editor, you’ll see all the fields displayed like this:
 
 ![All the fields display in the post editor](https://i.imgur.com/wpW5tXw.png)
 
-In case you don't use **Meta Box Builder**, you can code to add fields or use the [Online Generator](https://metabox.io/online-generator/) tool of Meta Box, then copy the generated code to save time.
+In case you don't use **MB Builder**, you can code to add fields or use the [Online Generator](https://metabox.io/online-generator/) tool of Meta Box, then copy the generated code to save time.
 
 You can add the following code to the functions.php file or add it to the created plugin (if you have one) to create the custom fields.
 
@@ -65,7 +65,7 @@ function hp_metaboxs( $meta_boxes ) {
 }
 ```
 
-Then, when you edit a post, the custom fields will be displayed like we did with Meta Box Builder.
+Then, when you edit a post, the custom fields will be displayed like we did with MB Builder.
 
 ![The fields display in the post editor when you use Online Generator](https://i.imgur.com/wpW5tXw.png)
 
@@ -118,7 +118,7 @@ function prefix_add_custom_fields_to_feed($content) {
 
             $availability = rwmb_meta('availability');
             $output .= '<p><strong>Availability:</strong> ' . $availability . '</p>';
-            $output .= '</div>'; 
+            $output .= '</div>';
         $content = $content.$output;
     }
     return $content;
@@ -149,7 +149,7 @@ So, you’ve finished changing the RSS feed’s content already.
 
 ## 4. Extra: Displaying RSS feed on your website
 
-If you want to show the most recent posts using the RSS feed somewhere on your site, for instance, the sidebar. So, go to **Appearance** > **Widgets**, add a new one in the **Sidebar** section. 
+If you want to show the most recent posts using the RSS feed somewhere on your site, for instance, the sidebar. So, go to **Appearance** > **Widgets**, add a new one in the **Sidebar** section.
 
 ![Go to Appearance > Widgets, add a new one in the Sidebar section](https://i.imgur.com/uIkiXyM.png)
 

@@ -21,7 +21,7 @@ The page contains the product's detailed information, even an image gallery. Itâ
 You will need some tools to create a capturing product page that converts.
 * [the Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields for the products;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create custom fields easily;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create custom fields easily;
 * [MB Divi Integrator](https://metabox.io/plugins/mb-divi-integrator/): helps Divi to get data from custom fields created by Meta Box easier.
 * **Divi Builder**: to build the page and display the product information.
 

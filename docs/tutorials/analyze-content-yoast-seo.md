@@ -19,7 +19,7 @@ Make sure that you installed and activated both the **Meta Box** and **Yoast SEO
 
 You also need these extensions of Meta Box:
 
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
 * [MB Yoast SEO Integration](https://metabox.io/plugins/meta-box-yoast-seo/): to add content of custom fields to Yoast SEO Content Analysis to have a better/correct SEO score.
 
 Now, when you go to a post or page, the content in the custom fields hasn’t been added in the SEO analysis yet. To analyze the content in the custom fields, follow this tutorial.

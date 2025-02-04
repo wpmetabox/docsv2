@@ -4,7 +4,7 @@ title: Copying custom fields from sites to sites
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Instead of rebuilding similar custom fields in different sites, you can use the [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) extension to easily copy them from one site to others with just a few clicks.
+Instead of rebuilding similar custom fields in different sites, you can use the [MB Builder](https://metabox.io/plugins/meta-box-builder/) extension to easily copy them from one site to others with just a few clicks.
 
 In this practice, I already have the original page with the field group available. Then, copy custom fields from this site to the targeted site.
 
@@ -17,7 +17,7 @@ As a result, we’ll have two different sites with a similar simple field group 
 This task will be very easy-to-do with 2 methods:
 
 * Method 1: Add Code to the Theme’s Files
-* Method 2: Just Use Meta Box Builder
+* Method 2: Just Use MB Builder
 
 So let’s see how we do it both ways.
 
@@ -44,13 +44,13 @@ Here are the tools we need:
 
 Firstly, we need  [the Meta Box plugin](https://wordpress.org/plugins/meta-box/) on all sites to have a framework to create custom fields. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
-If you follow method 1, add code to the theme’s files, you just need to activate Meta Box Builder on the original site where you create the custom fields. To contrast, in the second method, we need to use this extension on all sites.
+If you follow method 1, add code to the theme’s files, you just need to activate MB Builder on the original site where you create the custom fields. To contrast, in the second method, we need to use this extension on all sites.
 
 ## 1. Creating custom fields
 
 Note: If you already have custom fields on your website, you can skip this step.
 
-Create the meta boxes and custom fields inside through the UI of Meta Box Builder. Remember to completely configure all the fields.
+Create the meta boxes and custom fields inside through the UI of MB Builder. Remember to completely configure all the fields.
 
 In there, you can also concurrently use the other extensions of Meta Box to configure your custom fields as you want, ex: [Meta Box Group](https://docs.metabox.io/extensions/meta-box-group/),[ Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), [MB Geolocation](https://docs.metabox.io/extensions/meta-box-geolocation/), etc. Depending on your demand, you can create as many as fields you want and set configuration for them.
 
@@ -82,8 +82,8 @@ On the targeted site, go to **Appearance** > **Theme File Editor** and paste the
 
 **Remarks**:
 
-* The targeted website doesn’t install Meta Box Builder but must install Meta Box Framework to ensure that the embedded code can operate.
-* In case the target is the original website used to create fields, let’s deactivate Meta Box Builder on this site before embedding its code.
+* The targeted website doesn’t install MB Builder but must install Meta Box Framework to ensure that the embedded code can operate.
+* In case the target is the original website used to create fields, let’s deactivate MB Builder on this site before embedding its code.
 * If there has been the other code embedded in the functions.php file and it has the same ID with the new code, only the last one can be operated.
 * You can embed code of many different field groups in one site but must ensure that the ID of each field group differs from others then all of the field groups can operate. If the field groups’ IDs are iterated, the last one will be prioritized as the 3rd remark point.
 
@@ -93,9 +93,9 @@ After adding the code into the targeted site, the field group with custom fields
 
 ![On the targeted site, the field group with custom fields will display similar to the original site.](https://i.imgur.com/iQCmPqH.png)
 
-### 2.2. Method 2: Using Meta Box Builder
+### 2.2. Method 2: Using MB Builder
 
-**Note**: In this method, we need to use the Meta Box Builder extension on both the original site and the targeted site.
+**Note**: In this method, we need to use the MB Builder extension on both the original site and the targeted site.
 
 #### 2.2.1. Exporting code of the custom fields
 

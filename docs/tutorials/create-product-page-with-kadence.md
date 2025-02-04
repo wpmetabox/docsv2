@@ -22,7 +22,7 @@ So, in this practice, we need these tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and custom post types;
 * [MB Custom Post Types and Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the product;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields easily.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields easily.
 * **Kadence**: to have some extra types of blocks to build the page.
 
 ## 1. Creating a Custom Post Type
@@ -65,7 +65,7 @@ For other information such as fuel usage, engine capacity, max luggage, select t
 
 ![Add some descriptions to add information to the field](https://i.imgur.com/FbzTQYd.png)
 
-The last one is the gallery. Choose an **Image Advanced** field to allow users to upload multiple images. 
+The last one is the gallery. Choose an **Image Advanced** field to allow users to upload multiple images.
 
 ![Choose an Image Advanced field to allow users to upload multiple images](https://i.imgur.com/o1FYDgq.png)
 
@@ -127,11 +127,11 @@ Select **Advanced Text** to display the short description of the product. And, a
 
 ![Set the dynamic content](https://i.imgur.com/48wrX2p.gif)
 
-Next, use the **Text** or **Advanced Text** block for the pricing. 
+Next, use the **Text** or **Advanced Text** block for the pricing.
 
 ![Use Advanced Text block for the pricing](https://i.imgur.com/SyqhvDk.png)
 
-Add the unit price in the right form. Then, add dynamic data of pricing from the custom fields in the same way with the gallery. 
+Add the unit price in the right form. Then, add dynamic data of pricing from the custom fields in the same way with the gallery.
 
 ![Add the unit price in the right form](https://i.imgur.com/VZmUGpu.gif)
 

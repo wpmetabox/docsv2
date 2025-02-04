@@ -24,7 +24,7 @@ So, we need some tool for this practice:
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework that allows creating a custom post type and a custom field for videos. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for videos;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create a custom field to store the video URL.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create a custom field to store the video URL.
 
 You can download and install each extension individually or use the **Meta Box AIO** which has all the Meta Box extensions.
 
@@ -115,7 +115,7 @@ So, add a **Columns** block, and choose the layout for it.
 In the first column, add an **Advanced Image** block to display the author’s avatar. Instead of selecting any image, just enable dynamic image for this block.
 
 ![Add an Advanced Image block to display the author’s avatar, just enable dynamic image for this block](https://i.imgur.com/VfMSt8F.png)
- 
+
 Click on the button as the image below shown, and choose the **Author Image** from the dropdown list.
 
 ![Choose the Author Image from the dropdown list](https://i.imgur.com/I36XJrC.png)

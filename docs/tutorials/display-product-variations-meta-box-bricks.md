@@ -28,7 +28,7 @@ Here are the tools that we need for this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and custom post types;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post type for the products named Online Shop;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create custom fields easily for saving information about the products;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create custom fields easily for saving information about the products;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into repeatable and collapsible groups;
 * **Bricks**: to build the page visually.
 

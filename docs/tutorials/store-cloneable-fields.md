@@ -43,7 +43,7 @@ Before we go, you should:
 
 **Meta Box** provides an option to set the cloneable field to store values in multiple rows.
 
-In the settings of the fields using the UI provided by the [Meta Box Builder](https://docs.metabox.io/extensions/meta-box-builder/) extension, whenever you set the field as **Cloneable**, there will be an extra setting named ‘**Clone as multiple**’ right below the **Cloneable** option.
+In the settings of the fields using the UI provided by the [MB Builder](https://docs.metabox.io/extensions/meta-box-builder/) extension, whenever you set the field as **Cloneable**, there will be an extra setting named ‘**Clone as multiple**’ right below the **Cloneable** option.
 
 ![The "Clone as multiple" feature of Meta Box allows storing cloneable values in multiple rows in the database](https://i.imgur.com/LjhoGyn.png)
 
@@ -152,15 +152,15 @@ if ( ! is_array( $values ) || empty( $values ) ) {
 If yes, it will run following actions.
 
 ```css
-delete_post_meta( get_the_ID(), $field_id );         
+delete_post_meta( get_the_ID(), $field_id );
 foreach ( $values as $value ) {
             add_post_meta( get_the_ID(), $field_id, $value );
  ```
-    
+
 **In there**:
 
-* `delete_post_meta( get_the_ID(), $field_id );`: to remove the custom field from the database. 
-* `foreach ( $values as $value ) {`: is a loop to list each value one by one. 
+* `delete_post_meta( get_the_ID(), $field_id );`: to remove the custom field from the database.
+* `foreach ( $values as $value ) {`: is a loop to list each value one by one.
 * `add_post_meta( get_the_ID(), $field_id, $value );`: to insert new single rows into the meta table. The data added to the table will have the meta key as the field ID (`$field_id`) , and the meta value (`$value`) as a single value that is saved in the field.
 
 The last one is to set a secret key (unique_key) in the URL. You can set it on your own. This means that all the actions in this function run only when the secret key is run.

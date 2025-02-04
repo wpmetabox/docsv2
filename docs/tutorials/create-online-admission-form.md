@@ -18,7 +18,7 @@ Since all the additional information will be saved in different custom fields, w
 To have advanced features, we need some of its extensions:
 
 * [MB Custom Post Types and Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post type for the student information. Each submission from student will be save in a post;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to easily create custom fields to saved extra information about the student information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to easily create custom fields to saved extra information about the student information;
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create editorial forms so users can submit blog posts on the frontend;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template to display the admission form;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): (optional) to group the fields;

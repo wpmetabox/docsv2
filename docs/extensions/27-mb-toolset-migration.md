@@ -43,7 +43,7 @@ The plugin will migrate all custom post types and custom taxonomies created in T
 
 ### Field groups
 
-Toolset field groups are migrated to Meta Box's field groups, which requires [Meta Box Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
+Toolset field groups are migrated to Meta Box's field groups, which requires [MB Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
 
 :::caution
 
@@ -78,7 +78,7 @@ For these fields, as the data format is different, for safety, we create a backu
 
 ### Relationships
 
-The plugin also migrates all relationships from Toolset to Meta Box. You'll need the [Meta Box Builder](/extensions/meta-box-builder/) and [MB Relationships](/extensions/mb-relationships/) to do this. As the settings are quite different between the plugins, we'll migrate the settings of all Toolset relationships to many-to-many relationships in Meta Box.
+The plugin also migrates all relationships from Toolset to Meta Box. You'll need the [MB Builder](/extensions/meta-box-builder/) and [MB Relationships](/extensions/mb-relationships/) to do this. As the settings are quite different between the plugins, we'll migrate the settings of all Toolset relationships to many-to-many relationships in Meta Box.
 
 Of course, the data of relationships (the connections between items) are also migrated.
 

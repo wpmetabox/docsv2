@@ -5,13 +5,13 @@ title: Displaying personalized data for users
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Today, we’ll walk you through a useful way of **displaying dynamic, personalized data for users** on your website with Meta Box.  
+Today, we’ll walk you through a useful way of **displaying dynamic, personalized data for users** on your website with Meta Box.
 
 In this tutorial, I’ll take an example of displaying sales representative information of who is responsible for the current user, I mean client, who has logged in their account already. Each client has their own sales representative, so different clients logged in to their account will see different sales information. This can be super useful to help your client reach out to the account manager easier.
 
 ![Display dynamic, personalized data for users](https://i.imgur.com/QuNJwcG.gif)
 
-In this tutorial, we’ll achieve it with **Meta Box**. In the same way, we can design any kind of personalized content following this way. 
+In this tutorial, we’ll achieve it with **Meta Box**. In the same way, we can design any kind of personalized content following this way.
 
 ## Video version
 
@@ -29,7 +29,7 @@ Let’s take a look at the necessary tools and detailed steps to do it!
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to display columns in the dashboard for clients and sales representatives, making it easier to manage and view relationships;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the Sales Reps;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create a relationship between the Sales Reps and the users;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the details of the Sales Rep visually. It also provides the UI to create the relationship in an intuitive way;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the details of the Sales Rep visually. It also provides the UI to create the relationship in an intuitive way;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a view to display dynamic, specific data for users if you don’t want to add code directly to the theme.
 
 Now, let’s go step by step.
@@ -142,7 +142,7 @@ In the **Template** tab, we can insert some lines of code.
     {% set salesreps = mb.get_posts(salesrep_related) %}
 
     {% for salesrep in salesreps %}
-    <div class="mb-container"> 
+    <div class="mb-container">
         <div class="mb-content">
             <div class="mb-your-sale">Your Sales Representative</div>
             <div class="mb-title-sale">{{  salesrep.post_title }}</div>
@@ -150,7 +150,7 @@ In the **Template** tab, we can insert some lines of code.
             <div class="mb-phone"><b>Phone Number</b>: {{  salesrep.phone }}</div>
             <div class="mb-email"><b>Email</b>: {{  salesrep.email }}</div>
             <div class="mb-experience"><b>Years of experience</b>: {{  salesrep.years_of_experience }}</div>
-            <div class="mb-language"><b>Language</b>: {{  salesrep.language.label }}</div>       
+            <div class="mb-language"><b>Language</b>: {{  salesrep.language.label }}</div>
             <div class="mb-motto"><b>Working Motto</b>: {{  salesrep.working_motto }}</div>
         </div>
     </div>
@@ -189,7 +189,7 @@ These lines of code are used to display the Sales Rep’s information.
 
 ```
 {% for salesrep in salesreps %}
-<div class="mb-container"> 
+<div class="mb-container">
         <div class="mb-content">
             <div class="mb-your-sale">Your Sales Representative</div>
             <div class="mb-title-sale">{{  salesrep.post_title }}</div>
@@ -197,7 +197,7 @@ These lines of code are used to display the Sales Rep’s information.
             <div class="mb-phone"><b>Phone Number</b>: {{  salesrep.phone }}</div>
             <div class="mb-email"><b>Email</b>: {{  salesrep.email }}</div>
             <div class="mb-experience"><b>Years of experience</b>: {{  salesrep.years_of_experience }}</div>
-            <div class="mb-language"><b>Language</b>: {{  salesrep.language.label }}</div>       
+            <div class="mb-language"><b>Language</b>: {{  salesrep.language.label }}</div>
             <div class="mb-motto"><b>Working Motto</b>: {{  salesrep.working_motto }}</div>
         </div>
 </div>
@@ -221,7 +221,7 @@ Also, these are to get the extra information saved in Meta Box custom fields.
 <div class="mb-phone"><b>Phone Number</b>: {{  salesrep.phone }}</div>
 <div class="mb-email"><b>Email</b>: {{  salesrep.email }}</div>
 <div class="mb-experience"><b>Years of experience</b>: {{  salesrep.years_of_experience }}</div>
-<div class="mb-language"><b>Language</b>: {{  salesrep.language.label }}</div>       
+<div class="mb-language"><b>Language</b>: {{  salesrep.language.label }}</div>
 <div class="mb-motto"><b>Working Motto</b>: {{  salesrep.working_motto }}</div>
 ```
 They are phone, email, years of experience, language, and working moto. `phone`, `email`, `years_of_experience`, `language`, and `working_motto` are the corresponding IDs of each custom field.
@@ -300,7 +300,7 @@ function your_sales_representative(){
      while ( $connected->have_posts() ) :
      	$connected->the_post();
      	$id_salesrep = get_the_ID();
-     	 $html  .= '<div class="mb-container"> 
+     	 $html  .= '<div class="mb-container">
             <div class="mb-content">
             	<div class="mb-your-sale">Your Sales Representative</div>
             	<div class="mb-title-sale">'. get_the_title() .'</div>
@@ -311,7 +311,7 @@ function your_sales_representative(){
                 <div class="mb-language"><b>Language</b>: '.rwmb_meta( 'language', $id_salesrep ) .'</div>
                 <div class="mb-motto"><b>Working Motto</b>: '.rwmb_meta( 'working_motto', $id_salesrep ) .'</div>
             </div>
-        </div>';            
+        </div>';
     endwhile;
     return $html;
 }
@@ -342,9 +342,9 @@ $connected = new WP_Query( [
     ],
 ] );
 ```
-**In there**: 
+**In there**:
 
-* `salesrep-to-user`: the ID of the created relationship. 
+* `salesrep-to-user`: the ID of the created relationship.
 * `$id_salesrep = get_the_ID();`: to query only data connected to the current user.
 
 I create an empty variable, `$html ='';`, to store the output data for the Sales Rep, which will be built up next.
@@ -364,7 +364,7 @@ This is to get the ID of the current post.
 #### 4.2.3. Displaying Sales Rep information
 
 ```
-$html  .= '<div class="mb-container"> 
+$html  .= '<div class="mb-container">
     <div class="mb-content">
         <div class="mb-your-sale">Your Sales Representative</div>
         <div class="mb-title-sale">'. get_the_title() .'</div>

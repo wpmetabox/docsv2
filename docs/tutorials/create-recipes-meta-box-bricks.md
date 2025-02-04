@@ -22,7 +22,7 @@ In this case, the recipe page is the singular page of the Recipe post type. The 
 In addition to using the [Meta Box](https://metabox.io/), make sure you already have these extensions:
 
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): It helps to create a custom post type that we need for recipes;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
 
 For the last one, we use [Bricks](https://bricksbuilder.io/) to build the page.
 

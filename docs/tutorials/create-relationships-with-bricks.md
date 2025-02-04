@@ -23,7 +23,7 @@ Here are the tools that we need for this practice:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields, and relationships;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the courses and instructors;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create relationships between these post types;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI on the backend to create custom fields and relationships;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI on the backend to create custom fields and relationships;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the related courses and related instructors in the dashboard;
 * **Bricks** to build the pages.
 
@@ -201,7 +201,7 @@ In this **Div** tag, set a query for it to get and display the instructor relate
 
 ![enable query loop and set the Type of this query as MB Relationship](https://i.imgur.com/apxsrNy.png)
 
-Then, add some elements to display instructor information. 
+Then, add some elements to display instructor information.
 
 Use the **Heading** element to have the Instructor heading.
 
@@ -259,7 +259,7 @@ And **Rich Text** element with dynamic data to get information from custom field
 
 ![And Rich Text element with dynamic data to get information from custom fields for extra information about the courses](https://i.imgur.com/SJB7HFo.png)
 
-Finally, for the related instructor in each course, do likewise with the Course singular page. Add a **Div** element. 
+Finally, for the related instructor in each course, do likewise with the Course singular page. Add a **Div** element.
 
 ![for the related instructor in each course add a Div element](https://i.imgur.com/nQhgbxR.png)
 

@@ -25,7 +25,7 @@ Moreover, they’ll have a section where they can manage the posts that they sub
 
 To solve all the above requirements, we should use [Meta Box](https://wordpress.org/plugins/meta-box/) and its following three extensions:
 
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI in the back end to create custom fields for the guest author’s information as well as the extra information of the post if any;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI in the back end to create custom fields for the guest author’s information as well as the extra information of the post if any;
 * [MB User Profile](https://metabox.io/plugins/mb-user-profile/): allows you to create registration forms and manage the guest author accounts;
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): helps create a form to submit posts on the frontend.
 

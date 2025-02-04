@@ -23,7 +23,7 @@ Let’s check which tools are necessary for this practice.
 
 * [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and a custom field for the events;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the events;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually.
 
 Now, let’s start!
 
@@ -94,7 +94,7 @@ function sort_month_events() {
     $all_events = [];
     while ( $the_query->have_posts() ) :
         $the_query->the_post();
-        $date       = strtotime( get_post_meta( get_the_ID(), 'start_date', true ) ); 
+        $date       = strtotime( get_post_meta( get_the_ID(), 'start_date', true ) );
         $month = date( "F Y", $date );
         $all_events[ $month ][] = $the_query->post;
     endwhile;
@@ -105,7 +105,7 @@ function sort_month_events() {
 		$html.= "<div class='mb-month'>
                             <h3>$month</h3>
                                    <ul>";
-			foreach ( $events as $event ) : 
+			foreach ( $events as $event ) :
                                         $html.= '<li>';
 				$html.= date( "j F Y", strtotime(rwmb_meta('start_date', '', $event->ID)) ) . ' :
 				<a href="'.post_permalink( $event->ID ).'">'.$event->post_title.'</a>
@@ -115,7 +115,7 @@ function sort_month_events() {
                  </div>';
             endforeach;
     $html.= '</div>';
-	
+
     return $html;
 }
 add_shortcode( 'sort_month', 'sort_month_events' );
@@ -163,7 +163,7 @@ Use the following code to check if the query above returns any posts and do a lo
 ```css
 while ( $the_query->have_posts() ) :
         $the_query->the_post();
-        $date       = strtotime( get_post_meta( get_the_ID(), 'start_date', true ) ); 
+        $date       = strtotime( get_post_meta( get_the_ID(), 'start_date', true ) );
         $month = date( "F Y", $date );
         $all_events[ $month ][] = $the_query->post;
 endwhile;
@@ -171,7 +171,7 @@ endwhile;
 
 **In there**:
 ```css
-$date       = strtotime( get_post_meta( get_the_ID(), 'start_date', true ) ); 
+$date       = strtotime( get_post_meta( get_the_ID(), 'start_date', true ) );
 $month = date( "F Y", $date );
 ```
 These lines are to get the **Start Date** of the event, then re-format them with the information about the month (`F`) and year (`Y`).
@@ -192,7 +192,7 @@ $html.= '<div class="sort-month-events">';
 		    $html.= "<div class='mb-month'>
             <h3>$month</h3>
                 <ul>";
-			              foreach ( $events as $event ) : 
+			              foreach ( $events as $event ) :
                         $html.= '<li>';
 				                    $html.= date( "j F Y", strtotime(rwmb_meta('start_date', '', $event->ID)) ) . ' :
 				                    <a href="'.post_permalink( $event->ID ).'">'.$event->post_title.'</a>
@@ -202,7 +202,7 @@ $html.= '<div class="sort-month-events">';
         </div>';
     endforeach;
 $html.= '</div>';
-	
+
 return $html;
 ```
 **In there**:
@@ -249,16 +249,16 @@ function sort_year_events() {
         'orderby'        => 'meta_value',
         'order'          => 'ASC',
     ] );
-	
+
     $all_events = [];
     while ( $the_query->have_posts() ) :
         $the_query->the_post();
-        $date       = strtotime( get_post_meta( get_the_ID(), 'start_date', true ) ); 
+        $date       = strtotime( get_post_meta( get_the_ID(), 'start_date', true ) );
         $month = date( "F Y", $date );
         $year = date( "Y", $date );
         $all_events[ $year ][ $month ][] = $the_query->post;
     endwhile;
-	
+
     $html = '';
     $html.= '<div class="sort-year-events">';
 	      foreach ( $all_events as $year => $years ) :
@@ -267,7 +267,7 @@ function sort_year_events() {
                 foreach ( $years as $month => $events ) :
                     $html.=  "<h6>$month</h6>
                     <ul>";
-		                foreach ( $events as $event ) : 
+		                foreach ( $events as $event ) :
                         $html.= '<li>';
 		                        $html.= date( "j F Y", strtotime(rwmb_meta('start_date', '', $event->ID)) ) . ' :
 		                        <a href="'.post_permalink( $event->ID ).'">'.$event->post_title.'</a>
@@ -278,7 +278,7 @@ function sort_year_events() {
             $html.=  '</div>';
         endforeach;
     $html.= '</div>';
-	
+
     return $html;
 }
 add_shortcode( 'sort_year', 'sort_year_events' );
@@ -318,7 +318,7 @@ We need to edit the loop to list the year to cover the old one.
 
 Then, add another loop to display events grouped by month within each year. Particularly, the following one loops through each month within the current year.
 ```css
-foreach ( $years as $month => $events ) 
+foreach ( $years as $month => $events )
 ```
 ![Another loop to display events grouped by month within each year](https://i.imgur.com/PG18ob3.png)
 

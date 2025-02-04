@@ -4,7 +4,7 @@ title: Configuring homepage using MB Views
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-**Regularly updating the homepage brings fresh content** and helps impress website visitors easier. However, it may take time and effort to change its content. You definitely can avoid it with the help of custom fields created with Meta Box and MB Views. Let’s say goodbye to the hassle of coding in theme files! 
+**Regularly updating the homepage brings fresh content** and helps impress website visitors easier. However, it may take time and effort to change its content. You definitely can avoid it with the help of custom fields created with Meta Box and MB Views. Let’s say goodbye to the hassle of coding in theme files!
 
 I’ve just made a simple page with a carousel for the demo like this. Whenever I want to change the images, texts, and buttons but keep the layout, I **just update content in the custom field, then the homepage’s content also change** following without touching to the code.
 
@@ -25,7 +25,7 @@ These are some tools we need for this practice:
 First, we need the [Meta Box framework](https://wordpress.org/plugins/meta-box/). It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/). We also need some advanced features from some extensions of **Meta Box**. You can download them individually or use **Meta Box AIO** to have them all.
 
 * [MB Views](https://metabox.io/plugins/mb-views/): to have a template for the page and get content from the custom fields to display on the homepage instead of touching any theme files or accessing the server or host;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI to create custom fields to save the content of the homepage.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI to create custom fields to save the content of the homepage.
 
 Finally, I’ll use a pre-built template from [Bootstrap](https://getbootstrap.com/2.3.2/examples/carousel.html). In the event that you are using your own template, you can also follow this practice.
 

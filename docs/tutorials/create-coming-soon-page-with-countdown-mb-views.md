@@ -24,7 +24,7 @@ Let’s look for the detailed list of tools we need for this practice.
 * [The Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a settings page and custom fields for the coming soon page content;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): allows you to create a settings page to input all the information that we want to be on the coming soon page;
 * [MB Views](https://metabox.io/plugins/mb-views/): helps to create a template for displaying the coming soon page’s content;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually.
 
 Besides, you can make the most of some other extensions to have your own field structure that fits your page’s content. They may be [Meta Box Tab](https://metabox.io/plugins/meta-box-tabs/), [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), or [Meta Box Group](https://metabox.io/plugins/meta-box-group/), and so on. However, they are just optional.
 
@@ -126,7 +126,7 @@ These IDs, as shown in the image below, will be used later in JavaScript to crea
 
 * `main-comingsoon`: is simply for the main container that holds all content related to the coming soon page, including the countdown.
 * `run_countdown`: wraps all countdown elements.
-* `set_day`, `set_hours`, `set_minutes`, and `set_second`: are used to display the corresponding values for days, hours, minutes, and seconds in the countdown. 
+* `set_day`, `set_hours`, `set_minutes`, and `set_second`: are used to display the corresponding values for days, hours, minutes, and seconds in the countdown.
 
 After including these elements, the page will have the following structure:
 

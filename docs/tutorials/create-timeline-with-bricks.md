@@ -20,7 +20,7 @@ The timeline page shows multiple timestamps along with the date, title of the ev
 
 So, in this tutorial, we need these tools:
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating custom fields to save the updated information. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to group the fields together for better organization;
 * **Bricks** to build the timeline page.
 
@@ -36,7 +36,7 @@ Go to **Pages** > **Add New** to create a new one as usual.
 
 ## 2. Creating custom fields
 
-As I mentioned, we need to create some fields to add content about the timeline for the page. 
+As I mentioned, we need to create some fields to add content about the timeline for the page.
 
 Each point in the timeline includes two types of information:
 
@@ -57,7 +57,7 @@ First, add the **Group** field.
 
 Inside the group, add subfields following two types of data.
 
-The first one is for the time. Meta Box supports several fields for time and date, just choose a suitable one in your case. For illustration purposes, I choose the **Date Picker** field. 
+The first one is for the time. Meta Box supports several fields for time and date, just choose a suitable one in your case. For illustration purposes, I choose the **Date Picker** field.
 
 ![(Add the Date Picker field for the time](https://i.imgur.com/WdUWqSu.png)
 
@@ -162,7 +162,7 @@ Click on the **Select dynamic data** button one more time, and find out the **Ou
 
 ![Add the Output PHP function](https://i.imgur.com/WMg67Yx.gif)
 
-We have the `post_timeline` as the ID of the field we use to get posts from. We still need to modify it a little bit. Also, add the [:value](https://academy.bricksbuilder.io/article/dynamic-data/) attribute to get the value of the field, instead of the title only. 
+We have the `post_timeline` as the ID of the field we use to get posts from. We still need to modify it a little bit. Also, add the [:value](https://academy.bricksbuilder.io/article/dynamic-data/) attribute to get the value of the field, instead of the title only.
 
 ![Modify the dynamic data and an attribute to get the value of the field](https://i.imgur.com/ZcHcC6L.png)
 
@@ -230,7 +230,7 @@ jQuery(function($){
         if($(this).text() == "Read more")
             $(this).text("Read less");
         else
-            $(this).text("Read more");	
+            $(this).text("Read more");
     })
 })
 </script>
@@ -247,7 +247,7 @@ jQuery(function($){
 This line of code is to declare the JavaScript library which allows you to run the JavaScript below.
 
 ```
-$('.timeline-readmore').click(function(){: 
+$('.timeline-readmore').click(function(){:
 ```
 
 This is to trigger when visitors click on the button via the `timeline-readmore` class we created for the button before.

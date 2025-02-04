@@ -26,7 +26,7 @@ For this practice, we need these tools:
 * [WP Post Views](https://wordpress.org/plugins/wp-post-views/): to count the post views;
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields for the products or posts;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the restaurants;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
 
 ## Creating a new custom post type
 

@@ -27,7 +27,7 @@ Regarding the filers, it’s based on a custom taxonomy that I created for the p
 So, we need to have these tools:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to create the custom post type, taxonomy, and custom fields for the products. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy for the products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create the custom fields visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create the custom fields visually;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display custom fields or taxonomy as a column in the admin screen;
 * **Kadence** and its pro version to have some extra types of blocks to build the page.
 
@@ -141,7 +141,7 @@ In the **Advanced** section of the **Dynamic Content** settings, we should add a
 
 ![In the Advanced section, add a div tag as fallback content to display the context as ‘open’](https://i.imgur.com/N2emDuR.png)
 
-On the right sidebar, enable the **Conditional Display** option in the **Advanced** settings of the block. 
+On the right sidebar, enable the **Conditional Display** option in the **Advanced** settings of the block.
 
 ![In the Advanced settings of the block, enable the Conditional Display option](https://i.imgur.com/eQwh1oy.png)
 
@@ -149,7 +149,7 @@ Then, set the **Conditional** option as **Post Custom Field**, and set the name 
 
 ![Set the Conditional option as Post Custom Field, then set the name of the Status field](https://i.imgur.com/8ZYijes.png)
 
-We will have another **Advanced Text** block for the close status as well. Do exactly the same, but change the class and condition a little bit. Also, change the **div** tag to set the context of this block as ‘**close**’. 
+We will have another **Advanced Text** block for the close status as well. Do exactly the same, but change the class and condition a little bit. Also, change the **div** tag to set the context of this block as ‘**close**’.
 
 ![Change the class and condition for close status](https://i.imgur.com/C9vL2Om.png)
 
@@ -171,7 +171,7 @@ We are going to have a simple listing page with filters. There are also some opt
 
 ![Choose one layout.](https://i.imgur.com/ZJ0l8Md.png)
 
-In the **Post Types** settings, set the post type of your products. This helps to query posts from this post type. 
+In the **Post Types** settings, set the post type of your products. This helps to query posts from this post type.
 
 ![Set the post type of your products in the Post Types settings](https://i.imgur.com/9BdraGw.png)
 
@@ -191,11 +191,11 @@ Just create a page as usual.
 
 ![Go to Page > Add New Page to create a new page](https://i.imgur.com/lBZQqzr.png)
 
-Next, add the** Advanced Query Loop** block to add the products and filters from the created layout into the page. 
+Next, add the** Advanced Query Loop** block to add the products and filters from the created layout into the page.
 
 ![Add the Query Loop Advanced block](https://i.imgur.com/716bzR3.png)
 
-Set the name of the query that we created in the previous step. 
+Set the name of the query that we created in the previous step.
 
 ![Set the name of the query that we created](https://i.imgur.com/OrXD94P.png)
 
@@ -205,10 +205,10 @@ Move to the page on frontend, you will see the information of all the restaurant
 
 ## 7. Styling the page
 
-To style the page, you can go back to the page editor, or the query to modify the layout. For the display of each product, you should go back to edit the query card. 
+To style the page, you can go back to the page editor, or the query to modify the layout. For the display of each product, you should go back to edit the query card.
 
 This is the page after taking some actions to modify.
 
 ![The page got a better look](https://i.imgur.com/vetbHVm.gif)
 
-You also can try to [create a listing page with advanced filters with UI](https://docs.metabox.io/tutorials/create-simple-listing-meta-box-wp-grid-builder/) provided by Meta Box Builder.
+You also can try to [create a listing page with advanced filters with UI](https://docs.metabox.io/tutorials/create-simple-listing-meta-box-wp-grid-builder/) provided by MB Builder.

@@ -13,11 +13,11 @@ This reduces the number of rows in the database which can help improve the perfo
 
 ## Getting started
 
-The easiest way to work with custom tables is using [Meta Box Builder](/extensions/meta-box-builder/). It provides a UI to create custom tables and automatically save custom fields to table columns.
+The easiest way to work with custom tables is using [MB Builder](/extensions/meta-box-builder/). It provides a UI to create custom tables and automatically save custom fields to table columns.
 
-When creating a field group with Meta Box Builder, switch to the **Settings** tab and you'll see options to use a custom table as follows:
+When creating a field group with MB Builder, switch to the **Settings** tab and you'll see options to use a custom table as follows:
 
-![Create a custom table with Meta Box Builder](https://i.imgur.com/HRZSV9w.png)
+![Create a custom table with MB Builder](https://i.imgur.com/HRZSV9w.png)
 
 Enable the option to **Save data in a custom table**, and enter the **Table name**. By default, the table name doesn't contain the WordPress table prefix. If you want to use the WordPress table prefix, enable the **Include table prefix** option (and don't enter the prefix manually).
 

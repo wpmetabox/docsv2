@@ -28,7 +28,7 @@ For this practice, we need these tools:
 
 * [Meta Box](https://wordpress.org/plugins/mb-custom-post-type/): to have the framework for creating custom post type and custom fields.
 * [MB Custom Post Types](https://metabox.io/plugins/custom-post-type/): to create custom post types for the products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend to save the product information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend to save the product information;
 * **Breakdance**: to build the page and create a section to display the latest posts.
 
 ## 1. Creating a new custom post type

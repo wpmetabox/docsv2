@@ -36,7 +36,7 @@ This filter allows you to change the list of enabled premium extensions. Thus, e
 
 This filter takes a list of enabled extensions (their slugs), and returns the filtered list.
 
-For example, the code below enables only the [Meta Box Builder](/extensions/meta-box-builder/) extension:
+For example, the code below enables only the [MB Builder](/extensions/meta-box-builder/) extension:
 
 ```php
 add_filter( 'mb_aio_extensions', function( $extensions ) {

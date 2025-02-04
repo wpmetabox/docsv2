@@ -2,7 +2,7 @@
 title: Creating an FAQs page - Meta Box + Divi
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed'; 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 **Creating an FAQs page** on your website is a useful method for visitors to quickly find the information they're looking for. Let’s see how to do it by using **Meta Box** and **Divi**.
@@ -24,7 +24,7 @@ To get started, we need [the Meta Box core plugin](https://wordpress.org/plugins
 Besides, we’ll use some Meta Box extensions for more advanced features, as follows:
 
 * [MB Divi Integrator](https://metabox.io/plugins/mb-divi-integrator/): helps you use Divi to get data from custom fields created with Meta Box more easily;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into pairs for questions and answers.
 
 Finally, we need **Divi** to build the page.
@@ -75,7 +75,7 @@ And you can add titles for the group as follows to identify the set of Q&A more 
 After creating all the fields and having reasonable settings, move to the **Settings** tab, choose **Location** as **Post type**, and select **Page**. To apply the fields to the page you want, go to the **Advanced location rules** section below and choose your page. In this case, I chose **FAQ**.
 
 ![Set location to apply the fields to the FAQ page.](https://i.imgur.com/N4mvoPv.png)
- 
+
 After publishing, you will see all of the custom fields in the page editor. Just enter some questions and answers. Click **Add more** to add other pairs.
 
 ![All of the custom fields are displayed in the page editor, and you can click Add more to add other pairs.](https://i.imgur.com/AZCxGGV.png)

@@ -19,7 +19,7 @@ This is a video playlist I created as an example:
 
 ## Preparation
 
-In the playlist, there will be multiple videos. When you click on one from the left panel, its video player will appear immediately on the side. 
+In the playlist, there will be multiple videos. When you click on one from the left panel, its video player will appear immediately on the side.
 
 The playlist is created manually which allows you to flexibly add or remove any video. The video information includes the ID on Youtube and the title will be saved in custom fields with Meta Box. Then display them using MB Views.
 
@@ -29,7 +29,7 @@ So, these are some tools are needed for this practice:
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields for storing some of the video information. You can download it directly on [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Views](https://metabox.io/plugins/mb-views/): to get data from custom fields and display them on the section of the playlist;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to group the field for better organization.
 
 Let’s start now!
@@ -150,7 +150,7 @@ Besides adding some **`div`** and classes to style the playlist easily later, I 
 
 ![Add some div, classes and other code](https://i.imgur.com/eonYBMf.png)
 
-**Explanation**: 
+**Explanation**:
 
 * `id="video-playlist"` (line 4): is an HTML attribute to identify the area for displaying the list of videos.
 * `img src="https://img.youtube.com/vi/{{ clone.id }}/mqdefault.jpg"/` (line 7): is the form of URL for displaying the thumbnail beside the title.
@@ -161,7 +161,7 @@ Next, to display the iframe for the player, add the following lines of code:
 
 ![Add some code to display the iframe for the player](https://i.imgur.com/LTc1lMI.png)
 
-**Explanation**: 
+**Explanation**:
 
 In the line 14:
 

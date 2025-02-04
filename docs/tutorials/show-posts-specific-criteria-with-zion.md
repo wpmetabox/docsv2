@@ -14,7 +14,7 @@ This is an example archive page that only displays the dishes on sale.
 
 <LiteYouTubeEmbed id='t4yXHWkwbhk' />
 
-## Preparation 
+## Preparation
 
 The products will be the dishes, which are posts of a custom post type. These dishes will contain essential details such as name, description, and image. Additionally, there may be extra information stored in custom fields.
 
@@ -24,7 +24,7 @@ Here are the needed tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the dishes;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display custom fields as an admin column to know exactly which one will be shown on the page;
 * **Zion Builder** and **Zion Builder Pro**: to build the page.
 

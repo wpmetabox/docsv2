@@ -21,7 +21,7 @@ You need to install the following tools:
 
 * [Meta Box](https://metabox.io): to have a framework to create custom post type and custom fields;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types for the Black Friday deals;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields to save the deals’ information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields to save the deals’ information;
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): display custom fields on the frontend to help users submit deals easier;
 * [MB Views](https://metabox.io/plugins/mb-views/): display values of the custom fields (deals’ information) on the post.
 

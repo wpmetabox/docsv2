@@ -23,7 +23,7 @@ In this practice, we need these tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://wordpress.org/plugins/mb-custom-post-type/): to create a custom post type for videos;
-* [ Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
+* [ MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * [MB Views](https://metabox.io/plugins/mb-views/): helps us create the template for the video gallery page.
 
 ## 1. Creating a new custom post type
@@ -90,7 +90,7 @@ Next, for the section that displays the video’s information, add this code.
 {% set args = { post_type: 'video', posts_per_page: 9 } %}
 {% set posts = mb.get_posts( args ) %}
 {% for post in posts %}
-			
+
 {% endfor %}
 ```
 

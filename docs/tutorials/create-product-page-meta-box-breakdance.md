@@ -1,5 +1,5 @@
---- 
-title: Creating a product page - Meta Box + Breakdance 
+---
+title: Creating a product page - Meta Box + Breakdance
 ---
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -22,7 +22,7 @@ So to get started, we need these tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from wordpress.org;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the product named Car Rentals;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend for saving information about the products;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend for saving information about the products;
 * **Breakdance**: to create the page.
 
 ## 1. Creating a custom post type
@@ -78,7 +78,7 @@ Now, you will see all the created fields when editing posts in **Car Rental**.
 
 ![All the created fields of product page that you made](https://i.imgur.com/BsDVNZ5.png)
 
-## 3. Creating the page template 
+## 3. Creating the page template
 
 Go to **Breakdance** > **Templates** > **Add Template** to create a new template for the product page.
 

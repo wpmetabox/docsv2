@@ -32,7 +32,7 @@ Before moving forward, let’s check which tools are necessary for this practice
 * **Oxygen**: to build the page;
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields for the events;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the events;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually.
 
 ## 1. Creating a new post type
 
@@ -67,7 +67,7 @@ Once you’ve created all the needed fields, go to the **Settings** tab > choose
 Now, in the post editor, you will see the custom fields.
 
 ![The created custom fields in the post editor](https://i.imgur.com/L4VkKYI.png)
- 
+
 Simply input data into them.
 
 These are some posts that I created for reference.
@@ -169,7 +169,7 @@ We should compare the end date with the current date. If the events have the end
 ![PHP function to return values](https://i.imgur.com/pOr1nJ3.png)
 
 Then, fill in the function name as "date" and fill in its format. In this case, enter the default current date.
-	
+
 ![Fill in the function name as "date", and fill in its format.](https://i.imgur.com/MI1KBVA.png)
 
 * The `meta_compare` parameter: to compare the end date to the current date. Use the `>=` operation to get the events that have the end date after the current date.

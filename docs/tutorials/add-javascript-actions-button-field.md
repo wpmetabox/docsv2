@@ -18,7 +18,7 @@ You can see it clearer with these two Button fields to remove or input values in
 
 Here are the tools we need:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create the fields.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create the fields.
 
 ## 1. Creating custom fields
 
@@ -70,7 +70,7 @@ Then, in the post editor of any product, you will see the custom fields and new 
 
 ![the custom fields and new buttons with the label displayed in post editor](https://i.imgur.com/qiOUdlS.png)
 
-But so far, these buttons haven’t worked. 
+But so far, these buttons haven’t worked.
 
 Let’s move on to add JavaScript to handle custom actions for them.
 

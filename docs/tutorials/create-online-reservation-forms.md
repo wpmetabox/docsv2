@@ -33,7 +33,7 @@ First, we should have the [Meta Box framework](https://wordpress.org/plugins/met
 Moreover, we’ll need some advanced features from **Meta Box** extensions, as follows.
 
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): creates custom post type for the reservations.
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): has an intuitive UI to create custom fields in the backend to save the reservation information.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): has an intuitive UI to create custom fields in the backend to save the reservation information.
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): creates forms for users to submit their orders from the frontend.
 
 ## 1. Creating a new custom post type

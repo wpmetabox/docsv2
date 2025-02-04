@@ -86,7 +86,7 @@ These are some tools we need for this practice:
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields for the event. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the events;
 * [MB Views](https://metabox.io/plugins/mb-views/): to not only get data from custom fields created with Meta Box, but also build template parts, template for pages, and also include the template parts into another template;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually.
 
 ## 1. Creating a custom post type
 

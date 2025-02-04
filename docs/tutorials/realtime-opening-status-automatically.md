@@ -28,7 +28,7 @@ So, we need these tools:
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create the custom post type and custom fields. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the restaurants;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template to display the opening time and the restaurant status;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually.
 
 Furthermore, there are some other extensions you may want to use to have the appropriate structure of the custom fields such as group, conditional logic. We mentioned them in detail in other tutorials on [showing opening hours](https://docs.metabox.io/tutorials/display-opening-hours-restaurant-mb-views/).
 
@@ -38,7 +38,7 @@ Now, let’s embark on step by step.
 
 ## 1. Creating custom fields for opening time
 
-As I said before, we need to have custom fields to save the time slots. 
+As I said before, we need to have custom fields to save the time slots.
 
 Go to **Meta Box** > **Custom Fields**, and create a new field group for the opening time.
 
@@ -66,7 +66,7 @@ Someone uses static text for it and then changes it manually. But it is not opti
 
 First, we should have a new view to get all the time slots.
 
-Go to **Meta Box** > **Views**, and create a new view. 
+Go to **Meta Box** > **Views**, and create a new view.
 
 ![Go to Meta Box > Views, and create a new one](https://i.imgur.com/LrtMRug.png)
 
@@ -78,7 +78,7 @@ The start time and end time are in cloneable groups so there will be a loop adde
 
 ![There will be a loop added into the template since the start time and end time are in cloneable groups](https://i.imgur.com/XUeYSYh.png)
 
-When we insert the field of time slot, Meta Box will offer some options for the output. 
+When we insert the field of time slot, Meta Box will offer some options for the output.
 
 ![Meta Box will offer some options for the output for the time slots](https://i.imgur.com/LjSwWtv.png)
 
@@ -119,7 +119,7 @@ Back to the view to create some arrays to include all the time slots along with 
 
 ![Create some array to include all the time slots along with their date](https://i.imgur.com/P9WhBkz.png)
 
-**In there**: 
+**In there**:
 
 * `{% set timeArray = [] %}`: is the array to include all the day along with their time slots.
 * `{% set timeSlotsArray = timeSlotsArray|merge([ {'start_time':clone.start_time | date( 'H.i' ),'end_time':clone.end_time | date( 'H.i' )} ] ) %}`: is the array to join the start time and end time of a time slot.
@@ -140,7 +140,7 @@ Then, add these lines of code:
 
 * `time`: is an HTML ID we set.
 * `data-time`: is the attribute which is transferred from the `timeArray` array. It and the `time` ID will be used for using JavaScript later.
-* `restaurant-status`: is the ID we create to display the status. 
+* `restaurant-status`: is the ID we create to display the status.
 
 The context of the status and its style will be stipulated in the next step.
 
@@ -220,7 +220,7 @@ This part is to create a function to get the current day.
 var now = date.getHours() + "." + date.getMinutes();
 ```
 
-This part is to get the current time. 
+This part is to get the current time.
 
 The current time with the hour and minute, and is transferred to the `now` attribute. This data will be used for the condition in the next part.
 

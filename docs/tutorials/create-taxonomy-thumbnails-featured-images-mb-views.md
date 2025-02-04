@@ -28,7 +28,7 @@ In this practice, we need some tools from Meta Box:
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy for the portfolio;
 * [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): to add custom field created with Meta Box to categories, tags, or any custom taxonomies;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create templates to display the thumbnails and the featured images without touching the theme’s files;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create the custom field for the images.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create the custom field for the images.
 
 ## 1. Creating a new custom post type
 
@@ -109,7 +109,7 @@ In the template tab of the view, we’ll add some lines of code.
 		{% set image_upload = mb.get_term_meta( portfolio.term_id, 'upload_portfolio_thumbnail', true ) %}
 		{% set image_url = mb.get_term_meta( portfolio.term_id, 'url_portfolio_thumbnail', true ) %}
 {% endfor %}
-```		
+```
 
 ![Add some lines of code to get terms and images.](https://i.imgur.com/4CC719E.png)
 
@@ -125,7 +125,7 @@ Next, we use the `mb.get_terms( args )` function to get terms from the taxonomy.
 
 ```
 {% for portfolio in portfolios %}
-		
+
 {% endfor %}
 ```
 
@@ -252,7 +252,7 @@ And add this script:
     {% set image_url = term.url_portfolio_thumbnail %}
     {% if image_upload %}
             <img src="{{ image_upload }}">
-        {% elseif image_url %}					
+        {% elseif image_url %}
             <img src="{{ image_url }}">
         {% else %}
             <img src="https://metabox.io/wp-content/uploads/2020/03/MB-Views-extension.jpg">
@@ -287,7 +287,7 @@ These `upload_portfolio_thumbnail` and `url_portfolio_thumbnail` variables are t
 
 ![These variables are the fields' IDs](https://i.imgur.com/2nSexyY.png)
 
-That’s all to get images. 
+That’s all to get images.
 
 ### 5.3. Conditioning to display the images
 

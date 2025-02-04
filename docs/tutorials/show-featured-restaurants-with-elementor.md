@@ -4,9 +4,9 @@ title: Showing the featured restaurants - Meta Box + Elementor
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-In today’s practice, we're going to show the featured products using **Meta Box** and **Elementor**. 
+In today’s practice, we're going to show the featured products using **Meta Box** and **Elementor**.
 
-I’m getting restaurants as an example for the products and this is the section I’ll create in this tutorial: 
+I’m getting restaurants as an example for the products and this is the section I’ll create in this tutorial:
 
 ![The featured products using Meta Box and Elementor](https://i.imgur.com/1wdDGxA.png)
 
@@ -24,7 +24,7 @@ So, to get started, we need these tools:
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to create the switch field. In addition, you may want to add some extra information about your product, so custom fields also come handy.
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post type for the products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the custom fields as an admin column to easily see the information. I use it to show you which restaurants will be featured to easily compare with the result.
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them on the page easily.
 * **Elementor** and its pro version: to build the homepage and the section.
@@ -180,7 +180,7 @@ function my_query_by_post_meta( $query ) {
 add_action( 'elementor/query/my_custom_filter', 'my_query_by_post_meta' );
 ```
 
-Let’s get through for more detail. 
+Let’s get through for more detail.
 
 ![These lines of code are to declare that we’ll query the post type which has the ID as 'restaurant'](https://i.imgur.com/iEpPEfd.png)
 
@@ -215,7 +215,7 @@ This is the mentioned condition. It means that if the custom field, which has th
 
 Now, move on to display posts on the homepage.
 
-## 5. Creating the section 
+## 5. Creating the section
 
 Go to edit the homepage with **Elementor**.
 

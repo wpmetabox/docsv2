@@ -45,7 +45,7 @@ As most WordPress websites require custom post types, let's [learn how to create
 
 <FAQ question="What is included in Meta Box Lite and is it completely free?">
 
-Yes, **Meta Box Lite** is 100% free. It includes Meta Box, [Meta Box Builder](/extensions/meta-box-builder/), and all free extensions, giving you powerful tools to create and manage dynamic content at no cost.
+Yes, **Meta Box Lite** is 100% free. It includes Meta Box, [MB Builder](/extensions/meta-box-builder/), and all free extensions, giving you powerful tools to create and manage dynamic content at no cost.
 </FAQ>
 
 <FAQ question="Do I need to install Meta Box to use Meta Box Lite?">

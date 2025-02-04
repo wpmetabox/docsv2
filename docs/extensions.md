@@ -11,7 +11,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![custom post types](/extensions/custom-post-types.png) <span className="thumb_text">MB Custom Post Types</span>](/extensions/mb-custom-post-type/)
 
-[![builder](/extensions/builder.png) <span className="thumb_text">Meta Box Builder</span>](/extensions/meta-box-builder/)
+[![builder](/extensions/builder.png) <span className="thumb_text">MB Builder</span>](/extensions/meta-box-builder/)
 
 [![views](/extensions/views.png) <span className="thumb_text">MB Views</span>](/extensions/mb-views/)
 

@@ -17,7 +17,7 @@ Here is my example:
 
 In addition to [Meta Box](https://metabox.io/), make sure you already have these extensions:
 
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It provides UI to create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): It provides UI to create custom fields;
 * [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): It allows to create of custom fields for categories or taxonomies;
 * [MB Views](https://metabox.io/plugins/mb-views/): this extension creates a shortcode to display category thumbnails;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): (optional) you need this extension when you are creating thumbnails for custom taxonomies of a custom post type.

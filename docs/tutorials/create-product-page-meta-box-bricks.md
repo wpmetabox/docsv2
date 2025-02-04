@@ -17,7 +17,7 @@ Here are some tools we need:
 
 * [Meta Box](https://metabox.io/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type named Car Rentals;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI to create custom fields for saving products’ detailed information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI to create custom fields for saving products’ detailed information;
 * **Bricks**: to build the page.
 
 ## Video version

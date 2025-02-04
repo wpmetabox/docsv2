@@ -20,7 +20,7 @@ Before going to update the field ID, make sure you [backup your database](https:
 
 Actually, we need the [Meta Box plugin](https://wordpress.org/plugins/meta-box/) only for this practice. Since you have had custom fields on your site already, you obviously have the Meta Box as well.
 
-In addition, I will create the field from scratch for illustration so you can have a clear overview. So, I have the [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to create and manage fields visually. It is an extension of Meta Box and available in the **Meta Box AIO**. In addition, you might want to use some advanced features from other Meta Box extensions, so you also might have them on your site.
+In addition, I will create the field from scratch for illustration so you can have a clear overview. So, I have the [MB Builder](https://metabox.io/plugins/meta-box-builder/) to create and manage fields visually. It is an extension of Meta Box and available in the **Meta Box AIO**. In addition, you might want to use some advanced features from other Meta Box extensions, so you also might have them on your site.
 
 Also, you need **permission to access the database** to check and see the changes in the data table.
 

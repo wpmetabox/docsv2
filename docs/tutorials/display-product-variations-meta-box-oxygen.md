@@ -16,7 +16,7 @@ For this practice, we need these tools:
 
 * [Meta Box](https://metabox.io): to have a framework to create custom post type and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI to create custom fields right in the back end to save the product variations;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an UI to create custom fields right in the back end to save the product variations;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into repeatable / cloneable and collapsible groups.
 
 The last one is [Oxygen](https://oxygenbuilder.com/). You should use the 3.9 version or higher, which already has integration with Meta Box.

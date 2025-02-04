@@ -31,7 +31,7 @@ Here's what we'll use:
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields for the events. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the events;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
 
 And, I use **Bricks** to build the page.
 
@@ -74,7 +74,7 @@ After creating all the needed fields, go to the **Settings** tab > choose **Loca
 Now, in the post editor, you will see the created custom fields.
 
 ![The created custom fields in the post editor](https://i.imgur.com/G8UYFj2.png)
- 
+
 Just input data into them.
 
 Here are some posts that I created for example:

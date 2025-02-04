@@ -23,7 +23,7 @@ So, in this practice, we need these tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the e-books;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to store the PDF files;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to store the PDF files;
 * **Oxygen**: to build the page.
 
 ## 1. Creating a custom post type
@@ -58,7 +58,7 @@ Go to **Oxygen** > **Templates** to add a new template.
 
 ![Go to Oxygen > Templates to add a new template](https://i.imgur.com/VyL02lB.png)
 
-Next, create a new page. 
+Next, create a new page.
 
 ![Create a new page](https://i.imgur.com/NO5teGE.png)
 
@@ -66,7 +66,7 @@ Set the created template to apply it to the new page.
 
 ![Set the created template to apply to the new page](https://i.imgur.com/6vCNGh9.png)
 
-Then, edit the template with **Oxygen**. 
+Then, edit the template with **Oxygen**.
 
 ![Edit the template with Oxygen](https://i.imgur.com/VmpOekS.png)
 
@@ -92,7 +92,7 @@ Inside the **Section**, add a **Repeater** component to get all the posts of the
 
 ![Add a Repeater component to get all the posts of the e-book post type](https://i.imgur.com/U0VesT6.png)
 
-Go to the **Query** section in the settings of the **Repeater** to choose the source of data. 
+Go to the **Query** section in the settings of the **Repeater** to choose the source of data.
 
 ![Go to the Query section to choose the source of data](https://i.imgur.com/clu23bA.png)
 
@@ -154,7 +154,7 @@ In the **URL** setting, insert data from the custom field to the button. Choose 
 
 ![Insert data from the custom field to the button](https://i.imgur.com/bgV1Jkj.gif)
 
-This action just helps to embed the URL of the **PDF** file into the button. To allow users to download the file from it, we should add an attribute to the button. 
+This action just helps to embed the URL of the **PDF** file into the button. To allow users to download the file from it, we should add an attribute to the button.
 
 Go to the **Advanced** > **Attributes** section in the settings of the Button component.
 

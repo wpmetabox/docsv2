@@ -2,7 +2,7 @@
 title: Creating an FAQs page - Meta Box + Kadence
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed'; 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Continuing our series on [creating an FAQs Page](https://metabox.io/series/faqs-page/) with **Meta Box** and page builders, today we have just explored a different method, using **Meta Box** and **Kadence**. Having an FAQ page is a way to be more proactive and predictive with what readers are going to need help with. Let’s dive in to explore the process of creating the FAQs page in detail.
@@ -22,7 +22,7 @@ The FAQs page includes several couples of questions and answers that are saved i
 To do it, we need the tools as follow:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom fields. It’s free, and you can download it directly from wordpress.org.
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields to save information about the questions and answers;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields to save information about the questions and answers;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into pairs for questions and answers;
 
 ## 1. Creating a new page
@@ -67,7 +67,7 @@ Let’s fill in some questions and answers.
 
 ## 3. Displaying the FAQs on the page
 
-Let’s edit the page template with Kadence to display questions and answers on the page. 
+Let’s edit the page template with Kadence to display questions and answers on the page.
 
 First, add a **Repeater** block to get all the content saved in the cloneable group that we used to save the questions and answers.
 
@@ -81,7 +81,7 @@ In the **Repeater Field** section, choose the name of the group field that conta
 
 ![In the Repeater Field section, choose the name of the group field](https://i.imgur.com/tbMqciV.png)
 
-We haven’t set anything yet to stipulate how the date will be displayed, so the preview will be like this. 
+We haven’t set anything yet to stipulate how the date will be displayed, so the preview will be like this.
 
 ![This is the preview before the date will be displayed](https://i.imgur.com/7lKoTnM.png)
 
@@ -89,7 +89,7 @@ For the content of the questions and answers, add blocks inside the **Repeater**
 
 ![add blocks to show content of the questions and answers](https://i.imgur.com/amDPaui.png)
 
-Next, I’ll choose a **Text Advanced** block for the questions. 
+Next, I’ll choose a **Text Advanced** block for the questions.
 
 ![choose a Text Advanced block for the questions](https://i.imgur.com/25NPea3.png)
 

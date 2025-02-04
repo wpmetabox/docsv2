@@ -25,7 +25,7 @@ Here are the tools that we will use in this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type for the listings and custom fields for the locations;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the listings;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields easily;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields easily;
 * [MB Views](https://metabox.io/plugins/mb-views/) (optional): to create a page template for displaying the listings on the map. In another way, you can add code to the theme’s files instead of using this extension. You can choose one of these ways which I’m going to provide you in this practice.
 
 You can install them individually or just use **Meta Box AIO** for all.
@@ -99,7 +99,7 @@ We’ll use some **JavaScript** for the map, so go to the **JS** folder, and add
 ![Go to the JS folder](https://i.imgur.com/gsaNrRV.png)
 
 ![Add a new file](https://i.imgur.com/xSyJPwk.png)
- 
+
 #### 3.1.2. Adding template
 
 Now, go to the created **PHP file** and add some code.
@@ -362,7 +362,7 @@ For each marker, display a popup when click on the icon of each restaurant. The 
 
 In the case that you don’t want to touch the theme files, let’s go ahead to see another way with **MB Views**.
 
-### 3.2. Method 2: Using MB Views 
+### 3.2. Method 2: Using MB Views
 
 Go to **Views** in **Meta Box** and create a new template.
 
@@ -381,9 +381,9 @@ I’m going to add code to the **Template** tab. The code will be quite the same
 {% set posts = mb.get_posts( args ) %}
 {% set restaurantsArray = [] %}
 {% for post in posts %}
-	{% set restaurantsArray = restaurantsArray|merge( 
+	{% set restaurantsArray = restaurantsArray|merge(
       [
-         { 
+         {
             'longitude':
             'latitude':
             'address':

@@ -27,7 +27,7 @@ In this tutorial, we’ll use a **Post** field to store multiple related posts a
 
 * [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): provides a framework for creating a custom field;
 * [MB Views](https://metabox.io/plugins/mb-views/): create a template for displaying and counting related posts;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): have a UI on the back end for visually creating custom fields to save the related posts.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): have a UI on the back end for visually creating custom fields to save the related posts.
 
 In the case that you want to display related content in the post of any custom post type, you should activate the [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/) extension as well. In this practice, I’ll use the blog posts for demonstration purposes only, so I skip this extension.
 

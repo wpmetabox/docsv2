@@ -24,18 +24,18 @@ The custom table is automatically created when the plugin is activated.
 
 Creating a relationship is done by either of the following methods:
 
-- **Using [Meta Box Builder](/extensions/meta-box-builder/)**, which helps you create relationships with UI. This extension is a premium extension and is already bundled in Meta Box AIO/MB Core.
+- **Using [MB Builder](/extensions/meta-box-builder/)**, which helps you create relationships with UI. This extension is a premium extension and is already bundled in Meta Box AIO/MB Core.
 - **Using code**.
 
 Before going into the detailed settings of a relationships, it's important to note that: when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). And inside that meta box, there'll be a cloneable field ([post](/fields/post/), [taxonomy_advanced](/fields/taxonomy-advanced/), or [user](/fields/user/) depending on the object type) for you to select connected items. So the settings of a relationships will be divided into 3 parts: settings for the relationship, for the meta box and for the field.
 
-Now let's see how to create a relationship with Meta Box Builder.
+Now let's see how to create a relationship with MB Builder.
 
-### Using Meta Box Builder
+### Using MB Builder
 
 To create a relationship, go to **Meta Box > Relationships** and click **Add New**.
 
-![Create a relationship with Meta Box Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/relationships/create-relationships-with-meta-box-builder.png)
+![Create a relationship with MB Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/relationships/create-relationships-with-meta-box-builder.png)
 
 Here you can enter all the settings for the relationship and each side of the relationship (**From** and **To**).
 

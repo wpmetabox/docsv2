@@ -37,7 +37,7 @@ We should ensure have all of the following tools:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom blocks, and custom fields for the block if any. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Blocks](https://metabox.io/plugins/mb-blocks/): to create custom Gutenberg blocks;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create the views for rendering the blocks;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have UI on the backend to register and configure the block visually.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have UI on the backend to register and configure the block visually.
 
 Besides, you can install other extensions to have advanced features for your block and custom fields such as [Meta Box Group](https://metabox.io/plugins/meta-box-group/), [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), etc.
 
@@ -53,7 +53,7 @@ So, just go to **Meta Box** > **Custom Fields**, and create a new field group.
 
 ![Go to Meta Box > Custom Fields, and create a new field group](https://i.imgur.com/lExrgGP.png)
 
-You can add custom fields to the block or not. You still can have the content for the block by adding it directly in the template or view where we use it to render the block. Then, the content will be [static](https://www.youtube.com/watch?v=SrCjDz_d9CI). Otherwise, add custom fields for [dynamic content](https://www.youtube.com/watch?v=v3ke1DBlWuk). Just choose the way that fits you. 
+You can add custom fields to the block or not. You still can have the content for the block by adding it directly in the template or view where we use it to render the block. Then, the content will be [static](https://www.youtube.com/watch?v=SrCjDz_d9CI). Otherwise, add custom fields for [dynamic content](https://www.youtube.com/watch?v=v3ke1DBlWuk). Just choose the way that fits you.
 
 For demonstration purposes, I will create custom fields to save information about the quote, its author, and the image. The remaining content will be added directly when rendering.
 
@@ -120,7 +120,7 @@ To check its work, go to a post/page and add the block.
 
 ![The block displayed with meta boxes to input data](https://i.imgur.com/Y2QX9OX.png)
 
-The content that you add to the custom fields in the block will be displayed immediately in the preview. 
+The content that you add to the custom fields in the block will be displayed immediately in the preview.
 
 ![The content that you add to the custom fields in the block will be displayed immediately in the preview](https://i.imgur.com/nCwsbwb.gif)
 

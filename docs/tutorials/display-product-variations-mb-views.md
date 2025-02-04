@@ -12,7 +12,7 @@ For this practice, we need these tools:
 
 * [Meta Box](https://metabox.io): to have a framework to create custom post type and custom fields for products;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): creates custom post types for the products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI in the back end to create custom fields to save extra information for product variations;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI in the back end to create custom fields to save extra information for product variations;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): helps you organize custom fields into repeatable and collapsible groups;
 * [MB Views](https://metabox.io/plugins/mb-views/): create templates for the product page as well as get the custom fields’ value and display them.
 

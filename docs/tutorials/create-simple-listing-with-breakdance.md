@@ -28,7 +28,7 @@ To do it, we need the tools as follow:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom post types, taxonomy and custom fields for products. It’s free, and you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy for the restaurants;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields efficiently;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields efficiently;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display custom fields as a column in the admin screen;
 * **Breakdance** to build the page.
 
@@ -54,7 +54,7 @@ You may want to check the **Show admin column** option to show it as an admin co
 
 ![In the Advanced section, check the Hierarchical option to show the taxonomy in a hierarchy, and Show admin column option to show it as an admin column](https://i.imgur.com/xIU7xZP.png)
 
-In the **Post Types** tab, choose your products post type that you’ve just created to apply this taxonomy to it. 
+In the **Post Types** tab, choose your products post type that you’ve just created to apply this taxonomy to it.
 
 ![In the Post Types tab, choose the products post type to apply taxonomy to it](https://i.imgur.com/U8e5M5C.png)
 
@@ -92,7 +92,7 @@ Set a post for preview.
 
 ![Set a post for preview](https://i.imgur.com/F3x0RH5.png)
 
-First, add an **Image** element to display the restaurant’s image. 
+First, add an **Image** element to display the restaurant’s image.
 
 ![add an Image element to display the restaurant’s image](https://i.imgur.com/oRtmApt.png)
 
@@ -108,7 +108,7 @@ Next, add a **Text Link** element for the product name.
 
 ![add a Text Link element for the product name](https://i.imgur.com/ss8vuZq.png)
 
-It’s from the post title, so click on the **Insert Dynamic Data** button and look for it. 
+It’s from the post title, so click on the **Insert Dynamic Data** button and look for it.
 
 ![click on the Insert Dynamic Data button and look for post title](https://i.imgur.com/HcrnxBc.png)
 
@@ -168,7 +168,7 @@ In the **Global Block** box, choose the **Restaurant Block** that we’ve made i
 
 ![In the Global Block box, choose the Restaurant Block that we’ve made in the previous step](https://i.imgur.com/svoaMiA.png)
 
-Then go to the **Query** section to set a custom query to get posts. 
+Then go to the **Query** section to set a custom query to get posts.
 
 ![go to the Query section to set a custom query to get posts](https://i.imgur.com/0flPgkm.png)
 
@@ -194,7 +194,7 @@ In the **Type** box, choose the taxonomy that we created for the products.
 
 ![In the Type box, choose the taxonomy that we created for the products](https://i.imgur.com/G8TTpwh.png)
 
-A list of the discount levels that I set as the terms of the taxonomy will be displayed. 
+A list of the discount levels that I set as the terms of the taxonomy will be displayed.
 
 ![A list of the discount levels that I set as the terms of the taxonomy will be displayed](https://i.imgur.com/ZSTs8jV.png)
 

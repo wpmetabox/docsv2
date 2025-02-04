@@ -45,7 +45,7 @@ On the new screen, you'll see all details for the settings page.
 
 :::info Not a premium user?
 
-This instruction uses **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
+This instruction uses **MB Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
 
 :::
 
@@ -113,7 +113,7 @@ add_filter( 'mb_settings_pages', function ( $settings_pages ) {
 
 The `mb_settings_pages` filter takes an array of settings pages as the argument. The callback function must return an array of settings pages.
 
-Each settings page is defined by an array of the following options, which is similar to the UI in the **Meta Box Builder** extension above:
+Each settings page is defined by an array of the following options, which is similar to the UI in the **MB Builder** extension above:
 
 Name|Description
 ---|---
@@ -182,7 +182,7 @@ WordPress has a nice feature that allows us to define instructions, and guidelin
 
 ![Help tabs in the Posts screen](https://i.imgur.com/B7YRruB.png)
 
-The content is organized into tabs and you can set it in the Meta Box Builder's UI or with code.
+The content is organized into tabs and you can set it in the MB Builder's UI or with code.
 
 If you use code, set the help tabs as follows:
 
@@ -211,11 +211,11 @@ Parameter|Description
 
 ## Settings fields
 
-After creating a settings page, you need to create settings fields for it. Creating settings fields for settings pages is [similar as for posts](/custom-fields/#how-to-create-custom-fields). You can do it [with UI using Meta Box Builder](/extensions/meta-box-builder/#creating-custom-fields) or [with code](/creating-fields-with-code/).
+After creating a settings page, you need to create settings fields for it. Creating settings fields for settings pages is [similar as for posts](/custom-fields/#how-to-create-custom-fields). You can do it [with UI using MB Builder](/extensions/meta-box-builder/#creating-custom-fields) or [with code](/creating-fields-with-code/).
 
-If you use Meta Box Builder to create fields, make sure to select the correct settings page in the Location settings, under the Settings tab:
+If you use MB Builder to create fields, make sure to select the correct settings page in the Location settings, under the Settings tab:
 
-![select settings page in Meta Box Builder](https://i.imgur.com/eraPt1J.png)
+![select settings page in MB Builder](https://i.imgur.com/eraPt1J.png)
 
 If you use code, then you need to hook to `rwmb_meta_boxes` and set a param `settings_pages` to the settings page(s) you want to add to, like this:
 
@@ -322,7 +322,7 @@ This can be done with code only.
 
 In that case, you need to do 2 steps:
 
-**Step 1:** Remove the code that registers settings pages as you don't need settings pages anymore. If you use Meta Box Builder, delete the settings page entry.
+**Step 1:** Remove the code that registers settings pages as you don't need settings pages anymore. If you use MB Builder, delete the settings page entry.
 
 **Step 2:** In each meta box, replace the parameter `'settings_pages' => 'rubik'` with `'panel' => ''`, like this:
 
@@ -369,7 +369,7 @@ A network settings page is a settings page that provides settings for all the we
 
 ![Sample network settings page](https://i.imgur.com/pjZzrKf.png)
 
-Using _MB Settings Page_, you’re now able to do that easily. If you use Meta Box Builder to create the settings page, select the "Network" settings checkbox:
+Using _MB Settings Page_, you’re now able to do that easily. If you use MB Builder to create the settings page, select the "Network" settings checkbox:
 
 ![Set as a network settings page](https://i.imgur.com/LgQ1S0Q.png)
 
@@ -396,9 +396,9 @@ Don't forget to _network activate_ Meta Box and MB Settings Pages. And now, when
 
 Backup is a **special field type** added by the plugin that allows you to back up and restore the settings.
 
-If you use Meta Box Builder to create fields, please add a normal textarea field, go to tab Advanced of the field settings, and add a custom settings with the key "type" and value "backup" as follows:
+If you use MB Builder to create fields, please add a normal textarea field, go to tab Advanced of the field settings, and add a custom settings with the key "type" and value "backup" as follows:
 
-![create a backup field in Meta Box Builder](https://i.imgur.com/ISMmm0p.png)
+![create a backup field in MB Builder](https://i.imgur.com/ISMmm0p.png)
 
 If you use code, you need to create a special field with `'type' => 'backup'`, like this:
 

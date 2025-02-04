@@ -8,7 +8,7 @@ Do you want to display your video list on your page? In [this series](https://me
 
 This is the final look of the video gallery page.
 
-![an example of video gallery page was built by Meta Box and Zion](https://i.imgur.com/f8qJXIx.png) 
+![an example of video gallery page was built by Meta Box and Zion](https://i.imgur.com/f8qJXIx.png)
 
 Let’s do it step by step.
 
@@ -26,7 +26,7 @@ So in this practice, we need these tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://wordpress.org/plugins/mb-custom-post-type/): to create a custom post type for videos;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * **Zion Builder** and **its Pro Version** to build the video gallery page.
 
 ## 1. Creating a new custom post type

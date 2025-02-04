@@ -24,7 +24,7 @@ In the **Key** input box, you can select any rule from the dropdown (if you don'
 
 :::info Not a premium user?
 
-This instruction uses **Meta Box Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
+This instruction uses **MB Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
 
 :::
 
@@ -228,7 +228,7 @@ add_action( 'wp_ajax_my_action1', function () {
 ```
 
 ### Custom error message
-As mentioned above, you can return a custom error message instead of `false` to display it as the error message sent from the server. 
+As mentioned above, you can return a custom error message instead of `false` to display it as the error message sent from the server.
 
 By default, the jQuery Validation library expects a JSON response from the server, any values that are not valid JSON will be ignored
  so you'll need to set the `dataType` parameter to `text` to return a custom error message.

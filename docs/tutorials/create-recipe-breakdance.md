@@ -21,7 +21,7 @@ So, here are the tools we need:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating custom post types and custom fields easily. It’s free and you can download it directly from [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/).
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types named Recipes;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend for saving data about the recipe;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend for saving data about the recipe;
 * Breakdance: to create the page.
 
 ## 1. Creating a custom post type
@@ -66,9 +66,9 @@ Since the name of the recipe is the title of the post, add a **Post Title** elem
 
 I’ll use some **Div** tags to divide content into sections and columns as you can see here.
 
-![Add some Div tags to divide content into sections and columns](https://i.imgur.com/rpzhu6a.png) 
+![Add some Div tags to divide content into sections and columns](https://i.imgur.com/rpzhu6a.png)
 
-Then, add the **Post Featured Image** element to display the picture. 
+Then, add the **Post Featured Image** element to display the picture.
 
 ![Add a Post Featured Image element to display the picture](https://i.imgur.com/HWqygXv.png)
 
@@ -94,7 +94,7 @@ For the **Video** section, instead of using **Text** element, I’ll use **Video
 
 ![The URL may display like this](https://i.imgur.com/nemx9PL.png)
 
-We’ve done all the information about the recipe. 
+We’ve done all the information about the recipe.
 
 ![All the information has been obtained](https://i.imgur.com/8N3nYdZ.png)
 

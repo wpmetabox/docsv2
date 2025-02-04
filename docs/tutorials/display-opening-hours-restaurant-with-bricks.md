@@ -23,7 +23,7 @@ In a real case, it can be the same or different between days of the week. Theref
 So, we need these tools:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields for the restaurants. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for restaurants;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the backend to create the custom fields visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the backend to create the custom fields visually;
 * [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to create the rules for displaying or hiding the fields;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into the groups for clearer structure;
 * **Bricks** to build the opening hour section.
@@ -176,7 +176,7 @@ Then, set the rule like this:
 The whole of this condition means that the block displays only when the **Choose an Option** field is set as the **All days are the same option**.
 
 Now, let’s add some elements inside this block to display the timing information. Since they are all inside the Block element, they also display only when the condition is met.
- 
+
 I use the **Basic Text** element for the name of the days. But, I added a **Div** element before it to style easily.
 
 ![Use the Basic Text element for the name of the days](https://i.imgur.com/YHtmurs.png)
@@ -219,7 +219,7 @@ Inside the Div, add another **Div** element to set the Query since the values we
 
 ![Set the query for the div as the right group](https://i.imgur.com/67G3U2u.png)
 
-Then, add two new **Basic Text** elements, one is for the start time, and one is for the end time inside those Div elements. 
+Then, add two new **Basic Text** elements, one is for the start time, and one is for the end time inside those Div elements.
 
 ![Add two new Basic Text elements for the start time and end time](https://i.imgur.com/fDT87Fa.png)
 

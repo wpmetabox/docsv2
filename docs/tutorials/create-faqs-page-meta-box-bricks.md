@@ -2,7 +2,7 @@
 title: Creating an FAQs page - Meta Box + Bricks
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed'; 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 In today’s practice, let me show you a way to create an FAQs page using Meta Box and Bricks.
@@ -21,9 +21,9 @@ The FAQs Page contains questions and answers that are saved in the custom fields
 
 To do it, we need the tools as follow:
 
-Meta Box core plugin to have the framework for creating custom fields. It’s free, and you can download it directly from wordpress.org. 
+Meta Box core plugin to have the framework for creating custom fields. It’s free, and you can download it directly from wordpress.org.
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into pairs for questions and answers;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields to save information about the questions and answers;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields to save information about the questions and answers;
 * Bricks Builder: to create the FAQs page.
 
 ## 1. Creating a new page
@@ -74,7 +74,7 @@ Then, you can easily see all the fields in the page editor. Just fill in the Q&A
 
 ## 3. Editing the page
 
-Still in the page editor, go to **Edit with Bricks**. 
+Still in the page editor, go to **Edit with Bricks**.
 
 First, select the **Section** element to contain all content of the page.
 
@@ -112,4 +112,4 @@ For styling the page, still in the page editor with **Bricks**, you can style ea
 
 Then you will see the new look of the page.
 
-![The final result](https://i.imgur.com/q8DrPFt.png) 
+![The final result](https://i.imgur.com/q8DrPFt.png)

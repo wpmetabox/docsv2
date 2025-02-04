@@ -15,7 +15,7 @@ Custom fields are a very important feature of WordPress and make WordPress a pow
 
 ## How to create custom fields?
 
-To create custom fields, you should use the [**Meta Box Builder**](/extensions/meta-box-builder/) extension to have an intuitive interface. This extension is already bundled in [**Meta Box Lite**](https://metabox.io/lite/) so you can use it right away.
+To create custom fields, you should use the [**MB Builder**](/extensions/meta-box-builder/) extension to have an intuitive interface. This extension is already bundled in [**Meta Box Lite**](https://metabox.io/lite/) so you can use it right away.
 
 Custom fields are organized in groups. Each group is displayed as a collapsible panel below the post editor.
 
@@ -39,10 +39,10 @@ Now go to your post type and add a new post, you'll see the field group with cus
 
 ![editing a post with custom fields](https://i.imgur.com/TwDYnBQ.png)
 
-In the case that you don't want to use [Meta Box Lite](https://metabox.io/lite/), you have two ways to have Meta Box Builder:
+In the case that you don't want to use [Meta Box Lite](https://metabox.io/lite/), you have two ways to have MB Builder:
 
-* Get [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) individually. In this case, the Meta Box plugin is required to be installed.
-* Purchase a [premium plan](https://metabox.io/pricing/) to use **Meta Box AIO** that includes all extensions, including Meta Box Builder.
+* Get [MB Builder](https://metabox.io/plugins/meta-box-builder/) individually. In this case, the Meta Box plugin is required to be installed.
+* Purchase a [premium plan](https://metabox.io/pricing/) to use **Meta Box AIO** that includes all extensions, including MB Builder.
 
 :::info Do you know?
 

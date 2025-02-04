@@ -22,7 +22,7 @@ You’ll need to use the [Meta Box core plugin](https://wordpress.org/plugins/me
 We also need some Meta Box extensions to have some advanced features:
 
 * [MB User Meta](https://metabox.io/plugins/mb-user-meta/) or [MB User Profile](https://metabox.io/plugins/mb-user-profile/): They allow you to create fields for users. You can choose to use one of them;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields with an intuitive UI right in the backend.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields with an intuitive UI right in the backend.
 
 ## 1. Creating a custom field to upload avatar picture
 

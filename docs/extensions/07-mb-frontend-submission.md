@@ -30,9 +30,9 @@ You can also submit data to a [MB Custom Table](/extensions/mb-custom-table/) mo
 [mb_frontend_form id="field-group-id" object_type="model"]
 ```
 
-If you're using [Meta Box Builder](/extensions/meta-box-builder/), go to **Meta Box > Custom Fields** admin page and copy the content in the **Shortcode** column for the field group that you created:
+If you're using [MB Builder](/extensions/meta-box-builder/), go to **Meta Box > Custom Fields** admin page and copy the content in the **Shortcode** column for the field group that you created:
 
-![Copy submission form shortcode in Meta Box Builder](https://i.imgur.com/sfeWhBA.png)
+![Copy submission form shortcode in MB Builder](https://i.imgur.com/sfeWhBA.png)
 
 Below is the list of the settings. The attribute is used for the shortcode.
 
@@ -69,7 +69,7 @@ reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Opt
 
 When you set the form to display fields from a field group, all fields are displayed by default. If you want to hide a field from front-end forms, then you need to set a settings for it.
 
-If you use [Meta Box Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from front end** from the field's **General** settings tab:
+If you use [MB Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from front end** from the field's **General** settings tab:
 
 ![Hide a field from the front end](https://i0.wp.com/images.elightup.com/meta-box/docs/frontend-submission/hide-from-front.png)
 

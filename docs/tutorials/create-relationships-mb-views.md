@@ -24,7 +24,7 @@ In this practice, we need these tools:
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the courses and instructors;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create relationships between these post types;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create the pages and their template for relationships;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI on the backend to create custom fields and relationships;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI on the backend to create custom fields and relationships;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the related courses and related instructors in the dashboard.
 
 ## 1. Creating new custom post types
@@ -53,7 +53,7 @@ Go to **Meta Box** > **Relationships** to create the relationships between the C
 
 ![Go to Meta Box > Relationships to create the relationships between the Courses and Instructors post types.](https://i.imgur.com/12A1HeA.png)
 
-There’ll be the **From** and **To** section to set the relationship. 
+There’ll be the **From** and **To** section to set the relationship.
 
 ![the From and To section to set the relationship](https://i.imgur.com/k5tohya.png)
 
@@ -81,7 +81,7 @@ That’s all to set the relationship. Go to a post editor of the **Course** post
 
 ![there’ll be a box at the right sidebar to choose which instructors are related to the current post You can select several courses in the section](https://i.imgur.com/2zQipFB.png)
 
-It’ll be the same when you add related courses for an instructor. 
+It’ll be the same when you add related courses for an instructor.
 
 ![the box to add related courses for an instructor](https://i.imgur.com/IfTtNyF.png)
 
@@ -115,7 +115,7 @@ Then, choose **Post content** to get detailed information about the instructor.
 
 ![choose Post content to get detailed information about the instructor](https://i.imgur.com/oUCApg4.png)
 
-Next, we’ll create a section to display a list of courses contributed by this instructor. It’s the relationship that we want. So we will get posts following the created relationships. 
+Next, we’ll create a section to display a list of courses contributed by this instructor. It’s the relationship that we want. So we will get posts following the created relationships.
 
 Move on to the **Query** tab. There is the name of the relationship that we created.
 
@@ -127,7 +127,7 @@ We’re creating a template for the Instructor singular page, so choose the **Co
 
 There are some lines of code display.
 
-**_Explanation_**: 
+**_Explanation_**:
 
 * `{% set relationship = attribute( relationships, 'instructor-to-course' ) %}`: to query the posts following the relationship;
 * `{% for post in relationship.to %}`: this loop helps to list the posts because there will be multiple posts.
@@ -190,7 +190,7 @@ To display information about the related instructor, I also use the **Query** ta
 
 ![use the Query tab to display information about the related instructor, and choose the Connect From option](https://i.imgur.com/i1ywLPr.png)
 
-It also may have more than one related instructor, so there is a loop. Insert fields inside this loop to display the instructor information. 
+It also may have more than one related instructor, so there is a loop. Insert fields inside this loop to display the instructor information.
 
 In this case, I choose only the **Post title** to have the name of the instructors.
 
@@ -242,7 +242,7 @@ For the section that displays the course’s information, add this code.
 {% set args = { post_type: 'course', posts_per_page: -1, order: 'DESC'} %}
 {% set posts = mb.get_posts( args ) %}
 {% for post in posts %}
-    
+
 {% endfor %}
 ```
 
@@ -291,13 +291,13 @@ add_shortcode( 'instructor_list', function ($atts) {
 			'id' 	=>	'instructor-to-course',
 			'to'  => $courseid,
 		],
-		
+
 	]);
-	
-	$resultstr = array(); 
+
+	$resultstr = array();
   	if( $connected->have_posts() ): while ( $connected->have_posts() ) : $connected->the_post();
 		 $resultstr[] = '<a href="'.get_the_permalink().'">'.get_the_title().'</a>';
-  	endwhile; endif;	
+  	endwhile; endif;
 	echo implode(", ",$resultstr);
   	wp_reset_postdata();
 	return ob_get_clean();
@@ -317,10 +317,10 @@ $connected = new WP_Query( [
 These code are to stipulate that we will get data from the relationship that connects to the current post and has the `instructor-to-course` ID.
 
 ```
-$resultstr = array(); 
+$resultstr = array();
   if( $connected->have_posts() ): while ( $connected->have_posts() ) : $connected->the_post();
     $resultstr[] = '<a href="'.get_the_permalink().'">'.get_the_title().'</a>';
-  endwhile; endif;	
+  endwhile; endif;
   echo implode(", ",$resultstr);
   wp_reset_postdata();
   return ob_get_clean();

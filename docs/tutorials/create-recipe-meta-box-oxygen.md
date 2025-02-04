@@ -21,7 +21,7 @@ The necessary tools are listed below:
 
 * [Meta Box](https://metabox.io): to have framework to create custom post types and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types for the recipes;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields to save the recipe information.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields to save the recipe information.
 
 The last one is [Oxygen](https://oxygenbuilder.com/). You should use the 3.9 version or higher which has the integration with Meta Box already.
 

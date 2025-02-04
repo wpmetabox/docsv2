@@ -29,11 +29,11 @@ Display "Toggle All" button | `select_all_none` | Display "Toggle All" button to
 :::note
 
 * The keys are for using with code.
-* The interface of field settings just comes when you have the [Meta Box Builder extension](https://metabox.io/plugins/meta-box-builder/) in your pocket. It’s a premium extension providing the UI to create and configure fields visually. It’s already bundled in the **Meta Box AIO** and MB Core.
+* The interface of field settings just comes when you have the [MB Builder extension](https://metabox.io/plugins/meta-box-builder/) in your pocket. It’s a premium extension providing the UI to create and configure fields visually. It’s already bundled in the **Meta Box AIO** and MB Core.
 
 :::
 
-When creating the field with **Meta Box Builder**, just input options into the **Choices** box.
+When creating the field with **MB Builder**, just input options into the **Choices** box.
 
 ![Input the label of the options in the Choices box](https://i.imgur.com/cAtrHeY.png)
 

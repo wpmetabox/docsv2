@@ -28,7 +28,7 @@ So, we need some of the following tools.
 
 * [The Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and set up a template for displaying images. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for displaying before and after images;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save images and related content visually.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save images and related content visually.
 
 Notice that if you are adding before and after images for posts in a custom post type, you should enable the [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/) extension to have the post type as well.
 

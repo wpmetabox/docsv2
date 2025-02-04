@@ -27,7 +27,7 @@ Here are some Meta Box extensions for the advanced features:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields, and relationships;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the courses and instructors;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create relationships between these post types;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI on the backend to create custom fields and relationships;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI on the backend to create custom fields and relationships;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the related courses and related instructors in the dashboard.
 * **Breakdance** to build the pages.
 
@@ -106,14 +106,14 @@ Go to **Breakdance** > **Global Blocks**.
 ![Go to Breakdance > Global Blocks.](https://i.imgur.com/4s8CrHS.png)
 
 Select **Div** element to cover the whole block.
- 
+
 ![Select Div element to cover the whole block.](https://i.imgur.com/YrvCb8z.png)
 
-Add an **Image** element to show the course image. 
+Add an **Image** element to show the course image.
 
 ![Add an Image element to show the course image.](https://i.imgur.com/p9u7vJx.png)
 
-Click on the **Insert Dynamic Data** button to insert dynamic data to this element. 
+Click on the **Insert Dynamic Data** button to insert dynamic data to this element.
 
 ![Click on the Insert Dynamic Data button to insert dynamic data to this element.](https://i.imgur.com/Xm4E3cR.png)
 
@@ -149,7 +149,7 @@ This course’s information is saved in a custom field created with Meta Box, so
 
 ![Insert dynamic data to the Text element. In the Metabox section, choose the name of the custom field.](https://i.imgur.com/yRW4pyK.png)
 
-For other lines, in the same way, just duplicate this **Div** element, change each **Text** element inside to get the right name and data from custom fields. 
+For other lines, in the same way, just duplicate this **Div** element, change each **Text** element inside to get the right name and data from custom fields.
 
 ![Duplicate Div element, change each Text element inside to get the right name and data from custom fields.](https://i.imgur.com/9xAlTWz.png)
 

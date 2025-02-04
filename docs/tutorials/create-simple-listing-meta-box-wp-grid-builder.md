@@ -29,7 +29,7 @@ In the upcoming execution, we’ll create them one by one.
 To do it, we need the [Meta Box](https://metabox.io) and some of its extensions, including:
 
 * **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**: to create custom post types for the restaurants;
-* **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: to have a UI in the back end to create custom fields to save extra information about restaurants.
+* **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to have a UI in the back end to create custom fields to save extra information about restaurants.
 
 Next, we need **[WP Grid Builder](https://wpgridbuilder.com/)** to build the page.
 

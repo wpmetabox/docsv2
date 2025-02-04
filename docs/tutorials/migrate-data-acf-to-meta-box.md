@@ -9,7 +9,7 @@ You can easily move data from **ACF** to **Meta Box** with the help of the **MB 
 
 In addition to using the <a href="https://metabox.io/">Meta Box</a>, make sure you already have these extensions:
 
-* <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>: A Meta Box premium extension that provides a UI to create and manage custom fields on the backend;
+* <a href="https://metabox.io/plugins/meta-box-builder/">MB Builder</a>: A Meta Box premium extension that provides a UI to create and manage custom fields on the backend;
 * <a href="https://metabox.io/plugins/mb-acf-migration/">MB ACF Migration</a>: This extension is also available in the WordPress repo. Besides, if you use Meta Box AIO or Meta Box Core (in the premium bundle), go to **Meta Box** &gt; **Extensions**, and you will see MB ACF Migration in the list. Just tick to enable it.
 
 ![Enable the necessary extentions](https://i.imgur.com/Ym7KUMY.png)

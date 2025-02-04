@@ -22,7 +22,7 @@ Here are the tools we need for this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating custom post types and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/meta-box-builder/): to create a custom post type named Video;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for saving video’s information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for saving video’s information;
 * [Breakdance](https://breakdance.com/): to build the page.
 
 ## 1. Creating a new custom post type
@@ -119,7 +119,7 @@ Next, look for the **Post Loop Builder**. In the **Global Block** section, choos
 
 ![In the global block section, choose the one we’ve just created](https://imgur.com/OyGCgQK.png)
 
-Then move to the **Query** section, choose **Custom**, and edit the query. Choose the **Post Types** as **Videos** to get data from this post type. 
+Then move to the **Query** section, choose **Custom**, and edit the query. Choose the **Post Types** as **Videos** to get data from this post type.
 
 ![Choose the post types as videos to get data from this post type](https://imgur.com/8YhDgqS.png)
 

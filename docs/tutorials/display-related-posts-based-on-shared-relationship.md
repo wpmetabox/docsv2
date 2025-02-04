@@ -25,7 +25,7 @@ These are some tools we need for this tutorial:
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the events and artists;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create relationships between these post types;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the related events and related artists in the dashboard;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have the UI to create the relationship in an intuitive way. In addition, if you want to add extra information about the events and artists, you also can use this extension to create custom fields to store that kind of data. In this practice, I don’t use it to create custom fields to make it more simple.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have the UI to create the relationship in an intuitive way. In addition, if you want to add extra information about the events and artists, you also can use this extension to create custom fields to store that kind of data. In this practice, I don’t use it to create custom fields to make it more simple.
 
 ## 1. Creating new custom post types
 
@@ -121,8 +121,8 @@ $connected = new WP_Query( [
 ] );
 
 $atist_related = [];
-while ( $connected->have_posts() ) : 
-	$connected->the_post(); 
+while ( $connected->have_posts() ) :
+	$connected->the_post();
 	$atist_related[] = get_the_ID();
 endwhile;
 
@@ -134,9 +134,9 @@ foreach ( $atist_related as $id_atist ) :
 	        'to'      => $id_atist,
 	    ],
 	] );
-	while ( $connected1->have_posts() ) : 
+	while ( $connected1->have_posts() ) :
 		$connected1->the_post();
-		
+
 	    $events_related [get_the_ID()] = get_the_title();
 	endwhile;
 endforeach;
@@ -179,8 +179,8 @@ I also created an empty array `$atist_related = [];`. It will be used to store t
 
 ```css
 $atist_related = [];
-while ( $connected->have_posts() ) : 
-	$connected->the_post(); 
+while ( $connected->have_posts() ) :
+	$connected->the_post();
 	$atist_related[] = get_the_ID();
 endwhile;
 ```
@@ -199,9 +199,9 @@ foreach ( $atist_related as $id_atist ) :
 	        'to'      => $id_atist,
 	    ],
 	] );
-	while ( $connected1->have_posts() ) : 
+	while ( $connected1->have_posts() ) :
 		$connected1->the_post();
-		
+
 	    $events_related [get_the_ID()] = get_the_title();
 	endwhile;
 endforeach;

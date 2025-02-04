@@ -21,14 +21,14 @@ So, we need these tools to do it including
 
 Meta Box plugin to have a framework to create custom post types and custom fields.
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type for videos;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields easily;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields easily;
 * [Bricks](https://bricksbuilder.io/): to build the page.
 
 ## 1. Creating a custom post type
 
 Go to **Meta Box** > **Post Type** to create a new post type.
 
-![Create a custom post type](https://i.imgur.com/THfH67F.png) 
+![Create a custom post type](https://i.imgur.com/THfH67F.png)
 
 Pay attention to the **Supports** tab, I want to display the author's information so tick the **Author** option.
 
@@ -52,7 +52,7 @@ In this case, **Meta Box** has the oEmbed field that allows you to save the URL 
 
 After creating the field, go to the **Settings** tab, set the Location as the **Post** type, and choose **Video** to apply the created field to this post type.
 
-![Set location for the created field](https://i.imgur.com/gW76P1w.png) 
+![Set location for the created field](https://i.imgur.com/gW76P1w.png)
 
 After publishing, you'll see the created custom field in the post editor.
 
@@ -60,7 +60,7 @@ After publishing, you'll see the created custom field in the post editor.
 
 As I mentioned about ticking the **Author** option in the post type. Now we can see this section to choose the **Author** for the post here.
 
-![Choose Author option](https://i.imgur.com/9ABCggh.png) 
+![Choose Author option](https://i.imgur.com/9ABCggh.png)
 
 Let’s move on to the next steps.
 
@@ -68,13 +68,13 @@ Let’s move on to the next steps.
 
 Move to **Meta Box** > **Pages** > **Add New** to create a new page for the **Video Gallery**.
 
-![Add a new page](https://i.imgur.com/WoeAcXy.png) 
+![Add a new page](https://i.imgur.com/WoeAcXy.png)
 
-After creating the page, just edit it with **Bricks**. 
+After creating the page, just edit it with **Bricks**.
 
 First, add a **Section** element to cover the content of the page and add a **Post Title** element inside to get the page title automatically.
 
-![Add a post title element](https://i.imgur.com/04MTJ9Q.gif) 
+![Add a post title element](https://i.imgur.com/04MTJ9Q.gif)
 
 Next, add some Div elements to divide content into sections.
 
@@ -91,7 +91,7 @@ Choose the **Select** dynamic data button and find the **Video** oEmbed field in
 
 Scroll down to the **Overlay** section, choose **Select** dynamic data > **Video** oEmbed field.
 
-![Scroll down to the Overlay section, and choose Select dynamic data > Video oEmbed field](https://i.imgur.com/EsjSm8G.gif) 
+![Scroll down to the Overlay section, and choose Select dynamic data > Video oEmbed field](https://i.imgur.com/EsjSm8G.gif)
 
  Then, add a new **Div** element. You’ll see the preview of the video as you want.
 
@@ -99,25 +99,25 @@ Scroll down to the **Overlay** section, choose **Select** dynamic data > **Video
 
 To get the author of the video, add the Author element inside the **Div**. There‘ll be some information you want to display for the author or not.
 
-![Add the Author element inside the Div](https://i.imgur.com/bvTN4lN.png) 
+![Add the Author element inside the Div](https://i.imgur.com/bvTN4lN.png)
 
-For other information about the video, I added a new **Div** tag to group all 3 elements for easy styling later. 
+For other information about the video, I added a new **Div** tag to group all 3 elements for easy styling later.
 
 Add the **Post Title** element and change the HTML tag also add a class for it to style for the next step.
 
-![Add the Post Title element and change the HTML tag](https://i.imgur.com/XQ7pM1E.png) 
+![Add the Post Title element and change the HTML tag](https://i.imgur.com/XQ7pM1E.png)
 
 Add the **Basic Text** to show the author name and use the **Select** dynamic data button to connect it to the right field.
 
-![Add the Basic Text](https://i.imgur.com/8BmLWMT.png) 
+![Add the Basic Text](https://i.imgur.com/8BmLWMT.png)
 
 To get the description of the video, add the **Post Content** element.
 
-![Add the Post Content element](https://i.imgur.com/2WIup8b.png) 
+![Add the Post Content element](https://i.imgur.com/2WIup8b.png)
 
-To display the date of the video, add the **Basic Text** element, then connect it to the post date through the **Select** dynamic data button. 
+To display the date of the video, add the **Basic Text** element, then connect it to the post date through the **Select** dynamic data button.
 
-![Add the Basic Text element](https://i.imgur.com/kl2W7AF.png) 
+![Add the Basic Text element](https://i.imgur.com/kl2W7AF.png)
 
 After saving, you will see the video gallery on the page.
 
@@ -125,12 +125,12 @@ After saving, you will see the video gallery on the page.
 
 For styling the page, just go back to the page editor with **Bricks**. You can choose each element to style each one individually.
 
-![Style the page](https://i.imgur.com/01HYy7f.png) 
+![Style the page](https://i.imgur.com/01HYy7f.png)
 
 For further styling, you can also use some **CSS**.
 
-![Add some CSS](https://i.imgur.com/Vee375q.png) 
+![Add some CSS](https://i.imgur.com/Vee375q.png)
 
 Now, you’ll see the new look of the page.
 
-![The final result](https://i.imgur.com/n9yefb4.png) 
+![The final result](https://i.imgur.com/n9yefb4.png)

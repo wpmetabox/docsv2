@@ -40,7 +40,7 @@ The plugin will migrate all custom post types and custom taxonomies created in P
 
 ### Field groups
 
-Pods field groups are migrated to Meta Box's field groups, which requires [Meta Box Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
+Pods field groups are migrated to Meta Box's field groups, which requires [MB Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
 
 :::caution
 
@@ -71,7 +71,7 @@ Pods stores the field values in the database with the meta key = field ID, which
 
 ### Settings Page
 
-The plugin also migrates all Settings Page from Pods to Meta Box. You'll need the [Meta Box Builder](/extensions/meta-box-builder/) and [MB Settings Page](/extensions/mb-settings-page/) to do this. We'll migrate the settings and data of all Pods settings page to Meta Box.
+The plugin also migrates all Settings Page from Pods to Meta Box. You'll need the [MB Builder](/extensions/meta-box-builder/) and [MB Settings Page](/extensions/mb-settings-page/) to do this. We'll migrate the settings and data of all Pods settings page to Meta Box.
 
 :::caution
 
@@ -81,7 +81,7 @@ The plugin also migrates all Settings Page from Pods to Meta Box. You'll need th
 
 ### Relationships
 
-The plugin also migrates all relationships from Pods to Meta Box. You'll need the [Meta Box Builder](/extensions/meta-box-builder/) and [MB Relationships](/extensions/mb-relationships/) to do this. As the settings are quite different between the plugins, we'll migrate the settings of all Pods relationships to many-to-many relationships in Meta Box.
+The plugin also migrates all relationships from Pods to Meta Box. You'll need the [MB Builder](/extensions/meta-box-builder/) and [MB Relationships](/extensions/mb-relationships/) to do this. As the settings are quite different between the plugins, we'll migrate the settings of all Pods relationships to many-to-many relationships in Meta Box.
 
 Of course, the data of relationships (the connections between items) are also migrated.
 

@@ -17,7 +17,7 @@ In such cases, I created an ebook page as an example:
 
 ## Preparation
 
-This archive page shows the product's detailed information along with 2 buttons. The first one allows directly downloading a PDF file. And the second button is to view it online. 
+This archive page shows the product's detailed information along with 2 buttons. The first one allows directly downloading a PDF file. And the second button is to view it online.
 
 Each ebook will be a unique post of a custom post type. The name of the ebook and its image are the title and featured image of the post. We'll use a custom field provided by Meta Box to store the PDF file and the two buttons will link to this file.
 
@@ -26,9 +26,9 @@ For this practice, we need these tools:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields:
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for ebooks;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create and style the template for the page without touching the theme files;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields.
 
-You can install them individually or use **Meta Box AIO**. 
+You can install them individually or use **Meta Box AIO**.
 
 ## 1. Creating a custom post type
 
@@ -72,7 +72,7 @@ Then, go to **Views** of **Meta Box** to create a new template for the page.
 
 ### 3.3. Querying the posts
 
-Add some code to the **Template** tab as follows: 
+Add some code to the **Template** tab as follows:
 
 ![Add some code to the Template tab](https://i.imgur.com/wlESRzO.png)
 
@@ -90,7 +90,7 @@ Let’s get through each line with me.
 {% set args = { post_type: 'ebook', posts_per_page: -1 } %}
 ```
 
-This line of code is to declare that we will get posts from the post type that has an ID as **'_ebook_'**. The number **_-1_** means that we will display all the posts on the page. You can change it as you want. 
+This line of code is to declare that we will get posts from the post type that has an ID as **'_ebook_'**. The number **_-1_** means that we will display all the posts on the page. You can change it as you want.
 
 Next, we’ll use the **_mb.get_posts( )_** function to get posts.
 
@@ -108,7 +108,7 @@ To display the ebook information, you can add code or just insert fields from th
 
 ![Insert fields from the right sidebar into the above loop to display the ebook information](https://i.imgur.com/LEfECsx.png)
 
-Choose the **Post thumbnail** field to display the book images. 
+Choose the **Post thumbnail** field to display the book images.
 
 ![Choose the Post thumbnail field to display the book images](https://i.imgur.com/bXcG7Oj.png)
 
@@ -130,7 +130,7 @@ Change some codes to name the button and set it to download ebooks directly.
 
 ![Change some codes to name the button and set it to download ebooks directly](https://i.imgur.com/brhf993.png)
 
-Insert the custom field once again to have the **preview button**. 
+Insert the custom field once again to have the **preview button**.
 
 ![Insert the custom field to have the preview button](https://i.imgur.com/6Txs0eW.png)
 

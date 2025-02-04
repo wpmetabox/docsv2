@@ -15,15 +15,15 @@ You can also combine conditions. It works not only for meta boxes or custom fiel
 
 ### With UI
 
-If you are using [Meta Box Builder](/extensions/meta-box-builder/) (which is included in [Meta Box Lite](https://metabox.io/lite/) or [Meta Box AIO](https://metabox.io/pricing/)), you can set conditional logic for a specific field by going to the tab **Advanced** and add rules in the **Conditional Logic** section:
+If you are using [MB Builder](/extensions/meta-box-builder/) (which is included in [Meta Box Lite](https://metabox.io/lite/) or [Meta Box AIO](https://metabox.io/pricing/)), you can set conditional logic for a specific field by going to the tab **Advanced** and add rules in the **Conditional Logic** section:
 
-![conditional logic in Meta Box Builder](https://i.imgur.com/xOPcH0N.png)
+![conditional logic in MB Builder](https://i.imgur.com/xOPcH0N.png)
 
 In this section, you can choose to show or hide a field when all or any conditions match. For each rule, you need to select or enter a dependency field ID, the operator and enter the field value. The dependency field ID is auto-suggested from the list of current fields and you can add as many rules as you want:
 
 ![conditional logic rules](https://i.imgur.com/WzTf0Ka.png)
 
-Using Meta Box Builder is intuitive and self-explained.
+Using MB Builder is intuitive and self-explained.
 
 For advanced usage (like with custom conditions or using outside field groups), please use code which are explained in detailed below.
 

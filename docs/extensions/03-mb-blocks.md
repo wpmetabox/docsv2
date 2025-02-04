@@ -13,9 +13,9 @@ Here is a screenshot of a custom Gutenberg block (hero area) that's created usin
 
 The preview of the block is displayed in the main content area while the block configuration is displayed on the right. This allows you to edit the block content and live-preview the block in real time. Later, you can also change where the block settings are displayed (on the sidebar or right in the main content area).
 
-## Block registration with Meta Box Builder
+## Block registration with MB Builder
 
-The easiest way to create a block is using [Meta Box Builder](/extensions/meta-box-builder/). The plugin provides you with the UI to create blocks easily. This is the video on doing that:
+The easiest way to create a block is using [MB Builder](/extensions/meta-box-builder/). The plugin provides you with the UI to create blocks easily. This is the video on doing that:
 
 <LiteYouTubeEmbed id='v3ke1DBlWuk' />
 
@@ -1019,11 +1019,11 @@ To use a JavaScript hook, please refer to [this tutorial](https://metabox.io/wor
 
 <LiteYouTubeEmbed id='PAisKy8eC2U' />
 
-**Build Gutenberg Blocks Visually With Meta Box Builder**
+**Build Gutenberg Blocks Visually With MB Builder**
 
 <LiteYouTubeEmbed id='v3ke1DBlWuk' />
 
-See more details on [using Meta Box Builder with MB Blocks](https://metabox.io/build-gutenberg-blocks-visually-with-meta-box-builder/).
+See more details on [using MB Builder with MB Blocks](https://metabox.io/build-gutenberg-blocks-visually-with-meta-box-builder/).
 
 ## Examples
 

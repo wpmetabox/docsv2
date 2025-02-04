@@ -14,7 +14,7 @@ Here are the tools we’ll use in this practice:
 
 * [Meta Box](https://metabox.io/)
 * [MB Custom Post Type & Taxonomies](https://wordpress.org/plugins/mb-custom-post-type/): to create custom post types for events;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It provides UI to create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): It provides UI to create custom fields;
 
 ## 1. Creating a new post type
 
@@ -100,7 +100,7 @@ add_action( 'template_redirect', 'justread_ics_download' );
 
 **Explanation**:
 
-The ICS class is used to export the **ics** file when users click the **Add to Calendar** button and download this file. This class is declared in this `ICS.php` [file](https://github.com/wpmetabox/tutorials/blob/master/ics-calendar/ICS.php). 
+The ICS class is used to export the **ics** file when users click the **Add to Calendar** button and download this file. This class is declared in this `ICS.php` [file](https://github.com/wpmetabox/tutorials/blob/master/ics-calendar/ICS.php).
 
 When going to the event's single page, you will see the result:
 

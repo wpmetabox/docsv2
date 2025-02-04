@@ -24,7 +24,7 @@ I will separate the list into pages, limit the number of users displayed on a pa
 These are the tools we need for this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to [create custom fields with an intuitive user interface](https://docs.metabox.io/tutorials/create-custom-fields/) (UI) with easy drag-and-drop manipulations on the backend. If you can code to create a custom field, you can skip this extension. But there is another free tool if you still want to use UI, which is the [Online Genera-tor](https://metabox.io/online-generator/).
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to [create custom fields with an intuitive user interface](https://docs.metabox.io/tutorials/create-custom-fields/) (UI) with easy drag-and-drop manipulations on the backend. If you can code to create a custom field, you can skip this extension. But there is another free tool if you still want to use UI, which is the [Online Genera-tor](https://metabox.io/online-generator/).
 * [DataTables](https://datatables.net/): It is a library that uses jQuery to add advanced features to tables in HTML. It helps you display and create functions (pagination and search) with tables more easily.
 
 ## 1. Creating custom fields
@@ -81,7 +81,7 @@ In this practice, I’m providing two ways to display the user list on the page.
 ### 3.1. Method 1: Using PHP
 
 #### 3.1.1. Creating a template
- 
+
 We should create a template for the page first. So, go to the theme folder and create a new php file.
 
 ![Go to the theme folder and create a new php file](https://i.imgur.com/gmCmKoG.png)
@@ -216,8 +216,8 @@ Next, add the following script that helps to use the **DataTables** library.
 (function ($) {
     $(document).ready(function () {
         $('#Userslist').DataTable();
-    }); 
-})(jQuery); 
+    });
+})(jQuery);
 
 ```
 
@@ -320,7 +320,7 @@ Then, go to the **JavaScript** tab, add the same script as method 1. This helps 
 (function ($) {
     $(document).ready(function () {
         $('#Userslist').DataTable();
-    }); 
+    });
 })(jQuery);
 ```
 

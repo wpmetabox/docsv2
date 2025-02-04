@@ -25,7 +25,7 @@ For this practice, we need some tools:
 
 * [Meta Box](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post type and custom fields.
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post type for the team members;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI in the backend to create custom fields easily;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI in the backend to create custom fields easily;
 * **Breakdance**: to build the page.
 
 ## Creating a new post type
@@ -78,7 +78,7 @@ In the first column, add a Post Featured Image element to have the avatar saved 
 
 Next, we’ll create another div inside this column to contain all the social networks.
 
-Now, select an Icon element to create the social network’s icon. Then, choose the icon's shape. 
+Now, select an Icon element to create the social network’s icon. Then, choose the icon's shape.
 
 ![Select an Icon element to create the social network's icon](https://i.imgur.com/XH98BNV.png)
 

@@ -5,7 +5,7 @@ title: Creating a video gallery page - Meta Box + Elementor
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-In this series, we learned how to **create a video gallery page** using page builders. This post is one of them on how to create it using **Meta Box** and **Elementor**. 
+In this series, we learned how to **create a video gallery page** using page builders. This post is one of them on how to create it using **Meta Box** and **Elementor**.
 
 This is the video gallery page that I’ll create:
 
@@ -23,7 +23,7 @@ In this practice, we need these tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework that allows creating custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for videos;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them in the page built with Elementor easily;
 * **Elementor Pro**: to build the page.
 
@@ -55,7 +55,7 @@ In this case, Meta Box has the **oEmbed** field that allows you to save the **UR
 
 ![Set the field in the oEmbed type](https://i.imgur.com/MnWrqMP.png)
 
-Creating the new fields was done. Go to the **Settings** tab, choose **Location** as **Post Type** and then, select **Video** post type to apply the created field to it. 
+Creating the new fields was done. Go to the **Settings** tab, choose **Location** as **Post Type** and then, select **Video** post type to apply the created field to it.
 
 ![Go to the Settings tab, choose Location as Post Type and then, select Video post type to apply the created field](https://i.imgur.com/zVzROms.png)
 
@@ -91,7 +91,7 @@ Then, add a **Shortcode** element inside it to display the video preview.
 
 ![Add a Shortcode element inside it to display the video preview](https://i.imgur.com/Q5t6fQI.png)
 
-Since, the video links are saved in a custom field created with **Meta Box**, use the **Dynamic Tags** and look for **Meta Box Field** in the **Post** section. 
+Since, the video links are saved in a custom field created with **Meta Box**, use the **Dynamic Tags** and look for **Meta Box Field** in the **Post** section.
 
 ![Use the Dynamic Tags and look for Meta Box Field in the Post section](https://i.imgur.com/FN6xsfK.png)
 
@@ -111,7 +111,7 @@ You can change its settings to choose to display some kind of **Author** informa
 
 ![Choose to display some kind of Author information](https://i.imgur.com/QXhWqWp.png)
 
-In the second column, add the **Post Title** to display the video title. 
+In the second column, add the **Post Title** to display the video title.
 
 ![Add the Post Title to display the video title](https://i.imgur.com/3Vw7H0o.png)
 

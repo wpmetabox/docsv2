@@ -24,7 +24,7 @@ For demonstration purposes, I’ll translate information about a post-author as 
 Sometimes you want to store some extra information of users or taxonomies in custom fields created with Meta Box then we can use WPML to translate them. So, these are the tools we need in this practice:
 
 - [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create the custom fields for the users and taxonomies. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
-- [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create the custom fields visually;
+- [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create the custom fields visually;
 - [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): to add custom fields to taxonomies;
 - [MB User Meta](https://metabox.io/plugins/mb-user-meta/): to add custom fields to a user profile;
 - [MB Custom Post Types and Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy in the case that you don’t use the default;

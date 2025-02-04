@@ -22,7 +22,7 @@ And, we’re creating a page with another style for demo only.
 In addition to using the [Meta Box](https://metabox.io/plugins/meta-box-builder/), make sure you already have these extensions:
 
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): It helps to create a custom post type that we need for recipes;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
 * [MB Views](https://metabox.io/plugins/mb-views/): Build front-end templates for WordPress without touching theme files.
 * [eStar](https://gretathemes.com/wordpress-themes/estar/): It is a lightweight and highly customizable WordPress theme.
 

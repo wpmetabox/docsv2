@@ -14,9 +14,9 @@ We need [Meta Box](https://docs.metabox.io/installation/) to create custom field
 
 ![Install Meta Box core plugin](https://i.imgur.com/VN8iwgE.png)
 
-To have a UI on the backend to create custom fields easily, we need **Meta Box Builder**. It’s a premium Meta Box extension. You can download it individually [here](https://metabox.io/plugins/meta-box-builder/) or use Meta Box AIO to have all Meta Box extensions.
+To have a UI on the backend to create custom fields easily, we need **MB Builder**. It’s a premium Meta Box extension. You can download it individually [here](https://metabox.io/plugins/meta-box-builder/) or use Meta Box AIO to have all Meta Box extensions.
 
-In case you haven’t had the Meta Box Builder, you still can create custom fields by using the [Online Generator](https://metabox.io/online-generator/) provided by Meta Box, but it is only a simplified version of the Meta Box Builder.
+In case you haven’t had the MB Builder, you still can create custom fields by using the [Online Generator](https://metabox.io/online-generator/) provided by Meta Box, but it is only a simplified version of the MB Builder.
 
 ## Adding new field group and custom fields
 

@@ -25,7 +25,7 @@ So, we need these tools to do this practice:
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types named Restaurants;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields for saving restaurants’ information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields for saving restaurants’ information;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create the template for the featured restaurants section;
 * [MB Admin Columns (optional)](https://metabox.io/plugins/mb-admin-columns/): to show the custom fields as an admin column.
 
@@ -85,17 +85,17 @@ In the **Template** tab, add some code to display the featured restaurants:
 
 ![Add some code](https://i.imgur.com/JWsovKT.png)
 
-``` 
+```
 {% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
 {% set posts = mb.get_posts( args ) %}
 	{% for post in posts %}
-	{% endfor %} 
+	{% endfor %}
 ```
 
 In there:
 
-``` 
-{% set args = { post_type: 'restaurant', posts_per_page: -1 } %} 
+```
+{% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
 ```
 
 This line of code is to declare to get posts from the '**restaurant**' post type.
@@ -108,10 +108,10 @@ Since we just want to display only the restaurants which are featured, we need t
 
  ```
 {% if post.feature_the_restaurant == 1 %}
-{% endif %} 
+{% endif %}
 ```
 
-This is the condition to display the selected posts only. feature_the_restaurant is the **ID** of the **Switch** field. Corresponding to the **On** and **Off** status of it, the value that is saved will be 1 and 0, respectively. So, this line of code means that if the posts have the switch field turned **On**, they will be displayed. 
+This is the condition to display the selected posts only. feature_the_restaurant is the **ID** of the **Switch** field. Corresponding to the **On** and **Off** status of it, the value that is saved will be 1 and 0, respectively. So, this line of code means that if the posts have the switch field turned **On**, they will be displayed.
 
 Now, let’s insert fields inside the condition to display information from the posts. You can easily get these lines of code by using the **Insert Fields** button and then choose the corresponding fields you want to get the data from.
 
@@ -128,7 +128,7 @@ Now, let’s insert fields inside the condition to display information from the 
 
 ![Add the code](https://i.imgur.com/2YjR5Yp.png)
 
-That’s all for the code to get the information of the restaurants. 
+That’s all for the code to get the information of the restaurants.
 
 Now, set this template type as shortcode. After publishing, there will be a shortcode automatically generated like this:
 

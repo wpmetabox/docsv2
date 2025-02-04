@@ -36,7 +36,7 @@ If you use **Open Street Maps**, then you can bypass this step. Open Street Maps
 
 ### Field group settings
 
-If you use **Open Street Maps**, you need to *add an Open Street Maps field* to your field group. Then add `geo` to your field group custom settings in the Meta Box Builder like this:
+If you use **Open Street Maps**, you need to *add an Open Street Maps field* to your field group. Then add `geo` to your field group custom settings in the MB Builder like this:
 
 ![enable geolocation for open street maps](https://i.imgur.com/M5ar5i2.png)
 
@@ -46,7 +46,7 @@ If you use code, then add this line to your field group settings:
 'geo' => true,
 ```
 
-If you use **Google Maps**, it's _not_ required to add a Google Maps field to your field group. To enable geolocation, add the following custom settings in the field group settings in the Meta Box Builder like this:
+If you use **Google Maps**, it's _not_ required to add a Google Maps field to your field group. To enable geolocation, add the following custom settings in the field group settings in the MB Builder like this:
 
 ![enable geolocation for google maps](https://i.imgur.com/XII5Kyw.png)
 
@@ -201,7 +201,7 @@ This feature is available for **Google Maps** only.
 
 Let's say we have a field with id `dummy_field`, this field ID is not in the *address component* list so the plugin won't auto-populate data to it. To make the plugin auto-populate data (`administrative_area_level_1`) to that field, add the following parameter to the field:
 
-With Meta Box Builder:
+With MB Builder:
 
 ![custom binding](https://i.imgur.com/DuvReWa.png)
 

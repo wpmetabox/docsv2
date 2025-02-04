@@ -33,7 +33,7 @@ These are some tools we use for this practice:
 
 * [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields for the events. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the events;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to help Elementor elements get the dynamic data from custom fields created with Meta Box.
 * **Elementor** to build the page, obviously. I also use **Elementor Pro**, which Meta Box already has the integration with to display the information from custom fields.
 
@@ -70,7 +70,7 @@ After creating all the needed fields, go to the **Settings** tab > choose **Loca
 Now, in the post editor, you will see the created custom fields.
 
 ![The created custom fields in the post editor](https://i.imgur.com/6XgSeKy.png)
- 
+
 Just input data into them.
 
 Here are some posts that I created for example:
@@ -162,7 +162,7 @@ Go to the **Theme Functions** file, add these lines of code.
 add_action('elementor/query/filter_events', function($query) {
     $current_datetime = current_datetime()->format('Y-m-d');
     $query->set('post_type', ['event']);
-    $meta_query [] = [ 
+    $meta_query [] = [
         ‘Relations’ => ‘OR’
         [
             'key' => 'start_date',
@@ -172,7 +172,7 @@ add_action('elementor/query/filter_events', function($query) {
        [
             'key' => 'end_date',
             'value' => date($current_datetime),
-            'compare' => '>=',   
+            'compare' => '>=',
     ];
     $query->set('meta_query', $meta_query);
 });

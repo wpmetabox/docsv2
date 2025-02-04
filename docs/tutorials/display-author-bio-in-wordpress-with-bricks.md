@@ -5,7 +5,7 @@ title: Displaying author bio in wordpress - Meta Box + Bricks
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Having a section for their bio is to let people know more about the author who made the fantastic content. This way also helps to improve the credit of the content as well as the author on the post. Let’s dive in to explore how to display them with **Meta Box** and **Bricks**. 
+Having a section for their bio is to let people know more about the author who made the fantastic content. This way also helps to improve the credit of the content as well as the author on the post. Let’s dive in to explore how to display them with **Meta Box** and **Bricks**.
 
 This is an example for the bio section that we will create in this practice.
 
@@ -25,7 +25,7 @@ In this practice, we need some tools:
 
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create a bi-direactional relationship between posts and users to know which post from which author.
 * [MB User Meta](https://metabox.io/plugins/mb-user-meta/): It allows you to create fields for users.
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to save author information on an easy-to-use UI.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to save author information on an easy-to-use UI.
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to manage the posts from which authors and show it on the admin screen.
 * **Bricks** to build the page.
 
@@ -75,11 +75,11 @@ After publishing the relationship, you will see a new field on the right sidebar
 
 ![The box as a field at the right sidebar to choose which author is related to the current post](https://i.imgur.com/y23c757.png)
 
-Go to the user profile page, you will have a field to choose which posts contributed by this 
+Go to the user profile page, you will have a field to choose which posts contributed by this
 author.
 
 ![This is a field to choose which posts contributed by the author](https://i.imgur.com/2rXZLb4.png)
- 
+
 As well as, in the post editor, you also can choose an author who is related to the current post. You can select several authors in this section.
 
 ![This box to choose which author is related to the current post](https://i.imgur.com/qKe5G24.png)
@@ -91,7 +91,7 @@ You might have a template for the singular page where you display the post conte
 ![This is a template for the singular page where display the post content](https://i.imgur.com/jgxXe7K.png)
 
 Go to **Bricks**, and edit the template.
- 
+
 ![Go to Bricks, and edit the template](https://i.imgur.com/nxRrgfb.png)
 
 Go to the settings of this template, set a condition to assign to **Post** in the Post type.
@@ -99,14 +99,14 @@ Go to the settings of this template, set a condition to assign to **Post** in th
 ![In the setting of template, set a condition to assign to Post in the Post type](https://i.imgur.com/mHPySAi.gif)
 
 And, also set a preview for it in the **Populate content** section.
- 
+
 ![set a preview for it in the Populate content section](https://i.imgur.com/cWGNfYn.png)
 
 I’ll add the author bio at the bottom of the page body. So, add the **Heading** element for this section.
 
 ![add the Heading element for the author section](https://i.imgur.com/u0VIrNE.png)
 
-Add a **Block** for the section. 
+Add a **Block** for the section.
 
 ![Add a Block element for all information of the author](https://i.imgur.com/6iHj7OG.png)
 
@@ -116,7 +116,7 @@ I also will use this **Block** element again to set the layout and easier style 
 
 ### 3.1. Setting the query to get user
 
-Before displaying the author information, we should set a **Query** to get only the user who is set as author in the relationship field. So, enable query loop for the block which will cover all the author information. 
+Before displaying the author information, we should set a **Query** to get only the user who is set as author in the relationship field. So, enable query loop for the block which will cover all the author information.
 
 ![Enable query loop for the block to cover all the author information](https://i.imgur.com/Cv82Orz.png)
 
@@ -134,7 +134,7 @@ I will create a section with some basic information about an author like this.
 
 Based on the fields you have for the author, and which one you want to show, just add reasonable elements inside the Block element that we added the query to.
 
-Add an **Image** element for the author avatar. 
+Add an **Image** element for the author avatar.
 
 ![Add an Image element for the author avatar](https://i.imgur.com/Od62JNV.png)
 
@@ -142,7 +142,7 @@ Then select dynamic data from the corresponding field.
 
 ![select dynamic data from the corresponding field](https://i.imgur.com/ATuSO9q.png)
 
-For the name, title, and bio. I choose the **Basic Text** element. 
+For the name, title, and bio. I choose the **Basic Text** element.
 
 ![For the name, title, and bio, choose the Basic Text element](https://i.imgur.com/nGf22Sd.png)
 

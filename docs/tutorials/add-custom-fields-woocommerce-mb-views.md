@@ -20,7 +20,7 @@ In this practice, we absolutely need tools to create and customize the online st
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Views](https://metabox.io/plugins/mb-views/): to display value from custom fields on the product pages easily;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to has a UI in the backend to create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to has a UI in the backend to create custom fields;
 * **WooCommerce**: to create and customize the online store.
 
 You can install them individually or use **Meta Box AIO**.

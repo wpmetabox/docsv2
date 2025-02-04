@@ -56,7 +56,7 @@ This is a sample field settings array when creating this field with code:
 
 Meta Box uses ajax to increase the performance of the field query. Instead of fetching all users at once, the plugin now fetches only some users when the page is loaded, and then it fetches more users when users scroll down to the list.
 
-See this video for demonstration (made for posts, but works similar for users, the UI of the Meta Box Builder was from the old version, the new version of Meta Box Builder has a better UI):
+See this video for demonstration (made for posts, but works similar for users, the UI of the MB Builder was from the old version, the new version of MB Builder has a better UI):
 
 <LiteYouTubeEmbed id='2acm5gW59Mc' />
 

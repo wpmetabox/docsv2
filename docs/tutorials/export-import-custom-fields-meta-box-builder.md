@@ -4,7 +4,7 @@ title: Export/Import custom fields
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/">using code to embed custom fields from one site to others</a>, we could use another method supported by <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>. This extension allows you to export/import custom fields fast and easily.
+Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/">using code to embed custom fields from one site to others</a>, we could use another method supported by <a href="https://metabox.io/plugins/meta-box-builder/">MB Builder</a>. This extension allows you to export/import custom fields fast and easily.
 
 :::info
 
@@ -19,11 +19,11 @@ Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/
 
 ## Preparation
 
-We need to have the [Meta Box plugin](https://metabox.io/) and [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) on both websites, the original site and targeted one.
+We need to have the [Meta Box plugin](https://metabox.io/) and [MB Builder](https://metabox.io/plugins/meta-box-builder/) on both websites, the original site and targeted one.
 
 You can freely download and activate the Meta Box plugin from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
-You can install [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) individually or find it in the Meta Box AIO. This extension provides a UI to create custom fields and the export and import features.
+You can install [MB Builder](https://metabox.io/plugins/meta-box-builder/) individually or find it in the Meta Box AIO. This extension provides a UI to create custom fields and the export and import features.
 
 After activating two plugins, you’ll see a new **Meta Box** menu as below:
 
@@ -31,7 +31,7 @@ After activating two plugins, you’ll see a new **Meta Box** menu as below:
 
 ## Creating custom fields
 
-On the original site, let’s create some fields. We have a tutorial on creating custom fields with Meta Box Builder, please take a look for more detail [here](https://docs.metabox.io/tutorials/create-custom-fields/).
+On the original site, let’s create some fields. We have a tutorial on creating custom fields with MB Builder, please take a look for more detail [here](https://docs.metabox.io/tutorials/create-custom-fields/).
 
 Here we’ll create a field group named **Author** and export/import its settings to other sites for example.
 

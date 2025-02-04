@@ -29,7 +29,7 @@ We need to install the following tools:
 
 * [The Meta Box plugin](https://wordpress.org/plugins/meta-box): to have a framework to create a custom post type and custom fields for the form. It’s free and available on [wordpress.org](https://wordpress.org/plugins/meta-box).
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for subscribers.
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to visually create custom fields for the form.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to visually create custom fields for the form.
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to display custom fields on the front-end as a form.
 
 Finally, you need to have a Mailchimp account. In case you haven’t had it, go [here](https://login.mailchimp.com/) to create a new one.
@@ -129,7 +129,7 @@ You can go to the **Customizer** section > **Additional CSS** to add some code t
 .rwmb-form button {
    width: 100%;
 	 margin-top:20px;
-} 
+}
 .rwmb-field:not(:last-of-type){
 	  margin:0px !important;
 }

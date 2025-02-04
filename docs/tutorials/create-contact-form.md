@@ -23,7 +23,7 @@ For the advanced features from Meta Box, we need some of its extensions:
 
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the contacts;
 * [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/): to create forms that allow users to submit their information from the front end;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display contact’s information in the admin screen.
 
 ## 1. Creating a custom post type for contacts

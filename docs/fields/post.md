@@ -71,7 +71,7 @@ The default value of `query_args` is `['post_status' => 'publish']`. If you want
 
 Meta Box uses Ajax to increase the performance of the field query. Instead of fetching all posts at once, the plugin now fetches only some posts when the page is loaded, and then it fetches more posts when users scroll down to the list.
 
-See this video for a demonstration (the UI of the Meta Box Builder was from the old version, the new version of Meta Box Builder has a better UI):
+See this video for a demonstration (the UI of the MB Builder was from the old version, the new version of MB Builder has a better UI):
 
 <LiteYouTubeEmbed id='2acm5gW59Mc' />
 

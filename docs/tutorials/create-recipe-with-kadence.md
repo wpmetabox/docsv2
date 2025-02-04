@@ -20,7 +20,7 @@ This is the page for showing a recipe that I created as an example:
 This page is a single page that contains all the recipe information such as time, ingredients and so on, that will be saved in custom fields. Each recipe is saved in a post of a custom post type. So, we need these tools:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields for it;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a new custom post type for the recipe;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * **Kadence**: to create the page.
 
 ## 1. Creating a new custom post type
@@ -47,7 +47,7 @@ After creating all the fields, move to the **Settings** tabs, choose **Location*
 
 ![Go to Settings, choose Location as Post Type and select Recipe to apply these fields to this post type](https://i.imgur.com/bvRQksS.png)
 
-When creating a new post in Recipes, you’ll see all the created custom fields. 
+When creating a new post in Recipes, you’ll see all the created custom fields.
 
 ![All the created custom fields displayed on the post editor](https://i.imgur.com/JLYUTHX.png)
 

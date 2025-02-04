@@ -24,7 +24,7 @@ You should store the location in the post of each restaurant, using a custom fie
 So, we need these tools for this practice.
 
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating custom fields, and a template for displaying the map on the frontend;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields visually;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create the template easily in the event that you don’t want to add code directly to the theme.
 
 ## 1. Creating custom fields to fill in address
@@ -73,7 +73,7 @@ We have just created the map on the backend already, so it’s time to bring it 
 
 ### 2.1 Method 1: Using MB Views
 
-When using **MB Views**, there’ll be a button to add the map to the template without touching any code. It’s so convenient, especially for those who are not familiar with code. 
+When using **MB Views**, there’ll be a button to add the map to the template without touching any code. It’s so convenient, especially for those who are not familiar with code.
 
 ![When using MB Views, there’ll be a button to add the map to the template without touching any code.](https://i.imgur.com/Pv44lzb.png)
 
@@ -85,7 +85,7 @@ Click on the mentioned button, and a list of fields will display to choose from.
 
 ![Choose the field we use for the map](https://i.imgur.com/16hDr8D.png)
 
-For the output of the map, Meta Box also provides some options. 
+For the output of the map, Meta Box also provides some options.
 
 ![Set the output of the map](https://i.imgur.com/3UZwbWL.png)
 

@@ -23,7 +23,7 @@ So, in this practice, we need these tools:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input banner information;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the banner. It’s just optional;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
 
 You can install these extensions individually or just use **Meta Box AIO**.
 
@@ -79,11 +79,11 @@ Just add content for the banner.
 
 We’ll create a template and generate a shortcode to easily display the banner anywhere.
 
-There are two ways to do this. 
+There are two ways to do this.
 
 * **Adding PHP code** into the theme’s file. If you change the theme, the template as well as the shortcode will be missed.
 
-* Using the **MB Views** extension from **Meta Box**. It will ensure it always works. 
+* Using the **MB Views** extension from **Meta Box**. It will ensure it always works.
 
 We’ll go through to see both of these ways, then you can experience them all.
 
@@ -237,7 +237,7 @@ style="width: {{ site.banner.width }}
 
 This line helps turn data from custom fields to be an attribute to stipulate the style of the banner. In this case, it’s the width of the image `{{ site.banner.width }}` means the field has the ID as `width` in the settings page has the ID as `banner`.
 
-Just update the template, and see the new look of the banner on the page. 
+Just update the template, and see the new look of the banner on the page.
 
 ![The new look of the banner on the page](https://i.imgur.com/CLdD9rw.png)
 

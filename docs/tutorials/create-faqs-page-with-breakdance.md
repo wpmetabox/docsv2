@@ -22,7 +22,7 @@ Here are some tools we need for this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into pairs for questions and answers;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to easily create custom fields;
 * **Breakdance** to build the page. Make sure you activate and update to the latest version to have full integration with Meta Box.
 
 ## 1. Creating a new page

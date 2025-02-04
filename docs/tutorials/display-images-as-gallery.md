@@ -24,7 +24,7 @@ First, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box
 
 Next, we may need some advanced features from the **Meta Box** extensions. You can download them individually or use **Meta Box AIO** to have them all.
 
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to visually create a custom field to save images;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to visually create a custom field to save images;
 * [MB Views](https://metabox.io/plugins/mb-views/): to get images from the custom field and display them on the page without touching the theme’s files. But it is optional since you have another method to do it with PHP.
 
 ## 1. Creating a page and custom field

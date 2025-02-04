@@ -22,7 +22,7 @@ So, the necessary tools are listed below:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields;
 * [MB Custom Post Type](https://wordpress.org/plugins/mb-custom-post-type/): to create a custom post type for the recipes;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create custom fields;
 * [MB Divi Integrator](https://metabox.io/plugins/mb-divi-integrator/): allows Divi to get data from custom fields created with Meta Box easier. This is the **must-have** one;
 * **Divi Builder** to build the page.
 
@@ -80,7 +80,7 @@ It’s the post title, so search the **Post Title** module.
 
 ![It’s the post title, so search the Post Title module](https://i.imgur.com/9XjmUzy.png)
 
-For this first section, add a new row. You can choose any layout as you want for this section. 
+For this first section, add a new row. You can choose any layout as you want for this section.
 
 ![For this first section, add a new row and choose any layout as you want for this section](https://i.imgur.com/qSZZ74k.png)
 

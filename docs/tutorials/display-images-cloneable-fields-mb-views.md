@@ -16,7 +16,7 @@ Images like a series of brand logos of typical partners or avatar of clients in 
 We’ll need [Meta Box](https://metabox.io) and some of its extensions for this practice:
 
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): create settings pages for uploading images;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): it provides a UI to create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): it provides a UI to create custom fields;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): organize custom fields into cloneable groups, where we input images;
 * [MB Views](https://metabox.io/plugins/mb-views/): it helps you to create templates as well as get and display fields’ values.
 

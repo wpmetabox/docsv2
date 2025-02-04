@@ -16,12 +16,12 @@ This is a typical section for related posts as you can see somewhere.
 
 ## Preparation
 
-There are different ways to add related posts but the most popular is using a tool to automatically choose some posts related by keywords, tags, categories, or taxonomies of the current post.  It’s not using custom fields. However, it might be not precise in some cases, especially when you want particularly related posts to be prior on the list. That’s why you should **use custom fields to choose exactly which posts are related** to the current post. 
+There are different ways to add related posts but the most popular is using a tool to automatically choose some posts related by keywords, tags, categories, or taxonomies of the current post.  It’s not using custom fields. However, it might be not precise in some cases, especially when you want particularly related posts to be prior on the list. That’s why you should **use custom fields to choose exactly which posts are related** to the current post.
 
 In this practice, we need these tools:
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields; 
+* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Views](https://metabox.io/plugins/mb-views/): help us create a template to get and display the related posts on the singular page;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create the custom fields.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create the custom fields.
 
 Note that you can install all the above extensions individually or use **Meta Box AIO**.
 
@@ -58,7 +58,7 @@ Back to the post editor of your post type, you will see the created field.
 ![Here is the created field.](https://i.imgur.com/zNfwGac.png)
 
 Now you can click on the field, see the list of posts from the post type you set in the settings of the fields. Just choose some ones from the list.
- 
+
 ![Choose some posts from the list Related Posts](https://i.imgur.com/gtGL6vB.png)
 
 You also can see that this field has the display following the display of the Select Advanced field type as I set.

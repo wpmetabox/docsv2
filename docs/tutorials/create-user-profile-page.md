@@ -29,7 +29,7 @@ Moreover, we’ll need some advanced features from Meta Box extensions. You can 
 
 To create custom fields for users, we need to use [MB User Meta](https://metabox.io/plugins/mb-user-meta/) or [MB User Profile](https://metabox.io/plugins/mb-user-profile/). In this practice, we definitely have to use **MB User Profile** for creating the register page, login page, and user profile page on the frontend. If you do not use **Meta Box AIO**, you don't need to use **MB User Meta**. Otherwise, if you have the **Meta Box AIO**, it will require you to enable the **MB User Meta** extension.
 
-Finally, [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) helps create custom fields.
+Finally, [MB Builder](https://metabox.io/plugins/meta-box-builder/) helps create custom fields.
 
 ## Allowing users to register an account
 
@@ -77,7 +77,7 @@ Once you have published, the field group ID will be generated automatically. But
 
 Let’s create a new page for registration.
 
-As I mentioned before, the **MB User Profile** extension of **Meta Box** will provide a form like this. 
+As I mentioned before, the **MB User Profile** extension of **Meta Box** will provide a form like this.
 
 ![The MB User Profile extension of Meta Box provides a registration form](https://i.imgur.com/h0rvEj2.png)
 
@@ -149,8 +149,8 @@ As I said, the user profile page will contain the WordPress default fields. Furt
 
 ### Displaying default fields
 
-Now, create a new page. 
- 
+Now, create a new page.
+
 On the user profile page, add the **Edit Profile Form** block, which is provided by **MB User Profile**.
 
 ![Add the Edit Profile Form block,](https://i.imgur.com/A7m4J9B.png)

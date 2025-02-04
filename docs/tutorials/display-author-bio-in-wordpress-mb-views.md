@@ -26,13 +26,13 @@ Since we use the custom fields to store some of the author information, we need 
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create a bi-directional relationship between posts and users to know which post from which author;
 * [MB User Meta](https://metabox.io/plugins/mb-user-meta/): to assign fields to users;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the section displaying the author information on the post;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to save author information on an easy-to-use UI;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to save author information on an easy-to-use UI;
 * [MB Group](https://metabox.io/plugins/meta-box-group/): to group the fields together for better organization. This is optional;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to manage the posts from which authors and show it on the admin screen. This is optional as well.
 
 ## 1. Creating custom fields
 
-We’ll create some custom fields for some further information about the author such as social links, phone, address, etc. 
+We’ll create some custom fields for some further information about the author such as social links, phone, address, etc.
 
 Go to **Meta Box** > **Custom Fields** to create the fields.
 
@@ -108,7 +108,7 @@ We’ll create a template for the author information section, so choose the **Co
 {% set relationship = attribute( relationships, 'post-to-user' ) %}
 ```
 
-This line is to query the users following the relationship. 
+This line is to query the users following the relationship.
 
 `'post-to-user'` : This is the ID of the created relationship.
 
@@ -118,7 +118,7 @@ This line is to query the users following the relationship.
 {% endfor %}
 ```
 
-This loop helps to get and display all the authors that were set in the relationship field. 
+This loop helps to get and display all the authors that were set in the relationship field.
 
 ### 3.2. Displaying author information
 
@@ -132,7 +132,7 @@ After getting all of the information of the author as you want, move to the **Se
 
 ![Set the Type as Singular, and choose the name of any post type that we set the author for in Location](https://i.imgur.com/zIzQyvc.png)
 
-Go to a singular page now, you will see all the expected author information displayed. 
+Go to a singular page now, you will see all the expected author information displayed.
 
 ![The expected author information displayed without styling](https://i.imgur.com/R2XkW3c.png)
 

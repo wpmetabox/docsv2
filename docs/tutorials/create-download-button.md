@@ -23,9 +23,9 @@ I put the download buttons in two positions: one in the content area of a single
 For this practice, we need the following tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): a framework that helps us create the custom field for the download button. It’s available on wordpress.org;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): a premium extension of Meta Box that provides UI to easily create custom fields right on the back end. Or you can use the free [Online Generator](https://metabox.io/online-generator/) tool instead.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): a premium extension of Meta Box that provides UI to easily create custom fields right on the back end. Or you can use the free [Online Generator](https://metabox.io/online-generator/) tool instead.
 * [MB Views](https://metabox.io/plugins/mb-views/): to display value from custom fields. You also can add code to the `functions.php` file instead of.
-* [eStar theme](https://gretathemes.com/wordpress-themes/estar/): to create a child theme 
+* [eStar theme](https://gretathemes.com/wordpress-themes/estar/): to create a child theme
 
 ## 1. Creating custom fields
 

@@ -16,7 +16,7 @@ Today, we’ll display the most viewed posts with Meta Box and Bricks. Here is m
 
 As we're going to display the most viewed posts, we’ll use a third-party plugin named [WP Post Views](https://wordpress.org/plugins/wp-post-views/) to count the post views.
 
-For the posts, we’ll create a custom post type named **Restaurants**, and each restaurant will be a post of that post type. 
+For the posts, we’ll create a custom post type named **Restaurants**, and each restaurant will be a post of that post type.
 
 Beside displaying the default information of posts like the title and feature image, which are the name and image for restaurants, you may want to display some extra information. I also take some information about address, voucher, and logo, for example. They will be saved in custom fields.
 
@@ -24,9 +24,9 @@ Here are the tools we need for this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for restaurants;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily;
 * **Bricks**: to build the homepage and display the most viewed posts section.
- 
+
 ## 1. Creating a new custom post type
 
 Go to **Meta Box** > **Post Types** to create a new post type for the restaurants.
@@ -87,7 +87,7 @@ To get the data of restaurants, in the Div element that I mentioned above, enabl
 
 ![Get the data of restaurants](https://i.imgur.com/5wBt9WP.png)
 
-In this case, I would sort the posts by post views to get the posts with the most views. So, in the **Order By** section, choose the **Meta numeric value** option to get the value in numeric. 
+In this case, I would sort the posts by post views to get the posts with the most views. So, in the **Order By** section, choose the **Meta numeric value** option to get the value in numeric.
 
 ![Choose the Meta numeric value option to get the value in numeric](https://i.imgur.com/ixiR9gy.png)
 

@@ -22,7 +22,7 @@ So, in this practice, we need these tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create and style the template for the page without touching the theme files;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize the fields for questions and answers into a group since they are in pairs.
 
 You can install them individually or use **Meta Box AIO**.
@@ -61,7 +61,7 @@ This subgroup is set to be cloneable as well. It helps to add multiple pairs of 
 
 ![Set the subgroup to be cloneable](https://i.imgur.com/wq6RdNr.png)
 
-After configuring all the fields, move to the **Settings** tab. Choose **Location** as **Post Type** and select **Page**. 
+After configuring all the fields, move to the **Settings** tab. Choose **Location** as **Post Type** and select **Page**.
 
 ![Select Page in the Settings tab](https://i.imgur.com/yDq8atU.png)
 

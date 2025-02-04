@@ -1,5 +1,5 @@
 ---
-title: Meta Box Builder
+title: MB Builder
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -37,7 +37,7 @@ After that click the **Publish** button to finish.
 
 ## Field settings
 
-When adding fields to a field group, each field has its own settings. The list of settings with detailed explanation is [here](/field-settings/). Meta Box Builder creates UI for them.
+When adding fields to a field group, each field has its own settings. The list of settings with detailed explanation is [here](/field-settings/). MB Builder creates UI for them.
 
 To view and edit field settings, click anywhere in the field title bar:
 
@@ -108,7 +108,7 @@ Which will produce the result like this:
 ],
 ```
 
-Remember, Meta Box Builder treats `true`, `false` as boolean values.
+Remember, MB Builder treats `true`, `false` as boolean values.
 
 If you want to add complex custom settings, like multi-dimentional arrays:
 
@@ -154,7 +154,7 @@ This can be understood like this:
 
 Here the params param1, param2, param3 are sub-params of the my_prop and they're defined with a dot prefixed.
 
-Implementing that in Meta Box Builder as follows:
+Implementing that in MB Builder as follows:
 
 ![implement structural custom settings](https://i.imgur.com/PfVoIV7.png)
 
@@ -186,7 +186,7 @@ Similar to above, this can be understood as:
 "my_prop.2": "Value 3",
 ```
 
-And can be implemented as follows in Meta Box Builder:
+And can be implemented as follows in MB Builder:
 
 ![adding array of data for custom settings](https://i.imgur.com/53Duf3A.png)
 
@@ -208,13 +208,13 @@ Combining these, you can define a complex data structure as follows (this is a p
 ],
 ```
 
-In Meta Box Builder:
+In MB Builder:
 
 ![dot notation for advanced query args](https://i.imgur.com/MPC06Fd.png)
 
 ### JSON notation
 
-Another way to enter nested array in Meta Box Builder, you can use JSON notation. Paste the JSON string into the value input, and this JSON will be parsed into an array in PHP.
+Another way to enter nested array in MB Builder, you can use JSON notation. Paste the JSON string into the value input, and this JSON will be parsed into an array in PHP.
 
 For example, the `tax_query` above can be implemented like this:
 
@@ -222,11 +222,11 @@ For example, the `tax_query` above can be implemented like this:
 
 ## Getting PHP code
 
-For each field group, Meta Box Buider can create a PHP code that you can copy and paste into your theme's `functions.php` file (or your plugin file) and then *deactivate the Meta Box Builder extension*.
+For each field group, Meta Box Buider can create a PHP code that you can copy and paste into your theme's `functions.php` file (or your plugin file) and then *deactivate the MB Builder extension*.
 
 This is helpful if you want to:
 
-- [Share field groups to other websites](https://metabox.io/copy-custom-fields-with-meta-box-builder/) which doesn't have Meta Box Builder installed.
+- [Share field groups to other websites](https://metabox.io/copy-custom-fields-with-meta-box-builder/) which doesn't have MB Builder installed.
 - Improve the performance since field groups are loaded directly from your file.
 
 To get the code, click the **Get PHP Code** button on the toolbar:
@@ -235,13 +235,13 @@ To get the code, click the **Get PHP Code** button on the toolbar:
 
 On this screen, set the text domain (for field labels in case you want to translate them in a multilingual website) and the function name. Then click the **Generate** button to generate the code. Finally, click the **Copy** button to copy the code and paste it into your theme's `functions.php` file.
 
-When you copy PHP code and paste it into your theme's `functions.php` file, you can **safely deactivate Meta Box Builder** (do *not* deactivate Meta Box, it's still required).
+When you copy PHP code and paste it into your theme's `functions.php` file, you can **safely deactivate MB Builder** (do *not* deactivate Meta Box, it's still required).
 
 For detailed instruction, please see [this tutorial](https://metabox.io/copy-custom-fields-with-meta-box-builder/).
 
-Please note that once you take the PHP code and remove the settings from the Meta Box Builder, there's no way to edit the field group in the Meta Box Builder directly from the exported code.
+Please note that once you take the PHP code and remove the settings from the MB Builder, there's no way to edit the field group in the MB Builder directly from the exported code.
 
-In order to do re-edit the field group, we suggest after taking the PHP code, export the field group settings from Meta Box Builder (see the section below). Then whenever you want to edit the field group, just import it back and edit.
+In order to do re-edit the field group, we suggest after taking the PHP code, export the field group settings from MB Builder (see the section below). Then whenever you want to edit the field group, just import it back and edit.
 
 ## Export / Import
 
@@ -265,7 +265,7 @@ Video tutorial:
 
 ## Creating Gutenberg blocks
 
-Since v3.1.0, Meta Box Builder allows you to create Gutenberg blocks visually, without writing code. See this video tutorial on how to do that:
+Since v3.1.0, MB Builder allows you to create Gutenberg blocks visually, without writing code. See this video tutorial on how to do that:
 
 <LiteYouTubeEmbed id='v3ke1DBlWuk' />
 
@@ -325,7 +325,7 @@ Please see the [documentation of MB Relationships](/extensions/mb-relationships/
 
 ### Adding custom controls to fields
 
-If you develop [extra solutions for Meta Box](https://metabox.io/resources/), then you might need to add a custom settings for fields. Luckily, Meta Box Builder has API for you to create custom controls for these settings.
+If you develop [extra solutions for Meta Box](https://metabox.io/resources/), then you might need to add a custom settings for fields. Luckily, MB Builder has API for you to create custom controls for these settings.
 
 To add a control, use the following hook:
 
@@ -510,7 +510,7 @@ function your_prefix_parse_field_settings( $field_settings ) {
 
 ## Video tutorial
 
-Here is a quick video showing how to use the Meta Box Builder to create custom fields in WordPress:
+Here is a quick video showing how to use the MB Builder to create custom fields in WordPress:
 
 <LiteYouTubeEmbed id='_DaFUt92kYY' />
 
@@ -522,6 +522,6 @@ If you don't see any field in field groups after upgrading, then the migration p
 
 ## Further reading
 
-- [How to Add and Configure Custom Fields Using Meta Box Builder](https://metabox.io/add-configure-custom-fields-meta-box-builder/)
-- [How to Export and Import Custom Fields with Meta Box Builder](https://metabox.io/export-import-custom-fields-meta-box-builder/)
-- [How to Easily Copy Custom Fields From One Site to Others with Meta Box Builder](https://metabox.io/copy-custom-fields-with-meta-box-builder/)
+- [How to Add and Configure Custom Fields Using MB Builder](https://metabox.io/add-configure-custom-fields-meta-box-builder/)
+- [How to Export and Import Custom Fields with MB Builder](https://metabox.io/export-import-custom-fields-meta-box-builder/)
+- [How to Easily Copy Custom Fields From One Site to Others with MB Builder](https://metabox.io/copy-custom-fields-with-meta-box-builder/)

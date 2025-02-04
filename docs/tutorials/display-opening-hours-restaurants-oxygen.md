@@ -22,7 +22,7 @@ In this case, I want to put the opening hours section for a particular restauran
 We’ll display some extra information such as time slots for each day, and we'll use custom fields. So, we need [Meta Box plugin](https://metabox.io/) to have a framework to create them. It’s free on [wordpress.org](https://wordpress.org/plugins/meta-box/). We also need additional Meta Box advanced features, which are accessible in the following extensions:
 
 * [MB Custom Post Type and Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post type named Restaurant to contain custom fields for saving restaurants’ information;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): this premium extension of Meta Box provides an intuitive UI in the back end to create and configure custom fields without using code;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): this premium extension of Meta Box provides an intuitive UI in the back end to create and configure custom fields without using code;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): this extension helps to arrange fields into groups;
 * [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): this extension allows to create rule to control the display of the fields;
 * Oxygen: to build the section. Remember to use the 3.9 version or upper to have the native integration with Meta Box.
@@ -102,7 +102,7 @@ If the restaurant has multiple opening hours, you can choose **Enter Hours** to 
 
 ![Set the rule for the group field](https://i.imgur.com/XmK1LWE.png)
 
-In case the restaurant opens in multiple time slots, we’ll need this group to be cloneable. So, I tick this box as below: 
+In case the restaurant opens in multiple time slots, we’ll need this group to be cloneable. So, I tick this box as below:
 
 ![Set the group to be cloneable](https://i.imgur.com/9JYVLp9.png)
 
@@ -118,7 +118,7 @@ They work exactly like the rule we set.
 
 ## 3. Displaying the fields’ value
 
-We’ll display the opening hours section using Oxygen. If you’ve had a template created by Oxygen for the Restaurant singular page, just go and edit it. 
+We’ll display the opening hours section using Oxygen. If you’ve had a template created by Oxygen for the Restaurant singular page, just go and edit it.
 
 In the event you haven't had one, go to **Oxygen > Template > Add New Template** to create a new one.
 
@@ -155,7 +155,7 @@ The code is quite long, so I put it in my Github [here](https://github.com/wpmet
 			<?php echo $time_slots['end_time'] ?>
 		<?php endforeach; ?>
 	<?php else: ?>
-		<?php 
+		<?php
 			$select_field = isset( $same_days['type_of_opening_hours'] ) ? $same_days['type_of_opening_hours'] : '';
 			$group_field = rwmb_get_field_settings( 'all_days_have_the_same_opening_hours' );
 			foreach ( $group_field['fields'] as $field ) {
@@ -205,7 +205,7 @@ Since the **Type of Opening Hour** is a **Select** field with some options as th
 ```
 If the returned value of the **Type of Opening Hour** field is **Enter hours**, we’ll display the value from the **Choose Time Slots** group field with its subfields: **Start Time** and **End Time** fields. Since the **Choose Time Slots** group is cloneable, we have a loop here.
 ```php
-<?php 
+<?php
 	$select_field = isset( $same_days['type_of_opening_hours'] ) ? $same_days['type_of_opening_hours'] : '';
 	$group_field = rwmb_get_field_settings( 'all_days_have_the_same_opening_hours' );
 	foreach ( $group_field['fields'] as $field ) {
@@ -223,7 +223,7 @@ If the returned value of the **Type of Opening Hour** field is **Enter hours**, 
 
 For other options in the **Type of opening hours** field, the above is used to display the label of that selected option.
 
-That's the end of the first section, corresponding to the first option of the **Choose an Option** field. 
+That's the end of the first section, corresponding to the first option of the **Choose an Option** field.
 
 If separate days have different opening hours, call the values from the remaining groups.
 The structure of those groups is the same as the **All days have the same opening hours** group, so just simply follow the same logic in the code.

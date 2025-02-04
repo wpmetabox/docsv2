@@ -23,7 +23,7 @@ So, these are several tools we need:
 
 * [Meta Box](https://metabox.io/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a new Restaurant post type;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to save the data of the restaurants;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to save the data of the restaurants;
 * [Oxygen](https://oxygenbuilder.com/): to build the page for displaying the posts. You should use the 3.9 version or upper to have integration with Meta Box.
 
 ## 1. Creating a new custom post type

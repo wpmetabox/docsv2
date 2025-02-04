@@ -25,7 +25,7 @@ Here are some tools we need:
 
 * **[Meta Box](https://metabox.io)**: This is the framework to create custom fields and custom post types. It’s free and available on **[wordpress.org](https://wordpress.org/plugins/meta-box/)**
 * **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**: to create custom post types for Team Member;
-* **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: provides a UI in the back end to create custom fields easily for Member Information;
+* **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: provides a UI in the back end to create custom fields easily for Member Information;
 * **[MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/)** (optional): to display the position of each members in the admin area;
 * **[Oxygen](https://oxygenbuilder.com/)**: to build the page. You should use the 3.9 version or upper to have integration with Meta Box.
 

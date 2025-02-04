@@ -13,7 +13,7 @@ Product is a kind of custom post type. In this case, each car for rental will be
 We need to install the following tools:
 
 * **[Meta Box](https://metabox.io)**: to have a framework to create a custom post type and custom fields for the product. It’s free and available on [wordpress.org](https://wordpress.org/).
-* **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an UI in the back-end to create custom fields for the product.
+* **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an UI in the back-end to create custom fields for the product.
 * **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**: to create a custom post type for the product.
 
 ## 1. Creating a new custom post type

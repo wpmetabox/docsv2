@@ -22,10 +22,10 @@ All the information about each plan such as title, price, description, features,
 
 Then, we’ll use Breakdance to display them on the page.
 
-So, these are some tools we need in this practice: 
+So, these are some tools we need in this practice:
 
 * The[ Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework to create custom fields. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields visually;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into the groups for plans.
 
 Last, **Breakdance** to build the pricing table page.
@@ -94,7 +94,7 @@ After having all the fields and essential settings, move to the **Settings** tab
 
 ![Set location for the field group](https://i.imgur.com/RFI7kYl.png)
 
-Then, in the page editor, you will see all of the custom fields. 
+Then, in the page editor, you will see all of the custom fields.
 
 ![The custom fields display in the post editor](https://i.imgur.com/V8FN6fx.png)
 
@@ -218,7 +218,7 @@ The block for each plan looks good now, we should go to the page and style the p
 
 ![Style the page layout](https://i.imgur.com/99CCemN.png)
 
-Then, the page will be updated with the new look as you set. This is our page after styling. 
+Then, the page will be updated with the new look as you set. This is our page after styling.
 
 ![The new look of the page](https://i.imgur.com/Zn944Fc.png)
 

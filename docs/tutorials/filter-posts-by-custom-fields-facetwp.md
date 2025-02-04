@@ -29,7 +29,7 @@ There are the tools we need:
 
 * [Meta Box](https://metabox.io/): to have framework to create custom post types and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a new post type named Restaurant;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for saving restaurants’ information;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for saving restaurants’ information;
 * [Meta Box - FacetWP Integrator](https://metabox.io/plugins/meta-box-facetwp-integrator/): to create a filter based on the Voucher field;
 * [Meta Box Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display custom fields created by Meta Box in the Elementor’s dynamic tags;
 * **Elementor** (pro version): to have integration with Meta Box to build the page;
@@ -69,7 +69,7 @@ Depending on the page builder you’re using, there will be some differences in 
 
 In this case, with Elementor, we need to create one. This template is to display all the posts along with their information. About the filter section, we’ll create it later.
 
-Since we’ll have a list of restaurants on the page, we need a special type of template which is a loop. This option is provided by **Elementor Custom Skin**. You can try it. 
+Since we’ll have a list of restaurants on the page, we need a special type of template which is a loop. This option is provided by **Elementor Custom Skin**. You can try it.
 
 Go to **Templates > Theme Builder** and choose **Loop**.
 
@@ -83,7 +83,7 @@ Since the image and name of the restaurants are the featured image and title of 
 
 ![Add the Featured Image and Post Title elements ](https://i.imgur.com/t88N4jD.png)
 
-For the address of the restaurant, add the **Text Editor** element. Since the restaurants’ addresses are saved in a custom field created by Meta Box and the custom field is for post, let’s use the **Dynamic Tags** > choose **Meta Box Fields** in the **Post** section. 
+For the address of the restaurant, add the **Text Editor** element. Since the restaurants’ addresses are saved in a custom field created by Meta Box and the custom field is for post, let’s use the **Dynamic Tags** > choose **Meta Box Fields** in the **Post** section.
 
 ![Add the Text Editor element for the address of the restaurant](https://i.imgur.com/dI5pXSb.png)
 

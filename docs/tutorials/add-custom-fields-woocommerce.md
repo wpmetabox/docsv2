@@ -6,7 +6,7 @@ WooCommerce is an open-source eCommerce platform built on WordPress that powers 
 
 ## Preparation
 
-In addition to using [Meta Box](https://metabox.io/), make sure you already have [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
+In addition to using [Meta Box](https://metabox.io/), make sure you already have [MB Builder](https://metabox.io/plugins/meta-box-builder/). This extension provides a UI right on the back end, which makes creating custom fields easier.
 
 ## 1. Creating custom fields
 

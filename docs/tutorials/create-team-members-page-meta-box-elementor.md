@@ -26,7 +26,7 @@ The name and avatar of the member are the titles and the featured images of the 
 To do it, we need Meta Box and its extensions:
 
 * <a href="https://metabox.io/plugins/custom-post-type/">MB Custom Post Type</a>: to create custom post types for Team Member;
-* <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>: provides a UI in the back end to create custom fields easily for Member Information;
+* <a href="https://metabox.io/plugins/meta-box-builder/">MB Builder</a>: provides a UI in the back end to create custom fields easily for Member Information;
 * <a href="https://metabox.io/plugins/mb-elementor-integrator/">Meta Box - Elementor integrator</a>. allows you to get data from custom fields created by the Meta Box plugin in the templates of Elementor.
 * <a href="https://elementor.com/">Elementor</a> (Pro version): to built the page for displaying team members’ information;
 * <a href="https://wordpress.org/plugins/ele-custom-skin/">Elementor Custom Skin</a>: to have the Loop template to display the list of posts which are members.

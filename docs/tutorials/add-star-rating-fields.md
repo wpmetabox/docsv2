@@ -22,12 +22,12 @@ There, just create the files inside and add content for them as following steps.
 First, to create the plugin, add the following code to the `mb-rating-field.php` file:
 
 ```php
-<?php /** * Plugin Name: MB Star Rating 
-* URI plugin: https://metabox.io 
-* Description: Add a new star rating field type for Meta Box 
-* Version: 1.0 
-* Author: MetaBox.io 
-* Author URI: https://metabox.io 
+<?php /** * Plugin Name: MB Star Rating
+* URI plugin: https://metabox.io
+* Description: Add a new star rating field type for Meta Box
+* Version: 1.0
+* Author: MetaBox.io
+* Author URI: https://metabox.io
 * License: GPLv2 */
 ```
 
@@ -105,7 +105,7 @@ Just add this code to the `css/admin.css` file.
     display: inline-block;
     content: "\f005";
 }
- 
+
 .rwmb-rating > .half:before {
     content: "\f089";
     position: absolute;
@@ -115,11 +115,11 @@ Just add this code to the `css/admin.css` file.
     float: right;
 }
 /***** CSS Magic to Highlight Stars on Hover *****/
- 
+
 .rwmb-rating > input:checked ~ label, /* show gold star when clicked */
 .rwmb-rating:not(:checked) > label:hover, /* hover current star */
 .rwmb-rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-.rwmb-rating > input:checked + label:hover, 
+.rwmb-rating > input:checked + label:hover,
 .rwmb-rating > input:checked ~ label:hover,
 .rwmb-rating > label:hover ~ input:checked ~ label, .rwmb-rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
 .rwmb-rating input[type=radio]:checked+label:before {
@@ -138,7 +138,7 @@ public static function admin_enqueue_scripts() {
 
 Now, we can create custom fields with rating field type using the newly created **MB Star Rating** plugin!
 
-However, it’s not in the Meta Box Builder, you must create the field using code. Add this code to the `functions.php` file:
+However, it’s not in the MB Builder, you must create the field using code. Add this code to the `functions.php` file:
 
 ```php
 <?php
@@ -168,7 +168,7 @@ function your_prefix_register_meta_boxes( $meta_boxes ) {
 }
 ```
 
-In there, `'post_types'` => `['post']` stipulates the location of the fields as blog posts. 
+In there, `'post_types'` => `['post']` stipulates the location of the fields as blog posts.
 
 After that, you will see the created custom field display in the post editor.
 

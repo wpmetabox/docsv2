@@ -23,7 +23,7 @@ Let’s look for the detailed list of tools we need for this practice.
 
 * [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a settings page and custom fields for the 404 page content;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input the 404 page’s information;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for displaying the 404 page’s content.
 
 Besides, you can make the most of some other extensions to have your own field structure that fits your page’s content. They may be [Meta Box Tab](https://metabox.io/plugins/meta-box-tabs/), [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), and so on. However, they are just optional. In this practice, I’ll use [Meta Box Group](https://metabox.io/plugins/meta-box-group/) to organize custom fields into groups for simpler management and display.

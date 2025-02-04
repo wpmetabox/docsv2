@@ -23,7 +23,7 @@ Here are some tools we need:
 
 * **[Meta Box](https://metabox.io)**: to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/);
 * **[MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/)**: to create a custom post type named Recipe;
-* **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an intuitive UI to create custom fields in the backend to save extra information;
+* **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an intuitive UI to create custom fields in the backend to save extra information;
 * **[MB Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/)**: to connect and display custom fields created by Meta Box plugin in the Elementor's dynamic tags.
 
 They’re all in the **Meta Box AIO**. If you haven’t had it, you can download and install each one individually.

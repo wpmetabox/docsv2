@@ -22,7 +22,7 @@ To get started, we need the **Meta Box** to have the framework for creating cust
 
 Also, we’ll use some of Meta Box’s extensions:
 
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
 
 * [Meta Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to manage the posts and view the order more easily in the WordPress admin.
 
@@ -36,7 +36,7 @@ When you put in a number, we will show it in the dashboard to easily see the pos
 
 ![This is the position of all the posts](https://i.imgur.com/obMNFXu.png)
 
-[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) can help you easily create custom fields without touching any line of code. 
+[MB Builder](https://metabox.io/plugins/meta-box-builder/) can help you easily create custom fields without touching any line of code.
 
 In the dashboard, go to **Meta Box** > **Custom Fields**, click **Add New** button to create a new field group.
 

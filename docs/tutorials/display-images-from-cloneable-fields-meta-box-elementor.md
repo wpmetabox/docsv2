@@ -21,7 +21,7 @@ Here are some tools we need:
 
 * **[Meta Box](https://metabox.io)**: to have the framework for creating custom fields. It’s free, and you can download it directly from [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/);
 * **[Meta Box Settings Page](https://metabox.io/plugins/mb-settings-page/)**: to create settings pages;
-* **[Meta Box Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an intuitive UI to create custom fields in the backend to save image and other information if any;
+* **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an intuitive UI to create custom fields in the backend to save image and other information if any;
 * **[Meta Box Group](https://metabox.io/plugins/meta-box-group/)**: to organize custom fields into cloneable groups, where we input images;
 * **[MB Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/)**: to connect and display custom fields created by Meta Box plugin in the Elementor's dynamic tags.
 

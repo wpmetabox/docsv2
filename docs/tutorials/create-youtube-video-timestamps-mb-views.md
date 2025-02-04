@@ -16,15 +16,15 @@ This is an example I’d like to create today:
 
 ## Preparation
 
-In this practice, I assume that each video is saved in a post of a custom post type. To make the timestamps easier, we should save the video URL in a custom field instead of in the content of the post. Then, we will use custom fields created with Meta Box to input timestamps and short descriptions for them. 
+In this practice, I assume that each video is saved in a post of a custom post type. To make the timestamps easier, we should save the video URL in a custom field instead of in the content of the post. Then, we will use custom fields created with Meta Box to input timestamps and short descriptions for them.
 
 In this practice, we need these tools:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields, and also the custom post type if any;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create and style the template for the page without touching the theme files;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields.
 
-You can install them individually or use **Meta Box AIO**. 
+You can install them individually or use **Meta Box AIO**.
 
 ## 1. Creating custom fields
 
@@ -56,7 +56,7 @@ After configuring all the fields, move to the Settings tab. Choose **Location** 
 
 ![Choose Location as Post type and select a post type to which you want to assign these fields](https://i.imgur.com/UvrI2cS.png)
 
-Then, go to the post editor, and you will see the fields displayed. 
+Then, go to the post editor, and you will see the fields displayed.
 
 ![The fields displayed](https://i.imgur.com/eCENMrs.png)
 
@@ -74,7 +74,7 @@ As usual, to get data from custom fields, we just go to insert the wanted field 
 
 ![Go to insert the wanted field from this list](https://i.imgur.com/BvMMHhU.png)
 
-The timestamps are in a cloneable group, so whenever you click to the group, a loop will be generated in the template. 
+The timestamps are in a cloneable group, so whenever you click to the group, a loop will be generated in the template.
 
 ![A loop will be generated in the template when you click to the group](https://i.imgur.com/BvMMHhU.png)
 
@@ -113,9 +113,9 @@ Back to the template created with **MB Views**. First, create an array to store 
 Then, add these lines of code to pass the value from custom fields to the array.
 
 ```
-{% set TimestampsArray = TimestampsArray|merge( 
+{% set TimestampsArray = TimestampsArray|merge(
   [
-    { 
+    {
       "timestamp": ,
       "description":
     }
@@ -137,14 +137,14 @@ I also have another array to store the video **ID** along with the timestamps an
 ![Another array to store the video ID along with the timestamps and description](https://i.imgur.com/2tgr4xS.png)
 
 ```
-{% 
-    set TimestampsObject = 
+{%
+    set TimestampsObject =
     [
          {"id":  },
          {
-            'Timestamps': 
+            'Timestamps':
          }
-         
+
     ]
 %}
 ```

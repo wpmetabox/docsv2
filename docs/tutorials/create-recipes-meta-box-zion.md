@@ -21,7 +21,7 @@ Here are the tools that we need for this practice:
 
 * [Meta Box](https://metabox.io) to have the framework for creating custom post types and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types for the recipe;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the back end to create custom fields to save extra information about recipe.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the back end to create custom fields to save extra information about recipe.
 * **Zion Builder**: make sure that you have **Zion Builder Pro** to have integration with Meta Box.
 
 ## 1. Creating a custom post type

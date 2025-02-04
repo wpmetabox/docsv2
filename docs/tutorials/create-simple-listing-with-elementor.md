@@ -38,7 +38,7 @@ To create a custom post type, taxonomy, and custom fields for products, we need 
 Here are the extensions we need:
 
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomies for products;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field efficiently;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field efficiently;
 * [MB Views](https://metabox.io/plugins/mb-views/) (optional): to get and display the status of the restaurants;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display custom fields as a column in the admin screen.
 
@@ -114,7 +114,7 @@ First, add a section with a one-column layout to contain all the information abo
 
 Now, add some elements to display the product’s information.
 
-To display the restaurant’s image, add the **Featured Image** element. 
+To display the restaurant’s image, add the **Featured Image** element.
 
 ![Add the Featured Image element to display the restaurant’s image.](https://i.imgur.com/GS6Eo1F.png)
 

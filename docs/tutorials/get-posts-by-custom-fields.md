@@ -15,7 +15,7 @@ In this article, I will get posts in two ways. One is using the `WP_Query` to ge
 
 In addition to using [Meta Box](https://metabox.io/), make sure you already have these extensions:
 
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
 * [MB Admin Column](https://metabox.io/plugins/mb-admin-columns/): (optional) It helps you to manage and organize posts by custom fields in the admin dashboard.
 
 ## Creating custom fields

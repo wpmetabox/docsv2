@@ -26,7 +26,7 @@ For this practice, we need these tools:
 
 * [Meta Box](https://metabox.io): provides a framework to create custom post type and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the product;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save extra information of the product;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save extra information of the product;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the product page without touching the theme file.
 
 ## 1. Creating a new custom post type

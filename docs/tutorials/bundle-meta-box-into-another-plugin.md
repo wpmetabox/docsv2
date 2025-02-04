@@ -84,7 +84,7 @@ require 'vendor/autoload.php';
 
 ## 3. Create custom post types and custom fields
 
-From now on, you can create custom post types and custom fields using the created plugin. This is quite similar to installing Meta Box on a website. The difference is that if you don’t bundle extensions providing UI (such as [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/), [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/)) into the plugin as I did, you have to code manually. Instead of writing code in the `functions.php` file, you must do it in the `.php` file of the created plugin (project-demo.php).
+From now on, you can create custom post types and custom fields using the created plugin. This is quite similar to installing Meta Box on a website. The difference is that if you don’t bundle extensions providing UI (such as [MB Builder](https://metabox.io/plugins/meta-box-builder/), [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/)) into the plugin as I did, you have to code manually. Instead of writing code in the `functions.php` file, you must do it in the `.php` file of the created plugin (project-demo.php).
 
 I’ll use the created plugin, which includes Meta Box, to create a new post type named **Project**.
 

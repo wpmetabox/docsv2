@@ -2,7 +2,7 @@
 title: Creating an FAQs page - MB Blocks
 ---
 
-import LiteYouTubeEmbed from 'react-lite-youtube-embed'; 
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 In today’s practice, we’re going to **create an FAQs page** by using custom blocks and custom fields with the help of the **MB Blocks** extension from Meta Box.
@@ -22,7 +22,7 @@ The questions and answers will be saved in custom fields, and displayed by using
 These are some tools we need for this practice:
 
 * [The Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework to create custom fields as well as the block for the Q&As. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
-* [MB Blocks](https://metabox.io/plugins/mb-blocks/): to allow you to create custom Gutenberg blocks. With the help of this extension, we can use PHP or the UI provided by [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to create a block. They bring the same result. However, we recommend using Meta Box Builder to limit the use of complex code.
+* [MB Blocks](https://metabox.io/plugins/mb-blocks/): to allow you to create custom Gutenberg blocks. With the help of this extension, we can use PHP or the UI provided by [MB Builder](https://metabox.io/plugins/meta-box-builder/) to create a block. They bring the same result. However, we recommend using MB Builder to limit the use of complex code.
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields for questions and answers into a group, so they will be in pairs.
 
 ## 1. Creating a new page
@@ -49,7 +49,7 @@ Now, go to **Meta Box** > **Custom Fields** to create the field group.
 
 ![Go to Meta Box > Custom Fields to create fields](https://i.imgur.com/00jsQUk.png)
 
-Since I activated the **Meta Box Builder**, I have a UI on the backend to create the fields and blocks. And, please pay attention that creating a block is the same with creating a field group.
+Since I activated the **MB Builder**, I have a UI on the backend to create the fields and blocks. And, please pay attention that creating a block is the same with creating a field group.
 
 I’ll also add some fields as usual. Firstly, it should be a group.
 
@@ -73,7 +73,7 @@ This is just optional to identify each set of the question and answer. I use som
 
 * `#`: This is for numbering the questions.
 * `{question}`: This is the ID of the question field. It helps to display the content of the question on the group title.
- 
+
 I also set this group as cloneable. This is pivotal, helps to add multiple pairs of questions and answers.
 
 ![Set the group cloneable to have more than one pair of questions and answers](https://i.imgur.com/SOU5Rl9.png)

@@ -23,7 +23,7 @@ These are the tools we need for this practice:
 
 * [Meta Box core plugin](https://metabox.io/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type named Restaurants:
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend for saving extra information of the restaurants;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend for saving extra information of the restaurants;
 * **Bricks**: to build the featured restaurants section.
 
 ## 1. Creating a custom post type

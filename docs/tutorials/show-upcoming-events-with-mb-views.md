@@ -32,7 +32,7 @@ Before going ahead, let’s prepare some necessary tools for this practice.
 * [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type, custom fields, and a template for displaying the upcoming events;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the events;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template to display the upcoming events;
-* [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually.
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually.
 
 And now, let’s start!
 
@@ -98,7 +98,7 @@ Or, you can also add some lines of code to the **Template** tab, like this:
 {% set args = { post_type: 'event', posts_per_page: -1 } %}
 {% set posts = mb.get_posts( args ) %}
 {% for post in posts %}
-{% endfor %} 
+{% endfor %}
 ```
 **In there**:
 
@@ -118,7 +118,7 @@ As we have various posts, use a loop to display all of them.
 
 ```css
 {% for post in posts %}
-{% endfor %} 
+{% endfor %}
 ```
 
 For displaying the event's information, just use the button, as I said before. And then, insert some fields into the mentioned loop.

@@ -19,7 +19,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 In addition to using Meta Box, make sure you already have these extensions:
 
-* <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a>: It provides UI to create custom fields;
+* <a href="https://metabox.io/plugins/meta-box-builder/">MB Builder</a>: It provides UI to create custom fields;
 * <a href="https://metabox.io/plugins/mb-views/">MB Views</a>: Build front-end templates for WordPress without touching theme files. Support Twig and all field types.
 
 If you are using a page builder such as <a href="https://metabox.io/plugins/mb-elementor-integrator/">Elementor</a> or <a href="https://metabox.io/plugins/mb-elementor-integrator/">Beaver Builder</a>, please activate the corresponding integration from Meta Box.
@@ -28,7 +28,7 @@ All these extensions are available in the Meta Box AIO, which includes the Devel
 
 ## Creating custom fields for URLs
 
-First, we need custom fields for saving URLs for each post. If you’ve had <a href="https://metabox.io/plugins/meta-box-builder/">Meta Box Builder</a> in your pocket, you will have a UI on the backend to create custom fields visually. Otherwise, please go to the <a href="https://metabox.io/online-generator/">Online Generator</a>, create fields, generate code, and copy it to get the fields.
+First, we need custom fields for saving URLs for each post. If you’ve had <a href="https://metabox.io/plugins/meta-box-builder/">MB Builder</a> in your pocket, you will have a UI on the backend to create custom fields visually. Otherwise, please go to the <a href="https://metabox.io/online-generator/">Online Generator</a>, create fields, generate code, and copy it to get the fields.
 
 They are quite simple with a type of URL and there are no special settings.
 

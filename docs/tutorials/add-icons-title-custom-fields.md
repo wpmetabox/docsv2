@@ -18,7 +18,7 @@ This is an example for adding the icons that we will create in this practice.
 
 To have custom fields on your site, you might have the [Meta Box plugin](https://wordpress.org/plugins/meta-box/). You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
-Beside that, if you have the [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) to create and manage the fields in an intuitive UI, it’ll be easier to add the icons. Otherwise, you can add the HTML script of the icon to the code directly.
+Beside that, if you have the [MB Builder](https://metabox.io/plugins/meta-box-builder/) to create and manage the fields in an intuitive UI, it’ll be easier to add the icons. Otherwise, you can add the HTML script of the icon to the code directly.
 
 I will give you both ways in this practice.
 
@@ -77,9 +77,9 @@ Then, copy the **HTML** of the icon to show it in the next steps.
 
 ## 4. Adding icons to the title of custom fields
 
-As I mentioned before, you can create and manage the fields **using the UI** provided by the [Meta Box Builder extension](https://metabox.io/plugins/meta-box-builder/), or **using code**. No matter which way you are doing, adding icons to the title are quite the same.
+As I mentioned before, you can create and manage the fields **using the UI** provided by the [MB Builder extension](https://metabox.io/plugins/meta-box-builder/), or **using code**. No matter which way you are doing, adding icons to the title are quite the same.
 
-### 4.1. Using Meta Box Builder
+### 4.1. Using MB Builder
 
 This is a field group that I made before. It was created by using the UI.
 
@@ -119,11 +119,11 @@ Go to the post editor, you will see the icons displayed besides the field group 
 
 If this field group is also displayed on a page on the frontend, they would display well.
 
-Now, I’ll add a block in the type of **Submission Form**. 
+Now, I’ll add a block in the type of **Submission Form**.
 
 ![Add a block in the type of Submission Form](https://i.imgur.com/JtfdwsZ.png)
 
-After adding the ID of the field group to this box, the fields will display immediately, obviously along with the icons. 
+After adding the ID of the field group to this box, the fields will display immediately, obviously along with the icons.
 
 ![After adding the ID of the field group to this box, the fields will display with icons](https://i.imgur.com/YCobk8w.png)
 
