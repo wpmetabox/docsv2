@@ -69,7 +69,7 @@ The field group settings are put in the tab **Settings**:
 There are several settings:
 
 - Location: where you select this field group is for posts, terms, users, comments, blocks or settings pages. For each object type, you'll be able to select corresponding post types, taxonomies or settings pages. Please note that it's required to install and activate corresponding extensions: [MB Term Meta](/extensions/mb-term-meta/), [MB User Meta](/extensions/mb-term-meta/), [MB Comment Meta](https://metabox.io/plugins/mb-comment-meta/), [MB Blocks](/extensions/mb-blocks/), and [MB Settings Page](/extensions/mb-settings-page/).
-- Advanced location rules: allows you to add advanced rules for which category, post, user, ... the field group appears for. Requires the [Meta Box Include Exclude](/extensions/meta-box-include-exclude/) extension.
+- Advanced location rules: allows you to add advanced rules for which category, post, user, ... the field group appears for. Requires the [MB Include Exclude](/extensions/meta-box-include-exclude/) extension.
 - Toggle rules: select which conditions to show or hide the field group. Requires the [Meta Box Show Hide](/extensions/meta-box-show-hide/) extension.
 - Conditional Logic: setup the conditional logic rules to toggle the field group based on other fields' values. Requires the [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/) extension.
 - Post settings, such as context, priority if you select the location is for posts.

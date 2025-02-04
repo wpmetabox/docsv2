@@ -22,7 +22,7 @@ We have a FAQs page that needs to have custom fields for saving the questions an
 * [Meta Box](https://metabox.io) to have the framework for creating custom fields. It’s free, and you can download it directly from wordpress.org.
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into robust and intensely user-friendly groups;
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
-* [Meta Box Include Exclude](https://metabox.io/plugins/meta-box-include-exclude/): to add more rules on where to display the field group on the FAQs page;
+* [MB Include Exclude](https://metabox.io/plugins/meta-box-include-exclude/): to add more rules on where to display the field group on the FAQs page;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display data from custom fields created by Meta Box plugin in the Elementor's dynamic tags;
 * [Elementor](https://elementor.com/) (Pro version): to build the page for displaying Q&A;
 

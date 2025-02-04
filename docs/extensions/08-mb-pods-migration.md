@@ -54,7 +54,7 @@ For **field group locations**, the basic rules are already supported in Meta Box
 - [MB User Meta](/extensions/mb-user-meta/): If you set locations for users.
 - [MB Settings Page](/extensions/mb-settings-page/): If you set locations for settings page.
 
-Besides, if you use complex locations, then you'll need [Meta Box Include Exclude](/extensions/meta-box-include-exclude/) extension. Due to the difference in how plugins create rules, the plugin works the following way:
+Besides, if you use complex locations, then you'll need [MB Include Exclude](/extensions/meta-box-include-exclude/) extension. Due to the difference in how plugins create rules, the plugin works the following way:
 
 - If there's only one location group: the plugin will migrate all rules with operator `AND`.
 - If there are multiple location groups: the plugin will take the first rule of each group and combine them with operator `OR`.
