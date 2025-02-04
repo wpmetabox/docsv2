@@ -3,7 +3,7 @@ title: Hide Tabs with Conditional Logic
 displayed_sidebar: general
 ---
 
-Conditional Logic works with any DOM elements. That means you can hide your tabs created by [Meta Box Tabs](/extensions/meta-box-tabs/) extension with Meta Box Conditional Logic. This guide show you how to do that.
+Conditional Logic works with any DOM elements. That means you can hide your tabs created by [MB Tabs](/extensions/meta-box-tabs/) extension with Meta Box Conditional Logic. This guide show you how to do that.
 
 ## Basic
 
@@ -12,7 +12,7 @@ Because tabs aren't regular field or meta box so you have to use `rwmb_outside_c
 ```php
 add_filter( 'rwmb_meta_boxes', function($meta_boxes) {
     $meta_boxes[] = array(
-        'title'     => 'Meta Box Tabs 2',
+        'title'     => 'MB Tabs 2',
         'tabs'      => array(
             'bio'      => 'Biography',
             'interest' => 'Interest',

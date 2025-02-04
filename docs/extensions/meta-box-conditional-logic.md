@@ -314,7 +314,7 @@ add_filter( 'rwmb_outside_conditions', function( $conditions ) {
 } );
 ```
 
-If you want to hide a tab created by [Meta Box Tabs](/extensions/meta-box-tabs/), [see this](/hide-tabs-with-conditional-logic/).
+If you want to hide a tab created by [MB Tabs](/extensions/meta-box-tabs/), [see this](/hide-tabs-with-conditional-logic/).
 
 ## Using with taxonomies
 

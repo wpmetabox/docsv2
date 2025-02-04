@@ -1,8 +1,8 @@
 ---
-title: Meta Box Tabs
+title: MB Tabs
 ---
 
-Meta Box Tabs helps you to put custom fields into tabs for a better view. Tabs can have icons and can be put on the left side of the meta box.
+MB Tabs helps you to put custom fields into tabs for a better view. Tabs can have icons and can be put on the left side of the meta box.
 
 ![tab styles](https://i.imgur.com/7Oi5dx1.jpg)
 
@@ -76,7 +76,7 @@ If you're a developer and prefer using code to create tabs, this is a sample cod
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 	$meta_boxes[] = [
-		'title'     => 'Meta Box Tabs Demo',
+		'title'     => 'MB Tabs Demo',
 
         // highlight-start
         'tabs'      => [

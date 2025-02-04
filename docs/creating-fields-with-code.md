@@ -215,7 +215,7 @@ Type | Key | Description
 Divider | `divider` | Simple horizontal line
 Heading | `heading` | Heading text
 Group | `group` | For creating nesting groups of fields. Requires [Meta Box Group](/extensions/meta-box-group/) extension.
-Tab | `tab` | For organizing fields in tabs. Requires [Meta Box Tabs](/extensions/meta-box-tabs/) extension.
+Tab | `tab` | For organizing fields in tabs. Requires [MB Tabs](/extensions/meta-box-tabs/) extension.
 
   </TabItem>
 

@@ -17,7 +17,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![columns](/extensions/columns.png) <span className="thumb_text">Meta Box Columns</span>](/extensions/meta-box-columns/)
 
-[![tabs](/extensions/tabs.png) <span className="thumb_text">Meta Box Tabs</span>](/extensions/meta-box-tabs/)
+[![tabs](/extensions/tabs.png) <span className="thumb_text">MB Tabs</span>](/extensions/meta-box-tabs/)
 
 [![tooltip](/extensions/tooltip.png) <span className="thumb_text">MB Tooltip</span>](/extensions/meta-box-tooltip/)
 

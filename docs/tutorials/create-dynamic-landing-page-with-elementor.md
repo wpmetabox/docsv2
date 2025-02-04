@@ -4,7 +4,7 @@ title: Creating dynamic landing page in WordPress - Meta Box + Elementor
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Did you spend a lot of time and effort creating landing pages for multiple marketing campaigns by adding one by one image or text to the page template, even when they have the same structure of content? 
+Did you spend a lot of time and effort creating landing pages for multiple marketing campaigns by adding one by one image or text to the page template, even when they have the same structure of content?
 
 We bring a comprehensive solution for these cases, named **Dynamic Landing Page**. Just build a page as a sample with **content saved in custom fields**, have a template for it with a perfect interface. Then, when having a new campaign, just **duplicate the page**, and **change the content from the fields**. You’ll have a new landing page with new messages without touching the template anymore.
 
@@ -26,7 +26,7 @@ We need the following tools for this practice:
 * [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields efficiently;
 * [MB Testimonials](https://metabox.io/plugins/mb-testimonials/): a ready-to-use solution from Meta Box that helps to create a testimonial section with pre-built layouts;
 * [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them on the page easily;
-* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) and [Meta Box Tabs](https://metabox.io/plugins/meta-box-tabs/) (optional): to organize custom fields into groups or tabs with a clearer structure;
+* [Meta Box Group](https://metabox.io/plugins/meta-box-group/) and [MB Tabs](https://metabox.io/plugins/meta-box-tabs/) (optional): to organize custom fields into groups or tabs with a clearer structure;
 * Elementor and Elementor Pro on your site to build the page.
 
 Let’s start now!
@@ -43,7 +43,7 @@ I leave it blank since all the content will be put in the custom fields that I�
 
 We will create custom fields for every element on the page and organize them in groups and tabs based on sections on the page.
 
-![organize custom fields in groups and tabs based on sections on the page thanks to Meta Box Group and Meta Box Tabs](https://i.imgur.com/fBQoksC.png)
+![organize custom fields in groups and tabs based on sections on the page thanks to Meta Box Group and MB Tabs](https://i.imgur.com/fBQoksC.png)
 
 For some kind of content, you may use cloneable fields or cloneable groups.
 
@@ -137,7 +137,7 @@ There will be a shortcode automatically generated, just copy it since we will us
 
 ![copy the shortcode automatically generated](https://i.imgur.com/WVAKBcp.png)
 
-We had another tutorial on [how to use the MB Testimonials solution](https://docs.metabox.io/extensions/mb-testimonials/) to create and customize the testimonial section. You can watch it for more details. 
+We had another tutorial on [how to use the MB Testimonials solution](https://docs.metabox.io/extensions/mb-testimonials/) to create and customize the testimonial section. You can watch it for more details.
 
 Let’s move on to the next step.
 

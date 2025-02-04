@@ -74,7 +74,7 @@ There are several settings:
 - Conditional Logic: setup the conditional logic rules to toggle the field group based on other fields' values. Requires the [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/) extension.
 - Post settings, such as context, priority if you select the location is for posts.
 - Custom block settings, such as block icon, render callback if you select the location is for blocks, which means creating custom Gutenberg blocks. Requires [MB Blocks](/extensions/mb-blocks/) extension. See the **Create Gutenberg blocks** section below.
-- Tab style and default active tab: these are the settings for [Meta Box Tabs](/extensions/meta-box-tabs/) extension.
+- Tab style and default active tab: these are the settings for [MB Tabs](/extensions/meta-box-tabs/) extension.
 - Custom table settings, including table name, table prefix and option to create custom table automatically. These are the settings for [MB Custom Table](/extensions/mb-custom-table/) extension. Note that if you select to create the custom table automatically, all columns will have the data type `TEXT` to ensure maximum compatibility.
 - Custom CSS class: the custom CSS class for the wrapper `div` if you need to cusomize the style of the field group.
 - Field ID prefix: if you want to prefix all fields in the field group, then this settings is for that. It's optional, but a good practice to keep your custom fields separated from other custom fields. You can also use underscore `_` as prefix to keep your fields hidden in the default WordPress **Custom Fields** meta box.
@@ -393,7 +393,7 @@ This is the result of the above example:
 
 ### Adding custom controls field groups
 
-Similarly, you can add custom controls for the whole field group. Here is how we do to add custom controls when [Meta Box Tabs](/extensions/meta-box-tabs/) extension is activated.
+Similarly, you can add custom controls for the whole field group. Here is how we do to add custom controls when [MB Tabs](/extensions/meta-box-tabs/) extension is activated.
 
 ```php
 add_filter( 'mbb_settings_controls', 'your_prefix_add_settings_controls' );
@@ -401,7 +401,7 @@ add_filter( 'mbb_settings_controls', 'your_prefix_add_settings_controls' );
 function your_prefix_add_settings_controls( $controls ) {
 	$controls[] = \MBB\Control::Select( 'tab_style', [
 		'label'   => __( 'Tab style', 'meta-box-builder' ),
-		'tooltip' => __( 'Change how look and feel of tabs in Meta Box Tabs', 'meta-box-builder' ),
+		'tooltip' => __( 'Change how look and feel of tabs in MB Tabs', 'meta-box-builder' ),
 		'options' => [
 			'default' => __( 'Default', 'meta-box-builder' ),
 			'box'     => __( 'Box', 'meta-box-builder' ),

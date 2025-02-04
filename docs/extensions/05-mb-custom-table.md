@@ -429,7 +429,7 @@ This feature currently works with the following extensions:
 - MB Admin Columns
 - Meta Box Group
 - Meta Box Columns
-- Meta Box Tabs
+- MB Tabs
 - MB Tooltip
 - Meta Box Geolocation
 - MB Text Limiter

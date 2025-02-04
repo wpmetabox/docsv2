@@ -5,7 +5,7 @@ title: Translating Meta Box custom field values for users and taxonomies with WP
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Having a multilingual website for products, and services is more and more essential in the global economy. And, it’s undeniable that using a translation plugin is an optimal choice to build it. 
+Having a multilingual website for products, and services is more and more essential in the global economy. And, it’s undeniable that using a translation plugin is an optimal choice to build it.
 
 One in the range of translation plugins, WPML seems like the most popular with a large number of users. You might know that it can help to [translate custom fields created with Meta Box](https://metabox.io/translate-custom-fields-with-wpml/) a long time ago. And now, the integration between the two plugins is more deep so you can also **translate the custom field values easily, especially custom fields for users and taxonomies**. We’ll delve into it in this blog. It is one of the applications of [Meta Box - WPML compatibility](https://docs.metabox.io/integration/meta-box-wpml-integration/).
 
@@ -31,7 +31,7 @@ Sometimes you want to store some extra information of users or taxonomies in cus
 - **WPML Multilingual CMS** (means WPML core): to create and manage multilingual websites on the WordPress platform easily. It helps translate the basic content of your WordPress such as posts, pages, menus, and notifications;
 - **WPML String Translation**: to translate text strings from your theme and plugins on your WordPress, as well as special content in posts, pages, taxonomies, and taglines.
 
-Also, you may want to use other extensions to have the appropriate structure of the custom fields such as [Meta Box Tabs](https://metabox.io/plugins/meta-box-tabs/), [Meta Box Group](https://metabox.io/plugins/meta-box-group/), and [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/).
+Also, you may want to use other extensions to have the appropriate structure of the custom fields such as [MB Tabs](https://metabox.io/plugins/meta-box-tabs/), [Meta Box Group](https://metabox.io/plugins/meta-box-group/), and [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/).
 
 Let’s start now!
 
@@ -85,7 +85,7 @@ To do it, you should add the following code to the theme’s file:
 add_filter( 'wpml_translatable_user_meta_fields', function( $fields ) {
     $fields[] = 'author_level';
     return $fields;
-} ); 
+} );
 ```
 
 ![Add code to the theme’s file to convert custom fields to strings](https://i.imgur.com/93aHwOJ.png)
@@ -134,7 +134,7 @@ Do it one by one for each value. And, it’s the same with the other fields.
 
 We have just added translation versions for the values of each field. They are now available in the backend, but not on the frontend. So, the website visitors still can not see them. We should take one more step for that.
 
-### 2.2. Displaying translation versions of custom user field values on the frontend 
+### 2.2. Displaying translation versions of custom user field values on the frontend
 
 #### 2.2.1. Getting and displaying the field values
 
@@ -216,7 +216,7 @@ And, when you change the language on the switcher, the content of the author sec
 
 **The switcher displays only the languages the post has the translation version**. Then, there is no way to display the translation of the field values in other languages that the post doesn’t have.
 
-And, even when you do everything following the above instructions, only the users who you regulate in the **More options** section can display the translated information. 
+And, even when you do everything following the above instructions, only the users who you regulate in the **More options** section can display the translated information.
 
 There will be no translation for custom field values of the users who are unchecked. The information is kept intact in the original language, although you turn the page to another language. So, make sure you check all the boxes of the user types you want to translate.
 
@@ -295,7 +295,7 @@ Then, add some code to the **Template** tab along with some **`div`** tags, and 
 {% for category in category_detail %}
     <div class="mb-category">
         <div class="item">
-            {% set meta_title = mb.get_term_meta( category.term_id, 'meta_title', true) %}	
+            {% set meta_title = mb.get_term_meta( category.term_id, 'meta_title', true) %}
             {% set meta_description = mb.get_term_meta( category.term_id, 'meta_description', true) %}
 
             <div class="mb-taxonomy">{{ category.cat_name }} </div>
