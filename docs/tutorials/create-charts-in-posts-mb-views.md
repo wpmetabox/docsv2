@@ -98,7 +98,7 @@ Then, the value should be the value of the line.
 
 This means the **Line Color** field displays only when users set the Select field above as the **Line** option. For more details and advanced on setting conditions with MB Conditional Logic, you can refer to [its doc](https://docs.metabox.io/extensions/meta-box-conditional-logic/).
 
-The data will be set in a couple of fields including the X-axis and the Y-axis. As well as, two axes will be in a line since I set the column size for them. This feature is provided by the [Meta Box Columns](https://metabox.io/plugins/meta-box-columns/) extension, which **allows us to set the field’s display in columns**. This is just optional so I didn’t mention it from the beginning.
+The data will be set in a couple of fields including the X-axis and the Y-axis. As well as, two axes will be in a line since I set the column size for them. This feature is provided by the [MB Columns](https://metabox.io/plugins/meta-box-columns/) extension, which **allows us to set the field’s display in columns**. This is just optional so I didn’t mention it from the beginning.
 
 Thus, add a **Group** field to group them in pairs first.
 

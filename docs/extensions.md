@@ -15,7 +15,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![views](/extensions/views.png) <span className="thumb_text">MB Views</span>](/extensions/mb-views/)
 
-[![columns](/extensions/columns.png) <span className="thumb_text">Meta Box Columns</span>](/extensions/meta-box-columns/)
+[![columns](/extensions/columns.png) <span className="thumb_text">MB Columns</span>](/extensions/meta-box-columns/)
 
 [![tabs](/extensions/tabs.png) <span className="thumb_text">MB Tabs</span>](/extensions/meta-box-tabs/)
 

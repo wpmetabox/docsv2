@@ -1,8 +1,8 @@
 ---
-title: Meta Box Columns
+title: MB Columns
 ---
 
-Meta Box Columns helps you put custom fields into columns in a 12-column grid. You can create nested columns for sub-fields in [groups](/extensions/meta-box-group/) or put multiple fields into one column.
+MB Columns helps you put custom fields into columns in a 12-column grid. You can create nested columns for sub-fields in [groups](/extensions/meta-box-group/) or put multiple fields into one column.
 
 ![put custom fields in columns](https://i2.wp.com/metabox.io/wp-content/uploads/2014/07/meta-box-columns-screenshot.png)
 
@@ -16,7 +16,7 @@ The code below registers some fields and make each field obtain 4 columns of the
 add_filter( 'rwmb_meta_boxes', 'prefix_columns_demo_register' );
 function prefix_columns_demo_register( $meta_boxes ) {
     $meta_boxes[] = array(
-        'title'  => 'Meta Box Columns Demo',
+        'title'  => 'MB Columns Demo',
         'fields' => array(
             array(
                 'name'    => 'Name',
@@ -52,7 +52,7 @@ add_filter( 'rwmb_meta_boxes', 'prefix_register_meta_boxes' );
 function prefix_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'id'     => 'test-columns',
-        'title'  => 'Meta Box Columns Demo',
+        'title'  => 'MB Columns Demo',
         'columns' => array(
             'column-1' => 4,                   // Define the size of the column (from 1 to 12)
             'column-2' => array(               // More advanced syntax

@@ -428,7 +428,7 @@ This feature currently works with the following extensions:
 
 - MB Admin Columns
 - Meta Box Group
-- Meta Box Columns
+- MB Columns
 - MB Tabs
 - MB Tooltip
 - MB Geolocation
