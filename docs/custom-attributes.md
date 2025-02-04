@@ -12,9 +12,9 @@ To add custom attributes to the fields, click the **Advanced** tab in the field 
 
 Then add your attribute name and value.
 
-:::info Not a premium user?
+:::info
 
-This instruction uses **MB Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
+The instruction above uses [MB Builder](/extensions/meta-box-builder/), an extension providing the UI to create fields, and is already bundled in [Meta Box Lite](https://metabox.io/lite/) and [Meta Box AIO](/extensions/meta-box-aio/). If you prefer to use code, please see below.
 
 :::
 

@@ -43,9 +43,9 @@ To create a settings page, go to **Meta Box » Settings Pages** and click **Add 
 
 On the new screen, you'll see all details for the settings page.
 
-:::info Not a premium user?
+:::info
 
-This instruction uses **MB Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
+The instruction above uses [MB Builder](/extensions/meta-box-builder/), an extension providing the UI to create fields, and is already bundled in [Meta Box Lite](https://metabox.io/lite/) and [Meta Box AIO](/extensions/meta-box-aio/). If you prefer to use code, please see below.
 
 :::
 

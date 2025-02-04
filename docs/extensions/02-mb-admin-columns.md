@@ -31,9 +31,9 @@ Searchable|Whether the column is searchable.
 Filterable|Whether the column is filterable. It's applied only to the taxonomy field, which allows you to filter posts by taxonomy terms.
 Item link type|Whether to link the value to the post edit screen or post view on the front end.
 
-:::info Not a premium user?
+:::info
 
-This instruction uses **MB Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
+The instruction above uses [MB Builder](/extensions/meta-box-builder/), an extension providing the UI to create fields, and is already bundled in [Meta Box Lite](https://metabox.io/lite/) and [Meta Box AIO](/extensions/meta-box-aio/). If you prefer to use code, please see below.
 
 :::
 

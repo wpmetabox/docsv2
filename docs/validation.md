@@ -22,9 +22,9 @@ When editing a field, switch to the **Advanced** tab, and scroll down to the **C
 
 In the **Key** input box, you can select any rule from the dropdown (if you don't see the dropdown, press the down arrow button), or enter the attribute name manually. And then enter the desired value in the **Value** input box.
 
-:::info Not a premium user?
+:::info
 
-This instruction uses **MB Builder** extension, which is a premium extension and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code. See below for more information.
+The instruction above uses [MB Builder](/extensions/meta-box-builder/), an extension providing the UI to create fields, and is already bundled in [Meta Box Lite](https://metabox.io/lite/) and [Meta Box AIO](/extensions/meta-box-aio/). If you prefer to use code, please see below.
 
 :::
 

@@ -20,9 +20,9 @@ After turning in the Cloneable option, other clone settings will appear.
 
 ![other clone settings](https://i.imgur.com/uhhImkb.png)
 
-:::info Not a premium user?
+:::info
 
-You can see the settings visually as above since this instruction uses [MB Builder](https://metabox.io/plugins/meta-box-builder/) extension, which is a premium extension providing the UI to create fields, and is already bundled in Meta Box AIO and MB Core. If you're not a premium user, please [purchase a license](https://metabox.io/pricing/) to use it. However, you can do this with code.
+The instruction above uses [MB Builder](/extensions/meta-box-builder/), an extension providing the UI to create fields, and is already bundled in [Meta Box Lite](https://metabox.io/lite/) and [Meta Box AIO](/extensions/meta-box-aio/). If you prefer to use code, please see below.
 
 :::
 
