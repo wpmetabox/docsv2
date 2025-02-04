@@ -83,7 +83,7 @@ Taxonomy | Taxonomy advanced
 Google maps | A pair of address field - which is a text field, and a Google maps field
 Group | Non-cloneable group. Requires [Meta Box Group](/extensions/meta-box-group/).
 Repeater | Cloneable group. Requires [Meta Box Group](/extensions/meta-box-group/).
-Flexible content | Cloneable group with 2 sub-fields: a select field for selecting a layout, and a non-cloneable group for data. Requires [Meta Box Group](/extensions/meta-box-group/) and [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/).
+Flexible content | Cloneable group with 2 sub-fields: a select field for selecting a layout, and a non-cloneable group for data. Requires [Meta Box Group](/extensions/meta-box-group/) and [MB Conditional Logic](/extensions/meta-box-conditional-logic/).
 
 :::info Field backup
 

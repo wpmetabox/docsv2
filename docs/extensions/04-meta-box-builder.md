@@ -54,7 +54,7 @@ All field settings are divided into 2 tabs: General, Advanced. The General tab h
 - Custom HTML5 attributes: helps you add [custom HTMl5 attributes](/custom-attributes/) to your input fields.
 - Validation: helps you to create [complex validation rules](/validation/).
 - Custom settings: if you want to add extra settings to the field. We'll cover it in a next section.
-- Conditional logic: if you install the [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/), then this part is for creating rules with UI.
+- Conditional logic: if you install the [MB Conditional Logic](/extensions/meta-box-conditional-logic/), then this part is for creating rules with UI.
 
 ![edit field advanced settings](https://i.imgur.com/jKU2B56.png)
 
@@ -71,7 +71,7 @@ There are several settings:
 - Location: where you select this field group is for posts, terms, users, comments, blocks or settings pages. For each object type, you'll be able to select corresponding post types, taxonomies or settings pages. Please note that it's required to install and activate corresponding extensions: [MB Term Meta](/extensions/mb-term-meta/), [MB User Meta](/extensions/mb-term-meta/), [MB Comment Meta](https://metabox.io/plugins/mb-comment-meta/), [MB Blocks](/extensions/mb-blocks/), and [MB Settings Page](/extensions/mb-settings-page/).
 - Advanced location rules: allows you to add advanced rules for which category, post, user, ... the field group appears for. Requires the [MB Include Exclude](/extensions/meta-box-include-exclude/) extension.
 - Toggle rules: select which conditions to show or hide the field group. Requires the [MB Show Hide](/extensions/meta-box-show-hide/) extension.
-- Conditional Logic: setup the conditional logic rules to toggle the field group based on other fields' values. Requires the [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/) extension.
+- Conditional Logic: setup the conditional logic rules to toggle the field group based on other fields' values. Requires the [MB Conditional Logic](/extensions/meta-box-conditional-logic/) extension.
 - Post settings, such as context, priority if you select the location is for posts.
 - Custom block settings, such as block icon, render callback if you select the location is for blocks, which means creating custom Gutenberg blocks. Requires [MB Blocks](/extensions/mb-blocks/) extension. See the **Create Gutenberg blocks** section below.
 - Tab style and default active tab: these are the settings for [MB Tabs](/extensions/meta-box-tabs/) extension.

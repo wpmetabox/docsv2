@@ -20,7 +20,7 @@ We need the following tools for this practice:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom fields. It’s free, and you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields;
-* [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) (optional): to show or hide custom fields based on the data users fill in another field. It is just optional if you need to show or hide fields in your case.
+* [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) (optional): to show or hide custom fields based on the data users fill in another field. It is just optional if you need to show or hide fields in your case.
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/) (optional): to group together the fields along with the Custom HTML field that we use for the notification. This is optional as well. In fact, you obviously can set the Custom HTML field stand alone.
 
 ## 1. Creating custom fields

@@ -26,7 +26,7 @@ Let’s look for the detailed list of tools we need for this practice.
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for displaying the 404 page’s content.
 
-Besides, you can make the most of some other extensions to have your own field structure that fits your page’s content. They may be [Meta Box Tab](https://metabox.io/plugins/meta-box-tabs/), [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), and so on. However, they are just optional. In this practice, I’ll use [Meta Box Group](https://metabox.io/plugins/meta-box-group/) to organize custom fields into groups for simpler management and display.
+Besides, you can make the most of some other extensions to have your own field structure that fits your page’s content. They may be [Meta Box Tab](https://metabox.io/plugins/meta-box-tabs/), [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), and so on. However, they are just optional. In this practice, I’ll use [Meta Box Group](https://metabox.io/plugins/meta-box-group/) to organize custom fields into groups for simpler management and display.
 
 You can install them individually or just use **Meta Box AIO**.
 

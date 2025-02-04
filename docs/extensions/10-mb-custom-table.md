@@ -433,7 +433,7 @@ This feature currently works with the following extensions:
 - MB Tooltip
 - MB Geolocation
 - MB Text Limiter
-- Meta Box Conditional Logic
+- MB Conditional Logic
 - MB Show Hide
 
 ### Hooks

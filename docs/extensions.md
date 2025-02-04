@@ -23,7 +23,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![admin columns](/extensions/admin-columns.png) <span className="thumb_text">MB Admin Columns</span>](/extensions/mb-admin-columns/)
 
-[![conditional logic](/extensions/conditional-logic.png) <span className="thumb_text">Meta Box Conditional Logic</span>](/extensions/meta-box-conditional-logic/)
+[![conditional logic](/extensions/conditional-logic.png) <span className="thumb_text">MB Conditional Logic</span>](/extensions/meta-box-conditional-logic/)
 
 [![include exclude](/extensions/include-exclude.png) <span className="thumb_text">MB Include Exclude</span>](/extensions/meta-box-include-exclude/)
 

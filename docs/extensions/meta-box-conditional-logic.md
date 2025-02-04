@@ -1,11 +1,11 @@
 ---
-title: Meta Box Conditional Logic
+title: MB Conditional Logic
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-**Meta Box Conditional Logic** helps you to show or hide meta boxes, custom fields or any elements based on other fields' values.
+**MB Conditional Logic** helps you to show or hide meta boxes, custom fields or any elements based on other fields' values.
 
 <LiteYouTubeEmbed id='m_FtbydM_-I' />
 
@@ -241,7 +241,7 @@ This example shows or hides a field depends on there's a file uploaded:
 
 ## Toggle by other elements
 
-Meta Box Conditional Logic can work with other HTML elements the same as Meta Box fields. With this feature, you can show or hide any meta box or field based on post types, page parent, post ID, categories...
+MB Conditional Logic can work with other HTML elements the same as Meta Box fields. With this feature, you can show or hide any meta box or field based on post types, page parent, post ID, categories...
 
 To make it work with HTML element, instead of passing the field ID as the first parameter, please pass the **element's ID**.
 

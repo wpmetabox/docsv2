@@ -37,7 +37,7 @@ So, these are some tools we need to have the charts:
 * [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and set up a template for displaying chart information. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for displaying the chart;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the related information of the chart visually;
-* [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to set the rule for displaying fields for each type of chart;
+* [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to set the rule for displaying fields for each type of chart;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): to group the value of the X-axis and Y-axis in an item;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page including chart data in the case that you want to put the chart on a specific post or page.
 
@@ -87,7 +87,7 @@ For the line chart, there is only one line to illustrate the growth trend. So, b
 
 ![Use the Color Picker field type for the color of the line](https://i.imgur.com/lKC45E3.png)
 
-This field displays only when the type we chose is **Line**. To set this condition, move to the **Advanced** tab of the field, you’ll see the **Conditional logic** section. It’s available when you have the [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) extension activated.
+This field displays only when the type we chose is **Line**. To set this condition, move to the **Advanced** tab of the field, you’ll see the **Conditional logic** section. It’s available when you have the [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) extension activated.
 
 ![Move to the Advanced tab of the field, and find out the Conditional logic section to set the condition](https://i.imgur.com/28snCYF.png)
 
