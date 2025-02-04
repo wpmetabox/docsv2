@@ -1,8 +1,8 @@
 ---
-title: Meta Box Geolocation
+title: MB Geolocation
 ---
 
-Meta Box Geolocation helps you fill in address fields (street address, zip code, city, state, and country) quickly by using Geocoding API from Google Maps/Open Street Maps.
+MB Geolocation helps you fill in address fields (street address, zip code, city, state, and country) quickly by using Geocoding API from Google Maps/Open Street Maps.
 
 ![auto suggest geolocation data](https://i1.wp.com/metabox.io/wp-content/uploads/2016/03/meta-box-geolocation.gif)
 
@@ -189,7 +189,7 @@ Sometimes you don't want the fields to have the *exact* ID as the address compon
 
 Let's say we have a country named 'Australia'. The long name is 'Australia' and the short name is 'AU'. If we have a state named 'Queensland', 'Queensland' is the long name and 'QLD' is the short name.
 
-By default, Meta Box Geolocation will populate the long name of the field. But you can use the short name by **adding `_short` at the end of field ID**. For example: `administrative_area_level_1_short`, `country_short`.
+By default, MB Geolocation will populate the long name of the field. But you can use the short name by **adding `_short` at the end of field ID**. For example: `administrative_area_level_1_short`, `country_short`.
 
 :::caution
 

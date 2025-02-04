@@ -23,7 +23,7 @@ To have advanced features, we need some of its extensions:
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template to display the admission form;
 * [Meta Box Group](https://metabox.io/plugins/meta-box-group/): (optional) to group the fields;
 * [Meta Box Columns](https://metabox.io/plugins/meta-box-columns/): (optional) to divide and display the fields into columns with maximum 12 grids;
-* [Meta Box Geolocation](https://metabox.io/plugins/meta-box-geolocation/): (optional) to automatically populates location data into the fields with the power of Google Maps/Open Street Maps Geolocation API;
+* [MB Geolocation](https://metabox.io/plugins/meta-box-geolocation/): (optional) to automatically populates location data into the fields with the power of Google Maps/Open Street Maps Geolocation API;
 * [Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): (optional) to create rules to control the display of the fields.
 
 They’re all in the **Meta Box AIO**. If you haven’t had it, you can download and install each extension individually.

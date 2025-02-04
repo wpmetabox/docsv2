@@ -57,7 +57,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![custom-table](/extensions/custom-table.png) <span className="thumb_text">MB Custom Table</span>](/extensions/mb-custom-table/)
 
-[![geolocation](/extensions/geolocation.png) <span className="thumb_text">Meta Box Geolocation</span>](/extensions/meta-box-geolocation/)
+[![geolocation](/extensions/geolocation.png) <span className="thumb_text">MB Geolocation</span>](/extensions/meta-box-geolocation/)
 
 [![rest api](/extensions/rest-api.png) <span className="thumb_text">MB REST API</span>](/extensions/mb-rest-api/)
 

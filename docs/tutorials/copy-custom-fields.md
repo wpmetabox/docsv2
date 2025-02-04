@@ -10,7 +10,7 @@ In this practice, I already have the original page with the field group availabl
 
 ![The original page with the field group is available, but the targeted site has not yet.](https://i.imgur.com/N0IQOgB.png)
 
-As a result, we’ll have two different sites with a similar simple field group like this. 
+As a result, we’ll have two different sites with a similar simple field group like this.
 
 ![Two different sites with a similar simple field group](https://i.imgur.com/iQCmPqH.png)
 
@@ -52,7 +52,7 @@ Note: If you already have custom fields on your website, you can skip this step.
 
 Create the meta boxes and custom fields inside through the UI of Meta Box Builder. Remember to completely configure all the fields.
 
-In there, you can also concurrently use the other extensions of Meta Box to configure your custom fields as you want, ex: [Meta Box Group](https://docs.metabox.io/extensions/meta-box-group/),[ Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), [Meta Box Geolocation](https://docs.metabox.io/extensions/meta-box-geolocation/), etc. Depending on your demand, you can create as many as fields you want and set configuration for them.
+In there, you can also concurrently use the other extensions of Meta Box to configure your custom fields as you want, ex: [Meta Box Group](https://docs.metabox.io/extensions/meta-box-group/),[ Meta Box Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/), [MB Geolocation](https://docs.metabox.io/extensions/meta-box-geolocation/), etc. Depending on your demand, you can create as many as fields you want and set configuration for them.
 
 I just created a simple field group for example:
 
