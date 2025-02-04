@@ -1,12 +1,12 @@
 ---
-title: Meta Box Template
+title: MB Template
 ---
 
-Meta Box Template helps you write configuration for custom fields in the YAML format, which is human-readable and easy to understand.
+MB Template helps you write configuration for custom fields in the YAML format, which is human-readable and easy to understand.
 
 ![meta box template](https://i.imgur.com/UIKF04C.png)
 
-After installing, please go to *Settings &rarr; Meta Box Template* to add the template for custom meta boxes and custom fields.
+After installing, please go to *Settings &rarr; MB Template* to add the template for custom meta boxes and custom fields.
 
 ## Quick sample
 

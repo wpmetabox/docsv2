@@ -31,7 +31,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![text limiter](/extensions/text-limiter.png) <span className="thumb_text">MB Text Limiter</span>](/extensions/meta-box-text-limiter/)
 
-[![template](/extensions/template.png) <span className="thumb_text">Meta Box Template</span>](/extensions/meta-box-template/)
+[![template](/extensions/template.png) <span className="thumb_text">MB Template</span>](/extensions/meta-box-template/)
 
 </div>
 
