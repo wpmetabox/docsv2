@@ -24,7 +24,7 @@ In this practice, we need these tools:
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework that allows creating custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for videos;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields;
-* [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them in the page built with Elementor easily;
+* [MB Elementor Integration](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them in the page built with Elementor easily;
 * **Elementor Pro**: to build the page.
 
 ## 1. Creating a New Custom Post Type

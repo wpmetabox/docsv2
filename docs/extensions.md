@@ -79,13 +79,13 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 <!-- [![yoast seo](/extensions/yoastseo.png) <span className="thumb_text">MB Yoast SEO Integration</span>](/extensions/meta-box-yoat-seo/) -->
 
-<!-- [![facetwp](/extensions/facetwp.png) <span className="thumb_text">Meta Box - FacetWP Integrator</span>](/extensions/meta-box-facetwp-integrator/) -->
+<!-- [![facetwp](/extensions/facetwp.png) <span className="thumb_text">MB FacetWP Integration</span>](/extensions/meta-box-facetwp-integrator/) -->
 
-<!-- [![elementor](/extensions/elementor.png) <span className="thumb_text">Meta Box - Elementor Integrator</span>](/extensions/mb-elementor-integrator/) -->
+<!-- [![elementor](/extensions/elementor.png) <span className="thumb_text">MB Elementor Integration</span>](/extensions/mb-elementor-integrator/) -->
 
-<!-- [![beaver](/extensions/beaver.png) <span className="thumb_text">Meta Box - Beaver Themer Integrator</span>](/extensions/meta-box-beaver-themer-integrator/) -->
+<!-- [![beaver](/extensions/beaver.png) <span className="thumb_text">MB Beaver Builder Integration</span>](/extensions/meta-box-beaver-themer-integrator/) -->
 
-<!-- [![searchwp](/extensions/searchwp.png) <span className="thumb_text">Meta Box - SearchWP Integrator</span>](/extensions/meta-box-searchwp-integrator/) -->
+<!-- [![searchwp](/extensions/searchwp.png) <span className="thumb_text">MB SearchWP Integration</span>](/extensions/meta-box-searchwp-integrator/) -->
 
 </div>
 

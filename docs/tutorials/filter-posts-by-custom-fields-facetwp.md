@@ -30,7 +30,7 @@ There are the tools we need:
 * [Meta Box](https://metabox.io/): to have framework to create custom post types and custom fields;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a new post type named Restaurant;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for saving restaurants’ information;
-* [Meta Box - FacetWP Integrator](https://metabox.io/plugins/meta-box-facetwp-integrator/): to create a filter based on the Voucher field;
+* [MB FacetWP Integration](https://metabox.io/plugins/meta-box-facetwp-integrator/): to create a filter based on the Voucher field;
 * [Meta Box Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display custom fields created by Meta Box in the Elementor’s dynamic tags;
 * **Elementor** (pro version): to have integration with Meta Box to build the page;
 * **Elementor Custom Skin**: to create a template as a loop to display the list of restaurants.

@@ -24,7 +24,7 @@ So we need some tools for this practice:
 * [Meta Box](https://metabox.io/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a new post type for the restaurants;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to easily create custom fields for saving extra information of the restaurant.
-* [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get data saved in custom fields created by Meta Box in the template of Elementor;
+* [MB Elementor Integration](https://metabox.io/plugins/mb-elementor-integrator/): to get data saved in custom fields created by Meta Box in the template of Elementor;
 * [Elementor](https://elementor.com/) (Pro version): to build the page and display all the restaurants’ information;
 * [Elementor Custom Skin](https://wordpress.org/plugins/ele-custom-skin/): to create a loop to display the listing of posts.
 

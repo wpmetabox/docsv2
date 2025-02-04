@@ -23,7 +23,7 @@ We have a FAQs page that needs to have custom fields for saving the questions an
 * [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into robust and intensely user-friendly groups;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * [MB Include Exclude](https://metabox.io/plugins/meta-box-include-exclude/): to add more rules on where to display the field group on the FAQs page;
-* [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display data from custom fields created by Meta Box plugin in the Elementor's dynamic tags;
+* [MB Elementor Integration](https://metabox.io/plugins/mb-elementor-integrator/): to connect and display data from custom fields created by Meta Box plugin in the Elementor's dynamic tags;
 * [Elementor](https://elementor.com/) (Pro version): to build the page for displaying Q&A;
 
 ## 1. Creating a new page

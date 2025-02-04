@@ -26,7 +26,7 @@ So, to get started, we need these tools:
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post type for the products;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the custom fields as an admin column to easily see the information. I use it to show you which restaurants will be featured to easily compare with the result.
-* [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them on the page easily.
+* [MB Elementor Integration](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them on the page easily.
 * **Elementor** and its pro version: to build the homepage and the section.
 
 You can install them individually or use the Meta Box AIO for all.

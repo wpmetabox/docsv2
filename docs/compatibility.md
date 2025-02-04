@@ -6,8 +6,8 @@ title: Compatibility
 
 ### Page builder plugins
 
-- Beaver Builder (via [Meta Box - Beaver Themer Integrator](https://metabox.io/plugins/meta-box-beaver-themer-integrator/))
-- Elementor (via [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/))
+- Beaver Builder (via [MB Beaver Builder Integration](https://metabox.io/plugins/meta-box-beaver-themer-integrator/))
+- Elementor (via [MB Elementor Integration](https://metabox.io/plugins/mb-elementor-integrator/))
 - Oxygen Builder (official support from Oxygen Builder since version 3.9 Beta 1)
 - Brizy (official support from Brizy)
 - Bricks (official support from Bricks)
@@ -23,9 +23,9 @@ Meta Box has official support from these plugins:
 
 ### Search and filter plugins
 
-- FacetWP (via [Meta Box - FacetWP Integrator](https://metabox.io/plugins/meta-box-facetwp-integrator/))
+- FacetWP (via [MB FacetWP Integration](https://metabox.io/plugins/meta-box-facetwp-integrator/))
 - FilterWP (official support from FilterWP)
-- SearchWP (via [Meta Box - SearchWP Integrator](https://metabox.io/plugins/meta-box-searchwp-integrator/))
+- SearchWP (via [MB SearchWP Integration](https://metabox.io/plugins/meta-box-searchwp-integrator/))
 - GridbuilderWP (official support from GridbuilderWP)
 - Piotnet Grid Builder (official support from Piotnet Grid Builder)
 

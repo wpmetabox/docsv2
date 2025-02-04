@@ -34,7 +34,7 @@ These are some tools we use for this practice:
 * [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields for the events. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the events;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field visually;
-* [Meta Box - Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/): to help Elementor elements get the dynamic data from custom fields created with Meta Box.
+* [MB Elementor Integration](https://metabox.io/plugins/mb-elementor-integrator/): to help Elementor elements get the dynamic data from custom fields created with Meta Box.
 * **Elementor** to build the page, obviously. I also use **Elementor Pro**, which Meta Box already has the integration with to display the information from custom fields.
 
 ## 1. Creating a new post type
