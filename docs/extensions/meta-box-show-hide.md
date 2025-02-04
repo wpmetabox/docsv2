@@ -1,10 +1,10 @@
 ---
-title: Meta Box Show Hide
+title: MB Show Hide
 ---
 
-Meta Box Show Hide helps you to toggle the visibility of a meta box based on some conditions such as categories, page template or post format.
+MB Show Hide helps you to toggle the visibility of a meta box based on some conditions such as categories, page template or post format.
 
-Meta Box Show Hide is a simplified version of [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/). Meta Box Conditional Logic can control the visibility of custom fields and other HTML elements and supports more types of conditions.
+MB Show Hide is a simplified version of [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/). Meta Box Conditional Logic can control the visibility of custom fields and other HTML elements and supports more types of conditions.
 
 ## Settings
 
@@ -39,7 +39,7 @@ e.g, the value should be in form of `post_type:template-file.php`. If the `post_
 add_filter( 'rwmb_meta_boxes', 'prefix_show_hide_demo_register' );
 function prefix_show_hide_demo_register( $meta_boxes ) {
     $meta_boxes[] = array(
-        'title'  => 'Meta Box Show Hide Demo: Show',
+        'title'  => 'MB Show Hide Demo: Show',
 
         // Show this meta box for posts matched below conditions
         'show'   => array(
@@ -83,7 +83,7 @@ function prefix_show_hide_demo_register( $meta_boxes ) {
 
     // 2nd meta box
     $meta_boxes[] = array(
-        'title'  => 'Meta Box Show Hide Demo: Hide',
+        'title'  => 'MB Show Hide Demo: Hide',
 
         // Hide this meta box for posts matched below conditions
         'hide'   => array(

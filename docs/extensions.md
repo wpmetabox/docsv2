@@ -27,7 +27,7 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![include exclude](/extensions/include-exclude.png) <span className="thumb_text">MB Include Exclude</span>](/extensions/meta-box-include-exclude/)
 
-[![show hide](/extensions/show-hide.png) <span className="thumb_text">Meta Box Show Hide</span>](/extensions/meta-box-show-hide/)
+[![show hide](/extensions/show-hide.png) <span className="thumb_text">MB Show Hide</span>](/extensions/meta-box-show-hide/)
 
 [![text limiter](/extensions/text-limiter.png) <span className="thumb_text">MB Text Limiter</span>](/extensions/meta-box-text-limiter/)
 

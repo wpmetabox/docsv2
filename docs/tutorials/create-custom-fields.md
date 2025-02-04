@@ -213,7 +213,7 @@ For example, if you choose the **Location** as **Post Type**, which is the one w
 
 * **Advanced location rules**: to add more rules on where to display the field group such as choosing a post, or a page. It’s quite similar to the **Conditional Logic**. You will have this option when installing **MB Include Exclude** extension;
 
-* **Toggle rules**: allow to show/hide this field group under conditions. It is the settings when you install **Meta Box Show Hide** extension;
+* **Toggle rules**: allow to show/hide this field group under conditions. It is the settings when you install **MB Show Hide** extension;
 
 ![Advanced location rules and toggle](https://i.imgur.com/0UGLN5X.png)
 

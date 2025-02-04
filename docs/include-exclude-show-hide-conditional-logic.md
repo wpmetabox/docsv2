@@ -6,7 +6,7 @@ displayed_sidebar: general
 We have 3 extensions that can help you control the visibility of a meta box for a certain post/page:
 
 - [MB Include Exclude](/extensions/meta-box-include-exclude/)
-- [Meta Box Show Hide](/extensions/meta-box-show-hide/)
+- [MB Show Hide](/extensions/meta-box-show-hide/)
 - [Meta Box Conditional Logic](/extensions/meta-box-conditional-logic/)
 
 That might be confused as you don't know which extension is the right choice for you. So the main difference between them is the following: **MB Include Exclude** hides meta boxes **by PHP**, meaning:

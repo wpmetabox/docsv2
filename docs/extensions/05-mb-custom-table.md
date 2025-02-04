@@ -434,7 +434,7 @@ This feature currently works with the following extensions:
 - MB Geolocation
 - MB Text Limiter
 - Meta Box Conditional Logic
-- Meta Box Show Hide
+- MB Show Hide
 
 ### Hooks
 
