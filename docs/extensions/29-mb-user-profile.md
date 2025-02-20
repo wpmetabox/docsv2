@@ -294,8 +294,24 @@ This action fires after the submit button is displayed. It accepts one parameter
 
 This filter is used to check if the form is validated. You can use this filter to add a custom check for the data before it's processed.
 
+If you return any value other than `true`, the form will not be processed and the error message will be displayed. So, you can return a string as an error message.
+
 ```php
 $is_valid = apply_filters( 'rwmb_profile_validate', $is_valid, $config );
+```
+
+Example:
+
+```php
+add_filter( 'rwmb_profile_validate', function ($is_valid) {
+	$email = $_POST['user_email'] ?? '';
+    
+	if ( $email === 'alex@example.com' ) {
+		$is_valid = 'Email is already taken';
+	}
+
+	return $is_valid;
+} );
 ```
 
 ### `rwmb_profile_insert_user_data`

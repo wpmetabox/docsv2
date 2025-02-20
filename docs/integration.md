@@ -120,7 +120,7 @@ Notes:
 	"require": {
 		"wpackagist-plugin/mb-custom-post-type": "^2.3",
 		"meta-box/meta-box-group": "dev-master",
-		"meta-box/mb-settings-page": "dev-master",
+		"meta-box/mb-settings-page": "dev-master"
 	},
 	// highlight-start
 	"extra": {
@@ -136,7 +136,7 @@ Notes:
 		"files": [
 			"vendor/meta-box/mb-custom-post-type/mb-custom-post-type.php",
 			"vendor/meta-box/mb-settings-page/mb-settings-page.php",
-			"vendor/meta-box/meta-box-group/meta-box-group.php",
+			"vendor/meta-box/meta-box-group/meta-box-group.php"
 		]
 	}
 }
