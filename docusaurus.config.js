@@ -63,7 +63,7 @@ const config = {
       },
       image: 'https://i.imgur.com/wnJtgSC.jpg',
       announcementBar: {
-        content: ' 🔥 Get 20% OFF for any plan with coupon <b>WCASIA2025</b> during the WordCamp Asia 2025 event until Feb 22. <a target="_blank" href="https://metabox.io/pricing/">Get it now</a>',
+        content: 'Lauching <b>Meta Box Lite</b>, a feature-rich free UI version of Meta Box. <a target="_blank" href="https://metabox.io/lite/">Learn more</a>',
         backgroundColor: '#fed7aa',
         textColor: '#7c2d12',
         isCloseable: false,
