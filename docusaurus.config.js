@@ -63,7 +63,7 @@ const config = {
       },
       image: 'https://i.imgur.com/wnJtgSC.jpg',
       announcementBar: {
-        content: 'Lauching <b>Meta Box Lite</b>, a feature-rich free UI version of Meta Box. <a target="_blank" href="https://metabox.io/lite/">Learn more</a>',
+        content: '<b>Meta Box Lite</b>, a feature-rich free UI version of Meta Box. <a target="_blank" href="https://metabox.io/lite/">Learn more</a>',
         backgroundColor: '#fed7aa',
         textColor: '#7c2d12',
         isCloseable: false,
