@@ -7,23 +7,31 @@ WPML (**WPML Multilingual CMS**) has a native integration with Meta Box that hel
 
 ## Before you start
 
-When having the **WPML** activated on your site, you should make sure that you set up the site languages and the language switcher already.
+Log in to your [WPML account](https://wpml.org/account/downloads/), and download the **OTGS Installer**, then upload it to your WordPress site.
 
 Besides, you may need to install some or one of the [WPML add-on plugins](https://wpml.org/documentation/wpml-core-and-add-on-plugins/) for several translation cases of custom fields, that will be indicated in detail in this documentation.
 
+Now, you should make sure that you set up WPML already, including the site languages and the language switcher.
+
+Go to **WPML** > **Setup Wizard** to start setting up WPML.
+
 ### Site languages
 
-Navigate to **WPML** > **Languages** to configure your site’s languages.
+The WPML setup wizard is a short process for configuring WPML on your site. It helps you choose which languages to translate your website into, decide whether to use subdirectories or different domains for your translated URLs, and install any additional addons.
 
-This section allows you to choose the languages from the list of 65 languages. In there, you also can regulate which is the default language, and which are custom ones.
+Setting up the site language is the first step.
 
-![Go to WPML > Languages to configure your site’s languages](https://i.imgur.com/K3amERa.png)
+![WPML setup interface](https://i.imgur.com/HGQSHPm.png)
+
+This section allows you to choose the languages from the list of 65 languages. In there, you also can regulate which is the default language, and which are custom ones. Also, create a custom language if you can't find languages that you need in the list.
 
 ### Language switcher
 
-As its name says, this is to switch between languages. It will be a form as a button or item in a menu.
+As its name says, this is to switch between languages on the frontend. It will be a form as a button or item in a menu.
 
 ![Set up the language switcher](https://i.imgur.com/z7aqo89.png)
+
+Your new language switcher will now appear next to your navigation menus.
 
 ![The language switcher on the frontend allows transform the language](https://i.imgur.com/Nsnkfx9.png)
 
@@ -57,9 +65,13 @@ The custom post types created with Meta Box will be included in the **Post Types
 
 ![In the Post Types Translation section, make the post types translatable, including custom post types created with Meta Box](https://i.imgur.com/LMUgZIk.png)
 
-After enabling the translatable option for the post types, just input the translation version in the post editor by clicking on the “**+**” button.
+After enabling the translatable option for the post types, in the **Translation Management** submenu, choose the post you want to translate
 
-![Input the translation version in the post editor by clicking on the “+” button](https://i.imgur.com/VDjBJ93.png)
+![Go to Translation Management to translate posts of post type](https://i.imgur.com/CQ3stQt.png)
+
+Then, choose the translation method for each language individually or set them all.
+
+![Choose the translation method](https://i.imgur.com/Jecuygc.png)
 
 To display the translation of posts, you can use any page builder or MB Views. Then the translation versions will be automatically displayed when the reader clicks on the language switcher.
 
@@ -96,21 +108,17 @@ Search the field ID in the **Search** bar to find out the field that you want to
 
 ![Set up the WPML plugin to translate custom field values in the Custom Fields Translation section](https://i.imgur.com/HxrGwgp.png)
 
-After enabling translation for custom fields in the settings, you can go to the post editor and add the translation versions for the field values. 
+Assuming that I chose translation method for the post type that custom fields applied to, move to the **Translations** submenu, you can add (if you translate yourself) or view (if you use AI to translate automatically) the translation.
 
-![Go to the post editor and add the translation versions for the field values](https://i.imgur.com/tRDOXH1.png)
+![Go to Translations submenu to add or view translation](https://i.imgur.com/aVMExyp.png)
 
-On the right sidebar, look for the ‘**Translate this Document**’ section as in the image above, then click on the "**+**" button corresponding to the language you want to add the translation.
+Then, a new screen where we add translations for the custom fields will appear.
 
-Then, a new screen where we add translations for the custom fields will appear. There also will be a section to add the translation for field values as we markup in the following image. It also goes along with the post title and description which are in the two below fields.
-
-![A new screen where we add translations for the custom fields will appear](https://i.imgur.com/ZuJvN4X.png)
-
-**After a typical step that is displaying the custom fields values** on the frontend (you can use MB Views for any page builder for that), the translation versions of the field values will automatically be available. Change the language on the switcher to check how it displays.
-
-![Change the language on the switcher to check how it displays](https://i.imgur.com/GdDfDCF.gif)
+![Add or view the translation of field value](https://i.imgur.com/TbSeTGL.png)
 
 This also works well with cloneable fields, including cloneable groups.
+
+You can use MB Views for any page builder for displaying them on the frontend.
 
 ### Translating field labels
 
