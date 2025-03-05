@@ -112,11 +112,9 @@ Assuming that I chose translation method for the post type that custom fields ap
 
 ![Go to Translations submenu to add or view translation](https://i.imgur.com/aVMExyp.png)
 
+Then, a new screen where we add translations for the custom fields will appear.
+
 ![Add or view the translation of field value](https://i.imgur.com/TbSeTGL.png)
-
-Then, a new screen where we add translations for the custom fields will appear. There also will be a section to add the translation for field values as we markup in the following image. It also goes along with the post title and description which are in the two below fields.
-
-![A new screen where we add translations for the custom fields will appear](https://i.imgur.com/ZuJvN4X.png)
 
 This also works well with cloneable fields, including cloneable groups.
 
