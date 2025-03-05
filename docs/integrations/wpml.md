@@ -108,21 +108,19 @@ Search the field ID in the **Search** bar to find out the field that you want to
 
 ![Set up the WPML plugin to translate custom field values in the Custom Fields Translation section](https://i.imgur.com/HxrGwgp.png)
 
-After enabling translation for custom fields in the settings, you can go to the post editor and add the translation versions for the field values. 
+Assuming that I chose translation method for the post type that custom fields applied to, move to the **Translations** submenu, you can add (if you translate yourself) or view (if you use AI to translate automatically) the translation.
 
-![Go to the post editor and add the translation versions for the field values](https://i.imgur.com/tRDOXH1.png)
+![Go to Translations submenu to add or view translation](https://i.imgur.com/aVMExyp.png)
 
-On the right sidebar, look for the ‘**Translate this Document**’ section as in the image above, then click on the "**+**" button corresponding to the language you want to add the translation.
+![Add or view the translation of field value](https://i.imgur.com/TbSeTGL.png)
 
 Then, a new screen where we add translations for the custom fields will appear. There also will be a section to add the translation for field values as we markup in the following image. It also goes along with the post title and description which are in the two below fields.
 
 ![A new screen where we add translations for the custom fields will appear](https://i.imgur.com/ZuJvN4X.png)
 
-**After a typical step that is displaying the custom fields values** on the frontend (you can use MB Views for any page builder for that), the translation versions of the field values will automatically be available. Change the language on the switcher to check how it displays.
-
-![Change the language on the switcher to check how it displays](https://i.imgur.com/GdDfDCF.gif)
-
 This also works well with cloneable fields, including cloneable groups.
+
+You can use MB Views for any page builder for displaying them on the frontend.
 
 ### Translating field labels
 
