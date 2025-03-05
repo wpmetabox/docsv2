@@ -7,23 +7,31 @@ WPML (**WPML Multilingual CMS**) has a native integration with Meta Box that hel
 
 ## Before you start
 
-When having the **WPML** activated on your site, you should make sure that you set up the site languages and the language switcher already.
+Log in to your [WPML account](https://wpml.org/account/downloads/), and download the **OTGS Installer**, then upload it to your WordPress site.
 
 Besides, you may need to install some or one of the [WPML add-on plugins](https://wpml.org/documentation/wpml-core-and-add-on-plugins/) for several translation cases of custom fields, that will be indicated in detail in this documentation.
 
+Now, you should make sure that you set up WPML already, including the site languages and the language switcher.
+
+Go to **WPML** > **Setup Wizard** to start setting up WPML.
+
 ### Site languages
 
-Navigate to **WPML** > **Languages** to configure your site’s languages.
+The WPML setup wizard is a short process for configuring WPML on your site. It helps you choose which languages to translate your website into, decide whether to use subdirectories or different domains for your translated URLs, and install any additional addons.
 
-This section allows you to choose the languages from the list of 65 languages. In there, you also can regulate which is the default language, and which are custom ones.
+Setting up the site language is the first step.
 
-![Go to WPML > Languages to configure your site’s languages](https://i.imgur.com/K3amERa.png)
+![WPML setup interface](https://i.imgur.com/HGQSHPm.png)
+
+This section allows you to choose the languages from the list of 65 languages. In there, you also can regulate which is the default language, and which are custom ones. Also, create a custom language if you can't find languages that you need in the list.
 
 ### Language switcher
 
-As its name says, this is to switch between languages. It will be a form as a button or item in a menu.
+As its name says, this is to switch between languages on the frontend. It will be a form as a button or item in a menu.
 
 ![Set up the language switcher](https://i.imgur.com/z7aqo89.png)
+
+Your new language switcher will now appear next to your navigation menus.
 
 ![The language switcher on the frontend allows transform the language](https://i.imgur.com/Nsnkfx9.png)
 
