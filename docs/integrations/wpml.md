@@ -65,9 +65,13 @@ The custom post types created with Meta Box will be included in the **Post Types
 
 ![In the Post Types Translation section, make the post types translatable, including custom post types created with Meta Box](https://i.imgur.com/LMUgZIk.png)
 
-After enabling the translatable option for the post types, just input the translation version in the post editor by clicking on the “**+**” button.
+After enabling the translatable option for the post types, in the **Translation Management** submenu, choose the post you want to translate
 
-![Input the translation version in the post editor by clicking on the “+” button](https://i.imgur.com/VDjBJ93.png)
+![Go to Translation Management to translate posts of post type](https://i.imgur.com/CQ3stQt.png)
+
+Then, choose the translation method for each language individually or set them all.
+
+![Choose the translation method](https://i.imgur.com/Jecuygc.png)
 
 To display the translation of posts, you can use any page builder or MB Views. Then the translation versions will be automatically displayed when the reader clicks on the language switcher.
 
