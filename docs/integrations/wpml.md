@@ -192,13 +192,13 @@ We recommend using a child theme in this case to avoid missing the strings when 
 
 :::
 
-Then, go to **WPML** > **String Translation**, and choose the user roles you would like to make translatable in the **More options** section.
+Then, go to **WPML** > **String Translation**, and scroll down to the **Utilities** section, choose the user roles you would like to make translatable in the **Translate User properties** tab.
 
-![Go to WPML > String Translation, and choose the user roles you would like to make translatable in the More options section](https://i.imgur.com/qCq5JPA.png)
+![Choose the user roles you would like to make translatable in the Translate User properties tab](https://i.imgur.com/1FNNnrI.png)
 
 After that, the fields are in the **Strings translation** table along with their values. Just click on the “**+**” button to add the translation for each value.
 
-![Translate custom fields value](https://i.imgur.com/0sFFWu7.png)
+![Translate custom fields value](https://i.imgur.com/CvzFlY8.png)
 
 To display fields for users on the frontend, you should use the following function:
 
@@ -218,7 +218,7 @@ It means you’ll enable the translation feature for all of the settings pages o
 
 Then, you can add the translation for the settings page in its editor. It’s the same as the post.
 
-![Add the translation for the settings page in its editor.](https://i.imgur.com/1WmZBBd.png)
+![Add the translation for the settings page.](https://i.imgur.com/Kq4SYOA.png)
 
 ### Translating custom fields in the settings page
 
@@ -226,17 +226,17 @@ Also, activate the **WPML String Translation** add-on before translating.
 
 To translate custom fields in the settings page created with Meta Box, use the feature of translating texts that theme and plugins save in `wp_options`. The process is quite similar to translating custom user meta.
 
-Click on the **Translate texts in admin screens »** button at the bottom of the page of **String Translation**.
+Click on the **Admin texts translation** button in the position as below image.
 
-![Translate custom fields value of settings page using Translate texts in admin screens » button](https://i.imgur.com/i5kfrBP.png)
+![Translate custom fields value of settings page using Translate texts in admin screens » button](https://i.imgur.com/78CfPB4.png)
 
 Then, find the field IDs and add them to the string translation.
 
-![Add fields to string translation](https://i.imgur.com/bWQ93wo.png)
+![Add fields to string translation](https://i.imgur.com/NF7STPY.png)
 
-After that, those fields are recognized as strings. Just back to the string table and add their translation.
+After that, those fields are recognized as strings. Just translate them as the normal custom fields.
 
-![Back to the string table and add their translation](https://i.imgur.com/Qm3Xdh4.png)
+![Add their translation in the Translation Management](https://i.imgur.com/3SJGY6D.png)
 
 If you use [code](https://wpml.org/documentation/support/language-configuration-files/translate-strings-in-wp-options-table/), create the file `wpml-config.xml` in your theme/child theme folder, then add this code to that file:
 
