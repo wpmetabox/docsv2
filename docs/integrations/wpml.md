@@ -192,13 +192,13 @@ We recommend using a child theme in this case to avoid missing the strings when 
 
 :::
 
-Then, go to **WPML** > **String Translation**, and choose the user roles you would like to make translatable in the **More options** section.
+Then, go to **WPML** > **String Translation**, and scroll down to the **Utilities** section, choose the user roles you would like to make translatable in the **Translate User properties** tab.
 
-![Go to WPML > String Translation, and choose the user roles you would like to make translatable in the More options section](https://i.imgur.com/qCq5JPA.png)
+![Choose the user roles you would like to make translatable in the Translate User properties tab](https://i.imgur.com/1FNNnrI.png)
 
 After that, the fields are in the **Strings translation** table along with their values. Just click on the “**+**” button to add the translation for each value.
 
-![Translate custom fields value](https://i.imgur.com/0sFFWu7.png)
+![Translate custom fields value](https://i.imgur.com/CvzFlY8.png)
 
 To display fields for users on the frontend, you should use the following function:
 
@@ -226,9 +226,9 @@ Also, activate the **WPML String Translation** add-on before translating.
 
 To translate custom fields in the settings page created with Meta Box, use the feature of translating texts that theme and plugins save in `wp_options`. The process is quite similar to translating custom user meta.
 
-Click on the **Translate texts in admin screens »** button at the bottom of the page of **String Translation**.
+Click on the **Admin texts translation** button in the position as below image.
 
-![Translate custom fields value of settings page using Translate texts in admin screens » button](https://i.imgur.com/i5kfrBP.png)
+![Translate custom fields value of settings page using Translate texts in admin screens » button](https://i.imgur.com/78CfPB4.png)
 
 Then, find the field IDs and add them to the string translation.
 
