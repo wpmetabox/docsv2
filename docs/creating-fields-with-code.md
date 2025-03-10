@@ -46,6 +46,41 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
+## Registering custom fields with JSON
+
+Beside registering custom fields with PHP, you can also register custom fields with JSON. This way is more convenient and easier to manage the fields since you can put them in a separate file, use version control, and better code editor support with JSON schema.
+
+See our guide on [Local Json feature](/tutorials/local-json).
+
+Here is an example of how our JSON file looks like:
+
+```json
+{
+  "$schema": "https://schemas.metabox.io/field-group.json",
+  "title": "Event details",
+  "post_types": "event",
+  "fields": [
+    {
+      "name": "Date and time",
+      "id": "datetime",
+      "type": "datetime"
+    },
+    {
+      "name": "Location",
+      "id": "location",
+      "type": "text"
+    },
+    {
+      "name": "Map",
+      "id": "map",
+      "type": "osm",
+      "address_field": "location"
+    }
+  ],
+  "modified": 1739955432
+}
+```
+
 Each field group has several settings and a list of fields, which we'll cover below.
 
 ## Field group settings
