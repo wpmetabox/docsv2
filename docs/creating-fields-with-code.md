@@ -50,7 +50,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 
 Beside registering custom fields with PHP, you can also register custom fields with JSON. This way is more convenient and easier to manage the fields since you can put them in a separate file, use version control, and better code editor support with JSON schema.
 
-See our guide on [Local Json feature](/tutorials/local-json).
+See our guide on [Local Json feature](/local-json).
 
 Here is an example of how our JSON file looks like:
 
