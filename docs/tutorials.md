@@ -115,7 +115,7 @@ hide_table_of_contents: true
 			<a href="/tutorials/mb-views/">
 				<h2 className="items_heading">MB Views</h2>
 			</a>
-			
+
 [![mb views](/tutorials/category-6.png)](/tutorials/create-buttons-dynamic-links/)
 <ul>
 	<li><a href="/tutorials/create-buttons-dynamic-links/">Creating buttons with dynamic link</a></li>
