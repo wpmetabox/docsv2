@@ -51,7 +51,7 @@ hide_table_of_contents: true
 				<h2 className="items_heading">Beginners</h2>
 			</a>
 
-![beginners](/tutorials/category-1.png)
+[![beginners](/tutorials/category-1.png)](/tutorials/create-custom-post-types-taxonomies/)
 <ul>
 	<li><a href="/tutorials/custom-fields-vs-taxonomies/">Custom fields vs custom taxonomies</a></li>
 	<li><a href="/tutorials/move-data-to-custom-tables/">Copying fields’ data to custom tables</a></li>
