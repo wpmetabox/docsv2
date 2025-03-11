@@ -77,7 +77,7 @@ hide_table_of_contents: true
 				<h2 className="items_heading">General Guide</h2>
 			</a>
 
-![general guide](/tutorials/category-3.png)
+[![general guide](/tutorials/category-3.png)](/tutorials/add-custom-fields-to-yoast-seo/)
 <ul>
 	<li><a href="/tutorials/add-custom-fields-to-yoast-seo/">Adding custom fields to Yoast SEO meta tags</a></li>
 	<li><a href="/tutorials/move-data-to-custom-tables/">Moving custom fields’ data to custom tables</a></li>
@@ -90,7 +90,7 @@ hide_table_of_contents: true
 				<h2 className="items_heading">Extensions</h2>
 			</a>
 
-![extensions](/tutorials/category-5.png)
+[![extensions](/tutorials/category-5.png)](/tutorials/create-subscription-form-connect-to-mailchimp/)
 <ul>
 	<li><a href="/tutorials/create-subscription-form-connect-to-mailchimp/">Creating subscription form connecting to Mailchimp</a></li>
 	<li><a href="">Creating settings page for customizer options</a></li>
@@ -103,7 +103,7 @@ hide_table_of_contents: true
 				<h2 className="items_heading">Page Builders</h2>
 			</a>
 
-![mb with builders](/tutorials/category-4.png)
+[![mb with builders](/tutorials/category-4.png)](/tutorials/create-faqs-page-meta-box-oxygen/)
 <ul>
 	<li><a href="/tutorials/create-faqs-page-meta-box-oxygen/">Creating an FAQs page - with Oxygen</a></li>
 	<li><a href="/tutorials/create-simple-listing-meta-box-bricks/">Creating a simple listing - with Bricks</a></li>
@@ -115,8 +115,8 @@ hide_table_of_contents: true
 			<a href="/tutorials/mb-views/">
 				<h2 className="items_heading">MB Views</h2>
 			</a>
-
-![mb views](/tutorials/category-6.png)
+			
+[![mb views](/tutorials/category-6.png)](/tutorials/create-buttons-dynamic-links/)
 <ul>
 	<li><a href="/tutorials/create-buttons-dynamic-links/">Creating buttons with dynamic link</a></li>
 	<li><a href="/tutorials/create-user-profile-page/">Creating user profile page on frontend</a></li>
