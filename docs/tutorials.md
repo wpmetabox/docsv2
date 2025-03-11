@@ -64,7 +64,7 @@ hide_table_of_contents: true
 				<h2 className="items_heading">Case Studies</h2>
 			</a>
 
-[![case studies](/tutorials/category-2.png)](/create-simple-listing-meta-box-bricks/)
+[![case studies](/tutorials/category-2.png)](/tutorials/create-simple-listing-meta-box-bricks/)
 <ul>
 	<li><a href="/tutorials/create-simple-listing-meta-box-bricks/">Creating a simple listing - with Bricks</a></li>
 	<li><a href="/tutorials/create-faqs-page-meta-box-elementor/">Creating a FAQs page - with Elementor</a></li>
