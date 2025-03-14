@@ -26,7 +26,7 @@ If you install Meta Box Lite, you will see a quick action name **Create a post t
 
 ## Creating custom post types
 
-In the Admin Dashboard, go to **Post Types** &gt; **New Post Type**.
+You can click to the quick action to create a new post type dỉrectly or go to **Post Types** &gt; **New Post Type**.
 
 ![Create custom post types](https://i.imgur.com/5TC5jd9.png)
 
