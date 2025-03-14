@@ -105,9 +105,9 @@ After setting up the custom post types, remember to publish the one you created.
 
 ## Creating custom taxonomies
 
-Go to **Meta Box** &gt; **Taxonomies** &gt; **Add New** to create a new custom taxonomy.
+Click on the quick action on the dashboard or go to **Meta Box** &gt; **Taxonomies** &gt; **Add New** to create a new custom taxonomy.
 
-![Create custom taxonomies](https://i.imgur.com/6fq95Z5.png)
+![Create custom taxonomies](https://i.imgur.com/XmJCSHy.png)
 
 Then, you just need to fill in the information of the taxonomy. Similar to creating the custom post types, the slug is also auto-generated and you can also change it as you want.
 
