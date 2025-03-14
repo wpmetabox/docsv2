@@ -12,7 +12,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 ## Preparation
 
-We need [Meta Box Lite](https://metabox.io/lite/) or the [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/) plugin to create custom post types and custom taxonomies. They're free, so just download and install it on your site.
+We need [Meta Box Lite](https://metabox.io/lite/) or the [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/) plugin to create custom post types and custom taxonomies. Both of them are free, so just download and install on your site.
 
 ![Install Meta Box Lite to create custom post types and custom taxonomiesMB custom post typed and custom taxonomies plugin](https://i.imgur.com/V6VJK0q.png)
 
@@ -20,9 +20,9 @@ In the event that you use MB Custom Post Types &amp; Custom Taxonomies without M
 
 ![Without Meta Box core plugin the dashboard will be like this](https://i.imgur.com/2mwdN8Q.png)
 
-If you install both the Meta Box and MB Custom Post Types &amp; Custom Taxonomies plugin, you will see the Post Types as a sub-menu in the Meta Box menu.
+If you install Meta Box Lite, you will see a quick action name **Create a post type** and the Post Types as a sub-menu in the Meta Box menu.
 
-![Post types will appear as a sub-menu in the Meta Box menu](https://i.imgur.com/6RVv5rw.png)
+![There're two positions you can create a new custom post type](https://i.imgur.com/il98tZE.png)
 
 ## Creating custom post types
 
