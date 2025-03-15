@@ -31,22 +31,18 @@ Each box like this image below is for each product, and we will create a templat
 
 The filter is based on the voucher information that is created in the form of a taxonomy. Each one is a term of that taxonomy.
 
-Before going ahead, let's check which tools are needed for this practice.
-
-To create a custom post type, taxonomy, and custom fields for products, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/). You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/). Besides, you may want some Meta Box extensions for the advanced features. You can install them individually or use Meta Box AIO.
-
-Here are the extensions we need:
+So, in the practice, we need [Meta Box Lite](https://metabox.io/lite/) to have these extensions:
 
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomies for products;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field efficiently;
-* [MB Views](https://metabox.io/plugins/mb-views/) (optional): to get and display the status of the restaurants;
-* [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display custom fields as a column in the admin screen.
+
+Beside, you may need to [MB Views](https://metabox.io/plugins/mb-views/) to get and display the status of the restaurants. It's a premium extensions of Meta Box and available in **Meta Box AIO**.
 
 Finally, we’ll use **Elementor** to build the page and use **Elementor Pro**, which has integration with Meta Box, to display the information from custom fields.
 
 ## 1. Creating a new post type
 
-Go to **Meta Box** > **Post Types** to create a new post type for your products.
+Use the quick action in the dashboard or go to **Meta Box** > **Post Types** to create a new post type for your products.
 
 ![Create a new post type for your products](https://i.imgur.com/l7gvWIM.png)
 
@@ -54,7 +50,7 @@ After publishing, you will see a new menu in your dashboard. It’s your post ty
 
 ## 2. Creating custom fields
 
-Your products may have some extra information, so we need custom fields in this case. Just go to **Meta Box** > **Custom Fields** > **Add New** to create some fields for it.
+Your products may have some extra information, so we need custom fields in this case. Just click on the **Create a field group** button in the dashboard or go to **Meta Box** > **Custom Fields** > **Add New** to create some fields for it.
 
 ![Go to Meta Box > Custom Fields to create some custom fields for your products’s extra information](https://i.imgur.com/YSmZ89L.png)
 
@@ -68,7 +64,7 @@ After creating all the needed fields, go to the **Settings** tab. Choose **Locat
 
 As mentioned, we’ll have a filter on the page based on a taxonomy. I will divide the vouchers into some discount levels, and each one of them will be a term of the taxonomy. So let’s move on to create them.
 
-Go to **Meta Box** > **Taxonomies** to create a new taxonomy.
+Create a new taxonomy via the quick action in the Meta Box dashboard or go to **Meta Box** > **Taxonomies** to create a new taxonomy.
 
 ![Go to Meta Box > Taxonomies to create a new taxonomy](https://i.imgur.com/KhU6ngP.png)
 
