@@ -18,19 +18,15 @@ I created a singular page containing the recipe information as an example:
 
 Each recipe will be saved in a post of a custom post type. The recipe's name and dish picture are the post's title and featured image. Besides, you may want to have more space for the extra information. They will be saved in custom fields and separated into different sections for easier styling and managing.
 
-So, the necessary tools are listed below:
+We just need [Meta Box Lite](https://metabox.io/lite/) to have all the feature I mentioned:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields;
-* [MB Custom Post Type](https://wordpress.org/plugins/mb-custom-post-type/): to create a custom post type for the recipes;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create custom fields;
-* [MB Divi Integrator](https://metabox.io/plugins/mb-divi-integrator/): allows Divi to get data from custom fields created with Meta Box easier. This is the **must-have** one;
-* **Divi Builder** to build the page.
+You also should have **Divi Builder** to build the page.
 
 ## 1. Creating a custom post type
 
-Go to **Meta Box** > **Post Types** > **Add New** to create a new one for the recipes.
+Click on the **Create a post type** button in the dashboard or go to **Meta Box** > **Post Types** > **Add New** to create a new one for the recipes.
 
-![Go to Meta Box, Post Types, Add New to create a new one for the recipes](https://i.imgur.com/j5AuP2O.png)
+![Go to Meta Box, Post Types, Add New to create a new one for the recipes](https://i.imgur.com/68NYL42.png)
 
 After publishing, you will see a new menu displayed. It's your post type.
 
