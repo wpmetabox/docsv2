@@ -19,22 +19,21 @@ I made an example like this:
 
 Besides the name and the images of the recipe which are the post title and featured image, we also have extra information about the recipe and how to cook. These information will be saved in different custom fields. So, we need to create custom post type and custom fields in this practice.
 
-Here are some tools we need:
+So, we need [Meta Box Lite](https://metabox.io/lite/) to have these extensions:
 
-* **[Meta Box](https://metabox.io)**: to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/);
 * **[MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/)**: to create a custom post type named Recipe;
 * **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to have an intuitive UI to create custom fields in the backend to save extra information;
 * **[MB Elementor Integrator](https://metabox.io/plugins/mb-elementor-integrator/)**: to connect and display custom fields created by Meta Box plugin in the Elementor's dynamic tags.
 
-They’re all in the **Meta Box AIO**. If you haven’t had it, you can download and install each one individually.
-
-Finally, make sure you have **Elementor Pro** on your site.
+Make sure you have **Elementor Pro** on your site.
 
 ## 1. Creating a new custom post type
 
-Go to **Meta Box** > **Post Types** > **Add New** to create a new post type.
+We'll create a new post type for the recipe. You can refer to [this article](https://docs.metabox.io/tutorials/create-custom-post-types-taxonomies/) for more details.
 
-![create new custom post type](https://i.imgur.com/1MuU23Z.png)
+Use quick action in the dashboard or go to **Meta Box** > **Post Types** > **Add New** to create a new post type.
+
+![create new custom post type](https://i.imgur.com/68NYL42.png)
 
 After publishing, we’ll have a menu named Recipe in the Admin Dashboard.
 

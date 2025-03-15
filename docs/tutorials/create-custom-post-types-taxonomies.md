@@ -22,15 +22,11 @@ In the event that you use MB Custom Post Types &amp; Custom Taxonomies without M
 
 If you install Meta Box Lite, you will see a quick action name **Create a post type** and the Post Types as a sub-menu in the Meta Box menu.
 
-![There're two positions you can create a new custom post type](https://i.imgur.com/il98tZE.png)
+![There're two positions you can create a new custom post type](https://i.imgur.com/68NYL42.png)
 
 ## Creating custom post types
 
-You can click to the quick action to create a new post type dỉrectly or go to **Post Types** &gt; **New Post Type**.
-
-![Create custom post types](https://i.imgur.com/68NYL42.png)
-
-Now, enter the plural and singular name for the post type. About the slug, it’s auto-generated, but you can change it as you want.
+Click to the quick action to create a new post type directly or go to **Post Types** &gt; **New Post Type**. Then, enter the plural and singular name for the post type. About the slug, it’s auto-generated, but you can change it as you want.
 
 In my case, I create a new post type with the name is Project, the slug is _project_.
 

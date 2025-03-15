@@ -17,19 +17,15 @@ We’ll use Oxygen to build a singular page and get the recipe information store
 
 All of the information about the recipe will be saved in posts of a **custom post type**. The recipe’s name and the dish picture are the title and the featured image of the post. Besides, the remaining detailed information will be saved in **custom fields**.
 
-The necessary tools are listed below:
+So, we need [Meta Box Lite](https://metabox.io/lite/) in this practice to create custom post type and have UI for creating custom field.
 
-* [Meta Box](https://metabox.io): to have framework to create custom post types and custom fields;
-* [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types for the recipes;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields to save the recipe information.
-
-The last one is [Oxygen](https://oxygenbuilder.com/). You should use the 3.9 version or higher which has the integration with Meta Box already.
+And, [Oxygen](https://oxygenbuilder.com/) to build the page. You should use the 3.9 version or higher which has the integration with Meta Box already.
 
 ## 1. Creating a custom post type
 
-Go to **Meta Box > Post Types > Add New**.
+Use the quick action in the dashboard or go to **Meta Box > Post Types > Add New**.
 
-![Create a Custom Post Type](https://i.imgur.com/RABAgP1.png)
+![Create a Custom Post Type](https://i.imgur.com/68NYL42.png)
 
 Then, enter information and configure the post type.
 

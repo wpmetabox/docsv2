@@ -19,18 +19,20 @@ And, we’re creating a page with another style for demo only.
 
 ## Preparation
 
-In addition to using the [Meta Box](https://metabox.io/plugins/meta-box-builder/), make sure you already have these extensions:
+In this practice, you need to have have these extensions:
 
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): It helps to create a custom post type that we need for recipes;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
 * [MB Views](https://metabox.io/plugins/mb-views/): Build front-end templates for WordPress without touching theme files.
-* [eStar](https://gretathemes.com/wordpress-themes/estar/): It is a lightweight and highly customizable WordPress theme.
+
+You can download them directly or use Meta Box AIO to have them all
+I use [eStar](https://gretathemes.com/wordpress-themes/estar/) in this tutorial.
 
 ## 1. Creating a custom post type
 
-Go to **Meta Box > Post Types > New Post Types**.
+Use the quick action in the dashboard or go to **Meta Box > Post Types > New Post Types**.
 
-![Create the Recipe custom post type for posting recipes with Meta Box plugin.](https://i.imgur.com/8iPsfQD.png)
+![Create the Recipe custom post type for posting recipes with Meta Box plugin.](https://i.imgur.com/GYpKmFA.png)
 
 I created the Recipe post type with the following information:
 
