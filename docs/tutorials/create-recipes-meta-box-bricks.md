@@ -19,16 +19,16 @@ The image below is a specific example.
 
 In this case, the recipe page is the singular page of the Recipe post type. The recipe’s name and the dish's pictures are the title and featured image of the post. Besides, the remaining detailed information will be saved in custom fields.
 
-In addition to using the [Meta Box](https://metabox.io/), make sure you already have these extensions:
+We need [Meta Box Lite](https://metabox.io/lite/) to have these extensions:
 
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): It helps to create a custom post type that we need for recipes;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): It has a UI for creating custom fields right on the back end.
 
-For the last one, we use [Bricks](https://bricksbuilder.io/) to build the page.
+And, we use [Bricks](https://bricksbuilder.io/) to build the page.
 
 ## 1. Creating a new custom post type
 
-Go to **Meta Box > Post Types > New Post Type**.
+We'll create a new post type for the recipe. You can refer to [this article](https://docs.metabox.io/tutorials/create-custom-post-types-taxonomies/) for more details.
 
 ![Create a new custom post type for the recipe](https://i.imgur.com/8iPsfQD.png)
 
@@ -38,7 +38,7 @@ After publishing the post type, you’ll see a new menu.
 
 ## 2. Creating custom fields
 
-Go to **Meta Box > Custom Fields > Add New**.
+Click on the **Create a field group** button in the dashboard or go to **Custom Fields** submenu to create a new one.
 
 Here are the custom fields that I created:
 
