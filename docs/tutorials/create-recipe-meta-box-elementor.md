@@ -33,7 +33,7 @@ We'll create a new post type for the recipe. You can refer to [this article](htt
 
 Use quick action in the dashboard or go to **Meta Box** > **Post Types** > **Add New** to create a new post type.
 
-![create new custom post type](https://i.imgur.com/1MuU23Z.png)
+![create new custom post type](https://i.imgur.com/68NYL42.png)
 
 After publishing, we’ll have a menu named Recipe in the Admin Dashboard.
 
