@@ -16,17 +16,17 @@ This is the singular page that I created as an example:
 
 ## Preparation
 
-Each recipe is saved in a post of a custom post type and further information such as time, ingredients and so on will be saved in custom fields.
-So, here are the tools we need:
+In this case, the recipe page is the singular page of the Recipe post type. The recipe’s name and the dish's pictures are the title and featured image of the post. Besides, the remaining detailed information will be saved in custom fields. Each recipe is saved in a post of a custom post type and further information such as time, ingredients and so on will be saved in custom fields.
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating custom post types and custom fields easily. It’s free and you can download it directly from [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/).
-* [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create custom post types named Recipes;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend for saving data about the recipe;
-* Breakdance: to create the page.
+So, we need [Meta Box Lite](https://metabox.io/lite/) to create custom post type for the recipes and have UI for creating custom field right on the back end. It's free.
 
-## 1. Creating a custom post type
+And, we use **Breakdance** to create the page.
 
-Go to **Meta Box** > **Post Types** > **Add New**.
+## 1. Creating a new custom post type
+
+We'll create a new post type for the recipe. You can refer to [this article](https://docs.metabox.io/tutorials/create-custom-post-types-taxonomies/) for more details.
+
+Use quick action in the dashboard or go to **Meta Box** > **Post Types** > **Add New**.
 
 ![Create a new post type](https://i.imgur.com/ngEWCuU.png)
 
