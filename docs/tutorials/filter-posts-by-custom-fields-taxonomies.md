@@ -11,9 +11,8 @@ Besides using Tag and Category to filter your posts, you can also use custom fie
 
 <LiteYouTubeEmbed id='Byce7gfpZJQ' />
 
-Here are some tools we need:
+We need [Meta Box Lite](https://metabox.io/lite/), specifically we'll use:
 
-* [Meta Box](https://metabox.io/) to have a framework to create custom post types and custom fields. It’s free and available on wordpress.org;
 * [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type named Book and a custom taxonomy named Publishers;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for Book custom post type in the backend.
 
@@ -23,7 +22,7 @@ Here are some tools we need:
 
 Since I’ve already had a custom post type named **Books**, I will create a custom taxonomy for it. If you don't know how to create a custom post type, refer to [this article](https://docs.metabox.io/tutorials/create-custom-post-type-taxonomies/) for more details.
 
-Go to **Meta Box > Taxonomies > Add New** to create the taxonomies. Then, just fill in the information for it.
+Use the quick action on the dashboard or go to **Meta Box > Taxonomies > Add New** to create the taxonomies. Then, just fill in the information for it.
 
 ![Create custom taxonomy](https://i.imgur.com/miT907T.png)
 
@@ -115,7 +114,7 @@ Here is the final result. All books of that term are filtered.
 
 First of all, create a custom field named **Author** for the **Book** post type. This data saved in the custom field will be used for the filter.
 
-In the **Admin Dashboard**, go to **Meta Box > Custom Fields > Add New > Add Fields**.
+Click on the **Create a field group** button on the dasboard or go to **Meta Box > Custom Fields > Add New > Add Fields**.
 For the Book’s Author, I set it as a **Text** field to easily fill in the name of the author.
 
 Note that, you should remember the field’s ID to add it to the code.
