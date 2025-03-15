@@ -10,19 +10,17 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 ## Preparation
 
-We need [Meta Box](https://docs.metabox.io/installation/) to create custom fields. It’s free and available on wordpress.org.
+We need [Meta Box Lite](https://metabox.io/lite/) to create custom fields visually with MB Builder. It’s free completely.
 
-![Install Meta Box core plugin](https://i.imgur.com/VN8iwgE.png)
-
-To have a UI on the backend to create custom fields easily, we need **MB Builder**. It’s a premium Meta Box extension. You can download it individually [here](https://metabox.io/plugins/meta-box-builder/) or use Meta Box AIO to have all Meta Box extensions.
+![Download and install Meta Box Lite](https://i.imgur.com/V6VJK0q.png)
 
 In case you haven’t had the MB Builder, you still can create custom fields by using the [Online Generator](https://metabox.io/online-generator/) provided by Meta Box, but it is only a simplified version of the MB Builder.
 
 ## Adding new field group and custom fields
 
-Go to **Meta Box** > **Custom Fields** > **Add New** to create a new field group.
+Click on the quick action on admin dashboard or go to **Meta Box** > **Custom Fields** > **Add New** to create a new field group.
 
-![Add new field group and custom fields](https://i.imgur.com/HemRqin.png)
+![Add new field group and custom fields](https://i.imgur.com/2cpNRuG.png)
 
 This is the UI to help you create a field group without touching any line of code. You can name the field group and then add custom fields for it.
 
@@ -38,7 +36,7 @@ When creating fields, you can drag to rearrange the fields’ order. Or you can 
 
 ![You can duplicate or delate the field depending on your demand](https://i.imgur.com/ECKnPMI.png)
 
-If you want to create a group field, add a field in the **Group** type. Then, you can add sub-fields to this group field by clicking the **Add New** button like this.
+If you want to create a group field, we need MB Group. It’s a premium Meta Box extension. You can download it individually [here](https://metabox.io/plugins/meta-box-group/) or use **Meta Box AIO** to have all Meta Box extensions. Then, add a field in the **Group** type. You can add sub-fields to this group field by clicking the **Add New** button like this.
 
 ![You can add the sub=fields](https://i.imgur.com/vFG070v.png)
 
