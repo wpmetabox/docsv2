@@ -19,15 +19,11 @@ Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/
 
 ## Preparation
 
-We need to have the [Meta Box plugin](https://metabox.io/) and [MB Builder](https://metabox.io/plugins/meta-box-builder/) on both websites, the original site and targeted one.
-
-You can freely download and activate the Meta Box plugin from [wordpress.org](https://wordpress.org/plugins/meta-box/).
-
-You can install [MB Builder](https://metabox.io/plugins/meta-box-builder/) individually or find it in the Meta Box AIO. This extension provides a UI to create custom fields and the export and import features.
+We need the [Meta Box Lite](https://metabox.io/lite/) or **Meta Box AIO** to have **MB Builder** on both websites, the original site and targeted one. This extension provides a UI to create custom fields and the export and import features.
 
 After activating two plugins, you’ll see a new **Meta Box** menu as below:
 
-![Meta Box dashboard menu](https://i.imgur.com/qwWGCLu.png)
+![Meta Box dashboard menu](https://i.imgur.com/j0HQpBg.png)
 
 ## Creating custom fields
 
