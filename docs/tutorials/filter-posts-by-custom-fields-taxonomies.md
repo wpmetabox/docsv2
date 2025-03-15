@@ -11,10 +11,7 @@ Besides using Tag and Category to filter your posts, you can also use custom fie
 
 <LiteYouTubeEmbed id='Byce7gfpZJQ' />
 
-We need [Meta Box Lite](https://metabox.io/lite/), specifically we'll use:
-
-* [MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type named Book and a custom taxonomy named Publishers;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for Book custom post type in the backend.
+We need [Meta Box Lite](https://metabox.io/lite/) to create a custom post type, custom taxonomy and custom field visually. It's free.
 
 ## Using custom taxonomies
 

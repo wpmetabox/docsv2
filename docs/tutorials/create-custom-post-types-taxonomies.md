@@ -14,7 +14,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 We need [Meta Box Lite](https://metabox.io/lite/) or the [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/) plugin to create custom post types and custom taxonomies. Both of them are free, so just download and install on your site.
 
-![Install Meta Box Lite to create custom post types and custom taxonomiesMB custom post typed and custom taxonomies plugin](https://i.imgur.com/V6VJK0q.png)
+![Install Meta Box Lite to create custom post types and custom taxonomiesMB custom post typed and custom taxonomies plugin](https://i.imgur.com/RsUY2GP.png)
 
 In the event that you use MB Custom Post Types &amp; Custom Taxonomies without Meta Box, it will display in the dashboard like this:
 
@@ -28,7 +28,7 @@ If you install Meta Box Lite, you will see a quick action name **Create a post t
 
 You can click to the quick action to create a new post type dỉrectly or go to **Post Types** &gt; **New Post Type**.
 
-![Create custom post types](https://i.imgur.com/5TC5jd9.png)
+![Create custom post types](https://i.imgur.com/68NYL42.png)
 
 Now, enter the plural and singular name for the post type. About the slug, it’s auto-generated, but you can change it as you want.
 
@@ -107,7 +107,7 @@ After setting up the custom post types, remember to publish the one you created.
 
 Click on the quick action on the dashboard or go to **Meta Box** &gt; **Taxonomies** &gt; **Add New** to create a new custom taxonomy.
 
-![Create custom taxonomies](https://i.imgur.com/XmJCSHy.png)
+![Create custom taxonomies](https://i.imgur.com/cZrEL4a.png)
 
 Then, you just need to fill in the information of the taxonomy. Similar to creating the custom post types, the slug is also auto-generated and you can also change it as you want.
 

@@ -23,7 +23,7 @@ We need the [Meta Box Lite](https://metabox.io/lite/) or **Meta Box AIO** to hav
 
 After activating two plugins, you’ll see a new **Meta Box** menu as below:
 
-![Meta Box dashboard menu](https://i.imgur.com/j0HQpBg.png)
+![Meta Box dashboard menu](https://i.imgur.com/4k3OMlt.png)
 
 ## Creating custom fields
 
