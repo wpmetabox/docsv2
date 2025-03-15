@@ -12,21 +12,21 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 ## Preparation
 
-We need the [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/) plugin to create custom post types and custom taxonomies. It's free and available on wordpress.org, so just install it.
+We need [Meta Box Lite](https://metabox.io/lite/) or the [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/) plugin to create custom post types and custom taxonomies. Both of them are free, so just download and install on your site.
 
-![Install MB custom post typed and custom taxonomies plugin](https://i.imgur.com/TRxg4wE.png)
+![Install Meta Box Lite to create custom post types and custom taxonomiesMB custom post typed and custom taxonomies plugin](https://i.imgur.com/V6VJK0q.png)
 
 In the event that you use MB Custom Post Types &amp; Custom Taxonomies without Meta Box, it will display in the dashboard like this:
 
 ![Without Meta Box core plugin the dashboard will be like this](https://i.imgur.com/2mwdN8Q.png)
 
-If you install both the Meta Box and MB Custom Post Types &amp; Custom Taxonomies plugin, you will see the Post Types as a sub-menu in the Meta Box menu.
+If you install Meta Box Lite, you will see a quick action name **Create a post type** and the Post Types as a sub-menu in the Meta Box menu.
 
-![Post types will appear as a sub-menu in the Meta Box menu](https://i.imgur.com/6RVv5rw.png)
+![There're two positions you can create a new custom post type](https://i.imgur.com/il98tZE.png)
 
 ## Creating custom post types
 
-In the Admin Dashboard, go to **Post Types** &gt; **New Post Type**.
+You can click to the quick action to create a new post type dỉrectly or go to **Post Types** &gt; **New Post Type**.
 
 ![Create custom post types](https://i.imgur.com/5TC5jd9.png)
 
@@ -105,9 +105,9 @@ After setting up the custom post types, remember to publish the one you created.
 
 ## Creating custom taxonomies
 
-Go to **Meta Box** &gt; **Taxonomies** &gt; **Add New** to create a new custom taxonomy.
+Click on the quick action on the dashboard or go to **Meta Box** &gt; **Taxonomies** &gt; **Add New** to create a new custom taxonomy.
 
-![Create custom taxonomies](https://i.imgur.com/6fq95Z5.png)
+![Create custom taxonomies](https://i.imgur.com/XmJCSHy.png)
 
 Then, you just need to fill in the information of the taxonomy. Similar to creating the custom post types, the slug is also auto-generated and you can also change it as you want.
 
