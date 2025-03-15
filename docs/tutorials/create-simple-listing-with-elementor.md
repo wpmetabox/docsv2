@@ -31,10 +31,7 @@ Each box like this image below is for each product, and we will create a templat
 
 The filter is based on the voucher information that is created in the form of a taxonomy. Each one is a term of that taxonomy.
 
-So, in the practice, we need [Meta Box Lite](https://metabox.io/lite/) to have these extensions:
-
-* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomies for products;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom field efficiently;
+So, in the practice, we need [Meta Box Lite](https://metabox.io/lite/) to create a custom post type custom taxonomies for products and have a UI on the backend to create the custom field efficiently.
 
 Beside, you may need to [MB Views](https://metabox.io/plugins/mb-views/) to get and display the status of the restaurants. It's a premium extensions of Meta Box and available in **Meta Box AIO**.
 
