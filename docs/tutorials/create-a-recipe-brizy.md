@@ -19,19 +19,15 @@ This is the page that I created as an example:
 
 Each recipe is saved in a post of a custom post type and displayed in a single page. Besides some default fields that may help to save some basic information. You may want to have more space for the extra ones. So, we need custom fields for them.
 
-To get started, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
-
-For the advanced features from Meta Box, we need some of its extensions:
-
-[MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type named Recipe;
-[MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields to save the recipe information;
-[Brizy](https://www.brizy.io/) (Brizy Pro version): to build the pager.
+So, we need these tools in this practice:
+* [Meta Box Lite](https://metabox.io/lite/): to create a custom post type named Recipe and have an intuitive UI to create custom fields to save the recipe information;
+* [Brizy](https://www.brizy.io/) (Brizy Pro version): to build the pager.
 
 ## 1. Creating a custom post type
 
-Go to **Meta Box** > **Post Types** > **Add New** to create a new post type.
+Click on the Create a post type in the dashboard or go to **Meta Box** > **Post Types** > **Add New** to create a new post type.
 
-![Create a custom post type](https://i.imgur.com/bkU2AVR.png)
+![Create a custom post type](https://i.imgur.com/68NYL42.png)
 
 After publishing, we’ll have a menu named Recipe in the Admin Dashboard.
 

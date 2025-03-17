@@ -19,7 +19,7 @@ Instead of <a href="https://metabox.io/copy-custom-fields-with-meta-box-builder/
 
 ## Preparation
 
-We need the [Meta Box Lite](https://metabox.io/lite/) or **Meta Box AIO** to have **MB Builder** on both websites, the original site and targeted one. This extension provides a UI to create custom fields and the export and import features.
+We need the [Meta Box Lite](https://metabox.io/lite/) on both websites, the original site and targeted one. It provides a UI to create custom fields and the export and import features.
 
 After activating two plugins, you’ll see a new **Meta Box** menu as below:
 
