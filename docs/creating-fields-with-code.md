@@ -46,6 +46,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
+
 Each field group has several settings and a list of fields, which we'll cover below.
 
 ## Field group settings
