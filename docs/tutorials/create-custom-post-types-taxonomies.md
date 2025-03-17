@@ -22,7 +22,7 @@ After you install Meta Box Lite, you will see a quick action name **Create a pos
 
 ## Creating custom post types
 
-Click to the quick action to create a new post type directly. And you'll move to the **Post Types** submenu. Then, enter the plural and singular name for the post type. About the slug, it’s auto-generated, but you can change it as you want.
+Click on the **Create a post type** button. Then, enter the plural and singular name for the post type. About the slug, it’s auto-generated, but you can change it as you want.
 
 In my case, I create a new post type with the name is Project, the slug is _project_.
 
