@@ -88,7 +88,8 @@ const sidebars = {
 				'field-settings',
 				'displaying-fields-with-code',
 				'creating-new-field-types',
-				'integration',
+				'bundling',
+				'composer',
 			],
 		},
 		{
