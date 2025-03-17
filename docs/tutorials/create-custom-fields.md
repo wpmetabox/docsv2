@@ -10,15 +10,13 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 ## Preparation
 
-We need [Meta Box Lite](https://metabox.io/lite/) to create custom fields visually with MB Builder. It’s free completely.
+We need [Meta Box Lite](https://metabox.io/lite/) to create custom fields visually. It’s free completely.
 
-![Download and install Meta Box Lite](https://i.imgur.com/RsUY2GP.png)
-
-In case you haven’t had the MB Builder, you still can create custom fields by using the [Online Generator](https://metabox.io/online-generator/) provided by Meta Box, but it is only a simplified version of the MB Builder.
+![Download and install Meta Box Lite](https://i.imgur.com/6Kqp8ek.png)
 
 ## Adding new field group and custom fields
 
-Click on the quick action on admin dashboard or go to **Meta Box** > **Custom Fields** > **Add New** to create a new field group.
+Click on the **Create a field group** quick action on admin dashboard to create a new one.
 
 ![Add new field group and custom fields](https://i.imgur.com/fGSraJb.png)
 
