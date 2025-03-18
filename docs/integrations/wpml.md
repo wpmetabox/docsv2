@@ -210,21 +210,17 @@ When the field values display, the translation will go along with it.
 
 ## Translating settings pages
 
-In the same section of **Post Types Translation** in WPML settings, there also is an option to enable translation for settings pages.
-
-![Translate settings pages in the same section of Post Types Translation in WPML settings](https://i.imgur.com/rpVJ8DT.png)
-
-It means you’ll enable the translation feature for all of the settings pages on your site.
-
-Then, you can add the translation for the settings page in its editor. It’s the same as the post.
-
-![Add the translation for the settings page.](https://i.imgur.com/Kq4SYOA.png)
-
 ### Translating custom fields in the settings page
 
-Also, activate the **WPML String Translation** add-on before translating.
+Meta Box supports enter translation for custom field values directly.
 
-To translate custom fields in the settings page created with Meta Box, use the feature of translating texts that theme and plugins save in `wp_options`. The process is quite similar to translating custom user meta.
+For example, I have had a Name field in the Brand settings page.
+
+![I'll translate the value of the Name field as an example](https://i.imgur.com/aSCqZfH.png)
+
+To translate custom fields in the settings page, just change the language, and enter the transaltion.
+
+
 
 Click on the **Admin texts translation** button in the position as below image.
 
@@ -258,5 +254,15 @@ After translating fields, display them by using the WordPress get_option() funct
     echo $options['field_id'];
 ?>
 ```
+
+In the same section of **Post Types Translation** in WPML settings, there also is an option to enable translation for settings pages.
+
+![Translate settings pages in the same section of Post Types Translation in WPML settings](https://i.imgur.com/rpVJ8DT.png)
+
+It means you’ll enable the translation feature for all of the settings pages on your site.
+
+Then, you can add the translation for the settings page in its editor. It’s the same as the post.
+
+![Add the translation for the settings page.](https://i.imgur.com/Kq4SYOA.png)
 
 The new features for this compatibility will be updated continuously.
