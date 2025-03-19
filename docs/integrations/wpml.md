@@ -208,9 +208,7 @@ get_the_author_meta( ‘your_custom_user_field_ID’, $user_id );
 
 When the field values display, the translation will go along with it.
 
-## Translating settings pages
-
-### Translating custom fields in the settings page
+## Translating settings page fields
 
 Meta Box supports you entering translation for custom field values directly.
 
@@ -222,23 +220,11 @@ To translate custom fields in the settings page, simply change the language, and
 
 ![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
 
-For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). So, in my case, I use this code:
+For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
 
 ```
 $value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
 echo $value;
 ```
-
-### Translate settings page titles
-
-In the same section of **Post Types Translation** in WPML settings, there also is an option to enable translation for settings pages.
-
-![Translate settings pages in the same section of Post Types Translation in WPML settings](https://i.imgur.com/rpVJ8DT.png)
-
-It means you’ll enable the translation feature for all of the settings pages on your site.
-
-Then, you can add the translation for the settings page in its editor. It’s the same as the post.
-
-![Add the translation for the settings page.](https://i.imgur.com/Kq4SYOA.png)
 
 The new features for this compatibility will be updated continuously.
