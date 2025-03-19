@@ -26,10 +26,7 @@ Regarding the filter, it’s based on a custom taxonomy that I created as vouche
 
 To do it, we need the tools as follow:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating custom post types, taxonomy and custom fields for products. It’s free, and you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
-* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy for the restaurants;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields efficiently;
-* [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display custom fields as a column in the admin screen;
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create the Restaurant post type and taxonomy named Voucher to filter posts. Also, it provides a UI in the back end to create custom fields to save extra information about restaurants;
 * **Breakdance** to build the page.
 
 ## 1. Creating a new custom post type
