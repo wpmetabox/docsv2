@@ -229,7 +229,7 @@ $value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
 echo $value;
 ```
 
-## Translate settings page titles
+### Translate settings page titles
 
 In the same section of **Post Types Translation** in WPML settings, there also is an option to enable translation for settings pages.
 
