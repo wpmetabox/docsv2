@@ -214,46 +214,22 @@ When the field values display, the translation will go along with it.
 
 Meta Box supports enter translation for custom field values directly.
 
-For example, I have had a Name field in the Brand settings page.
+For example, I have had a **Name** field in the settings page called **Brand**.
 
 ![I'll translate the value of the Name field as an example](https://i.imgur.com/aSCqZfH.png)
 
-To translate custom fields in the settings page, just change the language, and enter the transaltion.
+To translate custom fields in the settings page, simply change the language, and enter the transaltion.
 
+![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
 
-
-Click on the **Admin texts translation** button in the position as below image.
-
-![Translate custom fields value of settings page using Translate texts in admin screens » button](https://i.imgur.com/78CfPB4.png)
-
-Then, find the field IDs and add them to the string translation.
-
-![Add fields to string translation](https://i.imgur.com/NF7STPY.png)
-
-After that, those fields are recognized as strings. Just translate them as the normal custom fields.
-
-![Add their translation in the Translation Management](https://i.imgur.com/3SJGY6D.png)
-
-If you use [code](https://wpml.org/documentation/support/language-configuration-files/translate-strings-in-wp-options-table/), create the file `wpml-config.xml` in your theme/child theme folder, then add this code to that file:
+For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). So, in my case, I use this code:
 
 ```
-<wpml-config>
-    <admin-texts>
-        <key name='your_settings_page_id'>
-            <key name='field_id' />
-        </key>
-    </admin-texts>
-</wpml-config>
+$value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
+echo $value;
 ```
 
-After translating fields, display them by using the WordPress get_option() function like this:
-
-```
-<?php 
-    $options = get_option( 'your_settings_page_id’ );
-    echo $options['field_id'];
-?>
-```
+## Translate settings page titles
 
 In the same section of **Post Types Translation** in WPML settings, there also is an option to enable translation for settings pages.
 
