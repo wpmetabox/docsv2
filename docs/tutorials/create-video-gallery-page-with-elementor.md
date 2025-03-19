@@ -21,7 +21,7 @@ The page shows a list of videos with some additional information. Each video's i
 
 In this practice, we need these tools:
 
-* **[Meta Box Lite](https://metabox.io/lite/)**: to create a custom post type for videos and have a UI on the backend to create custom fields easily. Also, it provide Meta Box-Elementor integrator to get dynamic data from custom fields and display them in the page built with Elementor effortlessly;
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create a custom post type for videos and have a UI on the backend to create custom fields easily. Also, it provides the Meta Box-Elementor integrator to get dynamic data from custom fields and display them in the page built with Elementor effortlessly;
 * **Elementor Pro**: to build the page.
 
 ## 1. Creating a New Custom Post Type
