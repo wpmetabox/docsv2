@@ -212,13 +212,13 @@ When the field values display, the translation will go along with it.
 
 ### Translating custom fields in the settings page
 
-Meta Box supports enter translation for custom field values directly.
+Meta Box supports you entering translation for custom field values directly.
 
 For example, I have had a **Name** field in the settings page called **Brand**.
 
 ![I'll translate the value of the Name field as an example](https://i.imgur.com/aSCqZfH.png)
 
-To translate custom fields in the settings page, simply change the language, and enter the transaltion.
+To translate custom fields in the settings page, simply change the language, and input the transaltion.
 
 ![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
 
