@@ -220,7 +220,7 @@ To translate custom fields in the settings page, simply change the language, and
 
 ![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
 
-For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
+For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) fucntion can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
 
 ```
 $value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
