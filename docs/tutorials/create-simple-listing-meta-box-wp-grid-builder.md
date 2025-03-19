@@ -26,12 +26,10 @@ On the page, we’ll have **Card**, **Grid**, and **Facet** as the following:
 
 In the upcoming execution, we’ll create them one by one.
 
-To do it, we need the [Meta Box](https://metabox.io) and some of its extensions, including:
+So, we need:
 
-* **[MB Custom Post Type](https://metabox.io/plugins/custom-post-type/)**: to create custom post types for the restaurants;
-* **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to have a UI in the back end to create custom fields to save extra information about restaurants.
-
-Next, we need **[WP Grid Builder](https://wpgridbuilder.com/)** to build the page.
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create the Restaurant post type and taxonomy named Voucher to filter posts. Also, it provides a UI in the back end to create custom fields to save extra information about restaurants;
+* **[WP Grid Builder](https://wpgridbuilder.com/)** to build the page.
 
 And the last one, make sure that you installed the integration between WP Grid Builder and Meta Box by installing and activating it in the **Add-ons** section of WP Grid Builder. This will support all the fields created by Meta Box and filter the content from custom fields easily.
 
