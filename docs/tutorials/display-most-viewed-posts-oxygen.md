@@ -20,7 +20,7 @@ For the posts, we’ll create a **custom post type** named **Restaurants**, and 
 
 When displaying the most viewed posts, you may wish to show more than just the title and featured image (the default fields). In this case, I’ll display extra information about the address, voucher, and logo. They'll be saved in the custom fields of the post. So, we'll use these tool in this practice:
 
-* [Meta Box Lite](https://metabox.io/lite/) to create custom post types and have UI for creating custom fields;
+* [Meta Box Lite](https://metabox.io/lite/): to create custom post types and have UI for creating custom fields;
 * [Oxygen Builder](https://oxygenbuilder.com/): use its 3.9 version or higher to have native integration with Meta Box;
 * [Post Views Counter](https://vi.wordpress.org/plugins/post-views-counter/): to count the post views.
 
