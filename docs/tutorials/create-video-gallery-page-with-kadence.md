@@ -22,13 +22,8 @@ The information of the video is also the default information from the post, even
 
 So, we need some tool for this practice:
 
-* [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework that allows creating a custom post type and a custom field for videos. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
-* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for videos;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create a custom field to store the video URL.
-
-You can download and install each extension individually or use the **Meta Box AIO** which has all the Meta Box extensions.
-
-Finally, I have **Kadence** with **its pro version** to have some extra types of blocks to flexibly display the information.
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create a custom post type for videos and have a UI on the backend to create custom fields easily;
+* **Kadence** with **its pro version** to have some extra types of blocks to flexibly display the information.
 
 ## 1. Creating a new post type
 
