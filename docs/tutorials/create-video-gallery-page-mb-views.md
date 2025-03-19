@@ -19,11 +19,11 @@ This is an example of the video gallery page created with MB Views:
 
 The page shows a list of videos with some additional information. Each video’s information will be saved in a single post of a custom post type. In particular, the information about the video such as title, description, and author is the default information of the post. For videos, instead of uploading them to the website which makes the site heavy, I’ll use videos on Youtube then store those links in a custom field and display the videos from them.
 
-In this practice, we need these tools:
+In this practice, we need **Meta Box AIO**, including:
 
 * [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://wordpress.org/plugins/mb-custom-post-type/): to create a custom post type for videos;
-* [ MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * [MB Views](https://metabox.io/plugins/mb-views/): helps us create the template for the video gallery page.
 
 ## 1. Creating a new custom post type
