@@ -17,11 +17,9 @@ This is my example about the video gallery page:
 
 The page shows a list of videos with additional information. Each video's information will be saved in a single post. In particular, the information about the video is the default information of the post. For videos, instead of uploading them to the website which makes the site heavy, I will use videos on Youtube and store those links in custom fields and display the videos from them.
 
-So, we need these tools to do it including
+So, we need these tools to do it:
 
-Meta Box plugin to have a framework to create custom post types and custom fields.
-* [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type for videos;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields easily;
+* [Meta Box Lite](https://metabox.io/lite/): to create a custom post type for videos and have a UI on the backend to create custom fields easily;
 * [Bricks](https://bricksbuilder.io/): to build the page.
 
 ## 1. Creating a custom post type
