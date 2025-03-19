@@ -18,12 +18,9 @@ Since we're going to display the most viewed posts, we’ll use a third-party pl
 
 For the posts, we’ll create a **custom post type** named **Restaurants**, and each restaurant will be a post of that post type.
 
-When displaying the most viewed posts, you may wish to show more than just the title and featured image (the default fields). In this case, I’ll display extra information about the address, voucher, and logo. They'll be saved in the custom fields of the post.
+When displaying the most viewed posts, you may wish to show more than just the title and featured image (the default fields). In this case, I’ll display extra information about the address, voucher, and logo. They'll be saved in the custom fields of the post. So, we'll use these tool in this practice:
 
-* [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating a custom post type and custom fields;
-* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily;
-* [MB Views](https://metabox.io/plugins/mb-views/): help us create a template for the most viewed posts section;
+* [Meta Box Lite](https://metabox.io/lite/) to create custom post types and have UI for creating custom fields;
 * [Oxygen Builder](https://oxygenbuilder.com/): use its 3.9 version or higher to have native integration with Meta Box;
 * [Post Views Counter](https://vi.wordpress.org/plugins/post-views-counter/): to count the post views.
 
