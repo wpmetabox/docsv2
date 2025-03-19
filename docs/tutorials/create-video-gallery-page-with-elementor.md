@@ -21,10 +21,7 @@ The page shows a list of videos with some additional information. Each video's i
 
 In this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework that allows creating custom post types and custom fields;
-* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for videos;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields;
-* [MB Elementor Integration](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them in the page built with Elementor easily;
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create a custom post type for videos and have a UI on the backend to create custom fields easily. Also, it provide Meta Box-Elementor integrator to get dynamic data from custom fields and display them in the page built with Elementor effortlessly;
 * **Elementor Pro**: to build the page.
 
 ## 1. Creating a New Custom Post Type
