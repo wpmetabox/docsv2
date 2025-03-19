@@ -20,9 +20,7 @@ The page shows a list of videos with additional information. Each video's inform
 
 Here are the tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating custom post types and custom fields;
-* [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/meta-box-builder/): to create a custom post type named Video;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields for saving video’s information;
+* [Meta Box Lite](https://metabox.io/lite/): to create a custom post type for videos and have a UI on the backend to create custom fields easily;
 * [Breakdance](https://breakdance.com/): to build the page.
 
 ## 1. Creating a new custom post type
