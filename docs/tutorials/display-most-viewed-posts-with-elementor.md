@@ -23,10 +23,8 @@ We have some further information about restaurants. This data is stored in posts
 For this practice, we need these tools:
 
 * **Elementor** and its pro version: to build the homepage and display the most viewed posts section;
-* [WP Post Views](https://wordpress.org/plugins/wp-post-views/): to count the post views;
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields for the products or posts;
-* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the restaurants;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.
+* **[WP Post Views](https://wordpress.org/plugins/wp-post-views/)**: to count the post views;
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create custom post types and have UI for creating custom fields.
 
 ## Creating a new custom post type
 
