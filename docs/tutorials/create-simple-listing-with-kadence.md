@@ -25,10 +25,7 @@ Each product (restaurant) will be saved in a post of a custom post type. For the
 Regarding the filers, it’s based on a custom taxonomy that I created for the products.
 
 So, we need to have these tools:
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to create the custom post type, taxonomy, and custom fields for the products. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
-* [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy for the products;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create the custom fields visually;
-* [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display custom fields or taxonomy as a column in the admin screen;
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create the Restaurant post type and taxonomy named Voucher to filter posts. Also, it provides a UI in the back end to create custom fields to save extra information about restaurants;
 * **Kadence** and its pro version to have some extra types of blocks to build the page.
 
 ## 1. Creating a custom post type
