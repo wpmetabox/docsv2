@@ -28,11 +28,8 @@ For those filters, I use taxonomy to classify restaurants into separate groups a
 
 So, there are some tools we need for this practice:
 
-* **[Meta Box](https://docs.metabox.io/installation/)**: to have a framework to create custom fields;
-* **[MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/)**: to create the Restaurant post type and taxonomy named Voucher to filter posts;
-* **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to have a UI in the back end to create custom fields to save extra information about restaurants;
-* **[MB Admin Columns (optional)](https://metabox.io/plugins/mb-admin-columns/)**: to display the voucher of each restaurant in the backend for the purpose of easier comparison in this practice;
-Bricks: to build the page.
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create the Restaurant post type and taxonomy named Voucher to filter posts. Also, it provides a UI in the back end to create custom fields to save extra information about restaurants;
+* **Bricks**: to build the page.
 
 ## 1. Creating a new custom post type
 
@@ -66,7 +63,7 @@ As I mentioned before, we’ll use taxonomy to filter posts by voucher. So, go t
 
 ![Create a custom taxonomy to save information about restaurant vouchers](https://i.imgur.com/prhx0w7.png)
 
-When setting the taxonomy, if you want to display it as a column in the admin screen, go to the **Advanced** tab and tick the **Show admin column** box.
+When setting the taxonomy, if you want to display it as a column in the admin screen, go to the **Advanced** tab and tick the **Show admin column** box. It's available when you have [MB Admin Columns (optional)](https://metabox.io/plugins/mb-admin-columns/) on your site.
 
 ![Set the taxonomy to show as an admin column](https://i.imgur.com/YBAYvYp.png)
 
