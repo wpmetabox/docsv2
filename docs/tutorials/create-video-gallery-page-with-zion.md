@@ -24,9 +24,7 @@ In this tutorial, I use only 1 custom field to store the URL of the video instea
 
 So in this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
-* [MB Custom Post Type](https://wordpress.org/plugins/mb-custom-post-type/): to create a custom post type for videos;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create a custom post type for videos and have a UI on the backend to create custom fields easily;
 * **Zion Builder** and **its Pro Version** to build the video gallery page.
 
 ## 1. Creating a new custom post type
