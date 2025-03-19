@@ -22,9 +22,7 @@ Beside displaying the default information of posts like the title and feature im
 
 Here are the tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
-* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for restaurants;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily;
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create custom post types and have UI for creating custom fields;
 * **Bricks**: to build the homepage and display the most viewed posts section.
 
 ## 1. Creating a new custom post type
