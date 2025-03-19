@@ -23,9 +23,7 @@ To avoid making your site heavier, we will save the videos somewhere else, for e
 
 For this practice, we need these tools:
 
-* **[Meta Box](https://metabox.io)**: to have a framework to create custom post type and custom fields
-* **[MB Custom Post Type & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/)**: to create custom post types for the videos;
-* **[MB Builder](https://metabox.io/plugins/meta-box-builder/)**: to provide a UI on the back end to easily create custom fields to save the video’s links.
+* **[Meta Box Lite](https://metabox.io/lite/)**: to create a custom post type for videos and have a UI on the backend to create custom fields easily;
 * **[Oxygen](https://oxygenbuilder.com/)**: to build the page. You should use the 3.9 version or higher, which has integration with Meta Box.
 
 ## 1. Creating a new custom post type
