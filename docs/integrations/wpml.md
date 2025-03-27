@@ -3,7 +3,7 @@ title: Meta Box - WPML Integration
 sidebar_label: WPML
 ---
 
-WPML (**WPML Multilingual CMS**) has a native integration with Meta Box that helps translate custom fields and its data for many objects such as posts, users, taxonomies, etc. into different languages easily. Since it is native in the WPML plugin, there is no requirement to install any further plugins.
+WPML (**WPML Multilingual CMS**) seamlessly integrates with Meta Box, allowing you to easily translate data (both values and labels) of various objects, including posts, taxonomies, custom fields, settings pages, relationships, and users.
 
 ## Before you start
 
@@ -25,9 +25,15 @@ Setting up the site language is the first step.
 
 This section allows you to choose the languages from the list of 65 languages. In there, you also can regulate which is the default language, and which are custom ones. Also, create a custom language if you can't find languages that you need in the list.
 
+After setting up languages, they will appear in the admin bar, allowing you to switch between languages easily for configuration or enter the translations accordingly in the backend.
+
+![The languages on the admin bar](https://i.imgur.com/WEczWMo.png)
+
 ### Language switcher
 
 As its name says, this is to switch between languages on the frontend. It will be a form as a button or item in a menu.
+
+Scroll down to the **Menu Language Switcher** section and add a new one.
 
 ![Set up the language switcher](https://i.imgur.com/z7aqo89.png)
 
@@ -41,43 +47,75 @@ If you don’t set it up, there is nothing on the page to change the language to
 
 :::
 
-## Typical route of translating data from Meta Box
+## Overview and typical route of translating data from Meta Box
 
-The available-deep compatibility between Meta Box and WPML allows you to translate many objects as well as the values of their custom fields. 
+The available deep compatibility between Meta Box and WPML allows you to translate many objects, as well as the values of their custom fields directly.
 
-In general, you should follow three steps to translate any object on your site. 
+In essence, each Meta Box object has two components: configuration and data. For example, a custom post type includes its settings (plural name, singular name, etc.) and the posts within it. Similarly, a field group consists of its configuration and the fields displayed in the post editor for entering values.
 
-1. Make that object translatable (in the **Settings** submenu in WPML);
-2. Input translation versions for them;
-3. Display the object on the frontend (using MB Views, page builders, etc.). The translation versions will go along with the object automatically.
+To translate values, you should follow three steps to translate any object on your site:
 
-![Go to Settings menu to make the object translatable](https://i.imgur.com/NJyl7bI.png)
+1. Make that post type, taxonomy, and custom field translatable (in the **Settings** submenu in WPML).
+2. Input translation versions for them.
+3. Display the object on the front end (using MB Views, page builders, etc.). The translated versions will go along with the object automatically.
 
-There will be a few differences for specific objects as follows.
+Translating labels of objects is simpler than. Meta Box - WPML integration **detects the labels as strings automatically**. So, you can input translation versions without any complex configuration. This feature allows you to translate labels of all objects, including post types, taxonomies, field groups, fields, settings pages, and relationships. They’re available in the **Translation Management** submenu with corresponding names:
+
+![New tabs help translate labels of objects](https://i.imgur.com/26bLfbA.png)
+
+Data will be stored as packages, you can check them in the **String Translation** or **Packages** submenu.
+
+![Package management screen](https://i.imgur.com/TvwpKsQ.png)
+
+You can enter the translation for them in the Translation Management to translate multiple items at once. Then, the typical route to translate them is the same as translating normal strings:
+
+1. Select the objects/strings you want to translate and click on the **Translate your content** button.
+2. Choose a suitable translation method.
+3. Review/ Input the translation.
+
+Or go to the **String Translation** submenu, search and input transltion one by one.
+
+After that, when you switch languages on the admin bar, the corresponding content will be transferred immediately.
 
 ## Translating custom post types
 
-The custom post types created with Meta Box will be included in the **Post Types Translation** section in the settings of WPML, along with three options:
+After [creating your custom post type](https://docs.metabox.io/tutorials/create-custom-post-types-taxonomies/), you need to make it translatable, then input the translation for posts of the post type.
+
+The custom post types created with Meta Box will be included in the **Post Types Translation** section in the settings of WPML. In this section, locate the custom post type you want to translate. It’s along with three options::
 
 - **Translatable** (only show translated items): The items which don’t have translation are not displayed.
 - **Translatable** (use translation if available or fallback to default language): Display all the items with their translation version or default language if they aren’t translated.
 - **Not translatable**.
 
+Set it to **Translatable** – only show translated items, and click **Save** to confirm.
+
 ![In the Post Types Translation section, make the post types translatable, including custom post types created with Meta Box](https://i.imgur.com/LMUgZIk.png)
 
-After enabling the translatable option for the post types, in the **Translation Management** submenu, choose the post you want to translate
+After enabling the translatable option for the post types, go to **WPML** > **Translation Management**, you can see the tab named your post type along with its post. Select the custom posts you want and click on the **Translate your content** button.
 
-![Go to Translation Management to translate posts of post type](https://i.imgur.com/CQ3stQt.png)
-
-Then, choose the translation method for each language individually or set them all.
-
-![Choose the translation method](https://i.imgur.com/Jecuygc.png)
+![Go to Translation management submenu to translate custom posts](https://i.imgur.com/z9Gla1n.png)
 
 To display the translation of posts, you can use any page builder or MB Views. Then the translation versions will be automatically displayed when the reader clicks on the language switcher.
 
+### Translating post type labels
+
+Labels of Meta Box post type are detected as strings already. So, they’re available in the **Translation Management** submenu. Find the **Meta Box: Post Type** tab, and choose the post type you want.
+
+![Translate labels of custom post type from Meta Box](https://i.imgur.com/g6xjTq2.png)
+
+Then, you can input the translation for each label as usual.
+
+![Enter translations for the labels](https://i.imgur.com/WCI8r6y.png)
+
+After translating yourself or using WPML AI, just switch languages to see the translation of post type labels.
+
+![The post type labels are translated](https://i.imgur.com/sPXoJyj.png)
+
 ## Translating custom taxonomies
 
-In the settings of WPML, also **set the custom post type**, which the taxonomies is for, is translatable. Notice that the translation versions of taxonomies are available on the page only when its post type also is translatable
+Translating custom taxonomies and their labels is the same as translating post types.
+
+In the settings of WPML, also **set the custom post type**, which the taxonomies is for, is translatable. Notice that the translation versions of taxonomies are available on the page only when its post type also is translatable.
 
 Then, go to the **Taxonomies Translation** section, and find out your custom taxonomies. All the options and translation steps are the same as those for custom post types.
 
@@ -87,11 +125,9 @@ To add the translation version for any taxonomy, go to the **Taxonomy Translatio
 
 ![Go to the Taxonomy Translation submenu to add the translation version for taxonomies](https://i.imgur.com/250lUA5.png)
 
-To translate taxonomy labels and slugs, you need the **WPML String Translation** plugin.
+To translate labels of Meta Box taxonomies, select your taxonomy from the **Meta Box: Taxonomy** tab in **Translation Managerment** since they’re strings of WPML without manual installation.
 
-Then, also on the Taxonomy Translation screen, there is a section to add the translation versions for the label and slug.
-
-![To translate taxonomy labels and slugs, you need the WPML String Translation plugin](https://i.imgur.com/VPoKURG.png)
+![Go to Meta Box: Taxonomy to translate taxonomy labels](https://i.imgur.com/q8ShQG8.png)
 
 ## Translating custom fields
 
@@ -122,19 +158,19 @@ You can use MB Views for any page builder for displaying them on the frontend.
 
 ### Translating field labels
 
-To make Meta Box field labels translatable into different languages, we should use an add-on of WPML named **WPML String Translation**.
+Meta Box - WPML integration helps you translate labels of easily, including `label description`, `input description`, `default value`, `placeholder`, and `adding more text` of cloneable field/group.
 
-After installing this add-on, we should add a hook to the theme file to register the field as a string.
+For example, I have a field with labels as below:
 
-```
-do_action( 'wpml_register_single_string', 'Meta Box Labels', $meta_box['id'] . '_' . $field['id'], $field['name'] );
-```
+![The field label need to translate](https://i.imgur.com/zkp33YL.png)
 
-![Add a hook to the theme file to register the field as a string](https://i.imgur.com/72049bE.png)
+In the **Translation Management** submenu, find the **Meta Box: Field Group** tab, and select the field group you want to translate the labels from this tab.
 
-Then, go to the **String Translation** submenu to add the translation for field labels.
+![Go to Meta Box: Field Group tab to translate field labels](https://i.imgur.com/kNqnSWH.png)
 
-![Then, go to the String Translation submenu to add the translation for field labels](https://i.imgur.com/tIxVD1w.png)
+Then, the translation of labels is changed to the corresponding content automatically when you switch language in the admin bar.
+
+![The label translations display well]( https://i.imgur.com/hl4ic4Q.png)
 
 When displaying field values, you may want to display the field label as well, so add the following code in any place you want to display it:
 
@@ -144,6 +180,53 @@ echo $field_label;
 ```
 
 This function helps display not only the label in the original language, but also the translation versions.
+
+## Translating settings page fields
+
+Meta Box supports you entering translation for custom field values directly.
+
+For example, I have had a **Name** field in the settings page called **Brand**.
+
+![I'll translate the value of the Name field as an example](https://i.imgur.com/aSCqZfH.png)
+
+To translate custom fields in the settings page, simply change the language, and input the transaltion.
+
+![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
+
+For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) fucntion can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
+
+```
+$value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
+echo $value;
+```
+
+### Translating settings page labels
+
+Similar to the translating labels of other objects, you can translate the settings page labels in the **Translation Management** submenu.
+
+Open the **Meta Box: Settings Page** tab, you can see your settings page in the list. Just click and translate them.
+
+You also can translate field labels on the settings page. That field group is in the **Meta Box: Field Group** tab as well.
+
+![Translate label of settings page and settings page field](https://i.imgur.com/hzEoPQG.png)
+
+Then, translations of both field label and settings page label are shown when you switch the languages.
+
+![The translations are shown](https://i.imgur.com/yVlUdZk.png)
+
+## Translating relationship labels
+
+Meta Box also effortlessly supports translation labels of relationships.
+
+In the **Translation Management** section, click on the **Meta Box: Relationship** tab to select your relationship.
+
+![Go to Meta Box: Relationship to translate relationship label](https://i.imgur.com/FD3BkIv.png)
+
+Then, translate them as the other labels, and in the post editor, you can see the content relationship is switched when you change the laguages:
+
+![The tranlation of relationship label displays well](https://i.imgur.com/KjKbrUV.png)
+
+In the case that you want to translate relationship values, simply translate the object type, such as post, term, or user.
 
 ## Translating custom term meta
 
@@ -207,24 +290,5 @@ get_the_author_meta( ‘your_custom_user_field_ID’, $user_id );
 ```
 
 When the field values display, the translation will go along with it.
-
-## Translating settings page fields
-
-Meta Box supports you entering translation for custom field values directly.
-
-For example, I have had a **Name** field in the settings page called **Brand**.
-
-![I'll translate the value of the Name field as an example](https://i.imgur.com/aSCqZfH.png)
-
-To translate custom fields in the settings page, simply change the language, and input the transaltion.
-
-![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
-
-For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) fucntion can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
-
-```
-$value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
-echo $value;
-```
 
 The new features for this compatibility will be updated continuously.
