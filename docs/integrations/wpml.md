@@ -67,13 +67,13 @@ Data will be stored as packages, you can check them in the **String Translation*
 
 ![Package management screen](https://i.imgur.com/TvwpKsQ.png)
 
-You can enter the translation for them in the Translation Management to translate multiple items at once. Then, the typical route to translate them is the same as translating normal strings:
+There are two places to input the translation for labels. One is in the **Translation Management** menu to able to translate multiple items at once. Then, the typical route to translate them is the same as translating normal strings:
 
 1. Select the objects/strings you want to translate and click on the **Translate your content** button.
 2. Choose a suitable translation method.
 3. Review/ Input the translation.
 
-Or go to the **String Translation** submenu, search and input transltion one by one.
+Or go to the **String Translation** submenu, search and input translation one by one.
 
 After that, when you switch languages on the admin bar, the corresponding content will be transferred immediately.
 
