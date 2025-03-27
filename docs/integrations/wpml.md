@@ -3,7 +3,7 @@ title: Meta Box - WPML Integration
 sidebar_label: WPML
 ---
 
-WPML (**WPML Multilingual CMS**) seamlessly integrates with Meta Box, allowing you to easily translate data ( both values and labels) of various objects, including posts, taxonomies, custom fields, settings pages, relationships, and users.
+WPML (**WPML Multilingual CMS**) seamlessly integrates with Meta Box, allowing you to easily translate data (both values and labels) of various objects, including posts, taxonomies, custom fields, settings pages, relationships, and users.
 
 ## Before you start
 
