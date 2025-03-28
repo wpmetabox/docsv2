@@ -186,23 +186,6 @@ Then, in the post editor, the translation of labels is outputed automatically wh
 
 ## Settings page fields
 
-Meta Box supports you entering translation for custom field values directly.
-
-For example, I have had a **Name** field in the settings page called **Brand**.
-
-![I'll translate the value of the Name field as an example](https://i.imgur.com/aSCqZfH.png)
-
-To translate custom fields in the settings page, simply change the language, and input the transaltion.
-
-![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
-
-For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) fucntion can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
-
-```
-$value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
-echo $value;
-```
-
 ### Settings page labels
 
 Similar to the translating labels of other objects, you can translate the settings page labels in the **Translation Management** submenu.
@@ -216,6 +199,21 @@ You also can translate field labels on the settings page. That field group is in
 Then, translations of both field label and settings page label are shown when you switch the languages.
 
 ![The translations are shown](https://i.imgur.com/yVlUdZk.png)
+
+### Settings page field values
+
+Meta Box supports you translating field values of settings page directly.
+
+Simply change the language on the admin bar, and input the corresponding translation.
+
+![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
+
+For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) fucntion can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
+
+```
+$value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
+echo $value;
+```
 
 ## Relationship labels
 
