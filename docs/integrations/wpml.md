@@ -127,9 +127,17 @@ To add the translation version for any taxonomy, go to the **Taxonomy Translatio
 
 ### Taxonomy labels
 
-Labels of Meta Box taxonomies are declared as WPML strings. So, translating them is effortless. Just also go to the **Translation Managerment** submenu, then select your taxonomy from the **Meta Box: Taxonomy** tab since they’re strings of WPML without manual installation.
+Labels of Meta Box taxonomies are declared as WPML strings. So, translating them is effortless. Also in the **Translation Managerment** submenu, select your taxonomy from the **Meta Box: Taxonomy** tab since they’re strings of WPML without manual installation.
 
 ![Go to Meta Box: Taxonomy to translate taxonomy labels](https://i.imgur.com/q8ShQG8.png)
+
+The labels of a taxonomy are similar to post type label.
+
+![Enter the translation of taxonomy labels](https://i.imgur.com/uHL8luW.png)
+
+Then, these translations are output immediately if you change the site languages.
+
+![Result of translating taxonomy labels](https://i.imgur.com/ugRw9te.png)
 
 ## Custom fields
 
