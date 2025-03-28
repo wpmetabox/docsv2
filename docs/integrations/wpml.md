@@ -7,11 +7,9 @@ WPML (**WPML Multilingual CMS**) seamlessly integrates with Meta Box, allowing y
 
 ## Before you start
 
-Log in to your [WPML account](https://wpml.org/account/downloads/), and download the **OTGS Installer**, then upload it to your WordPress site.
+You need **WPML Multilingual CMS** and **WPML String Translation** on your site.
 
-Besides, you may need to install some or one of the [WPML add-on plugins](https://wpml.org/documentation/wpml-core-and-add-on-plugins/) for several translation cases of custom fields, that will be indicated in detail in this documentation.
-
-Now, you should make sure that you set up WPML already, including the site languages and the language switcher.
+Then, you should make sure that you set up WPML already, including the site languages and the language switcher.
 
 Go to **WPML** > **Setup Wizard** to start setting up WPML.
 
@@ -47,7 +45,11 @@ If you don’t set it up, there is nothing on the page to change the language to
 
 :::
 
-## Overview and typical route of translating data from Meta Box
+Before translating, you should set admin language as editing language. Navigate to **User** > **Profile**. In the **WPML language settings** section, enable the setting for this:
+
+![Set admin language as editing language](https://i.imgur.com/nBZNKxR.png)
+
+## Overview of translating data from Meta Box
 
 The available deep compatibility between Meta Box and WPML allows you to translate many objects, as well as the values of their custom fields directly.
 
