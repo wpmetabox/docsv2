@@ -49,7 +49,7 @@ Before translating, you should set admin language as editing language. Navigate 
 
 ![Set admin language as editing language](https://i.imgur.com/nBZNKxR.png)
 
-## Overview of translating data from Meta Box
+## Overview
 
 The available deep compatibility between Meta Box and WPML allows you to translate many objects, as well as the values of their custom fields directly.
 
