@@ -7,13 +7,11 @@ WPML (**WPML Multilingual CMS**) seamlessly integrates with Meta Box, allowing y
 
 ## Before you start
 
-Log in to your [WPML account](https://wpml.org/account/downloads/), and download the **OTGS Installer**, then upload it to your WordPress site.
+You need **WPML Multilingual CMS** and **WPML String Translation** on your site.
 
-Besides, you may need to install some or one of the [WPML add-on plugins](https://wpml.org/documentation/wpml-core-and-add-on-plugins/) for several translation cases of custom fields, that will be indicated in detail in this documentation.
+Then, you should make sure that you set up WPML already, including the site languages and the language switcher.
 
-Now, you should make sure that you set up WPML already, including the site languages and the language switcher.
-
-Go to **WPML** > **Setup Wizard** to start setting up WPML.
+Go to **WPML** > **Setup** to start setting up WPML.
 
 ### Site languages
 
@@ -47,7 +45,11 @@ If you don’t set it up, there is nothing on the page to change the language to
 
 :::
 
-## Overview and typical route of translating data from Meta Box
+Before translating, you should set admin language as editing language. Navigate to **User** > **Profile**. In the **WPML language settings** section, enable the setting for this:
+
+![Set admin language as editing language](https://i.imgur.com/nBZNKxR.png)
+
+## Overview of translating data from Meta Box
 
 The available deep compatibility between Meta Box and WPML allows you to translate many objects, as well as the values of their custom fields directly.
 
@@ -184,23 +186,6 @@ Then, in the post editor, the translation of labels is outputed automatically wh
 
 ## Settings page fields
 
-Meta Box supports you entering translation for custom field values directly.
-
-For example, I have had a **Name** field in the settings page called **Brand**.
-
-![I'll translate the value of the Name field as an example](https://i.imgur.com/aSCqZfH.png)
-
-To translate custom fields in the settings page, simply change the language, and input the transaltion.
-
-![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
-
-For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) fucntion can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
-
-```
-$value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
-echo $value;
-```
-
 ### Settings page labels
 
 Similar to the translating labels of other objects, you can translate the settings page labels in the **Translation Management** submenu.
@@ -214,6 +199,21 @@ You also can translate field labels on the settings page. That field group is in
 Then, translations of both field label and settings page label are shown when you switch the languages.
 
 ![The translations are shown](https://i.imgur.com/yVlUdZk.png)
+
+### Settings page field values
+
+Meta Box supports you translating field values of settings page directly.
+
+Simply switch the language in the admin bar, and input the corresponding translation.
+
+![Switch language and enter the translation directly](https://i.imgur.com/r9FRIS9.gif)
+
+For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) fucntion can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
+
+```
+$value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
+echo $value;
+```
 
 ## Relationship labels
 
