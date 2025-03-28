@@ -11,7 +11,7 @@ You need **WPML Multilingual CMS** and **WPML String Translation** on your site.
 
 Then, you should make sure that you set up WPML already, including the site languages and the language switcher.
 
-Go to **WPML** > **Setup Wizard** to start setting up WPML.
+Go to **WPML** > **Setup** to start setting up WPML.
 
 ### Site languages
 
@@ -204,9 +204,9 @@ Then, translations of both field label and settings page label are shown when yo
 
 Meta Box supports you translating field values of settings page directly.
 
-Simply change the language on the admin bar, and input the corresponding translation.
+Simply switch the language in the admin bar, and input the corresponding translation.
 
-![Switch language and enter the translation directly](https://i.imgur.com/PNKD4bo.gif)
+![Switch language and enter the translation directly](https://i.imgur.com/r9FRIS9.gif)
 
 For displaying translation on the frontend, you can refer to [this docs](https://docs.metabox.io/extensions/mb-settings-page/#getting-field-value). The [`rwmb_meta()`](https://docs.metabox.io/functions/rwmb-meta/) fucntion can detected the language to get and display the corresponding field value automatically. In this case, I use this code:
 
