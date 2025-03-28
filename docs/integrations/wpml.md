@@ -77,7 +77,7 @@ Or go to the **String Translation** submenu, search and input translation one by
 
 After that, when you switch languages on the admin bar, the corresponding content will be transferred immediately.
 
-## Translating custom post types
+## Custom post types
 
 After [creating your custom post type](https://docs.metabox.io/tutorials/create-custom-post-types-taxonomies/), you need to make it translatable, then input the translation for posts of the post type.
 
@@ -97,7 +97,7 @@ After enabling the translatable option for the post types, go to **WPML** > **Tr
 
 To display the translation of posts, you can use any page builder or MB Views. Then the translation versions will be automatically displayed when the reader clicks on the language switcher.
 
-### Translating post type labels
+### Post type labels
 
 Labels of Meta Box post type are detected as strings already. So, they’re available in the **Translation Management** submenu. Find the **Meta Box: Post Type** tab, and choose the post type you want.
 
@@ -109,9 +109,9 @@ Then, you can input the translation for each label as usual.
 
 After translating yourself or using WPML AI, just switch languages to see the translation of post type labels.
 
-![The post type labels are translated](https://i.imgur.com/sPXoJyj.png)
+![The post type labels are translated](https://i.imgur.com/YMdpdKV.png) 
 
-## Translating custom taxonomies
+## Custom taxonomies
 
 Translating custom taxonomies and their labels is the same as translating post types.
 
@@ -125,13 +125,23 @@ To add the translation version for any taxonomy, go to the **Taxonomy Translatio
 
 ![Go to the Taxonomy Translation submenu to add the translation version for taxonomies](https://i.imgur.com/250lUA5.png)
 
-To translate labels of Meta Box taxonomies, select your taxonomy from the **Meta Box: Taxonomy** tab in **Translation Managerment** since they’re strings of WPML without manual installation.
+### Taxonomy labels
+
+Labels of Meta Box taxonomies are declared as WPML strings. So, translating them is effortless. Also in the **Translation Managerment** submenu, select your taxonomy from the **Meta Box: Taxonomy** tab since they’re strings of WPML without manual installation.
 
 ![Go to Meta Box: Taxonomy to translate taxonomy labels](https://i.imgur.com/q8ShQG8.png)
 
-## Translating custom fields
+The labels of a taxonomy are similar to post type label.
 
-### Translating custom field values
+![Enter the translation of taxonomy labels](https://i.imgur.com/uHL8luW.png)
+
+Then, these translations are output immediately if you change the site languages.
+
+![Result of translating taxonomy labels](https://i.imgur.com/ugRw9te.png)
+
+## Custom fields
+
+### Custom field values
 
 Set up the WPML plugin to translate custom field values in the **Custom Fields Translation** section.
 
@@ -156,7 +166,7 @@ This also works well with cloneable fields, including cloneable groups.
 
 You can use MB Views for any page builder for displaying them on the frontend.
 
-### Translating field labels
+### Field labels
 
 Meta Box - WPML integration helps you translate labels of easily, including `label description`, `input description`, `default value`, `placeholder`, and `adding more text` of cloneable field/group.
 
@@ -168,20 +178,11 @@ In the **Translation Management** submenu, find the **Meta Box: Field Group** ta
 
 ![Go to Meta Box: Field Group tab to translate field labels](https://i.imgur.com/kNqnSWH.png)
 
-Then, the translation of labels is changed to the corresponding content automatically when you switch language in the admin bar.
+Then, in the post editor, the translation of labels is outputed automatically when you switch language in the admin bar.
 
 ![The label translations display well]( https://i.imgur.com/hl4ic4Q.png)
 
-When displaying field values, you may want to display the field label as well, so add the following code in any place you want to display it:
-
-```
-$field_label = apply_filters( 'wpml_translate_single_string', 'your_field_label', 'Meta Box Labels', 'meta_box_id_your_field_id' );
-echo $field_label;
-```
-
-This function helps display not only the label in the original language, but also the translation versions.
-
-## Translating settings page fields
+## Settings page fields
 
 Meta Box supports you entering translation for custom field values directly.
 
@@ -200,7 +201,7 @@ $value = rwmb_meta( 'name', ['object_type' => 'setting'], 'brand' );
 echo $value;
 ```
 
-### Translating settings page labels
+### Settings page labels
 
 Similar to the translating labels of other objects, you can translate the settings page labels in the **Translation Management** submenu.
 
@@ -214,7 +215,7 @@ Then, translations of both field label and settings page label are shown when yo
 
 ![The translations are shown](https://i.imgur.com/yVlUdZk.png)
 
-## Translating relationship labels
+## Relationship labels
 
 Meta Box also effortlessly supports translation labels of relationships.
 
@@ -228,7 +229,11 @@ Then, translate them as the other labels, and in the post editor, you can see th
 
 In the case that you want to translate relationship values, simply translate the object type, such as post, term, or user.
 
-## Translating custom term meta
+## Others
+
+Beside the basic objects, Meta Box-WPML also helps you translate other items.
+
+### Custom term meta
 
 In the settings of WPML, enable the translation feature for all of these following objects:
 
@@ -248,7 +253,7 @@ As usual, when we want to display the term meta value, we use the `get_term_meta
 
 Even when you have translations for those values, just keep using this function, then the translations will display automatically.
 
-## Translating custom user meta
+### Custom user meta
 
 By default, WPML translates only the basic fields of the user such as first_name, last_name, nickname, description, and display_name. To make custom user fields translatable, you need to convert them to strings before translating.
 
@@ -291,4 +296,3 @@ get_the_author_meta( ‘your_custom_user_field_ID’, $user_id );
 
 When the field values display, the translation will go along with it.
 
-The new features for this compatibility will be updated continuously.
