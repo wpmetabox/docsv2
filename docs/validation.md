@@ -207,6 +207,8 @@ To validate fields remotely with PHP, use the `remote` parameter for the validat
 ],
 ```
 
+Please note that remote validation is only triggered when the field is changed so it's recommended to set the `required` rule to `true` to make sure the field is not empty before sending the request.
+
 The validation performs via an ajax request with action `my_action1`. In your theme's `functions.php` file or your plugin, you need to create a callback to handle this ajax request that outputs:
 
 - "true" if the value is valid
@@ -228,7 +230,7 @@ add_action( 'wp_ajax_my_action1', function () {
 ```
 
 ### Custom error message
-As mentioned above, you can return a custom error message instead of `false` to display it as the error message sent from the server.
+As mentioned above, you can return a custom error message instead of `'false'` to display it as the error message sent from the server.
 
 By default, the jQuery Validation library expects a JSON response from the server, any values that are not valid JSON will be ignored
  so you'll need to set the `dataType` parameter to `text` to return a custom error message.
