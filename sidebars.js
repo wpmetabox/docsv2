@@ -74,6 +74,7 @@ const sidebars = {
 				'sanitization',
 				'database',
 				'custom-attributes',
+				'local-json',
 			],
 		},
 		{
