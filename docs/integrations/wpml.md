@@ -49,7 +49,7 @@ Before translating, you should set admin language as editing language. Navigate 
 
 ![Set admin language as editing language](https://i.imgur.com/nBZNKxR.png)
 
-## Overview of translating data from Meta Box
+## Overview
 
 The available deep compatibility between Meta Box and WPML allows you to translate many objects, as well as the values of their custom fields directly.
 
@@ -83,7 +83,7 @@ After that, when you switch languages on the admin bar, the corresponding conten
 
 After [creating your custom post type](https://docs.metabox.io/tutorials/create-custom-post-types-taxonomies/), you need to make it translatable, then input the translation for posts of the post type.
 
-The custom post types created with Meta Box will be included in the **Post Types Translation** section in the settings of WPML. In this section, locate the custom post type you want to translate. It’s along with three options::
+The custom post types created with Meta Box will be included in the **Post Types Translation** section in the settings of WPML. In this section, locate the custom post type you want to translate. It’s along with three options:
 
 - **Translatable** (only show translated items): The items which don’t have translation are not displayed.
 - **Translatable** (use translation if available or fallback to default language): Display all the items with their translation version or default language if they aren’t translated.
@@ -170,7 +170,7 @@ You can use MB Views for any page builder for displaying them on the frontend.
 
 ### Field labels
 
-Meta Box - WPML integration helps you translate labels of easily, including `label description`, `input description`, `default value`, `placeholder`, and `adding more text` of cloneable field/group.
+Meta Box - WPML integration helps you translate labels easily, including `label description`, `input description`, `default value`, `placeholder`, and `adding more text` of cloneable field/group.
 
 For example, I have a field with labels as below:
 
