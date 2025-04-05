@@ -149,7 +149,7 @@ Create a new file following path `/wp-content/themes/your-theme/wpml-config.xml`
 For custom fields, Polylang supports three actions for translation:
 
 * `ignore`: no action from Polylang.
-* `translate`: the field value is copied from the source post but may be modified.
+* `translate`: the custom field is copied from the source post but may be modified.
 * `copy`: the field value is copied from the source post and synchronized across translations.
 
 In my case, the code will be like this:
