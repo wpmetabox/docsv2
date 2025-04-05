@@ -134,8 +134,6 @@ Go to the post editor, you can see the translation of field labels.
 
 Meta Box field values are defined as strings, and Polylang hasn’t supported interface to translate them directly. So, we’ll use a [wpml-config.xml file](https://polylang.pro/doc/the-wpml-config-xml-file/) to add these values as string translations.
 
-Warning: You should back up the database before manipulating it since a wrong manipulation of data may break your website.
-
 Create a new file following path `/wp-content/themes/your-theme/wpml-config.xml`:
 
 ```
