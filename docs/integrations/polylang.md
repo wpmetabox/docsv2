@@ -1,6 +1,6 @@
 ---
 title: Meta Box - Polylang integration
-sidebar_label: WPML
+sidebar_label: Polylang
 ---
 
 You can translate both values and labels of many objects, including post types, taxonomies, custom fields, and settings pages. This integration works smoothly whether you're using Polylang or Polylang Pro.
@@ -48,7 +48,7 @@ So, you can translate labels of post types, taxonomies, fields/field groups, and
 
 To translate values, depending on the object you want to translate, there will be corresponding translation methods:
 
-* Values of post types (posts) and taxonomy (terms): Activate languages in the **Settings** submenu, then input translation directly in the post editor and taxonomy admin
+* Values of post types (posts) and taxonomy (terms): Activate languages in the **Settings** submenu, then input translation directly in the post editor and taxonomy admin.
 * Field values: Create a wpml-config.xml file that defines the translation action and field ID you need to translate.
 * Settings page field values: Simply switch the language on the top bar and enter the translation without any settings.
 
@@ -190,6 +190,6 @@ Besides, you can still filter strings by **MB Settings Page** in the **Translati
 
 :::CAUTION
 
-When you delete a value from one language on the settings page, the values from other languages are auto-deleted. It happens with not only the Meta Box settings page but also WordPress settings (For instance, site title or site description in General settings)
+When you delete a value from one language on the settings page, the values from other languages are auto-deleted. It happens with not only the Meta Box settings page but also WordPress settings (For instance, site title or site description in **General** settings)
 
 :::
