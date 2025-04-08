@@ -134,8 +134,6 @@ Go to the post editor, you can see the translation of field labels.
 
 Meta Box field values are defined as strings, and Polylang hasn’t supported interface to translate them directly. So, we’ll use a [wpml-config.xml file](https://polylang.pro/doc/the-wpml-config-xml-file/) to add these values as string translations.
 
-Warning: You should back up the database before manipulating it since a wrong manipulation of data may break your website.
-
 Create a new file following path `/wp-content/themes/your-theme/wpml-config.xml`:
 
 ```
@@ -149,7 +147,7 @@ Create a new file following path `/wp-content/themes/your-theme/wpml-config.xml`
 For custom fields, Polylang supports three actions for translation:
 
 * `ignore`: no action from Polylang.
-* `translate`: the field value is copied from the source post but may be modified.
+* `translate`: the custom field is copied from the source post but may be modified.
 * `copy`: the field value is copied from the source post and synchronized across translations.
 
 In my case, the code will be like this:
@@ -188,7 +186,7 @@ Besides, you can still filter strings by **MB Settings Page** in the **Translati
 
 ![Filter by MB Settings Page to translate settings page field values](https://i.imgur.com/fLdiIZw.png)
 
-:::CAUTION
+:::caution
 
 When you delete a value from one language on the settings page, the values from other languages are auto-deleted. It happens with not only the Meta Box settings page but also WordPress settings (For instance, site title or site description in **General** settings)
 
