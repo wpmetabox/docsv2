@@ -1,5 +1,5 @@
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 :root {
 	--ifm-color-primary: #00B1B3;
 	--ifm-color-primary-dark: #057E80;
@@ -9,13 +9,42 @@
 	--ifm-color-primary-lighter: #057E80;
 	--ifm-color-primary-lightest: #00B1B3;
 
-	--ifm-h6-font-size: .75rem;
-	/* color tailwind */
-	--ifm-heading-color:#0f172a;
-
 	/*font*/
 	--ifm-font-family-base: "Inter", sans-serif;
+	--mb-font-heading: "Roboto Slab", serif;
+	--text-3xl: 1.875rem;
+	--text-2xl: 1.5rem;
+	--text-xl: 1.25rem;
+	--text-lg: 1.125rem;
+	--text-base	: 1rem;
+	--text-sm : 0.875rem;
+	--text-xs: 0.75rem;
 
+	/* font size tailwind */
+	--ifm-h1-font-size: var(--text-3xl);
+	--ifm-h2-font-size: var(--text-3xl);
+	--ifm-h3-font-size: var(--text-lg);
+	--ifm-h4-font-size: var(--text-base);
+	--ifm-h5-font-size: var(--text-sm);
+	--ifm-h6-font-size: var(--text-xs);
+
+	/* color slate tailwind*/
+	--bg-slate-50: #f8fafc;
+	--bg-slate-100 : #f1f5f9;
+	--bg-slate-200 : #e2e8f0;
+	--bg-slate-300 :#cbd5e1;
+	--bg-slate-400: #94a3b8;
+	--bg-slate-500: #64748b;
+	--bg-slate-600: #475569;
+	--bg-slate-700: #334155;
+	--bg-slate-800: #1e293b;
+	--bg-slate-900: #0f172a;
+	--bg-slate-950: #020617;
+
+	--ifm-color-gray-100: var(--bg-slate-100);
+	--ifm-color-gray-200:var(--bg-slate-200);
+
+	--ifm-heading-color:var(--bg-slate-800);
 	/* Button */
 	--ifm-button-color: #fff;
 	--ifm-button-padding-vertical: .5rem;
@@ -38,9 +67,11 @@
 	--color-pink: #ec4899;
 
 	/* Meta Box blue shades */
-	--color-base: hsl(210, 29%, 24%);
-	--color-dark: hsl(210, 30%, 18%);
+	--color-base: var(--bg-slate-700);
+	--color-dark: var(--bg-slate-800);
 	--color-tutorius: #202E3C;
+
+
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -62,7 +93,6 @@ html[data-theme='dark'] {
 
 	--ifm-heading-color:#ffffff;
 }
-
 /* Colors */
 .color-blue {
 	--color: var(--color-blue);
@@ -144,6 +174,7 @@ html[data-theme='dark'] {
 .hero__title {
 	max-width: min(100%, 36ch);
 	margin-inline: auto;
+	font-family: var(--mb-font-heading);
 }
 
 .hero_popular {
@@ -223,17 +254,21 @@ html[data-theme='dark'] {
 
 
 /* Content */
+h1.title_node_modules-\@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module{
+	--ifm-h1-font-size: var(--text-3xl);
+}
 .markdown h1:first-child,
 h1.title_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocCategoryGeneratedIndexPage-styles-module {
-	--ifm-h1-font-size: 2rem;
+	--ifm-h1-font-size: var(--text-3xl);
+	font-family: var(--mb-font-heading);
 }
 
 .markdown>h2 {
-	--ifm-h2-font-size: 1.5rem;
+	--ifm-h2-font-size: var(--text-2xl);
 }
 
 .markdown>h3 {
-	--ifm-h3-font-size: 1.25rem;
+	--ifm-h3-font-size: var(--text-lg);
 }
 
 .markdown img {
