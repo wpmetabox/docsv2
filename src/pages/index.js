@@ -3,6 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import SearchBar from '@theme/SearchBar';
 import React from 'react';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
@@ -112,6 +113,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+	  <Footer />
     </Layout>
   );
 }
