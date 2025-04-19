@@ -16,8 +16,8 @@
 	--text-2xl: 1.5rem;
 	--text-xl: 1.25rem;
 	--text-lg: 1.125rem;
-	--text-base	: 1rem;
-	--text-sm : 0.875rem;
+	--text-base: 1rem;
+	--text-sm: 0.875rem;
 	--text-xs: 0.75rem;
 
 	/* font size tailwind */
@@ -45,6 +45,9 @@
 	--ifm-color-gray-200:var(--bg-slate-200);
 
 	--ifm-heading-color:var(--bg-slate-800);
+
+	/* Spacing */
+
 	/* Button */
 	--ifm-button-color: #fff;
 	--ifm-button-padding-vertical: .5rem;
@@ -71,7 +74,7 @@
 	--color-dark: var(--bg-slate-800);
 	--color-tutorius: #202E3C;
 
-
+	--ifm-color-content: var(--bg-slate-200);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -256,6 +259,7 @@ html[data-theme='dark'] {
 /* Content */
 h1.title_node_modules-\@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module{
 	--ifm-h1-font-size: var(--text-3xl);
+	font-family: var(--mb-font-heading);
 }
 .markdown h1:first-child,
 h1.title_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocCategoryGeneratedIndexPage-styles-module {
@@ -516,7 +520,7 @@ summary {
 .boxWrapper {
 	display: grid;
 	gap: 2rem;
-	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
 }
 
 .box {
@@ -789,6 +793,185 @@ html[data-theme='dark'] .tutorials_trending {
 .tutorials_category--new p :hover .items_titles {
 	color: var(--ifm-menu-color-active);
 }
+
+/* footer */
+.footer{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.flex{
+	display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.border-t {
+    border-top: 1px;
+}
+
+.border-0 {
+    border-width: 0px;
+}
+
+.border-solid {
+    border-style: solid;
+}
+
+.border-gray-200 {
+    border-color: var(--bg-slate-200)
+}
+
+.py-4 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.py-16 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+
+.grid {
+	display: grid;
+}
+
+.gap-2{
+	gap: 8px;
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+.footer__copyright {
+	border-top: 1px solid #f8fafc52;
+}
+.footer__intro {
+	grid-area: intro;
+}
+
+.footer__about {
+	grid-area: about;
+}
+
+.footer__products {
+	grid-area: products;
+}
+
+.footer__compare {
+	grid-area: compare;
+}
+
+.footer__tools {
+	grid-area: tools;
+}
+
+.footer__connect {
+	grid-area: connect;
+}
+
+.footer-cols {
+	grid-gap: 24px;
+	grid-template-areas:
+		"intro intro"
+		"about tools"
+		"products compare"
+		"connect connect";
+}
+
+@media (min-width: 768px) {
+	.footer-cols {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"intro about products"
+			"intro about compare"
+			"tools connect connect";
+	}
+	.md-flex-row {
+        flex-direction: row;
+    }
+	.md-text-left {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+	.footer-cols {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-areas:
+			"intro about products tools connect"
+			"intro about compare tools connect";
+	}
+}
+/*Footer -  column */
+
+html[data-theme='light'] .footer{
+	background-color: var(--bg-slate-800);
+}
+
+.uppercase{
+	text-transform: uppercase;
+}
+
+.tracking-wider {
+    letter-spacing: .05em;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.fill-current{
+	width: 24px;
+	height: 24px;
+	fill:var(--bg-slate-200);
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.list-none {
+    list-style-type: none;
+	padding-left: 0;
+}
+
+.text-slate-900 {
+    color: var(--bg-slate-200);
+}
+
+.text-inherit{
+	color: var(--bg-slate-100);
+}
+
+
 
 @media (max-width: 1199px) {
 	.tutorials_trending .trending_category {
