@@ -1,5 +1,6 @@
 /* You can override the default Infima variables here. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
 :root {
 	--ifm-color-primary: #00B1B3;
 	--ifm-color-primary-dark: #057E80;
@@ -11,7 +12,7 @@
 
 	/*font*/
 	--ifm-font-family-base: "Inter", sans-serif;
-	--mb-font-heading: "Roboto Slab", serif;
+	--font-slab: "Roboto Slab", serif;
 	--text-3xl: 1.875rem;
 	--text-2xl: 1.5rem;
 	--text-xl: 1.25rem;
@@ -30,9 +31,9 @@
 
 	/* color slate tailwind*/
 	--bg-slate-50: #f8fafc;
-	--bg-slate-100 : #f1f5f9;
-	--bg-slate-200 : #e2e8f0;
-	--bg-slate-300 :#cbd5e1;
+	--bg-slate-100: #f1f5f9;
+	--bg-slate-200: #e2e8f0;
+	--bg-slate-300: #cbd5e1;
 	--bg-slate-400: #94a3b8;
 	--bg-slate-500: #64748b;
 	--bg-slate-600: #475569;
@@ -42,9 +43,9 @@
 	--bg-slate-950: #020617;
 
 	--ifm-color-gray-100: var(--bg-slate-100);
-	--ifm-color-gray-200:var(--bg-slate-200);
+	--ifm-color-gray-200: var(--bg-slate-200);
 
-	--ifm-heading-color:var(--bg-slate-800);
+	--ifm-heading-color: var(--bg-slate-800);
 
 	/* Spacing */
 
@@ -72,7 +73,7 @@
 	/* Meta Box blue shades */
 	--color-base: var(--bg-slate-700);
 	--color-dark: var(--bg-slate-800);
-	--color-tutorius: #202E3C;
+	--color-tutorial: #202E3C;
 
 	--ifm-color-content: var(--bg-slate-200);
 }
@@ -92,10 +93,11 @@ html[data-theme='dark'] {
 
 	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, .3);
 
-	--color-tutorius: var(--ifm-font-color-base);
+	--color-tutorial: var(--ifm-font-color-base);
 
-	--ifm-heading-color:#ffffff;
+	--ifm-heading-color: #ffffff;
 }
+
 /* Colors */
 .color-blue {
 	--color: var(--color-blue);
@@ -177,7 +179,7 @@ html[data-theme='dark'] {
 .hero__title {
 	max-width: min(100%, 36ch);
 	margin-inline: auto;
-	font-family: var(--mb-font-heading);
+	font-family: var(--font-slab);
 }
 
 .hero_popular {
@@ -257,14 +259,13 @@ html[data-theme='dark'] {
 
 
 /* Content */
-h1.title_node_modules-\@docusaurus-theme-classic-lib-theme-DocCategoryGeneratedIndexPage-styles-module{
+.container h1 {
 	--ifm-h1-font-size: var(--text-3xl);
-	font-family: var(--mb-font-heading);
+	font-family: var(--font-slab);
 }
-.markdown h1:first-child,
-h1.title_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocCategoryGeneratedIndexPage-styles-module {
+
+.markdown h1:first-child {
 	--ifm-h1-font-size: var(--text-3xl);
-	font-family: var(--mb-font-heading);
 }
 
 .markdown>h2 {
@@ -690,7 +691,7 @@ html[data-theme='dark'] .tutorials_trending {
 }
 
 .tutorials_trending .trending_title {
-	color: var(--color-tutorius);
+	color: var(--color-tutorial);
 	font-size: 16px;
 	line-height: 19px;
 	padding-left: 50px;
@@ -770,7 +771,7 @@ html[data-theme='dark'] .tutorials_trending {
 	font-size: 16px;
 	line-height: 19px;
 	font-weight: 500;
-	color: var(--color-tutorius);
+	color: var(--color-tutorial);
 	display: inline-block;
 }
 
@@ -784,7 +785,7 @@ html[data-theme='dark'] .tutorials_trending {
 
 .tutorials_category--new .items_titles {
 	position: relative;
-	color: var(--color-tutorius);
+	color: var(--color-tutorial);
 	padding: 15px 0px;
 	margin: 0;
 	clear: both;
@@ -795,54 +796,55 @@ html[data-theme='dark'] .tutorials_trending {
 }
 
 /* footer */
-.footer{
+.footer {
 	padding-top: 0;
 	padding-bottom: 0;
 }
-.flex{
+
+.flex {
 	display: flex;
 }
 
 .flex-col {
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .items-center {
-    align-items: center;
+	align-items: center;
 }
 
 .text-center {
-    text-align: center;
+	text-align: center;
 }
 
 .justify-between {
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 .border-t {
-    border-top: 1px;
+	border-top: 1px;
 }
 
 .border-0 {
-    border-width: 0px;
+	border-width: 0px;
 }
 
 .border-solid {
-    border-style: solid;
+	border-style: solid;
 }
 
 .border-gray-200 {
-    border-color: var(--bg-slate-200)
+	border-color: var(--bg-slate-200)
 }
 
 .py-4 {
-    padding-top: 16px;
-    padding-bottom: 16px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 
 .py-16 {
-    padding-top: 64px;
-    padding-bottom: 64px;
+	padding-top: 64px;
+	padding-bottom: 64px;
 }
 
 
@@ -850,17 +852,18 @@ html[data-theme='dark'] .tutorials_trending {
 	display: grid;
 }
 
-.gap-2{
+.gap-2 {
 	gap: 8px;
 }
 
 .gap-4 {
-    gap: 16px;
+	gap: 16px;
 }
 
 .footer__copyright {
 	border-top: 1px solid #f8fafc52;
 }
+
 .footer__intro {
 	grid-area: intro;
 }
@@ -902,12 +905,14 @@ html[data-theme='dark'] .tutorials_trending {
 			"intro about compare"
 			"tools connect connect";
 	}
+
 	.md-flex-row {
-        flex-direction: row;
-    }
+		flex-direction: row;
+	}
+
 	.md-text-left {
-        text-align: left;
-    }
+		text-align: left;
+	}
 }
 
 @media (min-width: 1024px) {
@@ -918,59 +923,63 @@ html[data-theme='dark'] .tutorials_trending {
 			"intro about compare tools connect";
 	}
 }
+
 /*Footer -  column */
 
-html[data-theme='light'] .footer{
+html[data-theme='light'] .footer {
 	background-color: var(--bg-slate-800);
 }
 
-.uppercase{
+.uppercase {
 	text-transform: uppercase;
 }
 
 .tracking-wider {
-    letter-spacing: .05em;
+	letter-spacing: .05em;
 }
 
 .font-bold {
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .text-sm {
-    font-size: 0.875rem;
+	font-size: var(--text-sm);
 }
 
-.fill-current{
+.text-xs {
+	font-size: var(--text-xs);
+}
+
+.fill-current {
 	width: 24px;
 	height: 24px;
-	fill:var(--bg-slate-200);
+	fill: var(--bg-slate-200);
 }
 
 .mb-0 {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .mb-2 {
-    margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 .m-0 {
-    margin: 0;
+	margin: 0;
 }
 
 .list-none {
-    list-style-type: none;
+	list-style-type: none;
 	padding-left: 0;
 }
 
 .text-slate-900 {
-    color: var(--bg-slate-200);
+	color: var(--bg-slate-200);
 }
 
-.text-inherit{
+.text-inherit {
 	color: var(--bg-slate-100);
 }
-
 
 
 @media (max-width: 1199px) {
