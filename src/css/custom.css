@@ -1,3 +1,5 @@
+@tailwind utilities;
+
 /* You can override the default Infima variables here. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
@@ -801,65 +803,6 @@ html[data-theme='dark'] .tutorials_trending {
 	padding-bottom: 0;
 }
 
-.flex {
-	display: flex;
-}
-
-.flex-col {
-	flex-direction: column;
-}
-
-.items-center {
-	align-items: center;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.justify-between {
-	justify-content: space-between;
-}
-
-.border-t {
-	border-top: 1px;
-}
-
-.border-0 {
-	border-width: 0px;
-}
-
-.border-solid {
-	border-style: solid;
-}
-
-.border-gray-200 {
-	border-color: var(--bg-slate-200)
-}
-
-.py-4 {
-	padding-top: 16px;
-	padding-bottom: 16px;
-}
-
-.py-16 {
-	padding-top: 64px;
-	padding-bottom: 64px;
-}
-
-
-.grid {
-	display: grid;
-}
-
-.gap-2 {
-	gap: 8px;
-}
-
-.gap-4 {
-	gap: 16px;
-}
-
 .footer__copyright {
 	border-top: 1px solid #f8fafc52;
 }
@@ -929,71 +872,6 @@ html[data-theme='dark'] .tutorials_trending {
 html[data-theme='light'] .footer {
 	background-color: var(--bg-slate-800);
 }
-
-.uppercase {
-	text-transform: uppercase;
-}
-
-.tracking-wider {
-	letter-spacing: .05em;
-}
-
-.font-bold {
-	font-weight: 700;
-}
-
-.text-sm {
-	font-size: var(--text-sm);
-}
-
-.text-xs {
-	font-size: var(--text-xs);
-}
-
-.fill-current {
-	fill: currentColor;
-}
-
-.mb-0 {
-	margin-bottom: 0;
-}
-
-.mb-2 {
-	margin-bottom: 8px;
-}
-
-.m-0 {
-	margin: 0;
-}
-
-.pl-0 {
-	padding-left: 0;
-}
-
-.w-6 {
-	width: 1.5rem;
-}
-
-.h-6 {
-	height: 1.5rem;
-}
-
-.list-none {
-	list-style-type: none;
-}
-
-.text-slate-900 {
-	color: var(--color-slate-900);
-}
-
-.text-inherit {
-	color: inherit;
-}
-
-.text-current {
-	color: currentColor;
-}
-
 
 @media (max-width: 1199px) {
 	.tutorials_trending .trending_category {

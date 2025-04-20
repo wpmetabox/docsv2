@@ -1,17 +1,17 @@
 import React from 'react';
 
 export default () => (
-  <footer className={ `footer text-sm border-t border-gray-200` }>
+  <footer className="footer text-sm border-t border-slate-200">
     <div className="container">
       <div className="footer-cols grid py-16">
         <div className="footer__intro">
-          <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">Intro</div>
+          <div className="uppercase tracking-wider text-sm font-bold mb-2">Intro</div>
           <p className="mb-0">
             We created Meta Box in 2010 to help developers create custom meta boxes faster and easier. Now, Meta Box is not only a library with powerful API for custom fields, but also a framework that helps you control your data the way you want.
           </p>
         </div>
         <div className="footer__about">
-          <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">About</div>
+          <div className="uppercase tracking-wider text-sm font-bold mb-2">About</div>
           <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="/about/">About</a></li>
             <li><a className="text-inherit" href="/my-account/">My Account</a></li>
@@ -23,7 +23,7 @@ export default () => (
           </ul>
         </div>
         <div className="footer__products">
-          <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">Our products</div>
+          <div className="uppercase tracking-wider text-sm font-bold mb-2">Our products</div>
           <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="https://wpslimseo.com" target="_blank">Slim SEO</a></li>
             <li><a className="text-inherit" href="https://gretathemes.com" target="_blank">GretaThemes</a></li>
@@ -31,14 +31,14 @@ export default () => (
           </ul>
         </div>
         <div className="footer__compare">
-          <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">Compare</div>
+          <div className="uppercase tracking-wider text-sm font-bold mb-2">Compare</div>
           <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="/meta-box-vs-acf/">Meta Box vs. ACF</a></li>
             <li><a className="text-inherit" href="/meta-box-vs-toolset/">Meta Box vs. Toolset</a></li>
           </ul>
         </div>
         <div className="footer__tools">
-          <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">Tools</div>
+          <div className="uppercase tracking-wider text-sm font-bold mb-2">Tools</div>
           <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="/demo/">Demo</a></li>
             <li><a className="text-inherit" href="/online-generator/">Online generator</a></li>
@@ -48,7 +48,7 @@ export default () => (
           </ul>
         </div>
         <div className="footer__connect">
-          <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">Connect With Us</div>
+          <div className="uppercase tracking-wider text-sm font-bold mb-2">Connect With Us</div>
           <div className="flex gap-2">
             <a className="text-current hover:no-underline hover:text-slate-800" href="https://www.facebook.com/groups/metaboxusers" target="_blank" rel="nofollow noopener">
               <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Facebook">
