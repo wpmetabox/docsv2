@@ -12,7 +12,7 @@ export default () => (
         </div>
         <div className="footer__about">
           <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">About</div>
-          <ul className="list-none m-0">
+          <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="/about/">About</a></li>
             <li><a className="text-inherit" href="/my-account/">My Account</a></li>
             <li><a className="text-inherit" href="/affiliate/">Affiliate</a></li>
@@ -24,7 +24,7 @@ export default () => (
         </div>
         <div className="footer__products">
           <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">Our products</div>
-          <ul className="list-none m-0">
+          <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="https://wpslimseo.com" target="_blank">Slim SEO</a></li>
             <li><a className="text-inherit" href="https://gretathemes.com" target="_blank">GretaThemes</a></li>
             <li><a className="text-inherit" href="https://wpautolistings.com" target="_blank">Auto Listings</a></li>
@@ -32,14 +32,14 @@ export default () => (
         </div>
         <div className="footer__compare">
           <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">Compare</div>
-          <ul className="list-none m-0">
+          <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="/meta-box-vs-acf/">Meta Box vs. ACF</a></li>
             <li><a className="text-inherit" href="/meta-box-vs-toolset/">Meta Box vs. Toolset</a></li>
           </ul>
         </div>
         <div className="footer__tools">
           <div className="uppercase tracking-wider text-sm font-bold mb-2 text-slate-900">Tools</div>
-          <ul className="list-none m-0">
+          <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="/demo/">Demo</a></li>
             <li><a className="text-inherit" href="/online-generator/">Online generator</a></li>
             <li><a className="text-inherit" href="/post-type-generator/">Post type generator</a></li>

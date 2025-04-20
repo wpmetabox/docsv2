@@ -23,7 +23,7 @@
 
 	/* font size tailwind */
 	--ifm-h1-font-size: var(--text-3xl);
-	--ifm-h2-font-size: var(--text-3xl);
+	--ifm-h2-font-size: var(--text-2xl);
 	--ifm-h3-font-size: var(--text-lg);
 	--ifm-h4-font-size: var(--text-base);
 	--ifm-h5-font-size: var(--text-sm);
@@ -951,9 +951,7 @@ html[data-theme='light'] .footer {
 }
 
 .fill-current {
-	width: 24px;
-	height: 24px;
-	fill: var(--bg-slate-200);
+	fill: currentColor;
 }
 
 .mb-0 {
@@ -968,17 +966,32 @@ html[data-theme='light'] .footer {
 	margin: 0;
 }
 
-.list-none {
-	list-style-type: none;
+.pl-0 {
 	padding-left: 0;
 }
 
+.w-6 {
+	width: 1.5rem;
+}
+
+.h-6 {
+	height: 1.5rem;
+}
+
+.list-none {
+	list-style-type: none;
+}
+
 .text-slate-900 {
-	color: var(--bg-slate-200);
+	color: var(--color-slate-900);
 }
 
 .text-inherit {
-	color: var(--bg-slate-100);
+	color: inherit;
+}
+
+.text-current {
+	color: currentColor;
 }
 
 
