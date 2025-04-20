@@ -12,7 +12,7 @@ export default function Home() {
       description={ siteConfig.tagline }>
       <header className="hero">
         <div className="container">
-          <h1 className="hero__title">Build professional WordPress sites with custom post types and custom fields</h1>
+          <h1 className="hero__title font-slab">Build professional WordPress sites with custom post types and custom fields</h1>
           <p className="hero__subtitle">Quickly create forms and fields for your posts, user profiles, settings pages, and more.</p>
           <div className="hero_cta">
             <Link

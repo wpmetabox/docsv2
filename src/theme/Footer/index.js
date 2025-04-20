@@ -1,9 +1,9 @@
 import React from 'react';
 
 export default () => (
-  <footer className="footer text-sm border-t border-slate-200">
+  <footer className="footer py-0 leading-relaxed text-sm border-t border-slate-200">
     <div className="container">
-      <div className="footer-cols grid py-16">
+      <div className="footer-cols grid gap-6 py-16">
         <div className="footer__intro">
           <div className="uppercase tracking-wider text-sm font-bold mb-2">Intro</div>
           <p className="mb-0">
@@ -74,7 +74,7 @@ export default () => (
         </div>
       </div>
 
-      <div className="footer__copyright flex justify-between items-center gap-4 text-xs py-4 text-center flex-col md-flex-row md-text-left">
+      <div className="flex justify-between items-center gap-4 text-xs py-4 border-0 border-t border-slate-200 border-solid text-center flex-col md:flex-row md:text-left">
         <div>Copyright 2025 Meta Box. <a className="text-inherit" href="/privacy-policy/">Privacy Policy</a> | <a className="text-inherit" href="/terms-conditions/">Terms &amp; Conditions</a>.</div>
         <a className="block" href="https://elightup.com">
           <img className="block" src="https://i0.wp.com/metabox.io/wp-content/themes/rooster/images/elightup-logo.png" alt="elightup" width="61" height="16" loading="lazy" />

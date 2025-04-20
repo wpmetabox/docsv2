@@ -1,7 +1,6 @@
 @tailwind utilities;
 
-/* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@700&display=swap');
 
 :root {
 	--ifm-color-primary: #00B1B3;
@@ -181,7 +180,6 @@ html[data-theme='dark'] {
 .hero__title {
 	max-width: min(100%, 36ch);
 	margin-inline: auto;
-	font-family: var(--font-slab);
 }
 
 .hero_popular {
@@ -523,7 +521,7 @@ summary {
 .boxWrapper {
 	display: grid;
 	gap: 2rem;
-	grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 
 .box {
@@ -798,15 +796,6 @@ html[data-theme='dark'] .tutorials_trending {
 }
 
 /* footer */
-.footer {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-.footer__copyright {
-	border-top: 1px solid #f8fafc52;
-}
-
 .footer__intro {
 	grid-area: intro;
 }
@@ -832,7 +821,6 @@ html[data-theme='dark'] .tutorials_trending {
 }
 
 .footer-cols {
-	grid-gap: 24px;
 	grid-template-areas:
 		"intro intro"
 		"about tools"
@@ -847,14 +835,6 @@ html[data-theme='dark'] .tutorials_trending {
 			"intro about products"
 			"intro about compare"
 			"tools connect connect";
-	}
-
-	.md-flex-row {
-		flex-direction: row;
-	}
-
-	.md-text-left {
-		text-align: left;
 	}
 }
 
