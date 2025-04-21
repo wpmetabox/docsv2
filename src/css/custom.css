@@ -3,16 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@700&display=swap');
 
 :root {
-	--ifm-color-primary: #00B1B3;
-	--ifm-color-primary-dark: #057E80;
-	--ifm-color-primary-darker: #057E80;
-	--ifm-color-primary-darkest: #0D5254;
-	--ifm-color-primary-light: #057E80;
-	--ifm-color-primary-lighter: #057E80;
-	--ifm-color-primary-lightest: #00B1B3;
-
-	/*font*/
-	--ifm-font-family-base: "Inter", sans-serif;
+	/* Tailwind fonts */
 	--font-slab: "Roboto Slab", serif;
 	--text-3xl: 1.875rem;
 	--text-2xl: 1.5rem;
@@ -22,7 +13,34 @@
 	--text-sm: 0.875rem;
 	--text-xs: 0.75rem;
 
-	/* font size tailwind */
+	/* Tailwind colors */
+	--color-slate-50: #f8fafc;
+	--color-slate-100: #f1f5f9;
+	--color-slate-200: #e2e8f0;
+	--color-slate-300: #cbd5e1;
+	--color-slate-400: #94a3b8;
+	--color-slate-500: #64748b;
+	--color-slate-600: #475569;
+	--color-slate-700: #334155;
+	--color-slate-800: #1e293b;
+	--color-slate-900: #0f172a;
+	--color-slate-950: #020617;
+	--color-blue: #3b82f6;
+	--color-green: #22c55e;
+	--color-amber: #f59e0b;
+	--color-red: #ef4444;
+	--color-cyan: #06b6d4;
+	--color-pink: #ec4899;
+
+	--ifm-color-primary: #00B1B3;
+	--ifm-color-primary-dark: #057E80;
+	--ifm-color-primary-darker: #057E80;
+	--ifm-color-primary-darkest: #0D5254;
+	--ifm-color-primary-light: #057E80;
+	--ifm-color-primary-lighter: #057E80;
+	--ifm-color-primary-lightest: #00B1B3;
+
+	--ifm-font-family-base: "Inter", sans-serif;
 	--ifm-h1-font-size: var(--text-3xl);
 	--ifm-h2-font-size: var(--text-2xl);
 	--ifm-h3-font-size: var(--text-lg);
@@ -30,27 +48,21 @@
 	--ifm-h5-font-size: var(--text-sm);
 	--ifm-h6-font-size: var(--text-xs);
 
-	/* color slate tailwind*/
-	--bg-slate-50: #f8fafc;
-	--bg-slate-100: #f1f5f9;
-	--bg-slate-200: #e2e8f0;
-	--bg-slate-300: #cbd5e1;
-	--bg-slate-400: #94a3b8;
-	--bg-slate-500: #64748b;
-	--bg-slate-600: #475569;
-	--bg-slate-700: #334155;
-	--bg-slate-800: #1e293b;
-	--bg-slate-900: #0f172a;
-	--bg-slate-950: #020617;
+	--ifm-color-gray-0: #fff;
+	--ifm-color-gray-100: var(--color-slate-100);
+	--ifm-color-gray-200: var(--color-slate-200);
+	--ifm-color-gray-300: var(--color-slate-300);
+	--ifm-color-gray-400: var(--color-slate-400);
+	--ifm-color-gray-500: var(--color-slate-500);
+	--ifm-color-gray-600: var(--color-slate-600);
+	--ifm-color-gray-700: var(--color-slate-700);
+	--ifm-color-gray-800: var(--color-slate-800);
+	--ifm-color-gray-900: var(--color-slate-900);
+	--ifm-color-gray-1000: var(--color-slate-950);
 
-	--ifm-color-gray-100: var(--bg-slate-100);
-	--ifm-color-gray-200: var(--bg-slate-200);
-
-	--ifm-heading-color: var(--bg-slate-800);
-	--ifm-navbar-link-color: var(--bg-slate-900);
-	--search-local-modal-background: var(--bg-slate-200);
-	--ifm-color-gray-700:var(--bg-slate-900);
-	/* Spacing */
+	--ifm-heading-color: var(--color-slate-800);
+	--ifm-navbar-link-color: var(--color-slate-900);
+	--search-local-modal-background: var(--color-slate-200);
 
 	/* Button */
 	--ifm-button-color: #fff;
@@ -65,17 +77,9 @@
 	--ifm-code-font-size: 87.5%;
 	--docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, .1);
 
-	/* Custom colors: from Tailwind */
-	--color-blue: #3b82f6;
-	--color-green: #22c55e;
-	--color-amber: #f59e0b;
-	--color-red: #ef4444;
-	--color-cyan: #06b6d4;
-	--color-pink: #ec4899;
-
 	/* Meta Box blue shades */
-	--color-base: var(--bg-slate-700);
-	--color-dark: var(--bg-slate-800);
+	--color-base: var(--color-slate-700);
+	--color-dark: var(--color-slate-800);
 	--color-tutorial: #202E3C;
 }
 
@@ -97,7 +101,7 @@ html[data-theme='dark'] {
 	--color-tutorial: var(--ifm-font-color-base);
 
 	--ifm-heading-color: #ffffff;
-	--ifm-navbar-link-color: var(--bg-slate-300);
+	--ifm-navbar-link-color: var(--color-slate-300);
 }
 
 /* Colors */
@@ -175,7 +179,7 @@ html[data-theme='dark'] {
 .hero .searchBar_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module .dropdownMenu_node_modules-\@easyops-cn-docusaurus-search-local-dist-client-client-theme-SearchBar-SearchBar-module {
 	left: 0 !important;
 	right: 0 !important;
-	color: var(--bg-slate-900);
+	color: var(--color-slate-900);
 }
 
 .hero__title {
@@ -851,8 +855,8 @@ html[data-theme='dark'] .tutorials_trending {
 /*Footer -  column */
 
 html[data-theme='light'] .footer {
-	background-color: var(--bg-slate-200);
-	color:var(--bg-slate-900);
+	background-color: var(--color-slate-50);
+	color:var(--color-slate-700);
 }
 
 @media (max-width: 1199px) {
