@@ -20,6 +20,17 @@ const config = {
 
   plugins: [
     './lightbox',
+    async function tailwindcss(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
   ],
 
   presets: [
@@ -110,95 +121,7 @@ const config = {
           },
         ],
       },
-      footer: {
-        logo: {
-          src: 'img/logo-white.svg',
-        },
-        style: 'dark',
-        links: [
-          {
-            title: 'Meta Box',
-            items: [
-              {
-                label: 'Pricing',
-                href: 'https://metabox.io/pricing/',
-              },
-              {
-                label: 'FAQ',
-                href: 'https://metabox.io/faq/',
-              },
-              {
-                label: 'Changelog',
-                href: 'https://metabox.io/changelog/',
-              },
-              {
-                label: 'Contact',
-                href: 'https://metabox.io/contact/',
-              },
-            ],
-          },
-          {
-            title: 'Top Extensions',
-            items: [
-              {
-                label: 'MB Group',
-                to: 'extensions/meta-box-group',
-              },
-              {
-                label: 'MB Relationships',
-                to: 'extensions/mb-relationships',
-              },
-              {
-                label: 'MB Custom Table',
-                to: 'extensions/mb-custom-table',
-              },
-              {
-                label: 'MB Frontend Submission',
-                to: 'extensions/mb-frontend-submission',
-              },
-            ],
-          },
-          {
-            title: 'Online Tools',
-            items: [
-              {
-                label: 'Post Type Generator',
-                to: 'post-type-generator/',
-              },
-              {
-                label: 'Taxonomy Generator',
-                to: 'taxonomy-generator/',
-              },
-              {
-                label: 'Online Generator',
-                to: 'online-generator/',
-              }
-            ],
-          },
-          {
-            title: 'Connect With Us',
-            items: [
-              {
-                label: 'Facebook Group',
-                href: 'https://www.facebook.com/groups/metaboxusers',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/wpmetabox',
-              },
-              {
-                label: 'Youtube',
-                href: 'https://www.youtube.com/c/MetaBoxWP',
-              },
-              {
-                label: 'Github',
-                href: 'https://github.com/wpmetabox',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://metabox.io">Meta Box</a>, a brand of <a href="https://elightup.com">eLightUp</a>.`,
-      },
+
       prism: {
         theme: {
           ...lightCodeTheme,
