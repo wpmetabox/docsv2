@@ -26,8 +26,8 @@ export default function Home() {
         </div>
       </header>
       <main>
-        <section className='boxes'>
-          <div className="container boxWrapper">
+        <section className='text-sm py-16 leading-relaxed'>
+          <div className="container grid gap-6 boxWrapper">
             <div className='box box-start'>
               <header>
                 <h2>Getting Started</h2>

@@ -60,9 +60,11 @@
 	--ifm-color-gray-900: var(--color-slate-900);
 	--ifm-color-gray-1000: var(--color-slate-950);
 
+	--ifm-color-content: var(--ifm-color-emphasis-700);
 	--ifm-heading-color: var(--color-slate-800);
 	--ifm-navbar-link-color: var(--color-slate-900);
 	--search-local-modal-background: var(--color-slate-200);
+	--ifm-footer-background-color: none;
 
 	/* Button */
 	--ifm-button-color: #fff;
@@ -86,13 +88,13 @@
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 html[data-theme='dark'] {
 	--ifm-navbar-background-color: var(--color-base);
-	--ifm-footer-background-color: var(--color-base);
 	--collapse-button-bg-color-dark: var(--color-base);
-	--ifm-background-color: var(--color-dark);
+	--ifm-background-color: var(--color-slate-800);
 	--ifm-navbar-search-input-background-color: var(--color-dark);
 
 	--ifm-color-emphasis-100: var(--color-base);
 	--ifm-color-emphasis-200: var(--color-base);
+	--ifm-color-content: var(--ifm-color-emphasis-900);
 
 	--ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
 
@@ -517,19 +519,11 @@ summary {
 }
 
 /* Homepage */
-.boxes {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
-}
-
 .boxWrapper {
-	display: grid;
-	gap: 2rem;
 	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 
 .box {
-	font-size: var(--ifm-h4-font-size);
 	border: 1px solid var(--color);
 	border-radius: var(--ifm-global-radius);
 	transition: all var(--ifm-transition-fast) ease;
@@ -595,11 +589,6 @@ summary {
 
 .box-2 ul {
 	columns: 2;
-}
-
-/* Footer */
-.footer--dark {
-	--ifm-footer-background-color: var(--color-base);
 }
 
 /* Pagination */
@@ -801,6 +790,11 @@ html[data-theme='dark'] .tutorials_trending {
 }
 
 /* footer */
+.footer,
+.footer__copyright {
+	border-top-color: var(--ifm-color-emphasis-200);
+}
+
 .footer__intro {
 	grid-area: intro;
 }
@@ -850,13 +844,6 @@ html[data-theme='dark'] .tutorials_trending {
 			"intro about products tools connect"
 			"intro about compare tools connect";
 	}
-}
-
-/*Footer -  column */
-
-html[data-theme='light'] .footer {
-	background-color: var(--color-slate-50);
-	color:var(--color-slate-700);
 }
 
 @media (max-width: 1199px) {
