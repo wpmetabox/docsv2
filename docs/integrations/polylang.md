@@ -164,6 +164,8 @@ When you choose the fourth option, a pop-up includes all the fields and groups w
 * If you have a group, you can only set the translation mode at the group level. All subfields will follow the same translation mode as the group.
 * For object-based fields (e.g., image, file, post, term, user), when the translation mode is set to `translate`, the Meta Box – Polylang integration will copy the **ID of the original object** instead of linking to its translated version.
 
+:::
+
 If you use code, you can also translate the values of fields and field groups. Just add the `translation` property, which supports the following values (corresponding translation mode with UI):
 
 * `ignore`: The field group/field value will be left blank in the newly created translation.
