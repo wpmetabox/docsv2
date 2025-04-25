@@ -3,7 +3,9 @@ title: Meta Box - Polylang integration
 sidebar_label: Polylang
 ---
 
-You can translate both values and labels of many objects, including post types, taxonomies, custom fields, and settings pages. This integration works smoothly whether you're using Polylang or Polylang Pro.
+Integration with Polylang offers an intuitive interface to translate both values and labels of all objects, including post types, taxonomies, custom fields, settings pages, and relationships. It works smoothly whether you're using Polylang or Polylang Pro.
+
+Especially, the UI for translating Meta Box field values is the standout feature of this integration, instead of using the `wpml-config.xml` file as Polylang documentation.
 
 ## Configuration
 
@@ -46,13 +48,19 @@ In terms of labels, you can input translations directly without any additional c
 
 So, you can translate labels of post types, taxonomies, fields/field groups, and settings page. You should use them to avoid missing any labels instead of using the search bar.
 
+:::note
+
+Labels must have a value in order to be translated (for example: The “Add more” text of a cloneable field or custom submit button of a settings page). If the label is empty or not set, the translation feature will be skipped for that label.
+
+:::
+
 To translate values, depending on the object you want to translate, there will be corresponding translation methods:
 
 * Values of post types (posts) and taxonomy (terms): Activate languages in the **Settings** submenu, then input translation directly in the post editor and taxonomy admin.
 * Field values: Create a wpml-config.xml file that defines the translation action and field ID you need to translate.
 * Settings page field values: Simply switch the language on the top bar and enter the translation without any settings.
 
-To display translation on the fontend, you can use MB Views, a page builder or code.
+To display translation on the frontend, you can use MB Views, a page builder or code.
 
 ## Custom post types
 
@@ -132,29 +140,42 @@ Go to the post editor, you can see the translation of field labels.
 
 ### Field values
 
-Meta Box field values are defined as strings, and Polylang hasn’t supported interface to translate them directly. So, we’ll use a [wpml-config.xml file](https://polylang.pro/doc/the-wpml-config-xml-file/) to add these values as string translations.
+Instead of editing the `wpml-config.xml` file manually as previously, you can now translate field values and manage translations directly with a user-friendly interface. Translating is easy for both developers and non-developers. 
 
-Create a new file following path `/wp-content/themes/your-theme/wpml-config.xml`:
+Right in the **Settings** tab of the field group, there is a new setting named **Translation**, along with 4 options:
 
-```
-<wpml-config>
-    <custom-fields>
-        <custom-field action="translate">{field_id}</custom-field>
-    </custom-fields>
-</wpml-config>
-```
+* Do not translate any fields in this field group
+* Translate all fields in this field group
+* Synchronize values across languages
+* Set translation mode per field
 
-For custom fields, Polylang supports three actions for translation:
+![The translation setting offers options to translate the field group](https://i.imgur.com/0u6oMI9.png)
 
-* `ignore`: no action from Polylang.
-* `translate`: the custom field is copied from the source post but may be modified.
-* `copy`: the field value is copied from the source post and synchronized across translations.
+When you choose the fourth option, a pop-up includes all the fields and groups with three translation methods:
 
-In my case, the code will be like this:
+* **Ignore**: The field value will NOT be copied to the new translation. And you can add the new value as you want.
+* **Translate**: The field value will be copied to the new translation, and you can edit it without affecting the other translations
+* **Synchronize**: The field value will be synced to all translations whenever you make changes to any translation.
 
-![Create a wpml-config.xml to translate field values](https://i.imgur.com/Ji3Hnbs.png)
+![Choose the translation mode for each field](https://i.imgur.com/Ixa2BhO.png)
 
-The field is recognized as strings now. Just go to the post editor to check the result. I use the `translate` action. So, when I switched the language, the field value is copied, and I can change it.
+:::note
+
+* If you have a group, you can only set the translation mode at the group level. All subfields will follow the same translation mode as the group.
+* For object-based fields (e.g., image, file, post, term, user), when the translation mode is set to `translate`, the Meta Box – Polylang integration will copy the **ID of the original object** instead of linking to its translated version.
+
+If you use code, you can also translate the values of fields and field groups. Just add the `translation` property, which supports the following values (corresponding translation mode with UI):
+
+* `ignore`: The field group/field value will be left blank in the newly created translation.
+* `translate`: The value will be copied and can be edited.
+* `copy`: The value will be synced to all translations
+* `advanced`: Enable custom translation settings for each field.
+
+For example, to translate the `address` field, the code as below:
+
+![Translate field values using code](https://i.imgur.com/OTgSY8K.png)
+
+Then, the field in the post editor is ready for enter the translation with the default value as the field value of the default language.
 
 ![Enter the translation for the values](https://i.imgur.com/cslzgAq.png)
 
@@ -191,3 +212,13 @@ Besides, you can still filter strings by **MB Settings Page** in the **Translati
 When you delete a value from one language on the settings page, the values from other languages are auto-deleted. It happens with not only the Meta Box settings page but also WordPress settings (For instance, site title or site description in **General** settings)
 
 :::
+
+## Relationship labels
+
+In the Translations submenu, filter strings by **Meta Box Relationship** to input the translation for the relationship labels:
+
+![Translate relationship labels](https://i.imgur.com/q3UL2Qa.png)
+
+Then, in the post editor, they transfer well when you change the language
+
+![The relationship labels are translated](https://i.imgur.com/4Dn6t9O.png)
