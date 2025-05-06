@@ -46,7 +46,7 @@ Right in the Meta Box dashboard, click on the **Create a post type** quick actio
 
 After publishing, a new menu appeared. It’s your post type.
 
-The created post type is displayed on the menu.](https://i.imgur.com/co1wLtW.png)
+![The created post type is displayed on the menu.](https://i.imgur.com/co1wLtW.png)
 
 ## 2. Creating a custom taxonomy
 
@@ -156,7 +156,7 @@ I want to remove the links, so I added the `plain` filter.
 
 ![Add the plain filter to remove the links.](https://i.imgur.com/saHFtS9.png)
 
-Now, when inspecting the section on the frontend, you’ll see the elements have a new data-color attribute attached to them.
+Now, when inspecting the section on the frontend, you’ll see the elements have a new `data-color` attribute attached to them.
 
 ![Each post has a new attribute with the value is its term of taxonomy](https://i.imgur.com/vHix6nX.png)
 
