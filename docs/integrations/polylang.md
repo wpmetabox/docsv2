@@ -183,7 +183,7 @@ Then, the field in the post editor is ready for enter the translation with the d
 
 ![Enter the translation for the values](https://i.imgur.com/cslzgAq.png)
 
-## Settings page
+## Settings pages
 
 ### Settings page labels
 
