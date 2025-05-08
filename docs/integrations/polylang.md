@@ -62,9 +62,9 @@ To translate values, depending on the object you want to translate, there will b
 
 To display translation on the frontend, you can use MB Views, a page builder or code.
 
-## Custom post types
+## Post types
 
-For example, I [created a post type ](https://docs.metabox.io/tutorials/create-custom-post-types-taxonomies/)named Events. Now, our goal is to translate its labels and posts.
+For example, I [created a post type](https://docs.metabox.io/tutorials/create-custom-post-types-taxonomies/) named Events. Now, our goal is to translate its labels and posts.
 
 ### Post type labels
 
@@ -96,19 +96,9 @@ Now, in the post type admin, that translation is displayed when you switch the l
 
 ![The translation of posts is displayed](https://i.imgur.com/Jy4uLuW.png)
 
-## Custom taxonomies
+## Taxonomies
 
 Translating custom taxonomy labels and values is the same as translating post types.
-
-To translate terms of taxonomy, you need to activate languages and translations of that taxonomy and the post type that the taxonomy is assigned to.
-
-They are all located in the **Custom post types and Taxonomies** option.
-
-![Activate languages and translations for the custom post type and taxonomy](https://i.imgur.com/AL0oeiu.png)
-
-Then, in the taxonomy admin, you have two positions to add translations for the term like this:
-
-![Input translations for terms](https://i.imgur.com/exCEMLN.png)
 
 ### Taxonomy labels
 
@@ -119,6 +109,18 @@ In the **Translation** submenu, filter strings by **Meta Box Taxonomy**. Then, j
 After saving translations, you can see they are output like this:
 
 ![The translations of taxonomy labels are displayed](https://i.imgur.com/o172sjp.png)
+
+### Taxonomy values
+
+To translate terms of taxonomy, you need to activate languages and translations of that taxonomy and the post type that the taxonomy is assigned to.
+
+They are all located in the **Custom post types and Taxonomies** option.
+
+![Activate languages and translations for the custom post type and taxonomy](https://i.imgur.com/AL0oeiu.png)
+
+Then, in the taxonomy admin, you have two positions to add translations for the term like this:
+
+![Input translations for terms](https://i.imgur.com/exCEMLN.png)
 
 ## Custom fields
 
@@ -181,7 +183,7 @@ Then, the field in the post editor is ready for enter the translation with the d
 
 ![Enter the translation for the values](https://i.imgur.com/cslzgAq.png)
 
-## Settings page
+## Settings pages
 
 ### Settings page labels
 
