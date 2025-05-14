@@ -24,11 +24,8 @@ Then, we’ll use Breakdance to display them on the page.
 
 So, these are some tools we need in this practice:
 
-* The[ Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework to create custom fields. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields visually;
-* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into the groups for plans.
-
-Last, **Breakdance** to build the pricing table page.
+* [Meta Box AIO](https://metabox.io/aio/): to have the framework to create custom fields, and advanced features from [MB Builder](https://metabox.io/plugins/meta-box-builder/) and [MB Group](https://metabox.io/plugins/meta-box-group/)
+* **Breakdance** to build the pricing table page.
 
 That’s all. Let’s start now.
 
