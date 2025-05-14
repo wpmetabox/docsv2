@@ -21,9 +21,7 @@ All the information about each plan, such as title, price, description, features
 
 We need some tools:
 
-* [The Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have the framework to create custom fields;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields visually;
-* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into the groups for plans;
+* [Meta Box AIO](https://metabox.io/aio/) to have the framework to create custom fields and advanced features from [MB Builder](https://metabox.io/plugins/meta-box-builder/) and [MB Group](https://metabox.io/plugins/meta-box-group/);
 * **Bricks**: to build the pricing table page.
 
 That’s all. Let’s start now.
