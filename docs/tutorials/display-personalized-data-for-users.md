@@ -23,9 +23,8 @@ Each client or customer already has their own account. They can log in and look 
 
 The sales information will be saved in custom fields and posts of a custom post type. Then, we will set a relationship between sales and client accounts.
 
-Let’s take a look at the necessary tools and detailed steps to do it!
+So, we need:[Meta Box AIO](https://metabox.io/aio/): to have a framework to create a custom post type, custom fields, relationships, and advanced features from:
 
-* [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type, custom fields, and relationships;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to display columns in the dashboard for clients and sales representatives, making it easier to manage and view relationships;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the Sales Reps;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create a relationship between the Sales Reps and the users;
