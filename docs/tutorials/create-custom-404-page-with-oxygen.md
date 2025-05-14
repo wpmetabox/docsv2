@@ -21,10 +21,7 @@ The page may contain any kind of information that you think is useful for visito
 
 Therefore, in this practice, we will use the following tools:
 
-* [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and a settings page;
-* [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input the 404 page’s information;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields visually;
-* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize custom fields into groups for better management and display.
+* [Meta Box AIO](https://metabox.io/aio/): to have a framework to create custom fields and a settings page and advanced features from extensions;
 * **Oxygen**: to build the page.
 
 Now, let’s start!
