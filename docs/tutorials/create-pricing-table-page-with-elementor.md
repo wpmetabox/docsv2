@@ -13,7 +13,7 @@ This is my pricing table page as an example:
 
 ## Video version
 
-<LiteYouTubeEmbed id='asahr1KzhWA' />
+<LiteYouTubeEmbed id='NdIZTrarj9k' />
 
 ## Preparation
 
