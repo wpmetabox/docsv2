@@ -1,5 +1,5 @@
 ---
-title: Creating a coming soon page with countdown - Using MB Views
+title: Creating filters of job listing for career page using MB Views
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
