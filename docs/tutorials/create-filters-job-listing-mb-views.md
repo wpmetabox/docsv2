@@ -116,12 +116,10 @@ With **MB Views**, you can insert fields into it by clicking the **Insert Field*
 
 Start by adding some code below!
 
-```css
-
+```
 {% set args = { post_type: 'job', posts_per_page: -1, orderby: 'date', order: 'ASC' } %}
 {% set posts = mb.get_posts(args) %}
 {% for post in posts %}
-
 ```
 
 ![Add code to the template tab.](https://i.imgur.com/geMEc3W.png)
@@ -130,10 +128,10 @@ Start by adding some code below!
 
 `{% set args = { post_type: 'job', posts_per_page: -1, orderby: 'date', order: 'ASC' } %}`: This whole line is used to query and display posts from a specific post type, sorted by publish date. Particularly,
 
-`post_type: 'job'`: get posts from the post type with the job slug;
-`posts_per_page: -1`: fetch all posts in that post type. You can change the number to get the expected number of posts;
-`orderby: 'date'`: specify the order by publish date;
-`order: 'ASC'`: ensure the oldest posts appear first.
+* `post_type: 'job'`: get posts from the post type with the job slug;
+* `posts_per_page: -1`: fetch all posts in that post type. You can change the number to get the expected number of posts;
+* `orderby: 'date'`: specify the order by publish date;
+* `order: 'ASC'`: ensure the oldest posts appear first.
 
 Use the `mb.get_posts` function to get the posts.
 
@@ -142,7 +140,6 @@ Since we have multiple posts, use a loop to display all of them.
 ```
 {% for post in posts %}
 {% endfor %}
-
 ```
 For displaying the job's information, just click the **Insert Field** button as I mentioned earlier. And then, insert fields inside the loop. For example, choose **Post title** to show the job title.
 
@@ -163,7 +160,6 @@ Finally, set the template’s position.
 ![Set the template’s position.](https://i.imgur.com/NFuSuNA.png)
 
 On the frontend, you’ll see all the job information displayed.
-
 
 ![All the job information displayed](https://i.imgur.com/yuIwHrF.png)
 
@@ -210,6 +206,7 @@ Now, the job listings look much better. It's time to set up the filtering functi
 ## 4. Adding filters & live search
 
 I’m going to show a mix of filters. You can choose whatever style works best for you. Move the **Template** tab, add some code to display the search box and filter options for the job listings.
+
 ```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://npmcdn.com/isotope-layout@3.0.6/dist/isotope.pkgd.js"></script>
@@ -481,10 +478,10 @@ let qsRegex, buttonFilter, dropdownFilter, technicalSkills = [];
 
 This part explains the initialization of key variables used for job search filtering, including:
 
-`qsRegex`: store the regular expression for quick search;
-`buttonFilter`: hold the value of the job type filter, selected via buttons;
-`dropdownFilter`: hold the value selected from a dropdown for filtering jobs based on experience level;
-`technicalSkills`: track the skills chosen via checkboxes.
+* `qsRegex`: store the regular expression for quick search;
+* `buttonFilter`: hold the value of the job type filter, selected via buttons;
+* `dropdownFilter`: hold the value selected from a dropdown for filtering jobs based on experience level;
+* `technicalSkills`: track the skills chosen via checkboxes.
 
 ```
 const applyIsotope = () => item.isotope();
