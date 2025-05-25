@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default () => (
   <footer className="footer py-0 leading-relaxed text-sm border-0 border-t border-solid">
@@ -13,13 +12,13 @@ export default () => (
         <div className="footer__about">
           <div className="uppercase tracking-wider text-sm font-bold mb-2">About</div>
           <ul className="list-none m-0 pl-0">
-            <li><a className="text-inherit" href="/about/">About</a></li>
-            <li><a className="text-inherit" href="/my-account/">My Account</a></li>
-            <li><a className="text-inherit" href="/affiliate/">Affiliate</a></li>
-            <li><a className="text-inherit" href="/faq/">FAQ</a></li>
-            <li><a className="text-inherit" href="/changelog/">Changelog</a></li>
-            <li><a className="text-inherit" href="/contact/">Contact</a></li>
-            <li><a className="text-inherit" href="/graphics-logos/">Graphics &amp; Logos</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/about/">About</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/my-account/">My Account</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/affiliate/">Affiliate</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/faq/">FAQ</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/changelog/">Changelog</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/contact/">Contact</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/graphics-logos/">Graphics &amp; Logos</a></li>
           </ul>
         </div>
         <div className="footer__products">
@@ -33,18 +32,18 @@ export default () => (
         <div className="footer__compare">
           <div className="uppercase tracking-wider text-sm font-bold mb-2">Compare</div>
           <ul className="list-none m-0 pl-0">
-            <li><a className="text-inherit" href="/meta-box-vs-acf/">Meta Box vs. ACF</a></li>
-            <li><a className="text-inherit" href="/meta-box-vs-toolset/">Meta Box vs. Toolset</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/meta-box-vs-acf/">Meta Box vs. ACF</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/meta-box-vs-toolset/">Meta Box vs. Toolset</a></li>
           </ul>
         </div>
         <div className="footer__tools">
           <div className="uppercase tracking-wider text-sm font-bold mb-2">Tools</div>
           <ul className="list-none m-0 pl-0">
-            <li><a className="text-inherit" href="/demo/">Demo</a></li>
-            <li><a className="text-inherit" href="/online-generator/">Online generator</a></li>
-            <li><a className="text-inherit" href="/post-type-generator/">Post type generator</a></li>
-            <li><a className="text-inherit" href="/taxonomy-generator/">Taxonomy generator</a></li>
-            <li><a className="text-inherit" href="/block-generator/">Block generator</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/demo/">Demo</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/online-generator/">Online generator</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/post-type-generator/">Post type generator</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/taxonomy-generator/">Taxonomy generator</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/block-generator/">Block generator</a></li>
           </ul>
         </div>
         <div className="footer__connect">
@@ -75,7 +74,7 @@ export default () => (
       </div>
 
       <div className="footer__copyright flex justify-between items-center gap-4 text-xs py-4 border-0 border-t border-solid text-center flex-col md:flex-row md:text-left">
-        <div>Copyright 2025 Meta Box. <a className="text-inherit" href="/privacy-policy/">Privacy Policy</a> | <a className="text-inherit" href="/terms-conditions/">Terms &amp; Conditions</a>.</div>
+        <div>Copyright 2025 Meta Box. <a className="text-inherit" href="https://metabox.io/privacy-policy/">Privacy Policy</a> | <a className="text-inherit" href="https://metabox.io/terms-conditions/">Terms &amp; Conditions</a>.</div>
         <a className="block" href="https://elightup.com">
           <img className="block" src="https://i0.wp.com/metabox.io/wp-content/themes/rooster/images/elightup-logo.png" alt="elightup" width="61" height="16" loading="lazy" />
         </a>
