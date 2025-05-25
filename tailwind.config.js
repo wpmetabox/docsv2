@@ -9,10 +9,11 @@ module.exports = {
       sans: [ 'Inter', ...defaultTheme.fontFamily.sans ],
       slab: [ 'Roboto Slab', ...defaultTheme.fontFamily.sans ],
     },
-    colors: {
-      accent: '#00b1b3',
-      black: '#000',
-      ...colors
+    extend: {
+      colors: {
+        accent: '#00b1b3',
+        black: '#000',
+      },
     },
   },
 };

@@ -1,3 +1,4 @@
+import React from 'react';
 
 export default () => (
   <footer className="footer py-0 leading-relaxed text-sm border-0 border-t border-solid">

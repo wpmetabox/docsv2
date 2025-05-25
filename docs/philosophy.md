@@ -7,7 +7,7 @@ title: Philosophy
 Meta Box is created as a library to help WordPress users work with custom post types and custom fields easier. As a library, it has some uniqueness:
 
 - It's very lightweight and contains only what's really needed.
-- It can be [used in other themes or plugins](/integration/) to provide the functionality needed for the themes or plugins.
+- It can be [used in other themes or plugins](/bundling/) to provide the functionality needed for the themes or plugins.
 - Extra functionality is provided by extensions, which can be installed as libraries as well.
 
 :::caution No admin menu?
@@ -21,7 +21,7 @@ For normal users and beginners, we recommend using the [Online Generator](https:
 
 ## Modular
 
-Meta Box is modular, which means each functionality is separated into an extension. Each extension is a WordPress plugin and can be installed and used independently or together. Extensions can also be used as libraries and you can [bundle them](/integration/) in your themes or plugins.
+Meta Box is modular, which means each functionality is separated into an extension. Each extension is a WordPress plugin and can be installed and used independently or together. Extensions can also be used as libraries and you can [bundle them](/bundling/) in your themes or plugins.
 
 The modularity keeps Meta Box all the extensions as minimal as possible and keeps Meta Box not bloated.
 
