@@ -1,5 +1,5 @@
 ---
-title: Searching posts by taxonomy on archive page - P1 - using Meta Box
+title: Searching posts by taxonomy on archive page - P1 - Using Meta Box
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -27,7 +27,7 @@ Besides, we’ll use PHP code for searching hotels by location, so add it to you
 
 Let’s start now.
 
-## Create a New Custom Post Type and a Custom Taxonomy
+## 1. Creating a new custom post type and a custom taxonomy
 
 As I mentioned earlier, we’ll start by creating a new custom post type named **Hotel**, and the information of each hotel will be saved as a post of that post type. Then, I’ll create a custom taxonomy for that post type to categorize the hotels based on their locations.
 
@@ -63,7 +63,7 @@ These are some created posts, for example. The location as well as the taxonomy 
 
 **Note**: I just entered a few sample locations as an example. In reality, you’ll probably have a large set of location data across multiple levels, such as countries, provinces, cities, or regions. That time, instead of adding them manually, you should import the data directly into the **Location** taxonomy to save time. You can use plugins to easily import data.
 
-## Create a Search Box for Searching Posts by Taxonomy
+## 2. Creating a search box for searching posts by taxonomy
 
 Before creating a search box, we need to make sure that the archive page can already display all the posts, I mean all the hotels.
 
@@ -136,11 +136,11 @@ This HTML structure creates a simple filter box with a text input for location a
 
 Let’s make it functional in the next step.
 
-## Display Posts that Meet the Specific Criterion
+## 3. Displaying posts that meet the specific criterion
 
 I want the page not to reload when users click the Search button, so I use Ajax to filter.
 
-### Set Up Data and Ajax
+### 3.1 Setting up data and Ajax
 
 First, go to the **functions.php** file, and add some code to set things up:
 
@@ -206,7 +206,7 @@ Afterward, use the line below to add scripts and styles using the `justread_cust
 ```
 add_action( 'wp_enqueue_scripts', 'justread_custom_scripts' );
 ```
-### Query Posts
+### 3.2 Quering posts
 
 Next, still in the function.php file, add more code to query the custom post type data when someone clicks the Search button.
 
@@ -374,7 +374,7 @@ filterHotel();
 
 This simply activates the function that we created before.
 
-### Register JS File
+### 3.3 Registering JS file
 
 Now, move to the **function.php** to register the JS file.
 
