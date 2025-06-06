@@ -34,7 +34,7 @@ So, in this practice, we recommend you install [**Meta Box AIO**](https://metabo
 
 You can also use other extensions inside Meta Box AIO for additional advanced features. 
 
-## Creating a new page
+## 1. Creating a new page
 
 I already have some posts here for demonstration purposes.
 
@@ -46,7 +46,7 @@ Go to **Pages**, and create a new one.
 
 ![Go to Pages, and create a new one for the horizontal accordion](https://i0.wp.com/images.elightup.com/meta-box/blog/horizontal-accordion/create-new-page.png)
 
-## Creating a template for horizontal accordion
+## 2. Creating a template for horizontal accordion
 
 We’ll display and make the accordion interactive using MB Views.
 
@@ -54,9 +54,9 @@ Go to **Meta Box** > **Views**, and create a template for it.
 
 ![Go to Meta Box > Views, and create a template for displaying horizontal accordion](https://i0.wp.com/images.elightup.com/meta-box/blog/horizontal-accordion/create-new-view.png)
 
-With MB Views, you can insert fields through the Insert Field button or add code directly. I combine both of them.
+With MB Views, you can insert fields through the **Insert Field** button or add code directly. I combine both of them.
 
-### Getting data of posts
+### 2.1 Getting data of posts
 
 First, add these lines of code:
 
@@ -94,11 +94,11 @@ On the frontend, the page is displayed with all the data we get.
 
 ![All the data is displayed](https://i0.wp.com/images.elightup.com/meta-box/blog/horizontal-accordion/data-display.png)
 
-### Transforming data to horizontal accordion
+### 2.2 Transforming data to horizontal accordion
 
 In this step, we’ll style the data and add action to have the horizontal accordion.
 
-#### Styling the data
+#### 2.2.1 Styling the data
 
 Back to the created template to add some code. 
 
@@ -122,7 +122,7 @@ Next, move to the **CSS** tab to add some code to make the data of the accordion
 
 ![Add some code into the CSS tab to style the accordion](https://i0.wp.com/images.elightup.com/meta-box/blog/horizontal-accordion/add-css.png)
 
-#### Adding action for the interactive thumbnail
+#### 2.2.2 Adding action for the interactive thumbnail
 
 Go ahead to the **JavaScript** tab to add an action for the accordion. I’ll add some code:
 
