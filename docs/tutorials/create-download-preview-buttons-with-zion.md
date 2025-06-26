@@ -1,28 +1,29 @@
-Creating download and preview buttons - Meta Box + Zion
+---
+title: Creating download and preview buttons - Meta Box + Zion
+---
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Are you running a WordPress website where you share valuable content like educational materials, documentation, product information, portfolios, or other downloadable files? If so, you’ve probably wondered how to make it easier for users to access your content in a way that suits them best. Giving users the option to preview or download files can make their experience much better. In this practice, we’ll create the Download and Preview buttons for e-books using Meta Box and Zion.
 Check out the e-book page I made as an example, which includes two buttons:
 
+ ![The e-book page as an example](https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zion/e-book%20page.png)
 
-https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zion/e-book%20page.png 
-( The e-book page as an example)
-Video version
+## Video version
 
-https://youtu.be/7NXZkUhxt4c 
+<LiteYouTubeEmbed id='7NXZkUhxt4c' />
 
-Preparation
+## Preparation
 
-```
 This archive page shows detailed information about the books along with two buttons. The first one is to save the PDF file to your device, and another allows you to view it online.
 
 Each e-book will be a post of a custom post type. The e-book’s image, name, and description are respectively featured images, title, and description of the post. For the PDF file to preview or download, we'll use a custom field provided by Meta Box.
-```
 
 So, we need:
 * [Meta Box Lite](https://metabox.io/lite/) to have a framework that allows creating custom post types and custom fields;
 * **Zion Builder** and its Pro Version to build the page.
 
-1. Creating a custom post type
+## 1. Creating a custom post type
 
 Go to Meta Box > Post Types to create a new one for the e-book.
 
@@ -30,8 +31,6 @@ https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zio
 (Go to Meta Box > Post Types to create a new one for the e-book)
 
 After publishing, the created custom post type will be displayed in the admin dashboard.
-
-
 
 (After publishing, the created custom post type will be displayed in the admin dashboard.)
 
@@ -170,7 +169,7 @@ Use dynamic data and select the Post content.
 https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zion/use%20dynamic%20data%20for%20post%20content.png 
 (Use dynamic data and select the Post content.)
 
-3.3. Adding the buttons for download and preview
+### 3.3. Adding the buttons for download and preview
 
 To have the Download and Preview buttons, we use the Button elements. 
 
