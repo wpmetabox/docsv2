@@ -1,20 +1,20 @@
 ---
-title: Creating Filters for Real Estate Page - Meta Box + Bricks
+title: Creating filters for real estate page - Meta Box + Bricks
 --- 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'; 
 
-If you're building a real estate website and want users to easily filter properties by type, price, area, year built, or status, this blog is for you. I’ll walk you through how to **create a professional-looking property listing** using **Meta Box** and **Bricks Builder**, with filters displayed neatly in the sidebar and results updating instantly based on user selections.
+Today, I’ll walk you through how to **create a professional-looking property listing** using **Meta Box** and **Bricks Builder**, with filters displayed neatly in the sidebar and results updating instantly based on user selections.
 
 ![Create filters for real estate page - Meta Box + Bricks](https://i0.wp.com/images.elightup.com/meta-box/blog/real-estate-filter/Create-filters-for-real-estate-page-meta-box-bricks.gif)
 
 This method isn’t just for properties; it also works great for other types of content like products, job listings, or services where users need to filter by specific criteria.
 
-It’s quite similar to our previous [job listing tutorial](https://metabox.io/create-filters-job-listing-mb-views/). We’ll still use custom fields and a custom post type to store the property data. But this time, we’ll take advantage of the built-in features of **Bricks** to handle the filtering in a more visual and streamlined way.
+It’s quite similar to our previous [job listing tutorial](https://docs.metabox.io/tutorials/create-filters-job-listing-mb-views/). We’ll still use custom fields and a custom post type to store the property data. But this time, we’ll take advantage of the built-in features of **Bricks** to handle the filtering in a more visual and streamlined way.
 
 Let’s get started!
 
-## Video Version
+## Video version
 
 <LiteYouTubeEmbed id='gGusgklHW7w' />
 
@@ -28,7 +28,7 @@ These are the extensions you may want to activate.
 
 Now, let’s go step by step.
 
-## 1. Create a Custom Post Type
+## 1. Creating a custom post type
 
 As we said before, we’ll begin by creating a custom post type to store property listings, and the information of each one will be saved as a post of that post type.
 
@@ -40,7 +40,7 @@ After publishing, it will appear in your dashboard menu.
 
 ![The created custom post type](https://i0.wp.com/images.elightup.com/meta-box/blog/real-estate-filter/created-custom-post-type.png)
 
-## 2. Create a Custom Taxonomy
+## 2. Creating a custom taxonomy
 
 Before diving in, keep in mind that whether you use a custom taxonomy or custom fields depends on how you want to structure and filter your content. You can choose either one or both; it’s totally up to you. In this case, I’ll use both for more flexibility.
 
@@ -62,7 +62,7 @@ Now, you can add some terms to your product’s taxonomy.
 
 ![Terms of taxonomy](https://i0.wp.com/images.elightup.com/meta-box/blog/real-estate-filter/Terms-taxonomy.png)
 
-## 3. Create Custom Fields for the Property
+## 3. Creating custom fields for the property
 
 To store property details, we need to create a group of custom fields. They will cover key information such as property price, area, status, and more. Feel free to add additional fields depending on your needs.
 
@@ -94,7 +94,7 @@ These are some posts, for example, that I created. The property type as well as 
 
 ![The term is displayed as a column](https://i0.wp.com/images.elightup.com/meta-box/blog/real-estate-filter/term-displays-column.png)
 
-## 4. Show Properties on the Page
+## 4. Showing properties on the page
 
 In this step, we’ll display posts on the page - that means all the properties. For filtering, I’ll do it later.
 
@@ -172,7 +172,7 @@ To style it, choose each element and change its settings. Then, the property lis
 
 It's time to add and set up the filtering functionality.
 
-## 5. Add Filter Functionality for the Real Estate Page
+## 5. Adding filter functionality for the real estate page
 
 Let’s add some filter functionality so users can search for properties based on type, price, area, construction date, and status. With **Bricks**, filtering has never been easier – it supports filtering by taxonomy and even works perfectly with Meta Box custom fields. Let’s set things up!
 
