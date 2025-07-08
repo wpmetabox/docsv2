@@ -111,13 +111,13 @@ First, add an **Image** element.
 
 There will be an icon for using dynamic data that allows us to get data for this element from a source. Click on it and choose the **Featured image**.
 
-![Click on it and choose the Featured image](https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zion/featured%20image.gif)
+![Click on it and choose the Featured image](https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zion/featured-image.gif)
 
 Next, add a **Text** element. **Use dynamic data** and select the **Post title**.
 
 ![Next, add a Text element](https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zion/add%20text%20for%20post%20title.png)
 
-![Use dynamic data and select the Post title](https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zion/post%20title.gif)
+![Use dynamic data and select the Post title](https://i0.wp.com/images.elightup.com/meta-box/blog/download-preview-buttons-zion/title.gif)
 
 Continue to add a **Text** element for the description of the e-book. 
  
