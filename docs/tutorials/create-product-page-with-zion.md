@@ -199,7 +199,7 @@ First, add this code:
 ```
 <div class="car-gallery">
 {% for item in post.gallery %}
-	<img src="{{ item.full.url }}" width="{{ item.full.width }}" height="{{ item.full.height }}" alt="{{ item.full.alt }}">
+<img src="{{ item.full.url }}" width="{{ item.full.width }}" height="{{ item.full.height }}" alt="{{ item.full.alt }}">
 ```
  
 ![So in the Template tab, I declared them](https://i0.wp.com/images.elightup.com/meta-box/blog/create-a-product-page/code%20in-template%20tab.png)
@@ -212,13 +212,13 @@ Next, go to the **JavaScript** tab to add some code. This will display the image
 
 ```
 jQuery(document).ready(function ($) {
-    $('.car-gallery').slick({
-        infinite: true,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-    });
+$('.car-gallery').slick({
+infinite: true,
+arrows: true,
+slidesToShow: 1,
+slidesToScroll: 1,
+dots: true,
+});
 });
 ```
  
@@ -226,14 +226,14 @@ jQuery(document).ready(function ($) {
 
 In there:
 
-* `$('.car-gallery').slick({ `:  is to select the element with car-gallery
+`$('.car-gallery').slick({ `:  is to select the element with car-gallery
 
 ```
- infinite: true,
-        	 arrows: true,
-        	 slidesToShow: 1,
-        	 slidesToScroll: 1,
-        	 dots: true,
+infinite: true,
+arrows: true,
+slidesToShow: 1,
+slidesToScroll: 1,
+dots: true,
 ```          
 
 These are some attributes as the slider features, such as infinite looping; left and right navigation arrows; and others.
