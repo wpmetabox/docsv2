@@ -199,7 +199,7 @@ First, add this code:
 ```
 <div class="car-gallery">
 {% for item in post.gallery %}
-<img src="{{ item.full.url }}" width="{{ item.full.width }}" height="{{ item.full.height }}" alt="{{ item.full.alt }}">
+	<img src="{{ item.full.url }}" width="{{ item.full.width }}" height="{{ item.full.height }}" alt="{{ item.full.alt }}">
 ```
  
 ![So in the Template tab, I declared them](https://i0.wp.com/images.elightup.com/meta-box/blog/create-a-product-page/code%20in-template%20tab.png)
@@ -212,13 +212,13 @@ Next, go to the **JavaScript** tab to add some code. This will display the image
 
 ```
 jQuery(document).ready(function ($) {
-$('.car-gallery').slick({
-infinite: true,
-arrows: true,
-slidesToShow: 1,
-slidesToScroll: 1,
-dots: true,
-});
+    $('.car-gallery').slick({
+        infinite: true,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+    });
 });
 ```
  
