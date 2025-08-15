@@ -10,11 +10,9 @@ Meta Box AIO includes the Meta Box framework, so you don't have to install it se
 
 The plugin has a settings page under *Meta Box &rarr; Extensions*, where you can enable/disable the extensions you need/don't need.
 
-![meta box aio settings page](https://imgur.com/gBFCrB1.png)
+![meta box aio settings page](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/all-extensions.png)
 
 Check/uncheck the checkbox to enable/disable the corresponding extensions. Then click **Save Changes**.
-
-Please note that you still need to [install Meta Box](/installation/) plugin to see the admin menu.
 
 ## Filters
 
