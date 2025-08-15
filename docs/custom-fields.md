@@ -21,19 +21,19 @@ Custom fields are organized in groups. Each group is displayed as a collapsible 
 
 Go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen to add fields to the group:
 
-![Adding custom fields to the group](https://i.imgur.com/jDaKY4R.png)
+![Adding custom fields to the group]([https://i.imgur.com/jDaKY4R.png](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/create-field-group.png))
 
-Enter the field group title and then click the **+ Add Field** button and select a field type to add to the group. Meta Box provides [40+ field types](/fields/) for all of your data types.
+Enter the field group title at the top and then click the **+ Add Field** button and select a field type to add to the group. Meta Box provides [40+ field types](/fields/) for all of your data types.
 
-After that, a new field will appear in the field list. Clicking on the field title bar will open the field settings panel where you can edit settings for the field such as title or default value.
+After that, a new field will appear in the field list. Clicking on the field bar will open the field settings panel in the left sidebar, where you can edit settings for the field, such as title or default value.
 
-Field settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed. To know more about field settings, please see [this docs](/field-settings/).
+Each setting is clearly labeled, with tooltips available for extra guidance. To know more about field settings, please see [this docs](/field-settings/).
 
-When finishing adding fields, click the **Settings** tab and select the post type where the fields are displayed for.
+When finishing adding fields, click the **Settings** ĩon and select the post type where the fields are displayed for.
 
-![selecting a post type for the field group](https://i.imgur.com/a39tyzd.png)
+![selecting a post type for the field group]([https://i.imgur.com/a39tyzd.png](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/fields-settings.png))
 
-After that click the **Publish** button to finish.
+After that click the **Save Changes** button to finish.
 
 Now go to your post type and add a new post, you'll see the field group with custom fields displayed below the editor where you can enter the data you want:
 
