@@ -222,7 +222,7 @@ Combining these, you can define a complex data structure as follows (this is a p
 
 In MB Builder:
 
-![dot notation for advanced query args](https://i.imgur.com/MPC06Fd.png)
+![dot notation for advanced query args](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder17.png)
 
 ### JSON notation
 
@@ -230,7 +230,7 @@ Another way to enter nested array in MB Builder, you can use JSON notation. Past
 
 For example, the `tax_query` above can be implemented like this:
 
-![json value](https://i.imgur.com/2eTlviV.png)
+![json value](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder18.png)
 
 ## Getting PHP code
 
@@ -313,7 +313,7 @@ This feature helps you to create custom settings pages (or Customize panels) wit
 
 To start, go to **Meta Box > Settings Pages** and click **Add New**.
 
-![create settings pages](https://i.imgur.com/LXHfSkP.png)
+![create settings pages](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/create-settings-page.png)
 
 Here you can enter all the settings for the settings page. All settings are self-explained. Please see the [documentation of MB Settings Page](/extensions/mb-settings-page/) to understand them.
 
@@ -401,7 +401,7 @@ Name|Description
 
 This is the result of the above example:
 
-![custom field controls](https://i.imgur.com/dk7Pcrf.png)
+![custom field controls](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder19.png)
 
 ### Adding custom controls field groups
 
