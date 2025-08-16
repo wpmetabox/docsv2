@@ -284,7 +284,7 @@ Then go to the **Appearance » Customize** and you'll see the settings page is a
     </div>
 </div>
 
-By default, the settings page is available in the both Customizer as well as in the admin area. If you don't want it in the admin area, tick the checkbox **Customizer only**.
+By default, the settings page is available in the both Customizer as well as in the admin area. If you don't want it in the admin area, choose the **Customizer only**.
 
 If you use code, use the following code:
 
