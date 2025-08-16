@@ -13,9 +13,15 @@ Custom fields are organized in groups. Each group is displayed as a collapsible 
 
 To create a field group, go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen to add fields to the group:
 
-![adding custom fields to the group](https://i.imgur.com/wjtQCmc.png)
+![adding custom fields to the group](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder1.png)
 
-Enter the group title and then click the **+ Add Field** button and select a field type to add to the group. After that, a new field will appear in the field list. Clicking on the field title bar will open the field settings panel where you can edit settings for the field such as title or default value.
+On the left side bar, there are three icons with corresponding panels: Add field, Structure, and Settings. They are resizable.
+
+Enter the group title on the top and then click the **+ Add Field** button and select a field type to add to the group. There are two buttons you can click to add a new field:
+
+![Two positions to add a new field](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder%202.png)
+
+After that, a new field will appear in the field list. Clicking on that field on the preview to open the field settings panel where you can edit settings. Besides, to edit the label and ID of the field, you can double click on the preview to change them directly.
 
 :::tip Quickly find a field type
 
@@ -25,60 +31,66 @@ To find a field type quickly, type its name in the input box above the field lis
 
 :::tip
 
-You can delete or duplicate a field by clicking the icons in the field title bar. To reorder fields, drag and drop them to the new positions.
+You can delete, duplicate or add a new field above/below the current field by clicking the icons in the field toolbar. To reorder fields, drag and drop them to the new positions.
 
 :::
 
-When finishing adding fields, click the **Settings** tab and select the location where the fields are displayed for.
+You can see the field settings and structure at the same time by opening the floating structure panel. It’s also resizable.
 
-![selecting a post type for the field group](https://i.imgur.com/a39tyzd.png)
+![The floating structure panel](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/floating.gif)
 
-After that click the **Publish** button to finish.
+When finishing adding fields, click the **Settings** icon and select the location where the fields are displayed for.
+
+![selecting a post type for the field group](https://i0.ưp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder%203.png)
+
+After that click the **Save Changes** button to finish.
 
 ## Field settings
 
 When adding fields to a field group, each field has its own settings. The list of settings with detailed explanation is [here](/field-settings/). MB Builder creates UI for them.
 
-To view and edit field settings, click anywhere in the field title bar:
+To view and edit field settings, click anywhere in the field preview:
 
-![Edit field settings](https://i.imgur.com/UvWnRzT.png)
+![Edit field settings](https://i0.ưp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder4.png)
 
 Each field settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed.
 
-All field settings are divided into 2 tabs: General, Advanced. The General tab has most settings you need. The Advanced tab has the following settings:
+All field settings are divided into some sections: General, Appearance, Conditional logic, Validation and Advanced. The General tab has most settings you need while the Appearance decides how your field display in the post editor. Besides:
 
-- Before & after: For entering custom HTML that outputed before and after the field.
+* Conditional logic: if you install the [MB Conditional Logic](/extensions/meta-box-conditional-logic/), then this part is for creating rules with UI.
+* Validation: helps you to create [complex validation rules](/validation/).
+* Advanced tab has the following settings:
+
 - Custom CSS class: if you need to cusomize the style of the field.
+- Before & after: For entering custom HTML that outputed before and after the field.
 - Custom sanitize callback: if you need [custom sanitization](/sanitization/).
 - Save field value: if you don't want Meta Box to save the field value (which rarely happens) and you want to handle saving by yourself, then uncheck this checkbox.
 - Custom HTML5 attributes: helps you add [custom HTMl5 attributes](/custom-attributes/) to your input fields.
-- Validation: helps you to create [complex validation rules](/validation/).
 - Custom settings: if you want to add extra settings to the field. We'll cover it in a next section.
-- Conditional logic: if you install the [MB Conditional Logic](/extensions/meta-box-conditional-logic/), then this part is for creating rules with UI.
 
-![edit field advanced settings](https://i.imgur.com/jKU2B56.png)
+![edit field advanced settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder5.png)
 
 Note that: plugins and developers might add more settings for fields. We'll see how to do that later in this docs.
 
 ## Field group settings
 
-The field group settings are put in the tab **Settings**:
+The field group settings are put in the tab **Settings** panel:
 
-![field group settings](https://i.imgur.com/K3emckr.png)
+![field group settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder6.png)
 
 There are several settings:
 
-- Location: where you select this field group is for posts, terms, users, comments, blocks or settings pages. For each object type, you'll be able to select corresponding post types, taxonomies or settings pages. Please note that it's required to install and activate corresponding extensions: [MB Term Meta](/extensions/mb-term-meta/), [MB User Meta](/extensions/mb-term-meta/), [MB Comment Meta](https://metabox.io/plugins/mb-comment-meta/), [MB Blocks](/extensions/mb-blocks/), and [MB Settings Page](/extensions/mb-settings-page/).
-- Advanced location rules: allows you to add advanced rules for which category, post, user, ... the field group appears for. Requires the [MB Include Exclude](/extensions/meta-box-include-exclude/) extension.
-- Toggle rules: select which conditions to show or hide the field group. Requires the [MB Show Hide](/extensions/meta-box-show-hide/) extension.
+* Location: where you select this field group is for posts, terms, users, comments, blocks or settings pages. For each object type, you'll be able to select corresponding post types, taxonomies or settings pages. Please note that it's required to install and activate corresponding extensions: [MB Term Meta](/extensions/mb-term-meta/), [MB User Meta](/extensions/mb-term-meta/), [MB Comment Meta](https://metabox.io/plugins/mb-comment-meta/), [MB Blocks](/extensions/mb-blocks/), and [MB Settings Page](/extensions/mb-settings-page/). In there, the Advanced rules allows you to add advanced rules for which category, post, user, ... the field group appears for. Requires the [MB Include Exclude](/extensions/meta-box-include-exclude/) extension.
+* Toggle rules: select which conditions to show or hide the field group. Requires the [MB Show Hide](/extensions/meta-box-show-hide/) extension.
 - Conditional Logic: setup the conditional logic rules to toggle the field group based on other fields' values. Requires the [MB Conditional Logic](/extensions/meta-box-conditional-logic/) extension.
-- Post settings, such as context, priority if you select the location is for posts.
-- Custom block settings, such as block icon, render callback if you select the location is for blocks, which means creating custom Gutenberg blocks. Requires [MB Blocks](/extensions/mb-blocks/) extension. See the **Create Gutenberg blocks** section below.
-- Tab style and default active tab: these are the settings for [MB Tabs](/extensions/meta-box-tabs/) extension.
-- Custom table settings, including table name, table prefix and option to create custom table automatically. These are the settings for [MB Custom Table](/extensions/mb-custom-table/) extension. Note that if you select to create the custom table automatically, all columns will have the data type `TEXT` to ensure maximum compatibility.
-- Custom CSS class: the custom CSS class for the wrapper `div` if you need to cusomize the style of the field group.
-- Field ID prefix: if you want to prefix all fields in the field group, then this settings is for that. It's optional, but a good practice to keep your custom fields separated from other custom fields. You can also use underscore `_` as prefix to keep your fields hidden in the default WordPress **Custom Fields** meta box.
-- Custom settings: if you want to add extra settings to the field group. See below for details.
+* Post settings, such as context, priority if you select the location is for posts.
+* Custom block settings, such as block icon, render callback if you select the location is for blocks, which means creating custom Gutenberg blocks. Requires [MB Blocks](/extensions/mb-blocks/) extension. See the **Create Gutenberg blocks** section below.
+* Tab style and default active tab: these are the settings for [MB Tabs](/extensions/meta-box-tabs/) extension.
+* Custom table settings, including table name, table prefix and option to create custom table automatically. These are the settings for [MB Custom Table](/extensions/mb-custom-table/) extension. Note that if you select to create the custom table automatically, all columns will have the data type `TEXT` to ensure maximum compatibility.
+* Advanced:
+  + Custom CSS class: the custom CSS class for the wrapper `div` if you need to cusomize the style of the field group.
+  + Field ID prefix: if you want to prefix all fields in the field group, then this settings is for that. It's optional, but a good practice to keep your custom fields separated from other custom fields. You can also use underscore `_` as prefix to keep your fields hidden in the default WordPress **Custom Fields** meta box.
+  + Custom settings: if you want to add extra settings to the field group. See below for details.
 
 ## Custom settings
 
@@ -90,9 +102,9 @@ What describes in this section is applied also for similar key-value settings, i
 
 :::
 
-To add custom settings, click on the Advanced tab for fields or go to the Settings tab for the field group. Then click **+ Add New** button and add new settings. Like this:
+To add custom settings, scroll down to the last setting of the **Advanced** section of the fields or field group. Then click **+ Add New** button and add new settings. Like this:
 
-![custom settings](https://i.imgur.com/WFRBdL4.png)
+![custom settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder7.png)
 
 Which will produce the result like this:
 
@@ -156,7 +168,7 @@ Here the params param1, param2, param3 are sub-params of the my_prop and they're
 
 Implementing that in MB Builder as follows:
 
-![implement structural custom settings](https://i.imgur.com/PfVoIV7.png)
+![implement structural custom settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder8.png)
 
 Another case is when you want to add a set of data without keys. The data in PHP looks like this:
 
@@ -188,7 +200,7 @@ Similar to above, this can be understood as:
 
 And can be implemented as follows in MB Builder:
 
-![adding array of data for custom settings](https://i.imgur.com/53Duf3A.png)
+![adding array of data for custom settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder9.png)
 
 Combining these, you can define a complex data structure as follows (this is a post field with advanced query args):
 
@@ -222,7 +234,7 @@ For example, the `tax_query` above can be implemented like this:
 
 ## Getting PHP code
 
-For each field group, Meta Box Buider can create a PHP code that you can copy and paste into your theme's `functions.php` file (or your plugin file) and then *deactivate the MB Builder extension*.
+For each field group, MB Buider can create a PHP code that you can copy and paste into your theme's `functions.php` file (or your plugin file) and then *deactivate the MB Builder extension*.
 
 This is helpful if you want to:
 
@@ -231,7 +243,7 @@ This is helpful if you want to:
 
 To get the code, click the **Get PHP Code** button on the toolbar:
 
-![export code](https://i.imgur.com/hcYgYWk.png)
+![export code](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder10.png)
 
 On this screen, set the text domain (for field labels in case you want to translate them in a multilingual website) and the function name. Then click the **Generate** button to generate the code. Finally, click the **Copy** button to copy the code and paste it into your theme's `functions.php` file.
 
@@ -251,11 +263,11 @@ To export one or more field groups, go to the main screen *Meta Box &rarr; Custo
 
 Or you can export individual field group by clicking on **Export** link when hover the mouse over the field group title:
 
-![export a single field group](https://i.imgur.com/Nx45cpH.png)
+![export a single field group](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder11.png)
 
 To import field groups, select the *Import* button at the top of the page. Then choose the downloaded file in the previous step, then press **Upload file and import**. That’s all!
 
-![import field groups](https://i.imgur.com/UvGpqO5.png)
+![import field groups](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder12.png)
 
 For detailed instruction, please see [this tutorial](https://metabox.io/export-import-custom-fields-meta-box-builder/).
 
@@ -311,7 +323,7 @@ This feature helps you to create relationships between posts, terms and users wi
 
 To start, go to **Meta Box > Relationships** and click **Add New**.
 
-![create relationships](https://i.imgur.com/aV0N0e2.png)
+![create relationships](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder14.png)
 
 Here you can enter all the settings for each side of the relationship (**From** and **To**). For each side, there are 3 tabs of settings:
 
@@ -462,11 +474,11 @@ add_filter( 'mbb_field_types', function ( $field_types ) {
 
 This code creates a new field type `icon` under the category `advanced` with several controls. Here is how it looks when clicking **+ Add field** button:
 
-![adding new field type](https://i.imgur.com/Akuu1MZ.png)
+![adding new field type](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder15.png)
 
 And here is how it looks when reveal the field settings:
 
-![custom field type settings](https://i.imgur.com/9uS9Lhh.png)
+![custom field type settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder16.png)
 
 :::info
 
@@ -516,7 +528,7 @@ Here is a quick video showing how to use the MB Builder to create custom fields 
 
 ## Upgrade
 
-When updating from version 3 to version 4, the plugin automatically migrates data of field groups to compatible with the new React app. The migration process doesn't touch your existing data, so you're always safe.
+When updating from version 4 to version 5, the plugin automatically migrates data of field groups to compatible with the new React app. The migration process doesn't touch your existing data, so you're always safe.
 
 If you don't see any field in field groups after upgrading, then the migration process failed to run the job. To fix this problem, you can force the plugin migrate again by adding a query param `mbb_version=3.3` to your site URL. In short, please go to `https://yourdomain.com/wp-admin/?mbb_version=3.3` to run the migration.
 
