@@ -39,7 +39,7 @@ You can also combine styles, for example using tabs with meta boxes.
 
 To create a settings page, go to **Meta Box » Settings Pages** and click **Add New**.
 
-![Creating settings pages]([https://i.imgur.com/HOzTabH.png](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/create-settings-page.png))
+![Creating settings pages](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/create-settings-page.png)
 
 On the new screen, you'll see all details for the settings page.
 
