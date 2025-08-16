@@ -215,7 +215,7 @@ After creating a settings page, you need to create settings fields for it. Creat
 
 If you use MB Builder to create fields, make sure to select the correct settings page in the Location settings:
 
-![select settings page in MB Builder]([https://i.imgur.com/eraPt1J.png](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/select-settings-page-in-builder.png))
+![select settings page in MB Builder](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/select-settings-page-in-builder.png)
 
 If you use code, then you need to hook to `rwmb_meta_boxes` and set a param `settings_pages` to the settings page(s) you want to add to, like this:
 
