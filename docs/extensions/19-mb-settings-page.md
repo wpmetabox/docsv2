@@ -79,7 +79,7 @@ Network | Make the settings page network-wide (in a multisite environment).
 
 Each settings page also has its own ID and option that specifies which option in the database to store data into. By default, the plugin set the option name the same as the ID. You can change it if you want on the **Settings Page** on the top of the settings page:
 
-![Changing settings page ID and option name]([https://i.imgur.com/8rjobtU.png](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/setting-page-id.png))
+![Changing settings page ID and option name](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/setting-page-id.png)
 
 :::info ID vs. option name
 
