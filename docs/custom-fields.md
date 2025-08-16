@@ -21,7 +21,7 @@ Custom fields are organized in groups. Each group is displayed as a collapsible 
 
 Go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen to add fields to the group:
 
-![Adding custom fields to the group]([https://i.imgur.com/jDaKY4R.png](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/create-field-group.png))
+![Adding custom fields to the group](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/create-field-group.png)
 
 Enter the field group title at the top and then click the **+ Add Field** button and select a field type to add to the group. Meta Box provides [40+ field types](/fields/) for all of your data types.
 
@@ -31,7 +31,7 @@ Each setting is clearly labeled, with tooltips available for extra guidance. To 
 
 When finishing adding fields, click the **Settings** ĩon and select the post type where the fields are displayed for.
 
-![selecting a post type for the field group]([https://i.imgur.com/a39tyzd.png](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/fields-settings.png))
+![selecting a post type for the field group](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/fields-settings.png)
 
 After that click the **Save Changes** button to finish.
 
