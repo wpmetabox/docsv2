@@ -31,7 +31,7 @@ Each setting is clearly labeled, with tooltips available for extra guidance. To 
 
 When finishing adding fields, click the **Settings** icon and select the post type where the fields are displayed for.
 
-![selecting a post type for the field group](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/fields-settings.png)
+![selecting a post type for the field group](img/fields-settings.png)
 
 After that click the **Save Changes** button to finish.
 

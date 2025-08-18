@@ -39,7 +39,7 @@ You can also combine styles, for example using tabs with meta boxes.
 
 To create a settings page, go to **Meta Box » Settings Pages** and click **Add New**.
 
-![Creating settings pages](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/create-settings-page.png)
+![Creating settings pages](img/settings-page/create-settings-page.png)
 
 On the new screen, you'll see all details for the settings page.
 
@@ -79,7 +79,7 @@ Network | Make the settings page network-wide (in a multisite environment).
 
 Each settings page also has its own ID and option that specifies which option in the database to store data into. By default, the plugin set the option name the same as the ID. You can change it if you want on the **Settings Page** on the top of the settings page:
 
-![Changing settings page ID and option name](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/setting-page-id.png)
+![Changing settings page ID and option name](img/settings-page/setting-page-id.png)
 
 :::info ID vs. option name
 
@@ -215,7 +215,7 @@ After creating a settings page, you need to create settings fields for it. Creat
 
 If you use MB Builder to create fields, make sure to select the correct settings page in the Location settings:
 
-![select settings page in MB Builder](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/select-settings-page-in-builder.png)
+![select settings page in MB Builder](img/settings-page/select-settings-page-in-builder.png)
 
 If you use code, then you need to hook to `rwmb_meta_boxes` and set a param `settings_pages` to the settings page(s) you want to add to, like this:
 
@@ -265,7 +265,7 @@ When creating Customizer settings, it's important to understand that:
 
 To bring a settings page to the Customizer, turn on the **Customizer** settings when you create the settings page as follows:
 
-![Set a settings page as a Customizer panels](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/customizer-in-settings-page.png)
+![Set a settings page as a Customizer panels](img/settings-page/customizer-in-settings-page.png)
 
 Then go to the **Appearance » Customize** and you'll see the settings page is available as follows:
 
@@ -371,7 +371,7 @@ A network settings page is a settings page that provides settings for all the we
 
 Using _MB Settings Page_, you’re now able to do that easily. If you use MB Builder to create the settings page, simply switch on the **Network** option.
 
-![Set as a network settings page](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/network-setting.png)
+![Set as a network settings page](img/settings-page/network-setting.png)
 
 If you use code, add `'network' => true` to the settings pages args, like this:
 
@@ -398,7 +398,7 @@ Backup is a **special field type** added by the plugin that allows you to back u
 
 If you use MB Builder to create fields, please add a normal textarea field, go to tab Advanced of the field settings, and add a custom settings with the key "type" and value "backup" as follows:
 
-![create a backup field in MB Builder](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/custom-settings.png)
+![create a backup field in MB Builder](img/settings-page/custom-settings.png)
 
 If you use code, you need to create a special field with `'type' => 'backup'`, like this:
 
