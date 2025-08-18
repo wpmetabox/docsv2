@@ -35,7 +35,7 @@ Now let's see how to create a relationship with MB Builder.
 
 To create a relationship, go to **Meta Box > Relationships** and click **Add New**.
 
-![Create a relationship with MB Builder](img/relationship/create-relationship.png)
+![Create a relationship with MB Builder](img/relationships/create-relationship.png)
 
 Here you can enter all the settings for the relationship and each side of the relationship (**From** and **To**).
 
@@ -59,7 +59,7 @@ For each side, there are 3 tabs of settings:
 <Tabs>
   <TabItem value="general" label="General" default>
 
-![general settings for a relationship side](img/relationship/general.png)
+![general settings for a relationship side](img/relationships/general.png)
 
 Name | Description
 ---|---
@@ -78,7 +78,7 @@ Item link type | For each connected item, you can set how it shows in the admin 
 
 The plugin automatically creates meta boxes to let you select connected items. The meta box settings are very much like a [normal meta box](/creating-fields-with-code/#field-group-settings) when you create custom fields, but simpler.
 
-![meta box settings for a relationship side](img/relationship/meta-box.png)
+![meta box settings for a relationship side](img/relationships/meta-box.png)
 
 Name | Description
 ---|---
@@ -94,7 +94,7 @@ Custom CSS class | If you want to style your meta box, then enter a custom CSS c
 
 To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/) or [user](/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
 
-![field settings for a relationship side](img/relationship/field.png)
+![field settings for a relationship side](img/relationships/field.png)
 
 Name | Description
 ---|---
