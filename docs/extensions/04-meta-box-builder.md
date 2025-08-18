@@ -19,7 +19,7 @@ On the left side bar, there are three icons with corresponding panels: Add field
 
 Enter the group title on the top and then click the **+ Add Field** button and select a field type to add to the group. There are two buttons you can click to add a new field:
 
-![Two positions to add a new field](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder%202.png)
+![Two positions to add a new field](img/builder/add-new-field.png)
 
 After that, a new field will appear in the field list. Clicking on that field on the preview to open the field settings panel where you can edit settings. Besides, to edit the label and ID of the field, you can double click on the preview to change them directly.
 
@@ -37,11 +37,11 @@ You can delete, duplicate or add a new field above/below the current field by cl
 
 You can see the field settings and structure at the same time by opening the floating structure panel. It’s also resizable.
 
-![The floating structure panel](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/floating.gif)
+![The floating structure panel](img/builder/floating.gif)
 
 When finishing adding fields, click the **Settings** icon and select the location where the fields are displayed for.
 
-![selecting a post type for the field group](https://i0.ưp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder%203.png)
+![selecting a post type for the field group](img/builder/field-group-location.png)
 
 After that click the **Save Changes** button to finish.
 
@@ -51,7 +51,7 @@ When adding fields to a field group, each field has its own settings. The list o
 
 To view and edit field settings, click anywhere in the field preview:
 
-![Edit field settings](https://i0.ưp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder4.png)
+![Edit field settings](img/builder/setting.png)
 
 Each field settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed.
 
@@ -67,7 +67,7 @@ All field settings are divided into some sections: General, Appearance, Conditio
 	- Custom HTML5 attributes: helps you add [custom HTMl5 attributes](/custom-attributes/) to your input fields.
 	- Custom settings: if you want to add extra settings to the field. We'll cover it in a next section.
 
-![edit field advanced settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder5.png)
+![edit field advanced settings](img/builder/advanced-panel.png)
 
 Note that: plugins and developers might add more settings for fields. We'll see how to do that later in this docs.
 
@@ -75,7 +75,7 @@ Note that: plugins and developers might add more settings for fields. We'll see 
 
 The field group settings are put in the tab **Settings** panel:
 
-![field group settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder6.png)
+![field group settings](img/builder/settings-panel.png)
 
 There are several settings:
 
@@ -103,7 +103,7 @@ What describes in this section is applied also for similar key-value settings, i
 
 To add custom settings, scroll down to the last setting of the **Advanced** section of the fields or field group. Then click **+ Add New** button and add new settings. Like this:
 
-![custom settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder7.png)
+![custom settings](img/builder/custom-settings-mask.png)
 
 Which will produce the result like this:
 
@@ -167,7 +167,7 @@ Here the params param1, param2, param3 are sub-params of the my_prop and they're
 
 Implementing that in MB Builder as follows:
 
-![implement structural custom settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder8.png)
+![implement structural custom settings](img/builder/custom-settings-prop.png)
 
 Another case is when you want to add a set of data without keys. The data in PHP looks like this:
 
@@ -199,7 +199,7 @@ Similar to above, this can be understood as:
 
 And can be implemented as follows in MB Builder:
 
-![adding array of data for custom settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder9.png)
+![adding array of data for custom settings](img/builder/custom-settings-prop0.png)
 
 Combining these, you can define a complex data structure as follows (this is a post field with advanced query args):
 
@@ -221,7 +221,7 @@ Combining these, you can define a complex data structure as follows (this is a p
 
 In MB Builder:
 
-![dot notation for advanced query args](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder17.png)
+![dot notation for advanced query args](img/builder/tax-query.png)
 
 ### JSON notation
 
@@ -229,7 +229,7 @@ Another way to enter nested array in MB Builder, you can use JSON notation. Past
 
 For example, the `tax_query` above can be implemented like this:
 
-![json value](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder18.png)
+![json value](img/builder/tax-query-args.png)
 
 ## Getting PHP code
 
@@ -242,7 +242,7 @@ This is helpful if you want to:
 
 To get the code, click the **Get PHP Code** button on the toolbar:
 
-![export code](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder10.png)
+![export code](img/builder/theme-code.png)
 
 On this screen, set the text domain (for field labels in case you want to translate them in a multilingual website) and the function name. Then click the **Generate** button to generate the code. Finally, click the **Copy** button to copy the code and paste it into your theme's `functions.php` file.
 
@@ -262,11 +262,11 @@ To export one or more field groups, go to the main screen *Meta Box &rarr; Custo
 
 Or you can export individual field group by clicking on **Export** link when hover the mouse over the field group title:
 
-![export a single field group](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder11.png)
+![export a single field group](img/builder/export.png)
 
 To import field groups, select the *Import* button at the top of the page. Then choose the downloaded file in the previous step, then press **Upload file and import**. That’s all!
 
-![import field groups](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder12.png)
+![import field groups](img/builder/import.png)
 
 For detailed instruction, please see [this tutorial](https://metabox.io/export-import-custom-fields-meta-box-builder/).
 
@@ -312,7 +312,7 @@ This feature helps you to create custom settings pages (or Customize panels) wit
 
 To start, go to **Meta Box > Settings Pages** and click **Add New**.
 
-![create settings pages](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/create-settings-page.png)
+![create settings pages](img/builder/create-settings-page.png)
 
 Here you can enter all the settings for the settings page. All settings are self-explained. Please see the [documentation of MB Settings Page](/extensions/mb-settings-page/) to understand them.
 
@@ -322,7 +322,7 @@ This feature helps you to create relationships between posts, terms and users wi
 
 To start, go to **Meta Box > Relationships** and click **Add New**.
 
-![create relationships](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder14.png)
+![create relationships](img/builder/relationship.png)
 
 Here you can enter all the settings for each side of the relationship (**From** and **To**). For each side, there are 3 tabs of settings:
 
@@ -400,7 +400,7 @@ Name|Description
 
 This is the result of the above example:
 
-![custom field controls](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder19.png)
+![custom field controls](img/builder/custom-layout.png)
 
 ### Adding custom controls field groups
 
@@ -473,11 +473,11 @@ add_filter( 'mbb_field_types', function ( $field_types ) {
 
 This code creates a new field type `icon` under the category `advanced` with several controls. Here is how it looks when clicking **+ Add field** button:
 
-![adding new field type](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder15.png)
+![adding new field type](img/builder/icon.png)
 
 And here is how it looks when reveal the field settings:
 
-![custom field type settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder16.png)
+![custom field type settings](img/builder/icon-settings.png)
 
 :::info
 
