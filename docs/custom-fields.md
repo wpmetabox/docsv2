@@ -29,7 +29,7 @@ After that, a new field will appear in the field list. Clicking on the field bar
 
 Each setting is clearly labeled, with tooltips available for extra guidance. To know more about field settings, please see [this docs](/field-settings/).
 
-When finishing adding fields, click the **Settings** ĩon and select the post type where the fields are displayed for.
+When finishing adding fields, click the **Settings** icon and select the post type where the fields are displayed for.
 
 ![selecting a post type for the field group](https://images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/fields-settings.png)
 

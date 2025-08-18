@@ -15,7 +15,7 @@ To create a field group, go to **Meta Box » Custom Fields** and click **Add New
 
 ![adding custom fields to the group](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder1.png)
 
-On the left side bar, there are three icons with corresponding panels: Add field, Structure, and Settings. They are resizable.
+On the left side bar, there are three icons with corresponding panels: Add field, Structure, and Settings. Panels are resizable.
 
 Enter the group title on the top and then click the **+ Add Field** button and select a field type to add to the group. There are two buttons you can click to add a new field:
 
@@ -60,13 +60,12 @@ All field settings are divided into some sections: General, Appearance, Conditio
 * Conditional logic: if you install the [MB Conditional Logic](/extensions/meta-box-conditional-logic/), then this part is for creating rules with UI.
 * Validation: helps you to create [complex validation rules](/validation/).
 * Advanced tab has the following settings:
-
-- Custom CSS class: if you need to cusomize the style of the field.
-- Before & after: For entering custom HTML that outputed before and after the field.
-- Custom sanitize callback: if you need [custom sanitization](/sanitization/).
-- Save field value: if you don't want Meta Box to save the field value (which rarely happens) and you want to handle saving by yourself, then uncheck this checkbox.
-- Custom HTML5 attributes: helps you add [custom HTMl5 attributes](/custom-attributes/) to your input fields.
-- Custom settings: if you want to add extra settings to the field. We'll cover it in a next section.
+	- Custom CSS class: if you need to cusomize the style of the field.
+	- Before & after: For entering custom HTML that outputed before and after the field.
+	- Custom sanitize callback: if you need [custom sanitization](/sanitization/).
+	- Save field value: if you don't want Meta Box to save the field value (which rarely happens) and you want to handle saving by yourself, then uncheck this checkbox.
+	- Custom HTML5 attributes: helps you add [custom HTMl5 attributes](/custom-attributes/) to your input fields.
+	- Custom settings: if you want to add extra settings to the field. We'll cover it in a next section.
 
 ![edit field advanced settings](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder5.png)
 
@@ -82,7 +81,7 @@ There are several settings:
 
 * Location: where you select this field group is for posts, terms, users, comments, blocks or settings pages. For each object type, you'll be able to select corresponding post types, taxonomies or settings pages. Please note that it's required to install and activate corresponding extensions: [MB Term Meta](/extensions/mb-term-meta/), [MB User Meta](/extensions/mb-term-meta/), [MB Comment Meta](https://metabox.io/plugins/mb-comment-meta/), [MB Blocks](/extensions/mb-blocks/), and [MB Settings Page](/extensions/mb-settings-page/). In there, the Advanced rules allows you to add advanced rules for which category, post, user, ... the field group appears for. Requires the [MB Include Exclude](/extensions/meta-box-include-exclude/) extension.
 * Toggle rules: select which conditions to show or hide the field group. Requires the [MB Show Hide](/extensions/meta-box-show-hide/) extension.
-- Conditional Logic: setup the conditional logic rules to toggle the field group based on other fields' values. Requires the [MB Conditional Logic](/extensions/meta-box-conditional-logic/) extension.
+* Conditional Logic: setup the conditional logic rules to toggle the field group based on other fields' values. Requires the [MB Conditional Logic](/extensions/meta-box-conditional-logic/) extension.
 * Post settings, such as context, priority if you select the location is for posts.
 * Custom block settings, such as block icon, render callback if you select the location is for blocks, which means creating custom Gutenberg blocks. Requires [MB Blocks](/extensions/mb-blocks/) extension. See the **Create Gutenberg blocks** section below.
 * Tab style and default active tab: these are the settings for [MB Tabs](/extensions/meta-box-tabs/) extension.
@@ -529,8 +528,6 @@ Here is a quick video showing how to use the MB Builder to create custom fields 
 ## Upgrade
 
 When updating from version 4 to version 5, the plugin automatically migrates data of field groups to compatible with the new React app. The migration process doesn't touch your existing data, so you're always safe.
-
-If you don't see any field in field groups after upgrading, then the migration process failed to run the job. To fix this problem, you can force the plugin migrate again by adding a query param `mbb_version=3.3` to your site URL. In short, please go to `https://yourdomain.com/wp-admin/?mbb_version=3.3` to run the migration.
 
 ## Further reading
 
