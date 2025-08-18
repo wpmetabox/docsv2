@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Using a schedule filter is perfect for an educational platform offering different course schedules, a booking page for doctors or spa services, movie or theater showtimes, or homestay listings with availability filters. This approach improves the user experience.
 
-In this practice, I will take an example to illustrate the schedule filter for courses using **MB Views**. 
+In this practice, I will take an example to illustrate the schedule filter for courses using **MB Views**.
 
 ![Example of schedule filter in single course)](https://i0.wp.com/images.elightup.com/meta-box/blog/schedule-filter/kq.png)
 
@@ -15,7 +15,7 @@ Before going ahead, let’s check some tools we need for this practice.
 
 ## Video version
 
-<LiteYouTubeEmbed id='lA0J-3kH1Xw'>
+<LiteYouTubeEmbed id='lA0J-3kH1Xw' />
 
 ## Preparation
 
@@ -202,7 +202,7 @@ I’ll add some code directly.
 * `{% set schedule = options.schedule_detail ?? [] %}`: is to get data from the `schedule_detail` group field group. It’s the ID of the group we created.
 * `{% set filtered = [] %}`: is to create an empty array to later store filtered results.
 
-A course can be taught on different days. So we need a loop to get data from all the items in the schedule. 
+A course can be taught on different days. So we need a loop to get data from all the items in the schedule.
 
 ```
 {% for row in schedule %}

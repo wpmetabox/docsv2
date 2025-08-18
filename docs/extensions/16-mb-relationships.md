@@ -35,7 +35,7 @@ Now let's see how to create a relationship with MB Builder.
 
 To create a relationship, go to **Meta Box > Relationships** and click **Add New**.
 
-![Create a relationship with MB Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/relationships/create-relationships-with-meta-box-builder.png)
+![Create a relationship with MB Builder](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/rela1.png)
 
 Here you can enter all the settings for the relationship and each side of the relationship (**From** and **To**).
 
@@ -43,6 +43,7 @@ Here you can enter all the settings for the relationship and each side of the re
 
 Name | Description
 ---|---
+Delete data in database? | Delete data in database when the relationship is deleted.
 Reciprocal relationship | Whether the relationship is reciprocal, e.g. a relationship between items of the same type. If you choose this, make sure you set the settings for the "From" and "To" sides the same.
 
 When editing an item, the plugin will show a meta box for selecting connected items. In the case of reciprocal relationships, because it's set between items of the same type, without selecting this setting, the plugin will show 2 meta boxes for both "from" and "to" sides. Selecting this setting will ensure there's only 1 meta box that appears.
@@ -58,7 +59,7 @@ For each side, there are 3 tabs of settings:
 <Tabs>
   <TabItem value="general" label="General" default>
 
-![general settings for a relationship side](https://i0.wp.com/images.elightup.com/meta-box/docs/relationships/general-settings.png)
+![general settings for a relationship side](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/rela2.png)
 
 Name | Description
 ---|---
@@ -77,7 +78,7 @@ Item link type | For each connected item, you can set how it shows in the admin 
 
 The plugin automatically creates meta boxes to let you select connected items. The meta box settings are very much like a [normal meta box](/creating-fields-with-code/#field-group-settings) when you create custom fields, but simpler.
 
-![meta box settings for a relationship side](https://i.imgur.com/x72aX91.png)
+![meta box settings for a relationship side](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/rela3.png)
 
 Name | Description
 ---|---
