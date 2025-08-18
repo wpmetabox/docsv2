@@ -13,7 +13,7 @@ Custom fields are organized in groups. Each group is displayed as a collapsible 
 
 To create a field group, go to **Meta Box » Custom Fields** and click **Add New**. You'll see a screen to add fields to the group:
 
-![adding custom fields to the group](https://i0.wp.com/images.elightup.com/meta-box/docs/update%20AIO%20with%20new%20UI/builder1.png)
+![adding custom fields to the group](img/builder/add-field.png)
 
 On the left side bar, there are three icons with corresponding panels: Add field, Structure, and Settings. Panels are resizable.
 
