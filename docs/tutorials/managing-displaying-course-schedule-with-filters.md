@@ -9,7 +9,7 @@ Using a schedule filter is perfect for an educational platform offering differen
 
 In this practice, I will take an example to illustrate the schedule filter for courses using **MB Views**.
 
-![Example of schedule filter in single course)](https://i0.wp.com/images.elightup.com/meta-box/blog/schedule-filter/kq.png)
+![Example of schedule filter in single course](https://i0.wp.com/images.elightup.com/meta-box/blog/schedule-filter/kq.png)
 
 Before going ahead, let’s check some tools we need for this practice.
 
