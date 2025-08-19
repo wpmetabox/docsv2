@@ -14,6 +14,7 @@ Before going ahead, let’s check some tools we need in this practice.
 ## Video version
 
 <LiteYouTubeEmbed id='9KsJpQkF4Ko' />
+
 ## Preparation
 
 Each booking will be saved as a post in a custom post type. All the related information, such as customer details, check-in/check-out dates, order info, payment, and booking status, will be stored in custom fields. We’ll also generate a unique booking ID automatically for each entry to make it easier to track and manage bookings in the backend.
