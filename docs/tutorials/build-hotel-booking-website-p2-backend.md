@@ -19,15 +19,7 @@ Before going ahead, let’s check some tools we need in this practice.
 
 Each booking will be saved as a post in a custom post type. All the related information, such as customer details, check-in/check-out dates, order info, payment, and booking status, will be stored in custom fields. We’ll also generate a unique booking ID automatically for each entry to make it easier to track and manage bookings in the backend.
 
-To build a hotel booking website, we need many basic and advanced features. So, we highly recommend you use [Meta Box AlO](https://metabox.io/aio/) to have a framework to have everything. Also, it includes all the Meta Box extensions that you need for your creation.
-
-For this case, we need:
-
-* [MB Custom Post Type](https://metabox.io/create-wordpress-custom-post-types/): to create a custom post type for the booking;
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to visually create custom fields;
-* [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to display fields only when certain conditions are met;
-* [MB Group](https://metabox.io/plugins/meta-box-group/): to organize fields into groups for easy management;
-* [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/): to display the booking status as a column in the dashboard. It’s optional.
+To build a hotel booking website, we need to use [Meta Box AlO](https://metabox.io/aio/) to have all needed features.
 
 Let’s start now!
 
@@ -47,160 +39,37 @@ Each booking automatically uses its ID as the title and doesn’t need content o
 
 For the booking page, we need to create many different fields. You should clarify in advance what you want, how users fill in the data, how to show fields and their values, etc. This makes the process much smoother. As my supposition, all the fields I need are as follows:
 
-<table style="border-collapse: collapse; width: 100%; height: 300px;">
-<tbody>
-<tr style="height: 10 px;">
-<td style="width: 31.5789%; height: 10px; text-align: center;"><b>Name</b></td>
-<td style="width: 23.158%; height: 10px; text-align: center;"><b>Field type</b></td>
-<td style="width: 50.1316%; height: 10px; text-align: center;"><b>Function</b></td>
-</tr>
-<tr style="height: 25px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Order Number</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Is an array of numbers and auto-generated whenever the booking is created</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Booking Date</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">date</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Date of creating the booking</span></td>
-</tr>
-<tr style="height: 25px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Person in Charge</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">user</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Choose one from the list of users in WordPress</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Customer information</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">heading</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Separate the sections</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Full Name</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">text</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Mobile</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Email</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">email</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Address</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">text</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Notes</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">textarea</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Booking Information</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">heading</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Separate the sections</span></td>
-</tr>
-<tr style="height: 40 px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Booking Details</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">group</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Group of fields regarding the booking room. This group is cloneable for the case that the customer books multiple rooms</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Room</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">post</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Choose one from the list of the rooms</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Price</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Adults</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Children</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 25px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Age of Children (1, 2)</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Each field is for a child. This field is auto-display whenever there is one more child</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Extra Bed</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Check-in Date</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">date</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Check-out Date</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">date</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 25px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">· Total Nights of Stay</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Auto-calculated bases on the check-in and check-out date</span></td>
-</tr>
-<tr style="height: 25px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Total Number of Rooms</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Auto-calculated bases on the number of the group about the room details</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Other Request</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">textarea</span></td>
-<td style="width: 50.1316%; height: 10px;"></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Payment Information</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">heading</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Separate the sections</span></td>
-</tr>
-<tr style="height: 25px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Total Amount</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Auto-calculated bases on room details and number of rooms</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Paid Amount</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Manual input by sales</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Unpaid Amount</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">number</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">= Total amount - the paid amount</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">Booking Status</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">heading</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Separate the sections</span></td>
-</tr>
-<tr style="height: 10px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Booking Status</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">select</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Choose one from the provided statuses</span></td>
-</tr>
-<tr style="height: 25px;">
-<td style="width: 31.5789%; height: 10px;"><span style="font-weight: 400;">·  Refund (if any)</span></td>
-<td style="width: 23.158%; height: 10px;"><span style="font-weight: 400;">select</span></td>
-<td style="width: 50.1316%; height: 10px;"><span style="font-weight: 400;">Choose one level (%)  from the provided levels</span></td>
-</tr>
-</tbody>
-</table>
+**Name** | **Field type** | **Function**
+--- | --- | ---
+Order Number | number | Is an array of numbers and auto-generated whenever the booking is created
+Booking Date | date | Date of creating the booking
+Person in Charge | user | Choose one from the list of users in WordPress
+Customer information | heading | Separate the sections
+·  Full Name | text |
+·  Mobile | number |
+·  Email | email |
+·  Address | text |
+·  Notes | textarea |
+Booking Information | heading | Separate the sections
+Booking Details | group | Group of fields regarding the booking room. This group is cloneable for the case that the customer books multiple rooms
+· Room | post | Choose one from the list of the rooms
+· Price | number |
+· Adults | number |
+· Children | number |
+· Age of Children (1, 2) | number | Each field is for a child. This field is auto-display whenever there is one more child
+· Extra Bed | number |
+· Check-in Date | date |
+· Check-out Date | date |
+· Total Nights of Stay | number | Auto-calculated bases on the check-in and check-out date
+Total Number of Rooms | number | Auto-calculated bases on the number of the group about the room details
+Other Request | textarea |
+Payment Information | heading | Separate the sections
+·  Total Amount | number | Auto-calculated bases on room details and number of rooms
+·  Paid Amount | number | Manual input by sales
+·  Unpaid Amount | number | \= Total amount - the paid amount
+Booking Status | heading | Separate the sections
+·  Booking Status | select | Choose one from the provided statuses
+·  Refund (if any) | select | Choose one level (%)  from the provided levels
 
 ![All the fields I need](https://i0.wp.com/images.elightup.com/meta-box/blog/hotel-booking-back-end/all-fields.gif)
 
@@ -314,7 +183,7 @@ This is the post before we create a title for it:
 
 Now, add these codes to the functions.php in the theme folder:
 
-```
+```php
 add_action('save_post_booking', function($post_id) {
     if (wp_is_post_revision($post_id) || defined('DOING_AUTOSAVE')) return;
 
@@ -344,7 +213,7 @@ Save the `functions.php` file, then create a new booking order for a try. You’
 
 By default, the quantity of rooms will be 1, equivalent to 1 group of booking details for 1 room. Use this following code so that whenever users add or edit a booking, the JS file will be loaded. It helps handle things like disabling booked dates via AJAX.
 
-```
+```php
 function add_admin_scripts($hook) {
     $screen = get_current_screen();
     if ($hook == 'post-new.php' || $hook == 'post.php') {
@@ -387,7 +256,7 @@ Afterward, create a **JavaScript** file to handle calculations and dynamic inter
 
 When users add or remove a room group, this script updates the total number of rooms. And also refreshes the price, stay duration, and total cost for all existing room groups.
 
-```
+```js
 $('.group-booking .add-clone').on('click', function (e) {
         setTimeout(function () {
             var rooms = $('.group-booking .rwmb-group-clone:not(.rwmb-clone-template)').length;
@@ -426,7 +295,7 @@ First, we set the Price field to **Read only** with a condition to display is th
 
 To do it, add the following code to the **JS** file.
 
-```
+```js
  $(".group-booking").on('change', "select[name*='[room]']", function() {
         updateRoom($(this));
 	} );
@@ -459,7 +328,7 @@ Before calculating the total nights of stay, we should set a condition that the 
 
 We can see some specified code for special aims:
 
-```
+```js
 check_in.datepicker('destroy').datepicker({
                 dateFormat: "yy-mm-dd",
                 beforeShowDay: function(date) {
@@ -480,9 +349,11 @@ check_in.datepicker('destroy').datepicker({
                     check_out.datepicker('option', 'minDate', min_date);
                 }
             });
+```
 
 When selecting the check-out date, the following code will call the calculate_total_day function to calculate the number of nights stayed and assign it to the total_nights_of_stay field.
 
+```js
 check_out.datepicker('destroy').datepicker({
                 dateFormat: "yy-mm-dd",
                 beforeShowDay: function(date) {
@@ -512,7 +383,8 @@ check_out.datepicker('destroy').datepicker({
 ```
 
 After that, add these codes to the `booking.js` file to calculate the total nights of stay:
-```
+
+```js
  function calculate_total_day(check_in, check_out) {
         var date1 = new Date(check_in);
         var date2 = new Date(check_out);
@@ -540,7 +412,8 @@ Total Amount of Each Room = (Price of room + numbers of extra bed * price) * nig
 We just need to summarize all the Total Amount of Each Room to get the Total Amount of the booking.
 
 Add these codes to the booking.js file to calculate the total amount of each room:
-```
+
+```js
 function update_total_payment() {
         var total_payment = 0;
         $(".group-booking .rwmb-field input[name*='[total_amount]']").each(function () {
@@ -560,6 +433,7 @@ function update_total_payment() {
     }
 	update_paid_amount();
 ```
+
 All code is updated on [Github](https://github.com/wpmetabox/tutorials/tree/master/how-to-build-hotel-booking/p2), so you can refer to it:
 
 Therefore, all the fields will automatically run as your logic:
@@ -567,4 +441,3 @@ Therefore, all the fields will automatically run as your logic:
 Now let’s book an order on the back end to choose a room and dates to see if the pricing and calculations are working correctly.
 
 ![book an order](https://i0.wp.com/images.elightup.com/meta-box/blog/hotel-booking-back-end/create-booking-page-in-back-end.gif)
-
