@@ -16,7 +16,7 @@ In this first guide, we'll create a room page. Other functionality will be cover
 
 This is my page of rooms as an example:
 
-![The archive page of the room](https://i0.wp.com/images.elightup.com/meta-box/blog/hotel-booking-room-archive/final.png)
+![The archive page of the room](img/hotel-booking-room-archive/final.png)
 
 ## Video version
 
