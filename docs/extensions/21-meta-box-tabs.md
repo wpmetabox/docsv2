@@ -16,7 +16,7 @@ Tabs in the settings pages are created separately with different settings by the
 
 First, you need to create custom fields as usual. Go to **Meta Box » Custom Fields** and [create a field group](/custom-fields/#how-to-create-custom-fields) with the custom fields you need.
 
-![Creating a field group with some custom fields](https://i.imgur.com/YK5nBYz.png)
+![Creating a field group with some custom fields](img/tabs/create-field.png)
 
 Then adding tabs to the field group. **Tab is a special field type** and is available in the field list.
 
@@ -28,17 +28,17 @@ The instruction above uses [MB Builder](/extensions/meta-box-builder/), an exten
 
 To add a tab, click the **+ Add Field** button and search for **Tab**:
 
-![Adding a tab field](https://i.imgur.com/GzGX7xE.png)
+![Adding a tab field](img/tabs/add-tab.png)
 
 After adding tabs, you need to **reorder** tabs among the fields. **The fields that follow a tab will belong to this tab**.
 
-![Reorder tabs](https://i.imgur.com/Tb0mxsJ.png)
+![Reorder tabs](img/tabs/indicate-tab.png)
 
 ## Tab settings
 
-Each tab has its own settings like label or icon. To see and change the tab settings, click the tab title bar:
+Each tab has its own settings like label or icon. To see and change the tab settings, click the field on the preview, in the left panel, you can see:
 
-![View tab settings](https://i.imgur.com/Pa8zlAD.png)
+![View tab settings](img/tabs/tab-settings.png)
 
 Below is the meaning of each setting:
 
@@ -61,9 +61,9 @@ The plugin provides 3 styles for tabs: "default", "box", and "left" as you can s
 
 ![Tab style](https://i.imgur.com/7Oi5dx1.jpg)
 
-To change a tab style, go to the **Settings** tab and choose one style in the **Tab style** dropdown:
+To change a tab style, click on the Settings icon to have the field group settings, and choose one style in the **Tab style**:
 
-![Select a tab style](https://i.imgur.com/lYqoEWF.png)
+![Select a tab style](img/tabs/tab-style.png)
 
 You can also set the default active tab here by entering the tab ID in the **Default active tab ID**.
 
