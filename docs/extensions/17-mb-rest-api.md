@@ -47,7 +47,7 @@ MB Rest API uses standard methods as follows:
 
 Assuming you have a [custom post type](/custom-post-types/) called "Event" and you [create a field group](/custom-fields/) "Event details" for it like this:
 
-![Event details fields](https://i.imgur.com/xnKMcwg.png)
+![Event details fields](img/rest-api/field.png)
 
 And then enter the data for an event:
 
@@ -407,9 +407,9 @@ You can also perform the request in Postman or Insomnia like this:
 
 By default, Meta Box returns all fields for the REST API responses. If you want to hide a field from the responses, then you need to set a settings for it.
 
-If you use [MB Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from REST API** from the field's **General** settings tab:
+If you use [MB Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from REST API** in the **Advanced** panel from the field's **Settings** panel:
 
-![Hiding a field from REST API responses](https://i0.wp.com/images.elightup.com/meta-box/docs/rest-api/hide-a-field.png)
+![Hiding a field from REST API responses](img/rest-api/hide.png)
 
 If you use code to register fields, please set the field as follows:
 

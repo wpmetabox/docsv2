@@ -69,9 +69,9 @@ reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Opt
 
 When you set the form to display fields from a field group, all fields are displayed by default. If you want to hide a field from front-end forms, then you need to set a settings for it.
 
-If you use [MB Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from front end** from the field's **General** settings tab:
+If you use [MB Builder](/extensions/meta-box-builder/) to build the field group, please enable the settings **Hide from front end** from the field's **Advanced** settings menu:
 
-![Hide a field from the front end](https://i0.wp.com/images.elightup.com/meta-box/docs/frontend-submission/hide-from-front.png)
+![Hide a field from the front end](img/hide-front-end.png)
 
 If you use code to register fields, please set the field as follows:
 

@@ -10,13 +10,13 @@ Showing fields' values in the post table give users a better overview of the pos
 
 ## Showing custom fields as admin columns
 
-To show a custom field as an admin column, go to **Meta Box > Custom Fields** and edit a field group. Click on a field that you want to show as an admin column and tick the checkbox "Show as an admin column":
+To show a custom field as an admin column, go to **Meta Box > Custom Fields** and edit a field group. Click on a field that you want to show as an admin column and turn on the option "Admin column":
 
-![Show as an admin column settings](https://i.imgur.com/JDZhoxh.png)
+![Show as an admin column settings](img/admin-columns/admin-columns-option.png)
 
 More settings will appear below that let you customize the admin column for that field:
 
-![Admin columns settings](https://i.imgur.com/Jcjqoyz.png)
+![Admin columns settings](img/admin-columns/customize-settings.png)
 
 These settings are self-explained. We also add some tooltips next to the setting title to give you more information if needed. Here is the list of the settings with the explanation:
 

@@ -38,7 +38,7 @@ If you use **Open Street Maps**, then you can bypass this step. Open Street Maps
 
 If you use **Open Street Maps**, you need to *add an Open Street Maps field* to your field group. Then add `geo` to your field group custom settings in the MB Builder like this:
 
-![enable geolocation for open street maps](https://i.imgur.com/M5ar5i2.png)
+![enable geolocation for open street maps](img/geo.png)
 
 If you use code, then add this line to your field group settings:
 
@@ -48,7 +48,7 @@ If you use code, then add this line to your field group settings:
 
 If you use **Google Maps**, it's _not_ required to add a Google Maps field to your field group. To enable geolocation, add the following custom settings in the field group settings in the MB Builder like this:
 
-![enable geolocation for google maps](https://i.imgur.com/XII5Kyw.png)
+![enable geolocation for google maps](img/google-map.png)
 
 If you use code, then add this line to your field group settings:
 

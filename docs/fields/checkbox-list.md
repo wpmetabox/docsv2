@@ -18,28 +18,28 @@ The checkbox list field creates a list of tick-able checkboxes with options. You
 
 Besides the [common settings](/field-settings/) such as Label, ID, Default value, Cloneable, etc., this field has the following specific settings:
 
-![specific settings of the field](https://i.imgur.com/NPeZp8B.png)
+![specific settings of the field](img/checkbox-list/special-settings.png)
 
 Name | Key | Description
 --- | --- | ---
 Choices | `options` | List of choices, each per line. If you need to set values and labels, use the format "value: Label" for each choice.<br />When using code, this setting is an array of `'value' => 'Label'`.
-Inline | `inline` | Display choices in a single line? `true` or `false`.
+Display choices horizontally | `inline` | Display choices in a single line? `true` or `false`.
 Display "Toggle All" button | `select_all_none` | Display "Toggle All" button to quickly toggle choices.
 
 :::note
 
 * The keys are for using with code.
-* The interface of field settings just comes when you have the [MB Builder extension](https://metabox.io/plugins/meta-box-builder/) in your pocket. It’s a premium extension providing the UI to create and configure fields visually. It’s already bundled in the **Meta Box AIO** and MB Core.
+* The interface of field settings just comes when you have the [MB Builder extension](https://metabox.io/plugins/meta-box-builder/) in your pocket. It provides the UI to create and configure fields visually. It’s already bundled in the **Meta Box AIO** and **Meta Box Lite**.
 
 :::
 
 When creating the field with **MB Builder**, just input options into the **Choices** box.
 
-![Input the label of the options in the Choices box](https://i.imgur.com/cAtrHeY.png)
+![Input the label of the options in the Choices box](img/checkbox-list/choices.png)
 
 In some special cases, you may want the data stored (value) to be different from the data displayed (label), you can input data with the form `value`:`label`.
 
-![the field with settings and options](https://i.imgur.com/xfykp6k.png)
+![the field with settings and options](img/checkbox-list/value-label.png)
 
 This is the field settings array when creating this field with code:
 
