@@ -15,13 +15,13 @@ This reduces the number of rows in the database which can help improve the perfo
 
 The easiest way to work with custom tables is using [MB Builder](/extensions/meta-box-builder/). It provides a UI to create custom tables and automatically save custom fields to table columns.
 
-When creating a field group with MB Builder, switch to the **Settings** tab and you'll see options to use a custom table as follows:
+When creating a field group with MB Builder, click on the settings button on the left sidebar and you'll see options to use a custom table as follows:
 
-![Create a custom table with MB Builder](https://i.imgur.com/HRZSV9w.png)
+![Create a custom table with MB Builder](img/save-data-custom-table.png)
 
-Enable the option to **Save data in a custom table**, and enter the **Table name**. By default, the table name doesn't contain the WordPress table prefix. If you want to use the WordPress table prefix, enable the **Include table prefix** option (and don't enter the prefix manually).
+Turn on the option to **Custom table**, and enter the **Table name**. By default, the table name doesn't contain the WordPress table prefix. If you want to use the WordPress table prefix, enable the **Include table prefix** option (and don't enter the prefix manually).
 
-If you select the option **Create table automatically**, the plugin will attempt to create the table for you. Once it's done, you'll see the custom table in your database, which has columns that match your custom field IDs, each column per field ID. To make the data compatible with the field data, the plugin uses the data type `TEXT` for all columns.
+If you select the option **Auto create table**, the plugin will attempt to create the table for you. Once it's done, you'll see the custom table in your database, which has columns that match your custom field IDs, each column per field ID. To make the data compatible with the field data, the plugin uses the data type `TEXT` for all columns.
 
 Now you can go to the edit post screen (or the edit user profile if you use the meta box for users) and save the post. You'll see the data is saved in the new custom table instead of the post meta table.
 
