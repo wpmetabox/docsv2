@@ -15,8 +15,8 @@ Depending on the icon library you use, you can output the icon on the front end 
 ## Screenshots
 
 <Screenshots name="icon" col1={[
-    ['https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/screenshot.png', 'The icon field interface']
-]} col2="https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/settings-in-builder.png" />
+    ['https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/screenshot.png', 'The background field interface']
+]} />
 
 ## Defining the icon library
 
