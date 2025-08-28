@@ -110,7 +110,7 @@ In the Template tab, you can add code directly or insert a field to get the data
 
 First, I add this code:
 
-```
+```php
 {% set args = {  post_type: 'room',   posts_per_page: -1,  orderby: 'date',order: 'DESC'    } %}
 {% set posts = mb.get_posts(args) %}
 {% for post in posts %}
@@ -130,11 +130,10 @@ Inside the loop, we’ll get data for each room.
 
 For the image, we’ll get the first one in the room gallery. So, I add this part:
 
-```
+```php
 {% if post.gallery|length > 0 %}
     {% set first_image = post.gallery|first %}
-    <img src="{{ first_image.full.url }}"
-    alt="{{ first_image.alt ?? post.title }}">
+    <img src="{{ first_image.full.url }}" alt="{{ first_image.alt ?? post.title }}">
 {% endif %}
 ```
 

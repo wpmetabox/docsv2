@@ -184,20 +184,20 @@ This is the post before we create a title for it:
 Now, add these codes to the functions.php in the theme folder:
 
 ```php
-add_action('save_post_booking', function($post_id) {
-    if (wp_is_post_revision($post_id) || defined('DOING_AUTOSAVE')) return;
+add_action( 'save_post_booking', function ( $post_id ) {
+    if ( wp_is_post_revision( $post_id ) || defined( 'DOING_AUTOSAVE' ) ) return;
 
-    $post = get_post($post_id);
-    if ($post->post_title !== "#$post_id" || $post->post_name !== (string)$post_id) {
-        wp_update_post([
+    $post = get_post( $post_id );
+    if ( $post->post_title !== "#$post_id" || $post->post_name !== (string) $post_id ) {
+        wp_update_post( [
             'ID'         => $post_id,
             'post_title' => "#$post_id",
             'post_name'  => $post_id,
-        ]);
+        ] );
     }
 
-    update_post_meta($post_id, 'order_number', $post_id);
-}, 20);
+    update_post_meta( $post_id, 'order_number', $post_id );
+}, 20 );
 ```
 
 In there, `update_post_meta($post_id, 'order', $post_id)` helps to set the post ID to be the value of the **Order Number** field.
@@ -214,40 +214,40 @@ Save the `functions.php` file, then create a new booking order for a try. You’
 By default, the quantity of rooms will be 1, equivalent to 1 group of booking details for 1 room. Use this following code so that whenever users add or edit a booking, the JS file will be loaded. It helps handle things like disabling booked dates via AJAX.
 
 ```php
-function add_admin_scripts($hook) {
+function add_admin_scripts( $hook ) {
     $screen = get_current_screen();
-    if ($hook == 'post-new.php' || $hook == 'post.php') {
-        if (isset($screen->post_type) && 'booking' === $screen->post_type) {
-            wp_register_script('booking-js', get_stylesheet_directory_uri() . '/js/booking.js');
+    if ( $hook == 'post-new.php' || $hook == 'post.php' ) {
+        if ( isset( $screen->post_type ) && 'booking' === $screen->post_type ) {
+            wp_register_script( 'booking-js', get_stylesheet_directory_uri() . '/js/booking.js' );
 
             // Passing AJAX Data into JavaScript
             $ajax_data = array(
-                'ajax_url' => admin_url('admin-ajax.php'),
-                'nonce' => wp_create_nonce('booking_nonce')
+                'ajax_url' => admin_url( 'admin-ajax.php' ),
+                'nonce'    => wp_create_nonce( 'booking_nonce' ),
             );
-            wp_localize_script('booking-js', 'booking_ajax', $ajax_data);
+            wp_localize_script( 'booking-js', 'booking_ajax', $ajax_data );
 
             // Passing room data into JavaScript
-            $rooms = get_posts([
+            $rooms     = get_posts( [
                 'post_type'      => 'room',
-                'posts_per_page' => -1
-            ]);
+                'posts_per_page' => -1,
+            ] );
             $arr_rooms = [];
-            foreach ($rooms as $room) {
-                $disabled_dates = dates_disable($room->ID);
-                $arr_rooms[] = [
-                    'id'    => $room->ID,
-                    'price' => rwmb_get_value('price', '', $room->ID),
-                    'disabled_dates' => $disabled_dates
+            foreach ( $rooms as $room ) {
+                $disabled_dates = dates_disable( $room->ID );
+                $arr_rooms[]    = [
+                    'id'             => $room->ID,
+                    'price'          => rwmb_get_value( 'price', '', $room->ID ),
+                    'disabled_dates' => $disabled_dates,
                 ];
             }
-            wp_localize_script('booking-js', 'rooms_data', $arr_rooms);
+            wp_localize_script( 'booking-js', 'rooms_data', $arr_rooms );
 
-            wp_enqueue_script('booking-js');
+            wp_enqueue_script( 'booking-js' );
         }
     }
 }
-add_action('admin_enqueue_scripts', 'add_admin_scripts');
+add_action( 'admin_enqueue_scripts', 'add_admin_scripts' );
 ```
 
 Afterward, create a **JavaScript** file to handle calculations and dynamic interactions. Now add some script into that file.
@@ -257,26 +257,26 @@ Afterward, create a **JavaScript** file to handle calculations and dynamic inter
 When users add or remove a room group, this script updates the total number of rooms. And also refreshes the price, stay duration, and total cost for all existing room groups.
 
 ```js
-$('.group-booking .add-clone').on('click', function (e) {
-        setTimeout(function () {
-            var rooms = $('.group-booking .rwmb-group-clone:not(.rwmb-clone-template)').length;
-            $('#total_number_of_rooms').val(rooms);
+$('.group-booking .add-clone').on( 'click', function ( e ) {
+    setTimeout( function () {
+        var rooms = $( '.group-booking .rwmb-group-clone:not(.rwmb-clone-template)' ).length;
+        $( '#total_number_of_rooms' ).val( rooms );
 
-            // Update all rooms
-            $(".group-booking .rwmb-field select[name*='[room]']").each(function() {
-                updateRoom($(this));
-            });
-        }, 100);
-    });
+        // Update all rooms
+        $( ".group-booking .rwmb-field select[name*='[room]']" ).each( function () {
+            updateRoom( $( this ) );
+        } );
+    }, 100 );
+} );
 
-    // Handle room removal
-    $('.group-booking .remove-clone').on('click', function (e) {
-        setTimeout(function () {
-            var rooms = $('.group-booking .rwmb-group-clone:not(.rwmb-clone-template)').length;
-            $('#total_number_of_rooms').val(rooms);
-            update_total_payment();
-        }, 100);
-	} );
+// Handle room removal
+$( '.group-booking .remove-clone' ).on( 'click', function ( e ) {
+    setTimeout( function () {
+        var rooms = $( '.group-booking .rwmb-group-clone:not(.rwmb-clone-template)' ).length;
+        $( '#total_number_of_rooms' ).val( rooms );
+        update_total_payment();
+    }, 100 );
+} );
 ```
 
 **In there**:
@@ -296,30 +296,30 @@ First, we set the Price field to **Read only** with a condition to display is th
 To do it, add the following code to the **JS** file.
 
 ```js
- $(".group-booking").on('change', "select[name*='[room]']", function() {
-        updateRoom($(this));
-	} );
+$( '.group-booking' ).on( 'change', "select[name*='[room]']", function () {
+    updateRoom( $( this ) );
+} );
 
-	// Initialize event for extra bed
-    $(".group-booking").on('change', "input[name*='[extra_bed]']", function() {
-        var roomSelect = $(this).closest('.rwmb-field').siblings().find("select[name*='[room]']");
-        var check_out = $(this).closest('.rwmb-field').siblings().find("input[name*='[check_out]']");
-        var total_nights = $(this).closest('.rwmb-field').siblings().find("input[name*='[total_nights_of_stay]']");
-        var total_amount = $(this).closest('.rwmb-field').siblings().find("input[name*='[total_amount]']");
+// Initialize event for extra bed
+$( '.group-booking' ).on( 'change', "input[name*='[extra_bed]']", function () {
+    var roomSelect   = $( this ).closest( '.rwmb-field' ).siblings().find( "select[name*='[room]']" );
+    var check_out    = $( this ).closest( '.rwmb-field' ).siblings().find( "input[name*='[check_out]']" );
+    var total_nights = $( this ).closest( '.rwmb-field' ).siblings().find( "input[name*='[total_nights_of_stay]']" );
+    var total_amount = $( this ).closest( '.rwmb-field' ).siblings().find( "input[name*='[total_amount]']" );
 
-        if (check_out.val()) {
-            var roomPrice = roomSelect.data('roomPrice') || 0;
-            var extra = parseInt($(this).val()) || 0;
-            var total = parseInt(total_nights.val()) || 0;
-            var total_extra = extra * roomPrice;
-            var finalAmount = (roomPrice + total_extra) * total;
-            if (!isNaN(finalAmount)) {
-                total_amount.val(finalAmount);
-                update_total_payment();
-            }
+    if ( check_out.val() ) {
+        var roomPrice   = roomSelect.data( 'roomPrice' ) || 0;
+        var extra       = parseInt( $( this ).val() ) || 0;
+        var total       = parseInt( total_nights.val() ) || 0;
+        var total_extra = extra * roomPrice;
+        var finalAmount = ( roomPrice + total_extra ) * total;
+
+        if ( ! isNaN( finalAmount ) ) {
+            total_amount.val( finalAmount );
+            update_total_payment();
         }
-	} );
-
+    }
+} );
 ```
 
 ### 3.4 Automatically calculate the total nights of stay
@@ -329,67 +329,71 @@ Before calculating the total nights of stay, we should set a condition that the 
 We can see some specified code for special aims:
 
 ```js
-check_in.datepicker('destroy').datepicker({
-                dateFormat: "yy-mm-dd",
-                beforeShowDay: function(date) {
-                    var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
-                    var isDisabled = allDisabledDates.includes(formattedDate);
-                    var today = new Date();
-                    today.setHours(0, 0, 0, 0);
-                    var isPastDate = date < today;
+check_in.datepicker( 'destroy' ).datepicker( {
+    dateFormat: 'yy-mm-dd',
+    beforeShowDay: function ( date ) {
+        var formattedDate = $.datepicker.formatDate( 'yy-mm-dd', date );
+        var isDisabled    = allDisabledDates.includes( formattedDate );
+        var today         = new Date();
+        today.setHours( 0, 0, 0, 0 );
+        var isPastDate    = date < today;
 
-                    return [!isDisabled && !isPastDate, '', isDisabled ? 'This date cannot be booked' : isPastDate ? 'Cannot select past dates' : ''];
-                },
-                onSelect: function(date) {
-                    var d = new Date(date);
-                    var af_date = d.getDate() + 1;
-                    var af_month = d.getMonth() + 1;
-                    var af_year = d.getFullYear();
-                    var min_date = af_year + '-' + af_month + '-' + af_date;
-                    check_out.datepicker('option', 'minDate', min_date);
-                }
-            });
+        return [ ! isDisabled && ! isPastDate, '', isDisabled ? 'This date cannot be booked' : isPastDate ? 'Cannot select past dates' : '' ];
+    },
+    onSelect: function ( date ) {
+        var d        = new Date( date );
+        var af_date  = d.getDate() + 1;
+        var af_month = d.getMonth() + 1;
+        var af_year  = d.getFullYear();
+        var min_date = af_year + '-' + af_month + '-' + af_date;
+
+        check_out.datepicker( 'option', 'minDate', min_date );
+    }
+} );
 ```
 
 When selecting the check-out date, the following code will call the calculate_total_day function to calculate the number of nights stayed and assign it to the total_nights_of_stay field.
 
 ```js
-check_out.datepicker('destroy').datepicker({
-                dateFormat: "yy-mm-dd",
-                beforeShowDay: function(date) {
-                    var formattedDate = $.datepicker.formatDate('yy-mm-dd', date);
-                    var isDisabled = allDisabledDates.includes(formattedDate);
-                    var today = new Date();
-                    today.setHours(0, 0, 0, 0);
-                    var isPastDate = date < today;
+check_out.datepicker( 'destroy' ).datepicker( {
+    dateFormat: 'yy-mm-dd',
+    beforeShowDay: function ( date ) {
+        var formattedDate = $.datepicker.formatDate( 'yy-mm-dd', date );
+        var isDisabled    = allDisabledDates.includes( formattedDate );
+        var today         = new Date();
+        today.setHours( 0, 0, 0, 0 );
+        var isPastDate    = date < today;
 
-                    return [!isDisabled && !isPastDate, '', isDisabled ? 'This date cannot be booked' : isPastDate ? 'Cannot select past dates' : ''];
-                },
-                onSelect: function(date) {
-                    var total = calculate_total_day(check_in.val(), date);
-                    if (!isNaN(total)) {
-                        total_nights.val(total);
-                        var extra = parseInt(extra_bed.val()) || 0;
-                        var roomPrice = roomSelect.data('roomPrice') || 0;
-                        var total_extra = extra * roomPrice;
-                        var finalAmount = (roomPrice + total_extra) * total;
-                        if (!isNaN(finalAmount)) {
-                            total_amount.val(finalAmount);
-                            update_total_payment();
-                        }
-                    }
-                }
-            });
+        return [ ! isDisabled && ! isPastDate, '', isDisabled ? 'This date cannot be booked' : isPastDate ? 'Cannot select past dates' : '' ];
+    },
+    onSelect: function ( date ) {
+        var total      = calculate_total_day( check_in.val(), date );
+        if ( ! isNaN( total ) ) {
+            total_nights.val( total );
+
+            var extra       = parseInt( extra_bed.val() ) || 0;
+            var roomPrice   = roomSelect.data( 'roomPrice' ) || 0;
+            var total_extra = extra * roomPrice;
+            var finalAmount = ( roomPrice + total_extra ) * total;
+
+            if ( ! isNaN( finalAmount ) ) {
+                total_amount.val( finalAmount );
+                update_total_payment();
+            }
+        }
+    }
+} );
 ```
 
 After that, add these codes to the `booking.js` file to calculate the total nights of stay:
 
 ```js
- function calculate_total_day(check_in, check_out) {
-        var date1 = new Date(check_in);
-        var date2 = new Date(check_out);
-        return (date2.getTime() - date1.getTime()) / (1000 * 3600 * 24);
-    }
+function calculate_total_day( check_in, check_out ) {
+    var date1 = new Date( check_in );
+    var date2 = new Date( check_out );
+
+    return ( date2.getTime() - date1.getTime() ) / ( 1000 * 3600 * 24 );
+}
 ```
 
 From now on, your **Total Nights of Stay** field’s value is automatically changed when you choose a date:
@@ -415,23 +419,28 @@ Add these codes to the booking.js file to calculate the total amount of each roo
 
 ```js
 function update_total_payment() {
-        var total_payment = 0;
-        $(".group-booking .rwmb-field input[name*='[total_amount]']").each(function () {
-            var value = parseInt($(this).val()) || 0;
-            total_payment += value;
-        });
-        $('#total').val(total_payment);
-        var paid_amount = parseInt($('#paid_amount').val()) || 0;
-        var unpaid = total_payment - paid_amount;
-        $('#unpaid_amount').val(unpaid);
-    }
+    var total_payment = 0;
 
-    function update_paid_amount() {
-        $("#paid_amount").on('change', function () {
-            $('#unpaid_amount').val(parseInt($('#total').val()) - parseInt($(this).val()));
-        });
-    }
-	update_paid_amount();
+    $( ".group-booking .rwmb-field input[name*='[total_amount]']" ).each( function () {
+        var value = parseInt( $( this ).val() ) || 0;
+        total_payment += value;
+    } );
+
+    $( '#total' ).val( total_payment );
+
+    var paid_amount = parseInt( $( '#paid_amount' ).val() ) || 0;
+    var unpaid      = total_payment - paid_amount;
+
+    $( '#unpaid_amount' ).val( unpaid );
+}
+
+function update_paid_amount() {
+    $( '#paid_amount' ).on( 'change', function () {
+        $( '#unpaid_amount' ).val( parseInt( $( '#total' ).val() ) - parseInt( $( this ).val() ) );
+    } );
+}
+
+update_paid_amount();
 ```
 
 All code is updated on [Github](https://github.com/wpmetabox/tutorials/tree/master/how-to-build-hotel-booking/p2), so you can refer to it:

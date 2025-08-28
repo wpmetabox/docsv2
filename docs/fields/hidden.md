@@ -4,6 +4,10 @@ title: Hidden
 
 The hidden field creates a simple hidden input. It's usually used to store custom data that cannot be changed.
 
+## Screenshots
+
+![The hidden field settings](/settings/hidden.png)
+
 ## Settings
 
 This field doesn't have any specific settings. It only uses [common settings](/field-settings/).
