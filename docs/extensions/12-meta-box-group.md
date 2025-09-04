@@ -4,36 +4,38 @@ title: MB Group
 
 import Helpers from '../_parts/_helpers.md';
 
-**MB Group** helps you to organize custom fields into repeatable and collapsible groups. You can use this extension to group similar fields into one group to create hierarchy. You can clone the whole group, or sub-group. There's no limitation on the nesting level.
+**MB Group** helps you to organize custom fields into repeatable and collapsible groups. You can use this extension to group related fields into one group to create hierarchy. You can clone the whole group, or sub-group. There's no limitation on the nesting level.
 
 ![meta box group example](https://i1.wp.com/metabox.io/wp-content/uploads/2015/02/meta-box-group-example.png)
 
 ## Tutorial
 
-If this is the first time you use [MB Group](/extensions/meta-box-group/), please follow the beginner tutorial here:
+If this is your first time using [MB Group](/extensions/meta-box-group/), start with this beginner-friendly guide:
 
-[How to Create a Group of Custom Fields with MB Group](https://metabox.io/create-group-of-custom-fields-with-meta-box-group/)
+👉 [How to Create a Group of Custom Fields with MB Group](https://metabox.io/create-group-of-custom-fields-with-meta-box-group/)
 
-The documentation below is like a detailed reference that you can use anytime you want to look for something in MB Group.
+The rest of this page is a detailed reference. Feel free to come back whenever you need to check specific settings or examples.
 
 ## Settings
 
-The MB Group adds a new field type `group`. This field type has following settings:
+MB Group introduces a new field type: `group`. Here are its available settings:
 
-Name|Description
----|---
-`name`|Field name (label), same like other normal fields. Optional.
-`id`|Field ID, will be used to store custom field values of all sub-field.
-`type`|Must be `group`
-`fields`|Array of sub-fields. Each sub-field is declared as a normal field.
-`clone`|Is the group clonable?
-`sort_clone`|Can clones be sorted? `true` or `false`. If `true`, you can drag and drop group clones to reorder them.
-`collapsible`|Make group collapsible? `true` or `false`. Default `false`. Optional.
-`save_state`|Whether or not save the collapse/expand state? `true` or `false`. Default `false`. Optional.
-`default_state`|Is the group collapsed or expanded by default (when page loads)? `collapsed` or `expanded` (default).
-`group_title`|The title of collapsible group. See section collapsible groups for details.
+| Name           | Description |
+|----------------|-------------|
+| `name`         | Field label. Works like other fields. Optional. |
+| `id`           | Field ID, used to store the group’s values (including all sub-fields). |
+| `type`         | Must be set to `group`. |
+| `fields`       | An array of sub-fields. Each sub-field is declared like a normal field. |
+| `clone`        | Makes the group clonable (repeater). |
+| `sort_clone`   | Allows drag-and-drop reordering of clones. `true` or `false`. |
+| `collapsible`  | Makes the group collapsible. `true` or `false` (default `false`). Optional. |
+| `save_state`   | Save the collapse/expand state? `true` or `false` (default `false`). Optional. |
+| `default_state`| Default state when the page loads: `collapsed` or `expanded` (default). |
+| `group_title`  | Title of collapsible groups. See [Collapsible Groups](#collapsible-groups). |
 
-So, to add a group, you need to add a field with type `group` and list of sub-fields in its `fields` attribute, like this:
+### Example: Simple group with sub-fields
+
+To add a group, create a field with `type => group` and list its sub-fields inside the `fields` parameter:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -73,14 +75,13 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
     return $meta_boxes;
 } );
 ```
-
-Here is how it appears:
+Here’s how it looks:
 
 ![clone group (repeater)](https://i.imgur.com/KVIJzSa.png)
 
 ### Nested groups
 
-You can put a group inside anther group, like normal fields, to create nested groups:
+You can even put a group **inside another group**, creating multi-level nested structures:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -117,27 +118,37 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-The plugin supports **unlimited nesting levels**.
+✅ MB Group supports **unlimited nesting levels**.
 
 ### Collapsible groups
 
-To make a group collapsible, you need to set the settings `'collapsible' => true`. The collapsible group also has the following settings:
+Want to make your groups collapsible? Just set:
 
-Name|Description
----|---
-`save_state`|Whether or not save the collapse/expand state? `true` or `false`. Default `false`. Optional.
-`default_state`|Is the group collapsed or expanded by default (when page loads)? `collapsed` or `expanded` (default).
-`group_title`|The title of collapsible group.
-
-The `group_title` settings can show static text, the group index (if group is cloneable), sub-field value or *any combination of them*. To do that, set a `group_title` as a text and use the following format:
-
-```
-'group_title' => 'Static text {#} {sub_field_1} {sub_field_2}',
+```php
+'collapsible' => true
 ```
 
-To specify the group index, use `{#}`. To specify a sub field value, use `{sub_field_id}`. You can add as many sub fields as you want and mix them in any way.
+Collapsible groups support extra settings:
 
-This is an example of a collapsible group:
+| Name            | Description                                                                          |
+| --------------- | ------------------------------------------------------------------------------------ |
+| `save_state`    | Save the expanded/collapsed state? `true` or `false`. Default `false`.               |
+| `default_state` | Default state when the page loads: `collapsed` or `expanded` (default).              |
+| `group_title`   | Title of each group item. Can include static text, clone index, or sub-field values. |
+
+#### Dynamic group titles
+
+You can mix static text, clone index, and sub-field values in the `group_title`:
+
+```php
+'group_title' => 'Branch {#}: {sub_field_1} - {sub_field_2}',
+```
+
+- `{#}` → group index (if clonable).
+- `{sub_field_id}` → value of a sub-field.
+- Combine as many as you need.
+
+#### Example: Collapsible group with nested groups
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -187,65 +198,57 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
+## Data storage
+
+- Group values are saved as an array of sub-field values (including nested groups).
+- Data is stored in the database as a serialized array.
+- Sub-field data is saved “as is” (no extra sanitizing or transformation).
+
 ## Getting sub-field values
 
-To get sub-field value, you need to get meta value of the group. This is done with following code:
+To retrieve group data, use `rwmb_meta()`:
 
 ```php
 $group_value = rwmb_meta( 'group_id' ) ?: [];
 ```
 
-The returned value is associated array of sub-fields' values with keys are sub-fields IDs, like this:
+This returns an associative array of sub-field IDs and values:
 
 ```php
 [
-    'sub_field_1_key' => 'sub_field_1_value',
-    'sub_field_2_key' => 'sub_field_2_value',
-    'sub_field_3_key' => 'sub_field_3_value',
-    //...
+    'sub_field_1' => 'value 1',
+    'sub_field_2' => 'value 2',
 ]
 ```
 
-So, to get value of a sub-field, use the following code:
+To access a sub-field:
 
 ```php
-$value = $group_value[ $sub_field_key ] ?? '';
-echo $value; // Display sub-field value
+$value = $group_value['sub_field_1'] ?? '';
+echo $value;
 ```
 
-If the group is **cloneable**, then the value returned by `rwmb_meta` is array of group values, each group value is an array of sub-fields' values:
+If the group is cloneable, `rwmb_meta()` returns an array of groups, like this:
 
 ```php
 [
-    [
-        'sub_field_1_key' => 'sub_field_1_value',
-        'sub_field_2_key' => 'sub_field_2_value',
-        'sub_field_3_key' => 'sub_field_3_value',
-        //...
-    ],
-    [
-        'sub_field_1_key' => 'sub_field_1_value',
-        'sub_field_2_key' => 'sub_field_2_value',
-        'sub_field_3_key' => 'sub_field_3_value',
-        //...
-    ],
-    //...
+    [ 'sub_field_1' => 'value 1', 'sub_field_2' => 'value 2' ],
+    [ 'sub_field_1' => 'value 3', 'sub_field_2' => 'value 4' ],
 ]
 ```
 
-To output values of cloneable groups, use the following code:
+Loop through them:
 
 ```php
-$group_values = rwmb_meta( 'group_id' ) ?: [];
-foreach ( $group_values as $group_value ) {
-    $value = $group_value[ $sub_field_key ] ?? '';
-    echo $value; // Display sub-field value
+$groups = rwmb_meta( 'group_id' ) ?: [];
+foreach ( $groups as $group ) {
+    echo $group['sub_field_1'] ?? '';
 }
 ```
 
-### Examples
+### Example: Contacts group
 
-This sample code registers a group of fields: contact name, contact email, contact phone number:
+Registering a group of contacts:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -257,18 +260,9 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
                 'type'   => 'group',
                 'clone'  => true,
                 'fields' => [
-                    [
-                        'id'   => 'name',
-                        'name' => 'Name',
-                    ],
-                    [
-                        'id'   => 'email',
-                        'name' => 'Email',
-                    ],
-                    [
-                        'id'   => 'phone',
-                        'name' => 'Phone',
-                    ],
+                    [ 'id' => 'name',  'name' => 'Name' ],
+                    [ 'id' => 'email', 'name' => 'Email' ],
+                    [ 'id' => 'phone', 'name' => 'Phone' ],
                 ],
             ],
         ],
@@ -277,101 +271,95 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-In the `single.php`, you can add the following code to display contacts:
+Displaying contacts in `single.php`:
 
 ```php
 $contacts = rwmb_meta( 'contacts' ) ?: [];
 foreach ( $contacts as $contact ) {
     echo '<div class="contact">';
-    echo '<h4>', 'Contact info', '</h4>';
-    echo '<p><label>', 'Name:', '<label> ', $contact['name'], '</p>';
-    echo '<p><label>', 'Email:', '<label> ', $contact['email'], '</p>';
-    echo '<p><label>', 'Phone number:', '<label> ', $contact['phone'], '</p>';
+    echo '<h4>Contact info</h4>';
+    echo '<p><strong>Name:</strong> ' . $contact['name'] . '</p>';
+    echo '<p><strong>Email:</strong> ' . $contact['email'] . '</p>';
+    echo '<p><strong>Phone:</strong> ' . $contact['phone'] . '</p>';
     echo '</div>';
 }
 ```
 
-### Outputting group with page builders
+### Outputting groups with page builders
 
-Currently, **only Elementor and Oxygen** can output sub-field in a group, including cloneable group. If you use these plugins, just follow the UI while connecting group data to show it.
+- ✅ Elementor and Oxygen: can output group sub-fields directly.
+- ❌ Other builders (e.g., Beaver Builder, Divi): use an [MB View](/extensions/mb-views/) or a shortcode
 
-If you use other page builders like Beaver Builder or Divi, the recommended way to show groups is creating [a view](/extensions/mb-views/) or a shortcode to display the group. Then you can insert the view/shortcode anywhere with the page builder.
+Example shortcode (group with `title`, `images`, and `desc`):
 
-Here is an example of a custom shortcode for a group with 3 fields: title (`text`), images (`image_advanced`) and description (`wysiwyg`). You can use it as a start:
 
 ```php
-// Requires PHP 7+.
 add_shortcode( 'my_group', function() {
-	$group = rwmb_meta( 'group_field_id' );
-	if ( empty( $group ) ) {
-		return '';
-	}
+    $group = rwmb_meta( 'group_field_id' );
+    if ( empty( $group ) ) {
+        return '';
+    }
 
-	$output = '';
+    $output = '';
 
-	// Sub-field title.
-	$title = $group['title'] ?? '';
-	$output .= $title ? '<h3 class="my-title">' . $title . '</h3>' : '';
+    // Title
+    $title = $group['title'] ?? '';
+    $output .= $title ? '<h3>' . $title . '</h3>' : '';
 
-	// Sub-field image_advanced.
-	$image_ids = $group['images'] ?? [];
-	if ( $image_ids ) {
-		$output .= '<div class="my-images">';
-		foreach ( $image_ids as $image_id ) {
-			$image = RWMB_Image_Field::file_info( $image_id, ['size' => 'my-image-size'] );
-			$output .= '<img src="' . $image['url'] . '">';
-		}
-		$output .= '</div>';
-	}
+    // Images
+    $image_ids = $group['images'] ?? [];
+    if ( $image_ids ) {
+        $output .= '<div class="images">';
+        foreach ( $image_ids as $id ) {
+            $image = RWMB_Image_Field::file_info( $id, ['size' => 'thumbnail'] );
+            $output .= '<img src="' . $image['url'] . '">';
+        }
+        $output .= '</div>';
+    }
 
-	// Sub-field description.
-	$desc = $group['desc'] ?? '';
-	$output .= $desc ? '<div class="my-description">' . wpautop( $desc ). '</div>' : '';
+    // Description
+    $desc = $group['desc'] ?? '';
+    $output .= $desc ? wpautop( $desc ) : '';
 
-	return $output;
+    return $output;
 } );
-
-// Usage: put [my_group] into your post content or page builder modules.
 ```
+
+Usage: Add `[my_group]` into your post/page content or page builder module.
 
 ### Sub-field values
 
-:::caution
+`rwmb_meta()` returns **raw values** for sub-fields. It does not format them like it does for individual fields.
 
-It's important to note that the helper function returns only raw array of sub-field values. It doesn't transform value to meaning full details like [rwmb_meta](/functions/rwmb-meta/) function for specific fields.
+| Field type                 | Value                       |
+| -------------------------- | --------------------------- |
+| `taxonomy`, `user`, `post` | Object ID(s)                |
+| File & image fields        | Attachment ID(s)            |
+| `map`, `osm`               | `"latitude,longitude,zoom"` |
+| `oembed`                   | URL                         |
+| `wysiwyg`                  | Raw content (no `<p></p>`)  |
 
-:::
-
-These are the raw values of sub-fields:
-
-Sub-field type|Value
----|---
-`taxonomy`, `taxonomy_advanced`, `user`, `post`|Object ID(s)
-File and image types: `file`, `file_advanced`, `file_upload`, `image`, `image_advanced`, `image_upload`, `single_image`|Attachment ID(s)
-`map`, `osm`|Text in format "latitude,longitude,zoom"
-`oembed`|URL
-`wysiwyg`|Raw content, without `<p></p>`
-
-To get more details for fields, you might need to add some extra code as below.
+Example: getting image info from sub-fields:
 
 ```php
 $group = rwmb_meta( 'group_id' );
-$image_ids = $group['image_key'] ?? : [];
-foreach ( $image_ids as $image_id ) {
-	$image = RWMB_Image_Field::file_info( $image_id, ['size' => 'thumbnail'] );
-	echo '<img src="' . $image['url'] . '">';
+$image_ids = $group['image_key'] ?? [];
+foreach ( $image_ids as $id ) {
+    $image = RWMB_Image_Field::file_info( $id, ['size' => 'thumbnail'] );
+    echo '<img src="' . $image['url'] . '">';
 }
 ```
 
 <Helpers />
 
-## Setting default group values
+## Setting default values
 
-There are 2 ways to set default group values: per sub-field or for the whole group.
+There are 2 ways to set default values:
 
-Setting default values for each sub-fields is very simple. Just set its value via `std` parameter for each sub-field and done.
+- Per sub-field → using `std` on each field.
+- Whole group → using `std` on the group.
 
-Example:
+### Per sub-field
 
 ```php
 add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
@@ -407,11 +395,9 @@ Result:
 
 ![default sub-field value](https://i.imgur.com/pml8twS.png)
 
-However, doing that way makes you type quite a lot. And you hardly see the data of the whole group. To avoid this problem, MB Group provides a better way to set default value for the whole group.
+### Whole group
 
-The idea is very simple, just use the same `std` parameter for *the group* (not for sub-fields). And set its value an array of sub-field default values.
-
-For example: with a group of 2 fields above, we can default the default value like this:
+Instead of setting `std` for each field, define an array for the group:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
@@ -446,50 +432,13 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 } );
 ```
 
-If the group is *cloneable*, the `std` value should be an array of clone values. Each clone value is an array of sub-field values. Like this:
+If the group is **cloneable**, `std` should be an array of group values:
 
 ```php
-add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
-	$meta_boxes[] = [
-		'title' => 'Test Meta Box',
-		'fields' => [
-			[
-				'type' => 'group',
-				'id'   => 'group',
-				'name' => 'Group',
-				'clone' => true,
-				'collapsible' => true,
-				'group_title' => '{name}',
-				'fields' => [
-					[
-						'type' => 'text',
-						'id' => 'name',
-						'name' => 'Name',
-					],
-					[
-						'type' => 'email',
-						'id' => 'email',
-						'name' => 'Email',
-					],
-				],
-				'std' => [
-					// Value for the 1st clone
-					[
-						'name' => 'Name 1',
-						'email' => 'email1@domain.com',
-					],
-
-					// Value for the 2nd clone
-					[
-						'name' => 'Name 2',
-						'email' => 'email2@domain.com',
-					]
-				],
-			]
-		],
-	];
-	return $meta_boxes;
-} );
+'std' => [
+    [ 'name' => 'Name 1', 'email' => 'email1@domain.com' ],
+    [ 'name' => 'Name 2', 'email' => 'email2@domain.com' ],
+],
 ```
 
 And here is the result:
@@ -502,7 +451,7 @@ See this video for demonstration:
 
 ## Changing clone button text
 
-To change the clone button text, set use the `add_button` parameter like below:
+Change the button label with `add_button`:
 
 ```php
 [
@@ -519,13 +468,16 @@ To change the clone button text, set use the `add_button` parameter like below:
 
 ## Clone default values
 
-When clone a group, if the group has `clone_default` set to `true`, then all sub-fields will have their default values. The exception is if a sub-field is cloneable, then its `clone_default` will take the higher priority and comes to effect. In this case, the sub-field `clone_default` is used, no matter the settings of the outer group.
+When cloning a group:
 
-Learn more about [`clone_default` parameter](/cloning-fields/).
+- If the group has `'clone_default' => true`, all sub-fields will use their default values.
+- If a sub-field is cloneable, its own `clone_default` takes priority.
 
-## Changing group title with JavaScript
+Learn more: [`clone_default` parameter](/cloning-fields/)
 
-You can also change the group title via a JavaScript filter. To do that, use the following code in your JavaScript file:
+## Changing group titles with JavaScript
+
+You can filter group titles with JavaScript:
 
 ```js
 jQuery( function() {
@@ -539,5 +491,5 @@ jQuery( function() {
 
 ## Known issues
 
-- When cloning fields or groups, `id` attribute of inputs are adjusted. In multi-level nested groups, they're changed without any rule. So please don't rely on them to perform custom JavaScript actions.
-- If you have a `wysiwyg` field in a cloneable group, please set its `ID` not ended with `_{number}` (e.g. `_12`). This format is reserved by the clone script to update the editor ID/name. Please just change the ID to another format.
+- When cloning nested groups, input `id` attributes may change in unpredictable ways. Avoid relying on them in custom JavaScript.
+- For `wysiwyg` fields inside cloneable groups, **don't end the field ID with `_{number}`** (like `_12`). This pattern is reserved by the clone script. Use another format instead.
