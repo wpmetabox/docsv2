@@ -1,11 +1,9 @@
 ---
-title: Role-based access control show documents by department - Meta Box + Bricks
+title: Filter posts by relationships - Meta Box + Bricks
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-
-In today’s tutorial, I’ll show you how to **restrict access and display posts only for logged-in users**. Specifically, how to display documents by department – using **Meta Box** and **Bricks**.
 
 Imagine that you’re building an internal company portal with training documents. Each document is linked to a department through a **Meta Box relationship**. When employees in different departments log in, they should only see the documents assigned to their department, not the ones from others.
 
