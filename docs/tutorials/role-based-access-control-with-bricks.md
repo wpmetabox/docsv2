@@ -49,8 +49,7 @@ After publishing, you’ll see the created custom post types in the admin menu. 
 
 Go to **Meta Box** > **Relationships** to create a relationship between the default Posts - documents - and the **Departments** post type.
 
-![create a relationship between posts and the Departments
-](img/role-based-access-control-metabox-bricks/create-relationship.png)
+![create a relationship between posts and the Departments](img/role-based-access-control-metabox-bricks/create-relationship.png)
 
 We have the **From** and **To** sections. The relationship is bidirectional, which means it doesn’t matter which side you set up first - data will be linked both ways.
 
@@ -177,4 +176,3 @@ Let’s tidy things up a bit. Add a custom class named `mb-content` to the paren
 With this setup, only posts whose department matches the logged-in user’s department will be displayed. For example, if you log in as a Developer staff member, you’ll only see posts from the Developer department. If you switch to an HR account, you’ll only see posts from HR and so on.
 
 ![ressult](img/role-based-access-control-metabox-bricks/result.gif)
-
