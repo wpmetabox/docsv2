@@ -67,7 +67,7 @@ This tool removes all custom fields that are not attached to a valid post, term,
 
 Just click on the **Remove** button, then Meta Box will notify you of the number of custom fields that have been deleted for each object.
 
-![Successfully remove orphan fields](img/tools/remove-orphan-fields.png)
+![Successfully remove orphan fields](img/tools/remove-orphan-field.png)
 
 ### Remove custom fields
 
