@@ -47,6 +47,52 @@ add_filter( 'mb_aio_extensions', function( $extensions ) {
 } );
 ```
 
+## Tools
+
+These are the Meta Box tools for managing custom fields and custom post types. They help you clean up and optimize your WordPress database.
+
+This set of tools is only available in **Meta Box AIO**. To use it, go to **Meta Box** > **Tools**:
+
+![Interface of Meta Box tools](img/tools/tools.png)
+
+:::caution Important
+
+Please back up your database before using any of these tools. This can't be reversed.
+
+:::
+
+### Remove orphan fields
+
+This tool removes all custom fields that are not attached to a valid post, term, or user.
+
+Just click on the **Remove** button, then Meta Box will notify you of the number of custom fields that have been deleted for each object.
+
+![Successfully remove orphan fields](img/tools/remove-orphan-fields.png)
+
+### Remove custom fields
+
+Use this tool to remove the specific fields via their field ID.
+
+Simply enter the meta key and choose the object type (post, term, user or all of them).
+
+![Remove custom fields](img/tools/remove-custom-fields.png)
+
+### Change custom field key
+
+This is useful when you want to change the custom field key without losing existing data. Meta Box allows you to select the meta key from the suggestion list.
+
+![Change custom field key](img/tools/change-custom-field-key.jpg)
+
+After that, you can check the update meta key in the database.
+
+![Change ID in database](img/tools/field-id-change-database.png)
+
+### Change post type
+
+This tool is to change the slug of a post type, page, or media. For the post type, its posts will be converted to the new one.
+
+![Change post type](img/tools/change-post-type.jpg)
+
 ## Notes
 
 When an extension is enabled in Meta Box AIO and is activated as an individual plugin, the individual plugin will has higher priority and will be used. The version bundled inside Meta Box AIO will not be used.
