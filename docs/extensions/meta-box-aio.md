@@ -75,13 +75,13 @@ Use this tool to remove the specific fields via their field ID.
 
 Simply enter the meta key and choose the object type (post, term, user or all of them).
 
-![Remove custom fields](img/tools/remove-custom-fields.png)
+![Remove custom fields](img/tools/remove-custom-field.png)
 
 ### Change custom field key
 
 This is useful when you want to change the custom field key without losing existing data. Meta Box allows you to select the meta key from the suggestion list.
 
-![Change custom field key](img/tools/change-custom-field-key.jpg)
+![Change custom field key](img/tools/change-meta-key.png)
 
 After that, you can check the update meta key in the database.
 
@@ -91,7 +91,7 @@ After that, you can check the update meta key in the database.
 
 This tool is to change the slug of a post type, page, or media. For the post type, its posts will be converted to the new one.
 
-![Change post type](img/tools/change-post-type.jpg)
+![Change post type](img/tools/change-post-type.png)
 
 ## Notes
 
