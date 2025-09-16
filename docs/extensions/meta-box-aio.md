@@ -47,11 +47,51 @@ add_filter( 'mb_aio_extensions', function( $extensions ) {
 } );
 ```
 
-## Upgrade
+## Tools
 
-When updating from version 1.12 to version 1.13, the plugin automatically migrates data of field groups to compatible with the new React app. The migration process doesn't touch your existing data, so you're always safe.
+These are the Meta Box tools for managing custom fields and custom post types. They help you clean up and optimize your WordPress database.
 
-If you don't see any field in field groups after upgrading, then the migration process failed to run the job. To fix this problem, you can force the plugin migrate again by adding a query param `mbb_version=3.3` to your site URL. In short, please go to `https://yourdomain.com/wp-admin/?mbb_version=3.3` to run the migration.
+This set of tools is only available in **Meta Box AIO**. To use it, go to **Meta Box** > **Tools**:
+
+![Interface of Meta Box tools](img/tools/tools.png)
+
+:::caution Important
+
+Please back up your database before using any of these tools. This can't be reversed.
+
+:::
+
+### Remove orphan fields
+
+This tool removes all custom fields that are not attached to a valid post, term, or user.
+
+Just click on the **Remove** button, then Meta Box will notify you of the number of custom fields that have been deleted for each object.
+
+![Successfully remove orphan fields](img/tools/remove-orphan-field.png)
+
+### Remove custom fields
+
+Use this tool to remove the specific fields via their field ID.
+
+Simply enter the meta key and choose the object type (post, term, user or all of them).
+
+![Remove custom fields](img/tools/remove-custom-field.png)
+
+### Change custom field key
+
+This is useful when you want to change the custom field key without losing existing data. Meta Box allows you to select the meta key from the suggestion list.
+
+![Change custom field key](img/tools/change-meta-key.png)
+
+After that, you can check the update meta key in the database.
+
+![Change ID in database](img/tools/field-id-change-database.png)
+
+### Change post type
+
+This tool is to change the slug of a post type, page, or media. For the post type, its posts will be converted to the new one.
+
+![Change post type](img/tools/change-post-type.png)
 
 ## Notes
 
