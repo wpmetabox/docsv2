@@ -2,11 +2,11 @@
 title: Creating new field types
 ---
 
-If the existing Meta Box field types are not suitable for your needs, you can create a new field type. This documentation will show you how to create a new field type `phone` which accepts only format `xxx-xxx-xxxx`.
+If the existing Meta Box field types don't quite fit your needs, you can create your own. In this guide, we'll walk through how to create a custom field type called `phone`, which only accepts phone numbers in the format `xxx-xxx-xxxx`.
 
-## Registering a field class
+## 1. Create a new field class
 
-If we want to create a new field type, we need to create a class `RWMB_{$field_type}_Field` that extends the base `RWMB_Field` class. In this case, our class name is `RWMB_Phone_Field`.
+All custom fields in Meta Box are defined as classes. To create a new field type, define a class named `RWMB_{$field_type}_Field` that extends the base `RWMB_Field` class. For our `phone` field, the class name will be `RWMB_Phone_Field`.
 
 ```php
 class RWMB_Phone_Field extends RWMB_Field {
@@ -14,25 +14,23 @@ class RWMB_Phone_Field extends RWMB_Field {
 }
 ```
 
-Save this class in a PHP file. Then include it in the theme's `functions.php` file or your plugin's file:
+Save this class into a PHP file (for example: `field-phone.php`) and include it in your theme's `functions.php` file or in your custom plugin:
 
 ```php
-add_action( 'init', 'prefix_load_phone_type' );
-
-function prefix_load_phone_type() {
+add_action( 'init', function () {
     require 'path/to/field-phone.php';
-}
+} );
 ```
 
-:::info Why init hook?
+:::info Why use the `init` hook?
 
-We use `init` action to make sure all Meta Box files are loaded and class `RWMB_Field` is defined.
+We hook into `init` to make sure all Meta Box files are fully loaded and the `RWMB_Field` class is available.
 
 :::
 
-## Adding a method to output the field
+## 2. Output the field HTML
 
-For the phone field, we have to define content of `html` method to output the field HTML:
+To display the field so users can enter data, define the `html` method inside your field class:
 
 ```php
 public static function html( $meta, $field ) {
@@ -45,11 +43,15 @@ public static function html( $meta, $field ) {
 }
 ```
 
-Here we use the attribute `pattern` to force users to enter the correct phone number format `xxx-xxx-xxxx`.
+Here we're using the `pattern` attribute to ensure that users enter a phone number in the format `xxx-xxx-xxxx`.
 
-For this field, we don't need to handle saving or retrieving the meta value or enqueueing scripts and styles. Everything is handled automatically by Meta Box.
+:::info
 
-The complete code for this class is the following:
+Good news: you don't need to handle saving, retrieving, or enqueueing scripts/styles manually. Meta Box takes care of that automatically.
+
+:::
+
+Full class example:
 
 ```php
 class RWMB_Phone_Field extends RWMB_Field {
@@ -64,15 +66,98 @@ class RWMB_Phone_Field extends RWMB_Field {
 }
 ```
 
-:::info Methods
+:::info Inherited methods
 
-The phone class inherits all methods from `RWMB_Field` class. The full list of `RWMB_Field` methods and their description are described below.
+This class inherits all methods from the `RWMB_Field` class. See the **method reference** below for details.
 
 :::
 
-## How to use the new field type?
+## 3. Add the field to the builder (optional)
 
-After register a new field type, you can use it in [your code](/creating-fields-with-code/), like this:
+If you want to use your custom field in the [builder](/extensions/meta-box-builder/), you need to register it via the `mbb_field_types` filter:
+
+```php
+use MBB\Control;
+
+add_filter( 'mbb_field_types', function ( $field_types ) {
+	$field_types['phone'] = [
+		'title'    => __( 'Phone', 'your-text-domain' ),
+        'icon'     => 'phone',
+		'category' => 'advanced',
+		'controls' => [
+			'name', 'id', 'type', 'label_description', 'desc',
+			Control::Select( 'icon_type', [
+				'label'   => __( 'Icon type', 'your-text-domain' ),
+				'options' => [
+					'dashicons'   => __( 'Dashicons', 'your-text-domain' ),
+					'fontawesome' => __( 'Font Awesome', 'your-text-domain' ),
+					'url'         => __( 'Custom URL', 'your-text-domain' ),
+				],
+			], 'dashicons' ),
+			Control::Input( 'icon', [
+				'label'      => __( 'Icon', 'your-text-domain' ),
+				'dependency' => 'icon_type:dashicons',
+			] ),
+			Control::Input( 'icon_fa', [
+				'label'      => '<a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank" rel="noopenner noreferrer">' . __( 'FontAwesome icon class', 'your-text-domain' ) . '</a>',
+				'dependency' => 'icon_type:fontawesome',
+			] ),
+			Control::Input( 'icon_url', [
+				'label'      => __( 'Icon URL', 'your-text-domain' ),
+				'dependency' => 'icon_type:url',
+			] ),
+			'clone_settings',
+			'before', 'after', 'class', 'save_field', 'sanitize_callback', 'attributes', 'custom_settings',
+		],
+	];
+
+	return $field_types;
+} );
+```
+
+This code registers a `phone` field type under the **Advanced** category with several available controls.
+
+When you click **+ Add field** in the builder, it will appear like this:
+
+![adding new field type](img/new-field-type-phone.png)
+
+**Field type parameters:**
+
+The `mbb_field_types` filter filter accepts a single parameter: an associative array of field types. Each type supports these parameters:
+
+- `title`: The field type’s display title.
+- `icon`: The icon for the field (Dashicons only).
+- `category`: The inserter popup category (options: `basic`, `advanced`, `html5`, `wordpress`, `upload`, `layout`).
+- `controls`: The available controls in the builder. These can be:
+    - Simple strings (`name`, `id`, `type`).
+    - Control objects like `MBB\Control::Input` or `MBB\Control::Select`.
+
+Each control has a specific type and several parameters:
+
+1. Setting name
+1. Control properties, which is an array:
+    - `label`: Control label text.
+    - `tooltip`: Helper text shown as a tooltip.
+    - `options`: For select-type controls, in the format `'value' => 'label'`.
+    - `dependency`: Show this control only when another control has a certain value (e.g. `{$other_control_setting_name}:{$value}`). Optional.
+1. Default value. Optional.
+1. Settings tab: `general` (default), `appearance`, or `advanced`. Optional.
+
+In case your control has only `label` property, you can set the property as a string.
+
+**Supported control types:**
+
+| Control Type               | Description                                                                |
+| -------------------------- | -------------------------------------------------------------------------- |
+| `MBB\Control::Checkbox`    | A simple checkbox.                                                         |
+| `MBB\Control::Input`       | A text input. Add `'type' => 'number'` to accept only numbers.             |
+| `MBB\Control::Select`      | A single-select dropdown. Requires an `options` array.                     |
+| `MBB\Control::ReactSelect` | A multi-select dropdown. Requires `options`, and default must be an array. |
+| `MBB\Control::Textarea`    | A textarea input.                                                          |
+
+## 4. Use the new field
+
+Once registered, you can use the new `phone` field type like any other:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -95,21 +180,27 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-Now when you go to the editing page, you'll see a new field like this:
+When you edit a post, you'll see the new field:
 
 ![new field type](https://i.imgur.com/lK8DRW7.png)
 
-That's all for this simple field type. If you want to create a more complex field, just overwrite methods from `RWMB_Field` class. You might want to enqueue scripts and styles, sanitize field value before saving in the database, etc. The `RWMB_Field` class has all methods for that you just need to overwrite necessary methods.
+:::info
 
-:::caution Cloneable fields
-
-To make the field works with the [clone feature](/cloning-fields/), make sure to add a CSS class to your inputs that start with `rwmb`. The clone script will automatically detect all the inputs started with `rwmb` and set the correct `id` and `name` attributes.
+For more complex fields, you can override additional methods from the `RWMB_Field` class. You may want to enqueue scripts, styles, or sanitize values before saving. See the **methods reference** below for details.
 
 :::
 
-## `RWMB_Field` class methods
+:::caution Cloneable fields
 
-All methods of this class (and its descendants) are **static**. It will make all fields use the same code instead of creating multiple class instances, thus increasing the plugin's performance.
+If your field should support [cloning](/cloning-fields/), make sure your inputs have a CSS class starting with `rwmb`. The cloning script automatically detects these inputs and updates their `id` and `name` attributes correctly.
+
+:::
+
+## `RWMB_Field` Class Methods
+
+All methods in `RWMB_Field` (and child classes) are **static**. This design improves performance by reusing the same code for all fields instead of creating new instances.
+
+Here's a quick overview of the most important methods:
 
 ### `add_actions`
 

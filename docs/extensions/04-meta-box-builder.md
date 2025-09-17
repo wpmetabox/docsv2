@@ -391,12 +391,11 @@ List of supported control types:
 
 Name|Description
 ---|---
-`\MBB\Control::Checkbox` | A checkbox
-`\MBB\Control::Input` | An input text. You can set the `'type' => 'number'` for the control property to make it accepts only numbers.
-`\MBB\Control::Select` | A select dropdown where you can select only a single value. You need to set `options` property for the control as shown in the above example.
-`\MBB\Control::ReactSelect` | A select dropdown where you can select multiple values. You need to set `options` property for the control and the default value must be an array.
-`\MBB\Control::Textarea` | A textarea.
-`\MBB\Control::Icon` | An icon picker. Supports only Dashicons.
+`MBB\Control::Checkbox` | A checkbox
+`MBB\Control::Input` | An input text. You can set the `'type' => 'number'` for the control property to make it accepts only numbers.
+`MBB\Control::Select` | A select dropdown where you can select only a single value. You need to set `options` property for the control as shown in the above example.
+`MBB\Control::ReactSelect` | A select dropdown where you can select multiple values. You need to set `options` property for the control and the default value must be an array.
+`MBB\Control::Textarea` | A textarea.
 
 This is the result of the above example:
 
@@ -426,70 +425,6 @@ function your_prefix_add_settings_controls( $controls ) {
 ```
 
 The filter `mbb_settings_controls` accepts only one parameter - an array of controls. Each control is defined similarly as for fields.
-
-### Adding your own field types
-
-As Meta Box allows you to [create your own field types](/creating-new-field-types/), it's able to create UI for your custom field types.
-
-To add UI for your custom field types, use the following hook:
-
-```php
-use MBB\Control;
-
-add_filter( 'mbb_field_types', function ( $field_types ) {
-	$field_types['icon'] = [
-		'title'    => __( 'Icon', 'your-text-domain' ),
-		'category' => 'advanced',
-		'controls' => [
-			'name', 'id', 'type', 'label_description', 'desc',
-			Control::Select( 'icon_type', [
-				'label'   => __( 'Icon type', 'your-text-domain' ),
-				'options' => [
-					'dashicons'   => __( 'Dashicons', 'your-text-domain' ),
-					'fontawesome' => __( 'Font Awesome', 'your-text-domain' ),
-					'url'         => __( 'Custom URL', 'your-text-domain' ),
-				],
-			], 'dashicons' ),
-			Control::Icon( 'icon', [
-				'label'      => __( 'Icon', 'your-text-domain' ),
-				'dependency' => 'icon_type:dashicons',
-			] ),
-			Control::Input( 'icon_fa', [
-				'label'      => '<a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank" rel="noopenner noreferrer">' . __( 'FontAwesome icon class', 'your-text-domain' ) . '</a>',
-				'dependency' => 'icon_type:fontawesome',
-			] ),
-			Control::Input( 'icon_url', [
-				'label'      => __( 'Icon URL', 'your-text-domain' ),
-				'dependency' => 'icon_type:url',
-			] ),
-			'clone', 'sort_clone', 'clone_default', 'clone_as_multiple', 'max_clone', 'add_button',
-			'before', 'after', 'class', 'save_field', 'sanitize_callback', 'attributes', 'custom_settings',
-		],
-	];
-
-	return $field_types;
-} );
-```
-
-This code creates a new field type `icon` under the category `advanced` with several controls. Here is how it looks when clicking **+ Add field** button:
-
-![adding new field type](img/builder/icon.png)
-
-And here is how it looks when reveal the field settings:
-
-![custom field type settings](img/builder/icon-settings.png)
-
-:::info
-
-Note that this section describes how to create UI in the builder for your custom field types only. To make the new field works, please follow [this documentation](/creating-new-field-types/).
-
-:::
-
-The filter `mbb_field_types` accepts only one paramerter, which is an associative array of registered field types. Each field type has the following parameters:
-
-- `title`: the field type title
-- `category`: where to put the field type in the inserter popup (appears when click the **+ Add field** button). Posible values are: `basic`, `advanced`, `html5`, `wordpress`, `upload`, `layout`.
-- `controls`: list of controls for the field type settings. All default controls for fields can be reference as strings like `name`, `id`, `type`. Custom controls are defined similarly as in the section "Adding your own field settings" above.
 
 ### Changing the parsed settings
 
