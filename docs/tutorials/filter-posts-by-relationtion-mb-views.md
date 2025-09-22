@@ -149,7 +149,7 @@ MB Views also supports you in choosing the size or output of some special fields
 
 Then, move down to the **Settings** section to apply this template for the page that we created before. I set the **Type** as **Singular**, then, choose the page.
 
-![Set location for template](img/meta-box/blog/filter-by-relationships-mb-views/template-location.png)
+![Set location for template](img/filter-by-relationships-mb-views/template-location.png)
 
 Now, view the page on the frontend, you can see all the data is displayed, including the department.
 
