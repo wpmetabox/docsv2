@@ -174,17 +174,18 @@ Our aim is only showing posts that belong to the logged-in user’s department. 
 
 ```
 {% set show = false %}
-    {% if mb.is_user_logged_in() %}
-        {% if user.department and user.department.title is not empty %}
-            {% set user_dept_name = user.department.title|trim %}
-            {% for dept in related_departments %}
-                {% if dept.post_title|trim == user_dept_name %}
-                    {% set show = true %}
-                {% endif %}
-            {% endfor %}
-        {% else %}
-            {% set show = true %}
-        {% endif %}
+{% if mb.is_user_logged_in() %}
+    {% if user.department and user.department.title is not empty %}
+        {% set user_dept_name = user.department.title|trim %}
+        {% for dept in related_departments %}
+            {% if dept.post_title|trim == user_dept_name %}
+                {% set show = true %}
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% set show = true %}
+    {% endif %}
+{% endif %}
 ```
 
 ![Add code to filter by relationship](img/filter-by-relationships-mb-views/filter.png)
