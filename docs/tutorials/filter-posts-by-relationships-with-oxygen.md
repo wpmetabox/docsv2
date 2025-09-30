@@ -10,7 +10,7 @@ You may find this topic useful if you are looking to build an internal website. 
 
 Check out the page I made as an example for users:
 
-![Check out the page I made as an example for users](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/demo-min.gif) 
+![Check out the page I made as an example for users](img/filter-relationships-oxygen/demo-min.gif) 
 
 ## Video version
 
@@ -38,39 +38,39 @@ That’s all. Let’s get started now.
 
 Go to **Meta Box** and create a new post type for the **Departments**.
 
-![Go to Meta Box and create a new post type for the Departments](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/new%20post%20type-min.png) 
+![Go to Meta Box and create a new post type for the Departments](img/filter-relationships-oxygen/add-new-post-type-min.png) 
 
 After creating, you can see the post types displayed in the **Admin Dashboard**. This is the list I have.
 
-![This is the list I have](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/list%20departments-min.png) 
+![This is the list I have](img/filter-relationships-oxygen/list-departments-min.png) 
 
 ## Creating a relationship
 
 Go to **Meta Box**, **Relationship**, and create a new one.
 
-![Go to Meta Box, Relationship, and create a new one](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20new%20relationship-min.png)
+![Go to Meta Box, Relationship, and create a new one](img/filter-relationships-oxygen/add-new-relationship-min.png)
 
 There’ll be the **From** and **To** sections as follows. The relationship is bidirectional, so you can put the two post types into any section.
 
 Since they are post types, remember to set the object type as **Post** in both sections.
 
-![Since they are post types, remember to set the object type as Post in both sections](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/object%20type-min.png) 
+![Since they are post types, remember to set the object type as Post in both sections](img/filter-relationships-oxygen/object-type-min.png) 
 
 Set the **Post type** in the **From** section as one that we want to be in the relationship. In this case I set **Posts**, so the rest one in the **To** section will be the **Departments**.
 
-![Set the Post type in the From section as one that we want to be in the relationship](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/posts-departments-min.png) 
+![Set the Post type in the From section as one that we want to be in the relationship](img/filter-relationships-oxygen/from-post-to-department-min.png) 
 
 Enable this setting if you want to show them as an admin column. 
 
-![Enable this setting if you want to show them as an admin column](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/admin%20column%20relationship-min.png) 
+![Enable this setting if you want to show them as an admin column](img/filter-relationships-oxygen/admin-column-relationship-min.png) 
 
 After publishing, go to the post editor, you will see the section for setting relationships. Just fill the post information and choose its departments. 
 
-![Just fill the post information and choose its departments](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/choose%20department%20for%20post-min.png) 
+![Just fill the post information and choose its departments](img/filter-relationships-oxygen/choose-department-for-post-min.png) 
 
 These are some posts I have. And, you can easily view the **Posts** and the related **Departments** information in these columns.
 
-![And, you can easily view the Posts and the related Departments information in these columns](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/list%20posts-department-min.png) 
+![And, you can easily view the Posts and the related Departments information in these columns](img/filter-relationships-oxygen/list-posts-department-min.png) 
 
 ## Creating a custom field
 
@@ -78,97 +78,97 @@ To add departments to each user, I will create a custom field. Feel free to add 
 
 Now, go to **Meta Box** > **Custom Fields**, and create a new field group.
  
-![Now, go to Meta Box > Custom Fields, and create a new field group](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20new%20custom%20field-min.png) 
+![Now, go to Meta Box > Custom Fields, and create a new field group](img/filter-relationships-oxygen/add-new-custom-field-min.png) 
 
 For the user department, choose the **Post** field type, then choose **Post** type as **Department**. 
 
-![For the user department, choose the Post field type, then choose Post type as Department](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/user%20department%20type-min.png)
+![For the user department, choose the Post field type, then choose Post type as Department](img/filter-relationships-oxygen/user-departments-type.png)
 
 Enable this setting to show them as an admin column. 
 
-![Enable this setting to show them as an admin column](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/admin%20column%20custom%20field-min.png)
+![Enable this setting to show them as an admin column](img/filter-relationships-oxygen/admin-column-for-custom-field-min.png)
 
 Then, move to the **Settings** tab, choose **Location** as **User** to apply the field to it.
 
-![Then, move to the Settings tab, choose Location as User to apply the field to it](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/choose%20location%20as%20user-min.png) 
+![Then, move to the Settings tab, choose Location as User to apply the field to it](img/filter-relationships-oxygen/location-as-user-min.png) 
 
 Now, in each user profile, you can see the **Department** field section. Click on it to select the department.
 
-![Now, in each user profile, you can see the Department field section](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/work%20department%20field-min.png) 
+![Now, in each user profile, you can see the Department field section](img/filter-relationships-oxygen/work-department-field-min.png) 
 
 After updating, you can see users with related work departments in the dashboard like this.
 
-![After updating, you can see users with related work departments in the dashboard like this](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/user-department-min.png) 
+![After updating, you can see users with related work departments in the dashboard like this](img/filter-relationships-oxygen/user-department-min.png) 
 
 ## Displaying posts on an archive page
 
 Navigate to the **Oxygen** > **Templates**, and add a new template. 
 
-![Navigate to the Oxygen > Templates, and add a new template](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20new%20template-min.png) 
+![Navigate to the Oxygen > Templates, and add a new template](img/filter-relationships-oxygen/add-new-page-for-documents-min.png) 
 
 Next, go to **Pages**, create a new page for the **Documents**. 
 
-![Next, go to Pages, create a new page for the Documents](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20new%20page-min.png)
+![Next, go to Pages, create a new page for the Documents](img/filter-relationships-oxygen/add-new-page-for-documents-min.png)
 
 Then, scroll down to the **Oxygen** section, and choose the created template to render the page using it. Edit the page with **Oxygen**.
 
-![Edit the page with Oxygen](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/edit%20with%20oxygen-min.png)
+![Edit the page with Oxygen](img/filter-relationships-oxygen/edit-page-with-oxygen-min.png)
 
 Choose the **Documents** for the **Editing** and **Previewing**.
 
-![Choose the Documents for the Editing and Previewing](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/editing%20and%20previewing-min.png) 
+![Choose the Documents for the Editing and Previewing](img/filter-relationships-oxygen/editing-and-previewing-min.png) 
 
 First, select a **Section** component to contain all of the page content. 
 
-![select a Section component to contain all of the page content](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20section.png) 
+![select a Section component to contain all of the page content](img/filter-relationships-oxygen/add-section.png) 
 
 To get the title of the page automatically, add a **Heading** component, then click **Insert Data**, **Post**, **Title** to connect it with the title of the page.
 
-![To get the title of the page automatically, add a Heading component, then click Insert Data, Post, Title to connect it with the title of the page](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20heading-min.gif) 
+![To get the title of the page automatically, add a Heading component, then click Insert Data, Post, Title to connect it with the title of the page](img/filter-relationships-oxygen/add-heading-min.gif) 
 
 Since we have more than one post on the page, you should add a Repeater component to define information structure for them all. 
 
-![Since we have more than one post on the page, you should add a Repeater component to define information structure for them all](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20repeater-min.png) 
+![Since we have more than one post on the page, you should add a Repeater component to define information structure for them all](img/filter-relationships-oxygen/add-repeater-min.png) 
 
 Go to **Query** > **Advanced**, and add parameters for the query like this.
 
-![Go to Query > Advanced, and add parameters for the query like this](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/advanced%20query-min.gif) 
+![Go to Query > Advanced, and add parameters for the query like this](img/filter-relationships-oxygen/advanced-query-min.gif) 
 
 In there, `post` is the slug of the **Post** post type. It means that we’ll get posts from this post type. 
 
-![It means that we’ll get posts from this post type](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/post_type%20slug-min.png) 
+![It means that we’ll get posts from this post type](img/filter-relationships-oxygen/post-type-slug-min.png) 
 
 I want to get all the posts we have, so the setting will be like this.
 
-![I want to get all the posts we have, so the setting will be like this](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/post_per_page-min.png) 
+![I want to get all the posts we have, so the setting will be like this](img/filter-relationships-oxygen/post-per-page-min.png) 
 
 Inside the **Repeater** component, there’ll be a **Div**. Add some components inside this **Div** to display the posts’ information.
 
 I added an **Image** component and inserted data from the **Featured Image** of the post.
 
-![I added an Image component and inserted data from the Featured Image of the post](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20image-min.gif) 
+![I added an Image component and inserted data from the Featured Image of the post](img/filter-relationships-oxygen/add-image-min.gif) 
 
 Next, add a **Heading** then insert data from the **Post Title** for the course name.
 
-![Next, add a Heading then insert data from the Post Title for the course name](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20post%20tittle-min.gif) 
+![Next, add a Heading then insert data from the Post Title for the course name](img/filter-relationships-oxygen/add-post-tittle-min.gif) 
 
 You may get the wrong name and image of the course, but don't worry about it. Just keep moving, you will see the right things later.
 
 To get the department information of the post, add a **Text** component and insert data from **Meta Box Field**. If you want to display the department’ name along with the **link**, choose the **Post URL** option when inserting data like this. Immediately, you can see the post is displayed exactly with the related department’ name as follows.
 
-![To get the department information of the post, add a Text component and insert data from Meta Box Field](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20department%20information-min.gif) 
+![To get the department information of the post, add a Text component and insert data from Meta Box Field](img/filter-relationships-oxygen/add-department-information-min.gif) 
 
 The last information of the post is date, add another **Text** below. Click on this to insert dynamic data. Choose the **Date** and fill the format that you want. In my example, I will put the format like this. 
 
-![The last information of the post is date, add another Text below](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/add%20date-min.gif) 
+![The last information of the post is date, add another Text below](img/filter-relationships-oxygen/add-date-min.gif) 
 
 After getting all the wanted information for posts, view the page on frontend. You will see the image along with their information displayed correctly. But, it seems like we should style the page a little bit to have a better appearance.
 
-![After getting all the wanted information for posts, view the page on frontend](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/view%20on%20frontend-min.gif) 
+![After getting all the wanted information for posts, view the page on frontend](img/filter-relationships-oxygen/view-on-frontend-min.gif) 
 
 Back to the template, you can change the settings of each component to get the wanted look for the page. Here is the one that I got after styling.
 
-![Here is the one that I got after styling](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/after%20styling-min.png) 
+![Here is the one that I got after styling](img/filter-relationships-oxygen/after-styling-min.png) 
 
 ## Filtering posts by relationships
 
@@ -176,48 +176,22 @@ Let’s add filter posts by **Relationships** so users can see the related posts
 
 In the **Oxygen** settings, click on the **div** right below the **repeater** component, move to the **setting** tabs, choose the **Conditional Settings** icon to set the conditions. 
 
-![choose the Conditional Settings icon to set the conditions](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/conditional%20setting-min.png) 
+![choose the Conditional Settings icon to set the conditions](img/filter-relationships-oxygen/conditional-setting-min.png) 
 
 In the conditions’ pop up, add a new rule. Select **User Logged In** below the list and set the next box of the conditions setting like this. This rule means that only valid users will see the displayed posts.
 
-![Select User Logged In below the list](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/user%20logged%20in-min.png) 
+![Select User Logged In below the list](img/filter-relationships-oxygen/user-logged-in-min.png) 
 
 Next, add the second rule. In the dropdown, choose **Dynamic Data**, **Meta Box Field** and **Departments**. Choose **Post Object ID** so that **Users** can see the related posts of their department. 
 
-![Next, add the second rule](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/2nd%20rule-min.gif)
+![Next, add the second rule](img/filter-relationships-oxygen/2nd-rule-min.gif)
 
 In the next box of the conditions setting, choose **contains** to compare whether the data above contains a certain value. Then in the last box, click on the **data** button, move to **Current User** and choose **Meta or Custom** field. Fill the **Meta Key** as `user_department` so that we can get the department field value of the current user.
 
-![In the next box of the conditions setting](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/next%20box%20setting-min.gif) 
+![In the next box of the conditions setting](img/filter-relationships-oxygen/next-box-setting-min.gif) 
 
 Now, go to the page on frontend, You will see the filter works well.
 
 First, all posts are displayed in the admin account. Log out and log back in to each user account.You can see users in different departments will only see posts from the related department.
 
-![Now, go to the page on frontend, You will see the filter works well](https://i0.wp.com/images.elightup.com/meta-box/blog/filter-relationships-oxygen/demo-min.gif) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
+![Now, go to the page on frontend, You will see the filter works well](img/filter-relationships-oxygen/demo-min.gif)
