@@ -8,7 +8,7 @@ In today’s practice, we're going to show the featured products using **Meta Bo
 
 I’m getting restaurants as an example for the products and this is the section I’ll create in this tutorial:
 
-![The featured products using Meta Box and Elementor](https://i.imgur.com/1wdDGxA.png)
+![The featured products using Meta Box and Elementor](https://imgur.elightup.com/1wdDGxA.png)
 
 ## Video Version
 
@@ -18,7 +18,7 @@ I’m getting restaurants as an example for the products and this is the section
 
 All of the featured restaurants in the section are chosen manually by a custom field in the backend. It’s a switch field. The restaurant will be displayed in the featured section when this button is turned on.
 
-![The restaurant will be displayed in the featured section when this button is turned on](https://i.imgur.com/2vBgC2q.png)
+![The restaurant will be displayed in the featured section when this button is turned on](https://imgur.elightup.com/2vBgC2q.png)
 
 So, to get started, we need these tools:
 
@@ -35,95 +35,95 @@ You can install them individually or use the Meta Box AIO for all.
 
 Go to **Meta Box** and create a new custom post type for your products.
 
-![Create a new custom post type for your products](https://i.imgur.com/63DJvXS.png)
+![Create a new custom post type for your products](https://imgur.elightup.com/63DJvXS.png)
 
 After publishing, you will see your post type display as a menu.
 
-![The post type displayed as a menu](https://i.imgur.com/333f5oW.png)
+![The post type displayed as a menu](https://imgur.elightup.com/333f5oW.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box** > **Custom Fields** to create fields to save extra information for the restaurants as usual.
 
-![Create fields to save extra information for the restaurants](https://i.imgur.com/XdyWIfO.png)
+![Create fields to save extra information for the restaurants](https://imgur.elightup.com/XdyWIfO.png)
 
 I’ll create some custom fields for product information. You also can add other ones.
 
-![Create some custom fields for product information](https://i.imgur.com/9Qx6OHx.png)
+![Create some custom fields for product information](https://imgur.elightup.com/9Qx6OHx.png)
 
 Besides some familiar fields, I use a switch field to choose to display the restaurant in the section or not. It’s based on the value of the field.
 
-![Use a switch field to choose to display the restaurant in the section or not](https://i.imgur.com/4CwZFBj.png)
+![Use a switch field to choose to display the restaurant in the section or not](https://imgur.elightup.com/4CwZFBj.png)
 
 In the backend, to know if the restaurant is featured or not, just check the following box in the settings of the switch field. It's available only when you have **MB Admin Columns**.
 
-![The restaurant is featured when you have MB Admin Columns](https://i.imgur.com/SAeRlAS.png)
+![The restaurant is featured when you have MB Admin Columns](https://imgur.elightup.com/SAeRlAS.png)
 
 After having all the fields, go to the **Settings** tab, choose **Location** as **Post type**, and Restaurant to apply the fields to it.
 
-![Apply the fields to the post](https://i.imgur.com/SV7pm4Z.png)
+![Apply the fields to the post](https://imgur.elightup.com/SV7pm4Z.png)
 
 Then, when adding a new post, you’ll see the fields. If you want to feature the restaurant, just turn on the button.
 
-![If you want to feature the restaurant, just turn on the button](https://i.imgur.com/2vBgC2q.png)
+![If you want to feature the restaurant, just turn on the button](https://imgur.elightup.com/2vBgC2q.png)
 
 I added some posts for instance, you can easily see which one will be displayed in the section from the column.
 
-![The posts displayed in the section from the column](https://i.imgur.com/EgDc5U3.png)
+![The posts displayed in the section from the column](https://imgur.elightup.com/EgDc5U3.png)
 
 ## 3. Displaying information of a product
 
 Go to **Elementor** and create a template to designate which and how the information from a post of a product will be displayed.
 
-![Create a template to designate which and how the information from a post ò a product will be displayed](https://i.imgur.com/EXSvTuU.png)
+![Create a template to designate which and how the information from a post ò a product will be displayed](https://imgur.elightup.com/EXSvTuU.png)
 
 Set the template as **Loop Item**.
 
-![Set the template as Loop Item](https://i.imgur.com/nom3rmd.png)
+![Set the template as Loop Item](https://imgur.elightup.com/nom3rmd.png)
 
 Choose the post type to get the right preview.
 
-![Choose the post type to get the right preview](https://i.imgur.com/0Whce0K.png)
+![Choose the post type to get the right preview](https://imgur.elightup.com/0Whce0K.png)
 
 Add a **Section** element.
 
-![Add a Section element](https://i.imgur.com/EOWO4DJ.png)
+![Add a Section element](https://imgur.elightup.com/EOWO4DJ.png)
 
 Let's add information for each restaurant. First, insert **Featured Image** element to display restaurant image.
 
-![Insert Featured Image element to display the restaurant image](https://i.imgur.com/6JILeZY.png)
+![Insert Featured Image element to display the restaurant image](https://imgur.elightup.com/6JILeZY.png)
 
 Add **Text Editor** for the voucher.
 
-![Add Text Editor for the voucher](https://i.imgur.com/FrJyLjQ.png)
+![Add Text Editor for the voucher](https://imgur.elightup.com/FrJyLjQ.png)
 
 Use the **Dynamic Tags**, look for the **Meta Box Field** option, and choose the field from the list.
 
-![Use the Dynamic Tags, look for the Meta Box Field option, and choose the field from the list](https://i.imgur.com/R4Ikgiy.gif)
+![Use the Dynamic Tags, look for the Meta Box Field option, and choose the field from the list](https://imgur.elightup.com/R4Ikgiy.gif)
 
 Next, add the **Post Title** for the restaurant name.
 
-![Add the Post Title for the restaurant name](https://i.imgur.com/mJ7jRsH.png)
+![Add the Post Title for the restaurant name](https://imgur.elightup.com/mJ7jRsH.png)
 
 Add an additional **Text Editor** element. It’s for the address which also is saved in a custom field.
 
-![Add an additional Text Editor element](https://i.imgur.com/GwoilCE.png)
+![Add an additional Text Editor element](https://imgur.elightup.com/GwoilCE.png)
 
 We should use the **Dynamic Tags** as well, and find the **Address** field.
 
-![We should use the Dynamic Tags as well, and find the Address field](https://i.imgur.com/zXqvoPC.gif)
+![We should use the Dynamic Tags as well, and find the Address field](https://imgur.elightup.com/zXqvoPC.gif)
 
 For the logo, add an **Image** element.
 
-![Add an Image element for the logo](https://i.imgur.com/aQZRrgT.png)
+![Add an Image element for the logo](https://imgur.elightup.com/aQZRrgT.png)
 
 Then, add **Dynamic Tags** from the logo field to display the image.
 
-![Add Dynamic Tags from the logo field to display the image](https://i.imgur.com/ditLy1L.gif)
+![Add Dynamic Tags from the logo field to display the image](https://imgur.elightup.com/ditLy1L.gif)
 
 That's all of the information I want to get and display for the restaurant.
 
-![All of the information I want to get and display for the restaurant](https://i.imgur.com/MHcB0fe.png)
+![All of the information I want to get and display for the restaurant](https://imgur.elightup.com/MHcB0fe.png)
 
 ## 4. Creating a custom query
 
@@ -133,11 +133,11 @@ You can add code directly to the theme file, but it’s not recommended. I’ll 
 
 To create a custom query, go to **Code Snippets** to add new.
 
-![Go to Code Snippets to create a custom query](https://i.imgur.com/BFjBjoe.png)
+![Go to Code Snippets to create a custom query](https://imgur.elightup.com/BFjBjoe.png)
 
 Add some code to set the condition.
 
-![Add some code to set the condition](https://i.imgur.com/K24FBOJ.png)
+![Add some code to set the condition](https://imgur.elightup.com/K24FBOJ.png)
 
 ```
 /**
@@ -182,7 +182,7 @@ add_action( 'elementor/query/my_custom_filter', 'my_query_by_post_meta' );
 
 Let’s get through for more detail.
 
-![These lines of code are to declare that we’ll query the post type which has the ID as 'restaurant'](https://i.imgur.com/iEpPEfd.png)
+![These lines of code are to declare that we’ll query the post type which has the ID as 'restaurant'](https://imgur.elightup.com/iEpPEfd.png)
 
 ```
 function my_query_by_post_types( $query ) {
@@ -193,13 +193,13 @@ add_action( 'elementor/query/my_custom_filter', 'my_query_by_post_types' );
 
 These lines of code are to declare that we’ll query the post type which has the ID as '**_restaurant_**'.
 
-![the ID as 'restaurant'](https://i.imgur.com/2j0PLp7.png)
+![the ID as 'restaurant'](https://imgur.elightup.com/2j0PLp7.png)
 
 **_my_custom_filter_** is the name of the custom query, you can name it as your own.
 
-![The name of the custom query](https://i.imgur.com/maMfxTF.png)
+![The name of the custom query](https://imgur.elightup.com/maMfxTF.png)
 
-![The mentioned condition](https://i.imgur.com/gWw7PCt.png)
+![The mentioned condition](https://imgur.elightup.com/gWw7PCt.png)
 
 ```
 $meta_query[] = [
@@ -211,7 +211,7 @@ $meta_query[] = [
 
 This is the mentioned condition. It means that if the custom field, which has the **ID** as '**_feature_the_restaurant_**', has the value as 1, the post will be got and displayed. **1** is the value of its **On** status.
 
-![The ID as 'feature_the_restaurant', has the value as 1, the post will be got and displayed](https://i.imgur.com/ZNhZ55B.png)
+![The ID as 'feature_the_restaurant', has the value as 1, the post will be got and displayed](https://imgur.elightup.com/ZNhZ55B.png)
 
 Now, move on to display posts on the homepage.
 
@@ -219,34 +219,34 @@ Now, move on to display posts on the homepage.
 
 Go to edit the homepage with **Elementor**.
 
-![Go to edit the homepage with Elementor](https://i.imgur.com/oExPxZZ.png)
+![Go to edit the homepage with Elementor](https://imgur.elightup.com/oExPxZZ.png)
 
 Add a **Section** elemento to the page as usual.
 
-![Add a Section element to the page as usual](https://i.imgur.com/RMKOR3B.png)
+![Add a Section element to the page as usual](https://imgur.elightup.com/RMKOR3B.png)
 
 Then, insert a **Heading** for it.
 
-![Insert a Heading for it](https://i.imgur.com/eoaDCLB.png)
+![Insert a Heading for it](https://imgur.elightup.com/eoaDCLB.png)
 
 Add the **Loop Grid** element to get posts.
 
-![Add the Loop Grid element to get posts](https://i.imgur.com/W8i8c6q.png)
+![Add the Loop Grid element to get posts](https://imgur.elightup.com/W8i8c6q.png)
 
 Choose the created template, but some blog posts will be displayed in the form.
 
-![Choose the created template](https://i.imgur.com/UCiXVWL.png)
+![Choose the created template](https://imgur.elightup.com/UCiXVWL.png)
 
 To display the wanted posts from your product post type, go to the **Query** section. Set the **Source** as your product’s post type. Then **all the posts** from that post type will be displayed.
 
-![Go to the Query section. Set the Source as your product’s post type](https://i.imgur.com/JuKd3y5.gif)
+![Go to the Query section. Set the Source as your product’s post type](https://imgur.elightup.com/JuKd3y5.gif)
 
 Fill in the **Query ID** box with the name of the created custom query to apply the condition that we want. The displaying posts will be changed.
 
-![Fill in the Query ID box with the name of the created custom query](https://i.imgur.com/LAzmQi0.png)
+![Fill in the Query ID box with the name of the created custom query](https://imgur.elightup.com/LAzmQi0.png)
 
 To style the way each information of the post displays, go back to edit the created template as the **Loop Item** and customize each element’s settings.
 
 Then the section will display with a nice look on the frontend.
 
-![The featured products displayed on the homepage](https://i.imgur.com/1wdDGxA.png)
+![The featured products displayed on the homepage](https://imgur.elightup.com/1wdDGxA.png)

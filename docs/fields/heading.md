@@ -9,7 +9,7 @@ The heading field creates a simple `<h4>` heading, which has an optional descrip
 ## Screenshots
 
 <Screenshots name="heading" col1={[
-    ['https://i.imgur.com/CrDtd5s.png', 'The heading field interface']
+    ['https://imgur.elightup.com/CrDtd5s.png', 'The heading field interface']
 ]} />
 
 ## Settings

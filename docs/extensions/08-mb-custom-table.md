@@ -9,7 +9,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 This reduces the number of rows in the database which can help improve the performance when the data grows and lets you have all of your data in one place, so you can easily view, edit, import, and export it.
 
-![custom table overview](https://i.imgur.com/BzE1Fvx.png)
+![custom table overview](https://imgur.elightup.com/BzE1Fvx.png)
 
 ## Getting started
 

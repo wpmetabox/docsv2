@@ -15,7 +15,7 @@ This field uses [Leaflet](https://leafletjs.com) library to render the map.
 ## Screenshots
 
 <Screenshots name="osm" col1={[
-    ['https://i.imgur.com/jJXmxrw.png', 'The Open Street Map field interface']
+    ['https://imgur.elightup.com/jJXmxrw.png', 'The Open Street Map field interface']
 ]} />
 
 ## Settings

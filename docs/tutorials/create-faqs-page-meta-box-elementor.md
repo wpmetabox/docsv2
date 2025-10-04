@@ -9,7 +9,7 @@ We’re going to add FAQs to a page using Meta Box. And, we’ll use Elementor t
 
 This is the example page:
 
-![Example of FAQs page created by using Meta Box and Elementor](https://i.imgur.com/sjpQ1l7.png)
+![Example of FAQs page created by using Meta Box and Elementor](https://imgur.elightup.com/sjpQ1l7.png)
 
 ## Video version
 
@@ -30,7 +30,7 @@ We have a FAQs page that needs to have custom fields for saving the questions an
 
 Go to **Pages > Add New** to create a new page for FAQs.
 
-![Create a new page](https://i.imgur.com/1StiUwk.png)
+![Create a new page](https://imgur.elightup.com/1StiUwk.png)
 
 ## 2. Creating custom fields
 
@@ -38,29 +38,29 @@ Go to **Meta Box > Custom Fields** to create a new field group for the page.
 
 These are fields I’ve just created.
 
-![Set group as cloneable to add more questions and answers easily](https://i.imgur.com/2B95tfC.png)
+![Set group as cloneable to add more questions and answers easily](https://imgur.elightup.com/2B95tfC.png)
 
 Since each question will go along with the corresponding answer, we have these 2 fields inside a group: Questions and Answers.
 
 There also will be more than one couple of Q&A. So, we set this group to be cloneable to easily add more questions and answers. Then, there'll be an **Add More** button to allow adding more Q&A to the FAQs page as follows.
 
-![Adding more options to the page with Add more button](https://i.imgur.com/zn6ljsx.png)
+![Adding more options to the page with Add more button](https://imgur.elightup.com/zn6ljsx.png)
 
 To avoid being messy when you have too many Q&A on the page, you can set this group to be collapsible. This is optional only.
 
-![Set the group to be collapsible to display the Q&A in a tidy way](https://i.imgur.com/2W0m7B3.png)
+![Set the group to be collapsible to display the Q&A in a tidy way](https://imgur.elightup.com/2W0m7B3.png)
 
 It’ll look more clear.
 
-![Fields display the Q&A in a tidy way](https://i.imgur.com/UHecgu8.png)
+![Fields display the Q&A in a tidy way](https://imgur.elightup.com/UHecgu8.png)
 
 After creating all the fields, move to the **Settings** tab, choose **Location** as **Post type** and select **Page**. Since we created the fields for the FAQs page, go to the **Advanced location rules** section below and choose the FAQ.
 
-![Set location for FAQs page ](https://i.imgur.com/emaEfTi.png)
+![Set location for FAQs page ](https://imgur.elightup.com/emaEfTi.png)
 
 Then, you can easily see all the fields in the page editor. Just fill in the Q&A.
 
-![The page with created custom fields ](https://i.imgur.com/DqQ2lHz.png)
+![The page with created custom fields ](https://imgur.elightup.com/DqQ2lHz.png)
 
 ## 3. Creating a skin
 
@@ -68,29 +68,29 @@ If you don’t use a cloneable field, you can get the data as usual, all of them
 
 Go to **Templates > Theme Builder > MB Group Skin > Add New** to create a new skin.
 
-![Create a skin in Template from the Menu Dashboard](https://i.imgur.com/UGJOh3h.png)
+![Create a skin in Template from the Menu Dashboard](https://imgur.elightup.com/UGJOh3h.png)
 
-![Click Add New for new skin to appear in the Meta Box groups skin](https://i.imgur.com/bFZjnQZ.png)
+![Click Add New for new skin to appear in the Meta Box groups skin](https://imgur.elightup.com/bFZjnQZ.png)
 
 Remember to set the preview for the skin.
 
-![Set the preview for the skin](https://i.imgur.com/MisYHIc.png)
+![Set the preview for the skin](https://imgur.elightup.com/MisYHIc.png)
 
 Then, add a **Heading** element for the questions.
 
-![Get the information as answers that save in MB custom fields](https://i.imgur.com/v6KL4iO.png)
+![Get the information as answers that save in MB custom fields](https://imgur.elightup.com/v6KL4iO.png)
 
 To get the information of the question saved in custom fields, click the **Dynamic Tags** button in the settings of the **Heading** element > choose **Meta Box Field** in the **Post** section.
 
-![Get the information as answers that save in MB custom fields](https://i.imgur.com/t0i8CjF.png)
+![Get the information as answers that save in MB custom fields](https://imgur.elightup.com/t0i8CjF.png)
 
 Then, choose the name of the field you want to get data from. In my case, it’s **Question**.
 
-![Choose the name of the wanted field to get data ](https://i.imgur.com/0QQbvwK.png)
+![Choose the name of the wanted field to get data ](https://imgur.elightup.com/0QQbvwK.png)
 
 For the answer of the corresponding question, add the **Text Editor** element. Then, also use the **Dynamic Tags** button > **Meta Box Fields** > choose the **Answer** fields.
 
-![Choose Text Editor element for the answer of the corresponding questions created ](https://i.imgur.com/nbwMXmw.png)
+![Choose Text Editor element for the answer of the corresponding questions created ](https://imgur.elightup.com/nbwMXmw.png)
 
 Now, both the question and answer have been obtained already.
 
@@ -98,21 +98,21 @@ It’ll automatically get and display the information saved in the first group (
 
 Since this skin will be applied for the FAQs page, remember to add a condition when publishing it.
 
-![Add a condition when publishing ](https://i.imgur.com/M1jOCwQ.png)
+![Add a condition when publishing ](https://imgur.elightup.com/M1jOCwQ.png)
 
 ## 4. Applying the skin to the page
 
 Go to **Pages** > edit the FAQs page with Elementor.
 
-![Edit the FAQs page with Elementor](https://i.imgur.com/w57xWhG.png)
+![Edit the FAQs page with Elementor](https://imgur.elightup.com/w57xWhG.png)
 
 Since all the information of the Q&A is saved in a cloneable group with subfields, add the **MB Group** element to get the data from that group.
 
-![Add the MB Group element to get the data](https://i.imgur.com/6BXDc6m.png)
+![Add the MB Group element to get the data](https://imgur.elightup.com/6BXDc6m.png)
 
 Then, there’ll be some data displayed in the preview. However, it may not be the information correctly as you want. So, change the settings in the left sidebar to the needed ones as follows.
 
-![Set options in the left side bar to match the information with the previews](https://i.imgur.com/XsfnVfl.png)
+![Set options in the left side bar to match the information with the previews](https://imgur.elightup.com/XsfnVfl.png)
 
 The **Object Type** of the template will have 2 options are **Post** and **Settings** page. Since our custom fields are for a page, we choose the **Post** option. It will be the same if your fields are applied for a post type. In the event that your custom fields are for a settings page, choose another one.
 
@@ -122,19 +122,19 @@ Then all the data will be displayed correctly, but there is no styling.
 
 For styling, choose the skin that you’ve created in the **Skin** section. Then, it will turn to the new look with the style of the created skin.
 
-![Choose the skin created](https://i.imgur.com/p655vfl.png)
+![Choose the skin created](https://imgur.elightup.com/p655vfl.png)
 
 Now, all the questions and answers have been shown with different styles.
 
-![Q&A shows with different style](https://i.imgur.com/IVCVx89.png)
+![Q&A shows with different style](https://imgur.elightup.com/IVCVx89.png)
 
 Since the element which is the question and answer are set in the skin, you need to go back to the created skin to style it if you want to have more advanced styling.
 
-![Back to the created skin to style](https://i.imgur.com/wle2LFn.png)
+![Back to the created skin to style](https://imgur.elightup.com/wle2LFn.png)
 
 Then all the changes in the skin will be automatically applied for the page.
 
-![The result of created faqs page](https://i.imgur.com/sjpQ1l7.png)
+![The result of created faqs page](https://imgur.elightup.com/sjpQ1l7.png)
 
 ------
 You may be interested in:

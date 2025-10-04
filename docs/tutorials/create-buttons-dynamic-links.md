@@ -6,7 +6,7 @@ Dynamic links are created to show various links in different posts and are displ
 
 For instance, I have a website about theme reviews here. Each post about a theme has buttons for its own demo and download pages. They are dynamic links.
 
-![Create buttons with dynamic links](https://i.imgur.com/4eZDsXP.png)
+![Create buttons with dynamic links](https://imgur.elightup.com/4eZDsXP.png)
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -32,7 +32,7 @@ First, we need custom fields for saving URLs for each post. If you’ve had <a h
 
 They are quite simple with a type of URL and there are no special settings.
 
-![Choose URL type of custom field" height](https://i.imgur.com/4YxJdnE.png)
+![Choose URL type of custom field" height](https://imgur.elightup.com/4YxJdnE.png)
 
 After having these fields, please go to the posts and input some links. That way, you will have data to check if the buttons work.
 
@@ -58,11 +58,11 @@ In there, `view_demo` and `download` are custom fields with IDs. By the way, bec
 
 The view will generate a shortcode as you see in the below image. Just copy and embed it somewhere.
 
-![The view will generate a shortcode](https://i.imgur.com/wqfanwd.png)
+![The view will generate a shortcode](https://imgur.elightup.com/wqfanwd.png)
 
 For instance, I pasted it to a sidebar on the single blog post page and got these default buttons.
 
-![Example of the default buttons](https://i.imgur.com/KbrVNak.png)
+![Example of the default buttons](https://imgur.elightup.com/KbrVNak.png)
 
 Note that this look of the button is from the theme default.
 
@@ -72,19 +72,19 @@ I’ve already pre-made a template using <a href="https://oxygenbuilder.com/">Ox
 
 I will set a container to contain two buttons right under the featured image of the post.
 
-![Set a container to contain two buttons right under the featured image](https://i.imgur.com/Vk9dVOF.png)
+![Set a container to contain two buttons right under the featured image](https://imgur.elightup.com/Vk9dVOF.png)
 
 Now, add a button. At the end of the URL section, there is a button linked to dynamic data. Click it, then choose **Meta** / **Custom** **Field** in the **Post** section. Next, scroll your mouse until you find the ID of the wanted field to connect to the button.
 
-![Set the wanted buttons](https://i.imgur.com/0MnXzkH.png)
+![Set the wanted buttons](https://imgur.elightup.com/0MnXzkH.png)
 
 The remaining thing to do is style the button as you want.
 
-![Style the buttons as you want](https://i.imgur.com/mpf6wGt.png)
+![Style the buttons as you want](https://imgur.elightup.com/mpf6wGt.png)
 
 I also created another one with a new style and linked it to another field. And, here they are in a post, with links.
 
-![Created another one with a new style and link it to another field](https://i.imgur.com/VGaSsEY.png)
+![Created another one with a new style and link it to another field](https://imgur.elightup.com/VGaSsEY.png)
 
 ## Creating buttons with dynamic links using Beaver Builder
 
@@ -92,11 +92,11 @@ I also created a similar template with <a href="https://www.wpbeaverbuilder.com/
 
 First, I add columns to set the layout, and then I add a button. There’s a Link section for inserting a static link to the button’s settings. Click the plus icon to receive Meta Box URLs.
 
-![Create buttons with dynamic links using Beaver Builder](https://i.imgur.com/STX2ztz.png)
+![Create buttons with dynamic links using Beaver Builder](https://imgur.elightup.com/STX2ztz.png)
 
 You will see the **Meta Box Field** option in the drop-down list. Choose it by clicking **Connect**.
 
-![Connect it with Meta Box field option](https://I.imgur.com/Y8DWp57.png)
+![Connect it with Meta Box field option](https://imgur.elightup.com/Y8DWp57.png)
 
 Then, choose the name of the field you want.
 
@@ -104,11 +104,11 @@ The last thing, style your button. That’s all.
 
 To have another button, you can duplicate this one to save time, then reconnect it to another field as well as restyle it.
 
-![To restyle the template, reconnect it to another field](https://i.imgur.com/HBwcQAD.png)
+![To restyle the template, reconnect it to another field](https://imgur.elightup.com/HBwcQAD.png)
 
 Now, go to a post. You will see the buttons with links.
 
-![Buttons with links](https://i.imgur.com/yjgAJo7.png)
+![Buttons with links](https://imgur.elightup.com/yjgAJo7.png)
 
 ## Creating buttons with dynamic links using Bricks
 
@@ -116,24 +116,24 @@ The last page builder is <a href="https://bricksbuilder.io/">Bricks</a>. In the 
 
 Different from other page builders, Bricks allows you to choose the type of link from a dropdown list. To get data from custom fields in Meta Box, please choose **Dynamic Data**.
 
-![Meta Box is suggested with the name of custom fields](https://i.imgur.com/8AuikQQ.png)
+![Meta Box is suggested with the name of custom fields](https://imgur.elightup.com/8AuikQQ.png)
 
 After that, you will see Meta Box is suggested with the name of custom fields following. Choose one if you want.
 
-![Meta Box is suggested with the name of custom fields](https://i.imgur.com/WtMoWZg.png)
+![Meta Box is suggested with the name of custom fields](https://imgur.elightup.com/WtMoWZg.png)
 
 Bricks will render a corresponding link to this preview post so that you can check if the data is correct.
 
-![Bricks will render a corresponding link to this preview post so that you can check if the data is correct](https://i.imgur.com/0OxPFAB.png)
+![Bricks will render a corresponding link to this preview post so that you can check if the data is correct](https://imgur.elightup.com/0OxPFAB.png)
 
 After that, all the work is styling.
 
-![Style as you want" height](https://i.imgur.com/7c2FqO2.png)
+![Style as you want" height](https://imgur.elightup.com/7c2FqO2.png)
 
 Then, I’ve got an ace button in the preview. Let’s duplicate it to have a new one. I’ll change the data source and restyle this new button.
 
-![Duplicate it to have a new one](https://i.imgur.com/xA5IPOO.png)
+![Duplicate it to have a new one](https://imgur.elightup.com/xA5IPOO.png)
 
 Finally, here they are on a post.
 
-![The created post after all steps](https://i.imgur.com/1m0k62M.png)
+![The created post after all steps](https://imgur.elightup.com/1m0k62M.png)

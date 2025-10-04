@@ -67,7 +67,7 @@ add_action( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 Result:
 
-![User meta screenshot](https://i.imgur.com/mRZJKhZ.png)
+![User meta screenshot](https://imgur.elightup.com/mRZJKhZ.png)
 
 ## Data
 

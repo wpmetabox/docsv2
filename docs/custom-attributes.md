@@ -8,7 +8,7 @@ With Meta Box, you can add custom attributes for inputs like text, URL, email fi
 
 To add custom attributes to the fields, click the **Advanced** tab in the field settings, and click the **Add New** button under **Custom HTML5 Attributes**:
 
-![custom input attributes](https://i.imgur.com/IFiPfAr.png)
+![custom input attributes](https://imgur.elightup.com/IFiPfAr.png)
 
 Then add your attribute name and value.
 

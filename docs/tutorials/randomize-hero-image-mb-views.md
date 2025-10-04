@@ -8,7 +8,7 @@ Each site usually has only one hero image. Then, the visitors will see the same 
 
 This is an example.
 
-![The hero sets display randomly with different backgrounds and content](https://i.imgur.com/ZY0ErNB.gif)
+![The hero sets display randomly with different backgrounds and content](https://imgur.elightup.com/ZY0ErNB.gif)
 
 ## Video version
 
@@ -33,15 +33,15 @@ We’ll use a settings page to include all the content of the hero section, incl
 
 So, go to **Meta Box** > **Settings Pages** and create a new page.
 
-![Go to Meta Box > Settings Page and create a new one](https://i.imgur.com/SEBeDmg.png)
+![Go to Meta Box > Settings Page and create a new one](https://imgur.elightup.com/SEBeDmg.png)
 
 After publishing, you can see a new settings page appear in the Admin Dashboard.
 
-![The created settings page displays in the menu of Admin Dashboard](https://i.imgur.com/z0VQ14y.png)
+![The created settings page displays in the menu of Admin Dashboard](https://imgur.elightup.com/z0VQ14y.png)
 
 We’ve just initialized the page, so it still is blank.
 
-![The settings page is blank now](https://i.imgur.com/tYxP2Yv.png)
+![The settings page is blank now](https://imgur.elightup.com/tYxP2Yv.png)
 
 In the next step, we’ll create some custom fields for this settings page.
 
@@ -49,7 +49,7 @@ In the next step, we’ll create some custom fields for this settings page.
 
 Go to **Meta Box** > **Custom Fields** to create a new field group.
 
-![Go to Meta Box > Custom Fields to create a new field group](https://i.imgur.com/O5y5svO.png)
+![Go to Meta Box > Custom Fields to create a new field group](https://imgur.elightup.com/O5y5svO.png)
 
 Each set displayed on the hero section will be saved in a clonable group with some subfields inside. So, this is the structure of the fields I created.
 
@@ -60,33 +60,33 @@ Each set displayed on the hero section will be saved in a clonable group with so
 |        Title    |  Textarea     |       Subfield        |
 |        Subtitle |  Textarea     |       Subfield        |
 
-![The structure of the fields with a clonable group and subfields](https://i.imgur.com/xLaC4Uz.png)
+![The structure of the fields with a clonable group and subfields](https://imgur.elightup.com/xLaC4Uz.png)
 
 Since we have multiple hero sets, I set the group as cloneable. This is the most pivotal setting in this practice.
 
-![Set the group is cloneable](https://i.imgur.com/iSt5u3g.png)
+![Set the group is cloneable](https://imgur.elightup.com/iSt5u3g.png)
 
 We should set this group to be collapsible to see the content more tidily.
 
-![Set the group to be collapsible to see the content more tidily](https://i.imgur.com/qNwqv8U.png)
+![Set the group to be collapsible to see the content more tidily](https://imgur.elightup.com/qNwqv8U.png)
 
 You also can add the title for the group. The `{#}` is for numbering the sets.
 
-![Add the title for the group.](https://i.imgur.com/lDj0WCa.png)
+![Add the title for the group.](https://imgur.elightup.com/lDj0WCa.png)
 
 After having all the fields, move to the **Settings** tab, set the **Location** as **Settings Page**, and choose the created settings page to assign custom fields to it.
 
-![Move to the Settings tab, set the Location as Settings Page, and choose the created settings page to apply custom fields to it](https://i.imgur.com/zSc6h1l.png)
+![Move to the Settings tab, set the Location as Settings Page, and choose the created settings page to apply custom fields to it](https://imgur.elightup.com/zSc6h1l.png)
 
 Go to the created settings page, you can see the custom fields are ready.
 
-![The custom fields are ready on the settings page](https://i.imgur.com/qJ6kRrO.png)
+![The custom fields are ready on the settings page](https://imgur.elightup.com/qJ6kRrO.png)
 
 Just add the hero image and other content.
 
 Click on the **Add more** button to add another set of the hero image and content.
 
-![Click on the Add more button to add another set of the hero image and content](https://i.imgur.com/X8qOC2R.png)
+![Click on the Add more button to add another set of the hero image and content](https://imgur.elightup.com/X8qOC2R.png)
 
 To get and display data, we’ll use MB Views in the next step.
 
@@ -94,21 +94,21 @@ To get and display data, we’ll use MB Views in the next step.
 
 Go to **Meta Box** > **Views** and create a new template.
 
-![Go to Meta Box > Views and create a new view](https://i.imgur.com/3ce8Mok.png)
+![Go to Meta Box > Views and create a new view](https://imgur.elightup.com/3ce8Mok.png)
 
 ### 3.1. Getting all data from custom fields
 
 To get data from the custom fields, click on the **Insert Field** button, and look for any custom field we want from the list.
 
-![Click on the Insert Field button, and look for the custom field from the list to get the data](https://i.imgur.com/wEn7gVb.png)
+![Click on the Insert Field button, and look for the custom field from the list to get the data](https://imgur.elightup.com/wEn7gVb.png)
 
 Since the fields in this case are on a settings page, go to the **Site** tab. You will see the group of fields that we created.
 
-![The group we created in the Site tab](https://i.imgur.com/rPKKTwz.png)
+![The group we created in the Site tab](https://imgur.elightup.com/rPKKTwz.png)
 
 Click on it and some lines of code will be generated in the **Template** section.
 
-![Some lines of code will be generated in the Template section when click on the group](https://i.imgur.com/Z10lJdh.png)
+![Some lines of code will be generated in the Template section when click on the group](https://imgur.elightup.com/Z10lJdh.png)
 
 **In there**:
 
@@ -117,19 +117,19 @@ Click on it and some lines of code will be generated in the **Template** section
 
 Next, just choose a subfield of the group from the list to insert them into the loop.
 
-![Choose a subfield of the group from the list to insert them into the loop as usual](https://i.imgur.com/ocafGp4.gif)
+![Choose a subfield of the group from the list to insert them into the loop as usual](https://imgur.elightup.com/ocafGp4.gif)
 
 Then, move to the settings of the view. There are some options to choose from. I prefer the default one to set this template in the kind of a shortcode to have the shortcode when publishing.
 
-![Set the view type as a shortcode to have the shortcode embedded in any place](https://i.imgur.com/T7Q3e1K.png)
+![Set the view type as a shortcode to have the shortcode embedded in any place](https://imgur.elightup.com/T7Q3e1K.png)
 
 After that, go to the homepage, and embed the shortcode to any place.
 
-![Embed the shortcode to any place in the homepage](https://i.imgur.com/7e60Uwb.png)
+![Embed the shortcode to any place in the homepage](https://imgur.elightup.com/7e60Uwb.png)
 
 All the images and content of all sets that I input to the fields are displayed.
 
-![All the images and content of all sets that I input to the fields are displayed](https://i.imgur.com/MRbjoTQ.png)
+![All the images and content of all sets that I input to the fields are displayed](https://imgur.elightup.com/MRbjoTQ.png)
 
 However, we need only one set display at once. So, we should customize the template a little bit more to choose randomly which data will be displayed.
 
@@ -157,7 +157,7 @@ Now, I’ll replace the loop to the following line of code to create a variable:
 {%  set item = random(group.hero_image) %}
 ```
 
-![Replace the loop to another line of code to create a variable](https://i.imgur.com/C74jfvB.png)
+![Replace the loop to another line of code to create a variable](https://imgur.elightup.com/C74jfvB.png)
 
 **Explanation**:
 
@@ -166,23 +166,23 @@ Now, I’ll replace the loop to the following line of code to create a variable:
 
 Also, customize the code of the image to change the output of them.
 
-![Customize the code of the image to change the output of them](https://i.imgur.com/mWyOHm7.png)
+![Customize the code of the image to change the output of them](https://imgur.elightup.com/mWyOHm7.png)
 
 As well as replace the prefix with the name of the created variable. It helps to return only the image which is in the corresponding array.
 
-![Replace the prefix with the name of the created variable](https://i.imgur.com/lvf8OUm.png)
+![Replace the prefix with the name of the created variable](https://imgur.elightup.com/lvf8OUm.png)
 
 Also change the prefix for the title and subtitle.
 
-![Change the prefix for the title and subtitle](https://i.imgur.com/APwkpPY.png)
+![Change the prefix for the title and subtitle](https://imgur.elightup.com/APwkpPY.png)
 
 After updating the views, go to the homepage and you will see that only one set of the hero image will be displayed at once.
 
-![Then, only one set of the hero image will be displayed at once](https://i.imgur.com/owWY8EH.png)
+![Then, only one set of the hero image will be displayed at once](https://imgur.elightup.com/owWY8EH.png)
 
 When we refresh the page, another set will be there instead.
 
-![When we refresh the page, another set will be there instead](https://i.imgur.com/xlTOOWU.gif)
+![When we refresh the page, another set will be there instead](https://imgur.elightup.com/xlTOOWU.gif)
 
 There is a point here that I turned the image to its URL since I want it to be the background for this section in the next step.
 
@@ -192,16 +192,16 @@ Go back to the view to edit the template once again.
 
 Add some **`div`** tags and classes for the content, as well as turn the image to the background.
 
-![Add some div tags and classes for the content, as well as turn the image to the background](https://i.imgur.com/J7x3njR.png)
+![Add some div tags and classes for the content, as well as turn the image to the background](https://imgur.elightup.com/J7x3njR.png)
 
 To style the section, move to the **CSS** tab, add some code.
 
-![To style the section, move to the CSS tab, add some code](https://i.imgur.com/on1DXcP.png)
+![To style the section, move to the CSS tab, add some code](https://imgur.elightup.com/on1DXcP.png)
 
 Back to the homepage, there will be a new look of the hero section.
 
-![The new look of the hero section](https://i.imgur.com/HMTd8E2.png)
+![The new look of the hero section](https://imgur.elightup.com/HMTd8E2.png)
 
 Just refresh the page for several times, you will see the picture changed along with the different titles and subtitles.
 
-![The hero sets display randomly with different backgrounds and content](https://i.imgur.com/ZY0ErNB.gif)
+![The hero sets display randomly with different backgrounds and content](https://imgur.elightup.com/ZY0ErNB.gif)

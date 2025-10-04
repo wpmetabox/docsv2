@@ -24,11 +24,11 @@ Here's how to install it:
 2. Go to **Plugins** > **Add New Plugin** > **Upload Plugin**.
 3. Upload the downloaded file and click **Install Now**.
 
-![Install Meta Box Lite](https://i.imgur.com/INF4fIQ.png)
+![Install Meta Box Lite](https://imgur.elightup.com/INF4fIQ.png)
 
 Then, click **Activate** to start using Meta Box Lite. Now, you can see it in the admin dashboard.
 
-![Meta Box Lite in the admin dashboard](https://i.imgur.com/epQY3XW.png)
+![Meta Box Lite in the admin dashboard](https://imgur.elightup.com/epQY3XW.png)
 
 :::info
 

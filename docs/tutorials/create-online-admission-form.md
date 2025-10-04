@@ -5,11 +5,11 @@ instead of submitting hard copies for student information, schools may have onli
 
 Here is the example.
 
-![Example of the online admission form](https://i.imgur.com/lP5a6JZ.png)
+![Example of the online admission form](https://imgur.elightup.com/lP5a6JZ.png)
 
-![Example of the online admission form](https://i.imgur.com/naAHmt4.png)
+![Example of the online admission form](https://imgur.elightup.com/naAHmt4.png)
 
-![Example of the online admission form](https://i.imgur.com/cHAFehA.png)
+![Example of the online admission form](https://imgur.elightup.com/cHAFehA.png)
 
 ## Preparation
 
@@ -32,11 +32,11 @@ They’re all in the **Meta Box AIO**. If you haven’t had it, you can download
 
 Go to **Meta Box > Post Types > Add New** to create a new post type. In my case, the new post type is **Student Info**.
 
-![Create a new custom post type](https://i.imgur.com/7YThrpP.png)
+![Create a new custom post type](https://imgur.elightup.com/7YThrpP.png)
 
 After publishing, you will see a new menu in the **Admin Dashboard**.
 
-![New post type appear in the Admin Dashboard](https://i.imgur.com/hFkGDMI.png)
+![New post type appear in the Admin Dashboard](https://imgur.elightup.com/hFkGDMI.png)
 
 ## 2. Creating custom fields
 
@@ -88,7 +88,7 @@ Here I just add some basic fields like in the above image. Most of those fields 
 
 After adding all of them, you can add a new post in the **Student Info** post type, and you will see they look like this:
 
-![Add a new post in the Student infor post type](https://i.imgur.com/RoqZI5A.png)
+![Add a new post in the Student infor post type](https://imgur.elightup.com/RoqZI5A.png)
 
 If you keep this layout for the fields, each field will be a line on the frontend as the same as you see here. I think it is not appropriate, because people will find it difficult to follow and manipulate.
 
@@ -98,13 +98,13 @@ Thus, I will adjust a little bit by grouping the fields and setting them into co
 
 Just add a field in the type of group, and add other fields to be its sub-fields.
 
-![Add other fields to be sub-fields](https://i.imgur.com/qvBHLcO.png)
+![Add other fields to be sub-fields](https://imgur.elightup.com/qvBHLcO.png)
 
 To display fields in columns, just set the number in their settings as above.
 
 Each row to display the fields will be divided into 12 grids. If you want the fields displayed in columns, just change the number in the box to any number up to 12.
 
-![Change the number in the box](https://i.imgur.com/uHZRY2u.png)
+![Change the number in the box](https://imgur.elightup.com/uHZRY2u.png)
 
 Here is the settings for columns of each field:
 
@@ -306,13 +306,13 @@ Here is the settings for columns of each field:
 
 Here are all the fields that I’ve created in groups and sections:
 
-![The created fields](https://i.imgur.com/5pxt1si.png)
+![The created fields](https://imgur.elightup.com/5pxt1si.png)
 
-![The created fields](https://i.imgur.com/k53GyYj.png)
+![The created fields](https://imgur.elightup.com/k53GyYj.png)
 
-![The created fields](https://i.imgur.com/ZcJSrtm.png)
+![The created fields](https://imgur.elightup.com/ZcJSrtm.png)
 
-![The created fields](https://i.imgur.com/GeQXhlr.png)
+![The created fields](https://imgur.elightup.com/GeQXhlr.png)
 
 ### Special settings of custom fields
 
@@ -322,11 +322,11 @@ Besides the fields that have no special settings, there are some fields that you
 
 To set up the **Maps** field, add the **Open Street Maps** field. Then, you need to fill in the ID of the **Address** field in the **Address** field section. This is compulsory to get the exact location from the Address field and markup on the maps.
 
-![Setting the maps field](https://i.imgur.com/9Ar6cER.png)
+![Setting the maps field](https://imgur.elightup.com/9Ar6cER.png)
 
 To make it work, go to the **Settings tab > Custom Settings > Add New** to enter **geo** as the key and true as the value.
 
-![Enter geo in the settings](https://i.imgur.com/BqKBKbN.png)
+![Enter geo in the settings](https://imgur.elightup.com/BqKBKbN.png)
 
 **Add options for the fields in the type of selection**
 
@@ -334,21 +334,21 @@ There are some fields in the type of selection where student can choose an optio
 
 In the **Program Type** field, I fill in several options in the **Choices** box.
 
-![Fill in several options in the Choices box](https://i.imgur.com/LwWapTB.png)
+![Fill in several options in the Choices box](https://imgur.elightup.com/LwWapTB.png)
 
 For the **Undergraduate Programs**:
 
-![For the undergraduate programs](https://i.imgur.com/mLqiyvQ.png)
+![For the undergraduate programs](https://imgur.elightup.com/mLqiyvQ.png)
 
 For the **PhD Programs**, do likewise.
 
-![For the PhD programs](https://i.imgur.com/RYBoaDo.png)
+![For the PhD programs](https://imgur.elightup.com/RYBoaDo.png)
 
 Since the **Postgraduate Programs** will have two options, set it as the **Radio** field with two options filled in the **Choices** box.
 
-![Set the Postgraduate programs as Radio](https://i.imgur.com/PYZNfT9.png)
+![Set the Postgraduate programs as Radio](https://imgur.elightup.com/PYZNfT9.png)
 
-![Setting the fields](https://i.imgur.com/gfk5CEk.png)
+![Setting the fields](https://imgur.elightup.com/gfk5CEk.png)
 
 **Set conditional logic for the fields in the type of section**
 
@@ -358,7 +358,7 @@ Here, I took the **Program Type** and **Undergraduate Program** fields as an exa
 
 The **Program Type** field has three options with values and labels.To show up only the course of **Undergraduate Programs** chosen by the students, go to the **Undergraduate Programs** field > **Advanced** tab and set conditional logic as below:
 
-![The program type field](https://i.imgur.com/uMmL2B5.png)
+![The program type field](https://imgur.elightup.com/uMmL2B5.png)
 
 **Note that**: `program_type` is the ID of the **Program Type** field while `undergraduate_program` is the corresponding value of the Undergraduate Programs option that we’ve filled in the Choices box of the Program Type.
 
@@ -366,23 +366,23 @@ It means when the students chose the Program Type as **Undergraduate Programs**,
 
 Do likewise with the other fields. You just need to change the values of the options in the **Conditional logic** section.
 
-![Change the values of the options](https://i.imgur.com/894ew2Q.png)
+![Change the values of the options](https://imgur.elightup.com/894ew2Q.png)
 
 Then the fields will be shown or hide like this:
 
-![The fields will be shown or like](https://i.imgur.com/ZLLWg6v.gif)
+![The fields will be shown or like](https://imgur.elightup.com/ZLLWg6v.gif)
 
 After creating all the fields, move to the **Settings** tab. Remember to choose the **Location** as **Post Type** and select the **Student Info** post type to apply these fields to it.
 
-![Set location for the created fields](https://i.imgur.com/dKVysfN.png)
+![Set location for the created fields](https://imgur.elightup.com/dKVysfN.png)
 
 When you publish the field group, notice the **field group ID** since we’ll use it later.
 
-![Notice the field group ID](https://i.imgur.com/LTXAvkp.png)
+![Notice the field group ID](https://imgur.elightup.com/LTXAvkp.png)
 
 Now, when creating a new post in the **Student Info** post type, you’ll see all the custom fields:
 
-![Create a new post in the post type](https://i.imgur.com/lO24W6A.gif)
+![Create a new post in the post type](https://imgur.elightup.com/lO24W6A.gif)
 
 ## 3. Displaying the form on the frontend
 
@@ -390,11 +390,11 @@ Now, when creating a new post in the **Student Info** post type, you’ll see al
 
 Go to **Pages > Add New** to create a new blank page. Here, I created a page named **Admission Form**.
 
-![Create a new page](https://i.imgur.com/5iH1C4O.png)
+![Create a new page](https://imgur.elightup.com/5iH1C4O.png)
 
 When creating the new page, set the featured image for it. This image will be use as the logo of the school.
 
-![Set the featured image for the created new page](https://i.imgur.com/DU57Zdh.png)
+![Set the featured image for the created new page](https://imgur.elightup.com/DU57Zdh.png)
 
 Remember to copy the URL of the featured image since we’ll use it to display on the frontend.
 
@@ -402,7 +402,7 @@ Remember to copy the URL of the featured image since we’ll use it to display o
 
 Go to **Meta Box > Views > Add New** to create a new template.
 
-![Create a template for the page]( https://i.imgur.com/7YThrpP.png)
+![Create a template for the page]( https://imgur.elightup.com/7YThrpP.png)
 
 To display the admission form, add this code to the **Template** tab:
 
@@ -422,7 +422,7 @@ To display the admission form, add this code to the **Template** tab:
 </div>
 ```
 
-![Add some code](https://i.imgur.com/vjtEGye.png)
+![Add some code](https://imgur.elightup.com/vjtEGye.png)
 
 **Explanation**:
 
@@ -438,7 +438,7 @@ This is the shortcode of the created field group. This shortcode is automaticall
 
 To get the shortcode of the field group, make sure that you enable **MB Frontend Submission**. Then, go to **Meta Box > Custom Fields** and you will see the **Shortcode** column like this:
 
-![Get the shortcode of the field group](https://i.imgur.com/MgZCv22.png)
+![Get the shortcode of the field group](https://imgur.elightup.com/MgZCv22.png)
 
 This is the full shortcode:
 
@@ -450,19 +450,19 @@ But I’ve already deleted the attribute `post_fields='title,content'` since I d
 
 Finally, scroll down to the **Settings** section, choose the **Type** as **Singular**. Then, set **Location** as **Page** and select the **Admission Form** page.
 
-![Choose type as singular](https://i.imgur.com/phw7hCb.png)
+![Choose type as singular](https://imgur.elightup.com/phw7hCb.png)
 
 This is how the form looks on the page:
 
-![The form in the frontend](https://i.imgur.com/lP5a6JZ.png)
+![The form in the frontend](https://imgur.elightup.com/lP5a6JZ.png)
 
-![The form in the frontend](https://i.imgur.com/naAHmt4.png)
+![The form in the frontend](https://imgur.elightup.com/naAHmt4.png)
 
-![The form in the frontend](https://i.imgur.com/cHAFehA.png)
+![The form in the frontend](https://imgur.elightup.com/cHAFehA.png)
 
 To have advanced styling, go to the **CSS** tab of the template and add some CSS code:
 
-![Add some css code for styling](https://i.imgur.com/yaRmTfz.png)
+![Add some css code for styling](https://imgur.elightup.com/yaRmTfz.png)
 
 ## 4. Setting the page for reviewing
 
@@ -472,7 +472,7 @@ Instead of saying thank you or notifying students for successful submissions, I 
 
 Go to **Pages > Add New** to create a new page called **Review Admission Form**.
 
-![Create a new page](https://i.imgur.com/qRKz6ck.png)
+![Create a new page](https://imgur.elightup.com/qRKz6ck.png)
 
 We’ll need a redirect link to redirect students from the admission form page to the reviewing page. To make the link, we add some codes to the `functions.php` file of the theme:
 
@@ -511,7 +511,7 @@ Explanation:
 
 This code will get and return the value of the `student_id` variable from the redirect link. We will need this value right in the next move.
 
-![Add the code to the box](https://i.imgur.com/UjaLREU.png)
+![Add the code to the box](https://imgur.elightup.com/UjaLREU.png)
 
 ### Creating a new template for reviewing page
 
@@ -535,7 +535,7 @@ In the **Template** tab of the view, add this code:
     </div>
 {% endif %}
 ```
-![Add the code to the template](https://i.imgur.com/EanI08M.png)
+![Add the code to the template](https://imgur.elightup.com/EanI08M.png)
 
 **In this code**:
 
@@ -551,15 +551,15 @@ Additionally, I want to have a Print button instead of Submit, so that students 
 }
 
 ```
-![Add the code to the CSS tab](https://i.imgur.com/JluBCpR.png)
+![Add the code to the CSS tab](https://imgur.elightup.com/JluBCpR.png)
 
 Try a test, after submitting information, the link is changed and the **Student ID** is generated as well:
 
-![The final result](https://i.imgur.com/wHDPc7q.png)
+![The final result](https://imgur.elightup.com/wHDPc7q.png)
 
 
-![The final result](https://i.imgur.com/xpkC9s5.png)
+![The final result](https://imgur.elightup.com/xpkC9s5.png)
 
 
-![The final result](https://i.imgur.com/Ha9G97T.png)
+![The final result](https://imgur.elightup.com/Ha9G97T.png)
 

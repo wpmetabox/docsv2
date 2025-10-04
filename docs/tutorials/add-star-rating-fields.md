@@ -33,7 +33,7 @@ First, to create the plugin, add the following code to the `mb-rating-field.php`
 
 Then, you will see the new plugin in the list of installed plugins in the **Dashboard**. Let’s activate it.
 
-![The new plugin in the list of installed plugins](https://i.imgur.com/F1XriLc.png)
+![The new plugin in the list of installed plugins](https://imgur.elightup.com/F1XriLc.png)
 
 ## 2. Creating a new field type as star rating
 
@@ -88,7 +88,7 @@ public static function html( $meta, $field ) {
 
 Next, we need to style it a little bit to show the above radio options as stars (currently they are only visible as small circles).
 
-![Style the star rating](https://i.imgur.com/kR6T3wI.png)
+![Style the star rating](https://imgur.elightup.com/kR6T3wI.png)
 
 Just add this code to the `css/admin.css` file.
 
@@ -172,7 +172,7 @@ In there, `'post_types'` => `['post']` stipulates the location of the fields as 
 
 After that, you will see the created custom field display in the post editor.
 
-![Newly created field display in the post editor](https://i.imgur.com/Uxg005Y.png)
+![Newly created field display in the post editor](https://imgur.elightup.com/Uxg005Y.png)
 
 ## 5. Displaying the value from the star rating fields
 
@@ -256,6 +256,6 @@ In the case that you don’t want to touch the theme files, instead of adding th
 
 And this is the result:
 
-![the result after all steps](https://i.imgur.com/Imu5HNb.png)
+![the result after all steps](https://imgur.elightup.com/Imu5HNb.png)
 
 You can download the code in this tutorial from [Github](https://github.com/wpmetabox/mb-rating-field).

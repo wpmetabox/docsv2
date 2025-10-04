@@ -8,7 +8,7 @@ Providing a number of reading time will help the visitor know in advance how muc
 
 This is an example for a number of reading time that we will create in this practice.
 
-![An example for a number of reading time](https://i.imgur.com/NrVqdKG.png)
+![An example for a number of reading time](https://imgur.elightup.com/NrVqdKG.png)
 
 ## Video version
 
@@ -32,11 +32,11 @@ In this practice, we need some tools:
 
 I will create a template to show the time information in the top section of the post. We should put the reading time on the top since it should be noticed before the visitor reads the post.
 
-![The time information in the top section of the post](https://i.imgur.com/NrVqdKG.png)
+![The time information in the top section of the post](https://imgur.elightup.com/NrVqdKG.png)
 
 Go to **Meta Box** > **Views**, and create a new template for setting the position to display timing information.
 
-![Go to Views, and create a new template for displaying time position](https://i.imgur.com/LynEixS.png)
+![Go to Views, and create a new template for displaying time position](https://imgur.elightup.com/LynEixS.png)
 
 In the **Template** tab, add some lines of code like this:
 
@@ -45,11 +45,11 @@ In the **Template** tab, add some lines of code like this:
     <span class="dashicons dashicons-clock"></span>
     <div class="time">
         <span id="time"></span>
-    </div> 
-</div> 
+    </div>
+</div>
 ```
 
-![In the Template tab, add some lines of code](https://i.imgur.com/mHPTNPP.png)
+![In the Template tab, add some lines of code](https://imgur.elightup.com/mHPTNPP.png)
 
 **Explanation:**
 
@@ -63,15 +63,15 @@ This line is to get the time icon. It’s just for decoration.
 
 After getting all of the information of the time as you want, move to the **Settings** section of the view, set the **Type** as **Singular**, and choose the name of any post type that we set the author for in **Location**.
 
-![Assign this template to the posts](https://i.imgur.com/7KxiOHn.png)
+![Assign this template to the posts](https://imgur.elightup.com/7KxiOHn.png)
 
 Pay heed that I choose the option which shown in below picture to set the reading time display right before the post content.
 
-![Set the reading time display right before the post content](https://i.imgur.com/MIHsbNI.png)
+![Set the reading time display right before the post content](https://imgur.elightup.com/MIHsbNI.png)
 
 Since I added only the icon into this template, there will be only the icon appearing from this template on the posts as well.
 
-![The icon appearing from this template on the posts without the reading time number](https://i.imgur.com/eYULHIZ.png)
+![The icon appearing from this template on the posts without the reading time number](https://imgur.elightup.com/eYULHIZ.png)
 
 To have the reading time number, we need to create another view.
 
@@ -81,7 +81,7 @@ I’m creating a new template to calculate the reading time based on the number 
 
 Come back to **Meta Box** > **Views** and create a new view.
 
-![Go to Meta Box > Views and create a new view](https://i.imgur.com/SN3NGUm.png)
+![Go to Meta Box > Views and create a new view](https://imgur.elightup.com/SN3NGUm.png)
 
 We should use JavaScript, so move to the **JavaScript** tab and add code.
 
@@ -104,7 +104,7 @@ const readingTime = Math.ceil(wordCount / wordsPerMinute);
 time.innerHTML = `${readingTime} MIN`;
 ```
 
-![Add some lines of code in JavaScript](https://i.imgur.com/0ldFOGd.png)
+![Add some lines of code in JavaScript](https://imgur.elightup.com/0ldFOGd.png)
 
 **In there:**
 
@@ -116,7 +116,7 @@ This line of code is to get all the text from the post content.
 
 I also create an object to connect with the ID that we created in the previous view for the reading time.
 
-![An object to connect with the ID that we created for the reading time](https://i.imgur.com/rUxcQrn.png)
+![An object to connect with the ID that we created for the reading time](https://imgur.elightup.com/rUxcQrn.png)
 
 ```
 const wordsArray = articleText.split(' ');
@@ -148,7 +148,7 @@ time.innerHTML = `${readingTime} MIN`;
 
 This line will help to pass the number that the formula figure out to the section where we set to display the number in the previous view.
 
-![This is where we set to display the reading time number](https://i.imgur.com/BCubaqw.png)
+![This is where we set to display the reading time number](https://imgur.elightup.com/BCubaqw.png)
 
 `MIN` is just the text I added to display along with the number as the unit of time.
 
@@ -160,22 +160,22 @@ Notice that we should choose the position as **‘After the post content’**. T
 
 This also is the reason that I have two views to set the reading time: one for displaying area, one for calculating.
 
-![Assign this view to the post](https://i.imgur.com/CH4q7Gl.png)
+![Assign this view to the post](https://imgur.elightup.com/CH4q7Gl.png)
 
 Now, go to a singular page, you will see the reading time displayed.
 
-![Go to a singular page, the reading time displayed](https://i.imgur.com/E3pS9bX.png)
+![Go to a singular page, the reading time displayed](https://imgur.elightup.com/E3pS9bX.png)
 
 Go to another post, you also can see that the number has also changed. It means that each post will have its own number of reading time based on its number of words.
 
-![Go to another post, the number has also changed](https://i.imgur.com/3OgVh87.png)
+![Go to another post, the number has also changed](https://imgur.elightup.com/3OgVh87.png)
 
 ## 3. Styling the section for reading time
 
 If you want to make the reading time display with a better look, go back to one of the views, and add some CSS.
 
-![Add CSS to make the reading time display with a better look](https://i.imgur.com/J8GxkHo.png)
+![Add CSS to make the reading time display with a better look](https://imgur.elightup.com/J8GxkHo.png)
 
 Back to the page on frontend, the new look has been done.
 
-![This is final look of reading time section](https://i.imgur.com/NrVqdKG.png)
+![This is final look of reading time section](https://imgur.elightup.com/NrVqdKG.png)

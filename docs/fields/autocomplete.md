@@ -12,7 +12,7 @@ This field uses jQuery UI library to perform the autocomplete action.
 ## Screenshots
 
 <Screenshots name="autocomplete" col1={[
-    ['https://i.imgur.com/zvZI8qs.png', 'The autocomplete field interface']
+    ['https://imgur.elightup.com/zvZI8qs.png', 'The autocomplete field interface']
 ]} />
 
 ## Settings

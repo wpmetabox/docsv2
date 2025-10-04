@@ -4,7 +4,7 @@ title: Displaying product variations - MB Views
 
 Let’s create a single product page that contains different information of product variations stored in custom fields. Whenever you click on a color button, all the corresponding information of that variation will be displayed, even in the image gallery.
 
-![Example of product variations](https://i.imgur.com/FuWHvCk.gif)
+![Example of product variations](https://imgur.elightup.com/FuWHvCk.gif)
 
 ## Preparation
 
@@ -24,13 +24,13 @@ For this practice, we need these tools:
 
 Go to **Meta Box > Post Types > New Post Type**.
 
-![Create a new post type](https://i.imgur.com/g3nBd0W.png)
+![Create a new post type](https://imgur.elightup.com/g3nBd0W.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create fields you want.
 
-![add new custom fields](https://i.imgur.com/sB2mWc8.png)
+![add new custom fields](https://imgur.elightup.com/sB2mWc8.png)
 
 This is the structure of the fields that I’ll create.
 
@@ -81,15 +81,15 @@ This is the structure of the fields that I’ll create.
 
 Each product may have more than one variation. Thus, we set the **Variations of Product** group as cloneable to have more spaces to add variations.
 
-![Set groups to be cloneable](https://i.imgur.com/T5oEKfl.png)
+![Set groups to be cloneable](https://imgur.elightup.com/T5oEKfl.png)
 
 After creating all the necessary fields, go to the **Settings** tab > **Location** > choose **Post Type** as **Online Shop** to apply these fields to it.
 
-![Choose the wanted post type to apply the created custom fields](https://i.imgur.com/2va9DxP.png)
+![Choose the wanted post type to apply the created custom fields](https://imgur.elightup.com/2va9DxP.png)
 
 Back to the post editor, you will see all of the created custom fields.
 
-![Created custom fields in the post editor](https://i.imgur.com/Ntyl4wY.png)
+![Created custom fields in the post editor](https://imgur.elightup.com/Ntyl4wY.png)
 
 Now, just enter the information into the fields.
 
@@ -101,29 +101,29 @@ So, let’s create a new template using it.
 
 Instead of typing code into the box in the **Template** tab, you can insert fields to get their data.
 
-![Insert fields in the template tab](https://i.imgur.com/KxxeSJE.png)
+![Insert fields in the template tab](https://imgur.elightup.com/KxxeSJE.png)
 
 Just click the **Insert Field** button and choose which one you want. However, whenever you wanna add a field from a cloneable group, a loop will be added first. Just replace the text inside the loop by the field you want.
 
-![Choose the wanted field](https://i.imgur.com/vZWtYLE.gif)
+![Choose the wanted field](https://imgur.elightup.com/vZWtYLE.gif)
 
 This is how it is after inserting all the fields.
 
-![Insterting all the fields](https://i.imgur.com/o4BxH6F.png)
+![Insterting all the fields](https://imgur.elightup.com/o4BxH6F.png)
 
 Also in the template, I get the value from the **Product Image** field twice. One displays in the large size, and one in the thumbnail size. All of them will be used to set a slider later.
 
 I also changed the code a little bit to know when the variation has any promotion price and set a rule to display both of the original and promotional prices or just the original one.
 
-![Change the code a little bit](https://i.imgur.com/NBp9TcQ.png)
+![Change the code a little bit](https://imgur.elightup.com/NBp9TcQ.png)
 
 Next, move to the **Settings** section of the view. Assign this template to the single product page.
 
-![Assign this template to the single product page](https://i.imgur.com/ZysUrW0.png)
+![Assign this template to the single product page](https://imgur.elightup.com/ZysUrW0.png)
 
 Go to the single product page, you can see the result.
 
-![The result](https://i.imgur.com/238hUm2.gif)
+![The result](https://imgur.elightup.com/238hUm2.gif)
 
 It is so messy now. We’ll need some JS and CSS to make it more beautiful with a better layout.
 
@@ -131,15 +131,15 @@ Before styling, we need to edit this template a little bit more. Back to the vie
 
 There is a notice that I added an A tag in the place where I output the color of variations. I also created a dynamic class there. It will generate different classes using the color name.
 
-![Create dynamic class](https://i.imgur.com/nXxFEee.png)
+![Create dynamic class](https://imgur.elightup.com/nXxFEee.png)
 
 I added an attribute named `data-id` for price, size, status as well as image gallery. This attribute will admit the value of the corresponding color name.
 
-![Add an atribute](https://i.imgur.com/oN8nKj0.png)
+![Add an atribute](https://imgur.elightup.com/oN8nKj0.png)
 
 On the single product page, all the elements have just been rearranged.
 
-![All the elements of single product page have just been rearranged](https://i.imgur.com/m0ckVMh.gif)
+![All the elements of single product page have just been rearranged](https://imgur.elightup.com/m0ckVMh.gif)
 
 ## 4. Setting rules to display the variations
 
@@ -149,7 +149,7 @@ The images of the product variations will be in a slider and the information of 
 
 For the JS and CSS, I use the Slick library. It’s also available on [Github](https://github.com/kenwheeler/slick/tree/master/slick). We just need three files here.
 
-![Use Slick library for the JS and CSS](https://i.imgur.com/fkSE9Mv.png)
+![Use Slick library for the JS and CSS](https://imgur.elightup.com/fkSE9Mv.png)
 
 Go to the folder of the My Custom Functionality plugin. Upload them into the corresponding JS and CSS folders.
 
@@ -157,7 +157,7 @@ Go to the folder of the My Custom Functionality plugin. Upload them into the cor
 
 Next, to set a rule that stipulates for displaying the information of each variation as well as the slider, I’ll create a **custom.js** file in the **js** folder and add the following code to it.
 
-![Create a custom.js file](https://i.imgur.com/qpLNLT0.png)
+![Create a custom.js file](https://imgur.elightup.com/qpLNLT0.png)
 
 ```js
 jQuery(document).ready(function ($) {
@@ -265,16 +265,16 @@ Now, add code inside the function `custom_enqueue_files()` in the `plugin.php` f
 
 Now, the product images have already turned into a slider, but we cannot see all the information of each variation in the right place.
 
-![The product images turn into a slider](https://i.imgur.com/QR1FF2Z.gif)
+![The product images turn into a slider](https://imgur.elightup.com/QR1FF2Z.gif)
 
 ## 5. Styling the product page
 
 Go to the view of Meta Box, add some code into the **CSS** tab of the view.
 
-![Add some code into the css tab](https://i.imgur.com/UR1Fdjh.png)
+![Add some code into the css tab](https://imgur.elightup.com/UR1Fdjh.png)
 
 You can refer to all of it on [Github](https://github.com/wpmetabox/tutorials/tree/master/display-product-variations).
 
 Back to a singular product page, it’ll have a new look. When you choose a color, the photo gallery will automatically change according to that color. At the same time, the sizes and prices also change correspondingly.
 
-![The final result](https://i.imgur.com/FuWHvCk.gif)
+![The final result](https://imgur.elightup.com/FuWHvCk.gif)

@@ -9,7 +9,7 @@ The password field creates a simple password input. The password is encrypted by
 ## Screenshots
 
 <Screenshots name="password" col1={[
-    ['https://i.imgur.com/xozZVMx.png', 'The password field interface']
+    ['https://imgur.elightup.com/xozZVMx.png', 'The password field interface']
 ]} />
 
 ## Settings

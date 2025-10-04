@@ -7,7 +7,7 @@ import FAQ from '@site/src/components/FAQ';
 
 MB Term Meta helps you to add custom fields to taxonomies.
 
-![category custom fields](https://i.imgur.com/bSykYdo.png)
+![category custom fields](https://imgur.elightup.com/bSykYdo.png)
 
 ## Settings
 

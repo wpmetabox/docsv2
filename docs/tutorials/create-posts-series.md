@@ -18,19 +18,19 @@ Using [Meta Box](https://metabox.io/) helps manipulate data easily by creating a
 
 Go to **Meta Box > Taxonomies > Add New**.
 
-![Create a new custom taxonomy](https://i.imgur.com/72SvIp3.png)
+![Create a new custom taxonomy](https://imgur.elightup.com/72SvIp3.png)
 
 Then, input information for the taxonomy.
 
-![Input information for the taxonomy](https://i.imgur.com/s68tHuG.png)
+![Input information for the taxonomy](https://imgur.elightup.com/s68tHuG.png)
 
 In the **Post Types** section, select your desired post types. In my case, I chose **Post** (i.e., the default blog posts).
 
-![Select your desired post types in the post type section](https://i.imgur.com/t0DrlDM.png)
+![Select your desired post types in the post type section](https://imgur.elightup.com/t0DrlDM.png)
 
 Remember to save this taxonomy and check it on the post-editing page. You will see an additional item named **Series**, as shown below:
 
-![Save the created taxonomy](https://i.imgur.com/AzCpvlg.png)
+![Save the created taxonomy](https://imgur.elightup.com/AzCpvlg.png)
 
 Enter a name into the box if you want the post to be in a series. You can create one on your own or pick an available one right there.
 
@@ -38,7 +38,7 @@ Enter a name into the box if you want the post to be in a series. You can create
 
 For example, [metabox.io](https://metabox.io/) has a [post series about Custom Fields](https://metabox.io/series/custom-fields/) like this:
 
-![posts in the series](https://i.imgur.com/bq4d2Eo.png)
+![posts in the series](https://imgur.elightup.com/bq4d2Eo.png)
 
 There are some things on this page:
 
@@ -52,23 +52,23 @@ I’ll do them one by one, as follows:
 
 In your theme folder, create `taxonomy-{taxonomy}.php`. In this case, {taxonomy} is your custom taxonomy slug. Accordingly, my file is called `taxonomy-series.php`.
 
-![Create a page for each series](https://i.imgur.com/JJdnqoF.png)
+![Create a page for each series](https://imgur.elightup.com/JJdnqoF.png)
 
 This file will specify how the series will be displayed on the frontend. It's nearly blank now:
 
-![How the series will be on the frontend](https://i.imgur.com/znofSVh.png)
+![How the series will be on the frontend](https://imgur.elightup.com/znofSVh.png)
 
 Next, copy the `archive.php` file into the `taxonomy-{taxonomy}.php` file you created.
 
-![Copy the file into the created file](https://i.imgur.com/hVxbVHW.png)
+![Copy the file into the created file](https://imgur.elightup.com/hVxbVHW.png)
 
 Then, your series page will display all the posts in the series as the normal archive page.
 
-![Series will display all the posts](https://i.imgur.com/5zEKFwv.png)
+![Series will display all the posts](https://imgur.elightup.com/5zEKFwv.png)
 
 To have the section to display the list of posts with title only like this, you should add more code.
 
-![Add more code](https://i.imgur.com/F80OKDJ.png)
+![Add more code](https://imgur.elightup.com/F80OKDJ.png)
 
 Add the following code to the `taxonomy-{taxonomy}.php` file.
 
@@ -83,11 +83,11 @@ endif;
 
 ```
 
-![Add the code](https://i.imgur.com/CdkvwO8.png)
+![Add the code](https://imgur.elightup.com/CdkvwO8.png)
 
 Now, your series has been displayed, but in the incorrect sequence (the first posts first, the older posts displayed later).
 
-![The series has been displayed](https://i.imgur.com/t9HHyOi.png)
+![The series has been displayed](https://imgur.elightup.com/t9HHyOi.png)
 
 ### Reversing the order of the posts
 
@@ -105,8 +105,8 @@ function series_post_order($query){
 
 Remember to change the above `series` parameter to the name of the taxonomy that you created.
 
-![Change the above series parament to the name of the created taxonomy](https://i.imgur.com/WCAcCMF.png)
+![Change the above series parament to the name of the created taxonomy](https://imgur.elightup.com/WCAcCMF.png)
 
 Here is the result:
 
-![The final result](https://i.imgur.com/vTkosBX.png)
+![The final result](https://imgur.elightup.com/vTkosBX.png)

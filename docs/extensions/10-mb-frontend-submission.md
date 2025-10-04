@@ -6,7 +6,7 @@ import FAQ from '@site/src/components/FAQ';
 
 MB Frontend Submission helps you create front-end forms for users to submit data to your website. It allows you to submit data for posts like post fields (title, content, etc.) and also custom fields created by Meta Box. It also support to custom table models and works with all extensions like [MB Group](/extensions/meta-box-group/) or [MB Conditional Logic](/extensions/meta-box-conditional-logic/).
 
-![submission form](https://i.imgur.com/jfXHqSc.png)
+![submission form](https://imgur.elightup.com/jfXHqSc.png)
 
 ## Submission form
 
@@ -14,7 +14,7 @@ MB Frontend Submission helps you create front-end forms for users to submit data
 
 To add a submission form to a page, select the **Submission Form** block from the block inserter. And you'll see the form preview like this:
 
-![Adding a form submission to a page with the Gutenberg block](https://i.imgur.com/PEI5I91.png)
+![Adding a form submission to a page with the Gutenberg block](https://imgur.elightup.com/PEI5I91.png)
 
 Clicking on the block will reveal the form settings on the right. All settings are self-explained and have their description.
 
@@ -32,7 +32,7 @@ You can also submit data to a [MB Custom Table](/extensions/mb-custom-table/) mo
 
 If you're using [MB Builder](/extensions/meta-box-builder/), go to **Meta Box > Custom Fields** admin page and copy the content in the **Shortcode** column for the field group that you created:
 
-![Copy submission form shortcode in MB Builder](https://i.imgur.com/sfeWhBA.png)
+![Copy submission form shortcode in MB Builder](https://imgur.elightup.com/sfeWhBA.png)
 
 Below is the list of the settings. The attribute is used for the shortcode.
 
@@ -290,7 +290,7 @@ Similar to the submission form, MB Frontend Submission provides a Gutenberg bloc
 
 To insert a block, select the **User dashboard** block from the block inserter:
 
-![User dashboard block](https://i.imgur.com/didLg44.png)
+![User dashboard block](https://imgur.elightup.com/didLg44.png)
 
 If you prefer to use shortcodes, use the following shortcode:
 
@@ -324,7 +324,7 @@ You **must** create a page for submitting posts first, then use its ID in the `e
 
 When users visit this page, they'll see a dashboard like this:
 
-![user posts dashboard](https://i.imgur.com/LxPh4xH.png)
+![user posts dashboard](https://imgur.elightup.com/LxPh4xH.png)
 
 On this dashboard, users can:
 
@@ -359,7 +359,7 @@ MB Frontend Submission has integrations with **the block editor** (Gutenberg) an
 - Bricks
 - Elementor
 
-![Adding submission form and user dashboard in Bricks and Elementor](https://i.imgur.com/oH7RBcv.png)
+![Adding submission form and user dashboard in Bricks and Elementor](https://imgur.elightup.com/oH7RBcv.png)
 
 For these page builders, there is a new section named Meta Box when you add an element. There’ll be two new elements in this section, one is **Submission Form** and another is **User Dashboard**. They work the same way as in the corresponding blocks in Gutenberg with the live preview on the page and visually settings.
 

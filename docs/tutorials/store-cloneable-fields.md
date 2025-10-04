@@ -20,19 +20,19 @@ Here is the mindset behind this practice:
 
 Assuming that I have had a custom post type for events.
 
-![Assuming that I have had a custom post type for events](https://i.imgur.com/DTKrEWd.png)
+![Assuming that I have had a custom post type for events](https://imgur.elightup.com/DTKrEWd.png)
 
 And, I also have a field to input the start date. This field is cloneable, so I can add multiple dates to the field.
 
-![A cloneable field to input multiple start dates](https://i.imgur.com/xyubfJj.gif)
+![A cloneable field to input multiple start dates](https://imgur.elightup.com/xyubfJj.gif)
 
 You can see that the values are stored in the database as a string of data and in a row only on the table.
 
-![The values are stored in the database as a string of data and in a row only on the table.](https://i.imgur.com/Vnnj2hj.png)
+![The values are stored in the database as a string of data and in a row only on the table.](https://imgur.elightup.com/Vnnj2hj.png)
 
 We will convert this string to an array with two elements and store them in two rows in the database, as shown below.
 
-![We will convert this string to an array with two elements and store them in two rows in the database](https://i.imgur.com/39blOUK.png)
+![We will convert this string to an array with two elements and store them in two rows in the database](https://imgur.elightup.com/39blOUK.png)
 
 Before we go, you should:
 
@@ -45,25 +45,25 @@ Before we go, you should:
 
 In the settings of the fields using the UI provided by the [MB Builder](https://docs.metabox.io/extensions/meta-box-builder/) extension, whenever you set the field as **Cloneable**, there will be an extra setting named ‘**Clone as multiple**’ right below the **Cloneable** option.
 
-![The "Clone as multiple" feature of Meta Box allows storing cloneable values in multiple rows in the database](https://i.imgur.com/LjhoGyn.png)
+![The "Clone as multiple" feature of Meta Box allows storing cloneable values in multiple rows in the database](https://imgur.elightup.com/LjhoGyn.png)
 
 Just turn it on.
 
 In the case that you prefer to register the fields using code, add the `'clone_as_multiple' => true,` option to the code like this:
 
-![Add the 'clone_as_multiple' => true, option to the code if you register the fields using code](https://i.imgur.com/GA0BEsr.png)
+![Add the 'clone_as_multiple' => true, option to the code if you register the fields using code](https://imgur.elightup.com/GA0BEsr.png)
 
 Then, all the data you input to the field after this action will be stored in multiple rows.
 
 Let’s create a new post and add some data to the field to check that! Then, go back to check the database, the new data added to the field is stored in two different rows already. However, the data that I input before the change still is in one row.
 
-![The new data added to the field is stored in two different rows already, but the old data is not.](https://i.imgur.com/Di7LgKX.png)
+![The new data added to the field is stored in two different rows already, but the old data is not.](https://imgur.elightup.com/Di7LgKX.png)
 
 So, the new setting works well on all the new data, but doesn’t affect the old data.
 
 Meanwhile, in the post editor, you will see the old data is displayed wrong and isn't separated into different rows anymore, it’ll be a string of text only.
 
-![The old data is displayed wrong and isn't separated into different rows anymore](https://i.imgur.com/hikL8l2.png)
+![The old data is displayed wrong and isn't separated into different rows anymore](https://imgur.elightup.com/hikL8l2.png)
 
 So now, we should convert the old data manually in the next step.
 
@@ -110,7 +110,7 @@ add_action( 'init', function() {
 ?>
 ```
 
-![Add code to the .php file to do converting](https://i.imgur.com/itOoG87.png)
+![Add code to the .php file to do converting](https://imgur.elightup.com/itOoG87.png)
 
 Let’s go through it in detail!
 
@@ -179,23 +179,23 @@ Now, move to the `functions.php` file, add the .php file that we’ve just creat
 include 'convert.php';
 ```
 
-![Add the php file to the functions.php file](https://i.imgur.com/aNYcBpZ.png)
+![Add the php file to the functions.php file](https://imgur.elightup.com/aNYcBpZ.png)
 
 Currently, the data has not been converted yet since we haven’t run the secret key..
 
-![The data has not been converted yet.](https://i.imgur.com/TtYLp3j.png)
+![The data has not been converted yet.](https://imgur.elightup.com/TtYLp3j.png)
 
 So, you have to access the URL in this form: **domain.com/?unique_key**. This action helps to run the secret key, then the code in the .php file will run to convert the data.
 
 Go back to the database once again to check if the data is converted or not. Now, you can see that the old data also is in two rows instead of one row as before.
 
-![The old data also is in two rows instead of one row](https://i.imgur.com/3KeB3DT.png)
+![The old data also is in two rows instead of one row](https://imgur.elightup.com/3KeB3DT.png)
 
 Everything has been done automatically.
 
 Let’s check whether the data also displays in the right format or not in the post editor!
 
-![The data also displays in the right format in the post editor](https://i.imgur.com/QXdTp2O.png)
+![The data also displays in the right format in the post editor](https://imgur.elightup.com/QXdTp2O.png)
 
 They display in the right way already.
 
@@ -205,6 +205,6 @@ When the data of the cloneable field is in multiple rows already, there is no ne
 
 To avoid it running again, we should go back to the `functions.`php file, and remove the line as shown in the image below.
 
-![To avoid it running again, remove this line in the functions.php file](https://i.imgur.com/iJWh9gk.png)
+![To avoid it running again, remove this line in the functions.php file](https://imgur.elightup.com/iJWh9gk.png)
 
 That’s all!

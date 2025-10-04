@@ -21,7 +21,7 @@ In this video, we show you step-by-step how to use *MB Views* to create singular
 
 To create a view, go to **Meta Box > Views** and click the **Add New** button.
 
-![create a new view](https://i.imgur.com/VO5oV2T.png)
+![create a new view](https://imgur.elightup.com/VO5oV2T.png)
 
 In the view screen, you'll see 2 areas:
 
@@ -43,7 +43,7 @@ Fields are categorized into 4 tabs:
 
 To insert a field, click on the field title to insert it. The field might have additional parameters (such as choosing image size for the image field). And in that case, the plugin will open a popup for you to enter or select options.
 
-![enter field options](https://i.imgur.com/MUsLgWu.png)
+![enter field options](https://imgur.elightup.com/MUsLgWu.png)
 
 When you're done entering the field options, click the **Insert** button to insert the field in the editor. The plugin will generate a snippet and insert it into the editor.
 
@@ -53,13 +53,13 @@ If a field doesn't have options, then the plugin will insert a snippet into the 
 
 The items on the Insert Field tab only work with the main query. We can understand when setting Type and Location for the View. For example, you can only use the item "Term ID" when the Type is Archive and Location is Taxonomy Archive, if you use the item "Post ID", it will not work.
 
-![main query](https://i.imgur.com/HAkP7Ci.png)
+![main query](https://imgur.elightup.com/HAkP7Ci.png)
 
 ### Cloneable fields
 
 Cloneable fields are marked with a *repeat* icon, like this:
 
-![cloneable group fields](https://i.imgur.com/6KoyJGB.png)
+![cloneable group fields](https://imgur.elightup.com/6KoyJGB.png)
 
 To insert a cloneable field, click on the field title, like inserting a normal field.
 
@@ -201,7 +201,7 @@ And in your view template, you can use this data directly like this:
 
 Each view can serve multiple pages on your website. To set where the view appears, go to **Settings** meta box below the editor:
 
-![view locations](https://i.imgur.com/Szjmvnd.png)
+![view locations](https://imgur.elightup.com/Szjmvnd.png)
 
 There are several options:
 

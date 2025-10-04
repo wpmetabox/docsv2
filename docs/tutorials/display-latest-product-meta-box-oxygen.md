@@ -9,7 +9,7 @@ We’re going to figure out how to have a section for the latest products on the
 
 I created a latest restaurants section as an example:
 
-![Example of displaying the latest products](https://i.imgur.com/EuKKW6b.gif)
+![Example of displaying the latest products](https://imgur.elightup.com/EuKKW6b.gif)
 
 ## Video version
 
@@ -32,29 +32,29 @@ Go to **Meta Box > Post Types > New Post Type** to create a new post type for th
 
 After publishing, you’ll see a new Restaurant menu in your dashboard.
 
-![Create a new custom post type](https://i.imgur.com/07DcNhO.png)
+![Create a new custom post type](https://imgur.elightup.com/07DcNhO.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to add a new field group.
 
-![Create custom fields](https://i.imgur.com/UzCCNUn.png)
+![Create custom fields](https://imgur.elightup.com/UzCCNUn.png)
 
 Note that when configuring the fields, you should choose the **easy-to-remember** labels and IDs since we’ll need them in the next step.
 
 As for the **Status** and **Voucher** field, they’re selection field so we’ll have the **Choices** box to add options like this:
 
-![create the needed fields](https://i.imgur.com/v4ZGH5g.png)
+![create the needed fields](https://imgur.elightup.com/v4ZGH5g.png)
 
-![the created fields appear in the post editor](https://i.imgur.com/5SvFuGM.png)
+![the created fields appear in the post editor](https://imgur.elightup.com/5SvFuGM.png)
 
 After creating all the needed fields, go to the **Settings** tab, choose **Location** as **Post Type** and select **Restaurant** to apply these fields to it.
 
-![Set location for the custom fields](https://i.imgur.com/OWPyU0n.png)
+![Set location for the custom fields](https://imgur.elightup.com/OWPyU0n.png)
 
 When creating a new post in the **Restaurant** post type, the custom fields are there.
 
-![The custom fields in the post editor](https://i.imgur.com/AvwlKLv.png)
+![The custom fields in the post editor](https://imgur.elightup.com/AvwlKLv.png)
 
 ## 3. Adding a section for the latest products section
 
@@ -62,13 +62,13 @@ When creating a new post in the **Restaurant** post type, the custom fields are 
 
 Let’s edit the homepage with Oxygen.
 
-![edit the homepage with oxugen](https://i.imgur.com/Dr8Hh8R.png)
+![edit the homepage with oxugen](https://imgur.elightup.com/Dr8Hh8R.png)
 
 Since the latest products section is a list of posts, we'll choose the **Repeater** component.
 
 In this component settings, choose **Query > Custom > Post Type**, then search for the post type you want to get posts. In this case, it’s Restaurant.
 
-![Search the wanted post type](https://i.imgur.com/cZbISWW.gif)
+![Search the wanted post type](https://imgur.elightup.com/cZbISWW.gif)
 
 ### Displaying products information into the section
 
@@ -76,29 +76,29 @@ To display restaurant’s information, add some components to show them such as 
 
 First, to display the image of the restaurants which is the featured image of the post, add the **Featured Image** component.
 
-![Add the featured image component](https://i.imgur.com/p0Xta9O.png)
+![Add the featured image component](https://imgur.elightup.com/p0Xta9O.png)
 
 Then, all the featured images have been obtained.
 
-![All the images have been obtained](https://i.imgur.com/qEvXZJZ.png)
+![All the images have been obtained](https://imgur.elightup.com/qEvXZJZ.png)
 
 To display the name of the restaurant (which is the post title), choose the **Text** component. Then, connect this component to the post title to get dynamic data. Click the **Insert Data** button > **Post** section and choose **Title**.
 
-![Connect the text component to the post title](https://i.imgur.com/o0kBW3B.gif)
+![Connect the text component to the post title](https://imgur.elightup.com/o0kBW3B.gif)
 
 For the address information which is saved in a custom field created by Meta Box, choose the **Text** component as well > connect to a **Meta Box field** to get the data.
 
-![Connect to a meta box field to get the data](https://i.imgur.com/5xauy4K.gif)
+![Connect to a meta box field to get the data](https://imgur.elightup.com/5xauy4K.gif)
 
 Then, the addresses corresponding to each restaurant will be obtained.
 
-![The corresponding addresses to each restaurant will be obtained](https://i.imgur.com/L347E1G.png)
+![The corresponding addresses to each restaurant will be obtained](https://imgur.elightup.com/L347E1G.png)
 
 For other information including status, voucher, do likewise.
 
 For the logo, it’s a single image field, so I choose the **Code Block** component and also set it as **PHP & HTML**.
 
-![Choose the code block component for the logo](https://i.imgur.com/NGhmyMM.png)
+![Choose the code block component for the logo](https://imgur.elightup.com/NGhmyMM.png)
 
 Add this code below to the box.
 ```php
@@ -109,7 +109,7 @@ Add this code below to the box.
 ?>
 ```
 
-![Add the code](https://i.imgur.com/CqF0XJE.png)
+![Add the code](https://imgur.elightup.com/CqF0XJE.png)
 
 **Explanation**:
 
@@ -118,7 +118,7 @@ Add this code below to the box.
 
 After saving the changes for the page, you will see all the information of the restaurants has been displayed.
 
-![all the information has been obtained](https://i.imgur.com/MZ15y7n.gif)
+![all the information has been obtained](https://imgur.elightup.com/MZ15y7n.gif)
 
 ## 4. Styling the section
 
@@ -127,13 +127,13 @@ After saving the changes for the page, you will see all the information of the r
 To style the section, I will restructure some components and set CSS classes for them.
 
 
-![Restructure some components to style the section](https://i.imgur.com/CUmsUXy.gif)
+![Restructure some components to style the section](https://imgur.elightup.com/CUmsUXy.gif)
 
-![Set css classes](https://i.imgur.com/wmRhexi.png)
+![Set css classes](https://imgur.elightup.com/wmRhexi.png)
 
 Then, still in the Oxygen preview, choose **Manage > Stylesheet** and **Add Stylesheet** to add some CSS.
 
-![Add Stylesheet to add some css](https://i.imgur.com/zXm13Wc.gif)
+![Add Stylesheet to add some css](https://imgur.elightup.com/zXm13Wc.gif)
 
 ### Creating slider effect for the section (Optional)
 
@@ -143,4 +143,4 @@ I made all the manipulations on the video tutorials above. So if you want to kno
 
 Then, go to the homepage and you will see the latest products section has already turned into a slider:
 
-![The product section turn into a slider](https://i.imgur.com/EuKKW6b.gif)
+![The product section turn into a slider](https://imgur.elightup.com/EuKKW6b.gif)

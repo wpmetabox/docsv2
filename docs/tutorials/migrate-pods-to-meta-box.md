@@ -31,19 +31,19 @@ As I said, we will create a custom post type and custom fields in [Meta Box](htt
 
 I already have the **Project** post type created with Pods. Its slug is _‘project’_. You can see it in the **Name** column:
 
-![The created post type](https://i.imgur.com/0WjFgSH.png)
+![The created post type](https://imgur.elightup.com/0WjFgSH.png)
 
 In the **Project** post type, there are two custom fields. Their IDs are `project_name` and `project_description`.
 
-![There are two custom fields in the post type](https://i.imgur.com/rC4Syns.png)
+![There are two custom fields in the post type](https://imgur.elightup.com/rC4Syns.png)
 
 These are posts in the Project post type created by Pods:
 
-![The created post type by Pods](https://i.imgur.com/rIp1QNp.png)
+![The created post type by Pods](https://imgur.elightup.com/rIp1QNp.png)
 
 And these are the custom fields in the Project post type:
 
-![The custom fields in the post type](https://i.imgur.com/WVdDK9B.png)
+![The custom fields in the post type](https://imgur.elightup.com/WVdDK9B.png)
 
 Now, **deactivate the Pods plugin**. After that, the data of Pods is still in the database.
 
@@ -53,15 +53,15 @@ First, activate the **Meta Box** plugin and its extensions.
 
 Then, go to **Meta Box** > **Post Types** > **Add New**. Fill in the information for the new post type, and note that **its slug must be the same as in Pods**.
 
-![The slug must be the same as in Pods](https://i.imgur.com/Oj8lhml.png)
+![The slug must be the same as in Pods](https://imgur.elightup.com/Oj8lhml.png)
 
 After that, the new custom post type will display in the Admin Menu. When you open the new post type, you will see all the old posts of the **Project** post type that you created with Pods previously.
 
-![The old posts of the created post type wwill appear](https://i.imgur.com/rIp1QNp.png)
+![The old posts of the created post type wwill appear](https://imgur.elightup.com/rIp1QNp.png)
 
 Especially, the post information such as post title, post content, ... is still kept.
 
-![The post information is still kept](https://i.imgur.com/Cgq5FzX.png)
+![The post information is still kept](https://imgur.elightup.com/Cgq5FzX.png)
 
 That’s how we’ve done for moving the posts content.
 
@@ -75,9 +75,9 @@ For example, the corresponding field type of paragraph text (Pods field) is the 
 
 Similar to the previous step, you must enter the corresponding IDs for the custom fields. You can use the different values for other information like **Label**. However, to make the information consistent, I recommend that you should copy exactly everything.
 
-![Enter the corresponding IDs for the post type](https://i.imgur.com/m6f27vU.png)
+![Enter the corresponding IDs for the post type](https://imgur.elightup.com/m6f27vU.png)
 
 After creating custom fields with the same ID as Pods, go to edit a post in the Project post type. If the custom fields look like what they were in Pods, everything is done.
 
-![The created post type after all steps](https://i.imgur.com/JRBMlce.png)
+![The created post type after all steps](https://imgur.elightup.com/JRBMlce.png)
 

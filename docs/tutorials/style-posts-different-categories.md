@@ -9,7 +9,7 @@ If you want posts in different categories to have different styles, just follow 
 
 This is an example of the posts’ background.
 
-![Example of the posts' background](https://i.imgur.com/7TsL5Wb.png)
+![Example of the posts' background](https://imgur.elightup.com/7TsL5Wb.png)
 
 ## Video version
 
@@ -43,21 +43,21 @@ As I’ve mentioned, we need to create a custom field for the category to choose
 
 We’ll create a field only for the background color. Go to **Meta Box > Custom Fields > Add New**.
 
-![Create a custom field](https://i.imgur.com/tRptXL6.png)
+![Create a custom field](https://imgur.elightup.com/tRptXL6.png)
 
 I choose the **Color Picker** field for the Background Color to choose the color.
 
-![Choose the Color Picker field for the background color](https://i.imgur.com/gk6FAJm.png)
+![Choose the Color Picker field for the background color](https://imgur.elightup.com/gk6FAJm.png)
 
 Pay attention to the **ID** of the field since we will use it in the next step.
 
 Next, move to the **Settings** tab and choose **Location** as **Taxonomy** and select **Category** to display the custom field on category. You’ll have this option only when you install the **MB Term Meta** extension already.
 
-![Set Location for the created custom fields](https://i.imgur.com/4hf66vQ.png)
+![Set Location for the created custom fields](https://imgur.elightup.com/4hf66vQ.png)
 
 Then, go to **Posts > Categories** and select any category you want to edit. You’ll see the field there.
 
-![Seclect the wanted category to edit](https://i.imgur.com/bCg14PX.png)
+![Seclect the wanted category to edit](https://imgur.elightup.com/bCg14PX.png)
 
 Just choose a color for the category.
 
@@ -65,7 +65,7 @@ Just choose a color for the category.
 
 Go to a post in the **Breakfast** category, its background color still is the white as default.
 
-![The default color background](https://i.imgur.com/bFncjk8.png)
+![The default color background](https://imgur.elightup.com/bFncjk8.png)
 
 To change the background color of the post, add the following code to the `functions.php` file:
 
@@ -88,7 +88,7 @@ function estar_output_frontend() {
 add_action( 'wp_head', 'estar_output_frontend' );
 ```
 
-![Insert the code](https://i.imgur.com/7glCfcO.png)
+![Insert the code](https://imgur.elightup.com/7glCfcO.png)
 
 **Explanation**:
 
@@ -100,9 +100,9 @@ add_action( 'wp_head', 'estar_output_frontend' );
 
 Now, I will set a color in the **Background Color** field of the **Breakfast** category:
 
-![Set color in the Background color field](https://i.imgur.com/pXdv8dr.png)
+![Set color in the Background color field](https://imgur.elightup.com/pXdv8dr.png)
 
 Then, go back to the post, you will see the background turns to another color:
 
-![Background turns into other color](https://i.imgur.com/7TsL5Wb.png)
+![Background turns into other color](https://imgur.elightup.com/7TsL5Wb.png)
 

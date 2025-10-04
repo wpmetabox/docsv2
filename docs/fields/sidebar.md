@@ -11,9 +11,9 @@ The sidebar field allows you to select one or multiple sidebars. This field has 
 <Screenshots
     name="sidebar"
     col1={[
-        ['https://i.imgur.com/VTvvKSR.png', 'The sidebar field default interface'],
-        ['https://i.imgur.com/WOcCGA5.png', 'The sidebar field with checkbox list interface'],
-        ['https://i.imgur.com/jp9BFqE.png', 'The sidebar field with radio list interface'],
+        ['https://imgur.elightup.com/VTvvKSR.png', 'The sidebar field default interface'],
+        ['https://imgur.elightup.com/WOcCGA5.png', 'The sidebar field with checkbox list interface'],
+        ['https://imgur.elightup.com/jp9BFqE.png', 'The sidebar field with radio list interface'],
     ]}
 />
 

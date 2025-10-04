@@ -9,7 +9,7 @@ On an archive page, we’ll display posts and filter them by the values stored i
 
 Here is the page about the restaurants I created as an example:
 
-![Two sections of the page](https://i.imgur.com/KcIh5xL.gif)
+![Two sections of the page](https://imgur.elightup.com/KcIh5xL.gif)
 
 ## Video version
 
@@ -19,7 +19,7 @@ Here is the page about the restaurants I created as an example:
 
 There are some things that need to be clarified. On the page, we’ll have two sections. One is used to filter the restaurants by conditions. We’ll create this part using FacetWP. The second part is to show up all the restaurants.
 
-![Two sections of the page](https://i.imgur.com/1KwGTbg.png)
+![Two sections of the page](https://imgur.elightup.com/1KwGTbg.png)
 
 All the information of the restaurants is saved in a custom post type. Each restaurant is a post of a custom post type. Besides the basic information such as name and image of the restaurants which are the post title and featured images, other additional information will be saved in different custom fields.
 
@@ -39,29 +39,29 @@ There are the tools we need:
 
 Go to **Meta Box > Post Types > Add New** to create a new post type.
 
-![Create a custom post type](https://i.imgur.com/6sOZGUC.png)
+![Create a custom post type](https://imgur.elightup.com/6sOZGUC.png)
 
 After publishing, we’ll have a new **Restaurants** menu in the admin dashboard.
 
-![The created post type appears in the admin dashboard](https://i.imgur.com/TnHSOKQ.png)
+![The created post type appears in the admin dashboard](https://imgur.elightup.com/TnHSOKQ.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group. Here are the field that I created:
 
-![The created custom fields](https://i.imgur.com/z2NgC9J.png)
+![The created custom fields](https://imgur.elightup.com/z2NgC9J.png)
 
 For the **Voucher** information, choose the **Checkbox list** field to allow adding some options in the **Choices** box. These options will be used as a condition to filter posts when creating a filter section in the next step.
 
-![Choose the Checkbox list field for the Voucher information to add some options in the Choices box](https://i.imgur.com/CAFAseK.png)
+![Choose the Checkbox list field for the Voucher information to add some options in the Choices box](https://imgur.elightup.com/CAFAseK.png)
 
 After creating all the needed fields, move to the **Settings** tab, choose **Location** as **Post Type** and select **Restaurant** to apply these fields to this post type.
 
-![Set Location for the created post type](https://i.imgur.com/aH4gsoe.png)
+![Set Location for the created post type](https://imgur.elightup.com/aH4gsoe.png)
 
 When creating a new post in Restaurant post type, you’ll see all the created custom fields:
 
-![All created custom fields appear in a new post of the created post type](https://i.imgur.com/kNNgVlz.png)
+![All created custom fields appear in a new post of the created post type](https://imgur.elightup.com/kNNgVlz.png)
 
 ## 3. Creating a template
 
@@ -73,59 +73,59 @@ Since we’ll have a list of restaurants on the page, we need a special type of 
 
 Go to **Templates > Theme Builder** and choose **Loop**.
 
-![Go to Templates and then Theme Builder](https://i.imgur.com/j1X9403.png)
+![Go to Templates and then Theme Builder](https://imgur.elightup.com/j1X9403.png)
 
-![Choose Loop option](https://i.imgur.com/C3XZx7u.png)
+![Choose Loop option](https://imgur.elightup.com/C3XZx7u.png)
 
 Remember to set the preview for the template.
 
 Since the image and name of the restaurants are the featured image and title of the post, add the **Featured Image** and **Post Title** elements.
 
-![Add the Featured Image and Post Title elements ](https://i.imgur.com/t88N4jD.png)
+![Add the Featured Image and Post Title elements ](https://imgur.elightup.com/t88N4jD.png)
 
 For the address of the restaurant, add the **Text Editor** element. Since the restaurants’ addresses are saved in a custom field created by Meta Box and the custom field is for post, let’s use the **Dynamic Tags** > choose **Meta Box Fields** in the **Post** section.
 
-![Add the Text Editor element for the address of the restaurant](https://i.imgur.com/dI5pXSb.png)
+![Add the Text Editor element for the address of the restaurant](https://imgur.elightup.com/dI5pXSb.png)
 
 And then, select the corresponding field. In this case, it’s **Address**.
 
-![Connect the Text Editor element to the correct field by using Dynamic Tags](https://i.imgur.com/tG9sWJw.png)
+![Connect the Text Editor element to the correct field by using Dynamic Tags](https://imgur.elightup.com/tG9sWJw.png)
 
 For the voucher information, do the same.
 
-![Do likewise with the voucher information](https://i.imgur.com/NRH3aIC.png)
+![Do likewise with the voucher information](https://imgur.elightup.com/NRH3aIC.png)
 
-![Connect the element to the right field](https://i.imgur.com/D9iY0Xr.png)
+![Connect the element to the right field](https://imgur.elightup.com/D9iY0Xr.png)
 
 Now, all the restaurant’s information has been displayed.
 
-![All the information has been obtained](https://i.imgur.com/PQzv5RG.png)
+![All the information has been obtained](https://imgur.elightup.com/PQzv5RG.png)
 
 Save the template and remember to set the condition to apply this template.
 
-![Save the template and remember to set the condition to apply this template](https://i.imgur.com/23Wa2Fh.png)
+![Save the template and remember to set the condition to apply this template](https://imgur.elightup.com/23Wa2Fh.png)
 
 ## 4. Creating the page
 
 Go to **Pages** to create a new page and **edit it with Elementor**.
 
-![Create a new page](https://i.imgur.com/jogEKj6.png)
+![Create a new page](https://imgur.elightup.com/jogEKj6.png)
 
 Add the Posts element to the page.
 
-![Add the Posts element to the page](https://i.imgur.com/VGioxUT.png)
+![Add the Posts element to the page](https://imgur.elightup.com/VGioxUT.png)
 
 In the Skin setting of the Posts element, choose Custom and then select the default template as the one we’ve just created.
 
-![In the Skin setting of the Posts element, choose Custom and then select the created template](https://i.imgur.com/YwgDCzr.png)
+![In the Skin setting of the Posts element, choose Custom and then select the created template](https://imgur.elightup.com/YwgDCzr.png)
 
 Next, go to the **Query** section, choose the source as the post type you want. In this case, it’s **Restaurant**.
 
-![In the Query section, choose the source as the wanted post type](https://i.imgur.com/ef865A8.png)
+![In the Query section, choose the source as the wanted post type](https://imgur.elightup.com/ef865A8.png)
 
 Now, the preview shows all the posts with the information as we want.
 
-![The preview shows all the posts with the information.](https://i.imgur.com/UIxRMnQ.png)
+![The preview shows all the posts with the information.](https://imgur.elightup.com/UIxRMnQ.png)
 
 Let’s see how to add a filter section in the next step.
 
@@ -135,28 +135,28 @@ This task will be done by FacetWP. If you use other page builders, you can also 
 
 In the admin dashboard, go to **Settings** and choose **FacetWP** to create a new filter.
 
-![Create a new filter](https://i.imgur.com/xR9nNT6.png)
+![Create a new filter](https://imgur.elightup.com/xR9nNT6.png)
 
 Since we will filter the post by the promotion of the restaurant which is saved in the **Voucher** field, choose the **Data Source** as **Voucher** in the **Restaurant** post type.
 
-![Choose the Data Source as Voucher in the Restaurant post type](https://i.imgur.com/TBkcCS5.png)
+![Choose the Data Source as Voucher in the Restaurant post type](https://imgur.elightup.com/TBkcCS5.png)
 
 Save the changes and copy the shortcode of the facet.
 
-![Save the changes and copy the shortcode of the facet](https://i.imgur.com/7KTGmPH.png)
+![Save the changes and copy the shortcode of the facet](https://imgur.elightup.com/7KTGmPH.png)
 
 Then, go back to the created page editor with Elementor, add a Shortcode element to paste the code we’ve just copied.
 
-![Add a Shortcode element to paste the copied code](https://i.imgur.com/jjFu27A.png)
+![Add a Shortcode element to paste the copied code](https://imgur.elightup.com/jjFu27A.png)
 
 After applying the code, you’ll see a section to filter posts in the frontend. All the restaurants having the same coupons are filtered correctly.
 
-![All the restaurants having the same coupons are filtered correctly](https://i.imgur.com/ZUipHsz.gif)
+![All the restaurants having the same coupons are filtered correctly](https://imgur.elightup.com/ZUipHsz.gif)
 
 If you want to style the page, just go back to the template of the page and style each element as you want. Or, you can use some CSS code to have further styling. In this case, I just style the page a bit, for instance:
 
-![Style the page](https://i.imgur.com/6k2QCRy.png)
+![Style the page](https://imgur.elightup.com/6k2QCRy.png)
 
 All the changes in style will be applied immediately. This is how it looks on the frontend. The filter section created by FacetWP works well and all the posts have been filtered.
 
-![The result](https://i.imgur.com/KcIh5xL.gif)
+![The result](https://imgur.elightup.com/KcIh5xL.gif)

@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 This tutorial will walk you through how to **create a job listing page with advanced filtering** options using the **MB Views** extension from Meta Box - ideal for helping users quickly find the most relevant opportunities.
 
-![Create a job listing page with advanced filtering options using the MB Views.](https://i.imgur.com/2O6nn41.gif)
+![Create a job listing page with advanced filtering options using the MB Views.](https://imgur.elightup.com/2O6nn41.gif)
 
 ## Video version
 
@@ -40,79 +40,79 @@ Go to **Meta Box**, **Post Types** to create a new one.
 
 After publishing, you’ll see the created custom post type.
 
-![The created custom post type](https://i.imgur.com/mo5Cmy1.png)
+![The created custom post type](https://imgur.elightup.com/mo5Cmy1.png)
 
 ## 2. Creating custom fields for the job listings
 
 To store job details, we need to create a group of custom fields. This group serves two purposes: **allowing recruiters to submit job posts from the frontend**, and **enabling job seekers to search and filter jobs based on these fields**. It includes important information such as job type, location, required skills, experience level, etc. Feel free to add more fields as needed.
 
-![The example of a field group for job details](https://i.imgur.com/0p9Edc0.png)
+![The example of a field group for job details](https://imgur.elightup.com/0p9Edc0.png)
 
 Now, go to **Meta Box** > **Custom Fields**, and create a new field group.
 
-![Create a new field group.](https://i.imgur.com/4KfFvsu.png)
+![Create a new field group.](https://imgur.elightup.com/4KfFvsu.png)
 
 Just add fields one by one corresponding to the kind of content.
 
 Start by adding two **Text** fields: one for the job location and one for the company name, so users can enter where the job is based and the hiring company’s name.
 
-![Add two Text fields for the job location and for the company name.](https://i.imgur.com/YhrI3rK.png)
+![Add two Text fields for the job location and for the company name.](https://imgur.elightup.com/YhrI3rK.png)
 
 Next, create a **Select** field for users to choose the job type. In this **Choices** section, input the options.
 
-![Create a Select field for users to choose the job type.](https://i.imgur.com/vQa1zRG.png)
+![Create a Select field for users to choose the job type.](https://imgur.elightup.com/vQa1zRG.png)
 
 Pay heed to the **Show as an admin column** option. It’s available when you activate the **MB Admin Columns** extension. Once checked, there’ll be a column in the dashboard to display job types, making it easier to manage them directly from the backend.
 
-![The Show as an admin column option](https://i.imgur.com/ncPp4sm.png)
+![The Show as an admin column option](https://imgur.elightup.com/ncPp4sm.png)
 
 In the same way, add another **Select** field for working time. And also fill in the time options.
 
-![Add another Select field for working time.](https://i.imgur.com/njjGRdH.png)
+![Add another Select field for working time.](https://imgur.elightup.com/njjGRdH.png)
 
 Since I only want this field to appear when the condition is met, I’ll set a rule for it in the **Advanced** tab to configure it. Move to the **Conditional logic** section (available when you have the **MB Conditional Logic** extension), set the key as the job type field ID and the value as the `part_time` option. This ensures the field shows only when the job type is part-time.
 
-![Set the rule so that the field shows only when the job type is part-time.](https://i.imgur.com/V0Hx2iO.png)
+![Set the rule so that the field shows only when the job type is part-time.](https://imgur.elightup.com/V0Hx2iO.png)
 
 Continue by adding other fields for the email, the contact number, and the company’s website.
 
-![Add other fields for the email, the contact number, and the company’s website.](https://i.imgur.com/MRJRHei.png)
+![Add other fields for the email, the contact number, and the company’s website.](https://imgur.elightup.com/MRJRHei.png)
 
 And select a **Checkbox List** field for technical skills, allowing users to select required skills for the job. And add a **Radio** field for experience level to specify the required experience. As I want these two fields to appear in the admin column, enable the **Show as an admin column** option as well.
 
-![Add fields for technical skills and experience level.](https://i.imgur.com/ARbRJ3s.png)
+![Add fields for technical skills and experience level.](https://imgur.elightup.com/ARbRJ3s.png)
 
 Once all fields are configured, move to the **Settings** tab, set the **Location** as **Post type**, and select Job to apply these fields to it.
 
-![Set location to apply these fields to the Job post type.](https://i.imgur.com/cXmx9SH.png)
+![Set location to apply these fields to the Job post type.](https://imgur.elightup.com/cXmx9SH.png)
 
 Now, in your page editor, you will see custom fields displayed.
 
-![In your page editor, you will see custom fields displayed.](https://i.imgur.com/17bQuXI.png)
+![In your page editor, you will see custom fields displayed.](https://imgur.elightup.com/17bQuXI.png)
 
 Simply input values in these fields. You see, when choosing the part-time option, there will be a working time section that appears as we set the condition before.
 
-![When choosing the part-time option, there will be a working time section.](https://i.imgur.com/AKx2Cvy.gif)
+![When choosing the part-time option, there will be a working time section.](https://imgur.elightup.com/AKx2Cvy.gif)
 
 These are some posts that I created, for example. The job type, technical skill, and experience level are shown as admin columns as well.
 
-![Some job posts](https://i.imgur.com/sLlySmw.png)
+![Some job posts](https://imgur.elightup.com/sLlySmw.png)
 
-## 3. Creating a template to display job listing 
+## 3. Creating a template to display job listing
 
-First, create a new page for the job listing. 
+First, create a new page for the job listing.
 
-![Create a new page for the job listing.](https://i.imgur.com/isx0iov.png)
+![Create a new page for the job listing.](https://imgur.elightup.com/isx0iov.png)
 
 In this step, we’ll create a template to display posts on the page - that means all the jobs. For filtering the job, I’ll do it later.
 
 Now, head over to **Meta Box** > **Views**, and create a new template specifically for this purpose.
 
-![Create a new template with MB Views.](https://i.imgur.com/JYLnvnZ.png)
+![Create a new template with MB Views.](https://imgur.elightup.com/JYLnvnZ.png)
 
 With **MB Views**, you can insert fields into it by clicking the **Insert Field** button and choosing any fields on the right sidebar to get data from them or by adding some lines of code directly to the **Template** tab.
 
-![Insert fields](https://i.imgur.com/AVbkTnC.png)
+![Insert fields](https://imgur.elightup.com/AVbkTnC.png)
 
 Start by adding some code below!
 
@@ -122,7 +122,7 @@ Start by adding some code below!
 {% for post in posts %}
 ```
 
-![Add code to the template tab.](https://i.imgur.com/geMEc3W.png)
+![Add code to the template tab.](https://imgur.elightup.com/geMEc3W.png)
 
 **Explanation**:
 
@@ -143,31 +143,31 @@ Since we have multiple posts, use a loop to display all of them.
 ```
 For displaying the job's information, just click the **Insert Field** button as I mentioned earlier. And then, insert fields inside the loop. For example, choose **Post title** to show the job title.
 
-![Insert the job title.](https://i.imgur.com/qPcKixn.png)
+![Insert the job title.](https://imgur.elightup.com/qPcKixn.png)
 
 Now, to show the location, company name, job type, and other details saved in the custom fields created with Meta Box. Find them in the list, then insert the fields as usual. The code will be generated automatically in the template.
 
-![Insert Meta Box fields](https://i.imgur.com/kna4vLh.png)
+![Insert Meta Box fields](https://imgur.elightup.com/kna4vLh.png)
 
 While inserting, you also can set the output of the field.
 
 After inserting all the fields, move to the **Settings** section to set where this template will appear. Set the **Type** as **Singular**, and choose the location as the page you created earlier for the job listings.
 
-![Choose the location as the job listings page.](https://i.imgur.com/WMk32fv.png)
+![Choose the location as the job listings page.](https://imgur.elightup.com/WMk32fv.png)
 
 Finally, set the template’s position.
 
-![Set the template’s position.](https://i.imgur.com/NFuSuNA.png)
+![Set the template’s position.](https://imgur.elightup.com/NFuSuNA.png)
 
 On the frontend, you’ll see all the job information displayed.
 
-![All the job information displayed](https://i.imgur.com/yuIwHrF.png)
+![All the job information displayed](https://imgur.elightup.com/yuIwHrF.png)
 
 However, it appears as a basic list without any styling for now. To make it look more visually appealing, we need to apply some styling.
 
 Back to the **Template** tab, add some `div` tags, classes and modify the code for styling.
 
-![Add some div tags, classes and modify the code for styling.](https://i.imgur.com/rF1u3LY.png)
+![Add some div tags, classes and modify the code for styling.](https://imgur.elightup.com/rF1u3LY.png)
 
 And move to the **CSS** tab to add some lines of code.
 
@@ -199,7 +199,7 @@ And move to the **CSS** tab to add some lines of code.
 }
 ```
 
-![Add some code to the CSS tab.](https://i.imgur.com/Od9Wvou.png)
+![Add some code to the CSS tab.](https://imgur.elightup.com/Od9Wvou.png)
 
 Now, the job listings look much better. It's time to set up the filtering functionality.
 
@@ -266,7 +266,7 @@ I’m going to show a mix of filters. You can choose whatever style works best f
 </div>
 ```
 
-![Add some code to display the search box and filter options for the job listings ](https://i.imgur.com/pYHuGvz.png)
+![Add some code to display the search box and filter options for the job listings ](https://imgur.elightup.com/pYHuGvz.png)
 
 **Explanation**:
 
@@ -402,11 +402,11 @@ Then, you'll need to add some code in the CSS tab again for styling the search b
 }
 ```
 
-![Add some code for styling the search boxes and filters.](https://i.imgur.com/BDWOeT0.png)
+![Add some code for styling the search boxes and filters.](https://imgur.elightup.com/BDWOeT0.png)
 
 Now, the job search and filter boxes are visible, but they are not functional yet.
 
-![The job search boxes are visible, but they are not functional yet.](https://i.imgur.com/hHiudrG.png)
+![The job search boxes are visible, but they are not functional yet.](https://imgur.elightup.com/hHiudrG.png)
 
 Thus, you need to use JavaScript to make them work.
 
@@ -468,7 +468,7 @@ jQuery(function ($) {
 });
 ```
 
-![Add script to make the filter work.](https://i.imgur.com/OQ9lsdw.png)
+![Add script to make the filter work.](https://imgur.elightup.com/OQ9lsdw.png)
 
 **Explanation**:
 
@@ -559,8 +559,8 @@ In the **Template** tab, add more code.
 <div class="mb-item {{ job_type_class }} {{ skill_classes }} {{ experience_level_class }}">
 ```
 
-![Add more HTML code to make filter work.](https://i.imgur.com/PrEMdBA.png)
- 
+![Add more HTML code to make filter work.](https://imgur.elightup.com/PrEMdBA.png)
+
 Explanation:
 
 ```
@@ -577,7 +577,7 @@ All the code we put it on [Github](https://github.com/wpmetabox/tutorials/tree/m
 
 Now, the job listings are fully functional! When you apply filters or search, the displayed jobs update accordingly.
 
-![Create a job listing page with advanced filtering options.](https://i.imgur.com/xLf3pfa.gif)
+![Create a job listing page with advanced filtering options.](https://imgur.elightup.com/xLf3pfa.gif)
 
 ## 5. Creating a submit job page
 
@@ -585,19 +585,19 @@ If you want users to submit job listings from the frontend instead of accessing 
 
 Now, create a new page. Then, add the **Frontend Submission Form** block provided by [MB Frontend Submission](https://metabox.io/plugins/mb-frontend-submission/).
 
-![Add the Frontend Submission Form block.](https://i.imgur.com/KkL4n09.png)
+![Add the Frontend Submission Form block.](https://imgur.elightup.com/KkL4n09.png)
 
 Remember the field group ID I set earlier? Enter this ID into the block settings, and you’ll immediately see the submission form fields appear on the page.
 
-![Enter the field group ID into the block settings.](https://i.imgur.com/ISMw24G.png)
+![Enter the field group ID into the block settings.](https://imgur.elightup.com/ISMw24G.png)
 
 Choose the created post type so that when users fill in a form, there will be a post appearing in that post type.
 
-![Choose the created post type.](https://i.imgur.com/0QPH55M.png)
+![Choose the created post type.](https://imgur.elightup.com/0QPH55M.png)
 
 Switch to the frontend, and you’ll see the **Submit Job** page displaying the form. Users can now enter job details and submit them directly.
 
-![The Submit Job page displays the form.](https://i.imgur.com/TEAlfNI.gif)
+![The Submit Job page displays the form.](https://imgur.elightup.com/TEAlfNI.gif)
 
 ## 6. Creating a job manager page
 
@@ -605,16 +605,16 @@ Start by creating a new page where users can view and manage the jobs they’ve 
 
 Add a **User Dashboard** block, which is provided by the **MB Frontend Submission** extension as well.
 
-![Add a User Dashboard block.](https://i.imgur.com/woFaq07.png)
+![Add a User Dashboard block.](https://imgur.elightup.com/woFaq07.png)
 
-There are some default blogs. 
+There are some default blogs.
 
-![Some default blogs after choosing the User Dashboard block](https://i.imgur.com/fHgeoD8.png)
+![Some default blogs after choosing the User Dashboard block](https://imgur.elightup.com/fHgeoD8.png)
 
 In the settings section, look for an option to select the **Submit Page**. This sets the page where users submit their job listings.
 
-![Set the page where users submit their job listings.](https://i.imgur.com/jVPHm2Q.png)
+![Set the page where users submit their job listings.](https://imgur.elightup.com/jVPHm2Q.png)
 
 Now, with the **Job Manager** page set up, you can edit or delete the job listings as you want.
 
-![The Job Manager page allows you to edit or delete the job listings.](https://i.imgur.com/5J5Jla1.gif)
+![The Job Manager page allows you to edit or delete the job listings.](https://imgur.elightup.com/5J5Jla1.gif)

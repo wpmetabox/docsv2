@@ -37,7 +37,7 @@ After that click the **Save Changes** button to finish.
 
 Now go to your post type and add a new post, you'll see the field group with custom fields displayed below the editor where you can enter the data you want:
 
-![editing a post with custom fields](https://i.imgur.com/TwDYnBQ.png)
+![editing a post with custom fields](https://imgur.elightup.com/TwDYnBQ.png)
 
 In the case that you don't want to use [Meta Box Lite](https://metabox.io/lite/), you have two ways to have MB Builder:
 
@@ -62,7 +62,7 @@ After having all the data for custom fields, it's time to show them on the front
 
 We'll display the event details for the event post type that we created in the previous steps for example. This is the single event page on the front end, and we'll display the event details below the event description:
 
-![Event page](https://i.imgur.com/rSPicJm.png)
+![Event page](https://imgur.elightup.com/rSPicJm.png)
 
 To do that, we'll use the [MB Views](/extensions/mb-views/) extension, which offers a powerful and flexible way to select and display fields.
 
@@ -76,15 +76,15 @@ To begin, we need to create a "view". A "view" is a template where we show our f
 
 On the edit view screen, enter the view title. To insert a field to the template, click the **Insert Field** button, which opens a panel with all the available fields:
 
-![Click to the Insert Field button, which opens a panel with all the available fields](https://i.imgur.com/1IPcVPr.png)
+![Click to the Insert Field button, which opens a panel with all the available fields](https://imgur.elightup.com/1IPcVPr.png)
 
 You'll see other WordPress fields as well such as post title or post content. For the custom fields we created, just choose one and click on its name on the list.
 
-![For the custom fields we created, just choose one and click on its name on the list](https://i.imgur.com/wydo9s9.png)
+![For the custom fields we created, just choose one and click on its name on the list](https://imgur.elightup.com/wydo9s9.png)
 
 For some kinds of data, Meta Box may offer some options for the output. It will show a popup asking for the output format as follows:
 
-![selecting a date format](https://i.imgur.com/OPXkorx.png)
+![selecting a date format](https://imgur.elightup.com/OPXkorx.png)
 
 Choose an output format from the dropdown and click the Insert button to insert the field to the template. After that, you'll see the template now has the following text:
 
@@ -92,7 +92,7 @@ Choose an output format from the dropdown and click the Insert button to insert 
 {{ post.datetime | date( 'F j, Y' ) }}
 ```
 
-![Choose an output format from the dropdown, and the text is displayed in the template](https://i.imgur.com/S0YCRfH.png)
+![Choose an output format from the dropdown, and the text is displayed in the template](https://imgur.elightup.com/S0YCRfH.png)
 
 That's the value of the field which will be displayed on the front end. However, displaying only text might be confusing, so we'll a label for it by adding the `<strong>Date and time:</strong>` before the text and wrap it in a paragraph (between `<p>` and `</p>` tags) to add some space. The template now looks like:
 
@@ -110,17 +110,17 @@ You can use any HTML tags and/or WordPress shortcodes in the view template.
 
 Now repeat the process for other fields: location and map. For map, as it's displayed as a Open Street Maps, we'll need change the HTML a little bit to put it below the label:
 
-![template for the event post type](https://i.imgur.com/TeWN22i.png)
+![template for the event post type](https://imgur.elightup.com/TeWN22i.png)
 
 Now you need to set up the view to display below the post content of the event page in the **Settings** box as follows:
 
-![view settings](https://i.imgur.com/U3kJnLe.png)
+![view settings](https://imgur.elightup.com/U3kJnLe.png)
 
 Finally, click the **Publish** button to finish.
 
 Now go to the event page on the front end and you'll see the custom fields that we created:
 
-![view event details on the front end](https://i.imgur.com/iOAEwBT.png)
+![view event details on the front end](https://imgur.elightup.com/iOAEwBT.png)
 
 :::info
 

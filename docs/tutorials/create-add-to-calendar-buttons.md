@@ -6,7 +6,7 @@ Creating an **"Add to Calendar" button for events, sales promotions, or coming s
 
 Here is an example which we’ll do for this practice:
 
-![Example of add-to-calendar buttons](https://i.imgur.com/mO38pFO.png)
+![Example of add-to-calendar buttons](https://imgur.elightup.com/mO38pFO.png)
 
 ## Preparation
 
@@ -20,11 +20,11 @@ Here are the tools we’ll use in this practice:
 
 Go to **Meta Box > Post Types > New Post Type** to create a post type for the events.
 
-![Create a new post type](https://i.imgur.com/8iPsfQD.png)
+![Create a new post type](https://imgur.elightup.com/8iPsfQD.png)
 
 After publishing the post type, you’ll see a new menu.
 
-![The newly created post type appears in the menu dashboard](https://i.imgur.com/X6FQ62u.png)
+![The newly created post type appears in the menu dashboard](https://imgur.elightup.com/X6FQ62u.png)
 
 ## 2. Creating custom fields
 
@@ -32,15 +32,15 @@ We'll create some fields to save time and other event information.
 
 Go to **Meta Box > Custom Fields > Add New**. Here are the custom fields that I created for example:
 
-![Create custom fields](https://i.imgur.com/yq1dTER.png)
+![Create custom fields](https://imgur.elightup.com/yq1dTER.png)
 
 After finishing creating the fields, move to the **Settings** tab. In the **Location** section, select **Post Types** as **Events** to apply these fields to the post type.
 
-![set Location for the custom fields as post type](https://i.imgur.com/nO6uBiw.png)
+![set Location for the custom fields as post type](https://imgur.elightup.com/nO6uBiw.png)
 
 Back to the post editor, you will see all the created custom fields. Let’s fill in the information into them.
 
-![Newly created custom fields in the post editor](https://i.imgur.com/UUyhiQq.png)
+![Newly created custom fields in the post editor](https://imgur.elightup.com/UUyhiQq.png)
 
 ## 3. Creating the add-to-calendar button
 
@@ -104,11 +104,11 @@ The ICS class is used to export the **ics** file when users click the **Add to C
 
 When going to the event's single page, you will see the result:
 
-![The result](https://i.imgur.com/vII8Oua.gif)
+![The result](https://imgur.elightup.com/vII8Oua.gif)
 
 When clicking the **Add to Calendar** button, the users will immediately download an **ics** file and then open it with an application on their computer.
 
-![clicking the Add to Calendar button](https://i.imgur.com/xYEYGiw.png)
+![clicking the Add to Calendar button](https://imgur.elightup.com/xYEYGiw.png)
 
-![open it with an application on their computer](https://i.imgur.com/mO38pFO.png)
+![open it with an application on their computer](https://imgur.elightup.com/mO38pFO.png)
 

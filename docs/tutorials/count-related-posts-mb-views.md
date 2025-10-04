@@ -12,7 +12,7 @@ So, I’ll show you two approaches:
 * Displaying numbered bullet points for each related post.
 * Showing the total number of related posts at the bottom of the section.
 
-![Favorite button will automatically appear on the posts](https://i.imgur.com/e654M8s.png)
+![Favorite button will automatically appear on the posts](https://imgur.elightup.com/e654M8s.png)
 (Number related posts as well as count the total, using the MB Views extension from Meta Box)
 
 Let’s see how to have it!
@@ -39,41 +39,41 @@ I’ll add related posts to my blog posts, so I'll create the field without any 
 
 For illustration purposes of this practice only, I’ll set up a field to add multiple related posts like this.
 
-![A Post field to add multiple related posts](https://i.imgur.com/drvwc77.png)
+![A Post field to add multiple related posts](https://imgur.elightup.com/drvwc77.png)
 
 Now, go to **Meta Box** > **Custom Fields** and create a new field group.
 
-![Create a new field group](https://i.imgur.com/t1ZUWwN.png)
+![Create a new field group](https://imgur.elightup.com/t1ZUWwN.png)
 
 Add a field in the type of **Post**. This field type allows you to choose more than one post from a regulated post type. So that, you can use it to choose several posts, then we can see them as related posts.
 
-![Choose the Post field to save multiple postss](https://i.imgur.com/q0YPZ6V.png)
+![Choose the Post field to save multiple postss](https://imgur.elightup.com/q0YPZ6V.png)
 
 You should configure this field a little bit.
 
 Specifically, in the **Post types** setting, you should choose the post type that the related posts are. In other words, only the posts from the post type set in this setting can be chosen.
 
-![Choose the post type that the related posts are](https://i.imgur.com/iYt03A4.png)
+![Choose the post type that the related posts are](https://imgur.elightup.com/iYt03A4.png)
 
 Next, in the **Field type** setting, you can choose a kind of selecting field, then the created field will inherit its style of displaying and inputting data. To know more about the style of each option in this setting, you can refer to [the documentation](https://docs.metabox.io/fields/post/#settings) of each providing field type.
 
-![In the Field type setting, you can choose a kind of selecting field](https://i.imgur.com/IZyvaRW.png)
+![In the Field type setting, you can choose a kind of selecting field](https://imgur.elightup.com/IZyvaRW.png)
 
 Additionally, you should turn on the **Multiple** option if you want to allow users to add more than one related post.
 
-![Turn on the Multiple option if you want to allow users to add more than one related post.](https://i.imgur.com/XHMrxFk.png)
+![Turn on the Multiple option if you want to allow users to add more than one related post.](https://imgur.elightup.com/XHMrxFk.png)
 
 After configuring all options for the field, move to the **Settings** tab, set **Location** as **Post type**, then choose a post type of the post where you want to show related posts.
 
-![Set location as Post type, then choose a post type of the post where you want to show related posts](https://i.imgur.com/gHzA4i4.png)
+![Set location as Post type, then choose a post type of the post where you want to show related posts](https://imgur.elightup.com/gHzA4i4.png)
 
 Go to the post editor, you will see the created field.
 
-![The created field on the post editor](https://i.imgur.com/QIzQrL4.png)
+![The created field on the post editor](https://imgur.elightup.com/QIzQrL4.png)
 
 Now, you can click on the field and see the list of posts from the post type you set in the settings of the fields.
 
-![When clicking on the field, you can see the list of posts from the post type](https://i.imgur.com/AT5fy49.png)
+![When clicking on the field, you can see the list of posts from the post type](https://imgur.elightup.com/AT5fy49.png)
 
 Just choose some of them from the list.
 
@@ -81,29 +81,29 @@ Just choose some of them from the list.
 
 Before counting the number of posts, we need to display them first. Head over to **Views** in **Meta Box** and create a new view for its template.
 
-![Head over to Views in Meta Box and create a new view for its template.](https://i.imgur.com/Bn7Dfnj.png)
+![Head over to Views in Meta Box and create a new view for its template.](https://imgur.elightup.com/Bn7Dfnj.png)
 
 With **MB Views**, you can add some lines of code to the **Template** tab or insert fields into it by clicking the **Insert Fields** button, and choose any fields on the right sidebar to get data from them.
 
-![With MB Views, add code in the Template tab or insert fields from the sidebar.](https://i.imgur.com/bEJzhYo.png)
+![With MB Views, add code in the Template tab or insert fields from the sidebar.](https://imgur.elightup.com/bEJzhYo.png)
 
 In this case, insert the created field, and its suitable output.
 
-![Insert the created field, and its suitable output.](https://i.imgur.com/73YssjW.png)
+![Insert the created field, and its suitable output.](https://imgur.elightup.com/73YssjW.png)
 
 Then, it will automatically generate code to the template.
 
-![It will automatically generate code to the template](https://i.imgur.com/dZU05me.png)
+![It will automatically generate code to the template](https://imgur.elightup.com/dZU05me.png)
 
 As we have many posts input in the fields, we have a loop, as shown in the image above. It will list all the related posts that are added into the custom fields.
 
 After that, go down to the **Settings** section of the view, set the **Type** as **Singular**, and choose the location as the singular of your post type.
 
-![In the settings, set Type to Singular and select the singular location of your post type.](https://i.imgur.com/AdmRKNd.png)
+![In the settings, set Type to Singular and select the singular location of your post type.](https://imgur.elightup.com/AdmRKNd.png)
 
 Then, you’ll see the related posts section in every post.
 
-![The related posts section in every post.](https://i.imgur.com/tDqagpO.png)
+![The related posts section in every post.](https://imgur.elightup.com/tDqagpO.png)
 
 Next, we will add some numbers to this section to let audiences know the total number of related posts.
 
@@ -111,21 +111,21 @@ Next, we will add some numbers to this section to let audiences know the total n
 
 Back to the template, I add a variable, `{{ loop.index }}`, to automatically number each related post in the list. This helps track and display the order of each post.
 
-![Add a variable to automatically number each related post in the list.](https://i.imgur.com/PfMnRDW.png)
+![Add a variable to automatically number each related post in the list.](https://imgur.elightup.com/PfMnRDW.png)
 
 Moving on to the frontend, you’ll see the related posts listed with numbered bullet points. This makes it easy for readers to see how much associated content they can explore.
 
-![The related posts listed with numbered bullet points](https://i.imgur.com/wwRx49X.png)
+![The related posts listed with numbered bullet points](https://imgur.elightup.com/wwRx49X.png)
 
 Moreover, if you update the custom field, the list will automatically refresh to reflect those changes, ensuring your content stays up-to-date and engaging.
 
-![If you update the custom field, the list will automatically refresh to reflect those changes](https://i.imgur.com/bYJv1E7.gif)
+![If you update the custom field, the list will automatically refresh to reflect those changes](https://imgur.elightup.com/bYJv1E7.gif)
 
 ## Counting posts in total
 
 Still in the created template, remove the `{{ loop.index }}` variable first.
 
-![Remove the {{ loop.index }} variable first](https://i.imgur.com/PfMnRDW.png)
+![Remove the {{ loop.index }} variable first](https://imgur.elightup.com/PfMnRDW.png)
 
 And, add a few lines of code.
 
@@ -134,7 +134,7 @@ And, add a few lines of code.
 <b>Total Related Post:</b> {{ total_related_post }}
 ```
 
-![Add a few lines of code](https://i.imgur.com/oqmUC3y.png)
+![Add a few lines of code](https://imgur.elightup.com/oqmUC3y.png)
 
 **Explanation**:
 
@@ -144,6 +144,6 @@ And, add a few lines of code.
 
 Now, you'll see the total number of related posts displayed, giving you a clear insight into the content available.
 
-![The total number of related posts displayed](https://i.imgur.com/9hK72Et.png)
+![The total number of related posts displayed](https://imgur.elightup.com/9hK72Et.png)
 
 If you want to learn more about displaying related posts in a dynamic way, check out our tutorial on [displaying related posts based on a shared relationship](https://docs.metabox.io/tutorials/create-relationships-mb-views/) or explore how to [add related posts with Meta Box](https://docs.metabox.io/tutorials/add-related-posts/).

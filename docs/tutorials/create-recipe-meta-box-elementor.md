@@ -9,7 +9,7 @@ We’re going to find out how to **create a recipe page** using a page builder -
 
 I made an example like this:
 
-![example of creating a single page](https://i.imgur.com/WdagIRI.png)
+![example of creating a single page](https://imgur.elightup.com/WdagIRI.png)
 
 ## Video version
 
@@ -33,11 +33,11 @@ We'll create a new post type for the recipe. You can refer to [this article](htt
 
 Use quick action in the dashboard or go to **Meta Box** > **Post Types** > **Add New** to create a new post type.
 
-![create new custom post type](https://i.imgur.com/68NYL42.png)
+![create new custom post type](https://imgur.elightup.com/68NYL42.png)
 
 After publishing, we’ll have a menu named Recipe in the Admin Dashboard.
 
-![new custom post type appears in the menu navigation](https://i.imgur.com/Vo0JaNr.png)
+![new custom post type appears in the menu navigation](https://imgur.elightup.com/Vo0JaNr.png)
 
 Let’s create custom fields in the next step.
 
@@ -95,31 +95,31 @@ Group</td>
 
 Since there will be more than one step for the process of cooking, create a group for the instruction with two subfields as below. And, I also set this group to be cloneable to add more steps.
 
-![set group to be clonable](https://i.imgur.com/lIwjwUR.png)
+![set group to be clonable](https://imgur.elightup.com/lIwjwUR.png)
 
 Then, there’ll be an **Add More** button to allow adding more steps.
 
-![click Add More button to allow adding more steps](https://i.imgur.com/3YvMnW7.png)
+![click Add More button to allow adding more steps](https://imgur.elightup.com/3YvMnW7.png)
 
 In the event that there are too many steps in the recipe, you can set this group to be collapsible.
 
-![set group to be collapsible](https://i.imgur.com/ZpCkLh4.png)
+![set group to be collapsible](https://imgur.elightup.com/ZpCkLh4.png)
 
 It’ll help avoid being messy.
 
-![collapse the group to avoid being messy](https://i.imgur.com/95Y1L1g.png)
+![collapse the group to avoid being messy](https://imgur.elightup.com/95Y1L1g.png)
 
 I also want to add a video and preview it immediately in the back end. So, I use the oEmbed field.
 
-![use oEmbed field to display the preview of the video directly in the frontend](https://i.imgur.com/r8VkBu7.png)
+![use oEmbed field to display the preview of the video directly in the frontend](https://imgur.elightup.com/r8VkBu7.png)
 
 After creating all the fields, move to the **Settings** tabs, choose **Location** as **Post Type** and select **Recipe** to apply these fields to it.
 
-![set the location for the new custom post type](https://i.imgur.com/vK505N8.png)
+![set the location for the new custom post type](https://imgur.elightup.com/vK505N8.png)
 
 Then, you can easily see all the created fields in the post editor. Just fill in the recipes' details.
 
-![newly created custom fields](https://i.imgur.com/I1EZRLQ.gif)
+![newly created custom fields](https://imgur.elightup.com/I1EZRLQ.gif)
 
 ## 3. Creating a skin
 
@@ -127,77 +127,77 @@ In this case, we have a cloneable group for the instruction information. If you 
 
 Go to **Templates > Theme Builder > MB Group Skin > Add New** to create a new skin.
 
-![move to theme builder to add new skin](https://i.imgur.com/M9fgsws.png)
+![move to theme builder to add new skin](https://imgur.elightup.com/M9fgsws.png)
 
-![add new skin in the MB Group Skin](https://i.imgur.com/1peivE2.png)
+![add new skin in the MB Group Skin](https://imgur.elightup.com/1peivE2.png)
 
 Remember to set the preview for the skin.
 
-![click the Dynamic Tags button](https://i.imgur.com/MKUnM5B.png)
+![click the Dynamic Tags button](https://imgur.elightup.com/MKUnM5B.png)
 
 Then, add a **Heading** element for the step number of the recipe.
 
-![add a Heading element for the step number of the recipe](https://i.imgur.com/tNW7MyY.png)
+![add a Heading element for the step number of the recipe](https://imgur.elightup.com/tNW7MyY.png)
 
 To get the step number saved in custom fields created by Meta Box, click the **Dynamic Tags** button in the settings of the **Heading** element > choose the **Meta Box Field** in the **Post** section.
 
-![click the Dynamic Tags button](https://i.imgur.com/InZoOBG.png)
+![click the Dynamic Tags button](https://imgur.elightup.com/InZoOBG.png)
 
 Then, choose the name of the field you want to get. Here, it’s **Step Number**.
 
-![add the Text Editor element for the description](https://i.imgur.com/XrHGBg4.png)
+![add the Text Editor element for the description](https://imgur.elightup.com/XrHGBg4.png)
 
 For the description of the step, add the **Text Editor** element. Then, also use the **Dynamic Tags** button > **Meta Box Fields** in the **Post** section and choose the corresponding fields.
 
-![add the Text Editor element for the description](https://i.imgur.com/7YWgCEs.png)
+![add the Text Editor element for the description](https://imgur.elightup.com/7YWgCEs.png)
 
 Now, both the step and step’s description have been obtained already. It’ll automatically get and display the information saved in the first group (means the 1st step) only for the preview. You can style these elements on your own.
 
-![style the elements on your own](https://i.imgur.com/vl1YiRp.png)
+![style the elements on your own](https://imgur.elightup.com/vl1YiRp.png)
 
 ## 4. Creating a template for the recipe page
 
 Back to the **Theme Builder > Single Post** to create a new template for post.
 
-![create a new template for the post](https://i.imgur.com/OXSGiFb.png)
+![create a new template for the post](https://imgur.elightup.com/OXSGiFb.png)
 
 Similar to the skin, remember to set the preview for this template.
 
 To display the name of the recipe which is the title of the post, add the **Post Title** element.
 
-![add the Post Title element to display the name of the recipe](https://i.imgur.com/IeLxmrp.png)
+![add the Post Title element to display the name of the recipe](https://imgur.elightup.com/IeLxmrp.png)
 
 We’ll display the featured image of the recipe and the timing data in 2 columns as below:
 
-![display the data as two columns](https://i.imgur.com/qzUXgds.png)
+![display the data as two columns](https://imgur.elightup.com/qzUXgds.png)
 
 So, add the **Inner** section element which has the layout of two columns.
 
-![add the Inner section](https://i.imgur.com/YpkjPIR.png)
+![add the Inner section](https://imgur.elightup.com/YpkjPIR.png)
 
 For the first column, add the **Featured Image** element to get the featured image of the post.
 
-![add the Featured Image element to get the featured image of the post](https://i.imgur.com/aAislzD.png)
+![add the Featured Image element to get the featured image of the post](https://imgur.elightup.com/aAislzD.png)
 
 For the timing data, add the **Text Editor** element. Since the timing data is saved in custom fields created by **Meta Box**, also use the **Dynamic Tags > Meta Box Field** then connect it to the corresponding field.
 
-![add the Text Editor element for the timing data and connect it to the corresponding field](https://i.imgur.com/wHoYtaV.png)
+![add the Text Editor element for the timing data and connect it to the corresponding field](https://imgur.elightup.com/wHoYtaV.png)
 
-![add the Text Editor element for the timing data and connect it to the corresponding field](https://i.imgur.com/Ukcm8cF.png)
+![add the Text Editor element for the timing data and connect it to the corresponding field](https://imgur.elightup.com/Ukcm8cF.png)
 
 To name the timing information, go to the Advanced section of the Text Editor element.
 
-![name the timing information](https://i.imgur.com/VRSLUgv.png)
+![name the timing information](https://imgur.elightup.com/VRSLUgv.png)
 
 Since the content of the timing information is the same, just duplicate the previous element and then connect them to the correct field where you want to get the data.
 
 To display the **Instruction** information, search for **MB Group** element and add it to the template.
 
-![display the Instruction information](https://i.imgur.com/fJ4LTRe.png)
+![display the Instruction information](https://imgur.elightup.com/fJ4LTRe.png)
 
 Then, there’ll be some data displayed in the preview. Then, set some settings in the left sidebar to the one you need for the instruction.
 
-![data displayed in the preview](https://i.imgur.com/06n9S2x.png)
+![data displayed in the preview](https://imgur.elightup.com/06n9S2x.png)
 
 The **Object Type** of the template is set by default as **Post** and the **Group** section will automatically set as the created-lastest group. If it is not the group field you want, you can change them to the right one.
 
@@ -205,37 +205,37 @@ Then all the data will be displayed correctly, but there is no styling.
 
 For styling, in the **Skin** section, choose the skin that you’ve created in the previous step. Then, it will turn to the new look with the style of the created skin.
 
-![choose the created in the previous step for styling](https://i.imgur.com/dxIlRxU.png)
+![choose the created in the previous step for styling](https://imgur.elightup.com/dxIlRxU.png)
 
 Since we use the **oEmbed** field to be able to save the links, use the **Shortcode** element to display the preview of the video. Then click the **Dynamic Tags** button > **Meta Box Field** and choose the Video field.
 
-![use the Shortcode element to display the preview of the video](https://i.imgur.com/iZK1Tpr.png)
+![use the Shortcode element to display the preview of the video](https://imgur.elightup.com/iZK1Tpr.png)
 
 For other information such as Ingredients, Nutrition, Notes and so on, add a **Heading** element to name the section.
 
-![add a Heading element to name the section for other information](https://i.imgur.com/qOKl0C7.png)
+![add a Heading element to name the section for other information](https://imgur.elightup.com/qOKl0C7.png)
 
 Then, add the **Text Editor** and connect it to the right field to get the data through the **Dynamic Tags** button.
 
-![add the Text Editor and connect it to the corresponding field to get data](https://i.imgur.com/9I1WOpw.png)
+![add the Text Editor and connect it to the corresponding field to get data](https://imgur.elightup.com/9I1WOpw.png)
 
 Now, all the data of the recipe has been obtained.
 
-![all the data is obtained](https://i.imgur.com/FpYzglN.gif)
+![all the data is obtained](https://imgur.elightup.com/FpYzglN.gif)
 
 Remember to set the condition for this template to apply it to the right singular page.
 
-![set the condition for the template to apply to the right singular page](https://i.imgur.com/fkFpzlV.png)
+![set the condition for the template to apply to the right singular page](https://imgur.elightup.com/fkFpzlV.png)
 
 If you want to style for the page, just do it on your own in the editor of both the skin and template.
 
 I’ll style some elements a bit for example.
 
-![style the template in the Elementor visual builder](https://i.imgur.com/Jt6MDsV.png)
+![style the template in the Elementor visual builder](https://imgur.elightup.com/Jt6MDsV.png)
 
 Now, the recipe has a new look as below:
 
-![the recipe appearance after styling](https://i.imgur.com/WdagIRI.png)
+![the recipe appearance after styling](https://imgur.elightup.com/WdagIRI.png)
 
 ------
 

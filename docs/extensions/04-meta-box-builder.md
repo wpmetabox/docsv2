@@ -258,7 +258,7 @@ In order to do re-edit the field group, we suggest after taking the PHP code, ex
 
 To export one or more field groups, go to the main screen *Meta Box &rarr; Custom Fields*. Then click the checkboxes next to the field groups' titles you want to export. Then choose **Export** from the Bulk Actions dropdown. Then click **Apply**.
 
-![export field groups](https://i.imgur.com/r1moj0S.png)
+![export field groups](https://imgur.elightup.com/r1moj0S.png)
 
 Or you can export individual field group by clicking on **Export** link when hover the mouse over the field group title:
 

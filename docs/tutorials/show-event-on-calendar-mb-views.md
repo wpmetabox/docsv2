@@ -11,7 +11,7 @@ Instead of adding a new plugin that can reduce the performance of the website, *
 
 I have a page as an example of an event calendar. On it, you can see which event is on which day, and how long it is based on the start date and end date. You can view the event on the calendar by month, week, or day as well.
 
-![An example of](https://i.imgur.com/eE5gShL.png)
+![An example of](https://imgur.elightup.com/eE5gShL.png)
 
 If you find it necessary or interesting, let's dive into the details of this tutorial together.
 
@@ -39,11 +39,11 @@ Each event will be a post of a custom post type. So, we need to create it first.
 
 Click on the **Create a post type** quick action right on the Meta Box dashboard or go to **Meta Box** > **Post Types** > **Add New** to create a new one for the event.
 
-![Click on the Create a post type quick action to create a new custom post type](https://i.imgur.com/0zEMI3s.png)
+![Click on the Create a post type quick action to create a new custom post type](https://imgur.elightup.com/0zEMI3s.png)
 
 Enter the plural and singular name for the post type. And after publishing, a new menu will appear right here. It’s your post type.
 
-![The new post type appears as a new menu](https://i.imgur.com/lmfnSBm.png)
+![The new post type appears as a new menu](https://imgur.elightup.com/lmfnSBm.png)
 
 ## 2. Creating custom fields
 
@@ -53,42 +53,42 @@ To do it, you have two methods:
 
 The first one, right after you publish the post type successfully, there is a notice. Just click on the **Add custom fields to this post type** button in there.
 
-![Click to add field group for the post type automatically](https://i.imgur.com/2spGFOK.png)
+![Click to add field group for the post type automatically](https://imgur.elightup.com/2spGFOK.png)
 
 Then, you can see the interface of a field group. It’s applied to the **Event** post type automatically.
 
 The second method is moving to the **Custom Fields** sub-menu, and creating a new field group as usual. Then, set the location for this field group. I’ll follow this way.
 
-![Go to Meta Box, Custom Fields, and create a new field grouphttps://i.imgur.com/E3Yspw2.png)
+![Go to Meta Box, Custom Fields, and create a new field grouphttps://imgur.elightup.com/E3Yspw2.png)
 
 As I said above, these are two fields I created to store the start and end dates.
 
-![Two fields for the start and end date](https://i.imgur.com/EnQOOKj.png)
+![Two fields for the start and end date](https://imgur.elightup.com/EnQOOKj.png)
 
 
 I chose the **Datetime Picker** field type for both the start and end date of the event. If you don’t want to note the time, you can use the **Date Picker** instead.
 
-![Choose the Datetime Picker field type for both the start and end date](https://i.imgur.com/SBWbGve.png)
+![Choose the Datetime Picker field type for both the start and end date](https://imgur.elightup.com/SBWbGve.png)
 
 If you want to show the date on the management dashboard, just enable the **Show as admin column** feature. Notice that, you’ll only see this setting for the field when enabling the [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) extension. While optional, it's a handy feature to have.
 
-![Enable the Show as admin column to display the field on the dashboard.](https://i.imgur.com/b2JcaE2.png)
+![Enable the Show as admin column to display the field on the dashboard.](https://imgur.elightup.com/b2JcaE2.png)
 
 If you want to store other information, just add corresponding field types as you go.
 
 After creating all the needed fields, move to the **Settings** tab. Choose **Location** as **Post type**, and select **Event** to apply these fields to it.
 
-![Set the location of the field group as Event post type.](https://i.imgur.com/xuAxGpE.png)
+![Set the location of the field group as Event post type.](https://imgur.elightup.com/xuAxGpE.png)
 
 Then, in the post editor, you will see the created custom fields.
 
-![The created custom field displays in the post editor](https://i.imgur.com/ctbqxEA.png)
+![The created custom field displays in the post editor](https://imgur.elightup.com/ctbqxEA.png)
 
 Simply input data into them.
 
 These are some posts that I created for example. The start date and the end date are shown as admin columns as well.
 
-![I created some posts as example](https://i.imgur.com/zG0G0WU.png)
+![I created some posts as example](https://imgur.elightup.com/zG0G0WU.png)
 
 ## 3. Creating a template to get event information
 
@@ -96,7 +96,7 @@ You can use any page builder to get event information. But after doing it, I’l
 
 In the Meta Box dashboard, click on the **Create a view** button or go ahead to the **Views** submenu to create a new template for displaying the events.
 
-![Create a new view to display the event calendar](https://i.imgur.com/R6YZEGn.png)
+![Create a new view to display the event calendar](https://imgur.elightup.com/R6YZEGn.png)
 
 With MB Views, you can insert fields into the template by clicking on the **Insert Field** button, and choose any fields on the right sidebar to get data from them. Or, add some lines of code directly.
 
@@ -109,7 +109,7 @@ First, I add these lines of code:
 
 {% endfor %}
 ```
-![Add code to get posts from the post type.](https://i.imgur.com/5rVD00R.png)
+![Add code to get posts from the post type.](https://imgur.elightup.com/5rVD00R.png)
 
 **In there**:
 
@@ -117,41 +117,41 @@ First, I add these lines of code:
 * `mb.get_posts()`: is a Meta Box function to get the posts.
 * `{% for post in posts %}...{% endfor %}`: is a loop we add to get and display all the posts since we have various posts.
 
-Inside the loop, we’ll get information about the event. You should use the button I mentioned before, and insert the field you want from the right panel. 
+Inside the loop, we’ll get information about the event. You should use the button I mentioned before, and insert the field you want from the right panel.
 
-![Click on the button to insert field](https://i.imgur.com/CfunedS.png)
+![Click on the button to insert field](https://imgur.elightup.com/CfunedS.png)
 
 For demonstration purposes, I just get three basic information including the event name, start date, and end date. They will be used on the calendar later.
 
 The event name means **Post title**. Click on it from the right panel.
 
-![The event name is the post title](https://i.imgur.com/aaRAoKc.png)
+![The event name is the post title](https://imgur.elightup.com/aaRAoKc.png)
 
 For the start and end dates, Meta Box provides some options to set the output of the date. To ensure event transformation works correctly on the calendar, you should choose the format which follows the ISO standard.
 
-![Select the format of date](https://i.imgur.com/vOM4VQM.png)
+![Select the format of date](https://imgur.elightup.com/vOM4VQM.png)
 
 Do the same with the end date.
 
-![The start date and end date after inserting field and choosing format](https://i.imgur.com/fStiRJn.png)
+![The start date and end date after inserting field and choosing format](https://imgur.elightup.com/fStiRJn.png)
 
 The template is now in the simplest version since it is just to get data.
 
 I keep the type of this template as **Shortcode**, then we can put it in any place we want through the generated shortcode.
 
-![Set the type of template as shortcode](https://i.imgur.com/UWGEOqw.png)
+![Set the type of template as shortcode](https://imgur.elightup.com/UWGEOqw.png)
 
 After publishing this template, the shortcode is generated automatically. Just copy it.
 
-![Copy the generated shortcode](https://i.imgur.com/lsToQ6E.png)
+![Copy the generated shortcode](https://imgur.elightup.com/lsToQ6E.png)
 
 Assuming that you want to display the event calendar on a page, go to the page editor, then paste the copied shortcode.
 
-![Paste the shortcode in the place you want](https://i.imgur.com/4GgPbKD.png)
+![Paste the shortcode in the place you want](https://imgur.elightup.com/4GgPbKD.png)
 
 On the front end, the information about all the events is displayed.
 
-![The content displayed.](https://i.imgur.com/KURGmnB.png)
+![The content displayed.](https://imgur.elightup.com/KURGmnB.png)
 
 Next, we’ll transfer this information to the calendar.
 
@@ -169,7 +169,7 @@ First, I’ll add some lines to declare some libraries we’ll use to have an ev
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css" />
 ```
 
-![Declare JavaScript and CSS libraries for the calendar](https://i.imgur.com/uabIxpd.png)
+![Declare JavaScript and CSS libraries for the calendar](https://imgur.elightup.com/uabIxpd.png)
 
 In this practice, I use some JavaScript libraries to have some features of the calendar such as date-time format, showing the calendar by week, month, or year, calendar language, and calculating time differences.
 
@@ -177,24 +177,24 @@ I also declare the CSS library for styling the calendar.
 
 Next, I set a variable as an empty array, since it will include the values from the fields in posts, which are obtained by the loop.
 
-![Set a variable as an empty array](https://i.imgur.com/BFpEgzH.png)
+![Set a variable as an empty array](https://imgur.elightup.com/BFpEgzH.png)
 
 Then, modify the loop to transfer all the values to the array.
 
-![Modify the loop to transfer all the values to the array](https://i.imgur.com/YNHTBCX.png)
+![Modify the loop to transfer all the values to the array](https://imgur.elightup.com/YNHTBCX.png)
 
 Now, add this code:
 
 ```
 <div id="calendar" data-event='{{ event_info|json_encode() }}'></div>
 ```
-![Create a div tag and convert variable to JSON](https://i.imgur.com/JvcmUxG.png)
+![Create a div tag and convert variable to JSON](https://imgur.elightup.com/JvcmUxG.png)
 
 It’s to create a new **div** tag that has an ID as `calendar`. It’ll be used in JavaScript later. Also, you should convert the variable to JSON to use in Javascript. Then assign it to the `data-event` attribute.
 
 Next, move to the **CSS** tab to make the event and calendar more beautiful.
 
-![Go to the CSS tab to style the calendar](https://i.imgur.com/cAWLCIg.png)
+![Go to the CSS tab to style the calendar](https://imgur.elightup.com/cAWLCIg.png)
 
 Then, move to the **JavaScript** tab, and add some code to transfer events on the calendar.
 
@@ -221,7 +221,7 @@ $(function () {
 });
 ```
 
-![Add some code into the JavaScript tab to transfer events on the calendar](https://i.imgur.com/gfKgLMC.png)
+![Add some code into the JavaScript tab to transfer events on the calendar](https://imgur.elightup.com/gfKgLMC.png)
 
 **Explanation**:
 
@@ -235,7 +235,7 @@ That’s done. I uploaded the code to [GitHub](https://github.com/wpmetabox/tuto
 
 Now, go to the page, and this is the new look of the event calendar with all the features such as viewing the calendar in day, week, month, and the next or previous period.
 
-![An event calendar with all features.](https://i.imgur.com/k8iHMhe.png)
+![An event calendar with all features.](https://imgur.elightup.com/k8iHMhe.png)
 
 On the calendar, you can see which event is on which day, and how long it is based on the start date and end date.
 
@@ -245,4 +245,4 @@ Also, use the template shortcode.
 
 All the data was displayed as we expected, but the format is different a little bit. To see the event, just click on it.
 
-![The format of event calendar is different a little bit.](https://i.imgur.com/A02dW2d.gif)
+![The format of event calendar is different a little bit.](https://imgur.elightup.com/A02dW2d.gif)

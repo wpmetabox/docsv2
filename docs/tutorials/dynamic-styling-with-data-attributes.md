@@ -9,7 +9,7 @@ You usually use classes and IDs to style your WordPress. However, they can not s
 
 In this practice, I’ll use terms as data attributes to style posts based on the different types. Therefore, each kind of hotel has a distinct style. And the posts with the same type will have the same style.
 
-![Example of using data attributes to dynamically style dynamically](https://i.imgur.com/N55u20b.png)
+![Example of using data attributes to dynamically style dynamically](https://imgur.elightup.com/N55u20b.png)
 
 ## Video version
 
@@ -42,11 +42,11 @@ In the case that you use default posts, you can skip this step.
 
 Right in the Meta Box dashboard, click on the **Create a post type** quick action or go to **Meta Box** > **Post Types** to create a new one for the hotel.
 
-![Click on the Create a post type on the dashboard to create a new one.](https://i.imgur.com/U2oK8uE.png)
+![Click on the Create a post type on the dashboard to create a new one.](https://imgur.elightup.com/U2oK8uE.png)
 
 After publishing, a new menu appeared. It’s your post type.
 
-![The created post type is displayed on the menu.](https://i.imgur.com/co1wLtW.png)
+![The created post type is displayed on the menu.](https://imgur.elightup.com/co1wLtW.png)
 
 ## 2. Creating a custom taxonomy
 
@@ -54,23 +54,23 @@ As I mentioned before, we’ll use terms as data attributes. So, let’s create 
 
 Navigate to **Meta Box** > **Taxonomies** to create a new custom taxonomy.
 
-![Move to the Taxonomies submenu to create a custom taxonomy.](https://i.imgur.com/d5nwbu5.png)
+![Move to the Taxonomies submenu to create a custom taxonomy.](https://imgur.elightup.com/d5nwbu5.png)
 
 Since I want to display the taxonomy as a column in the admin screen, move to the **Advanced** tab and check the **Show admin column** option. It’s available when you have the [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) extension.
 
-![In the Advanced tab, click the Show admin column option](https://i.imgur.com/IT24Xdv.png)
+![In the Advanced tab, click the Show admin column option](https://imgur.elightup.com/IT24Xdv.png)
 
 In the **Post Types** tab, choose the post type that you’ve just created to apply this taxonomy to it.
 
-![In the Post Types tab, select the post type.](https://i.imgur.com/EaV0zHJ.png)
+![In the Post Types tab, select the post type.](https://imgur.elightup.com/EaV0zHJ.png)
 
 Now, when you create posts, you can see the section to add amenities for them. In that section, you can type the amenity or choose one from the list below.
 
-![A new section for setting taxonomy in the post editor.](https://i.imgur.com/CZgoXac.png)
+![A new section for setting taxonomy in the post editor.](https://imgur.elightup.com/CZgoXac.png)
 
 Then, they are displayed in the column.
 
-![The terms are displayed in a column.](https://i.imgur.com/KO0mEqv.png)
+![The terms are displayed in a column.](https://imgur.elightup.com/KO0mEqv.png)
 
 ## 3. Displaying posts on the page
 
@@ -78,63 +78,63 @@ As I said before, you can use MB Views or a page builder to display hotels in an
 
 Edit the homepage with Bricks.
 
-![Edit the homepage with Bricks.](https://i.imgur.com/MA3RaIk.png)
+![Edit the homepage with Bricks.](https://imgur.elightup.com/MA3RaIk.png)
 
 Add a new section specifically for the hotels.
 
-![Add a new section specifically for the hotels.](https://i.imgur.com/4ShDtla.png)
+![Add a new section specifically for the hotels.](https://imgur.elightup.com/4ShDtla.png)
 
 Inside it, add a **Heading** element to name the section.
 
-![Add a Heading element to name the section](https://i.imgur.com/bR2X4Hl.png)
+![Add a Heading element to name the section](https://imgur.elightup.com/bR2X4Hl.png)
 
 Next, add a **Div** element to contain the hotels.
 
-![Add a Div element to contain the hotels](https://i.imgur.com/CJ8Wxq5.png)
+![Add a Div element to contain the hotels](https://imgur.elightup.com/CJ8Wxq5.png)
 
 To get all posts in the `hotel` post type, enable the **Query loop** button. Then, choose the post type you want to get data from in the **Post type** section.
 
-![Enable the Query loop button and choose the post type.](https://i.imgur.com/q9Ztg7F.png)
+![Enable the Query loop button and choose the post type.](https://imgur.elightup.com/q9Ztg7F.png)
 
 After that, simply add some elements to get data for the hotel as usual.
 
 Add an **Image** element to get the hotel images.
 
-![Add an Image element to get the hotel images.](https://i.imgur.com/W6h1TT8.png)
+![Add an Image element to get the hotel images.](https://imgur.elightup.com/W6h1TT8.png)
 
 It’s the featured images of posts. So, we’ll use the **Dynamic data** icon, and choose **Feature Image** from the list.
 
-![Use the Dynamic data icon, and choose Feature Image from the list](https://i.imgur.com/7nPmhkj.png)
+![Use the Dynamic data icon, and choose Feature Image from the list](https://imgur.elightup.com/7nPmhkj.png)
 
 For the hotel’s name, we use the **Basic text** element.
 
-![Use the Basic text element for the hotel’s name.](https://i.imgur.com/258J60d.png)
+![Use the Basic text element for the hotel’s name.](https://imgur.elightup.com/258J60d.png)
 
 Also, use the dynamic data feature to get data for it. The names of hotels are the post title. So, select it.
 
-![Select the Post title from the dynamic data list.](https://i.imgur.com/XAIi15q.png)
+![Select the Post title from the dynamic data list.](https://imgur.elightup.com/XAIi15q.png)
 
 To display the type of amenity, add another **Basic Text** element.
 
-![Add another Basic text element for the type of amenity.](https://i.imgur.com/4rwbD51.png)
+![Add another Basic text element for the type of amenity.](https://imgur.elightup.com/4rwbD51.png)
 
 The amenities are terms of taxonomy. We’ll use the Dynamic data button as well and find out the term from the dropdown list.
 
-![Choose the taxonomy from the list.](https://i.imgur.com/q7nu30H.png)
+![Choose the taxonomy from the list.](https://imgur.elightup.com/q7nu30H.png)
 
 If you have extra information saved in custom fields, just add the corresponding elements to get them.
 
 After that, on the frontend, you’ll see all the data displayed already.
 
-![All the data is displayed.](https://i.imgur.com/lFeOgOQ.png)
+![All the data is displayed.](https://imgur.elightup.com/lFeOgOQ.png)
 
 You can style the section to have a better look. Use the **Style** tab as usual.
 
-![Style the section.](https://i.imgur.com/0htOTGT.png)
+![Style the section.](https://imgur.elightup.com/0htOTGT.png)
 
 This is my new look for the hotel section.
 
-![The hotel section after styling as usual.](https://i.imgur.com/4kNqozm.png)
+![The hotel section after styling as usual.](https://imgur.elightup.com/4kNqozm.png)
 
 However, I want to style it based on each service. It means there are differences between types of amenities. It will be easier to check which hotels offer the same service. So, let’s move on to the key point of this tutorial.
 
@@ -146,29 +146,29 @@ Back to the page editor with Bricks.
 
 In the **Style** tab of the **Div** element, there is a tab called **Attributes**. Open that tab, and enter the name of the attribute in the **Name** box. It’ll be used to style later. You can set any name you want.
 
-![Enter the name of attribute in the Attributes tab](https://i.imgur.com/KnQCdsr.png)
+![Enter the name of attribute in the Attributes tab](https://imgur.elightup.com/KnQCdsr.png)
 
 The value of the attribute is the data that you style based on. It can be the post title, custom fields, or anything. In this tutorial, I want to style to distinguish the type of hotel. So, click on the **Dynamic data** icon, and select your team. This step is the same as getting data from terms.
 
-![Set the value of the attribute as the term using the dynamic data icon.](https://i.imgur.com/LE86xbd.png)
+![Set the value of the attribute as the term using the dynamic data icon.](https://imgur.elightup.com/LE86xbd.png)
 
 I want to remove the links, so I added the `plain` filter.
 
-![Add the plain filter to remove the links.](https://i.imgur.com/saHFtS9.png)
+![Add the plain filter to remove the links.](https://imgur.elightup.com/saHFtS9.png)
 
 Now, when inspecting the section on the frontend, you’ll see the elements have a new `data-color` attribute attached to them.
 
-![Each post has a new attribute with the value is its term of taxonomy](https://i.imgur.com/vHix6nX.png)
+![Each post has a new attribute with the value is its term of taxonomy](https://imgur.elightup.com/vHix6nX.png)
 
 We’re taking data that is associated with each hotel and injecting it right into the HTML. So, we can target elements based on that data. Our work is just styling those attributes.
 
 Back to the page template in Bricks, also in the **Style** section of the **Div** element, move to the **CSS** tab, then add some code to have the appearance of the section as you want.
 
-![Add CSS for each data attribute to style them](https://i.imgur.com/fqB1jxe.png)
+![Add CSS for each data attribute to style them](https://imgur.elightup.com/fqB1jxe.png)
 
 And this is the new look of the section. In there, the hotels that share the same amenity tend to have a similar style.
 
-![The new look of the section with different styles for different amenities](https://i.imgur.com/bNrc12y.png)
+![The new look of the section with different styles for different amenities](https://imgur.elightup.com/bNrc12y.png)
 
 With data attributes, you can target and style anything without affecting performance. It’s really powerful and potential.
 

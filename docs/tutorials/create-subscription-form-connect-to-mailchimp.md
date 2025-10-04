@@ -9,15 +9,15 @@ We’re going to use the [MB Frontend Submission](https://metabox.io/plugins/mb-
 
 This is a simple subscription form.
 
-![A simple subscription form](https://i.imgur.com/MALHkE9.png)
+![A simple subscription form](https://imgur.elightup.com/MALHkE9.png)
 
 Whenever someone submits the form, their information will be saved in a post of a custom post type. So, you can see the new account in the dashboard like this.
 
-![After submitting the form, the account info will be saved in a post of a custom post type in the dashboard.](https://i.imgur.com/IFsCj8h.png)
+![After submitting the form, the account info will be saved in a post of a custom post type in the dashboard.](https://imgur.elightup.com/IFsCj8h.png)
 
 And, when you connect to the MailChimp service, you can see the account in the email list in MailChimp.
 
-![The contact submitted from the form will be in the email list in MailChimp.](https://i.imgur.com/YHtpYqZ.png)
+![The contact submitted from the form will be in the email list in MailChimp.](https://imgur.elightup.com/YHtpYqZ.png)
 
 ## Video version
 
@@ -40,11 +40,11 @@ To save and review subscriber data easily and conveniently, firstly, you need to
 
 Go to **Meta Box > Post Types > New Post Type**. Then modify the general information for the post type and publish it.
 
-![create new post type for subscribers](https://i.imgur.com/SB3KNJK.png)
+![create new post type for subscribers](https://imgur.elightup.com/SB3KNJK.png)
 
 After publishing, a new menu named **Subscribers** will appear. Information of each subscriber will be saved in a post of this post type.
 
-![Newly created post type appears in the menu](https://i.imgur.com/VttNgq4.png)
+![Newly created post type appears in the menu](https://imgur.elightup.com/VttNgq4.png)
 
 ## 2. Creating a subscription form
 
@@ -52,25 +52,25 @@ Commonly, a subscription form has at least two fields: Name and Email. You may h
 
 Now, go to **Meta Box** > **Custom Fields** > **Add New** to create fields.
 
-![Go to Meta Box to create fields for the form](https://i.imgur.com/j8bURp6.png)
+![Go to Meta Box to create fields for the form](https://imgur.elightup.com/j8bURp6.png)
 
 To save database space, I will use the name that is submitted into the form for the post title. So, the ID of the Name field will be the same as the post title.
 
-![The ID of the Name field will be the same as the post title.](https://i.imgur.com/WlR1pDd.png)
+![The ID of the Name field will be the same as the post title.](https://imgur.elightup.com/WlR1pDd.png)
 
 Apart from that, there are no special settings for the fields I want. Thus, I just create them as usual.
 
 After creating all the fields, go to the **Settings** tab, set the **Location** as **Post type**, and choose **Subscriber** to apply all the fields to this post type.
 
-![Set location for the created fields](https://i.imgur.com/oUn8BIv.png)
+![Set location for the created fields](https://imgur.elightup.com/oUn8BIv.png)
 
 Once you have published the field group, its ID will be generated automatically. Just copy it since we’ll use it in the next step.
 
-![Get ID of the field group](https://i.imgur.com/ADylHdJ.png)
+![Get ID of the field group](https://imgur.elightup.com/ADylHdJ.png)
 
 Move to the post editor, you will see only a field for email displayed since we set the Name field as the title.
 
-![Only a field for email displays since we set the Name field as the title.](https://i.imgur.com/DXon9rF.png)
+![Only a field for email displays since we set the Name field as the title.](https://imgur.elightup.com/DXon9rF.png)
 
 I'll not input any data now, since the form will be used on the frontend, then the user can submit it.
 
@@ -80,31 +80,31 @@ In the real case, you absolutely can add the form to a pre-built page, then the 
 
 Now, go to **Pages** to create a new page as usual.
 
-![Create a new page as usual.](https://i.imgur.com/kAFk9pR.png)
+![Create a new page as usual.](https://imgur.elightup.com/kAFk9pR.png)
 
 Look for the **Submission Form** block, or element, or widget (in the case you’re using a page builder). It’s provided by **MB Frontend Submission** to have the subscription form display.
 
-![Look for the Submission Form block.](https://i.imgur.com/e8ItvU7.png)
+![Look for the Submission Form block.](https://imgur.elightup.com/e8ItvU7.png)
 
 Once you select this block, it’ll display the title and content fields by default. They are not what we created.
 
-![The title and content fields display by default.](https://i.imgur.com/xUFZ31u.png)
+![The title and content fields display by default.](https://imgur.elightup.com/xUFZ31u.png)
 
 To display the created custom fields for the form, add the ID of the field group to the box in the image below. The ID is the one we copied from the field group in the previous step. Then, you will see the fields displayed immediately.
 
-![Add the ID of the field group to the ID box to display the custom fields for the form.](https://i.imgur.com/bjiq8Yg.png)
+![Add the ID of the field group to the ID box to display the custom fields for the form.](https://imgur.elightup.com/bjiq8Yg.png)
 
 There are some settings of this block on the right sidebar. You can set it as you go. But, you must set the post type as the one you created for the submission. Then, every submission from this form will be saved to a post in that post type.
 
-![Set the post type as the one you created for the submission.](https://i.imgur.com/mrxYZ4O.png)
+![Set the post type as the one you created for the submission.](https://imgur.elightup.com/mrxYZ4O.png)
 
 Next, to disable the **Title** and **Content** field in the form, remove them in the **Post Fields** section:
 
-![Disable the Title and Content field in the form.](https://i.imgur.com/9pncrWG.png)
+![Disable the Title and Content field in the form.](https://imgur.elightup.com/9pncrWG.png)
 
 Go to the page on the frontend, we will see the form displayed, with two fields as we want.
 
-![The form displays with the Name field and Email field on the frontend.](https://i.imgur.com/tMt5uui.png)
+![The form displays with the Name field and Email field on the frontend.](https://imgur.elightup.com/tMt5uui.png)
 
 You can go to the **Customizer** section > **Additional CSS** to add some code to beautify the subscription form.
 
@@ -135,11 +135,11 @@ You can go to the **Customizer** section > **Additional CSS** to add some code t
 }
 ```
 
-![Add some CSS code to beautify the subscription form.](https://i.imgur.com/K1ait5c.png)
+![Add some CSS code to beautify the subscription form.](https://imgur.elightup.com/K1ait5c.png)
 
 You can see in the gif below the subscription form works well, but just saves the data on your website, and you can see the contact in the back end, not your MailChimp account yet.
 
-![The subscription form works well, but just saves the data on your website so far.](https://i.imgur.com/NFH30tp.gif)
+![The subscription form works well, but just saves the data on your website so far.](https://imgur.elightup.com/NFH30tp.gif)
 
 So let’s go ahead to connect this form to MailChimp.
 
@@ -183,7 +183,7 @@ add_action( 'rwmb_frontend_after_process', function( $config, $post_id ) {
 }, 10, 2 );
 ```
 
-![Add code to the functions.php file.](https://i.imgur.com/mlFyq7I.png)
+![Add code to the functions.php file.](https://imgur.elightup.com/mlFyq7I.png)
 
 **In there**:
 
@@ -206,13 +206,13 @@ $result = $mailchimp->post( '/lists/' . $list_id . '/members', array(
 ```
 And, notice that if you have separated fields for the first name and last name, just fill in the ID to these places in this image. In my case, there is only a field for names.
 
-![Where you can fill in the ID of the field for the first name and last name.](https://i.imgur.com/z46BF2h.png)
+![Where you can fill in the ID of the field for the first name and last name.](https://imgur.elightup.com/z46BF2h.png)
 
 Now, go back to the form on the page to test how it connects to our Mailchimp account. Just **add a new subscription**. This new subscriber information absolutely will be saved as a post in the backend, as well as in the Mailchimp account dashboard.
 
-![New subscriber information absolutely is saved as a post in the backend.](https://i.imgur.com/jHDMUrM.png)
+![New subscriber information absolutely is saved as a post in the backend.](https://imgur.elightup.com/jHDMUrM.png)
 
-![The new contact is also on the list in my MailChimp account.](https://i.imgur.com/YHtpYqZ.png)
+![The new contact is also on the list in my MailChimp account.](https://imgur.elightup.com/YHtpYqZ.png)
 
 Do you remember that I submitted an account named Janessa before I created the integration? Since it was submitted before I made the integration, it does not appear in the MailChimp. Only the new ones will be there.
 

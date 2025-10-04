@@ -15,7 +15,7 @@ This docs is also used for **URL** and **email** field types as they share the s
 ## Screenshots
 
 <Screenshots name="text" col1={[
-    ['https://i.imgur.com/WnedDrd.png', 'The text field interface']
+    ['https://imgur.elightup.com/WnedDrd.png', 'The text field interface']
 ]} />
 
 ## Settings

@@ -10,7 +10,7 @@ The select advanced field creates a beautiful select dropdown using the [select2
 ## Screenshots
 
 <Screenshots name="select-advanced" col1={[
-    ['https://i.imgur.com/65OkGbt.png', 'The select advanced field interface']
+    ['https://imgur.elightup.com/65OkGbt.png', 'The select advanced field interface']
 ]} />
 
 ## Settings

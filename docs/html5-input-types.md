@@ -12,11 +12,11 @@ In addition to the [supported field types](/fields/), Meta Box also supports all
 
 - You have built-in UI like the arrow up/down for `number` or a picker for date/time/week. The UI is various in different browsers, but it works. And it also supports mobile devices.
 
-![built-in UI for week input](https://i.imgur.com/owRtMYv.png)
+![built-in UI for week input](https://imgur.elightup.com/owRtMYv.png)
 
 - You have built-in validation. If users enter invalid data (for `url` or `email`), the browser will throw an error.
 
-![invalid email error](https://i.imgur.com/vmUkaIP.png)
+![invalid email error](https://imgur.elightup.com/vmUkaIP.png)
 
 - Finally, you have a semantic markup
 

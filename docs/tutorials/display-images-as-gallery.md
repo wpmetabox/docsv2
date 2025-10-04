@@ -8,7 +8,7 @@ Sometimes, you may want to show product images, a portfolio, or just a photograp
 
 Specifically, we’ll use a custom field in the type of **Image Advanced** for uploading multiple images, then display them as an image gallery on a page. I will create a simple one like this.
 
-![Display uploaded images as a WordPress image gallery](https://i.imgur.com/zpncoql.gif)
+![Display uploaded images as a WordPress image gallery](https://imgur.elightup.com/zpncoql.gif)
 
 This task will be very easy-to-do with some **lines of code added to the theme’s files**, or simpler with the help of **MB Views**. It’s an extension of Meta Box. So let’s see how we do it in both ways.
 
@@ -31,31 +31,31 @@ Next, we may need some advanced features from the **Meta Box** extensions. You c
 
 In the real case, you can add the gallery to any premade page or settings page. But in this practice, I will create a new one to display only the gallery to simplify the content. Now, go to **Pages** > **Add New** to create a new page.
 
-![Create a new page](https://i.imgur.com/JsWdMUU.png)
+![Create a new page](https://imgur.elightup.com/JsWdMUU.png)
 
 I leave this page blank since I will add the gallery to this page later.
 
-![Leave this page blank since I will add the gallery to this page later](https://i.imgur.com/CiS4fR1.png)
+![Leave this page blank since I will add the gallery to this page later](https://imgur.elightup.com/CiS4fR1.png)
 
 For the custom field to save images, I will create it now and assign it to this page.
 
 Go to **Meta Box** > **Custom Fields** and create that field.
 
-![Go to Meta Box > Custom Fields and create that field.](https://i.imgur.com/KEqd0ZH.png)
+![Go to Meta Box > Custom Fields and create that field.](https://imgur.elightup.com/KEqd0ZH.png)
 
 The field should be the **Image Advance**d type, which allows uploading multiple images.
 
-![The Image Advanced type allows uploading multiple images.](https://i.imgur.com/uTTRyfA.png)
+![The Image Advanced type allows uploading multiple images.](https://imgur.elightup.com/uTTRyfA.png)
 
 Now, go to the **Settings** tab, set the **Location** as **Post type**, and choose **Page**. Since we created a page for it, go to the **Advanced location rules** section below and choose the name of the page.
 
-![Set the location to apply the custom field to the page.](https://i.imgur.com/qsSafV2.png)
+![Set the location to apply the custom field to the page.](https://imgur.elightup.com/qsSafV2.png)
 
 No matter where you put the field, you can still get images and display them in the desired place.
 
 On my page editor, you can see the field displayed.
 
-![The field displayed on the post editor](https://i.imgur.com/rrsvh0z.png)
+![The field displayed on the post editor](https://imgur.elightup.com/rrsvh0z.png)
 
 Just add some images.
 
@@ -72,7 +72,7 @@ We highly recommend you use **MB Views** because of its various advantages. By t
 
 Go to the **functions.php** file and add these lines of code.
 
-![Add code to the functions.php file](https://i.imgur.com/EflBRwW.png)
+![Add code to the functions.php file](https://imgur.elightup.com/EflBRwW.png)
 
 **In there**:
 
@@ -80,61 +80,61 @@ Go to the **functions.php** file and add these lines of code.
 * `image_gallery`: is the ID of the custom field that we used to save images.
 * These lines of code in the image below are just for styling later.
 
-![These codes are just for styling later.](https://i.imgur.com/lzcdYRv.png)
+![These codes are just for styling later.](https://imgur.elightup.com/lzcdYRv.png)
 
 Since we'll save multiple images in the fields, we should use a loop to get and display all of them.
 
-![Use a loop to get and display all of the images](https://i.imgur.com/ipbBy0C.png)
+![Use a loop to get and display all of the images](https://imgur.elightup.com/ipbBy0C.png)
 
 * `add_shortcode( 'brand_image', 'get_image_field' );` is to create a shortcode named `brand_image`. We will use this shortcode to put the gallery anywhere we want.
 
 Now, go to a page and also add a **Shortcode** block.
 
-![Add a Shortcode block](https://i.imgur.com/msHRyxG.png)
+![Add a Shortcode block](https://imgur.elightup.com/msHRyxG.png)
 
 Then input the created shortcode into the box.
 
-![Input the created shortcode into the box](https://i.imgur.com/dhJ8YSY.png)
+![Input the created shortcode into the box](https://imgur.elightup.com/dhJ8YSY.png)
 
 Now all of the images are displayed on the page.
 
-![The images are displayed on the page.](https://i.imgur.com/RqjmOc8.png)
+![The images are displayed on the page.](https://imgur.elightup.com/RqjmOc8.png)
 
 ### 2.2 Using MB Views
 
 Go to **Meta Box** > **Views** to create a new template that we will use for the gallery.
 
-![Create a new template for the gallery.](https://i.imgur.com/UfRUvDX.png)
+![Create a new template for the gallery.](https://imgur.elightup.com/UfRUvDX.png)
 
 Click on the **Insert Field** button and look for the name of the field that we input images in the right sidebar.
 
-![Insert the Image Gallery field](https://i.imgur.com/MssHlpW.png)
+![Insert the Image Gallery field](https://imgur.elightup.com/MssHlpW.png)
 
 You can choose an option for the size of the output images.
 
-![Choose an option for the size of the output images](https://i.imgur.com/oAX3zsn.png)
+![Choose an option for the size of the output images](https://imgur.elightup.com/oAX3zsn.png)
 
 Then some lines of code will be added to the template automatically.
 
-![Some lines of code will be added to the template automatically.](https://i.imgur.com/LCd2QeO.png)
+![Some lines of code will be added to the template automatically.](https://imgur.elightup.com/LCd2QeO.png)
 
 That’s all you need to get and display the images.
 
 Now, go to the settings of the template, and you can choose a location to display the gallery. If you have a specific page, just choose it. But in most cases, we should set this template as a shortcode, then you can add this shortcode to any place on your site.
 
-![Set this template as a shortcode](https://i.imgur.com/EOyDFRw.png)
+![Set this template as a shortcode](https://imgur.elightup.com/EOyDFRw.png)
 
 Then, there will be a shortcode generated. Just copy and paste it anywhere you want.
 
-![Copy and paste the shortcode anywhere you want.](https://i.imgur.com/UfzaRnx.png)
+![Copy and paste the shortcode anywhere you want.](https://imgur.elightup.com/UfzaRnx.png)
 
 Go to the page editor, add a **Shortcode** block, and paste the created one.
 
-![Add a Shortcode block](https://i.imgur.com/q6hJ5Bs.png)
+![Add a Shortcode block](https://imgur.elightup.com/q6hJ5Bs.png)
 
 On the frontend, the image gallery displays already, as we used PHP.
 
-![The image gallery displays already, as we used PHP](https://i.imgur.com/RqjmOc8.png)
+![The image gallery displays already, as we used PHP](https://imgur.elightup.com/RqjmOc8.png)
 
 The next work is styling it.
 
@@ -144,27 +144,27 @@ No matter which method you are using, you should use CSS and JS if you want to h
 
 You can use a 3rd-party library or make it yourself. In this case, I’ll use **Slick Slider**.
 
-![Slick Slider library](https://i.imgur.com/p0SbcoW.png)
+![Slick Slider library](https://imgur.elightup.com/p0SbcoW.png)
 
 You can add files or the code above ò the library to the theme’s files or the template created with **MB Views**. The code will be quite the same.
 
 Since I recommend you use **MB Views**, I will follow the second method. Go to the created template and add some lines of code to declare the library.
 
-![Add some lines of code to declare the library in the created template](https://i.imgur.com/06TouC4.png)
+![Add some lines of code to declare the library in the created template](https://imgur.elightup.com/06TouC4.png)
 
 I’ll also add some div tags and classes into the code, which is the loop.
 
-![Add some div tags and classes into the code](https://i.imgur.com/WkQduEt.png)
+![Add some div tags and classes into the code](https://imgur.elightup.com/WkQduEt.png)
 
 Then, move to the **CSS** tab and the **JavaScript** tab, add some codes.
 
-![Add code to the CSS tab and the JavaScript tab](https://i.imgur.com/detC0uF.png)
+![Add code to the CSS tab and the JavaScript tab](https://imgur.elightup.com/detC0uF.png)
 
 The code in the **JavaScript** tab above is to create a slider for the gallery. All of these codes I used are also available on [GitHub](https://github.com/wpmetabox/tutorials/tree/master/displaying-images-as-gallery), so you can refer to them.
 
 After updating the template, you will see a gallery in the style of a slider on the page.
 
-![A gallery in the style of a slider on the page](https://i.imgur.com/zpncoql.gif)
+![A gallery in the style of a slider on the page](https://imgur.elightup.com/zpncoql.gif)
 
 ## Last Words
 

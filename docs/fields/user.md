@@ -13,9 +13,9 @@ The user field allows you to select one or multiple users. This field has severa
 <Screenshots
     name="user"
     col1={[
-        ['https://i.imgur.com/2cEuGhf.png', 'The user field default interface'],
-        ['https://i.imgur.com/iG6Gwb4.png', 'The user field with checkbox list interface'],
-        ['https://i.imgur.com/bfLWmxG.png', 'The user field with radio list interface'],
+        ['https://imgur.elightup.com/2cEuGhf.png', 'The user field default interface'],
+        ['https://imgur.elightup.com/iG6Gwb4.png', 'The user field with checkbox list interface'],
+        ['https://imgur.elightup.com/bfLWmxG.png', 'The user field with radio list interface'],
     ]}
 />
 

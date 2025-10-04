@@ -9,9 +9,9 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Here is my example:
 
-![An example for Category Thumbnails](https://i.imgur.com/uBSF1Zh.png)
+![An example for Category Thumbnails](https://imgur.elightup.com/uBSF1Zh.png)
 
-![An example for Category Thumbnails](https://i.imgur.com/1POSTVu.png)
+![An example for Category Thumbnails](https://imgur.elightup.com/1POSTVu.png)
 
 ## Preparation
 
@@ -32,17 +32,17 @@ Go to **Meta Box > Custom Fields > Add New**.
 
 I created the **URL** field to save the URL to the media library.
 
-![One is URL to save URL. And, one is Single Image which allows you to upload an image to the media library](https://i.imgur.com/uAbyMGW.png)
+![One is URL to save URL. And, one is Single Image which allows you to upload an image to the media library](https://imgur.elightup.com/uAbyMGW.png)
 
 Also, you must pay attention to the IDs of the fields. We will use them in the next step. So, let it be something easy to recall and distinguish.
 
 Next, move to the **Settings** tab and set the **Location** as **Taxonomy > Category** to assign these fields to categories.
 
-![remember to set the Location as Taxonomy and Category to assign the custom fields for Categories](https://i.imgur.com/raVmTtQ.png)
+![remember to set the Location as Taxonomy and Category to assign the custom fields for Categories](https://imgur.elightup.com/raVmTtQ.png)
 
 Then, go to the category editor page, and you will see the fields. I filled in the URLs for all the categories instead of uploading images.
 
-![go to a Category Editor page, you will see the custom fields for thumbnails and featured images](https://i.imgur.com/jqGHg1w.png)
+![go to a Category Editor page, you will see the custom fields for thumbnails and featured images](https://imgur.elightup.com/jqGHg1w.png)
 
 Images from the links will be used as the thumbnails and featured images.
 
@@ -50,7 +50,7 @@ Images from the links will be used as the thumbnails and featured images.
 
 Go to **Meta Box > Views** and create a new view.
 
-![Go to Views and create a new view to display the list of category thumbnails](https://i.imgur.com/nCz5fkS.png)
+![Go to Views and create a new view to display the list of category thumbnails](https://imgur.elightup.com/nCz5fkS.png)
 
 In the **Template** tab, I used this code:
 
@@ -80,7 +80,7 @@ If I don't add a link picture, the last line of code will show a default picture
 
 For easier styling later, you can add some div tags like this:
 
-![You can add some div tags to style later easiser](https://i.imgur.com/Gs3hNpp.png)
+![You can add some div tags to style later easiser](https://imgur.elightup.com/Gs3hNpp.png)
 
 Full code here:
 
@@ -107,19 +107,19 @@ In there, I added an A tag: `<a href="{{ mb.get_category_link( category.term_id 
 
 This view will be set as the type of a shortcode. You can use it to easily display the list of categories with thumbnails everywhere you want. It seems to simplify the process a lot.
 
-![This view will be set in the type of Shortcode so that it will auto-generate a shortcode](https://i.imgur.com/bTlGp9e.png)
+![This view will be set in the type of Shortcode so that it will auto-generate a shortcode](https://imgur.elightup.com/bTlGp9e.png)
 
 Copy and paste the shortcode into a page, e.g. the homepage.
 
-![Copy and paste the shortcode into a page](https://i.imgur.com/A1LRTM7.png)
+![Copy and paste the shortcode into a page](https://imgur.elightup.com/A1LRTM7.png)
 
 Then, the thumbnail images and titles of the categories will display on the homepage without styling.
 
-![the thumbnail images and titles of the categories will display on the homepage without styling](https://i.imgur.com/8DUoeub.gif)
+![the thumbnail images and titles of the categories will display on the homepage without styling](https://imgur.elightup.com/8DUoeub.gif)
 
 Back to the view, add some code to the **CSS** tab to style this section.
 
-![Add some CSS code](https://i.imgur.com/J0tl0tV.png)
+![Add some CSS code](https://imgur.elightup.com/J0tl0tV.png)
 
 Here is the code I used:
 
@@ -173,13 +173,13 @@ body {
 ```
 After that, the Top Destinations section has a new look!
 
-![New look of the page](https://i.imgur.com/IAIi0HW.png)
+![New look of the page](https://imgur.elightup.com/IAIi0HW.png)
 
 ## Displaying the featured images on archive pages
 
 This is an archive page before the featured image is added.
 
-![The archive page before adding the featured image](https://i.imgur.com/UPaXUH1.png)
+![The archive page before adding the featured image](https://imgur.elightup.com/UPaXUH1.png)
 
 We need to edit the theme file to display the top-field images. Go to the `archive.php` file. It is the template file for the archive pages.
 
@@ -204,11 +204,11 @@ Add this code after the header and the first `div` tag.
 * `src="<?php echo $link_image_source ?>`: to display the image from the link which is the value of the `$link_image_source` variable.
 
 Then, the featured image will display as below:
-![the featured image will display](https://i.imgur.com/mCrtTIO.png)
+![the featured image will display](https://imgur.elightup.com/mCrtTIO.png)
 
 Go back to the theme files and style the featured picture, category title, and description using CSS
 
-![use css to style the featured image, category title](https://i.imgur.com/k3Hwe22.png)
+![use css to style the featured image, category title](https://imgur.elightup.com/k3Hwe22.png)
 
 ```css
 .thumbnail-container {
@@ -248,4 +248,4 @@ Go back to the theme files and style the featured picture, category title, and d
 
 Here is the result:
 
-![The result after all steps](https://i.imgur.com/hmGpeWH.png)
+![The result after all steps](https://imgur.elightup.com/hmGpeWH.png)

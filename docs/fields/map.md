@@ -11,7 +11,7 @@ You also can pick a location by clicking on the map or dragging and dropping the
 ## Screenshots
 
 <Screenshots name="map" col1={[
-    ['https://i.imgur.com/zyKqRTD.png', 'The Google Maps field interface']
+    ['https://imgur.elightup.com/zyKqRTD.png', 'The Google Maps field interface']
 ]} />
 
 ## Settings

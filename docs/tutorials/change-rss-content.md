@@ -21,19 +21,19 @@ Besides, in this tutorial, we’ll use the [MB Builder](https://metabox.io/plugi
 
 Feel free to create custom fields for saving any information for your post. If you have had them, move on to the next step. Otherwise, if not yet, just go to **Meta Box** > **Custom Fields** and create them.
 
-![Go to Meta Box > Custom Fields and create fields.](https://i.imgur.com/FRD5WT0.png)
+![Go to Meta Box > Custom Fields and create fields.](https://imgur.elightup.com/FRD5WT0.png)
 
 Here are some fields I created as an example.
 
-![A simple subscription formSome created fields as an example.](https://i.imgur.com/YPrYnej.png)
+![A simple subscription formSome created fields as an example.](https://imgur.elightup.com/YPrYnej.png)
 
 After creating all the needed fields, remember to set the location to assign these fields to any post type you want.
 
-![Set the location to assign the fields to any post type you want](https://i.imgur.com/gbl0AO0.png)
+![Set the location to assign the fields to any post type you want](https://imgur.elightup.com/gbl0AO0.png)
 
 Now, in the post editor, you’ll see all the fields displayed like this:
 
-![All the fields display in the post editor](https://i.imgur.com/wpW5tXw.png)
+![All the fields display in the post editor](https://imgur.elightup.com/wpW5tXw.png)
 
 In case you don't use **MB Builder**, you can code to add fields or use the [Online Generator](https://metabox.io/online-generator/) tool of Meta Box, then copy the generated code to save time.
 
@@ -67,7 +67,7 @@ function hp_metaboxs( $meta_boxes ) {
 
 Then, when you edit a post, the custom fields will be displayed like we did with MB Builder.
 
-![The fields display in the post editor when you use Online Generator](https://i.imgur.com/wpW5tXw.png)
+![The fields display in the post editor when you use Online Generator](https://imgur.elightup.com/wpW5tXw.png)
 
 Just fill in the data. And, we will input this data to the RSS in the next step.
 
@@ -85,17 +85,17 @@ In this case, we will need to **add code to the theme’s file to add data from 
 
 Go to **Appearance** > **Theme File Editor**, find a file that regulates the template of the page that you want to display the data.
 
-![Go to a theme’s file that regulates the template of a page you want to display the data](https://i.imgur.com/EtxhzlE.png)
+![Go to a theme’s file that regulates the template of a page you want to display the data](https://imgur.elightup.com/EtxhzlE.png)
 
 Then, add code using the `rwmb_meta` syntax.
 
-![add code using the rwmb_meta syntax](https://i.imgur.com/zBzM906.png)
+![add code using the rwmb_meta syntax](https://imgur.elightup.com/zBzM906.png)
 
 **In there**: `price` and `availablity` are the IDs of the fields.
 
 Go to the page on the frontend, the values of the fields will be displayed.
 
-![The values of the fields will be displayed on the frontend](https://i.imgur.com/cdPqj3Y.png)
+![The values of the fields will be displayed on the frontend](https://imgur.elightup.com/cdPqj3Y.png)
 
 Now, it’s time to include these values to the RSS feed.
 
@@ -126,7 +126,7 @@ function prefix_add_custom_fields_to_feed($content) {
 add_filter('the_content','prefix_add_custom_fields_to_feed');
 ```
 
-![Add code to the functions.php file](https://i.imgur.com/EQ0h5dZ.png)
+![Add code to the functions.php file](https://imgur.elightup.com/EQ0h5dZ.png)
 
 Let’s go through it in more detail:
 
@@ -134,16 +134,16 @@ Let’s go through it in more detail:
 * `$post_id = get_the_ID();`: This code will get the ID of the post. Then, we also use the `rwmb_meta` function to get values from fields in the post. And, `price` and `availablity` are still the IDs of those fields.
 * The returned value will be passed to the `$output` variable along with some extra text that I just added manually.
 
-![The returned value will be passed to the $output variable along with some extra text that I just added manually](https://i.imgur.com/ywCJm7x.png)
+![The returned value will be passed to the $output variable along with some extra text that I just added manually](https://imgur.elightup.com/ywCJm7x.png)
 
 * `$content = $content.$output;`: This line will write the data from the `$output` variable into the content of the post.
 * `add_filter('the_content','prefix_add_custom_fields_to_feed');`: The `the_content` hook is to add those data to the content of the RSS feed. In the event that you want to add data from the fields to the title of the posts in the RSS feed, use the `the_title` hook.
 
-![Use the the_title hook to add data from the fields to the title of the posts in the RSS feed.](https://i.imgur.com/4WuAw7C.png)
+![Use the the_title hook to add data from the fields to the title of the posts in the RSS feed.](https://imgur.elightup.com/4WuAw7C.png)
 
 Then, go to the RSS file of your site at this address - http://yourwebsite.com/feed. You will see the data from custom fields has been there already.
 
-![In the RSS file of your site, the data from custom fields has been there already.](https://i.imgur.com/itblCLZ.png)
+![In the RSS file of your site, the data from custom fields has been there already.](https://imgur.elightup.com/itblCLZ.png)
 
 So, you’ve finished changing the RSS feed’s content already.
 
@@ -151,20 +151,20 @@ So, you’ve finished changing the RSS feed’s content already.
 
 If you want to show the most recent posts using the RSS feed somewhere on your site, for instance, the sidebar. So, go to **Appearance** > **Widgets**, add a new one in the **Sidebar** section.
 
-![Go to Appearance > Widgets, add a new one in the Sidebar section](https://i.imgur.com/uIkiXyM.png)
+![Go to Appearance > Widgets, add a new one in the Sidebar section](https://imgur.elightup.com/uIkiXyM.png)
 
 Then, choose the **RSS** block.
 
-![Choose the RSS block](https://i.imgur.com/dRwH2Gh.png)
+![Choose the RSS block](https://imgur.elightup.com/dRwH2Gh.png)
 
 Once again, enter the URL of the feed as the one I showed you in the previous step.
 
-![Enter the URL of the feed](https://i.imgur.com/hCgxy6v.png)
+![Enter the URL of the feed](https://imgur.elightup.com/hCgxy6v.png)
 
 Then, some posts whose data is saved in the RSS feed will display.
 
-![Some posts whose data is saved in the RSS feed will display](https://i.imgur.com/Nv8aCdH.png)
+![Some posts whose data is saved in the RSS feed will display](https://imgur.elightup.com/Nv8aCdH.png)
 
 In the settings of this block, there are some options to choose from to set how many posts will be displayed, and some other information. Just change it as you want.
 
-![The settings of the Rss block](https://i.imgur.com/CxoWt30.png)
+![The settings of the Rss block](https://imgur.elightup.com/CxoWt30.png)

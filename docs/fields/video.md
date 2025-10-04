@@ -11,7 +11,7 @@ The video field uses the WordPress media popup for selecting / uploading videos.
 <Screenshots
     name="video"
     col1={[
-        ['https://i.imgur.com/M84bDrX.png', 'The video field interface'],
+        ['https://imgur.elightup.com/M84bDrX.png', 'The video field interface'],
     ]}
 />
 

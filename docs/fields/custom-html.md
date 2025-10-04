@@ -11,7 +11,7 @@ This field is usually used to display custom messages/instructions to users. Som
 ## Screenshots
 
 <Screenshots name="custom-html" col1={[
-    ['https://i.imgur.com/LO5Akul.png', 'The custom HTML field interface']
+    ['https://imgur.elightup.com/LO5Akul.png', 'The custom HTML field interface']
 ]} />
 
 ## Settings

@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 MB Rank Math helps you to add content of custom fields to Rank Math Content Analysis to have better SEO score.
 
-![MB Rank Math Integration](https://i.imgur.com/tIyC0u9.jpg)
+![MB Rank Math Integration](https://imgur.elightup.com/tIyC0u9.jpg)
 
 ## Settings
 

@@ -77,7 +77,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 ```
 Here’s how it looks:
 
-![clone group (repeater)](https://i.imgur.com/KVIJzSa.png)
+![clone group (repeater)](https://imgur.elightup.com/KVIJzSa.png)
 
 ### Nested groups
 
@@ -393,7 +393,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 Result:
 
-![default sub-field value](https://i.imgur.com/pml8twS.png)
+![default sub-field value](https://imgur.elightup.com/pml8twS.png)
 
 ### Whole group
 
@@ -443,7 +443,7 @@ If the group is **cloneable**, `std` should be an array of group values:
 
 And here is the result:
 
-![default group value](https://i.imgur.com/rqxfxA8.png)
+![default group value](https://imgur.elightup.com/rqxfxA8.png)
 
 See this video for demonstration:
 

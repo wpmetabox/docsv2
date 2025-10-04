@@ -25,7 +25,7 @@ To migrate, go to **Meta Box > ACF Migration** and click the **Migrate** button.
 
 The plugin will show the process of migrating. When it's done, you'll see the text "Done".
 
-![migrate acf to meta box](https://i.imgur.com/ixRIrIE.png)
+![migrate acf to meta box](https://imgur.elightup.com/ixRIrIE.png)
 
 ## How it works
 

@@ -10,7 +10,7 @@ The button group allows you to select one or more options by enabling buttons fr
 ## Screenshots
 
 <Screenshots name="select" col1={[
-    ['https://i.imgur.com/gVAILxbl.png', 'The button group field interface']
+    ['https://imgur.elightup.com/gVAILxbl.png', 'The button group field interface']
 ]} />
 
 

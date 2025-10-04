@@ -7,9 +7,9 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 We are going to **create taxonomy thumbnails and featured images using custom fields**. The images will be saved in custom fields, then displayed as thumbnails and featured images of the taxonomy on a portfolio page, like this:
 
-![Taxonomy Thumbnails](https://i.imgur.com/O8fP9VI.png)
+![Taxonomy Thumbnails](https://imgur.elightup.com/O8fP9VI.png)
 
-![Featured image of a term on an archive page](https://i.imgur.com/2KDfpx6.png)
+![Featured image of a term on an archive page](https://imgur.elightup.com/2KDfpx6.png)
 
 ## Video version
 
@@ -32,25 +32,25 @@ Finally, [Oxygen Builder](https://oxygenbuilder.com/). I build the pages with Ox
 
 Go to **Meta Box > Post Types > New Post Type**.
 
-![Create a new post type](https://i.imgur.com/8iPsfQD.png)
+![Create a new post type](https://imgur.elightup.com/8iPsfQD.png)
 
 After publishing, you will see your new post type displayed on the admin dashboard.
 
-![New post displayed in the admin dashboard](https://i.imgur.com/5czIMPN.png)
+![New post displayed in the admin dashboard](https://imgur.elightup.com/5czIMPN.png)
 
 ### Creating taxonomy and terms
 
 Go to **Meta Box > Taxonomies > Add New**.
 
-![Create taxonmy and terms](https://i.imgur.com/fGePXwC.png)
+![Create taxonmy and terms](https://imgur.elightup.com/fGePXwC.png)
 
 Upon creating the desired taxonomy, move to the **Post Types** tab and choose **Portfolio** to apply this taxonomy to the post type. And don’t forget to click Publish.
 
-![Create the desired taxonomy](https://i.imgur.com/FE7EZ3f.png)
+![Create the desired taxonomy](https://imgur.elightup.com/FE7EZ3f.png)
 
 After publishing, a new **Portfolio** post type and **Portfolio Type** taxonomy appear in the **Dashboard** menu. Just add terms for the taxonomy. It’s the same as creating a new category in WordPress.
 
-![The newly created post type and taxonomy appear in the Dashboard menu](https://i.imgur.com/iFyfRw5.png)
+![The newly created post type and taxonomy appear in the Dashboard menu](https://imgur.elightup.com/iFyfRw5.png)
 
 ## Creating custom fields
 
@@ -65,11 +65,11 @@ These fields are so simple that I just enter their name and ID without any furth
 
 Then, move to the **Settings** tab, set the **Location** as **Taxonomy** and select **Portfolio Type**.
 
-![Set location for the post type](https://i.imgur.com/FFS04q2.png)
+![Set location for the post type](https://imgur.elightup.com/FFS04q2.png)
 
 Then, go to the **Portfolio Type** taxonomy, and you will see the fields. Let’s upload images for each term here.
 
-![The fields in the taxonomy](https://i.imgur.com/m2zFoiu.png)
+![The fields in the taxonomy](https://imgur.elightup.com/m2zFoiu.png)
 
 ## Displaying thumbnails on the frontend
 
@@ -77,7 +77,7 @@ Then, go to the **Portfolio Type** taxonomy, and you will see the fields. Let’
 
 Go to **Meta Box > Views > Add New**, and create a new view.
 
-![Create a template](https://i.imgur.com/jfZul2C.png)
+![Create a template](https://imgur.elightup.com/jfZul2C.png)
 
 In the Template tab, I used this code:
 
@@ -125,11 +125,11 @@ Explanation:
 
 Now, move to the **Type** section and select **Shortcode**.
 
-![Move to Type section and select Shortcode](https://i.imgur.com/KW8U2ry.png)
+![Move to Type section and select Shortcode](https://imgur.elightup.com/KW8U2ry.png)
 
 After publishing, your template will appear as a shortcode. You can use it to display the template anywhere on your website.
 
-![The template will appear as a shortcode](https://i.imgur.com/jjMfTYx.png)
+![The template will appear as a shortcode](https://imgur.elightup.com/jjMfTYx.png)
 
 ### Adding the template to a page
 
@@ -139,41 +139,41 @@ Then, click **Edit with Oxygen**. In the case, you use any other page builder, y
 
 In Oxygen, click **Add** and search for **Shortcode**.
 
-![Add the template to a page](https://i.imgur.com/l8TyKEC.png)
+![Add the template to a page](https://imgur.elightup.com/l8TyKEC.png)
 
 Then, paste the shortcode into the **Full Shortcode** item. And you can see the list of terms that appears with the thumbnails.
 
-![The list of terms appear in the thumbnails](https://i.imgur.com/75ayMbQ.png)
+![The list of terms appear in the thumbnails](https://imgur.elightup.com/75ayMbQ.png)
 
 ### Styling the portfolio section
 
 To make it look better, I will add some **CSS** in the **CSS** tab of the **View**. You can refer to my CSS code [here](https://github.com/wpmetabox/tutorials/blob/master/create-taxonomy-thumbnail-and-featured-image/portfolio.css).
 
-![Add some Css code](https://i.imgur.com/u8iz3A3.png)
+![Add some Css code](https://imgur.elightup.com/u8iz3A3.png)
 
 Here is the result:
 
-![The result](https://i.imgur.com/AfqYQyN.png)
+![The result](https://imgur.elightup.com/AfqYQyN.png)
 
 ## Displaying featured images of taxonomy
 
 I have an archive page for each taxonomy term. However, they haven’t had featured images yet, so I will create one at the top.
 
-![The acrchive page still doesn't have featured images](https://i.imgur.com/TGvHgoI.png)
+![The acrchive page still doesn't have featured images](https://imgur.elightup.com/TGvHgoI.png)
 
 ### Adding the featured image to the archive page
 
 Go to **Oxygen > Template > Archive > Edit with Oxygen**. Next, select a term to preview it.
 
-![Add the featured images to archive page](https://i.imgur.com/QifwxCx.png)
+![Add the featured images to archive page](https://imgur.elightup.com/QifwxCx.png)
 
 Then, click **Structure** to see all the elements and structure of your page.
 
-![All the elements and structure of your page](https://i.imgur.com/bLRITPm.png)
+![All the elements and structure of your page](https://imgur.elightup.com/bLRITPm.png)
 
 I’ll add a component named **Code Block**, and drag and drop it into the **Section**, above the **Div**. Then, select **PHP & HTML** and add this code:
 
-![Add a Code Block component](https://i.imgur.com/DajUhwT.png)
+![Add a Code Block component](https://imgur.elightup.com/DajUhwT.png)
 
 ```php
 <?php
@@ -202,13 +202,13 @@ Explanation:
 
 Here is the result:
 
-![The result](https://i.imgur.com/bpIaRIF.png)
+![The result](https://imgur.elightup.com/bpIaRIF.png)
 
 ### Styling the featured image section
 
 Go to **Manage > Stylesheets > Add Stylesheet** and add code:
 
-![Style the featured image](https://i.imgur.com/yUnh1s5.png)
+![Style the featured image](https://imgur.elightup.com/yUnh1s5.png)
 
 Here is my example CSS that I showed at the beginning of this post:
 
@@ -250,8 +250,8 @@ Here is my example CSS that I showed at the beginning of this post:
 
 The featured image looks much better now:
 
-![The featured image looks much better](https://i.imgur.com/0ZMkC3z.png)
+![The featured image looks much better](https://imgur.elightup.com/0ZMkC3z.png)
 
 Visit other terms, and you can see that all featured images are displayed beautifully.
 
-![All featured images are displayed beautiully](https://i.imgur.com/TpW8xv5.gif)
+![All featured images are displayed beautiully](https://imgur.elightup.com/TpW8xv5.gif)

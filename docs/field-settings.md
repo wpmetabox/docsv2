@@ -14,7 +14,7 @@ Below is the list of common field settings with a brief description. The keys ar
 
   <TabItem value="general" label="General">
 
-![general settings](https://i.imgur.com/MJ3JRiT.png)
+![general settings](https://imgur.elightup.com/MJ3JRiT.png)
 
 Name | Key | Description
 --- | --- | ---
@@ -43,7 +43,7 @@ Hide from REST API | `hide_from_rest`|Whether to hide the field from REST API re
 
   <TabItem value="advanced" label="Advanced">
 
-![advanced settings](https://i.imgur.com/jX7YDH3.png)
+![advanced settings](https://imgur.elightup.com/jX7YDH3.png)
 
 Name | Key | Description
 --- | --- | ---

@@ -6,11 +6,11 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Arranging posts in a custom order will be much easier if you use custom fields. It allows you to set any post first without criteria.
 
-![An example of arranging posts in a custom order](https://i.imgur.com/Z2Xhqlj.png)
+![An example of arranging posts in a custom order](https://imgur.elightup.com/Z2Xhqlj.png)
 
 This is the new order of the posts as you can see.
 
-![This is the new order of the posts](https://i.imgur.com/HVGMR2D.png)
+![This is the new order of the posts](https://imgur.elightup.com/HVGMR2D.png)
 
 ## Video Version
 
@@ -30,47 +30,47 @@ Also, we’ll use some of Meta Box’s extensions:
 
 We’ll need to create a custom field to enter the ordinal number for posts like this.
 
-![This is a custom field for enter the ordinal number for posts](https://i.imgur.com/iKYGTdL.png)
+![This is a custom field for enter the ordinal number for posts](https://imgur.elightup.com/iKYGTdL.png)
 
 When you put in a number, we will show it in the dashboard to easily see the position of all the posts.
 
-![This is the position of all the posts](https://i.imgur.com/obMNFXu.png)
+![This is the position of all the posts](https://imgur.elightup.com/obMNFXu.png)
 
 [MB Builder](https://metabox.io/plugins/meta-box-builder/) can help you easily create custom fields without touching any line of code.
 
 In the dashboard, go to **Meta Box** > **Custom Fields**, click **Add New** button to create a new field group.
 
-![Go to Meta Box > Custom Fields, click Add New button to create a new field group](https://i.imgur.com/ZmDvKsK.png)
+![Go to Meta Box > Custom Fields, click Add New button to create a new field group](https://imgur.elightup.com/ZmDvKsK.png)
 
 Choose the **Number** field since we just want to enter a number into the field.
 
-![Choose the Number field to enter a number into the field.](https://i.imgur.com/RqeLAVg.png)
+![Choose the Number field to enter a number into the field.](https://imgur.elightup.com/RqeLAVg.png)
 
 I named the field as **Order of the Post** to easily identify it. Now, look at the field’s ID that I marked, you can use the automatically generated ID by Meta Box builder or replace it with your own ID for easy memorizing.
 
-![This is the field’s ID to use the automatically generated ID by Meta Box builder ](https://i.imgur.com/ck4OBY6.png)
+![This is the field’s ID to use the automatically generated ID by Meta Box builder ](https://imgur.elightup.com/ck4OBY6.png)
 
 To see exactly the order by the ordinal number, you can set the field display as an admin column. This setting is available only when you activate the [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) extension. Just turn on this button, and then set the position for the column.
 
-![This is an admin column to see exactly the order by the ordinal number](https://i.imgur.com/Ug3lln7.png)
+![This is an admin column to see exactly the order by the ordinal number](https://imgur.elightup.com/Ug3lln7.png)
 
 After having the field, move to the **Settings** tab, set the **Location** as **Post Type** and select **Post** or your own custom post type to apply the field to it.
 
-![After having the field, move to the Settings tab, set the Location as Post Type and select Post or your own custom post type to apply the field](https://i.imgur.com/PAknb6n.png)
+![After having the field, move to the Settings tab, set the Location as Post Type and select Post or your own custom post type to apply the field](https://imgur.elightup.com/PAknb6n.png)
 
 After creating the custom field, move to **Post Editor**, open a post that you want to reorder, and find the created field. Enter the number that you want this post to display and update the article.
 
-![Move to Post Editor, enter the number that you want this post to display and update the article.](https://i.imgur.com/6ZQsDWQ.png)
+![Move to Post Editor, enter the number that you want this post to display and update the article.](https://imgur.elightup.com/6ZQsDWQ.png)
 
 After filling in the numbers for posts, you will see them in the admin screen like this.
 
-![After filling in the numbers for posts, you will see them in the admin screen](https://i.imgur.com/ZEnMvCA.png)
+![After filling in the numbers for posts, you will see them in the admin screen](https://imgur.elightup.com/ZEnMvCA.png)
 
 ## 2. Displaying posts in the custom order
 
 Go to a page, and add the **Latest Posts** block.
 
-![Go to a page, and add the Latest Posts block.](https://i.imgur.com/L5yd8BB.png)
+![Go to a page, and add the Latest Posts block.](https://imgur.elightup.com/L5yd8BB.png)
 
 These posts are displayed in the order based on published date order by default. To change the order to your custom one, we should add some code to the theme’s files.
 
@@ -87,7 +87,7 @@ function memory_custom_post_order_sort( $query ) {
 add_action( 'pre_get_posts', 'memory_custom_post_order_sort' );
 ```
 
-![Add code in the functions.php file](https://i.imgur.com/oZUI1Sb.png)
+![Add code in the functions.php file](https://imgur.elightup.com/oZUI1Sb.png)
 
 **Explanation:**
 
@@ -106,4 +106,4 @@ These 3 lines arrange your posts in ascending order according to the value of th
 
 After that, save the code and go back to the page on frontend. You will see the new order of the posts. It’s exactly with the number that I entered for them.
 
-![This is the new order of the posts.](https://i.imgur.com/HVGMR2D.png)
+![This is the new order of the posts.](https://imgur.elightup.com/HVGMR2D.png)

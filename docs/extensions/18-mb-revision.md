@@ -26,15 +26,15 @@ Now whenever you update a post, WordPress will create a revision for it. And MB 
 
 When you update a post, WordPress automatically creates a revision for that post. You can see the list of revisions in the **Revisions** meta box below the main editor:
 
-![revision list](https://i.imgur.com/rThtMe0.png)
+![revision list](https://imgur.elightup.com/rThtMe0.png)
 
 Also, in the **Publish** meta box, you'll see a link to browse all revisions:
 
-![browse revision](https://i.imgur.com/RqXRfhG.png)
+![browse revision](https://imgur.elightup.com/RqXRfhG.png)
 
 Clicking either on any revision in the list or on *Browse* link brings you to the revision comparison screen. There you'll see something like this:
 
-![revision compare](https://i.imgur.com/oObKhaE.png)
+![revision compare](https://imgur.elightup.com/oObKhaE.png)
 
 Except title and content, which are post fields, other items on this screen are custom fields created by Meta Box. There you'll see highlighted lines or words, which are added or removed by users.
 

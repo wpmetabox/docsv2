@@ -11,7 +11,7 @@ The file input field creates a simple text input for uploading a single file. Yo
 <Screenshots
     name="file-input"
     col1={[
-        ['https://i.imgur.com/cPVTMNy.png', 'The file input field interface'],
+        ['https://imgur.elightup.com/cPVTMNy.png', 'The file input field interface'],
     ]}
 />
 

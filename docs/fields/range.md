@@ -11,7 +11,7 @@ This field is very similar to the [number](/fields/number/) field. It just uses 
 ## Screenshots
 
 <Screenshots name="range" col1={[
-    ['https://i.imgur.com/eAHeRJS.png', 'The range field interface']
+    ['https://imgur.elightup.com/eAHeRJS.png', 'The range field interface']
 ]} />
 
 ## Settings

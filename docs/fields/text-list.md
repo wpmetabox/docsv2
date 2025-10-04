@@ -9,7 +9,7 @@ The text list field creates a list of text inputs.
 ## Screenshots
 
 <Screenshots name="text-list" col1={[
-    ['https://i.imgur.com/Y7qo1No.png', 'The text list field interface']
+    ['https://imgur.elightup.com/Y7qo1No.png', 'The text list field interface']
 ]} />
 
 ## Settings
@@ -74,7 +74,7 @@ If the field is cloneable, then the value is stored as a serialized array of val
 
 which outputs:
 
-![text list output](https://i.imgur.com/jpypypW.png)
+![text list output](https://imgur.elightup.com/jpypypW.png)
 
 HTML:
 

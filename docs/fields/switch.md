@@ -9,7 +9,7 @@ The switch field shows an on/off switch for you to enable/disable something. You
 ## Screenshots
 
 <Screenshots name="switch" col1={[
-    ['https://i.imgur.com/AVHMUdZl.png', 'The switch field interface']
+    ['https://imgur.elightup.com/AVHMUdZl.png', 'The switch field interface']
 ]} />
 
 ## Settings

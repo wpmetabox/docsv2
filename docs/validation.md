@@ -18,7 +18,7 @@ This type of validation uses browser validation, thus the UI and the error messa
 
 When editing a field, switch to the **Advanced** tab, and scroll down to the **Custom HTML5 attributes**. Then click **Add New** button to add a new rule.
 
-![validation with html5 attributes](https://i.imgur.com/Cewt9OG.png)
+![validation with html5 attributes](https://imgur.elightup.com/Cewt9OG.png)
 
 In the **Key** input box, you can select any rule from the dropdown (if you don't see the dropdown, press the down arrow button), or enter the attribute name manually. And then enter the desired value in the **Value** input box.
 
@@ -62,7 +62,7 @@ For more advanced validation, including new rules and custom error messages, you
 
 To define validation rules, switch to the **Advanced** tab, and scroll down to the **Validation**. Then click **Add New** button to add a new rule.
 
-![validation with validation library](https://i.imgur.com/qAvW1LC.png)
+![validation with validation library](https://imgur.elightup.com/qAvW1LC.png)
 
 For each rule, the list of types is available as a dropdown, so you can select it. Depending on the rule type, you can enter a value and/or custom error message.
 

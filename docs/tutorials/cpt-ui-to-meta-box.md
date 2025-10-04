@@ -14,11 +14,11 @@ Remember to back up your data before migrating to avoid unexpected events.
 
 Here is my example. I have this **Companies** post type created by **CPT UI** with all the posts inside.
 
-![Post typed created by CPU UI](https://i.imgur.com/vyTY90m.png)
+![Post typed created by CPU UI](https://imgur.elightup.com/vyTY90m.png)
 
 As you can see in the **Plugin** menu, the **CPT UI** has already been activated.
 
-![Activate the CPU UI](https://i.imgur.com/U4ZKxGf.png)
+![Activate the CPU UI](https://imgur.elightup.com/U4ZKxGf.png)
 
 I will now proceed to transfer the data.
 
@@ -28,13 +28,13 @@ I'll install and activate **MB Custom Post Types** &amp; **Custom Taxonomies**.
 
 After that, the new **Post Types** menu appears on the **Dashboard** along with the **CPT UI Migration sub-menu**.
 
-![New Post Type menu appears on the Dashboard](https://i.imgur.com/sxEKSlv.png)
+![New Post Type menu appears on the Dashboard](https://imgur.elightup.com/sxEKSlv.png)
 
 ## 3. Migrating the data
 
 Go to the **Post Types** menu &gt; **CPT UI Migration** &gt; Click the **Migrate** button.
 
-![Click the Migrate button in the Post Types menu](https://i.imgur.com/FRk0drJ.png)
+![Click the Migrate button in the Post Types menu](https://imgur.elightup.com/FRk0drJ.png)
 
 When the process finishes, it will show a "Done" message.
 
@@ -44,10 +44,10 @@ When the process finishes, it will show a "Done" message.
 
 The Companies post type and all the terms in the Company Types taxonomy are still there. They are the new ones created by Meta Box. It also means that all the data was migrated successfully.
 
-![The Companies post type has successfully migrated](https://i.imgur.com/x7i0sB9.png)
+![The Companies post type has successfully migrated](https://imgur.elightup.com/x7i0sB9.png)
 
 And the **CPT UI** has already been deactivated.
 
-![The CPT UI has already been deactivated](https://i.imgur.com/U4ZKxGf.png)
+![The CPT UI has already been deactivated](https://imgur.elightup.com/U4ZKxGf.png)
 
 The migration has been done.

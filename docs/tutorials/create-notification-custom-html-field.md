@@ -8,7 +8,7 @@ When input data to custom fields, you definitely can use the field's description
 
 This is a notification that I created for example.
 
-![An example of notification was created by custom HTML field from Meta Box](https://i.imgur.com/VXxEXSC.png)
+![An example of notification was created by custom HTML field from Meta Box](https://imgur.elightup.com/VXxEXSC.png)
 
 ## Video version
 
@@ -27,45 +27,45 @@ We need the following tools for this practice:
 
 Go to **Meta Box** > **Custom Fields** and create some custom fields.
 
-![Go to Meta Box > Custom Fields to create some custom fields](https://i.imgur.com/5TOOpkY.png)
+![Go to Meta Box > Custom Fields to create some custom fields](https://imgur.elightup.com/5TOOpkY.png)
 
 For the first field, choose the type as the **Radio** field. Then, you can fill in some options for choosing into the **Choices** box.
 
-![choose the type as the Radio field, then fill in some options for choosing into the Choices box.](https://i.imgur.com/nZC8zqM.png)
+![choose the type as the Radio field, then fill in some options for choosing into the Choices box.](https://imgur.elightup.com/nZC8zqM.png)
 
 Since I want the alert message to go along with another field, I will put both of them into a group. There is no need to have a label for this group, so leave it blank.
 
-![the alert message to go along with another field, so put both of them into a group with blank label](https://i.imgur.com/nsMdVS9.png)
+![the alert message to go along with another field, so put both of them into a group with blank label](https://imgur.elightup.com/nsMdVS9.png)
 
 This group will appear only when the user chooses the **Yes** option in the **Radio** field, so we will set a conditional logic for this group. Go to the **Advanced** tab in the settings of the group and add the rule.
 
-![Go to the Advanced tab in the settings of the group and add the rule to set the rule when does the alert message apear](https://i.imgur.com/RNVU3RY.png)
+![Go to the Advanced tab in the settings of the group and add the rule to set the rule when does the alert message apear](https://imgur.elightup.com/RNVU3RY.png)
 
 Fill in the ID of the **Radio** field and the value of the Yes option.
 
-![Fill in the ID of the Radio field and the value of the Yes option](https://i.imgur.com/QsSFDQG.png)
+![Fill in the ID of the Radio field and the value of the Yes option](https://imgur.elightup.com/QsSFDQG.png)
 
 Now, add a **Custom HTML** field for the alert. It’ll be a subfield of the group.
 
-![Add the first subfield of the group which has the type as Custom HTML](https://i.imgur.com/16tFtXs.png)
+![Add the first subfield of the group which has the type as Custom HTML](https://imgur.elightup.com/16tFtXs.png)
 
 Add content for it in the box named **Content (HTML allowed)**.
 
-![Add content for it in the box named Content (HTML allowed)](https://i.imgur.com/r0F2LOY.png)
+![Add content for it in the box named Content (HTML allowed)](https://imgur.elightup.com/r0F2LOY.png)
 
 I also added a div tag and classes for this text as `<div class="alert alert-info">` for styling this notification later.
 
 Add the remaining field.
 
-![Add the remaining field. Here is the Text field with the Label is Subject](https://i.imgur.com/DWhaLx5.png)
+![Add the remaining field. Here is the Text field with the Label is Subject](https://imgur.elightup.com/DWhaLx5.png)
 
 Let’s set the location for these fields. Go to the **Settings** tab, set **Location** as **Post Type**, then choose any post type you want.
 
-![Go to the Settings tab, set Location as Post Type, then choose any post type to set the location of created custom fields](https://i.imgur.com/EPpp7rC.png)
+![Go to the Settings tab, set Location as Post Type, then choose any post type to set the location of created custom fields](https://imgur.elightup.com/EPpp7rC.png)
 
 Go to the post editor, you will see the fields with the notification.
 
-![the fields with the notification displayed in the post editor](https://i.imgur.com/P3U0PpI.png)
+![the fields with the notification displayed in the post editor](https://imgur.elightup.com/P3U0PpI.png)
 
 The notification is quite not prominent compared to other texts. So, let's style it a little bit.
 
@@ -80,7 +80,7 @@ function enqueue_custom_style() {
 }
 ```
 
-![add the code to declare and create a file named admin.css](https://i.imgur.com/07s2RAn.png)
+![add the code to declare and create a file named admin.css](https://imgur.elightup.com/07s2RAn.png)
 
 Next, go to the file and add some CSS code with the content as follows:
 
@@ -104,8 +104,8 @@ align-items: center;
 
 The `alert` and `alert-info` are two classes that I added in the content of the notification when creating its custom field.
 
-![go to the file, add some CSS code for 2 classes to style the notification](https://i.imgur.com/weBA0Mt.png)
+![go to the file, add some CSS code for 2 classes to style the notification](https://imgur.elightup.com/weBA0Mt.png)
 
 Now, go back to a post editor, you will see the message has a new look.
 
-![the final look of the notification](https://i.imgur.com/VXxEXSC.png)
+![the final look of the notification](https://imgur.elightup.com/VXxEXSC.png)

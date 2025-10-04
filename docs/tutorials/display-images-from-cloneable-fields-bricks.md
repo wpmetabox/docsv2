@@ -8,7 +8,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Today, we’ll use Meta Box and Bricks to display images from cloneable fields. Take the brand logos as an example:
 
-![The example of displaying the logos](https://i.imgur.com/udymyMf.png)
+![The example of displaying the logos](https://imgur.elightup.com/udymyMf.png)
 
 ## Video version
 
@@ -18,7 +18,7 @@ Today, we’ll use Meta Box and Bricks to display images from cloneable fields. 
 
 Typically, we’ll use a custom post type to create multiple posts for brands. But now, I’ll do another way more conveniently and simply - creating a settings page. All brand information will be input to that page. It means that all of them will be in one place only for easier management.
 
-![The settings page](https://i.imgur.com/lQaXxjJ.png)
+![The settings page](https://imgur.elightup.com/lQaXxjJ.png)
 
 For this practice, we need these tools:
 
@@ -34,11 +34,11 @@ Go to **Meta Box > Settings Page > Add New**.
 
 In my case, the settings page is quite simple and contains only the image of each brand. As there’s no special setting, I'll just change the option name.
 
-![Create a settings page](https://i.imgur.com/Vvrql4e.png)
+![Create a settings page](https://imgur.elightup.com/Vvrql4e.png)
 
 After publishing, you’ll see a new settings page named **Brands** appears as below:
 
-![Created settings page appear](https://i.imgur.com/S1Z1BuW.png)
+![Created settings page appear](https://imgur.elightup.com/S1Z1BuW.png)
 
 It’s blank now.
 
@@ -77,15 +77,15 @@ In the admin dashboard, go to **Meta Box > Custom Fields > Add New**. I created 
 
 This is a group with 2 subfields inside. It is also set to be cloneable to have more spaces to add information for different brands.
 
-![2 subfields inside](https://i.imgur.com/oVFMAGs.png)
+![2 subfields inside](https://imgur.elightup.com/oVFMAGs.png)
 
 After that, go to the **Settings** tab and choose the **Location** as the settings page that we’ve created to apply the custom fields to it.
 
-![Set location for the setting page](https://i.imgur.com/q8eWRPv.png)
+![Set location for the setting page](https://imgur.elightup.com/q8eWRPv.png)
 
 Back to the settings page, and you’ll see the created custom fields appear. Moreover, to add another brand’s information, you can press the **Add more** button.
 
-![Created custom fields appear](https://i.imgur.com/1e8AcPK.gif)
+![Created custom fields appear](https://imgur.elightup.com/1e8AcPK.gif)
 
 Now, just fill in the brand’s information in the fields.
 
@@ -97,27 +97,27 @@ First, to contain all the brands' information, add a new section. Then, put it a
 
 Next, to add the title of the section, choose the **Heading** element and name it.
 
-![Add a Heading element](https://i.imgur.com/EJrofNF.png)
+![Add a Heading element](https://imgur.elightup.com/EJrofNF.png)
 
 In the **Container** element inside the section, select the **Div** element to contain the brand information.
 
-![Select Div element](https://i.imgur.com/ABA7PIF.png)
+![Select Div element](https://imgur.elightup.com/ABA7PIF.png)
 
 Then, to get the data of brands, enable the **Use query loop** button. And in the **Query** section, choose the type of data source as **MB Group: Brand Group**. In the name, you can see the ‘Brand Group’ is the name of the group that we’ve just created.
 
-![Enable the Use query loop](https://i.imgur.com/8uOrwqN.png)
+![Enable the Use query loop](https://imgur.elightup.com/8uOrwqN.png)
 
 For the brand’s logos, as they are saved in the custom field created by Meta Box, choose the **Image** element > choose the **Select** **Dynamic** data button > select the right field - **Brand Image Upload**. Now all the brand's logos are displayed already.
 
-![Choose Image element](https://i.imgur.com/q0VM7gp.gif)
+![Choose Image element](https://imgur.elightup.com/q0VM7gp.gif)
 
 For the brand’s names, choose the Basic Text element. We also use the Select Dynamic data button and choose the field correspondingly. Then, you’ll see the brand’s name displayed immediately.
 
-![Choose the Basic text elememt](https://i.imgur.com/4sd3DoR.gif)
+![Choose the Basic text elememt](https://imgur.elightup.com/4sd3DoR.gif)
 
 On the homepage, you’ll see all of the brand information.
 
-![All the imformaiton is obtained](https://i.imgur.com/HlGt615.png)
+![All the imformaiton is obtained](https://imgur.elightup.com/HlGt615.png)
 
 ## 4. Styling the section
 
@@ -125,5 +125,5 @@ Now, go back to the page editor with **Bricks**, choose each element and change 
 
 After styling, all the brand logos are displayed as we want.
 
-![Style the section](https://i.imgur.com/udymyMf.png)
+![Style the section](https://imgur.elightup.com/udymyMf.png)
 

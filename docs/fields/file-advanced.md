@@ -12,7 +12,7 @@ The file advanced field uses the WordPress media popup for selecting / uploading
 <Screenshots
     name="file-advanced"
     col1={[
-        ['https://i.imgur.com/mqR9Tue.png', 'The file advanced field interface'],
+        ['https://imgur.elightup.com/mqR9Tue.png', 'The file advanced field interface'],
     ]}
 />
 

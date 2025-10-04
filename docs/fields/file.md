@@ -13,7 +13,7 @@ The file field creates a simple file upload with default UI like `<input type="f
 <Screenshots
     name="file"
     col1={[
-        ['https://i.imgur.com/LIWgUZW.png', 'The file field interface'],
+        ['https://imgur.elightup.com/LIWgUZW.png', 'The file field interface'],
     ]}
 />
 

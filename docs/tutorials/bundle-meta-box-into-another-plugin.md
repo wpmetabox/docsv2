@@ -68,11 +68,11 @@ When bundling other extensions, especially the premium ones, you must enter the 
 
 In the `project-demo` folder, run **composer install** (make sure you installed Composer).
 
-![Run composer install](https://i.imgur.com/nh2Kpop.png)
+![Run composer install](https://imgur.elightup.com/nh2Kpop.png)
 
 Then, the `project-demo` folder will include these folders and files as follows:
 
-![The project demo folder will include folders and files](https://i.imgur.com/NZRgGWT.png)
+![The project demo folder will include folders and files](https://imgur.elightup.com/NZRgGWT.png)
 
 Finally, run the following code in the `project-demo.php` file to download the libraries that you’ve declared:
 
@@ -80,7 +80,7 @@ Finally, run the following code in the `project-demo.php` file to download the l
 require 'vendor/autoload.php';
 ```
 
-![The code](https://i.imgur.com/wD5bgNO.png)
+![The code](https://imgur.elightup.com/wD5bgNO.png)
 
 ## 3. Create custom post types and custom fields
 
@@ -127,7 +127,7 @@ add_action( 'init', 'prefix_register_post_type_project' );
 
 On the **Admin Dashboard**, you’ll see a new menu named `Projects`. It’s the custom post type that you’ve created.
 
-![New menu named project](https://i.imgur.com/JD0rMix.png)
+![New menu named project](https://imgur.elightup.com/JD0rMix.png)
 
 ### Creating custom fields
 
@@ -167,7 +167,7 @@ add_filter( 'rwmb_meta_boxes', 'prefix_add_fields_project' );
 
 Try creating/editing an article in the Project post type. The fields will appear as follows:
 
-![Try creating or editing an article in the project post type](https://i.imgur.com/hK1uSos.png)
+![Try creating or editing an article in the project post type](https://imgur.elightup.com/hK1uSos.png)
 
 ### Creating template for singular post
 
@@ -231,7 +231,7 @@ Add the following code to the content of the template file (`project-template.ph
 ```
 At this time, on the single post page of the **Project** post type, the content will be displayed as follows:
 
-![The content displays like this](https://i.imgur.com/zCfYxyZ.png)
+![The content displays like this](https://imgur.elightup.com/zCfYxyZ.png)
 
 Fields and their values are not displayed well, so we need to style them a bit.
 
@@ -248,7 +248,7 @@ add_action( 'wp_enqueue_scripts', 'prefix_project_styles' );
 
 The structure of the project-demo folder is now like this:
 
-![The structure of the folder](https://i.imgur.com/lxzpLEe.png)
+![The structure of the folder](https://imgur.elightup.com/lxzpLEe.png)
 
 Depending on how you want to display the custom fields, you add the corresponding code to the `style.css` file. For example:
 
@@ -276,4 +276,4 @@ img {
 ```
 After that, the fields’ values will be displayed as follows:
 
-![The field's values will be displayed](https://i.imgur.com/yb88znd.png)
+![The field's values will be displayed](https://imgur.elightup.com/yb88znd.png)

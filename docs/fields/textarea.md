@@ -9,7 +9,7 @@ The textarea field creates a simple textarea (multiline) input. You can use this
 ## Screenshots
 
 <Screenshots name="select" col1={[
-    ['https://i.imgur.com/Wrg9ISA.png', 'The textarea field interface']
+    ['https://imgur.elightup.com/Wrg9ISA.png', 'The textarea field interface']
 ]} />
 
 ## Settings

@@ -26,7 +26,7 @@ To see the list of default sanitize callbacks, please [see the plugin source cod
 
 If you don't want to sanitize the input value for a specific field (we don't encourage this, obviously), then go to the **Advanced** tab and set **Custom sanitize callback** to "none":
 
-![disable sanitization](https://i.imgur.com/hqzOpTt.png)
+![disable sanitization](https://imgur.elightup.com/hqzOpTt.png)
 
 In this case, whatever users input will be saved.
 
@@ -53,7 +53,7 @@ If you use code, then set `'sanitize_callback' => 'none'` in the [field settings
 
 To provide a custom sanitize callback for a field, please enter a function name to the **Custom sanitize callback** settings in the **Advanced** tab when editing a field.
 
-![custom sanitizate callback](https://i.imgur.com/NnS4XAC.png)
+![custom sanitizate callback](https://imgur.elightup.com/NnS4XAC.png)
 
 And don't forget to define the function in your theme or plugin.
 

@@ -17,7 +17,7 @@ Normally, there are 2 popular ways to add a map to show the locations: It’s em
 
 Assume that your website has a lot of listings as restaurants, and each one has its own location.
 
-![Your website has a lot of listings as restaurants](https://i.imgur.com/jBwuAl8.png)
+![Your website has a lot of listings as restaurants](https://imgur.elightup.com/jBwuAl8.png)
 
 You should store the location in the post of each restaurant, using a custom field. Then, use the **Map** field from Meta Box, and code to display the location on the frontend. You can **add code directly to the theme file**, but it might not be optimal in some cases. And, we **highly recommend using MB Views from Meta Box** instead.
 
@@ -33,39 +33,39 @@ I will add two custom fields, one for entering an address, and one for displayin
 
 Now, go to **Meta Box** > **Custom Fields**, and create them.
 
-![Go to Meta Box > Custom Fields, and create fields](https://i.imgur.com/KH3KFN0.png)
+![Go to Meta Box > Custom Fields, and create fields](https://imgur.elightup.com/KH3KFN0.png)
 
 First, choose the **Text** field for saving the address.
 
-![Choose the Text field for saving address.](https://i.imgur.com/XleJ5xy.png)
+![Choose the Text field for saving address.](https://imgur.elightup.com/XleJ5xy.png)
 
 Next, create another field to have the map. Meta Box provides 2 field types for maps. They are **Google Maps** and **Open Street Maps**.
 
-![Meta Box provides 2 field types for maps.](https://i.imgur.com/rKhVxoF.png)
+![Meta Box provides 2 field types for maps.](https://imgur.elightup.com/rKhVxoF.png)
 
 If you want to use the **Google Maps** field, you should follow [Google’s instructions to get the API key](https://developers.google.com/maps/documentation/javascript/get-api-key) and insert it into the place as shown as below.
 
-![Insert the IPA key into the box](https://i.imgur.com/UBR4DH8.png)
+![Insert the IPA key into the box](https://imgur.elightup.com/UBR4DH8.png)
 
 Otherwise, if you do not have the key, you can use the **Open Street Maps** field. It requests no key to use. Remember to add the ID of the **Address** field to connect this map to it. If you forgot it, the map cannot work.
 
-![Remember to add the ID of the Address field to connect this map to it](https://i.imgur.com/LG0eC05.png)
+![Remember to add the ID of the Address field to connect this map to it](https://imgur.elightup.com/LG0eC05.png)
 
 After you’ve done with two custom fields, move to the **Settings** tab, set **Location** as **Post type**, and choose the post type as the listing you want to apply these fields to.
 
-![Set the location as the post type of the listing you want to apply these fields to.](https://i.imgur.com/aH2R9aa.png)
+![Set the location as the post type of the listing you want to apply these fields to.](https://imgur.elightup.com/aH2R9aa.png)
 
 Then, you will see the two created fields in the post editor.
 
-![You will see the two created fields in the post editor.](https://i.imgur.com/RFSUwhN.png)
+![You will see the two created fields in the post editor.](https://imgur.elightup.com/RFSUwhN.png)
 
 Just enter the address to check how they work. When you enter any character into the field, it will suggest some related locations to choose from. You can choose one, and then the location markup on the map will move to the place exactly as the address is.
 
-![When choosing any address, the location markup on the map will move to the place exactly as the address is.](https://i.imgur.com/ZGScci9.gif)
+![When choosing any address, the location markup on the map will move to the place exactly as the address is.](https://imgur.elightup.com/ZGScci9.gif)
 
 I added some restaurants along with their own locations, for example, to see the result clearer at the end.
 
-![Some restaurants along with their own locations](https://i.imgur.com/bE0018T.png)
+![Some restaurants along with their own locations](https://imgur.elightup.com/bE0018T.png)
 
 ## 2. Displaying maps on the frontend
 
@@ -75,41 +75,41 @@ We have just created the map on the backend already, so it’s time to bring it 
 
 When using **MB Views**, there’ll be a button to add the map to the template without touching any code. It’s so convenient, especially for those who are not familiar with code.
 
-![When using MB Views, there’ll be a button to add the map to the template without touching any code.](https://i.imgur.com/Pv44lzb.png)
+![When using MB Views, there’ll be a button to add the map to the template without touching any code.](https://imgur.elightup.com/Pv44lzb.png)
 
 Go to **Meta Box** > **Views**, and create a new template.
 
-![Create a new template.](https://i.imgur.com/HYM6Piw.png)
+![Create a new template.](https://imgur.elightup.com/HYM6Piw.png)
 
 Click on the mentioned button, and a list of fields will display to choose from. So, choose the one we use for the map.
 
-![Choose the field we use for the map](https://i.imgur.com/16hDr8D.png)
+![Choose the field we use for the map](https://imgur.elightup.com/16hDr8D.png)
 
 For the output of the map, Meta Box also provides some options.
 
-![Set the output of the map](https://i.imgur.com/3UZwbWL.png)
+![Set the output of the map](https://imgur.elightup.com/3UZwbWL.png)
 
 There will be a line of code for the map auto-generated into the template, as you can see in the image below.
 
-![A line of code for the map auto generated into the template](https://i.imgur.com/HXCXCH7.png)
+![A line of code for the map auto generated into the template](https://imgur.elightup.com/HXCXCH7.png)
 
 You don't need to do anything else.
 
 Just move to the **Settings** section of the view, set the **Type** as **Singular**, choose the **Location** as the post type where you want the map display.
 
-![In the Settings section of the view, set the Type as Singular, choose the Location as the post type where you want the map display.](https://i.imgur.com/SwMQSF8.png)
+![In the Settings section of the view, set the Type as Singular, choose the Location as the post type where you want the map display.](https://imgur.elightup.com/SwMQSF8.png)
 
 As well, you can choose a suitable position for the map on the page.
 
-![Choose a suitable position for the map on the page](https://i.imgur.com/89xmR77.png)
+![Choose a suitable position for the map on the page](https://imgur.elightup.com/89xmR77.png)
 
 You will see the map displayed on the single post page. The map is not static, you absolutely can interact with the map by zooming in and zooming out.
 
-![The interactive map displayed on the single post page](https://i.imgur.com/8SpCehR.gif)
+![The interactive map displayed on the single post page](https://imgur.elightup.com/8SpCehR.gif)
 
 When you go to another post, the map displays as well, but with a different location.
 
-![In another post, the map displays as well, but with a different location.](https://i.imgur.com/UU6zoQv.png)
+![In another post, the map displays as well, but with a different location.](https://imgur.elightup.com/UU6zoQv.png)
 
 So, we have done with MB Views.
 
@@ -133,7 +133,7 @@ function add_google_map() {
 add_action( 'estar_entry_content_after', 'add_google_map' );
 ```
 
-![Add code to the functions.php file for displaying the map](https://i.imgur.com/nr8E1in.png)
+![Add code to the functions.php file for displaying the map](https://imgur.elightup.com/nr8E1in.png)
 
 Let’s go through it in more detail.
 
@@ -173,11 +173,11 @@ That’s all for the code we use for the map.
 
 Since you visit any single post page, you’ll see the map. The result is the same as we did with **MB Views**. There is also a marker. It’s on the location exactly as I saved in the field. I can zoom in and zoom out the map as well.
 
-![The map display on a single post page](https://i.imgur.com/8SpCehR.gif)
+![The map display on a single post page](https://imgur.elightup.com/8SpCehR.gif)
 
 When I go to another post, I’ll see the map along with another location.
 
-![In another post, I’ll see the map along with the location](https://i.imgur.com/UU6zoQv.png)
+![In another post, I’ll see the map along with the location](https://imgur.elightup.com/UU6zoQv.png)
 
 So, everything on the map is going well.
 

@@ -8,7 +8,7 @@ Displaying dynamic banners in multiple places on a website with the same content
 
 This is an example for the banners that we will create in this practice.
 
-![This is an example for the banners](https://i.imgur.com/Cv31dWC.png)
+![This is an example for the banners](https://imgur.elightup.com/Cv31dWC.png)
 
 ## Video Version
 
@@ -33,27 +33,27 @@ We’ll use a settings page to include all the content, and other settings of th
 
 Go to **Meta Box** to create a settings page.
 
-![Go to Meta Box to create a settings page](https://i.imgur.com/oGVdL1u.png)
+![Go to Meta Box to create a settings page](https://imgur.elightup.com/oGVdL1u.png)
 
 There is no need for special settings for it in this practice.
 
 After publishing, you can see a new settings page named **Banner** appeared.
 
-![A new settings page named as Banner](https://i.imgur.com/ZVDtPLy.png)
+![A new settings page named as Banner](https://imgur.elightup.com/ZVDtPLy.png)
 
 It’s blank now, so just move on to create custom fields for this page.
 
-![The settings page for the banner is blank page so far](https://i.imgur.com/HPE9KLQ.png)
+![The settings page for the banner is blank page so far](https://imgur.elightup.com/HPE9KLQ.png)
 
 ## 2. Creating custom fields
 
 Each element for the content of the banner should be put in a separate custom field. These are some fields that I’ll create for the banner.
 
-![There are some fields for banners](https://i.imgur.com/6ThnxTo.png)
+![There are some fields for banners](https://imgur.elightup.com/6ThnxTo.png)
 
 The first field is to set to display the banner on the frontend or not. You can turn on or turn off the banner easily thanks to it.
 
-![This field is to set to display the banner on the frontend or not](https://i.imgur.com/IcTPvCD.png)
+![This field is to set to display the banner on the frontend or not](https://imgur.elightup.com/IcTPvCD.png)
 
 All the other fields are the content of the banner. They’re just typical ones. You should create fields based on your own requirements for the banner.
 
@@ -61,17 +61,17 @@ Now, move to the Meta Box menu to create fields.
 
 Choose the **Checkbox** type for the first field, which regulates whether to display the banner or not.
 
-![This is the Checkbox type to display the banner or not](https://i.imgur.com/vDwL8HK.png)
+![This is the Checkbox type to display the banner or not](https://imgur.elightup.com/vDwL8HK.png)
 
 For the other fields for the content of the banner, just create them without special settings.
 
 After creating all the fields, move to the **Settings** tab, choose **Location** as **Settings Page**, and select **Banner** to display the created fields to the settings page we use for the banner.
 
-![Move to the Settings tab, choose Location as Settings Page, and select Banner to display the created fields](https://i.imgur.com/IDyqo4O.png)
+![Move to the Settings tab, choose Location as Settings Page, and select Banner to display the created fields](https://imgur.elightup.com/IDyqo4O.png)
 
 Now the custom fields are ready on the settings page.
 
-![The custom fields on the settings page](https://i.imgur.com/ED75X7I.png)
+![The custom fields on the settings page](https://imgur.elightup.com/ED75X7I.png)
 
 Just add content for the banner.
 
@@ -93,7 +93,7 @@ We’ll go through to see both of these ways, then you can experience them all.
 
 Go to the **functions.php** file, and add some lines of code.
 
-![Go to the functions.php file, and add some lines of code](https://i.imgur.com/KNbBgJD.png)
+![Go to the functions.php file, and add some lines of code](https://imgur.elightup.com/KNbBgJD.png)
 
 **In there:**
 
@@ -105,7 +105,7 @@ This line is to get data from the page. In there, `'banner'` is the option name 
 
 All of these following lines are to get data from the custom fields.
 
-![These lines are to get data from the custom fields](https://i.imgur.com/HKrSvNO.png)
+![These lines are to get data from the custom fields](https://imgur.elightup.com/HKrSvNO.png)
 
 ```
 wp_get_attachment_image_src( )
@@ -121,23 +121,23 @@ This line is to get the value saved in this field since we have a checkbox field
 
 The `rwmb_meta( )` function is to get the data in text from fields.
 
-![This function to get the data in text from fields](https://i.imgur.com/jMVj36V.png)
+![This function to get the data in text from fields](https://imgur.elightup.com/jMVj36V.png)
 
 These are the ID of the fields.
 
-![These are the ID of the fields](https://i.imgur.com/BjGrh5n.png)
+![These are the ID of the fields](https://imgur.elightup.com/BjGrh5n.png)
 
 Beside that, `['object_type' => 'setting']` stipulates the object type as a settings page.
 
 These lines is to display the banner by using all the obtained data.
 
-![These lines is to display the banner by using all the obtained data](https://i.imgur.com/KWBESdI.png)
+![These lines is to display the banner by using all the obtained data](https://imgur.elightup.com/KWBESdI.png)
 
 This if `( $show == 1 ) { }` function is the condition to check that you check the box to allow showing the banner or not. If yes, the value saved in the field will be 1.
 
 This is the banner that we will display.
 
-![This is the banner will be displayed](https://i.imgur.com/ADhufMW.png)
+![This is the banner will be displayed](https://imgur.elightup.com/ADhufMW.png)
 
 I do not display all the obtained data directly. Some of them will be used as HTML attributes to specify how the image or the text will be.
 
@@ -157,27 +157,27 @@ Go to the editor of any page, just paste the shortcode.
 
 For instance, I add the shortcode to a page content and will display it as full width later.
 
-![Go to the editor of any page, just paste the shortcode](https://i.imgur.com/uPJkkuG.png)
+![Go to the editor of any page, just paste the shortcode](https://imgur.elightup.com/uPJkkuG.png)
 
 Then you’ll see the banner displayed.
 
-![The banner displayed without styling](https://i.imgur.com/a6dtL5F.png)
+![The banner displayed without styling](https://imgur.elightup.com/a6dtL5F.png)
 
 To style the banner, we should add some **CSS**.
 
-![Add some CSS for styling](https://i.imgur.com/O0GOGZR.png)
+![Add some CSS for styling](https://imgur.elightup.com/O0GOGZR.png)
 
 Here is the new look of the banner.
 
-![The new look of the banner](https://i.imgur.com/VIOvKhN.png)
+![The new look of the banner](https://imgur.elightup.com/VIOvKhN.png)
 
 I also will add the banner to the right sidebar. Also use the shortcode.
 
-![Add shortcode to the right sidebar](https://i.imgur.com/zefMSRM.png)
+![Add shortcode to the right sidebar](https://imgur.elightup.com/zefMSRM.png)
 
 This is how the banner displays.
 
-![This is how the banner displays](https://i.imgur.com/PUYvw5X.png)
+![This is how the banner displays](https://imgur.elightup.com/PUYvw5X.png)
 
 You can see that the banners in both places are the same in the content and layout, but different in the size.
 
@@ -189,33 +189,33 @@ With dynamic banners, you can easily change the banner content and layout withou
 
 Go to **Views** to create a new template.
 
-![Go to Views to create a new template](https://i.imgur.com/1H2jWOT.png)
+![Go to Views to create a new template](https://imgur.elightup.com/1H2jWOT.png)
 
 In the **Template** tab, instead of adding code, we will insert fields one by one that we want to get data from.
 
-![In the Template tab, insert fields one by one to get data from](https://i.imgur.com/cuMAk95.png)
+![In the Template tab, insert fields one by one to get data from](https://imgur.elightup.com/cuMAk95.png)
 
 Since our fields are on a settings page, in the **Site** section, you will see the list of the fields that we use for the banner.
 
-![The list of the fields that we use for the banner](https://i.imgur.com/NFwW79K.png)
+![The list of the fields that we use for the banner](https://imgur.elightup.com/NFwW79K.png)
 
 Just click one by one to insert fields to the template.
 
-![Click one by one to insert fields to the template](https://i.imgur.com/4tdj274.png)
+![Click one by one to insert fields to the template](https://imgur.elightup.com/4tdj274.png)
 
 After publishing this template, it will automatically generate a shortcode. We’ll use it to display the banner later.
 
-![A shortcode will be automatically generated](https://i.imgur.com/px0i2N8.png)
+![A shortcode will be automatically generated](https://imgur.elightup.com/px0i2N8.png)
 
 ### 5.2. Displaying the banner content
 
 The same with the method one when we have a shortcode by adding code to the theme file, now we’ll copy the shortcode from the view, then go to a page editor, paste the shortcode to any place.
 
-![Go to a page editor, paste the shortcode to any place](https://i.imgur.com/wRwLrgQ.png)
+![Go to a page editor, paste the shortcode to any place](https://imgur.elightup.com/wRwLrgQ.png)
 
 On the frontend, the data will display in the form like this.
 
-![On the frontend, the data will display in the form](https://i.imgur.com/stIol7H.png)
+![On the frontend, the data will display in the form](https://imgur.elightup.com/stIol7H.png)
 
 ### 5.3. Beautifying the banner display
 
@@ -223,7 +223,7 @@ Go back to the template to customize it a bit more to regulate how the data shou
 
 The logic of the code is the same with method 1 with PHP, but different in detailed text.
 
-![Move some lines of code to make it seem shorter and simpler](https://i.imgur.com/l1JAmKX.png)
+![Move some lines of code to make it seem shorter and simpler](https://imgur.elightup.com/l1JAmKX.png)
 
 ```
 {%  if(site.banner.show) == 1 %}
@@ -239,26 +239,26 @@ This line helps turn data from custom fields to be an attribute to stipulate the
 
 Just update the template, and see the new look of the banner on the page.
 
-![The new look of the banner on the page](https://i.imgur.com/CLdD9rw.png)
+![The new look of the banner on the page](https://imgur.elightup.com/CLdD9rw.png)
 
 To prettify the banner, go back to the template in the view, add some **CSS**.
 
-![For styling, go back to the template, add some CSS](https://i.imgur.com/0R1SxJq.png)
+![For styling, go back to the template, add some CSS](https://imgur.elightup.com/0R1SxJq.png)
 
 Now, the banner displays on the frontend at full width with the right layout.
 
-![The banner displays on the frontend at full width with the right layout](https://i.imgur.com/VIOvKhN.png)
+![The banner displays on the frontend at full width with the right layout](https://imgur.elightup.com/VIOvKhN.png)
 
 ### 5.4. Displaying banners on multiple positions.
 
 We have a shortcode of the template for the banner like this.
 
-![This is a shortcode of the template for the banner](https://i.imgur.com/Qv2OVn9.png)
+![This is a shortcode of the template for the banner](https://imgur.elightup.com/Qv2OVn9.png)
 
 Just add it to multiple places on a page, or even different pages.
 
-![Add shortcode to multiple places on a page](https://i.imgur.com/K8IpxcW.png)
+![Add shortcode to multiple places on a page](https://imgur.elightup.com/K8IpxcW.png)
 
 Then you will have the banner in different places.
 
-![The final result of the banner with the same content but different sizes](https://i.imgur.com/PUYvw5X.png)
+![The final result of the banner with the same content but different sizes](https://imgur.elightup.com/PUYvw5X.png)

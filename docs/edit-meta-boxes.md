@@ -59,7 +59,7 @@ function prefix_register_meta_boxes( $meta_boxes ) {
 
 which are rendered as following:
 
-![meta boxes](https://i.imgur.com/VwDhVeD.png)
+![meta boxes](https://imgur.elightup.com/VwDhVeD.png)
 
 We want to:
 
@@ -120,7 +120,7 @@ function prefix_edit_meta_boxes( $meta_boxes ) {
 
 Here is the result:
 
-![edit remove meta boxes](https://i.imgur.com/CxkIV6L.png)
+![edit remove meta boxes](https://imgur.elightup.com/CxkIV6L.png)
 
 :::tip
 

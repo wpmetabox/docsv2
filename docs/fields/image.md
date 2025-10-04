@@ -14,7 +14,7 @@ This field is very similar to [file](/fields/file/). The only difference is that
 <Screenshots
     name="image"
     col1={[
-        ['https://i.imgur.com/8GFxWKP.png', 'The image field interface'],
+        ['https://imgur.elightup.com/8GFxWKP.png', 'The image field interface'],
     ]}
 />
 

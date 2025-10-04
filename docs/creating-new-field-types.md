@@ -182,7 +182,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 
 When you edit a post, you'll see the new field:
 
-![new field type](https://i.imgur.com/lK8DRW7.png)
+![new field type](https://imgur.elightup.com/lK8DRW7.png)
 
 :::info
 

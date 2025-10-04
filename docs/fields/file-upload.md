@@ -12,7 +12,7 @@ The file upload field displays an inline upload area that you can drag and drop 
 <Screenshots
     name="file-upload"
     col1={[
-        ['https://i.imgur.com/yGNNhOg.png', 'The file upload field interface'],
+        ['https://imgur.elightup.com/yGNNhOg.png', 'The file upload field interface'],
     ]}
 />
 

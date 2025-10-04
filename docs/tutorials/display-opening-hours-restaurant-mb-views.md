@@ -211,13 +211,13 @@ the choose_an_option_ field = the all_days_are_the_same_ option</td>
 
 You can see in the above table, the first field is a **select** field with 3 options. I filled in the options into the **Choice** box as below.
 
-![Fill in the options](https://i.imgur.com/dYGYZn9.png)
+![Fill in the options](https://imgur.elightup.com/dYGYZn9.png)
 
 These 3 options will be used to set the display rule of other group fields.
 
 To set conditions to groups, for example, with the **All days have the same opening hours** group, go to the **Advanced tab**, and then set the rule in the **Conditional Logic** section like this:
 
-![Set conditons to groups](https://i.imgur.com/AquTHJL.png)
+![Set conditons to groups](https://imgur.elightup.com/AquTHJL.png)
 
 This rule means this group will be displayed when the **Choose an Option** field is selected as **All days have the same opening hours** option which has the value is `all_days_are_the_same`.
 
@@ -234,17 +234,17 @@ The **Type of Opening Hours** field is the select field. I have 4 options in the
 
 If the restaurant has different opening hours, you can choose **Enter Hours** to display the **Start Time** and **End Time** field in the **Choose Time Slots** group. So, I will set the rule for this group like this:
 
-![Choose Enter Hours to display](https://i.imgur.com/Pk70SvN.png)
+![Choose Enter Hours to display](https://imgur.elightup.com/Pk70SvN.png)
 
 In case the restaurant opens in multiple time slots, we’ll need this group to be cloneable. So, I tick this box as below:
 
-![Set group to be cloneable](https://i.imgur.com/aJP7FdB.png)
+![Set group to be cloneable](https://imgur.elightup.com/aJP7FdB.png)
 
 After creating all the fields, go to the **Settings** tab of the field group, choose **Location** as **Post Type**, and select **Restaurant** to apply these fields to this post type.
 
 Publish this field group and go to the post editor in **Restaurant**, you will see the custom fields here.
 
-![Created fields in the post editor](https://i.imgur.com/OelC36Y.gif)
+![Created fields in the post editor](https://imgur.elightup.com/OelC36Y.gif)
 
 ## 2. Displaying the fields’ value on the frontend
 
@@ -296,17 +296,17 @@ Here I created a variable named **options** to admit the value from the **Choose
 
 First, if its value is `all_day_are_the_same`, the values of fields in the **All days have the same opening hours** group will be displayed.
 
-![Add the code](https://i.imgur.com/fUMwtHG.png)
+![Add the code](https://imgur.elightup.com/fUMwtHG.png)
 
 I set a variable named same_days to admit the value from the **Type of Opening Hours** field. If it is `enter_hours`, the **Choose Time Slots** group will be obtained and displayed the data. As we set before, this group is cloneable, so there is a loop here.
 
-![Add the code](https://i.imgur.com/4LO0llZ.png)
+![Add the code](https://imgur.elightup.com/4LO0llZ.png)
 
 After adding code, depending on if the view is new or not, choose the right **Type** and **Location** for the view in the **Settings** section.
 
 Go to the single Restaurant page and see how the opening hours section displays.
 
-![The oopening hours section displays](https://i.imgur.com/OEssGcj.png)
+![The oopening hours section displays](https://imgur.elightup.com/OEssGcj.png)
 
 All the time slots are shown exactly as I input in the backend. But this section doesn't look as good as I want. So, I will add some CSS to style this section in the next step.
 
@@ -360,5 +360,5 @@ Still, in the view of the single Restaurant page, move to the **CSS** tab. And a
 ```
 Now, go back to the single restaurant page, you’ll see the Opening Hours section looks much more beautiful.
 
-![The final result](https://i.imgur.com/714VXYe.png)
+![The final result](https://imgur.elightup.com/714VXYe.png)
 

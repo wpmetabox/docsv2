@@ -4,7 +4,7 @@ title: MB User Profile
 
 MB User Profile helps you to add information to the user profile and edit these details on the front end. It also includes a register form, login form, and edit profile form that you can embed anywhere using shortcodes.
 
-![user profile page](https://i.imgur.com/bqVnDDF.png)
+![user profile page](https://imgur.elightup.com/bqVnDDF.png)
 
 Note: this extension already includes **MB User Meta**.
 
@@ -12,7 +12,7 @@ Note: this extension already includes **MB User Meta**.
 
 To insert a registration form to a page, select the **Registration Form** block from the block inserter. And you'll see the form preview like this:
 
-![Registration form block](https://i.imgur.com/N0IBus9.png)
+![Registration form block](https://imgur.elightup.com/N0IBus9.png)
 
 Clicking on the block will reveal the form settings on the right. All settings are self-explained and have their description.
 
@@ -54,7 +54,7 @@ reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Opt
 
 To insert a login form to a page, select the **Login Form** block from the block inserter. And you'll see the form preview like this:
 
-![Login form block](https://i.imgur.com/f3Z3BDw.png)
+![Login form block](https://imgur.elightup.com/f3Z3BDw.png)
 
 Clicking on the block will reveal the form settings on the right. All settings are self-explained and have their description.
 
@@ -90,7 +90,7 @@ reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Opt
 
 To insert an edit profile form to a page, select the **Edit Profile Form** block from the block inserter. And you'll see the form preview like this:
 
-![Edit profile form block](https://i.imgur.com/VrddaGg.png)
+![Edit profile form block](https://imgur.elightup.com/VrddaGg.png)
 
 Clicking on the block will reveal the form settings on the right. All settings are self-explained and have their description.
 
@@ -200,7 +200,7 @@ To let users change their password, please use the field group ID `rwmb-user-inf
 
 MB User Profile has a settings page under **Meta Box > User Profile** that allows you to change some settings for the plugin.
 
-![User profile settings](https://i.imgur.com/NSOCjiE.png)
+![User profile settings](https://imgur.elightup.com/NSOCjiE.png)
 
 - **Force password change**: force users to change their password after the first login.
 - **Email confirmation success page**: select a page to show when users successfully confirm their email. If no page is selected, a default message will be displayed.
@@ -305,7 +305,7 @@ Example:
 ```php
 add_filter( 'rwmb_profile_validate', function ($is_valid) {
 	$email = $_POST['user_email'] ?? '';
-    
+
 	if ( $email === 'alex@example.com' ) {
 		$is_valid = 'Email is already taken';
 	}

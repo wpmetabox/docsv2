@@ -12,7 +12,7 @@ One in the range of translation plugins, WPML seems like the most popular with a
 For demonstration purposes, I’ll translate information about a post-author as you can see below:
 
 
-![Example of translating custom field values for users](https://i.imgur.com/vbVl6LG.gif)
+![Example of translating custom field values for users](https://imgur.elightup.com/vbVl6LG.gif)
 
 
 ## Video version
@@ -41,15 +41,15 @@ Before translating any object with WPML, you need to set up the languages that y
 
 Go to **WPML** > **Languages** to both the default language and custom languages. Then, click on the **Add/Remove languages** button to add the custom languages for your site.
 
-![Go to WPML > Languages then add the custom languages for your site](https://i.imgur.com/tfetQ39.png)
+![Go to WPML > Languages then add the custom languages for your site](https://imgur.elightup.com/tfetQ39.png)
 
 WPML supports 65 languages which is the most popular in the world. Just check the languages on the list that fit your needs. In this practice, I’ll translate into Italian and Russian for example.
 
-![Choose languages on the list that fit your needs](https://i.imgur.com/HwigBdo.png)
+![Choose languages on the list that fit your needs](https://imgur.elightup.com/HwigBdo.png)
 
 Then, on the admin bar, there are the enabled languages for your site.
 
-![On the admin bar, there are the enabled languages for your site.](https://i.imgur.com/iKZR5Qz.png)
+![On the admin bar, there are the enabled languages for your site.](https://imgur.elightup.com/iKZR5Qz.png)
 
 Now, it’s time to move to the main parts of this tutorial.
 
@@ -57,11 +57,11 @@ Now, it’s time to move to the main parts of this tutorial.
 
 I suppose that you already have some fields for users. You can follow other tutorials to know how to do it with [40+ field types](https://www.youtube.com/watch?v=WWeaM5vIAwM&t=130s) provided by Meta Box in detail. I just created some fields for illustration.
 
-![Add some custom fields for users](https://i.imgur.com/G0bPVbM.png)
+![Add some custom fields for users](https://imgur.elightup.com/G0bPVbM.png)
 
 I also input data into custom fields for each user.
 
-![The data is input into custom fields for each user](https://i.imgur.com/FUdvsuu.png)
+![The data is input into custom fields for each user](https://imgur.elightup.com/FUdvsuu.png)
 
 Now, we’ll translate them in the languages which we chose before.
 
@@ -71,11 +71,11 @@ As I mentioned before, besides the basic content, we’ll use the WPML String Tr
 
 Go to **WPML** > **String Translation**. There will be a table that includes all the strings that come from the different themes and plugins on our site.
 
-![Go to WPML, String Translation to translate content in user meta](https://i.imgur.com/LiXSto3.png)
+![Go to WPML, String Translation to translate content in user meta](https://imgur.elightup.com/LiXSto3.png)
 
 However, the fields created with Meta Box are not in the table automatically, because they haven’t been recognized as strings. By default, WPML can translate only the basic fields of the user such as the name and description. To make the custom ones translatable, we need to **convert them to strings first, and then translate those strings**.
 
-![The fields created with Meta Box are not in the table automatically](https://i.imgur.com/02mNgjS.png)
+![The fields created with Meta Box are not in the table automatically](https://imgur.elightup.com/02mNgjS.png)
 
 #### 2.1.1. Converting custom fields to strings
 
@@ -88,7 +88,7 @@ add_filter( 'wpml_translatable_user_meta_fields', function( $fields ) {
 } );
 ```
 
-![Add code to the theme’s file to convert custom fields to strings](https://i.imgur.com/93aHwOJ.png)
+![Add code to the theme’s file to convert custom fields to strings](https://imgur.elightup.com/93aHwOJ.png)
 
 **Specifically**:
 
@@ -97,7 +97,7 @@ add_filter( 'wpml_translatable_user_meta_fields', function( $fields ) {
 
 You can convert one by one field by adding separate filters. In my case, since I have two fields, the full code as below:
 
-![Convert one by one field by adding separate filters.](https://i.imgur.com/ljOvUY8.png)
+![Convert one by one field by adding separate filters.](https://imgur.elightup.com/ljOvUY8.png)
 
 Another way, you also can list them all in a line, then assign the fields to an array with the code:
 
@@ -108,17 +108,17 @@ add_filter( 'wpml_translatable_user_meta_fields', function( $fields ) {
 } );
 ```
 
-![Another way is listing field IDs in a line, then assign them to an array](https://i.imgur.com/Qim8Kgi.png)
+![Another way is listing field IDs in a line, then assign them to an array](https://imgur.elightup.com/Qim8Kgi.png)
 
 After that, back to the **String Translation** screen in WPML.
 
 Before searching for any field ID to check if it has been converted to a string or not, you should scroll down to the **More options** section. We’ll regularize the role of the users which we want to translate by checking.
 
-![Regularize the role of the users which we want to translate by checking](https://i.imgur.com/OlP6mtg.png)
+![Regularize the role of the users which we want to translate by checking](https://imgur.elightup.com/OlP6mtg.png)
 
 Now, the fields are in the table along with their value.
 
-![The fields are in the String table along with their value](https://i.imgur.com/Ki4IURH.png)
+![The fields are in the String table along with their value](https://imgur.elightup.com/Ki4IURH.png)
 
 It means that the WPML plugin has recognized them as strings already.
 
@@ -126,11 +126,11 @@ It means that the WPML plugin has recognized them as strings already.
 
 Translating custom field values for users becomes a simpler task now. Click on the ‘**+**’ icon below the flag of the language you want to add a translated version for each value. Then, add the translation.
 
-![Click on the ‘+’ icon to add a translated version for each value](https://i.imgur.com/5H8HE2B.gif)
+![Click on the ‘+’ icon to add a translated version for each value](https://imgur.elightup.com/5H8HE2B.gif)
 
 Do it one by one for each value. And, it’s the same with the other fields.
 
-![The fields after adding the translation](https://i.imgur.com/fDnItZg.png)
+![The fields after adding the translation](https://imgur.elightup.com/fDnItZg.png)
 
 We have just added translation versions for the values of each field. They are now available in the backend, but not on the frontend. So, the website visitors still can not see them. We should take one more step for that.
 
@@ -146,33 +146,33 @@ Since I have the MB Views plugin that is included in the Meta Box package, I’l
 
 Go to **Meta Box** > **Views**, and create a new view.
 
-![Go to Meta Box > Views, and create a new view for user meta translation](https://i.imgur.com/UQsPXJR.png)
+![Go to Meta Box > Views, and create a new view for user meta translation](https://imgur.elightup.com/UQsPXJR.png)
 
 Click on the **Insert Field** button, then choose the field from the dropdown list on the sidebar.
 
-![Click on the Insert Field button to choose the field from the dropdown list on the sidebar](https://i.imgur.com/DCewXWb.png)
+![Click on the Insert Field button to choose the field from the dropdown list on the sidebar](https://imgur.elightup.com/DCewXWb.png)
 
 Since the fields are for users, you should look for them in the **User** tab. It includes the default fields, and custom fields as well.
 
-![Since the fields are for users, you should look for them in the User tab.](https://i.imgur.com/wMOeFoi.png)
+![Since the fields are for users, you should look for them in the User tab.](https://imgur.elightup.com/wMOeFoi.png)
 
 Just select the fields you want to get data as usual.
 
-![Select the fields you want to get data as usual](https://i.imgur.com/vZVmcKN.gif)
+![Select the fields you want to get data as usual](https://imgur.elightup.com/vZVmcKN.gif)
 
 Also, set the type, and location of the template, as any place on your website, or save it as a shortcode, then you can embed it in any place as well.
 
-![Set the type, and location of the template](https://i.imgur.com/qHcZi0a.png)
+![Set the type, and location of the template](https://imgur.elightup.com/qHcZi0a.png)
 
 On the frontend, the information saved in the fields is displayed already, but in the original values that correspond to the default language.
 
-![The custom field values is displayed in the default language](https://i.imgur.com/KWDmWAx.png)
+![The custom field values is displayed in the default language](https://imgur.elightup.com/KWDmWAx.png)
 
 You should modify the created template a little bit to make this section more beautiful.
 
 Back to the created view. Add some **`div`** tags, classes, and a heading as in the below image:
 
-![Add some div tags, classes and modify the created template a little bit to make this section more beautiful.](https://i.imgur.com/FTNkZsY.png)
+![Add some div tags, classes and modify the created template a little bit to make this section more beautiful.](https://imgur.elightup.com/FTNkZsY.png)
 
 **In there**:
 
@@ -182,11 +182,11 @@ Back to the created view. Add some **`div`** tags, classes, and a heading as in 
 
 Also, add **CSS** to style the section.
 
-![Add some CSS to style the section](https://i.imgur.com/FLxsjVm.png)
+![Add some CSS to style the section](https://imgur.elightup.com/FLxsjVm.png)
 
 Back to the page, the section’s style is better.
 
-![The new look of the user section](https://i.imgur.com/KhuXe6m.png)
+![The new look of the user section](https://imgur.elightup.com/KhuXe6m.png)
 
 In the normal case that you have only one language on your site, that’s done to display custom field values at this moment. However, your website is now having more than one language, so you should display all the translation versions of them. Then, when visitors see the page in another language, they also can see the matching language version of the field’s values.
 
@@ -196,21 +196,21 @@ Currently, there is nothing on the page to change the language to another one, s
 
 Go to **WPML** > **Languages** to regulate the location for the language switcher on this page. And, look for the **Menu Language Switcher** section to add a new one.
 
-![In the Languages submenu in WPML, look for the Menu Language Switcher section to add a new language switcher](https://i.imgur.com/nYLZnjJ.png)
+![In the Languages submenu in WPML, look for the Menu Language Switcher section to add a new language switcher](https://imgur.elightup.com/nYLZnjJ.png)
 
 Choose a menu of your website that you want the switcher to be on.
 
-![Choose a menu of your website that you want the switcher to be on](https://i.imgur.com/z7aqo89.png)
+![Choose a menu of your website that you want the switcher to be on](https://imgur.elightup.com/z7aqo89.png)
 
 There are also some other settings for the switcher in the window as well. Just configure it as you want.
 
 Back to the page, the switcher is available on the place you set already.
 
-![The switcher is available on the frontend](https://i.imgur.com/35cYQ42.png)
+![The switcher is available on the frontend](https://imgur.elightup.com/35cYQ42.png)
 
 And, when you change the language on the switcher, the content of the author section is also switched to exactly the translation version that you input in the previous step.
 
-![The content of the author section is also switched to exactly the translation version then we change the language on the switcher.](https://i.imgur.com/vbVl6LG.gif)
+![The content of the author section is also switched to exactly the translation version then we change the language on the switcher.](https://imgur.elightup.com/vbVl6LG.gif)
 
 ### 2.3. Remark
 
@@ -224,15 +224,15 @@ There will be no translation for custom field values of the users who are unchec
 
 Translating custom field values for taxonomies is quite easier than custom fields of users. I’ll do it with an example as Categories.
 
-![Example of translating custom field values for taxonomies](https://i.imgur.com/4bSAI9k.gif)
+![Example of translating custom field values for taxonomies](https://imgur.elightup.com/4bSAI9k.gif)
 
 I have had some basic custom fields for it. Also, input some data into them for some terms.
 
-![The custom fields and their value as demonstration](https://i.imgur.com/iZKqbbE.png)
+![The custom fields and their value as demonstration](https://imgur.elightup.com/iZKqbbE.png)
 
 In the taxonomy admin page, there are three tabs, since I have three languages for the site. But, there haven’t been any translation versions for Italian and Russian yet.
 
-![There haven’t been any translation versions for Italian and Russian yet](https://i.imgur.com/3y167X8.png)
+![There haven’t been any translation versions for Italian and Russian yet](https://imgur.elightup.com/3y167X8.png)
 
 To translate those values, first, we should make the post, taxonomy, and custom field to be translatable.
 
@@ -240,19 +240,19 @@ To translate those values, first, we should make the post, taxonomy, and custom 
 
 Go to the **Settings** submenu in **WPML** to set the translation feature for the necessary objects.
 
-![Go to the Settings submenu in WPML to set the translation feature for the necessary objects](https://i.imgur.com/cDNISPt.png)
+![Go to the Settings submenu in WPML to set the translation feature for the necessary objects](https://imgur.elightup.com/cDNISPt.png)
 
 Move to the **Custom Term Meta Translation** section to enable any term meta to be translatable, including the custom fields. Then, search for the field ID one by one, and choose the **Translate** option.
 
-![Move to the Custom Term Meta Translation section to enable any term meta to be translatable](https://i.imgur.com/zBrVxtg.png)
+![Move to the Custom Term Meta Translation section to enable any term meta to be translatable](https://imgur.elightup.com/zBrVxtg.png)
 
 Next, for the post, scroll down to the **Post Types Translation** section. It is selected to be translatable by default. But if your taxonomy is for any custom post type, just look for that post type and select the translation option.
 
-![In Post Types Translation section, the posts are selected to be translatable by default](https://i.imgur.com/PdZh0Yb.png)
+![In Post Types Translation section, the posts are selected to be translatable by default](https://imgur.elightup.com/PdZh0Yb.png)
 
 Lastly, go to the **Taxonomies Translation** section to turn on the translation feature for the taxonomy. It also lists all the taxonomies on the site, just choose the one having the custom fields you want to translate.
 
-![Go to the Taxonomies Translation section to turn on the translation feature for the taxonomy](https://i.imgur.com/BrROGid.png)
+![Go to the Taxonomies Translation section to turn on the translation feature for the taxonomy](https://imgur.elightup.com/BrROGid.png)
 
 That’s done for settings.
 
@@ -260,23 +260,23 @@ That’s done for settings.
 
 Move to the **Taxonomy Translation** submenu, then select the taxonomy from the drop-down list to translate it.
 
-![Move to the Taxonomy Translation submenu, then select the taxonomy from the drop-down list to translate it](https://i.imgur.com/lkD3F6r.png)
+![Move to the Taxonomy Translation submenu, then select the taxonomy from the drop-down list to translate it](https://imgur.elightup.com/lkD3F6r.png)
 
 WPML will list all the terms of that taxonomy on the screen, and also provide a column to add translation versions for each language. Click on the “**+**” button to add the translation.
 
-![Click on the “+” button to add the translation](https://i.imgur.com/bpK4ynf.png)
+![Click on the “+” button to add the translation](https://imgur.elightup.com/bpK4ynf.png)
 
 There will be a **Term translation** pop-up. On the screen, not only the custom fields of the taxonomy display to translate, but also all the term information such as name, slug, and description are available. Just input translations for them one by one.
 
-![The custom fields, name, slug, and description are available for adding translation](https://i.imgur.com/j75QI3G.png)
+![The custom fields, name, slug, and description are available for adding translation](https://imgur.elightup.com/j75QI3G.png)
 
 After that, in the taxonomy admin page, the number of translation versions is changed to other ones.
 
-![The number of translation versions is updated](https://i.imgur.com/3mRdhSK.png)
+![The number of translation versions is updated](https://imgur.elightup.com/3mRdhSK.png)
 
 When you click on each tab to see the translation versions, all the value input to the fields are turned to the corresponding language version automatically.
 
-![All the value input to the fields are turned to the corresponding language version automatically.](https://i.imgur.com/S9Nzmx6.png)
+![All the value input to the fields are turned to the corresponding language version automatically.](https://imgur.elightup.com/S9Nzmx6.png)
 
 ### 3.3. Displaying term meta translations on the frontend
 
@@ -284,7 +284,7 @@ Similar to displaying the custom user meta, I’ll use MB Views to display categ
 
 Go to **Meta Box** > **Views**, and create a new view to have a template to display the term meta.
 
-![Go to Meta Box > Views, and create a new view for term meta translation](https://i.imgur.com/IfE6MOu.png)
+![Go to Meta Box > Views, and create a new view for term meta translation](https://imgur.elightup.com/IfE6MOu.png)
 
 Then, add some code to the **Template** tab along with some **`div`** tags, and classes.
 
@@ -306,17 +306,17 @@ Then, add some code to the **Template** tab along with some **`div`** tags, and 
 {% endfor %}
 ```
 
-![Add some code to the Template tab along with some div tags, and classes](https://i.imgur.com/j6udYj6.png)
+![Add some code to the Template tab along with some div tags, and classes](https://imgur.elightup.com/j6udYj6.png)
 
 Also, you can add some **CSS** to style.
 
 Next, go to a post, the Categories section is displayed with the original language.
 
-![On the frontend, the Categories section is displayed with the original language](https://i.imgur.com/6K9PxJP.png)
+![On the frontend, the Categories section is displayed with the original language](https://imgur.elightup.com/6K9PxJP.png)
 
 Since we have added the language switcher on the menu, we can turn this page to another language. And, the translation version of the term meta is displayed as well.
 
-![The translation version of the term meta is displayed when you change language via the switcher](https://i.imgur.com/4bSAI9k.gif)
+![The translation version of the term meta is displayed when you change language via the switcher](https://imgur.elightup.com/4bSAI9k.gif)
 
 ### 3.4. Remark
 

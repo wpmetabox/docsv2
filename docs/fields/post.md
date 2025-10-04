@@ -15,9 +15,9 @@ If the post type is hierarchical, you can display the field as a select or check
 <Screenshots
     name="post"
     col1={[
-        ['https://i.imgur.com/jV4d0TW.png', 'The post field default interface'],
-        ['https://i.imgur.com/kWVBpgr.png', 'The post field with checkbox list interface'],
-        ['https://i.imgur.com/Vq8VNuD.png', 'The post field with radio list interface'],
+        ['https://imgur.elightup.com/jV4d0TW.png', 'The post field default interface'],
+        ['https://imgur.elightup.com/kWVBpgr.png', 'The post field with checkbox list interface'],
+        ['https://imgur.elightup.com/Vq8VNuD.png', 'The post field with radio list interface'],
     ]}
 />
 

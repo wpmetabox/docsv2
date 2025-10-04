@@ -26,11 +26,11 @@ Now, when you go to a post or page, the content in the custom fields hasn’t be
 
 Go to **Meta Box > Custom Fields** and create or configure some fields.
 
-![Configure custom fields](https://i.imgur.com/cFQO3vS.png)
+![Configure custom fields](https://imgur.elightup.com/cFQO3vS.png)
 
 Open the field that you want Rank Math to analyze its content. Then, move to the **Advanced** tab and add new **Custom settings** like this:
 
-![Add new custom settings](https://i.imgur.com/dnbaj7F.png)
+![Add new custom settings](https://imgur.elightup.com/dnbaj7F.png)
 
 No matter if the field is cloneable or not, you can add the custom settings as above. It always works.
 
@@ -38,10 +38,10 @@ No matter if the field is cloneable or not, you can add the custom settings as a
 
 Before configuring the fields as above, Rank Math just analyze the content in the Content field like this:
 
-![Rank math analyze the content in the content field](https://i.imgur.com/J5fHOMZ.png)
+![Rank math analyze the content in the content field](https://imgur.elightup.com/J5fHOMZ.png)
 
 After completing creating custom settings, you can see the content of the field displayed in the Rank Math SEO Analysis. For example, Rank Math analyzes my content in the description field and displays the information about length, focus keyword, …
 
-![The result](https://i.imgur.com/qRetDmF.png)
+![The result](https://imgur.elightup.com/qRetDmF.png)
 
 The rest of your work now is writing SEO-optimized content.

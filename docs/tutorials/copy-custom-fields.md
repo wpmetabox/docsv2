@@ -8,11 +8,11 @@ Instead of rebuilding similar custom fields in different sites, you can use the 
 
 In this practice, I already have the original page with the field group available. Then, copy custom fields from this site to the targeted site.
 
-![The original page with the field group is available, but the targeted site has not yet.](https://i.imgur.com/N0IQOgB.png)
+![The original page with the field group is available, but the targeted site has not yet.](https://imgur.elightup.com/N0IQOgB.png)
 
 As a result, we’ll have two different sites with a similar simple field group like this.
 
-![Two different sites with a similar simple field group](https://i.imgur.com/iQCmPqH.png)
+![Two different sites with a similar simple field group](https://imgur.elightup.com/iQCmPqH.png)
 
 This task will be very easy-to-do with 2 methods:
 
@@ -56,11 +56,11 @@ In there, you can also concurrently use the other extensions of Meta Box to conf
 
 I just created a simple field group for example:
 
-![I just created a simple field group](https://i.imgur.com/ucqWsSt.png)
+![I just created a simple field group](https://imgur.elightup.com/ucqWsSt.png)
 
 After publishing, the field displayed like this.
 
-![The field group displays.](https://i.imgur.com/ZwcWR4F.png)
+![The field group displays.](https://imgur.elightup.com/ZwcWR4F.png)
 
 ## 2. Copying custom fields from one site to another
 
@@ -70,7 +70,7 @@ After publishing, the field displayed like this.
 
 On the original site, in the field group editor, press the **Get PHP Code** button > **Generate** to automatically generate code.
 
-![Press the Get PHP Code button > Generate to automatically generate code of the field group](https://i.imgur.com/krezr9O.png)
+![Press the Get PHP Code button > Generate to automatically generate code of the field group](https://imgur.elightup.com/krezr9O.png)
 
 Pay attention to the code. In case you have many fields and you want cloning an individual field only, you may create the corresponding field group containing each needed field.
 
@@ -78,7 +78,7 @@ Pay attention to the code. In case you have many fields and you want cloning an 
 
 On the targeted site, go to **Appearance** > **Theme File Editor** and paste the copied code to the `functions.php` file.
 
-![Paste the copied code of the field group to the functions.php file.](https://i.imgur.com/kq3yMwE.png)
+![Paste the copied code of the field group to the functions.php file.](https://imgur.elightup.com/kq3yMwE.png)
 
 **Remarks**:
 
@@ -87,11 +87,11 @@ On the targeted site, go to **Appearance** > **Theme File Editor** and paste the
 * If there has been the other code embedded in the functions.php file and it has the same ID with the new code, only the last one can be operated.
 * You can embed code of many different field groups in one site but must ensure that the ID of each field group differs from others then all of the field groups can operate. If the field groups’ IDs are iterated, the last one will be prioritized as the 3rd remark point.
 
-![The ID of the field group is iterated](https://i.imgur.com/Zu3A52x.png)
+![The ID of the field group is iterated](https://imgur.elightup.com/Zu3A52x.png)
 
 After adding the code into the targeted site, the field group with custom fields will display similar to the original site.
 
-![On the targeted site, the field group with custom fields will display similar to the original site.](https://i.imgur.com/iQCmPqH.png)
+![On the targeted site, the field group with custom fields will display similar to the original site.](https://imgur.elightup.com/iQCmPqH.png)
 
 ### 2.2. Method 2: Using MB Builder
 
@@ -101,14 +101,14 @@ After adding the code into the targeted site, the field group with custom fields
 
 Go to the **Custom Fields** section, click the **Export** button to export the field group into a file.
 
-![Click the Export button to export the field group into a file.](https://i.imgur.com/8VJUbDL.png)
+![Click the Export button to export the field group into a file.](https://imgur.elightup.com/8VJUbDL.png)
 
 #### 2.2.2 Importing file to the targeted site
 
 On the targeted site, also move to the **Custom Fields** section, click the **Import** button to import the downloaded file.
 
-![Move to the Custom Fields section, click the Import button to import the downloaded file](https://i.imgur.com/bGLyicp.png)
+![Move to the Custom Fields section, click the Import button to import the downloaded file](https://imgur.elightup.com/bGLyicp.png)
 
 Now, you can see the field group displays in the page editor. It is the same as it was on the original site.
 
-![The field group displays on both the original site and the targeted site.](https://i.imgur.com/iQCmPqH.png)
+![The field group displays on both the original site and the targeted site.](https://imgur.elightup.com/iQCmPqH.png)

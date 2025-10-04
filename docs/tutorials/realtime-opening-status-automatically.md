@@ -9,7 +9,7 @@ Having a real-time-opening-status is a brilliant feature on this kind of site. S
 
 For the demonstration purposes, I’ll put the status with the opening hours like this:
 
-![The real-time opening status created with MB Views](https://i.imgur.com/KjMDYzA.png)
+![The real-time opening status created with MB Views](https://imgur.elightup.com/KjMDYzA.png)
 
 We already had tutorials on [how to have the fields for saving the opening hour, and how to display them on the page](https://metabox.io/series/opening-hours/). So, in this practice, we will pay heed to learn how to make the status real-time only.
 
@@ -42,19 +42,19 @@ As I said before, we need to have custom fields to save the time slots.
 
 Go to **Meta Box** > **Custom Fields**, and create a new field group for the opening time.
 
-![Go to Meta Box > Custom Fields, and create a new field group for the opening time](https://i.imgur.com/ts9uZn3.png)
+![Go to Meta Box > Custom Fields, and create a new field group for the opening time](https://imgur.elightup.com/ts9uZn3.png)
 
 We have had another tutorial on [how to have them and display the timing information in detail](https://docs.metabox.io/tutorials/display-opening-hours-restaurant-with-bricks/) as I mentioned, so you should refer to them for more details of this step and concept.
 
 I’m going to create typical and quite simple groups of fields for this practice following this structure.
 
-![The structure of simple groups of fields to save the opening time](https://i.imgur.com/uZjqGYE.png)
+![The structure of simple groups of fields to save the opening time](https://imgur.elightup.com/uZjqGYE.png)
 
 No matter what the structure of the fields, the concept of having real-time status still is the same.
 
 After creating all the fields, don’t forget to set the location to apply the field group. Then, go to the post editor to input opening hours.
 
-![Input the opening information in post editor](https://i.imgur.com/i4e9HfI.png)
+![Input the opening information in post editor](https://imgur.elightup.com/i4e9HfI.png)
 
 ## 2. Displaying the real-time status
 
@@ -68,39 +68,39 @@ First, we should have a new view to get all the time slots.
 
 Go to **Meta Box** > **Views**, and create a new view.
 
-![Go to Meta Box > Views, and create a new one](https://i.imgur.com/LrtMRug.png)
+![Go to Meta Box > Views, and create a new one](https://imgur.elightup.com/LrtMRug.png)
 
 In the **Template** tab, click on the **Insert Field** button and look for the fields where we save the timing information since they are saved in custom fields.
 
-![In the Template tab, click on the Insert Field button and look for the fields where we save the timing information](https://i.imgur.com/ZOP41o3.png)
+![In the Template tab, click on the Insert Field button and look for the fields where we save the timing information](https://imgur.elightup.com/ZOP41o3.png)
 
 The start time and end time are in cloneable groups so there will be a loop added into the template.
 
-![There will be a loop added into the template since the start time and end time are in cloneable groups](https://i.imgur.com/XUeYSYh.png)
+![There will be a loop added into the template since the start time and end time are in cloneable groups](https://imgur.elightup.com/XUeYSYh.png)
 
 When we insert the field of time slot, Meta Box will offer some options for the output.
 
-![Meta Box will offer some options for the output for the time slots](https://i.imgur.com/LjSwWtv.png)
+![Meta Box will offer some options for the output for the time slots](https://imgur.elightup.com/LjSwWtv.png)
 
 We should choose **Custom** in this case, and set the format of timing data as the below image. It is the format that will be used in JavaScript later.
 
-![You should choose Custom, and set the format of timing data](https://i.imgur.com/Jj1AuUZ.png)
+![You should choose Custom, and set the format of timing data](https://imgur.elightup.com/Jj1AuUZ.png)
 
 We will save the **Type** of this view as **Shortcode**. The generated shortcode will be used for the page template.
 
-![Set the Type of this view as Shortcode to have a shortcode which used for the page template.](https://i.imgur.com/EykyCH9.png)
+![Set the Type of this view as Shortcode to have a shortcode which used for the page template.](https://imgur.elightup.com/EykyCH9.png)
 
 Right on the place where we put the status, add a **Shortcode** element.
 
-![Add a Shortcode element](https://i.imgur.com/zyzE1Vt.png)
+![Add a Shortcode element](https://imgur.elightup.com/zyzE1Vt.png)
 
 Insert the shortcode into the box.
 
-![Insert the shortcode into the box](https://i.imgur.com/IMQtpOY.png)
+![Insert the shortcode into the box](https://imgur.elightup.com/IMQtpOY.png)
 
 Then on the page, we will see a list of time slots displayed.
 
-![A list of time slots displayed on the page](https://i.imgur.com/xG23atD.png)
+![A list of time slots displayed on the page](https://imgur.elightup.com/xG23atD.png)
 
 ### 2.2. Step 2: Converting time slots data to a JavaScript object
 
@@ -117,7 +117,7 @@ Back to the view to create some arrays to include all the time slots along with 
 {% endfor %}
 ```
 
-![Create some array to include all the time slots along with their date](https://i.imgur.com/P9WhBkz.png)
+![Create some array to include all the time slots along with their date](https://imgur.elightup.com/P9WhBkz.png)
 
 **In there**:
 
@@ -134,7 +134,7 @@ Then, add these lines of code:
 </div>
 ```
 
-![Add some code as image](https://i.imgur.com/6B8cQto.png)
+![Add some code as image](https://imgur.elightup.com/6B8cQto.png)
 
 **Explanation**:
 
@@ -186,7 +186,7 @@ TimeObject.forEach(function (elm) {
 })
 ```
 
-![Move on to the JavaScript tab, and add some code](https://i.imgur.com/WPLF9zm.png)
+![Move on to the JavaScript tab, and add some code](https://imgur.elightup.com/WPLF9zm.png)
 
 Let’s dig into each part for details.
 
@@ -271,7 +271,7 @@ This part is to regulate the context added to the `restaurant-status` HTML ID ba
 
 To style the text, you can use some CSS.
 
-![Add some CSS to style the text](https://i.imgur.com/hUDpKFO.png)
+![Add some CSS to style the text](https://imgur.elightup.com/hUDpKFO.png)
 
 That’s done. All the code is updated [here](https://github.com/wpmetabox/tutorials/tree/tutorials/realtime-restaurant-status) for your reference.
 
@@ -279,10 +279,10 @@ Now, let’s check how it works.
 
 Assuming that it’s 11:30 on Friday. Then the status will be **Close**. Because on Friday, the restaurant is open from 7 to 11 o’clock.
 
-![The status works well](https://i.imgur.com/7XY07yq.png)
+![The status works well](https://imgur.elightup.com/7XY07yq.png)
 
 If you change the time slots saved in the custom field. Then, the status turned to **Open** automatically.
 
-![The status is dynamic](https://i.imgur.com/KjMDYzA.png)
+![The status is dynamic](https://imgur.elightup.com/KjMDYzA.png)
 
 So, the status works well.

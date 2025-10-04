@@ -8,7 +8,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Let’s see how we can have it with MB Views from Meta Box.
 
-![Display before-and-after images with MB Views](https://i.imgur.com/KFWd6zk.gif)
+![Display before-and-after images with MB Views](https://imgur.elightup.com/KFWd6zk.gif)
 
 ## Video version
 
@@ -42,27 +42,27 @@ As I mentioned, you can add the images for posts in a custom post type. Then, yo
 
 For illustration purposes of this practice only, I’ll set up fields to upload the before and after images, also with a **Text** field to add extra information to the images like this:
 
-![Set up fields to upload the before and after images, also fields to add related content](https://i.imgur.com/QUbhaix.png)
+![Set up fields to upload the before and after images, also fields to add related content](https://imgur.elightup.com/QUbhaix.png)
 
 You absolutely can add additional fields for any related details as you want.
 
 Now, go to **Meta Box** > **Custom Fields** and create a new field group.
 
-![Create a new field group](https://i.imgur.com/EXbxnSV.png)
+![Create a new field group](https://imgur.elightup.com/EXbxnSV.png)
 
 Just add fields one by one corresponding to the kind of content.
 
 For the before image, as well as the after image later, choose the **Single Image** field type.
 
-![For the before image, as well as the after image later, choose the Single Image field type.](https://i.imgur.com/2aSdeHr.png)
+![For the before image, as well as the after image later, choose the Single Image field type.](https://imgur.elightup.com/2aSdeHr.png)
 
 After creating all the fields, move to the **Settings** tab, set the **Location** as **Post** to apply the fields to it.
 
-![Set the Location as Post to apply the fields to it](https://i.imgur.com/Z7qarnG.png)
+![Set the Location as Post to apply the fields to it](https://imgur.elightup.com/Z7qarnG.png)
 
 Now, in any post editor, you will see the custom fields displayed.
 
-![The custom fields displayed in the post editor](https://i.imgur.com/vTKtvdV.png)
+![The custom fields displayed in the post editor](https://imgur.elightup.com/vTKtvdV.png)
 
 Just input content there.
 
@@ -72,27 +72,27 @@ In this step, we’ll create a template to just display the before and after ima
 
 Now, head over to **Meta Box** > **Views**, and create a new template specifically for this purpose.
 
-![Create a new template to display the before and after images](https://i.imgur.com/SPHbTfT.png)
+![Create a new template to display the before and after images](https://imgur.elightup.com/SPHbTfT.png)
 
 With MB Views, you can add some lines of code to the **Template** tab, or insert fields into it by clicking the **Insert Field** button, and choose any fields on the right sidebar to get data from them. It will automatically generate code to the template.
 
-![Insert field into the Template tab](https://i.imgur.com/oPRZ2MM.png)
+![Insert field into the Template tab](https://imgur.elightup.com/oPRZ2MM.png)
 
 With the images, you can select a suitable image size to display, as well as the output.
 
-![Select a suitable image size to display, as well as the output for the images](https://i.imgur.com/AWYDSY8.png)
+![Select a suitable image size to display, as well as the output for the images](https://imgur.elightup.com/AWYDSY8.png)
 
 After inserting all the fields into the template, move to the **Settings** section to set the location where we want to display this template. In this case, the concept is that any post which has the before-after images will have them on the post content. So, I set the type of the view as **Singular**, and the location as **Post**.
 
-![Set location as Post to apply the template to it](https://i.imgur.com/Ai2ETyP.png)
+![Set location as Post to apply the template to it](https://imgur.elightup.com/Ai2ETyP.png)
 
 And, choose a place in the post.
 
-![Choose a place in the post](https://i.imgur.com/kK2DBGt.png)
+![Choose a place in the post](https://imgur.elightup.com/kK2DBGt.png)
 
 Now, on the frontend, you’ll see the before and after images along with their related information. They will be listed one by one.
 
-![The before and after images along with their related information will be listed one by one](https://i.imgur.com/fipKo9q.png)
+![The before and after images along with their related information will be listed one by one](https://imgur.elightup.com/fipKo9q.png)
 
 ## 3. Turning the images to slidable
 
@@ -100,11 +100,11 @@ Styling the before and after images is the key to making the comparison stand ou
 
 Back to the created template with **MB Views**, include some div tags, classes, also HTML ID for each element to make the styling process easier.
 
-![Include some div tags, classes, also HTML ID for each element to make the styling process easier](https://i.imgur.com/f4lY22n.png)
+![Include some div tags, classes, also HTML ID for each element to make the styling process easier](https://imgur.elightup.com/f4lY22n.png)
 
 You can notice that these IDs will be used in JavaScript later to make the images interactive.
 
-![The IDs will be used in JavaScript later to make the images interactive.](https://i.imgur.com/C5k6UBL.png)
+![The IDs will be used in JavaScript later to make the images interactive.](https://imgur.elightup.com/C5k6UBL.png)
 
 ### 3.1 Creating a middle bar and navigation arrows
 
@@ -119,7 +119,7 @@ Still in the **Template** tab, add the following code to have a middle bar and t
 </div>
 ```
 
-![Add code to have a middle bar and the arrows](https://i.imgur.com/erud0lT.png)
+![Add code to have a middle bar and the arrows](https://imgur.elightup.com/erud0lT.png)
 
 ### 3.2 Styling the image slider and related content
 
@@ -222,7 +222,7 @@ Next to the **CSS** tab, add these lines of code to beautify the display of befo
 }
 ```
 
-![Add code to the CSS tab to beautify the display of before and after images, as well as the related content.](https://i.imgur.com/PGNVzyi.png)
+![Add code to the CSS tab to beautify the display of before and after images, as well as the related content.](https://imgur.elightup.com/PGNVzyi.png)
 
 ### 3.3 Running the slider
 
@@ -286,7 +286,7 @@ function pauseEvent(e) {
 }
 ```
 
-![Include some script to the Javascript tab for the advanced effect of sliders.](https://i.imgur.com/ee5j1JC.png)
+![Include some script to the Javascript tab for the advanced effect of sliders.](https://imgur.elightup.com/ee5j1JC.png)
 
 Let’s break down one by one part:
 
@@ -401,6 +401,6 @@ That's all for the code. All the code is updated on [Github](https://github.com/
 Move on to a post, let's see the final result! When we drag the middle bar, the before image will be shown less or more based on the bar position.
 
 
-![When we drag the middle bar, the before image will be shown less or more based on the bar position.](https://i.imgur.com/KFWd6zk.gif)
+![When we drag the middle bar, the before image will be shown less or more based on the bar position.](https://imgur.elightup.com/KFWd6zk.gif)
 
 If you're interested in exploring more ways to display images dynamically, you might find this tutorial helpful: [Displaying images from cloneable fields](https://docs.metabox.io/tutorials/display-images-cloneable-fields-mb-views/).

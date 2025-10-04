@@ -8,7 +8,7 @@ Let’s show products with specific criteria, for example, which are on sale on 
 
 Here is an example archive page that only shows the dishes on sale.
 
-![Example of an archive page displays products on sale](https://i.imgur.com/1iHSC62.png)
+![Example of an archive page displays products on sale](https://imgur.elightup.com/1iHSC62.png)
 
 ## Video Version
 
@@ -34,81 +34,81 @@ In this practice, we need these tools:
 Go to **Meta Box** > **Post Types** > **Add New** to create a new post type for your products. My post type’s name is **Cuisines**.
 
 
-![Create a new custom post type in Meta Box](https://i.imgur.com/8uaBTO3.png)
+![Create a new custom post type in Meta Box](https://imgur.elightup.com/8uaBTO3.png)
 
 ## 2. Creating custom fields
 
 In this practice, I will create two fields. As mentioned before, the value stored in these two fields will be used as a condition to determine which dishes will be shown.
 
-![Created custom fields for extra information of products](https://i.imgur.com/o66Pc7f.png)
+![Created custom fields for extra information of products](https://imgur.elightup.com/o66Pc7f.png)
 
 You can also add some other custom fields to save more information about your product and display them on the page in the same way.
 
 To easily identify which products have promotions, you can set both of these fields displayed as admin columns like this.
 
-![Show created fields as admin columns](https://i.imgur.com/8fmXlwX.png)
+![Show created fields as admin columns](https://imgur.elightup.com/8fmXlwX.png)
 
 To do it, just check this box in both fields’ settings.
 
-![Set the custom fields as show as admin column](https://i.imgur.com/edBxiFs.png)
+![Set the custom fields as show as admin column](https://imgur.elightup.com/edBxiFs.png)
 
 You’ll have this setting only when you enable the [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) extension.
 
 After creating all the fields, move to the **Settings** tab > set **Location** as **Post type** > select **Cuisines** to apply these fields to it.
 
-![Set the location for the created fields](https://i.imgur.com/3H3TSUq.png)
+![Set the location for the created fields](https://imgur.elightup.com/3H3TSUq.png)
 
 When creating a new post in **Cuisines** post type, you’ll see all the created custom fields.
 
-![All the created custom fields appear in the post editor](https://i.imgur.com/vK1p3lU.png)
+![All the created custom fields appear in the post editor](https://imgur.elightup.com/vK1p3lU.png)
 
 ## 3. Displaying the products information
 
 We’ll not get posts in this step. Just display information about a product, that is from a post. Go to **Templates** > **Add News** to create a template for it.
 
-![Create a template](https://i.imgur.com/FzPxe82.png)
+![Create a template](https://imgur.elightup.com/FzPxe82.png)
 
 We should choose the template as a **Loop Item** for easier getting posts in the next step.
 
-![Choose the template as a Loop Item for easier getting posts in the next step](https://i.imgur.com/hrxKD2H.png)
+![Choose the template as a Loop Item for easier getting posts in the next step](https://imgur.elightup.com/hrxKD2H.png)
 
 Remember to set the preview for the template.
 
-![Set the preview for the template](https://i.imgur.com/PaYAlW4.png)
+![Set the preview for the template](https://imgur.elightup.com/PaYAlW4.png)
 
-![Set the preview for the template](https://i.imgur.com/PdW23UK.png)
+![Set the preview for the template](https://imgur.elightup.com/PdW23UK.png)
 
 First, add a **Section** element with the one-column layout to contain all the information about a dish.
 
-![Add a Section element to contain all the information about a dish](https://i.imgur.com/NTV3T6I.png)
+![Add a Section element to contain all the information about a dish](https://imgur.elightup.com/NTV3T6I.png)
 
 Now, add some elements to display the dish’s information.
 
 For the image of the dish, choose the **Featured Image** element.
 
-![Choose the Featured Image element to display the image of the dish](https://i.imgur.com/KLqtszz.png)
+![Choose the Featured Image element to display the image of the dish](https://imgur.elightup.com/KLqtszz.png)
 
 To get the dish’s name, select the **Post Title** element.
 
-![Select the Post Title element to get the dish’s name,](https://i.imgur.com/cIICNX4.png)
+![Select the Post Title element to get the dish’s name,](https://imgur.elightup.com/cIICNX4.png)
 
 Next, choose an **Insert Section** element to cover the price, including the original price and the promotional price.
 
 For the original price information, choose the **Text Editor** element. Since this information is saved in custom fields created by Meta Box, use the **Dynamics Tags** and find the **Meta Box Field** in the **Post** section, then choose the corresponding fields like in the image below.
 
-![Add a Text Basic element and insert dynamic data from the field](https://i.imgur.com/zSjsqln.gif)
+![Add a Text Basic element and insert dynamic data from the field](https://imgur.elightup.com/zSjsqln.gif)
 
 As you can see in the gif above, a number will be displayed without a unit of pricing. To have the unit, go to the **Advanced** section, and add the currency unit.
 
-![Add the currency unit](https://i.imgur.com/rmRtv5Q.png)
+![Add the currency unit](https://imgur.elightup.com/rmRtv5Q.png)
 
 For the promotional price information, do likewise.
 
-![Get the promotional price information](https://i.imgur.com/iDndhkR.png)
+![Get the promotional price information](https://imgur.elightup.com/iDndhkR.png)
 
 To get the last piece of information - the dish’s description, select the **Post Content** element.
 
-![Select the Post Content element to get the dish’s description](https://i.imgur.com/zDflpft.png)
+![Select the Post Content element to get the dish’s description](https://imgur.elightup.com/zDflpft.png)
 
 We’ve just finished getting all of the information about the dish. You can style each element on your own.
 
@@ -120,15 +120,15 @@ Let’s create a new page for displaying all the dishes which are on sale. Just 
 
 To get all of the posts to display on the page, add the **Loop Grid** element.
 
-![To get all of the posts to display on the page, add the Loop Grid element.](https://i.imgur.com/Allp9z9.png)
+![To get all of the posts to display on the page, add the Loop Grid element.](https://imgur.elightup.com/Allp9z9.png)
 
 In its **Layout** settings, choose the created template. So, you can see that some blog posts will be displayed.
 
-![The display of some default blog posts](https://i.imgur.com/zZ5jEY6.png)
+![The display of some default blog posts](https://imgur.elightup.com/zZ5jEY6.png)
 
 To replace them with your products, go to the **Query** section, and choose **Source** as your product’s post type. Then, all of the posts in that post type display.
 
-![Go to the Query section, and choose Source as your product’s post type.](https://i.imgur.com/bfvoasl.png)
+![Go to the Query section, and choose Source as your product’s post type.](https://imgur.elightup.com/bfvoasl.png)
 
 ### 4.2 Setting conditions following the criteria
 
@@ -136,15 +136,15 @@ I just want to display which products are currently on sale. Thus, we need a con
 
 You can add the code to the theme’s file directly. In this case, I recommend using the third party plugin - **Code Snippets**. It helps to create the code without accessing the theme’s file. You can install it directly from [wordpress.org](https://wordpress.org/plugins/code-snippets/).
 
-![Use Code Snippets](https://i.imgur.com/1ASOgt7.png)
+![Use Code Snippets](https://imgur.elightup.com/1ASOgt7.png)
 
 To create the custom query, go to **Code Snippets** and add new.
 
-![Go to the Query section, and choose Source as your product’s post type.](https://i.imgur.com/Ik2liYR.png)
+![Go to the Query section, and choose Source as your product’s post type.](https://imgur.elightup.com/Ik2liYR.png)
 
 Then, add some code to the box to set the condition.
 
-![To create the custom query, go to Code Snippets and add new.](https://i.imgur.com/swUB3UF.png)
+![To create the custom query, go to Code Snippets and add new.](https://imgur.elightup.com/swUB3UF.png)
 
 ```css
 /**
@@ -189,7 +189,7 @@ add_action( 'elementor/query/my_custom_filter', 'my_query_by_post_meta' );
 Let’s get through the code in more detail!
 
 
-![This code is to declare that we’ll query the post type that has this slug - Cuisine.](https://i.imgur.com/fVVYEs5.png)
+![This code is to declare that we’ll query the post type that has this slug - Cuisine.](https://imgur.elightup.com/fVVYEs5.png)
 
 ```
 function my_query_by_post_types( $query ) {
@@ -202,7 +202,7 @@ This code is to declare that we’ll query the post type that has this slug - **
 
 `'my_custom_filter'` is the name of the custom query, you can name it as your own. It’ll be used for the following part.
 
-![The line of code is the mentioned condition.](https://i.imgur.com/lSbMkla.png)
+![The line of code is the mentioned condition.](https://imgur.elightup.com/lSbMkla.png)
 
 ```
 // Append our meta query
@@ -218,8 +218,8 @@ All of this code is available on [GitHub](https://github.com/wpmetabox/tutorials
 
 After adding the code snippet, go back to editing the template of the page. In the **Loop Grid**'s settings >  **Query** > **Query ID** > insert the name of the custom query you created to apply the condition that we want.
 
-![In the Loop Grid's settings >  Query > Query ID > insert the name of the custom query to apply the condition that we want.](https://i.imgur.com/rBd2oqL.gif)
+![In the Loop Grid's settings >  Query > Query ID > insert the name of the custom query to apply the condition that we want.](https://imgur.elightup.com/rBd2oqL.gif)
 
 Back to the frontend, you can see all of the dishes along with the information that we’re looking for.
 
-![The final look of displaying post with specific criteria](https://i.imgur.com/V6m7AZn.png)
+![The final look of displaying post with specific criteria](https://imgur.elightup.com/V6m7AZn.png)

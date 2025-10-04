@@ -10,7 +10,7 @@ Then, it’s quite easy if you enter data into custom fields and use **MB Views*
 
 I have a post along with a bar chart as an example here:
 
-![An example of a chart in post](https://i.imgur.com/InoMsca.png)
+![An example of a chart in post](https://imgur.elightup.com/InoMsca.png)
 
 ## Video version
 
@@ -22,7 +22,7 @@ Let me start by outlining the general concept to provide you with an overview.
 
 First, we’ll use a custom field to regulate the type of chart, such as line, bar, or pie. All the data including items, statistics, and colors will be stored in custom fields as well.
 
-![The type of chart and other data will be stored in custom fields](https://i.imgur.com/Whm6W0G.png)
+![The type of chart and other data will be stored in custom fields](https://imgur.elightup.com/Whm6W0G.png)
 
 Using custom fields helps your content be dynamic. So, your chart will not be affected any time you want to update the data.
 
@@ -30,7 +30,7 @@ We will apply all the fields to posts, so that you can add charts to every post 
 
 Then, we use the MB Views with a bit of JavaScript to display the chart on post.
 
-![Use the MB Views with a bit of JavaScript to display the chart on post](https://i.imgur.com/JIzI5K0.png)
+![Use the MB Views with a bit of JavaScript to display the chart on post](https://imgur.elightup.com/JIzI5K0.png)
 
 So, these are some tools we need to have the charts:
 
@@ -53,11 +53,11 @@ For demonstration purposes, I will add the chart to blog posts. So, I create cus
 
 These are some fields that I created as an example.
 
-![Some fields I created for chart](https://i.imgur.com/BuBwsRV.png)
+![Some fields I created for chart](https://imgur.elightup.com/BuBwsRV.png)
 
 Go to **Meta Box** > **Custom Fields**, and create a new field group.
 
-![Go to Meta Box > Custom Fields, and create a new field group](https://i.imgur.com/AEepkZS.png)
+![Go to Meta Box > Custom Fields, and create a new field group](https://imgur.elightup.com/AEepkZS.png)
 
 Then, add custom fields following the below structure and conditions:
 
@@ -75,26 +75,26 @@ I’ll explain the logic and how they work in detail.
 
 Since there are several types of charts, you should have a field where you can select a style for the chart in each post. Therefore, we’ll add a **Select** field, and input the types with their label and value. The values of the options will be used to set the rule for the fields of the color.
 
-![Add a Select field, and input the types with their label and value.](https://i.imgur.com/QoWqEN9.png)
+![Add a Select field, and input the types with their label and value.](https://imgur.elightup.com/QoWqEN9.png)
 
 Next, the field for the chart title basically is text.
 
-![Add a Text field for the chart title](https://i.imgur.com/QVpCt0e.png)
+![Add a Text field for the chart title](https://imgur.elightup.com/QVpCt0e.png)
 
 For the chart data, every chart has the same structure of data as the X-axis and Y-axis. But, they have a difference in color options. So I made some conditional logic to specify which fields will be displayed to input data based on the chosen type of the chart.
 
 For the line chart, there is only one line to illustrate the growth trend. So, besides the keys and values of the object, we need to have a field to pick the color for that line. I use a **Color Picker** field for it.
 
-![Use the Color Picker field type for the color of the line](https://i.imgur.com/lKC45E3.png)
+![Use the Color Picker field type for the color of the line](https://imgur.elightup.com/lKC45E3.png)
 
 This field displays only when the type we chose is **Line**. To set this condition, move to the **Advanced** tab of the field, you’ll see the **Conditional logic** section. It’s available when you have the [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/) extension activated.
 
-![Move to the Advanced tab of the field, and find out the Conditional logic section to set the condition](https://i.imgur.com/28snCYF.png)
+![Move to the Advanced tab of the field, and find out the Conditional logic section to set the condition](https://imgur.elightup.com/28snCYF.png)
 
 Based on the rule I said before, we should set the key of the rule as the ID of the select field.
 Then, the value should be the value of the line.
 
-![Set the key of the rule as the ID of the select field, and the value should be the value of the line](https://i.imgur.com/JpzwGH3.png)
+![Set the key of the rule as the ID of the select field, and the value should be the value of the line](https://imgur.elightup.com/JpzwGH3.png)
 
 This means the **Line Color** field displays only when users set the Select field above as the **Line** option. For more details and advanced on setting conditions with MB Conditional Logic, you can refer to [its doc](https://docs.metabox.io/extensions/meta-box-conditional-logic/).
 
@@ -102,51 +102,51 @@ The data will be set in a couple of fields including the X-axis and the Y-axis. 
 
 Thus, add a **Group** field to group them in pairs first.
 
-![Add a Group field for the couple of fields including the X-axis and the Y-axis](https://i.imgur.com/TgRCOGT.png)
+![Add a Group field for the couple of fields including the X-axis and the Y-axis](https://imgur.elightup.com/TgRCOGT.png)
 
 Inside this group, add two subfields for the key and value, which also means the X and Y axes.
 
 For the key on the X-axis, the data can be years, time periods, a name, or so on. So, you should use a **Text** field.
 
-![The subfield for the X-axis is Text type](https://i.imgur.com/8nkDw5N.png)
+![The subfield for the X-axis is Text type](https://imgur.elightup.com/8nkDw5N.png)
 
 To have the key as columns, we should change the size of their columns in the **Columns** option. Assume that the whole line width will be set as 12 grids, so choose a number from 1 to 12 to indicate the size of the field.
 
-![Change the size of the field in the Columns option](https://i.imgur.com/MZkAeJ5.png)
+![Change the size of the field in the Columns option](https://imgur.elightup.com/MZkAeJ5.png)
 
 Data on the Y-axis is simpler. It’s always numerical. So, add a **Number** field for the second subfield. You also can set the column for it similar to the X-axis.
 
-![Add a Number field for the data on the Y-axis](https://i.imgur.com/6HIrH9F.png)
+![Add a Number field for the data on the Y-axis](https://imgur.elightup.com/6HIrH9F.png)
 
 By the way, when the chart is set as another type, there will be another field displayed besides the fields for the X and Y axes. It’s to set the color of each item. So, add another subfield as **Color Picker** for it.
 
-![Add another subfield as Color Picker for the color of each item](https://i.imgur.com/nzFx2Sr.png)
+![Add another subfield as Color Picker for the color of each item](https://imgur.elightup.com/nzFx2Sr.png)
 
 This field displays only when the chart is in the type as pie or bar, so move to the **Advanced** tab and add a condition as well.
 
 The key also is the select field since the rule is based on it. I’ll use the `!=` operation, which means that ‘is not’ or ‘not equal’. Then, enter the value of the line type.
 
-![Set condition for displaying the Color field](https://i.imgur.com/X78bD1e.png)
+![Set condition for displaying the Color field](https://imgur.elightup.com/X78bD1e.png)
 
 This condition is that the **Color** field will display whenever the first option is not chosen.
 
 There will be several items, also pairs of statistics on the chart. So, go back to the settings of the group, and set it as cloneable to add more than one pair of data.
 
-![Set group as cloneable to add more than one pai of data](https://i.imgur.com/w1T6R0N.png)
+![Set group as cloneable to add more than one pai of data](https://imgur.elightup.com/w1T6R0N.png)
 
 After having all the fields with reasonable settings, move to the **Settings** tab. As I said about purpose, I want to display the charts in posts. So, set the **Location** as **Post** to apply those fields to it. In other cases, you can set it in any post type, or page as well.
 
-![Move to the Settings tab, set the Location as Post to apply those fields to it](https://i.imgur.com/8uBeLj5.png)
+![Move to the Settings tab, set the Location as Post to apply those fields to it](https://imgur.elightup.com/8uBeLj5.png)
 
 Now, in any post editor, you will see the custom fields displayed.
 
 When you set the chart type as Line, the color field will display. Just input data for it.
 
-![In the post editor, the field displayed exactly follow settings and rule](https://i.imgur.com/pPhY057.png)
+![In the post editor, the field displayed exactly follow settings and rule](https://imgur.elightup.com/pPhY057.png)
 
 In another post, when you try another type of chart, you will see that the color field for the line disappears. And the color for each item is displayed instead.
 
-![If the type is bar or pie, the color for each item is displayed instead](https://i.imgur.com/o0zrnsQ.png)
+![If the type is bar or pie, the color for each item is displayed instead](https://imgur.elightup.com/o0zrnsQ.png)
 
 So, the conditions work well.
 
@@ -156,41 +156,41 @@ Now, move on to visualize this data in a chart.
 
 Head over to **Meta Box** > **Views**, and create a new template for displaying the charts.
 
-![Go to Meta Box > Views, and create a new template for displaying the charts](https://i.imgur.com/iMc0pj7.png)
+![Go to Meta Box > Views, and create a new template for displaying the charts](https://imgur.elightup.com/iMc0pj7.png)
 
 With MB Views, you can add code to the **Template** tab, or insert fields into it by clicking this button, and choosing any fields on the right sidebar to get data from them.
 
-![You can add code directly in the Template tab or insert fields from the list on the right sidebar](https://i.imgur.com/7ijinlq.png)
+![You can add code directly in the Template tab or insert fields from the list on the right sidebar](https://imgur.elightup.com/7ijinlq.png)
 
 First, we should get data from the fields one by one.
 
-![Insert fields one by one](https://i.imgur.com/b04IhyG.gif)
+![Insert fields one by one](https://imgur.elightup.com/b04IhyG.gif)
 
 Categories is a cloneable group, so it will automatically generate a loop when you click on it to look for the subfield.
 
-![There’s a loop displayed when we insert the cloneable group](https://i.imgur.com/n40xSKF.png)
+![There’s a loop displayed when we insert the cloneable group](https://imgur.elightup.com/n40xSKF.png)
 
 Just insert the subfield inside the group to get all the clone data.
 
-![Insert subfields inside the group to get all the clone data](https://i.imgur.com/HGuATl9.png)
+![Insert subfields inside the group to get all the clone data](https://imgur.elightup.com/HGuATl9.png)
 
 The template is now in the simplest version which is just to get data. We will set the format of the chart later.
 
 Move to the settings of this template. Since the chart can be anywhere inside the article, I keep the template as a **Shortcode**, then the writer can put it everywhere in the post.
 
-![Keep the type of the template as shortcode to put it everywhere in the post](https://i.imgur.com/DnJS5ut.png)
+![Keep the type of the template as shortcode to put it everywhere in the post](https://imgur.elightup.com/DnJS5ut.png)
 
 After publishing this template, you can see the shortcode is generated. Just copy it.
 
-![Copy the shortcode generated](https://i.imgur.com/wl50f5r.png)
+![Copy the shortcode generated](https://imgur.elightup.com/wl50f5r.png)
 
 Now, go to any post, and paste the shortcode to any place.
 
-![Paste the shortcode to any place you want](https://i.imgur.com/bOoTHXh.png)
+![Paste the shortcode to any place you want](https://imgur.elightup.com/bOoTHXh.png)
 
 Then, on the frontend, you can see all the data of the chart displayed but just in text.
 
-![All the data of the chart displayed but just in text](https://i.imgur.com/bGAfegc.png)
+![All the data of the chart displayed but just in text](https://imgur.elightup.com/bGAfegc.png)
 
 Let’s move on to convert them all to the chart format.
 
@@ -206,7 +206,7 @@ We will use JavaScript to have a beautiful format of the chart, so add this code
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 ```
 
-![Declare the JavaScript library](https://i.imgur.com/xUYHdnf.png)
+![Declare the JavaScript library](https://imgur.elightup.com/xUYHdnf.png)
 
 Next, we will modify the code a little bit.
 
@@ -223,7 +223,7 @@ We should create some variables, and transfer the values from custom fields to t
 {% set line_color = post.line_color %}
 ```
 
-![Create some variables, and transfer the values get from custom fields to those variables.](https://i.imgur.com/lTjZxaw.gif)
+![Create some variables, and transfer the values get from custom fields to those variables.](https://imgur.elightup.com/lTjZxaw.gif)
 
 The `key`, `value`, and `color` variables are set as empty arrays since they will include the values from the fields in a cloneable group, which is obtained by the loop generated.
 
@@ -237,7 +237,7 @@ Also, we should modify inside the loop to transfer all the values to the arrays.
 {% endfor %}
 ```
 
-![Modify inside the loop to transfer all the values to the arrays](https://i.imgur.com/cQOHxyB.png)
+![Modify inside the loop to transfer all the values to the arrays](https://imgur.elightup.com/cQOHxyB.png)
 
 ### 3.2. Assigning values to attributes of HTML tag
 
@@ -256,7 +256,7 @@ style="width:100%;max-width:600px">
 </canvas>
 ```
 
-![Assign values to attributes of canvas element](https://i.imgur.com/oXzmZZE.png)
+![Assign values to attributes of canvas element](https://imgur.elightup.com/oXzmZZE.png)
 
 **Specifically**:
 
@@ -305,7 +305,7 @@ new Chart("myChart", {
 });
 ```
 
-![Go to the JavaScript tab, and add some code](https://i.imgur.com/33Pz6OZ.png)
+![Go to the JavaScript tab, and add some code](https://imgur.elightup.com/33Pz6OZ.png)
 
 Let’s break down one by one part:
 
@@ -383,11 +383,11 @@ After updating the template, go to a post to see how it works.
 
 The chart displayed beautifully based on the statistics and colors I input in custom fields.
 
-![The chart displayed beautifully based on the statistics and colors I input in custom fields](https://i.imgur.com/NjWD99M.png)
+![The chart displayed beautifully based on the statistics and colors I input in custom fields](https://imgur.elightup.com/NjWD99M.png)
 
 In another post, the bar chart and pie chart are also shown beautifully. And, you also can see the legend of the pie chart we set in JavaScript.
 
-![The pie chart also display well along with the legend](https://i.imgur.com/CusYQjH.png)
+![The pie chart also display well along with the legend](https://imgur.elightup.com/CusYQjH.png)
 
 So, we’ve done creating charts for posts.
 
@@ -397,7 +397,7 @@ Not only custom fields in posts, you also can **save data for a chart in a setti
 
 Create a new settings page as usual, and change the location of the created fields to the settings page.
 
-![Create a new settings page as usual, and change the location of the created fields to the settings page](https://i.imgur.com/L5643ar.png)
+![Create a new settings page as usual, and change the location of the created fields to the settings page](https://imgur.elightup.com/L5643ar.png)
 
 Then, input some data to the field in the settings page as well to have some real statistics on the chart in the result later.
 
@@ -407,23 +407,23 @@ The code to display the chart will be exactly the same as previously. The differ
 
 Insert fields from the settings page to get data from them.
 
-![Insert fields from the settings page to get data from them](https://i.imgur.com/6kaGxaz.gif)
+![Insert fields from the settings page to get data from them](https://imgur.elightup.com/6kaGxaz.gif)
 
 It’s easy to see that the prefix of fields is `site.chart` with the `chart` as the ID of the settings page we created. It’s different from the prefix of fields from posts: `post`.
 
-![The prefix of fields from settings page is site.chart](https://i.imgur.com/h430Wp4.png)
+![The prefix of fields from settings page is site.chart](https://imgur.elightup.com/h430Wp4.png)
 
 So, just change all the prefixes to be the same with the settings page.
 
-![Change all the prefixes to be the same with the settings page](https://i.imgur.com/wUq7Xsy.png)
+![Change all the prefixes to be the same with the settings page](https://imgur.elightup.com/wUq7Xsy.png)
 
 About the location of the template, you can keep it as a shortcode, then insert the shortcode anywhere on your website, or can regulate an exact place directly as in the below image:
 
-![You can regulate an exact place directly](https://i.imgur.com/WmiaiLm.png)
+![You can regulate an exact place directly](https://imgur.elightup.com/WmiaiLm.png)
 
 Then, on the frontend, the chart will display well.
 
-![The chart displayed well on the frontend](https://i.imgur.com/evIHyMw.png)
+![The chart displayed well on the frontend](https://imgur.elightup.com/evIHyMw.png)
 
 If you want to change the type or any data of the chart, go back to the settings page and change the content in the custom fields. The chart will turn into a new one as well.
 

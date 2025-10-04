@@ -8,7 +8,7 @@ In the previous posts of the [Creating a Team Members Page](https://metabox.io/s
 
 This page is an example. It shows all your team members and some of their information.
 
-![the page shows all members in the team and their information](https://i.imgur.com/58yX6YS.png)
+![the page shows all members in the team and their information](https://imgur.elightup.com/58yX6YS.png)
 
 ## Video version
 
@@ -29,11 +29,11 @@ These are some tools we need in this practice:
 
 Go to **Meta Box** > **Post Types** > **Add New** to create a new one for the team members.
 
-![go to Meta Box, Post Types to create a new one](https://i.imgur.com/aAiS9X9.png)
+![go to Meta Box, Post Types to create a new one](https://imgur.elightup.com/aAiS9X9.png)
 
 After publishing, the created custom post type will be displayed in the admin dashboard.
 
-![the created custom post type displays in the admin dashboard](https://i.imgur.com/MAl6eZ5.png)
+![the created custom post type displays in the admin dashboard](https://imgur.elightup.com/MAl6eZ5.png)
 
 ## 2. Creating custom fields
 
@@ -41,33 +41,33 @@ As mentioned before, we’ll create some custom fields to save some common infor
 
 Go to **Meta Box** > **Custom Fields** > **Add New** to create a new field group.
 
-![go to Meta Box, Custom Fields to create a new field group](https://i.imgur.com/nOgUCXR.png)
+![go to Meta Box, Custom Fields to create a new field group](https://imgur.elightup.com/nOgUCXR.png)
 
 These are the fields that I created:
 
-![Some custom fields created to save the members information](https://i.imgur.com/gIQdxIP.png)
+![Some custom fields created to save the members information](https://imgur.elightup.com/gIQdxIP.png)
 
 For the position, use the **Select** field which provides some options to choose from.
 
-![For the position, use the Select field to have some options to choose from](https://i.imgur.com/EFGc88D.png)
+![For the position, use the Select field to have some options to choose from](https://imgur.elightup.com/EFGc88D.png)
 
 Then, fill in those options into the **Choices** box.
 
-![Fill in options into the Choices box for the positions of members](https://i.imgur.com/VhPCUQ8.png)
+![Fill in options into the Choices box for the positions of members](https://imgur.elightup.com/VhPCUQ8.png)
 
 For other information such as Facebook, Instagram, and Mail, you can choose the **URL** field to save the link for those social networks.
 
-![Choose the URL field to save the link for those social networks](https://i.imgur.com/dtIqS96.png)
+![Choose the URL field to save the link for those social networks](https://imgur.elightup.com/dtIqS96.png)
 
 Besides, you can use other field types to save other kinds of members’ information as you want.
 
 After creating all the fields, move to the **Settings** tab, choose the **Location** as **Post Type**, and select **Team Member** to apply these fields to it.
 
-![Set the Location for the field group as Post Type, and select Team Member to apply these fields to it](https://i.imgur.com/PxLpcem.png)
+![Set the Location for the field group as Post Type, and select Team Member to apply these fields to it](https://imgur.elightup.com/PxLpcem.png)
 
 Go to the post editor, and you will see the created custom fields.
 
-![the created custom fields display in the post editor](https://i.imgur.com/lUMC2RK.png)
+![the created custom fields display in the post editor](https://imgur.elightup.com/lUMC2RK.png)
 
 Just input information for your members.
 
@@ -77,93 +77,93 @@ To get information of each member from posts, we should create a query card firs
 
 Go to **Kadence Blocks** > **All Query Cards** and create a new one.
 
-![Go to Kadence Blocks > All Query Cards and create a new query card](https://i.imgur.com/HV7wois.png)
+![Go to Kadence Blocks > All Query Cards and create a new query card](https://imgur.elightup.com/HV7wois.png)
 
-![set the name of the query loop card](https://i.imgur.com/pRO7pPx.png)
+![set the name of the query loop card](https://imgur.elightup.com/pRO7pPx.png)
 
 At the first time, you will see the card display data from blog posts by default. Go to the right sidebar, and set the preview as the post type that we created.
 
-![Set the preview of the query card as the post type that we created](https://i.imgur.com/Q1Xgg7s.png)
+![Set the preview of the query card as the post type that we created](https://imgur.elightup.com/Q1Xgg7s.png)
 
 The preview will change, but it’s just changing in the preview, not querying any data.
 
 I’ll design the cards for each person with two columns inside. So add a **Row Layout** block and choose the layout for the content in the card.
 
-![add a Row Layout block and choose the layout for the content in the card](https://i.imgur.com/QSMjUGQ.png)
+![add a Row Layout block and choose the layout for the content in the card](https://imgur.elightup.com/QSMjUGQ.png)
 
-![Open the structure of block to easily see the structure of content](https://i.imgur.com/U4s11te.png)
+![Open the structure of block to easily see the structure of content](https://imgur.elightup.com/U4s11te.png)
 
 You can remove the default blocks inside the query card which you don’t use.
 
-![remove the default blocks which you don’t use](https://i.imgur.com/soVXA3I.png)
+![remove the default blocks which you don’t use](https://imgur.elightup.com/soVXA3I.png)
 
 In the first column of the added Row Layout block, add the **Advanced Image** block for the member avatar.
 
-![In the first column, add the Advanced Image block for the member avatar.](https://i.imgur.com/er2ONY6.png)
+![In the first column, add the Advanced Image block for the member avatar.](https://imgur.elightup.com/er2ONY6.png)
 
 Enable the dynamic image for this block. Then choose the **Featured image** from the **Post** to display them.
 
-![Enable the dynamic image for the Advanced Image block, then choose the Featured image from the Post to display them](https://i.imgur.com/TB3cFUv.gif)
+![Enable the dynamic image for the Advanced Image block, then choose the Featured image from the Post to display them](https://imgur.elightup.com/TB3cFUv.gif)
 
 The next part is a group of icons for social network linking. So, add a **Section** block.
 
-![add a Section block to cover the group of icons for social network linking](https://i.imgur.com/FpO8LGb.png)
+![add a Section block to cover the group of icons for social network linking](https://imgur.elightup.com/FpO8LGb.png)
 
 Then, add an **Icon** block inside this section.
 
-![add an Icon block](https://i.imgur.com/WLbAKgh.png)
+![add an Icon block](https://imgur.elightup.com/WLbAKgh.png)
 
 Choose an icon for it.
 
-![Choose the wanted  icon on the right sidebar](https://i.imgur.com/lqizUX9.png)
+![Choose the wanted  icon on the right sidebar](https://imgur.elightup.com/lqizUX9.png)
 
 Also, enable the dynamic link.
 
-![Also enable the dynamic link](https://i.imgur.com/4JhZmJS.png)
+![Also enable the dynamic link](https://imgur.elightup.com/4JhZmJS.png)
 
 And, set the link from the **Post Custom Field**.
 
-![choose the link from the Post Custom Field](https://i.imgur.com/T50Leuw.png)
+![choose the link from the Post Custom Field](https://imgur.elightup.com/T50Leuw.png)
 
 Then, choose the name of a field where you save the link in the **Custom Field** box.
 
-![choose the name of a field where you save the link in the Custom Field box](https://i.imgur.com/Dnk3a0S.png)
+![choose the name of a field where you save the link in the Custom Field box](https://imgur.elightup.com/Dnk3a0S.png)
 
 Duplicate the block to add an icon for another social network.
 
-![Duplicate the block to add an icon for another social network](https://i.imgur.com/TejsbCq.png)
+![Duplicate the block to add an icon for another social network](https://imgur.elightup.com/TejsbCq.png)
 
 Then, just change the field for the link to get the right one from the corresponding field.
 
-![change the field for the link of instagram](https://i.imgur.com/OtHyTS8.png)
+![change the field for the link of instagram](https://imgur.elightup.com/OtHyTS8.png)
 
-![change the field for the link of mail](https://i.imgur.com/xyR17gu.png)
+![change the field for the link of mail](https://imgur.elightup.com/xyR17gu.png)
 
 Next, move to the second column.
 
 To get the name of the member, you can use the **Title** block as usual. But in this case, I want to have more options to customize its style, so I choose the **Dynamic HTML** block.
 
-![choose the Dynamic HTML block for the name of the member to have more options to customize its style](https://i.imgur.com/hV9EHhv.png)
+![choose the Dynamic HTML block for the name of the member to have more options to customize its style](https://imgur.elightup.com/hV9EHhv.png)
 
 Then set the **HTML Content** as **Post Title** to get the member name from the title of the post.
 
-![set the HTML Content as Post Title](https://i.imgur.com/LEldTSS.png)
+![set the HTML Content as Post Title](https://imgur.elightup.com/LEldTSS.png)
 
 We also use this block to get information about the position.
 
-![also use Dynamic HTML block to get information about the position](https://i.imgur.com/Qcudiao.png)
+![also use Dynamic HTML block to get information about the position](https://imgur.elightup.com/Qcudiao.png)
 
 Choose the **HTML Content** as **Post Custom Field**.
 
-![Choose the HTML Content as Post Custom Field](https://i.imgur.com/7bbyFVH.png)
+![Choose the HTML Content as Post Custom Field](https://imgur.elightup.com/7bbyFVH.png)
 
 And look for the **Position** field on the dropdown list.
 
-![look for the Position field on the dropdown list](https://i.imgur.com/fO1hUKo.png)
+![look for the Position field on the dropdown list](https://imgur.elightup.com/fO1hUKo.png)
 
 For the description of members, do the same and set the **HTML Content** as **Post Excerpt**.
 
-![For the description of members, do the same and set the HTML Content as Post Excerpt](https://i.imgur.com/OIFjLs1.png)
+![For the description of members, do the same and set the HTML Content as Post Excerpt](https://imgur.elightup.com/OIFjLs1.png)
 
 That’s all the information of the members that I want to show.
 
@@ -173,29 +173,29 @@ We regulated how the information was displayed in the Query Card, but haven’t 
 
 Go to **Kadence Blocks** > **All Queries** and add a new query.
 
-![Go to Kadence Blocks, All Queries and add a new query to stipulate where the information will query from.](https://i.imgur.com/bBzukqX.png)
+![Go to Kadence Blocks, All Queries and add a new query to stipulate where the information will query from.](https://imgur.elightup.com/bBzukqX.png)
 
 There is a field to choose which post type we want to query from. Choose the post type that we use for the members.
 
-![Choose the post type that we use for the members](https://i.imgur.com/PZD9J6B.png)
+![Choose the post type that we use for the members](https://imgur.elightup.com/PZD9J6B.png)
 
 And, don’t forget to select the created card in this box.
 
-![select the created card in the box](https://i.imgur.com/ZFlM02g.png)
+![select the created card in the box](https://imgur.elightup.com/ZFlM02g.png)
 
 Then this loop will inherit the content and styling from the created query card.
 
-![the loop inherited its content and styling](https://i.imgur.com/bDHF5s6.png)
+![the loop inherited its content and styling](https://imgur.elightup.com/bDHF5s6.png)
 
 So, we’ve done the query basically.
 
 Kadence provides some extra blocks here to add filter, pagination, or sorting to the loop.
 
-![extra blocks to add filter, pagination, or sorting to the loop provide by Kadence](https://i.imgur.com/n9BVvfI.png)
+![extra blocks to add filter, pagination, or sorting to the loop provide by Kadence](https://imgur.elightup.com/n9BVvfI.png)
 
 I’ll try to add pagination for example.
 
-![try to add pagination for the page](https://i.imgur.com/3UQd1tv.png)
+![try to add pagination for the page](https://imgur.elightup.com/3UQd1tv.png)
 
 There are also options to customize the pagination, but I’ll keep it as default.
 
@@ -203,15 +203,15 @@ There are also options to customize the pagination, but I’ll keep it as defaul
 
 First, go to **Pages** > **Add New** to create a new page as usual.
 
-![go to Pages, Add New to create a new page as usual](https://i.imgur.com/R0T9b7A.png)
+![go to Pages, Add New to create a new page as usual](https://imgur.elightup.com/R0T9b7A.png)
 
 Add the **Advanced Query Loop** block provided by **Kadence**.
 
-![Add the Advanced Query Loop block provided by Kadence](https://i.imgur.com/WIZEfSS.png)
+![Add the Advanced Query Loop block provided by Kadence](https://imgur.elightup.com/WIZEfSS.png)
 
 Then, choose the query loop we created in the previous step.
 
-![choose the query loop we created in the previous step](https://i.imgur.com/WO79clL.png)
+![choose the query loop we created in the previous step](https://imgur.elightup.com/WO79clL.png)
 
 Go to the page on the front end, you will see the page displaying all the members’ information, along with the pagination that I added.
 
@@ -219,8 +219,8 @@ Go to the page on the front end, you will see the page displaying all the member
 
 Go back to edit the query loop, you can change some parameters in each block, even each one that we use for the query card, to have a better look.
 
-![Go back to edit the query loop, change some parameters in each block to have a better look](https://i.imgur.com/5nu4qV6.png)
+![Go back to edit the query loop, change some parameters in each block to have a better look](https://imgur.elightup.com/5nu4qV6.png)
 
 Here is the final look of the team member page that I want.
 
-![the final look of the team member page](https://i.imgur.com/IrHb6PA.gif)
+![the final look of the team member page](https://imgur.elightup.com/IrHb6PA.gif)

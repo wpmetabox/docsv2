@@ -4,7 +4,7 @@ title: MB Tabs
 
 MB Tabs helps you to put custom fields into tabs for a better view. Tabs can have icons and can be put on the left side of the meta box.
 
-![tab styles](https://i.imgur.com/7Oi5dx1.jpg)
+![tab styles](https://imgur.elightup.com/7Oi5dx1.jpg)
 
 :::info Tabs in settings pages
 
@@ -59,7 +59,7 @@ If you have a custom image for the tab icon, then select Icon type "Custom URL" 
 
 The plugin provides 3 styles for tabs: "default", "box", and "left" as you can see below:
 
-![Tab style](https://i.imgur.com/7Oi5dx1.jpg)
+![Tab style](https://imgur.elightup.com/7Oi5dx1.jpg)
 
 To change a tab style, click on the Settings icon to have the field group settings, and choose one style in the **Tab style**:
 

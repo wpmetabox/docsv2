@@ -9,7 +9,7 @@ With the help of MB Blocks, WordPress developers are now able to create Gutenber
 
 Here is a screenshot of a custom Gutenberg block (hero area) that's created using MB Blocks:
 
-![Custom Gutenberg block](https://i.imgur.com/fVTmMWi.png)
+![Custom Gutenberg block](https://imgur.elightup.com/fVTmMWi.png)
 
 The preview of the block is displayed in the main content area while the block configuration is displayed on the right. This allows you to edit the block content and live-preview the block in real time. Later, you can also change where the block settings are displayed (on the sidebar or right in the main content area).
 
@@ -201,7 +201,7 @@ PHP functions need to be prefixed with `mb.` to be used in the view.
 
 Set the view's type to `Block` and name to `testimonial`. Then save the view.
 
-![Settings](https://i.imgur.com/UzauX1A.png)
+![Settings](https://imgur.elightup.com/UzauX1A.png)
 
 ### Block styles and scripts
 
@@ -573,7 +573,7 @@ In that case, use `enqueue_assets` to enqueue your assets. This parameter accept
 
 This attribute allows you to set preview data for the block, which will show when you click on the plus icon (+) on the toolbar:
 
-![block preview](https://i.imgur.com/bwMPY4t.png)
+![block preview](https://imgur.elightup.com/bwMPY4t.png)
 
 The block preview is just the block rendered with sample data. And you'll just need to set the parameter `preview` as an array of that sample data.
 
@@ -775,11 +775,11 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 
 When inserting a field in the admin, you'll see the block like this:
 
-![inner blocks](https://i.imgur.com/p42aGbT.png)
+![inner blocks](https://imgur.elightup.com/p42aGbT.png)
 
 As you can see the InnerBlocks on the left, where the usual placeholder is displayed "Type / to choose a block". And you can insert headings (of any type H1, H2, H3, etc.) and the content very easily.
 
-![inner blocks in action](https://i.imgur.com/GckMMnA.png)
+![inner blocks in action](https://imgur.elightup.com/GckMMnA.png)
 
 :::tip
 

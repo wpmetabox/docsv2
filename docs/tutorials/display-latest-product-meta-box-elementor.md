@@ -9,7 +9,7 @@ We’ll create a section and choose the products or posts that are the latest on
 
 I’ll take the restaurants as an example for products.
 
-![Example of showing latest products](https://i.imgur.com/9K0bmI2.gif)
+![Example of showing latest products](https://imgur.elightup.com/9K0bmI2.gif)
 
 ## Video version
 
@@ -32,33 +32,33 @@ So we need some tools for this practice:
 
 Go to **Meta Box > Post Types > New Post Type** to create a new custom post type.
 
-![Create a new post type for the latest products.](https://i.imgur.com/E0PpYjv.png)
+![Create a new post type for the latest products.](https://imgur.elightup.com/E0PpYjv.png)
 
 After publishing, you will see a new **Restaurant** menu in the Admin Dashboard.
 
-![A new menu named Restaurant appears.](https://i.imgur.com/YTbt5ZN.png)
+![A new menu named Restaurant appears.](https://imgur.elightup.com/YTbt5ZN.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group. Then, create custom fields as you want.
 
-![Create custom fields for the lastest products.](https://i.imgur.com/hn36nQr.png)
+![Create custom fields for the lastest products.](https://imgur.elightup.com/hn36nQr.png)
 
 You should set a simple ID to remember since we’ll need them in the next steps.
 
 For the **Status** and **Voucher** information, they are the selections field. So, you can add some options in the **Choices** box like this:
 
-![Add options to the Status field](https://i.imgur.com/miN7Qny.png)
+![Add options to the Status field](https://imgur.elightup.com/miN7Qny.png)
 
-![Add options to the Voucher field](https://i.imgur.com/cZ2IKzD.png)
+![Add options to the Voucher field](https://imgur.elightup.com/cZ2IKzD.png)
 
 After creating all the needed fields, move to the **Settings** tab, choose **Location** as **Post Types** and select **Restaurant** to apply these fields to it.
 
-![Choose the post type as Restaurant in Location section.](https://i.imgur.com/gvr0cBD.png)
+![Choose the post type as Restaurant in Location section.](https://imgur.elightup.com/gvr0cBD.png)
 
 When you edit any post in the **Restaurant** post type, you’ll see all the created custom fields. Just fill in the data.
 
-![Enter the information into fields.](https://i.imgur.com/qm8DIgf.png)
+![Enter the information into fields.](https://imgur.elightup.com/qm8DIgf.png)
 
 ## 3. Creating a new template
 
@@ -66,52 +66,52 @@ We’re going to create a template to display the information of the restaurants
 
 Go to **Templates > Theme Builder** to add a new template .
 
-![Create a new template](https://i.imgur.com/SHuMxdU.png)
+![Create a new template](https://imgur.elightup.com/SHuMxdU.png)
 
 Since we’ll have a list of products, choose the template as a loop.
 
-![Choose the template as a Loop.](https://i.imgur.com/tie34CB.png)
+![Choose the template as a Loop.](https://imgur.elightup.com/tie34CB.png)
 
 Then, remember to set the preview in the **Settings** tab for having a live preview.
 
-![Choose any post of the post type in the Settings tab.](https://i.imgur.com/q3mtdsr.png)
+![Choose any post of the post type in the Settings tab.](https://imgur.elightup.com/q3mtdsr.png)
 
 First, add an **Inner Section** element to group some elements that I want to style at once as the featured image, logo and voucher.
 
-![Add an Inner Section to group some elements](https://i.imgur.com/EDvUikT.png)
+![Add an Inner Section to group some elements](https://imgur.elightup.com/EDvUikT.png)
 
 It has 2 columns inside so I’ll remove one.
 
-![Remove 1 columns in Inner Section.](https://i.imgur.com/nxj2Crh.png)
+![Remove 1 columns in Inner Section.](https://imgur.elightup.com/nxj2Crh.png)
 
 Next, add a **Featured Image** element into the created Inner Section to show the image of the restaurant.
 
-![add the Featured Image widget into the Inner Section](https://i.imgur.com/n5uCzxR.png)
+![add the Featured Image widget into the Inner Section](https://imgur.elightup.com/n5uCzxR.png)
 
 To get the value of the **Voucher** field, use a **Text Editor** element. Since this field is created by Meta Box, click the **Dynamic Data** button > choose **Meta Box Field** option in the **Post** section and connect it to the corresponding field. In this case, it’s **Voucher**.
 
-![Click on the Dynamic Tags icon > choose Meta Box Field option in the Post section > choose the field you want.](https://i.imgur.com/RkTFBT6.gif)
+![Click on the Dynamic Tags icon > choose Meta Box Field option in the Post section > choose the field you want.](https://imgur.elightup.com/RkTFBT6.gif)
 
 For the **Logo**, add an **Image** element and also choose the source from a Meta Box field.
 
-![Setting for Logo field.](https://i.imgur.com/MbN8a8r.gif)
+![Setting for Logo field.](https://imgur.elightup.com/MbN8a8r.gif)
 
 Moving on, out of the **Inner Section**, add a **Post Title** element and link it to the **Post URL**.
 
-![add a Post Title widget and link it to the Post URL.](https://i.imgur.com/ls4qZKm.gif)
+![add a Post Title widget and link it to the Post URL.](https://imgur.elightup.com/ls4qZKm.gif)
 
 The **Address** of the restaurant is also saved in a custom field, add a **Text Editor** element and connect it to the corresponding field like we did to obtain Voucher information.
 
-![Settings for Address field](https://i.imgur.com/q9HEYCe.gif)
+![Settings for Address field](https://imgur.elightup.com/q9HEYCe.gif)
 
 When users hover over the featured image of the restaurant, I want a text as **View Detail** display, so I add a **Heading** widget here. Rename the **Title** to **View Detail** and link it to the
 **Post URL**.
 
-![Setting for View Detail field.](https://i.imgur.com/dXaufUA.gif)
+![Setting for View Detail field.](https://imgur.elightup.com/dXaufUA.gif)
 
 For the **Status** information, just do the same as the **Voucher** information.
 
-![Setting for Status field.](https://i.imgur.com/zBqWBsP.gif)
+![Setting for Status field.](https://imgur.elightup.com/zBqWBsP.gif)
 
 Now, you also can see that all the information of the restaurant has been displayed.
 
@@ -123,25 +123,25 @@ On the homepage, I created a title for this section, just add the posts below it
 
 Since there is a list of the latest restaurants, drag the **Posts** element to this position on the homepage for displaying them.
 
-![add the list of the latest products to the position on the homepage](https://i.imgur.com/j5mZjaD.png)
+![add the list of the latest products to the position on the homepage](https://imgur.elightup.com/j5mZjaD.png)
 
 Because I have the **Elementor Custom Skin** plugin. I have an option to set the skin as **Custom**.
 
-![Choose Custom in Skin tab.](https://i.imgur.com/YEEMx3s.png)
+![Choose Custom in Skin tab.](https://imgur.elightup.com/YEEMx3s.png)
 
 Then, select the **Default Template** as the template which we have just created.
 
 Next, in the **Query** section, choose the source as the post type of your products.
 
-![In the Query section, choose the source as the post type of your products.](https://i.imgur.com/BoTDDnq.png)
+![In the Query section, choose the source as the post type of your products.](https://imgur.elightup.com/BoTDDnq.png)
 
 You can also see some settings for you to display the order of posts. Since we will display the newest posts then the oldest ones, so I set the order by date and choose DESC, which means **Descending** options.
 
-![In the Query section, choose the source as the post type of your products.](https://i.imgur.com/9rh4I3B.png)
+![In the Query section, choose the source as the post type of your products.](https://imgur.elightup.com/9rh4I3B.png)
 
 All the products are obtained and displayed in the time order: the latest post first, then the older one.
 
-![The result of displaying the latest products section before styling.](https://i.imgur.com/tb3kVVQ.png)
+![The result of displaying the latest products section before styling.](https://imgur.elightup.com/tb3kVVQ.png)
 
 ## 5. Styling the section
 
@@ -149,11 +149,11 @@ All the products are obtained and displayed in the time order: the latest post f
 
 To style the section, you can set the CSS classes for each element in the **Advanced** tab.
 
-![In the Advanced tab, set CSS classes to prepare styling for the latest products section.](https://i.imgur.com/V1ONafz.gif)
+![In the Advanced tab, set CSS classes to prepare styling for the latest products section.](https://imgur.elightup.com/V1ONafz.gif)
 
 After setting CSS classes for each element, choose the **Section** element that includes all the elements of the posts. Move to the **Advanced** tab > **Custom CSS** and add code to the box.
 
-![Add code to the box](https://i.imgur.com/aMXgVuT.png)
+![Add code to the box](https://imgur.elightup.com/aMXgVuT.png)
 
 I uploaded the code I use to [Github](https://github.com/wpmetabox/tutorials/blob/master/display-latest-posts-with-Elementor/custom.css), so you can easily refer to it.
 
@@ -167,5 +167,5 @@ I made all the manipulations on the video tutorials above. So if you want to kno
 
 Then, go to the homepage and you will see the latest products section has already turned into a slider:
 
-![The result after all steps](https://i.imgur.com/26ZajWu.png)
+![The result after all steps](https://imgur.elightup.com/26ZajWu.png)
 

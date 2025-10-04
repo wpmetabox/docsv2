@@ -13,11 +13,11 @@ The plugins provide several styles for settings pages where you can have tabs or
 <div className="gallery">
     <div className="gallery_col1">
         <figure>
-            <img src="https://i.imgur.com/yb9Admk.png" alt="Settings page with WordPress-native tabs" />
+            <img src="https://imgur.elightup.com/yb9Admk.png" alt="Settings page with WordPress-native tabs" />
             <figcaption>Settings page with WordPress-native tabs</figcaption>
         </figure>
         <figure>
-            <img src="https://i.imgur.com/QoaD4la.png" alt="Settings page with left tabs" />
+            <img src="https://imgur.elightup.com/QoaD4la.png" alt="Settings page with left tabs" />
             <figcaption>Settings page with left tabs</figcaption>
         </figure>
     </div>
@@ -174,13 +174,13 @@ The `icon` parameter can be a [Dashicons](https://developer.wordpress.org/resour
 
 This screenshot shows the left tab navigation with icons:
 
-![left tab navigation](https://i.imgur.com/QoaD4la.png)
+![left tab navigation](https://imgur.elightup.com/QoaD4la.png)
 
 ### Help tabs
 
 WordPress has a nice feature that allows us to define instructions, and guidelines in the "Help" section of each admin screen. To see the help content, click the "Help" button on the top right, near the "Screen Options" button.
 
-![Help tabs in the Posts screen](https://i.imgur.com/B7YRruB.png)
+![Help tabs in the Posts screen](https://imgur.elightup.com/B7YRruB.png)
 
 The content is organized into tabs and you can set it in the MB Builder's UI or with code.
 
@@ -272,13 +272,13 @@ Then go to the **Appearance » Customize** and you'll see the settings page is a
 <div className="gallery">
     <div className="gallery_col1">
         <figure>
-            <img src="https://i.imgur.com/D78hKyG.png" alt="A new panel in the Customizer" />
+            <img src="https://imgur.elightup.com/D78hKyG.png" alt="A new panel in the Customizer" />
             <figcaption>A new panel in the Customizer</figcaption>
         </figure>
     </div>
     <div className="gallery_col2">
         <figure>
-            <img src="https://i.imgur.com/AfaWiGK.png" alt="Meta boxes become Customize sections" />
+            <img src="https://imgur.elightup.com/AfaWiGK.png" alt="Meta boxes become Customize sections" />
             <figcaption>Meta boxes become Customize sections</figcaption>
         </figure>
     </div>
@@ -347,7 +347,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 
 And you'll see the section on the Customizer like this:
 
-![Sections now appear as top-level in the Customizer](https://i.imgur.com/xICe0u3.png)
+![Sections now appear as top-level in the Customizer](https://imgur.elightup.com/xICe0u3.png)
 
 What if you want the _section to be inside another panel_? Like inside another plugin's panel? Set the `panel` parameter to ID of the target panel: `'panel' => 'panel_id'`.
 
@@ -367,7 +367,7 @@ The `postMessage` transport for the Customizer is not supported yet, which means
 
 A network settings page is a settings page that provides settings for all the websites in the network (multisite environment). For example, you might want to enter a Google Maps API key for all the websites or set the contact phone number for all of them.
 
-![Sample network settings page](https://i.imgur.com/pjZzrKf.png)
+![Sample network settings page](https://imgur.elightup.com/pjZzrKf.png)
 
 Using _MB Settings Page_, you’re now able to do that easily. If you use MB Builder to create the settings page, simply switch on the **Network** option.
 
@@ -424,7 +424,7 @@ $meta_boxes[] = [
 
 It will show a textarea field in your settings page like this:
 
-![backup and restore settings](https://i.imgur.com/n6d6v1n.png)
+![backup and restore settings](https://imgur.elightup.com/n6d6v1n.png)
 
 When you add it to your settings page, it will show all of your settings in JSON. And you can just copy it and save it to a file to back up the settings. To restore the settings, just paste the JSON again and click the Save Settings button.
 

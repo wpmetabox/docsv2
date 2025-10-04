@@ -9,7 +9,7 @@ The slider field creates a slider where you can select a number by dragging a co
 ## Screenshots
 
 <Screenshots name="slider" col1={[
-    ['https://i.imgur.com/voHxzpJ.png', 'The slider field interface']
+    ['https://imgur.elightup.com/voHxzpJ.png', 'The slider field interface']
 ]} />
 
 ## Settings

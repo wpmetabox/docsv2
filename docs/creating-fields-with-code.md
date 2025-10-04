@@ -231,7 +231,7 @@ Below is the list of settings with a brief description. The keys are for referen
 
   <TabItem value="general" label="General">
 
-![general settings](https://i.imgur.com/MJ3JRiT.png)
+![general settings](https://imgur.elightup.com/MJ3JRiT.png)
 
 Name | Key | Description
 --- | --- | ---
@@ -258,7 +258,7 @@ Add more text | `add_button`|The text for **Add more** clone button. Optional. D
 
   <TabItem value="advanced" label="Advanced">
 
-![advanced settings](https://i.imgur.com/jX7YDH3.png)
+![advanced settings](https://imgur.elightup.com/jX7YDH3.png)
 
 Name | Key | Description
 --- | --- | ---
@@ -377,7 +377,7 @@ When you edit an existing post that has a field group, then some fields might ha
 
 There are some situations that the context doesn't work as expected. That is probably because you have dragged and dropped the field groups to reorder them? If you have, then WordPress will save the position/location of them and use the saved position instead of the value in the `context` parameter. The order of field groups is saved in the user meta `meta-box-order_{screen id}` as follows:
 
-![meta box order](https://i.imgur.com/A7bkxT9.png)
+![meta box order](https://imgur.elightup.com/A7bkxT9.png)
 
 In this case, deleting this user meta from the database will make the context work again.
 

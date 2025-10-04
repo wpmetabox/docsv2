@@ -11,7 +11,7 @@ The image select field allows you to select a choice visually with images. It wo
 ## Screenshots
 
 <Screenshots name="image-select" col1={[
-    ['https://i.imgur.com/avEo6jC.png', 'The image select field interface']
+    ['https://imgur.elightup.com/avEo6jC.png', 'The image select field interface']
 ]} />
 
 ## Settings

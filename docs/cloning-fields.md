@@ -14,11 +14,11 @@ The difference between Meta Box and other plugins is that the clone feature can 
 
 When editing a field, turn on this **Cloneable** option in the settings of the field:
 
-![enable clone feature](https://i.imgur.com/KbnSFBe.png)
+![enable clone feature](https://imgur.elightup.com/KbnSFBe.png)
 
 After turning in the Cloneable option, other clone settings will appear.
 
-![other clone settings](https://i.imgur.com/uhhImkb.png)
+![other clone settings](https://imgur.elightup.com/uhhImkb.png)
 
 :::info
 
@@ -41,7 +41,7 @@ Clone empty start|`clone_empty_start`|Allows no fields except the **Add more** b
 
 After saving the field group, in the post editor, you'll see an **+ Add more** button below the field input. Clicking it allows you to enter more values:
 
-![view clones in action](https://i.imgur.com/PM4Mbqb.png)
+![view clones in action](https://imgur.elightup.com/PM4Mbqb.png)
 
 If you're a developer and want to use code, then you need to add the clone settings into the [field settings](/creating-fields-with-code/#fields):
 
@@ -112,7 +112,7 @@ Then it doesn't work.
 
 To solve this problem, you need to enable the **Clone as multiple** settings for the field.
 
-![Enable the Clone as multiple settings](https://i.imgur.com/D2gGXup.png)
+![Enable the Clone as multiple settings](https://imgur.elightup.com/D2gGXup.png)
 
 With that, Meta Box will **save cloneable values in multiple rows in the database**, where each row contains one value. That means if `start_date` has 2 values `['2019-05-01', '2019-04-30']`, it will be saved in 2 rows in the database, one for `2019-05-01` and one for `2019-04-30`. The data is **not serialized** anymore. And thus, your above query will work!
 

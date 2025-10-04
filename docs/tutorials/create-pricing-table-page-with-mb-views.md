@@ -9,7 +9,7 @@ In this tutorial, I’ll show you how to create a clear and well-structured pric
 
 Here is my example:
 
-![An example of pricing table page](https://i.imgur.com/ikpbegg.png)
+![An example of pricing table page](https://imgur.elightup.com/ikpbegg.png)
 
 ## Video version
 
@@ -35,7 +35,7 @@ We’ll display the pricing table on a separate page. So, we need to create it f
 
 Go to **Pages** and create a new one.
 
-![Go to Pages, and create a new](https://i.imgur.com/TUoI3J5.png)
+![Go to Pages, and create a new](https://imgur.elightup.com/TUoI3J5.png)
 
 I leave it blank since all the content will be put in custom fields that I’ll create in the next step.
 
@@ -45,108 +45,108 @@ As I mentioned before, we’ll use custom fields to store every single piece of 
 
 All the plans will be grouped and have the same layout and structure with name, price, description, features, and button to get it, just the content is different. So, you may use the cloneable feature for them.
 
-![The plans has the same layout, just different content](https://i.imgur.com/Bj6dm1m.png)
+![The plans has the same layout, just different content](https://imgur.elightup.com/Bj6dm1m.png)
 
 Go to **Meta Box** > **Custom Fields**, and create a new field group.
 
-![Go to Meta Box, Custom Fields, and create a new field group](https://i.imgur.com/KKXnq9n.png)
+![Go to Meta Box, Custom Fields, and create a new field group](https://imgur.elightup.com/KKXnq9n.png)
 
 First, add a **Group** field.
 
-![Add a Group field](https://i.imgur.com/7BVGBq8.png)
+![Add a Group field](https://imgur.elightup.com/7BVGBq8.png)
 
 Inside the group, add subfields following the structure you want.
 
-![Inside the group, add subfields following the structure you want](https://i.imgur.com/I5ccfKG.png)
+![Inside the group, add subfields following the structure you want](https://imgur.elightup.com/I5ccfKG.png)
 
 For the features, I also put them into a group for easier management. So, add a **Group** field as well.
 
-![Add a Group field for the features](https://i.imgur.com/mqGyrku.png)
+![Add a Group field for the features](https://imgur.elightup.com/mqGyrku.png)
 
 Also, add a subfield for it.
 
-![Add subfield for the group of the features](https://i.imgur.com/1GCFa2X.png)
+![Add subfield for the group of the features](https://imgur.elightup.com/1GCFa2X.png)
 
 I make it collapsible and set the title for the group as well. In this case, I simply do it based on the order number.
 
-![Set the group as collapsible and set the group title](https://i.imgur.com/Md1lawx.png)
+![Set the group as collapsible and set the group title](https://imgur.elightup.com/Md1lawx.png)
 
 Since each plan has more than one feature, I set this subgroup as cloneable to add more items.
 
-![Set this subgroup as cloneable to add more items](https://i.imgur.com/8oLI6rs.png)
+![Set this subgroup as cloneable to add more items](https://imgur.elightup.com/8oLI6rs.png)
 
 And, add two fields for the label and URL of the button.
 
-![Add fields for the labels and URLs of the buttons](https://i.imgur.com/4b2CLq0.png)
+![Add fields for the labels and URLs of the buttons](https://imgur.elightup.com/4b2CLq0.png)
 
 For the group of the plan, we also set it as collapsible. Then, the titles for them can be based on the order number and the plan name or anything you want.
 
-![Set the group of the plan as colapsibale and set the group title](https://i.imgur.com/C547W0G.png)
+![Set the group of the plan as colapsibale and set the group title](https://imgur.elightup.com/C547W0G.png)
 
 As well, make the group of the plans cloneable to add more than one plan on your pricing table page.
 
-![Make group cloneable to add more than one plan](https://i.imgur.com/8oLI6rs.png)
+![Make group cloneable to add more than one plan](https://imgur.elightup.com/8oLI6rs.png)
 
 After having all the fields and essential settings, move to the **Settings** tab, choose **Location** as **Post type**, and select **Page**. To apply the fields to the page you want, go to the **Advanced location rules** section and choose your created page.
 
-![Set location for the field group](https://i.imgur.com/RFI7kYl.png)
+![Set location for the field group](https://imgur.elightup.com/RFI7kYl.png)
 
-Then, in the page editor, you will see all of the custom fields. 
+Then, in the page editor, you will see all of the custom fields.
 
-![The custom fields display in the post editor](https://i.imgur.com/ydJGOU5.png)
+![The custom fields display in the post editor](https://imgur.elightup.com/ydJGOU5.png)
 
 Just enter information for each plan, and click on the **+ Add more** button to add other plans.
 
-![An example of pricing table page](https://i.imgur.com/kwZkrqV.png)
+![An example of pricing table page](https://imgur.elightup.com/kwZkrqV.png)
 (Click on the + Add more button to add other plans)
 
 ## 1.3 Displaying the pricing table page
 
 First, go to **Meta Box** > **Views**, to create a new template for the pricing table page.
 
-![Create a new template with MB Views](https://i.imgur.com/zpjZcpX.png)
+![Create a new template with MB Views](https://imgur.elightup.com/zpjZcpX.png)
 
 With **MB Views**, you can add some lines of code to the box below. Or insert fields by clicking the **Insert Field** button, then choosing fields on the right sidebar to get data from custom fields.
 
-![Insert field to the template](https://i.imgur.com/u9PS8JT.png)
+![Insert field to the template](https://imgur.elightup.com/u9PS8JT.png)
 
 Since our fields are on a special page, you can see the field here.
 
-![The field on the right side bar](https://i.imgur.com/l3p1iU5.png)
+![The field on the right side bar](https://imgur.elightup.com/l3p1iU5.png)
 
 Click into it to insert the **Plans** field. Since it’s cloneable, a loop will be generated in the **Template** section.
 
-![Insert the Plans field](https://i.imgur.com/QolmmEW.png)
+![Insert the Plans field](https://imgur.elightup.com/QolmmEW.png)
 
 Inside the loop,  just choose the subfield from the list to insert them one by one.
 
 These are title, price, and description with 3 lines of code appearing corresponding to the chosen fields.
 
-![Insert the title, price, description fields](https://i.imgur.com/PPJAKT8.png)
+![Insert the title, price, description fields](https://imgur.elightup.com/PPJAKT8.png)
 
 Next, for the plan’s feature, insert this clonable field bellow, then we also have a new loop.
 
-![Get the plan’s feature](https://i.imgur.com/J70j1PV.png)
+![Get the plan’s feature](https://imgur.elightup.com/J70j1PV.png)
 
 Similarly to the plan, inside this new loop, insert the wanted field.
 
-![Insert field inside the loop](https://i.imgur.com/OStOoxj.png)
+![Insert field inside the loop](https://imgur.elightup.com/OStOoxj.png)
 
 Back to the first loop, continuing to insert the remaining fields. We have the button text, and the button link.
 
-![Insert the remaining fields into the loop](https://i.imgur.com/pwbZild.png)
+![Insert the remaining fields into the loop](https://imgur.elightup.com/pwbZild.png)
 
 After inserting all the necessary fields, move to the **Settings** section of the view, and set the **Type** as **Singular**, and the **Location** as **Pages**, then choose the name of the created page.
 
-![Move to the Settings section of the view, and set the Type as Singular, and the Location as Pages, then choose  the name of the created page](https://i.imgur.com/wha7TTG.png)
+![Move to the Settings section of the view, and set the Type as Singular, and the Location as Pages, then choose  the name of the created page](https://imgur.elightup.com/wha7TTG.png)
 
 As well as, you can choose a position for the pricing table on the page.
 
-![Choose a position for the pricing table on the page](https://i.imgur.com/DDjmpsL.png)
+![Choose a position for the pricing table on the page](https://imgur.elightup.com/DDjmpsL.png)
 
 Now, view the page on the frontend, you can see all the plans with their information displayed. However, it’s just a simple list of details.
 
-![All the plans with their information displayed. But, it’s just a simple list of details](https://i.imgur.com/oZfQphq.png)
+![All the plans with their information displayed. But, it’s just a simple list of details](https://imgur.elightup.com/oZfQphq.png)
 
 To make it more engaging and user-friendly, let’s transform it into a structured table. This way, customers can easily compare plans and choose the best one!
 
@@ -154,7 +154,7 @@ To make it more engaging and user-friendly, let’s transform it into a structur
 
 To make the pricing table page look better, back to the created template with MB Views, add some lines of code.
 
-![Add code for styling](https://i.imgur.com/ZWTFFyh.png)
+![Add code for styling](https://imgur.elightup.com/ZWTFFyh.png)
 
 ```
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -163,17 +163,17 @@ This is to call the Awesome font library, to add icons for the features of each 
 
 Next, include some **div** tags and classes to make styling easier.
 
-![Add some div tag and classes](https://i.imgur.com/QfnuxXL.png)
+![Add some div tag and classes](https://imgur.elightup.com/QfnuxXL.png)
 
 Notice that, I use the `fa fa-check-circle` class from the Awesome font, helping display the circle icons.
 
 Now, you can see that the pricing information is organized and clearer, with icons displaying the features in a bulleted format.
 
-![The pricing information is organized and clearer, with icons displaying the features in a bulleted format](https://i.imgur.com/8A4lL3t.png)
+![The pricing information is organized and clearer, with icons displaying the features in a bulleted format](https://imgur.elightup.com/8A4lL3t.png)
 
 To create a table for pricing plan, back to the view again, in the **CSS** tab, add the following code to style and highlight the recommended and best-selling plan.
 
-![Add code to the CSS tab](https://i.imgur.com/CyulpnJ.png)
+![Add code to the CSS tab](https://imgur.elightup.com/CyulpnJ.png)
 
 ```css
 .mb-pricing-container .mb-item:nth-child(2) {
@@ -259,7 +259,7 @@ All codes are saved in [Github](https://github.com/wpmetabox/tutorials/tree/mast
 
 Here’s how my Pricing Table page looks in the end.
 
-![The final look of the pricing table page](https://i.imgur.com/ikpbegg.png)
+![The final look of the pricing table page](https://imgur.elightup.com/ikpbegg.png)
 
 Somedays, when you want to change the price of a plan, add features, or something else, just change the content in the custom fields. All the data on this pricing table page is dynamic.
 

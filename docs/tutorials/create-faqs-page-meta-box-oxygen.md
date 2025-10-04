@@ -9,7 +9,7 @@ We are going to **create an FAQs page** using **Meta Box** and **Oxygen**. It ha
 
 This is a specific example that we’ll create in this practice:
 
-![Example of an FAQs page](https://i.imgur.com/DNgiXCm.png)
+![Example of an FAQs page](https://imgur.elightup.com/DNgiXCm.png)
 
 ## Video version
 
@@ -27,63 +27,63 @@ The questions and answers are displayed in an accordion style on the page, which
 
 Go to **Pages > Add New** to create a page for FAQs.
 
-![Create a new page](https://i.imgur.com/n1QF4Yl.png)
+![Create a new page](https://imgur.elightup.com/n1QF4Yl.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New**. I’ll add a group with two subfields inside. It is also set to be cloneable to have more spaces to add different questions and answers.
 
-![Create custom fields](https://i.imgur.com/zwh3H9m.png)
+![Create custom fields](https://imgur.elightup.com/zwh3H9m.png)
 
 Then, there'll be an **Add More** button to allow adding more Q&A on the **FAQs page**.
 
-![Click Add more button to add more Q&A on the FAQs page](https://i.imgur.com/QJCZxzt.png)
+![Click Add more button to add more Q&A on the FAQs page](https://imgur.elightup.com/QJCZxzt.png)
 
 I also made this group **Collapsible** so that the information in the group field could be collapsed.
 
-![Set group to be Collapsible to collapse the information](https://i.imgur.com/85DgUtu.png)
+![Set group to be Collapsible to collapse the information](https://imgur.elightup.com/85DgUtu.png)
 
 It’ll help avoid being messy.
 
-![The information is displayed in a tidy way](https://i.imgur.com/vl9VY5s.png)
+![The information is displayed in a tidy way](https://imgur.elightup.com/vl9VY5s.png)
 
 After creating all the fields, move to the **Settings** tab, choose **Location** as **Post type** and select **Page**. Since we created the fields for the FAQs page, go to the **Advanced location rules** section below and select the page name.
 
-![Set Location for the created fields as post type](https://i.imgur.com/KieFPaY.png)
+![Set Location for the created fields as post type](https://imgur.elightup.com/KieFPaY.png)
 
 Back in the page editor, you will see the fields and can fill in information about questions and answers.
 
-![The fields appear in the page editor](https://i.imgur.com/hR9kpeL.png)
+![The fields appear in the page editor](https://imgur.elightup.com/hR9kpeL.png)
 
 ## 3. Creating a template with Oxygen
 
 In **Oxygen**, create a new template and choose the **inactive - Default Page** option to inherit its style and choose to apply this template for **Pages**.
 
-![Create a template with Oxygen](https://i.imgur.com/pogPyfZ.png)
+![Create a template with Oxygen](https://imgur.elightup.com/pogPyfZ.png)
 
 Back to the **FAQs** page, assign the newly created template to this page in the **Render Page Using Template** section.
 
-![Assign the created template to the FAQs page](https://i.imgur.com/98U2QBB.png)
+![Assign the created template to the FAQs page](https://imgur.elightup.com/98U2QBB.png)
 
 Now, let’s edit the template with **Oxygen**.
 
 In the **Previewing** section, choose the page you want to see in the preview. Then, select a **Section** component to contain all of the FAQs information.
 
-![Choose the page you want to see in the preview](https://i.imgur.com/5adiUY5.png)
+![Choose the page you want to see in the preview](https://imgur.elightup.com/5adiUY5.png)
 
 Next, add the **Pro Accordion** component. This component will only be available when you have **Oxy Extras** on your site. If you don’t have it, you can add **Text** components instead as normal.
 
-![Add a Pro Accordion component](https://i.imgur.com/vsIxJLd.png)
+![Add a Pro Accordion component](https://imgur.elightup.com/vsIxJLd.png)
 
 Since I used Meta Box custom fields to save the FAQs information, I set the Accordion type as **Accordion - Dynamic Items (Meta Box)**.
 
-![Set Accordion type as Accordion - Dynamic Items (Meta Box) to save the FAQs information ](https://i.imgur.com/Jo8ZKIT.png)
+![Set Accordion type as Accordion - Dynamic Items (Meta Box) to save the FAQs information ](https://imgur.elightup.com/Jo8ZKIT.png)
 
 You can input the value in the **Dynamic Data** section to show the questions and answers.
 
-![Go to the Dynamic Data section](https://i.imgur.com/OHjsovu.png)
+![Go to the Dynamic Data section](https://imgur.elightup.com/OHjsovu.png)
 
-![Input parameters to show the Q&A](https://i.imgur.com/LpS5GPo.png)
+![Input parameters to show the Q&A](https://imgur.elightup.com/LpS5GPo.png)
 
 The group we used in this tutorial is cloneable, so add the group's ID into the box which I marked as 1 in the picture above.
 
@@ -91,25 +91,25 @@ The question will be the **Header Text**, so I added the **Question** field's ID
 
 After applying parameters, the preview will show you all of the questions and answers.
 
-![Go to the Dynamic Data section](https://i.imgur.com/w8gIjN8.png)
+![Go to the Dynamic Data section](https://imgur.elightup.com/w8gIjN8.png)
 
 Normally, to have a better score for SEO, the FAQs page should have schema markup.
 
 The **Oxy Extras** supports the **FAQ schema** feature. Just go to the **Advanced** section to enable the FAQ Schema Markup.
 
-![Go to the Advanced section of the accordion](https://i.imgur.com/w8gIjN8.png)
+![Go to the Advanced section of the accordion](https://imgur.elightup.com/w8gIjN8.png)
 
-![Enable the FAQ Schema Markup in the Advanced section](https://i.imgur.com/e6qJH4Q.png)
+![Enable the FAQ Schema Markup in the Advanced section](https://imgur.elightup.com/e6qJH4Q.png)
 
 If you haven’t had the **Oxy Extras**, you can try the **Slim SEO Schema** to have the **FAQ Schema** following this tutorial.
 
 Finally, click the **Apply Params** button to end the setup.
 
-![To end up the setup, click Apply Params](https://i.imgur.com/v3O4GpT.png)
+![To end up the setup, click Apply Params](https://imgur.elightup.com/v3O4GpT.png)
 
 Now, on the FAQs page, you will see the result like this.
 
-![Result of the created FAQ page after all steps](https://i.imgur.com/iL7LKx4.gif)
+![Result of the created FAQ page after all steps](https://imgur.elightup.com/iL7LKx4.gif)
 
 ------
 

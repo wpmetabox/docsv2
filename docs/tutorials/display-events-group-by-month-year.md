@@ -9,7 +9,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 In this practice, I’ll group events in two ways: one by month and another by month and year.
 
-![Group events by month and year with Meta Box](https://i.imgur.com/LjXznGu.gif)
+![Group events by month and year with Meta Box](https://imgur.elightup.com/LjXznGu.gif)
 
 ## Video version
 
@@ -31,11 +31,11 @@ Now, let’s start!
 
 Go to **Meta Box** > **Post Types** to create a new post type for the events.
 
-![Create a new post type for the events](https://i.imgur.com/qc0y2cw.png)
+![Create a new post type for the events](https://imgur.elightup.com/qc0y2cw.png)
 
 After publishing, a new menu for your post type will appear.
 
-![A new menu for your post type will appear.](https://i.imgur.com/VGuO5Xd.png)
+![A new menu for your post type will appear.](https://imgur.elightup.com/VGuO5Xd.png)
 
 ## Creating a custom field
 
@@ -45,35 +45,35 @@ If you want to display additional information for each event, you can create mor
 
 Now, move to **Meta Box** > **Custom Fields** and create it.
 
-![Move to Meta Box > Custom Fields to create a custom field](https://i.imgur.com/sUv1qrA.png)
+![Move to Meta Box > Custom Fields to create a custom field](https://imgur.elightup.com/sUv1qrA.png)
 
 For the start of the events, I recommend using the **Date Picker** field type.
 
-![Use the Date Picker field type for the start of the events.](https://i.imgur.com/rYd3JJP.png)
+![Use the Date Picker field type for the start of the events.](https://imgur.elightup.com/rYd3JJP.png)
 
 Pay attention that you’ll only see the setting for the field when enabling the [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) extension. Just turn it on to show the date directly on the management dashboard, then you can easily compare it with the result. This feature is optional, so I did not mention it before.
 
-![Turn the setting on to show the date directly on the management dashboard](https://i.imgur.com/XeG9ifO.png)
+![Turn the setting on to show the date directly on the management dashboard](https://imgur.elightup.com/XeG9ifO.png)
 
 After creating the needed field, go to the **Settings** tab. Choose **Location** as **Post type**, and select **Event** to apply the field to this post type.
 
-![Set location to apply the field to the Event post type](https://i.imgur.com/9tm6HUq.png)
+![Set location to apply the field to the Event post type](https://imgur.elightup.com/9tm6HUq.png)
 
 Now, in the post editor, you will see the created custom field.
 
-![The created custom field in the post editor.](https://i.imgur.com/c6UTwtu.png)
+![The created custom field in the post editor.](https://imgur.elightup.com/c6UTwtu.png)
 
 Just simply input data, and enter the start date for the event.
 
 These are some posts that I created for reference. The start date is shown in the admin columns as well.
 
-![Some created posts. The start date is shown in the admin columns as well.](https://i.imgur.com/RFkS2ci.png)
+![Some created posts. The start date is shown in the admin columns as well.](https://imgur.elightup.com/RFkS2ci.png)
 
 ## Displaying events grouped by month and year
 
 There are several kinds of classifications by month and year that you can follow. We should use code to do it all, they will have the same logic and syntax but differ a little bit in details. In this practice, I’ll give the code to do in two ways: group events by month, and another by month and year.
 
-![Group events in two ways: one by month, and another by month and year.](https://i.imgur.com/MoH4QPH.png)
+![Group events in two ways: one by month, and another by month and year.](https://imgur.elightup.com/MoH4QPH.png)
 
 Now, we will go with the first one, group the events by month.
 
@@ -121,7 +121,7 @@ function sort_month_events() {
 add_shortcode( 'sort_month', 'sort_month_events' );
 ```
 
-![Go to the theme file, and add code.](https://i.imgur.com/TA7YU0h.png)
+![Go to the theme file, and add code.](https://imgur.elightup.com/TA7YU0h.png)
 
 Let’s break down the code:
 
@@ -218,15 +218,15 @@ Pay attention to the last line, we register the shortcode (`sort_month`) that yo
 
 Now, let’s check how the events display. Simply create a new page and add a **Shortcode** block.
 
-![Create a new page, add a shortcode block](https://i.imgur.com/B6N8oMc.png)
+![Create a new page, add a shortcode block](https://imgur.elightup.com/B6N8oMc.png)
 
 Then, insert the created shortcode to the box.
 
-![Insert the created shortcode to the box](https://i.imgur.com/u35UQKD.png)
+![Insert the created shortcode to the box](https://imgur.elightup.com/u35UQKD.png)
 
 Go to the frontend, you can see the desired section with groups of events sorted by month.
 
-![The desired section with groups of events sorted by month](https://i.imgur.com/hDPsSCK.png)
+![The desired section with groups of events sorted by month](https://imgur.elightup.com/hDPsSCK.png)
 
 Let’s go ahead to display these events in another sorting.
 
@@ -234,7 +234,7 @@ Let’s go ahead to display these events in another sorting.
 
 Now, I’ll display the event with groups like this.
 
-![Display events grouped by months within years](https://i.imgur.com/WVpvrri.png)
+![Display events grouped by months within years](https://imgur.elightup.com/WVpvrri.png)
 
 It’s a little bit different from the last one, but still the same logic.
 
@@ -284,7 +284,7 @@ function sort_year_events() {
 add_shortcode( 'sort_year', 'sort_year_events' );
 ```
 
-![Add code to the theme file for displaying events grouped by months within years](https://i.imgur.com/CSZRty2.png)
+![Add code to the theme file for displaying events grouped by months within years](https://imgur.elightup.com/CSZRty2.png)
 
 Let’s see the difference!
 
@@ -304,37 +304,37 @@ $year = date( "Y", $date );
 ```
 We add the `$year` variable to the array as a key so that we can sort the events first by year and then by month within each year.
 
-![Add the $year variable to the array as a key so that we can sort the events first by year and then by month within each year](https://i.imgur.com/9pUzzgi.png)
+![Add the $year variable to the array as a key so that we can sort the events first by year and then by month within each year](https://imgur.elightup.com/9pUzzgi.png)
 
 #### Modifying to display the sorted event
 
 In the section of displaying the events, alter the new name for the div class. You should do it for style later.
 
-![Alter the new name for the div class](https://i.imgur.com/fbaARkU.png)
+![Alter the new name for the div class](https://imgur.elightup.com/fbaARkU.png)
 
 We need to edit the loop to list the year to cover the old one.
 
-![Modify the loop to list the year to cover the old one](https://i.imgur.com/7p74O50.png)
+![Modify the loop to list the year to cover the old one](https://imgur.elightup.com/7p74O50.png)
 
 Then, add another loop to display events grouped by month within each year. Particularly, the following one loops through each month within the current year.
 ```css
 foreach ( $years as $month => $events )
 ```
-![Another loop to display events grouped by month within each year](https://i.imgur.com/PG18ob3.png)
+![Another loop to display events grouped by month within each year](https://imgur.elightup.com/PG18ob3.png)
 
 #### Changing a shortcode
 
 Don’t forget to change the name of the shortcode that we’ll need to use later.
 
-![Change the name of the shortcode that we’ll need to use later](https://i.imgur.com/Y9DZ0Sa.png)
+![Change the name of the shortcode that we’ll need to use later](https://imgur.elightup.com/Y9DZ0Sa.png)
 
 Back to the page where we want to display the events, add another section. Then add a new **Shortcode** block, fill in the created shortcode.
 
-![Add a new shortcode block, fill in the created shortcode](https://i.imgur.com/DzXFNXY.png)
+![Add a new shortcode block, fill in the created shortcode](https://imgur.elightup.com/DzXFNXY.png)
 
 On the frontend, you can see the events grouped by months within years. And see the difference between the two sections as well.
 
-![The events grouped by months within years before styling](https://i.imgur.com/xkzmsel.gif)
+![The events grouped by months within years before styling](https://imgur.elightup.com/xkzmsel.gif)
 
 For a clearer view, let’s style these sections.
 
@@ -342,12 +342,12 @@ For a clearer view, let’s style these sections.
 
 Now, go to the **Customizer** section. And then, add some CSS to style the section where we display events grouped by month and year.
 
-![Add CSS to Customizer to style the sections](https://i.imgur.com/zyOGrd2.png)
+![Add CSS to Customizer to style the sections](https://imgur.elightup.com/zyOGrd2.png)
 
 Just remember to follow the div class we added to the theme file in the previous step.
 
 Now, the section is more visual.
 
-![Group events by month and year with Meta Box after styling](https://i.imgur.com/LjXznGu.gif)
+![Group events by month and year with Meta Box after styling](https://imgur.elightup.com/LjXznGu.gif)
 
 If you’re looking to take your event display even further, consider checking out our tutorial on [displaying related events](https://docs.metabox.io/tutorials/display-related-posts-based-on-shared-relationship/). Thanks for reading!

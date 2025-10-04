@@ -9,7 +9,7 @@ We’re going to find out how to **use Oxygen to display images from cloneable f
 
 I made an example like this:
 
-![The example of displaying images from cloneable fields using Meta Box and Oxygen](https://i.imgur.com/I21QKgJ.png)
+![The example of displaying images from cloneable fields using Meta Box and Oxygen](https://imgur.elightup.com/I21QKgJ.png)
 
 ## Video Version
 
@@ -33,11 +33,11 @@ With **Custom Post Types**, information from each brand will be saved in a separ
 
 Go to **Meta Box > Settings Page > Add New**.
 
-![Create a Settings Page](https://i.imgur.com/Mvf52Z4.png)
+![Create a Settings Page](https://imgur.elightup.com/Mvf52Z4.png)
 
 After publishing, a new menu named **Brands** appears.
 
-![The new Settings Page named Brands appears](https://i.imgur.com/tq05p6M.png)
+![The new Settings Page named Brands appears](https://imgur.elightup.com/tq05p6M.png)
 
 ## 2. Creating custom fields
 
@@ -79,19 +79,19 @@ The following table illustrates the fields’ structure that I’m using.
 
 This is a group with three subfields inside. It is also set to be **Cloneable** to have more places to add different brands' information.
 
-![Set this group as cloneable to have more spaces to add different brands' information](https://i.imgur.com/AejdEzp.png)
+![Set this group as cloneable to have more spaces to add different brands' information](https://imgur.elightup.com/AejdEzp.png)
 
 **Single Image** and **URL** are added to the structure. One allows you to upload photos to a library, while the other lets you connect to any image.
 
-![2 fields which are Single Image and Url help you upload images and input a link of image](https://i.imgur.com/gA0UsTn.png)
+![2 fields which are Single Image and Url help you upload images and input a link of image](https://imgur.elightup.com/gA0UsTn.png)
 
 After that, open the **Settings** tab and choose **Location** as the **Settings Page** we’ve created to apply the custom fields.
 
-![In the Settings tab, choose the Location as the Settings Page to apply the custom fields](https://i.imgur.com/VxvJWFE.png)
+![In the Settings tab, choose the Location as the Settings Page to apply the custom fields](https://imgur.elightup.com/VxvJWFE.png)
 
 Go back to the settings page, and you’ll see all of the newly created custom fields. There is an **Add More** button to add another brand’s information.
 
-![The created custom fields are displayed](https://i.imgur.com/EsuyCSx.gif)
+![The created custom fields are displayed](https://imgur.elightup.com/EsuyCSx.gif)
 
 Now, let’s fill in the information in the fields and move to the next step.
 
@@ -101,13 +101,13 @@ To add a section for displaying brands’ information, go to the Edit with Oxyge
 
 First, add a Div component.
 
-![Choose a Div component to add a section for displaying brands’ information](https://i.imgur.com/4yRloLd.png)
+![Choose a Div component to add a section for displaying brands’ information](https://imgur.elightup.com/4yRloLd.png)
 
 Next, add a Code Block inside the Div. Then, add code to the PHP&amp;HTML section.
 
-![The PHP&amp;HTML section of Code Block](https://i.imgur.com/OrkYDBg.png)
+![The PHP&amp;HTML section of Code Block](https://imgur.elightup.com/OrkYDBg.png)
 
-![Add code to the PHP&amp;HTML section](https://i.imgur.com/P5jDaTg.png)
+![Add code to the PHP&amp;HTML section](https://imgur.elightup.com/P5jDaTg.png)
 
 I’m using this code, you can refer to it.
 
@@ -165,7 +165,7 @@ After adding code, click **Apply Code**.
 
 Now, you can see all of the brand logos, along with their names, displayed in the live preview already.
 
-![After editing with Oxygen, the brand logos along with their names displayed already.](https://i.imgur.com/T2ZUjxs.png)
+![After editing with Oxygen, the brand logos along with their names displayed already.](https://imgur.elightup.com/T2ZUjxs.png)
 
 But it hasn’t looked good yet. Thus, we’ll need some CSS to make it look better.
 
@@ -173,7 +173,7 @@ But it hasn’t looked good yet. Thus, we’ll need some CSS to make it look bet
 
 From the **Primary** tab in the page editor by Oxygen, choose **CSS** to style the section.
 
-![Choose CSS to style the section](https://i.imgur.com/R8mzxkU.png)
+![Choose CSS to style the section](https://imgur.elightup.com/R8mzxkU.png)
 
 You can refer to this CSS.
 
@@ -205,11 +205,11 @@ You can refer to this CSS.
 }
 ```
 
-![Add the code](https://i.imgur.com/qbSpxxt.png)
+![Add the code](https://imgur.elightup.com/qbSpxxt.png)
 
 Here is the result.
 
-![The result after all steps](https://i.imgur.com/I21QKgJ.png)
+![The result after all steps](https://imgur.elightup.com/I21QKgJ.png)
 
 ------
 

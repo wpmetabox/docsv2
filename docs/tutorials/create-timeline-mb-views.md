@@ -8,7 +8,7 @@ Today, we'll use the **MB Views** extension from Meta Box to **create a professi
 
 Here is a simple example!
 
-![An example of the timeline as the changelog along with the date, the version, and details](https://i.imgur.com/ANBWmnE.png)
+![An example of the timeline as the changelog along with the date, the version, and details](https://imgur.elightup.com/ANBWmnE.png)
 
 ## Video version
 
@@ -34,7 +34,7 @@ In the real case, you may have an existing page with other content and just add 
 
 Go to **Pages** > **Add New** to create a new one, as usual.
 
-![Go to Pages > Add New to create a new one as usual](https://i.imgur.com/RvpQIRs.png)
+![Go to Pages > Add New to create a new one as usual](https://imgur.elightup.com/RvpQIRs.png)
 
 ## 2. Creating custom fields
 
@@ -47,35 +47,35 @@ Each timestamp includes 2 types of information:
 
 These pieces of information will go along together, so I set them up in a group. Here is the structure of the fields:
 
-![Structure of the custom fields](https://i.imgur.com/gQ3SnlJ.png)
+![Structure of the custom fields](https://imgur.elightup.com/gQ3SnlJ.png)
 
 To have them, go to **Meta Box** > **Custom Fields** and create a new field group.
 
-![Go to Meta Box > Custom Fields and create a new field group](https://i.imgur.com/39wUHLN.png)
+![Go to Meta Box > Custom Fields and create a new field group](https://imgur.elightup.com/39wUHLN.png)
 
 First, add a **Group** field.
 
-![Add a Group field](https://i.imgur.com/0Mwz8V7.png)
+![Add a Group field](https://imgur.elightup.com/0Mwz8V7.png)
 
 Inside the group, add subfields following the structure I indicated.
 
 The first one is for the time. Meta Box offers several fields for time and date, just pick one that suits you. I choose the **Date Picker** field for illustration purposes.
 
-![Add the Date Picker field for the time](https://i.imgur.com/o26M7xG.png)
+![Add the Date Picker field for the time](https://imgur.elightup.com/o26M7xG.png)
 
 The second one should be the **Post** field type. As I explained, you can add any kind of field to input content, but if you have posts including that, we can use the **Post** field to indicate those posts. Then, we must set the post type of those posts.
 
-![Use the Post field to choose a post from the regulated post type to have their content.](https://i.imgur.com/ILrnNUb.png)
+![Use the Post field to choose a post from the regulated post type to have their content.](https://imgur.elightup.com/ILrnNUb.png)
 
 I have no more special settings for these fields.
 
 But for the group, you should set it as collapsible to see all timestamp and its content in a neat structure.
 
-![Set the group as collapsible to see all changes in a clear structure](https://i.imgur.com/uxxIots.png)
+![Set the group as collapsible to see all changes in a clear structure](https://imgur.elightup.com/uxxIots.png)
 
 If you want to easily identify the content of each timestamp on the timeline, you can add a title for the group. There are several suggestions to choose from when you click on the button at the end of the **Group title** box.
 
-![There are some suggestions to set the group title](https://i.imgur.com/O69HKu0.png)
+![There are some suggestions to set the group title](https://imgur.elightup.com/O69HKu0.png)
 
 **In there**:
 
@@ -84,29 +84,29 @@ If you want to easily identify the content of each timestamp on the timeline, yo
 
 Certainly, since a timeline has multiple timestamps, we need more than one post showing on it. Therefore, we should set this group as cloneable. It’s a kind of must-have setting.
 
-![Set the group as cloneable](https://i.imgur.com/DGrvZnB.png)
+![Set the group as cloneable](https://imgur.elightup.com/DGrvZnB.png)
 
 You also can enable the **Sortable** option to rearrange the events based on the group title. In this case, I set the title as the date of the timestamp, so the posts will be sorted by the date that you set for each.
 
-![Enable the Sortable option to rearrange the events](https://i.imgur.com/rGcPCyY.png)
+![Enable the Sortable option to rearrange the events](https://imgur.elightup.com/rGcPCyY.png)
 
 After creating the fields and having reasonable settings, move to the **Settings** tab, choose **Location** as **Post type**, and select **Page**. Then, go to the **Advanced location rules** section below, and choose the page we created for the timeline to apply these fields to it.
 
-![Set the location of the field group as the post we use for the timeline.](https://i.imgur.com/v388w7x.png)
+![Set the location of the field group as the post we use for the timeline.](https://imgur.elightup.com/v388w7x.png)
 
 Now, go to the page editor, you will see the created fields.
 
-![The created fields in page editor](https://i.imgur.com/jU8OyZG.png)
+![The created fields in page editor](https://imgur.elightup.com/jU8OyZG.png)
 
 In the **Post** field, there is a list including all the posts from the post type that you set for this field.
 
-![There is a list including all the posts from the post type](https://i.imgur.com/Hs7hszw.png)
+![There is a list including all the posts from the post type](https://imgur.elightup.com/Hs7hszw.png)
 
 Just choose the date and the post.
 
 To add multiple timelines for the timeline, click on the **+ Add more** button to add the new date and content.
 
-![Click on the + Add more button to add new timestamp.](https://i.imgur.com/HwIDNlA.png)
+![Click on the + Add more button to add new timestamp.](https://imgur.elightup.com/HwIDNlA.png)
 
 Move on to display this information on the timeline using **MB Views**.
 
@@ -116,33 +116,33 @@ First, we need to get all the data saved in custom fields that we made in the pr
 
 So, head over to **Meta Box** > **Views** and create a new view as usual to do it.
 
-![Create new view with MB Views](https://i.imgur.com/SJHIpmR.png)
+![Create new view with MB Views](https://imgur.elightup.com/SJHIpmR.png)
 
 The data is from the fields, so click on the **Insert Field** button and choose the fields from the list on the right sidebar to get data from them.
 
-![Click on the Insert Field button and choose the fields from the list on the right sidebar to get data from them.](https://i.imgur.com/pU2rSsQ.png)
+![Click on the Insert Field button and choose the fields from the list on the right sidebar to get data from them.](https://imgur.elightup.com/pU2rSsQ.png)
 
 Since we applied custom fields to the post, you should look for them in the **Post** tab. Find out the group that we created for the timeline. It's cloneable, so once we click on it, a loop will be generated in the template.
 
-![Find out the group that we created for the timeline](https://i.imgur.com/B4ukuQ1.png)
+![Find out the group that we created for the timeline](https://imgur.elightup.com/B4ukuQ1.png)
 
 Next, simply choose the subfields from the list to insert them into the loop one by one.
 
-![Choose the subfields from the list to insert them into the loop one by one](https://i.imgur.com/8OJylFz.png)
+![Choose the subfields from the list to insert them into the loop one by one](https://imgur.elightup.com/8OJylFz.png)
 
 Meta Box also provides some options to set the output of the data. So, just set the one that fits your needs.
 
 For the post, we also have some options to set its output. Because I want to show all the content of the post for more detail of the event, I choose the **Post content** option.
 
-![Choose the Post content option to show all the content of the post for more detail of the event.](https://i.imgur.com/6LJdAhh.png)
+![Choose the Post content option to show all the content of the post for more detail of the event.](https://imgur.elightup.com/6LJdAhh.png)
 
 After inserting all the fields, scroll down to the **Settings** section of the view, set the **Type** setting as **Singular**, and choose the **Location** as the created page to apply the template to it. It also means adding the timeline to the page. In the other case, you can set other **location** to fit your case.
 
-![In the Settings section, set type and location for the view](https://i.imgur.com/6DrM2lt.png)
+![In the Settings section, set type and location for the view](https://imgur.elightup.com/6DrM2lt.png)
 
 Then, go to the page on the frontend, we will see all the data displayed in chronological order according to the timestamp that we saved in the **Date** field.
 
-![All the data displayed in chronological order according to the timestamp](https://i.imgur.com/GL3irL7.png)
+![All the data displayed in chronological order according to the timestamp](https://imgur.elightup.com/GL3irL7.png)
 
 We’ve just displayed the data in an appropriate order. There’s been nothing to show the timeline as a flow of time yet. The flow should be visual to help viewers easily follow the information. So, we should style this timeline a lot more.
 
@@ -150,13 +150,13 @@ We’ve just displayed the data in an appropriate order. There’s been nothing 
 
 In the real case, you may have a lot of ideas for a beautiful timeline. But, in this practice, I’m going to make the timeline in a simple style like this:
 
-![The timeline is in a simple style.](https://i.imgur.com/ANBWmnE.png)
+![The timeline is in a simple style.](https://imgur.elightup.com/ANBWmnE.png)
 
 If you like it, just follow up this step.
 
 Go back to the view that we made for the timeline to add some code:
 
-![Add code to to style the timeline.](https://i.imgur.com/uThyMMb.png)
+![Add code to to style the timeline.](https://imgur.elightup.com/uThyMMb.png)
 
 **Explanation**:
 
@@ -169,7 +169,7 @@ This line is to declare a JavaScript library. We’ll use it to have the action 
 
 As you can see in the image above, we should add some **div** tags and classes for each element that we want to have on the timeline. Along with the ones I set for the date and the content of the post, I also added a class to have the dot and another one for the **Read more** button.
 
-![Add div and class for each element we want to have in the timeline](https://i.imgur.com/HJLL6J8.png)
+![Add div and class for each element we want to have in the timeline](https://imgur.elightup.com/HJLL6J8.png)
 
 Next, insert code in the **JavaScript** tab for the **Read more** button.
 
@@ -186,7 +186,7 @@ jQuery(function ($) {
     })
 })
 ```
-![Insert code in the JavaScript tab for the Read more button](https://i.imgur.com/1vLzFvX.png)
+![Insert code in the JavaScript tab for the Read more button](https://imgur.elightup.com/1vLzFvX.png)
 
 **In there**:
 
@@ -216,7 +216,7 @@ else
 
 Finally, go to the **CSS** tab and add some code.
 
-![Go to the CSS tab, and add some code](https://i.imgur.com/Oo1MliU.png)
+![Go to the CSS tab, and add some code](https://imgur.elightup.com/Oo1MliU.png)
 
 Based on all the classes we added, even the toggle class from JavaScript, we can style the timeline easily.
 
@@ -252,7 +252,7 @@ All of these codes are available on our [GitHub](https://github.com/wpmetabox/tu
 
 After saving the template, go back to the page on the frontend. You can see the new look of the timeline after styling. The button also works well.
 
-![The new look of the timeline, and the buttons work well.](https://i.imgur.com/ANBWmnE.png)
+![The new look of the timeline, and the buttons work well.](https://imgur.elightup.com/ANBWmnE.png)
 
 By the way, if you use different page builders, stay tuned for our upcoming guide to [have a chronological timeline](https://docs.metabox.io/tutorials/create-timeline-with-bricks/).
 

@@ -9,7 +9,7 @@ The button field creates a simple button. It doesn't have any value. Usually, th
 ## Screenshots
 
 <Screenshots name="button" col1={[
-    ['https://i.imgur.com/9ciaST1.png', 'The button field interface']
+    ['https://imgur.elightup.com/9ciaST1.png', 'The button field interface']
 ]} />
 
 ## Settings

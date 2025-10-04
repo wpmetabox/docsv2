@@ -23,7 +23,7 @@ This practice will make it clearer.
 
 The simple reading progress bar will be shown at the top of the singular page of each blog post, like this:
 
-![A simple reading progress bar is at the top of the singular page of each blog post](https://i.imgur.com/tyIxuN7.gif)
+![A simple reading progress bar is at the top of the singular page of each blog post](https://imgur.elightup.com/tyIxuN7.gif)
 
 This bar will work as an indicator, letting the visitors know how much they have read and how much is left after all. Then, it may help to improve the user experience.
 
@@ -38,7 +38,7 @@ Let’s find out which tools we need for this practice:
 
 Go to **Meta Box** > **Views**, and create a new template.
 
-![Go to Meta Box > Views, and create a new template.](https://i.imgur.com/2j37Z2B.png)
+![Go to Meta Box > Views, and create a new template.](https://imgur.elightup.com/2j37Z2B.png)
 
 In the **Template** tab, I just add some **div** tags to specify the area to display the bar.
 
@@ -48,7 +48,7 @@ In the **Template** tab, I just add some **div** tags to specify the area to dis
 </div>
 ```
 
-![In the Template tab, just add some div tags to specify the area to display the bar.](https://i.imgur.com/bimLfjf.png)
+![In the Template tab, just add some div tags to specify the area to display the bar.](https://imgur.elightup.com/bimLfjf.png)
 
 **In there**:
 
@@ -79,7 +79,7 @@ Next, go to the **CSS** tab of the view, I will use the CSS to display the progr
 }
 ```
 
-![Add code to the CSS tab](https://i.imgur.com/5nYMqCa.png)
+![Add code to the CSS tab](https://imgur.elightup.com/5nYMqCa.png)
 
 Let’s go through it in more detail:
 
@@ -98,7 +98,7 @@ These lines are to set an area to cover the progress bar.
 
 In particular, these lines of code in this image help determine the position of the bar at the top of the page.
 
-![Some code to help determine the position of the bar at the top of the page.](https://i.imgur.com/vKiFsUM.png)
+![Some code to help determine the position of the bar at the top of the page.](https://imgur.elightup.com/vKiFsUM.png)
 
 The code below is to specify the height and width of the progress bar.
 
@@ -111,9 +111,9 @@ The code below is to specify the height and width of the progress bar.
 
 Rather, the width should be based on the real percentage of reading progress. But I set it full width now just for positioning it in the initial.
 
-![Set the bar full width for positioning it in the initial.](https://i.imgur.com/bCBRxIF.png)
+![Set the bar full width for positioning it in the initial.](https://imgur.elightup.com/bCBRxIF.png)
 
-For the color of the bar, I set the red color. You should change it to any color that matches your theme. 
+For the color of the bar, I set the red color. You should change it to any color that matches your theme.
 
 ```css
 background-color: #ff0000;
@@ -123,15 +123,15 @@ That’s all for the display.
 
 Now, move to the **Settings** section of the view. To apply this template to the singular pages of the blog post, set the **Type** as **Singular**. Then, choose the post type.
 
-![In the Settings section, set location to apply this template to the singular pages of the blog post](https://i.imgur.com/V53PUl8.png)
+![In the Settings section, set location to apply this template to the singular pages of the blog post](https://imgur.elightup.com/V53PUl8.png)
 
 Normally, you can choose an option for the position, but, in this case, the progress bar is at the top of the page, and I’ve specified its position in the **CSS** section before. So, the template’s setting does not affect the bar position.
 
-![Set the position for the template, it does not affect the bar position](https://i.imgur.com/tygI2n5.png)
+![Set the position for the template, it does not affect the bar position](https://imgur.elightup.com/tygI2n5.png)
 
 Now, go to a post on frontend, you can see the progress bar that we created. It now is all red, no matter whether I scroll the mouse or not.
 
-![Before using Javascript, the progress bar is all red no matter if I scroll the mouse or not.](https://i.imgur.com/3dWRNgd.gif)
+![Before using Javascript, the progress bar is all red no matter if I scroll the mouse or not.](https://imgur.elightup.com/3dWRNgd.gif)
 
 To make it work following the scroll, let’s move to the next step.
 
@@ -141,7 +141,7 @@ We should add action to the progress bar using JavaScript to trigger when the re
 
 But first, we should change the default width of the bar to be zero. It should start from zero, since the readers do so.
 
-![Change the default width of the bar to be zero](https://i.imgur.com/z06relF.png)
+![Change the default width of the bar to be zero](https://imgur.elightup.com/z06relF.png)
 
 Then, go to the **JavaScript** tab, add the following code.
 
@@ -153,7 +153,7 @@ document.addEventListener('scroll', function (e) {
 });
 ```
 
-![Add code to the JavaScript tab](https://i.imgur.com/6dZU5Dv.png)
+![Add code to the JavaScript tab](https://imgur.elightup.com/6dZU5Dv.png)
 
 **In there**:
 
@@ -164,7 +164,7 @@ const readingProgress = document.querySelector('#reading-progress-fill');
 This is to create a JavaScript object for the progress bar. `#reading-progress-fill` is the ID where we set the bar.
 
 ```css
-document.addEventListener('scroll', function (e) {: 
+document.addEventListener('scroll', function (e) {:
 ```
 
 This is to trigger the event that readers scroll the page.
@@ -174,7 +174,7 @@ I set the`w` variable to calculate the percentage of the page that the reader sc
 The following formula will do that.
 
 ```css
-(document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100: 
+(document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100:
 ```
 
 * `document.body.scrollTop || document.documentElement.scrollTop`: the number of the distance in pixels from the top to the place where the reader is.
@@ -185,7 +185,7 @@ All these elements in the formula are the HTML DOM elements. You can refer to [t
 
 Finally, the result will be converted to percentage.
 
-![The result will be converted to percentage](https://i.imgur.com/kxyKy3w.png)
+![The result will be converted to percentage](https://imgur.elightup.com/kxyKy3w.png)
 
 This line below will force the width of the progress bar to change following the result returned by the w variable.
 
@@ -197,7 +197,7 @@ That’s all.
 
 After saving the template, go back to the page on frontend. Now, when we scroll down, the progress bar will appear, and gradually lengthen according to the amount of content read.
 
-![The reading progress bar run after using Javascript](https://i.imgur.com/tyIxuN7.gif)
+![The reading progress bar run after using Javascript](https://imgur.elightup.com/tyIxuN7.gif)
 
 So we’ve already done it.
 
@@ -207,6 +207,6 @@ If you want to change the speed of change in the bar and make it more smoothly, 
 transition: width 300ms ease;
 ```
 
-![Add code to change the speed of change in the bar and make it more smoothly](https://i.imgur.com/bOLQPg9.png)
+![Add code to change the speed of change in the bar and make it more smoothly](https://imgur.elightup.com/bOLQPg9.png)
 
 Just change the number to get the effect that you expect.

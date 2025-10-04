@@ -21,33 +21,33 @@ Since I’ve already had a custom post type named **Books**, I will create a cus
 
 Use the quick action on the dashboard or go to **Meta Box > Taxonomies > Add New** to create the taxonomies. Then, just fill in the information for it.
 
-![Create custom taxonomy](https://i.imgur.com/miT907T.png)
+![Create custom taxonomy](https://imgur.elightup.com/miT907T.png)
 
 To assign this taxonomy to the **Book** post type, move to the **Post Types** tab and tick to the Book option.
 
-![Assign the created taxonomy to the wanted post type](https://i.imgur.com/dGHlcGE.png)
+![Assign the created taxonomy to the wanted post type](https://imgur.elightup.com/dGHlcGE.png)
 
 If you want to display the list of the taxonomy’s terms as a checkbox list in the post editor like the below pic, just go to **Advanced** tab, tick the **Hierarchical** box.
 
-![Choose option you want to display the list](https://i.imgur.com/DQBQMza.png)
+![Choose option you want to display the list](https://imgur.elightup.com/DQBQMza.png)
 
-![Go to Advanced section to choose](https://i.imgur.com/Wei8Bkq.png)
+![Go to Advanced section to choose](https://imgur.elightup.com/Wei8Bkq.png)
 
 Otherwise, if you do not check the Hierarchical box, the taxonomy section will display like this:
 
-![The taxonomy section displays the way you choose](https://i.imgur.com/qBYQoHQ.png)
+![The taxonomy section displays the way you choose](https://imgur.elightup.com/qBYQoHQ.png)
 
 After publishing the taxonomy, you will see it in the **Book** menu.
 
-![Created taxonomy appears in the menu](https://i.imgur.com/dh8y7kR.png)
+![Created taxonomy appears in the menu](https://imgur.elightup.com/dh8y7kR.png)
 
 Now, you can create terms for the taxonomy.
 
-![Create terms for the taxonomy](https://i.imgur.com/RtCi2no.png)
+![Create terms for the taxonomy](https://imgur.elightup.com/RtCi2no.png)
 
 Then, you will see all the terms displayed in the post editor.
 
-![Terms display in the post editor](https://i.imgur.com/DQBQMza.png)
+![Terms display in the post editor](https://imgur.elightup.com/DQBQMza.png)
 
 ### 2. Displaying the taxonomy terms on the archive page
 
@@ -67,7 +67,7 @@ In there, ***publisher*** is the slug of the created taxonomy. You can replace i
 
 This is how your term displays in the archive page:
 
-![The terms display in the archive page](https://i.imgur.com/HuBUeD1.png)
+![The terms display in the archive page](https://imgur.elightup.com/HuBUeD1.png)
 
 ### 3. Getting posts by the taxonomy terms
 
@@ -103,7 +103,7 @@ In this code:
 
 Here is the final result. All books of that term are filtered.
 
-![The final result](https://i.imgur.com/qCrvR8p.gif)
+![The final result](https://imgur.elightup.com/qCrvR8p.gif)
 
 ## Using custom fields
 
@@ -116,15 +116,15 @@ For the Book’s Author, I set it as a **Text** field to easily fill in the name
 
 Note that, you should remember the field’s ID to add it to the code.
 
-![add the field's ID to the code](https://i.imgur.com/XLkACEE.png)
+![add the field's ID to the code](https://imgur.elightup.com/XLkACEE.png)
 
 Move to the **Settings** tab, choose **Location** as **Post Type**, and select **Book** to apply this field to this post type.
 
-![Set location for the fields](https://i.imgur.com/zEivz1d.png)
+![Set location for the fields](https://imgur.elightup.com/zEivz1d.png)
 
 Here is the created custom field in the post editor.
 
-![created fields](https://i.imgur.com/luX44DB.png)
+![created fields](https://imgur.elightup.com/luX44DB.png)
 
 ### 2. Displaying the list of fields’ value
 
@@ -146,7 +146,7 @@ In this code, we use a raw SQL query to get all values of the `book_author` cust
 
 Now, in the archive page, all the created custom fields have been obtained.
 
-![All the created custom fields have been obtained in the archive page](https://i.imgur.com/Ri98Mwa.png)
+![All the created custom fields have been obtained in the archive page](https://imgur.elightup.com/Ri98Mwa.png)
 
 ### 3. Getting posts by custom field’s values
 
@@ -169,5 +169,5 @@ Similar to filter posts by taxonomy, we use the `pre_get_action` and set the que
 
 Here is the result when I filter all books of the author:
 
-![The result after all steps](https://i.imgur.com/p1Hs1hN.gif)
+![The result after all steps](https://imgur.elightup.com/p1Hs1hN.gif)
 

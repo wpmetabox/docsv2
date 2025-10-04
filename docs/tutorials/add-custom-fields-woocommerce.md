@@ -12,27 +12,27 @@ In addition to using [Meta Box](https://metabox.io/), make sure you already have
 
 Go to **Meta Box > Custom Fields > Add New** to create any fields for saving extra information for your products.
 
-![create custom fields](https://i.imgur.com/5BklrEY.png)
+![create custom fields](https://imgur.elightup.com/5BklrEY.png)
 
 Meta Box has more than 50 field types, so you can choose any kind of field to input any data you want. We already have a [video about all Meta Box field types](https://www.youtube.com/watch?v=WWeaM5vIAwM) and each field’s features so that you can learn about each one.
 
 Simply select one from the drop-down list to add your desired field, as shown in the image below.
 
-![select the wanted custom fields](https://i.imgur.com/jgHdO0x.png)
+![select the wanted custom fields](https://imgur.elightup.com/jgHdO0x.png)
 
 Here is the example field that I created.
 
-![example of the created custom fields](https://i.imgur.com/Qgr9zEl.png)
+![example of the created custom fields](https://imgur.elightup.com/Qgr9zEl.png)
 
 Finally, move to the **Settings** tab and select the name of the post type that you want to display in the **Post types** section.
 
-![Select name of the post type](https://i.imgur.com/Z1TSPTs.png)
+![Select name of the post type](https://imgur.elightup.com/Z1TSPTs.png)
 
 Here, the post type of my product articles is *Product*, so I also choose *Product* in **Post types**. Note that this is the post type created by WooCommerce.
 
 After publishing the field group, return to the editor page of the product (post type is Product), and you will see the custom fields you just created displayed there.
 
-![custom fields show in the page editor](https://i.imgur.com/p0B7u59.png)
+![custom fields show in the page editor](https://imgur.elightup.com/p0B7u59.png)
 
 ## 2. Displaying custom fields on the front end
 
@@ -70,7 +70,7 @@ My `'color_1'` field has multiple values, so I need to use the loop to call out 
 
 After that, the values of the field I added will display like this:
 
-![The values of the added field will display like this](https://i.imgur.com/vIQpq2n.png)
+![The values of the added field will display like this](https://imgur.elightup.com/vIQpq2n.png)
 
 The color section of the product here is temporarily not shown, so I added some CSS to style this part.
 
@@ -99,4 +99,4 @@ The color section of the product here is temporarily not shown, so I added some 
 
 Here is the result:
 
-![The result](https://i.imgur.com/0xVlFOM.png)
+![The result](https://imgur.elightup.com/0xVlFOM.png)

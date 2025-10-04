@@ -104,8 +104,8 @@ And here is the result:
 
 When editing a post:
 
-![edit posts](https://i.imgur.com/J81E2ZO.png)
+![edit posts](https://imgur.elightup.com/J81E2ZO.png)
 
 When editing a page:
 
-![edit page](https://i.imgur.com/P6guXho.png)
+![edit page](https://imgur.elightup.com/P6guXho.png)

@@ -11,7 +11,7 @@ It helps to show the live preview below the field when input data, and also disp
 ## Screenshots
 
 <Screenshots name="oEmbed" col1={[
-    ['https://i.imgur.com/TjOrOMM.png', 'The oEmbed field interface']
+    ['https://imgur.elightup.com/TjOrOMM.png', 'The oEmbed field interface']
 ]} />
 
 This is an easy way to add videos from [Youtube](http://www.youtube.com/), [Vimeo](http://vimeo.com/), or [Tiktok](https://www.tiktok.com/en), musics from [Spotify](http://www.spotify.com/) or [SoundCloud](http://soundcloud.com/), presentation slideshows from [SlideShare](http://www.slideshare.net/), and so much other content from third-party services into your WordPress site.

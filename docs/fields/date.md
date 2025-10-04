@@ -9,7 +9,7 @@ The date field allows you to select a date via a friendly UI. This field uses th
 ## Screenshots
 
 <Screenshots name="date" col1={[
-    ['https://i.imgur.com/MxcgZJy.png', 'The date field interface']
+    ['https://imgur.elightup.com/MxcgZJy.png', 'The date field interface']
 ]} />
 
 ## Settings

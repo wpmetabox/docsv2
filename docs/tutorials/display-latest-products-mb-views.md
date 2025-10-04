@@ -6,7 +6,7 @@ We’ll create a section and choose the products or posts that are the latest on
 
 I’ll take the restaurants as an example for products.
 
-![the example of creating the latest restaurants section.](https://i.imgur.com/6EhYqsk.png)
+![the example of creating the latest restaurants section.](https://imgur.elightup.com/6EhYqsk.png)
 
 ## Preparation
 
@@ -23,33 +23,33 @@ So, here are the tools we need.
 
 Go to **Meta Box > Post Types** to create a new post type.
 
-![Create a new post type for the latest products](https://i.imgur.com/cIExZCY.png)
+![Create a new post type for the latest products](https://imgur.elightup.com/cIExZCY.png)
 
 After publishing, you will see a new **Restaurant** menu in the **Admin Dashboard**.
 
-![The newly created custom post type appears on the menu dashboard](https://i.imgur.com/Ip1pYfc.png)
+![The newly created custom post type appears on the menu dashboard](https://imgur.elightup.com/Ip1pYfc.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group.
 
-![Create Custom Fields for the lastest products.](https://i.imgur.com/0XOJMvV.png)
+![Create Custom Fields for the lastest products.](https://imgur.elightup.com/0XOJMvV.png)
 
 My fields are quite simple so just create them as usual. Note that you should use the **easy-to-remember** ID since we’ll use them in the next step.
 
 For the **Status** and **Voucher** information, I choose the **Select** and **Checkbox List** field respectively to add some options in the **Choices** box.
 
-![Add options to the Status field](https://i.imgur.com/IZYsZlG.png)
+![Add options to the Status field](https://imgur.elightup.com/IZYsZlG.png)
 
-![Add options to the Voucher field](https://i.imgur.com/zBcGWDw.png)
+![Add options to the Voucher field](https://imgur.elightup.com/zBcGWDw.png)
 
 After creating all the fields, move to the **Settings** tab, choose **Location** as **Post Type** and select the **Restaurant** to apply these created fields to that post type.
 
-![Choose the post type as Restaurant in Location section.](https://i.imgur.com/j8ix3Jc.png)
+![Choose the post type as Restaurant in Location section.](https://imgur.elightup.com/j8ix3Jc.png)
 
 Now, when creating a post in the Restaurant post type, you’ll see all the fields.
 
-![Enter the information for the post.](https://i.imgur.com/albVCmK.png)
+![Enter the information for the post.](https://imgur.elightup.com/albVCmK.png)
 
 ## 3. Displaying posts and its information on the page
 
@@ -64,7 +64,7 @@ In the **Template** tab, add this code:
             ………
 {% endfor %}
 ```
-![Use MB Views to create a new template for the latest products.](https://i.imgur.com/njcRNNo.png)
+![Use MB Views to create a new template for the latest products.](https://imgur.elightup.com/njcRNNo.png)
 
 This code is used to display the list of posts (restaurants) in the **descending order**. We’ll  display all the information of the restaurants such as featured images, vouchers, logos, restaurants’ names, addresses, open/close status and **View Detail** buttons.
 
@@ -79,29 +79,29 @@ This code is used to display the list of posts (restaurants) in the **descending
 
 Inside the loop, insert fields which we want to get the data from.
 
-![Inside the loop, insert fields which we want to get the data from](https://i.imgur.com/B8TpKcm.gif)
+![Inside the loop, insert fields which we want to get the data from](https://imgur.elightup.com/B8TpKcm.gif)
 
-![The shortcode is generated after click Public.](https://i.imgur.com/3tGFCK1.png)
+![The shortcode is generated after click Public.](https://imgur.elightup.com/3tGFCK1.png)
 
 For easier styling later, you can add some div tags like this:
 
-![add soem dic tags](https://i.imgur.com/o4rmOuA.png)
+![add soem dic tags](https://imgur.elightup.com/o4rmOuA.png)
 
 Then, scroll down to the **Settings** tab, select **Shortcode** in the **Type** section to save this template as a shortcode.
 
-![The shortcode is generated after click Public.](https://i.imgur.com/mmq9xkW.png)
+![The shortcode is generated after click Public.](https://imgur.elightup.com/mmq9xkW.png)
 
 After publishing the template, you’ll see the shortcode generated. Just copy and paste it anywhere you want on the website.
 
-![The shortcode is generated after click Public.](https://i.imgur.com/hBWD7NI.png)
+![The shortcode is generated after click Public.](https://imgur.elightup.com/hBWD7NI.png)
 
 For example, I’ve already had a homepage built with Gutenberg. I’ll paste it in this position.
 
-![Paste the shortcode to homepage built with Gutenberg.](https://i.imgur.com/rVPA1aE.png)
+![Paste the shortcode to homepage built with Gutenberg.](https://imgur.elightup.com/rVPA1aE.png)
 
 The section for the latest posts will display on the homepage like this:
 
-![display the latest products on homepage with custom field’ value](https://i.imgur.com/1KWIwxo.gif)
+![display the latest products on homepage with custom field’ value](https://imgur.elightup.com/1KWIwxo.gif)
 
 You can refer to the code that I used here.
 
@@ -109,21 +109,21 @@ You can refer to the code that I used here.
 
 If you want to have advanced styling, go back to the created template in the **Views**. Depending on your idea about the look of the section, you can add both CSS and JS code to the corresponding tab of the view.
 
-![Add code to this CSS tab in Views](https://i.imgur.com/KwDRokj.png)
+![Add code to this CSS tab in Views](https://imgur.elightup.com/KwDRokj.png)
 
 For example, I add CSS like this:
 
-![Add some CSS code](https://i.imgur.com/4TxsHPb.png)
+![Add some CSS code](https://imgur.elightup.com/4TxsHPb.png)
 
 To have styling for the status and create slider for the section, we can use some JS by adding code to the **JavaScript** tab in the view.
 
-![use some JS by adding code to the JavaScript tab in the view](https://i.imgur.com/GGAVa0d.png)
+![use some JS by adding code to the JavaScript tab in the view](https://imgur.elightup.com/GGAVa0d.png)
 
 You can refer to all the code in this post on our [Github](https://github.com/wpmetabox/tutorials/tree/master/display-latest-posts-with-MB-Views).
 
 This is how this section displays on frontend with the final look.
 
-![The result after all steps](https://i.imgur.com/r1RmxjF.gif)
+![The result after all steps](https://imgur.elightup.com/r1RmxjF.gif)
 
 
 

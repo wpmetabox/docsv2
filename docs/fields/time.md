@@ -9,8 +9,8 @@ The time field allows you to select a time via a friendly UI. This field uses jQ
 ## Screenshots
 
 <Screenshots name="time" col1={[
-    ['https://i.imgur.com/xwV5FN5.png', 'The time field interface'],
-    ['https://i.imgur.com/S83Wpau.png', 'The time field with select dropdowns']
+    ['https://imgur.elightup.com/xwV5FN5.png', 'The time field interface'],
+    ['https://imgur.elightup.com/S83Wpau.png', 'The time field with select dropdowns']
 ]} />
 
 ## Settings

@@ -74,7 +74,7 @@ function meta_box_tooltip_demo_register( $meta_boxes ) {
                 'id'      => 'email',
                 'type'    => 'text',
                 'tooltip' => array(
-                    'icon'     => 'https://i.imgur.com/ZQI2DNx.png',
+                    'icon'     => 'https://imgur.elightup.com/ZQI2DNx.png',
                     'content'  => 'Custom icon',
                     'position' => 'right',
                 ),

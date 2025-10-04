@@ -6,7 +6,7 @@ title: MB Favorite Posts
 
 **MB Favorite Posts** is a WordPress plugin that helps you create the “Favorite Post” button easily. Users can click the button to **bookmark posts as favorites**, and then review them on a Dashboard page. You can enable this feature for **both guests and logged-in users**.
 
-![The Favorite button on the front end of a WordPress website](https://i.imgur.com/JIiikVW.png)
+![The Favorite button on the front end of a WordPress website](https://imgur.elightup.com/JIiikVW.png)
 
 **Note**: MB Favorite Posts plugin is only available for the [Lifetime Bundle](https://metabox.io/pricing/).
 
@@ -16,7 +16,7 @@ First, you need to install and activate Meta Box from [wordpress.org](https://wo
 
 Upon finishing, the Favorite Posts Button will be automatically added to your WordPress website with the default settings:
 
-![MB Favorite Posts plugin automatically add the button to your WordPress website](https://i.imgur.com/y5MAFRk.png)
+![MB Favorite Posts plugin automatically add the button to your WordPress website](https://imgur.elightup.com/y5MAFRk.png)
 
 To configure the Favorite Posts button to fit your needs, move to the next step.
 
@@ -24,7 +24,7 @@ To configure the Favorite Posts button to fit your needs, move to the next step.
 
 Go to **Settings** > **Favorite Posts**. You will see the UI with sections as follows:
 
-![plugin settings](https://i.imgur.com/xLgurGV.png)
+![plugin settings](https://imgur.elightup.com/xLgurGV.png)
 
 Here you can change the style for the button. We create 3 predefined styles for you to choose from:
 
@@ -46,25 +46,25 @@ The Dashboard page shows all the favorite posts of a user, and the Register page
 
 You can choose available pages on the website and change them to the Dashboard page and the Register page.
 
-![Change available pages on the website to the Dashboard page and the Register page](https://i.imgur.com/UMR7SsL.png)
+![Change available pages on the website to the Dashboard page and the Register page](https://imgur.elightup.com/UMR7SsL.png)
 
 For example, I choose these pages:
 
-![Change two pages to the Dashboard page and the Register page](https://i.imgur.com/6e5wOLu.png)
+![Change two pages to the Dashboard page and the Register page](https://imgur.elightup.com/6e5wOLu.png)
 
 Better yet, you should create brand new pages for this purpose. To do so, go to **Pages** > **Add New**, fill in the name for the page and click **Publish**.
 
-![Create brand new pages on the WordPress website](https://i.imgur.com/6lDi2YI.png)
+![Create brand new pages on the WordPress website](https://imgur.elightup.com/6lDi2YI.png)
 
 The Register page and the Dashboard page will be displayed on the front end as follows:
 
-![The Register page shows up on the WordPress website](https://i.imgur.com/uwH64JE.png)
+![The Register page shows up on the WordPress website](https://imgur.elightup.com/uwH64JE.png)
 
-![The Dashboard page shows up on the WordPress website](https://i.imgur.com/4uDV7P1.png)
+![The Dashboard page shows up on the WordPress website](https://imgur.elightup.com/4uDV7P1.png)
 
 To delete a post from the favorite list, just click the icon on the right of the post name:
 
-![Delete a post from the favorite list.](https://i.imgur.com/KxbKTyf.png)
+![Delete a post from the favorite list.](https://imgur.elightup.com/KxbKTyf.png)
 
 ## Shortcodes
 

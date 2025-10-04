@@ -9,7 +9,7 @@ We’re going to use a new method to create a team members page using Meta Box o
 
 This is the sample that I made.
 
-![Example of a team member page](https://i.imgur.com/TXY7fCC.png)
+![Example of a team member page](https://imgur.elightup.com/TXY7fCC.png)
 
 ## Video version
 
@@ -30,37 +30,37 @@ To do it, we need Meta Box and its extensions:
 
 In the **Admin Dashboard**, go to **Meta Box > Post Types**, then create a new post type for the members.
 
-![Create a new custom post type for the Team Members](https://i.imgur.com/eaUVoER.png)
+![Create a new custom post type for the Team Members](https://imgur.elightup.com/eaUVoER.png)
 
 Publish and you will see a new menu in your dashboard.
 
-![The result appears after creating](https://i.imgur.com/vrcT9BN.png)
+![The result appears after creating](https://imgur.elightup.com/vrcT9BN.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create a new field group.
 
-![Add new fields](https://i.imgur.com/pU2U2Wn.png)
+![Add new fields](https://imgur.elightup.com/pU2U2Wn.png)
 
 For the member’s information, I’ll create some following fields:
 
-![Custom fields for Team Members](https://i.imgur.com/ouMfsKe.png)
+![Custom fields for Team Members](https://imgur.elightup.com/ouMfsKe.png)
 
 In the event that you want to add more information, just create additional fields as you go.
 
 After creating all the fields, move to the **Settings** tab of the field group. In the **Location** section, choose the **Post Type** and select **Team Member** to apply these fields to this post type.
 
-![Set location for the custom field as the created post type](https://i.imgur.com/sqmVZ9x.png)
+![Set location for the custom field as the created post type](https://imgur.elightup.com/sqmVZ9x.png)
 
 When adding a new post in the Team Member post type, you will see all the fields here.
 
-![The custom fields display in the post editor](https://i.imgur.com/hrepb82.png)
+![The custom fields display in the post editor](https://imgur.elightup.com/hrepb82.png)
 
 ## 3. Creating a template
 
 In the **Admin Dashboard**, go to **Meta Box > Views > Add New** to create a new template.
 
-![Create a new template.](https://i.imgur.com/n4xngkG.png)
+![Create a new template.](https://imgur.elightup.com/n4xngkG.png)
 
 In the **Template** tab of the view, add some code:
 
@@ -76,7 +76,7 @@ In the **Template** tab of the view, add some code:
     {{ mb.rwmb_the_value( 'position', '', post.ID, false ) }}
 {% endfor %}
 ```
-![Add new code to the template.](https://i.imgur.com/TQW38fy.png)
+![Add new code to the template.](https://imgur.elightup.com/TQW38fy.png)
 
 **Explanation**:
 
@@ -115,17 +115,17 @@ The `rwmb_the_value()` is the function to get the label of the options in the **
 
 To style the template, I used some div classes and added them to the code.
 
-![Use some Div class to style the template](https://i.imgur.com/Yhl503n.png)
+![Use some Div class to style the template](https://imgur.elightup.com/Yhl503n.png)
 
 You can refer to all the code [here](https://github.com/wpmetabox/tutorials/blob/master/create-a-team-members-page-with-mb-views/template.php).
 
 After adding code, scroll down to the **Settings** section > **Type** option as **Singular** and choose **Location** as **Page**. Then, select **Meet The Team** to apply this template to the wanted page.
 
-![Adjust the template and apply to the page](https://i.imgur.com/N2KLyvZ.png)
+![Adjust the template and apply to the page](https://imgur.elightup.com/N2KLyvZ.png)
 
 Go to the **Meet The Team** page and you will see all the data has been displayed already.
 
-![Result after applying the template](https://i.imgur.com/Ko8JdeR.png)
+![Result after applying the template](https://imgur.elightup.com/Ko8JdeR.png)
 
 Now, all the information of the members has been obtained and displayed to the page.
 
@@ -133,11 +133,11 @@ Now, all the information of the members has been obtained and displayed to the p
 
 If you want to style the page, you can easily do it by adding some CSS in the CSS tab of the created template in the Views.
 
-![Style the page.](https://i.imgur.com/GAbooNk.png)
+![Style the page.](https://imgur.elightup.com/GAbooNk.png)
 
 All the CSS code that I used is on [Github](https://github.com/wpmetabox/tutorials/blob/master/create-a-team-members-page-with-mb-views/custom.css). Refer to it for more details.
 
 Update it and see the result on the frontend.
 
-![Result after all steps](https://i.imgur.com/TXY7fCC.png)
+![Result after all steps](https://imgur.elightup.com/TXY7fCC.png)
 

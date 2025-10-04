@@ -4,7 +4,7 @@ title: Displaying product variations - Meta Box + Oxygen
 
 Let’s display product variations that are stored in custom fields to the product page. We’ll use **Oxygen** to build the page.
 
-![Example of product variations](https://i.imgur.com/TbbFLpa.gif)
+![Example of product variations](https://imgur.elightup.com/TbbFLpa.gif)
 
 ## Video version
 
@@ -25,13 +25,13 @@ The last one is [Oxygen](https://oxygenbuilder.com/). You should use the 3.9 ver
 
 Go to **Meta Box > Post Types > New Post Type**.
 
-![Create a new custom post type](https://i.imgur.com/sA6AR2s.png)
+![Create a new custom post type](https://imgur.elightup.com/sA6AR2s.png)
 
 ## 2. Creating custom fields
 
 The product normally has a lot of information that we need to save in custom fields. Go to **Meta Box > Custom Fields > Add New** to create them.
 
-![create custom fields](https://i.imgur.com/sB2mWc8.png)
+![create custom fields](https://imgur.elightup.com/sB2mWc8.png)
 
 In this tutorial, just take a typical example of a fashion product and look at the below structure for fields:
 
@@ -83,13 +83,13 @@ In this tutorial, just take a typical example of a fashion product and look at t
 
 Since the product may have more than one variation, I set this group to be cloneable.
 
-![Set the Variations of Product group as cloneable to have more spaces to add variations.](https://i.imgur.com/bTOZOMH.png)
+![Set the Variations of Product group as cloneable to have more spaces to add variations.](https://imgur.elightup.com/bTOZOMH.png)
 
 In the **Settings** tab of the field group, remember to set location for it to be your product’s post type.
 
 Back in the post editor of your product, you’ll see the created fields.
 
-![The created custom fields are displayed in post editor.](https://i.imgur.com/Ntyl4wY.png)
+![The created custom fields are displayed in post editor.](https://imgur.elightup.com/Ntyl4wY.png)
 
 Just enter information for the product.
 
@@ -99,21 +99,21 @@ Go to the **Oxygen** menu and create a new template.
 
 In the settings of the template, choose a design that you want the template inherit from, then choose your post type in the **Singular** section to apply the template to it.
 
-![Choose the design and post type for the template.](https://i.imgur.com/Lnkfcnq.png)
+![Choose the design and post type for the template.](https://imgur.elightup.com/Lnkfcnq.png)
 
 Back to the post editor of your post type, you will see the section with **Edit with Oxygen** button. Click it to edit the template.
 
-![Click Edit with Oxygen to edit the template.](https://i.imgur.com/vTyDODo.png)
+![Click Edit with Oxygen to edit the template.](https://imgur.elightup.com/vTyDODo.png)
 
 Now, add a **Section** component for having a container.
 
-![Add a Section component](https://i.imgur.com/kcgbyHK.png)
+![Add a Section component](https://imgur.elightup.com/kcgbyHK.png)
 
 Then, add the **Code Block** inside and choose the **PHP & HTML** section to add code.
 
-![Go to PHP & HTML in Code Block to add code.](https://i.imgur.com/FW8fQ9F.png)
+![Go to PHP & HTML in Code Block to add code.](https://imgur.elightup.com/FW8fQ9F.png)
 
-![Add code to the Code Block](https://i.imgur.com/txC7S8S.png)
+![Add code to the Code Block](https://imgur.elightup.com/txC7S8S.png)
 
 This code was uploaded to [Github](https://github.com/wpmetabox/tutorials/blob/master/display-product-variations/template-oxygen.php), you can refer to it for more details.
 
@@ -213,7 +213,7 @@ This attribute will obtain the name of the corresponding color, then we’ll kno
 
 Apply the code then back to a single product page, you’ll see all the information of product display.
 
-![Apply the code then back to a single product page](https://i.imgur.com/fOaCeZD.png)
+![Apply the code then back to a single product page](https://imgur.elightup.com/fOaCeZD.png)
 
 ## 4. Setting rules to display the variations
 
@@ -225,13 +225,13 @@ Please notice that you can use a 3rd party plugin to add JS and CSS instead of i
 
 For the slider and the rule, I use the Slick library. It is also available on [Github](https://github.com/kenwheeler/slick). We just need three files here.
 
-![JS and CSS files in the Slick library.](https://i.imgur.com/fkSE9Mv.png)
+![JS and CSS files in the Slick library.](https://imgur.elightup.com/fkSE9Mv.png)
 
 ### Creating custom js for slider and rules
 
 Next, create a new **custom.js** file in the **js** folder and add code to it.
 
-![Add code to custom.js file.](https://i.imgur.com/qpLNLT0.png)
+![Add code to custom.js file.](https://imgur.elightup.com/qpLNLT0.png)
 
  ```js
 jQuery(document).ready(function ($) {
@@ -339,18 +339,18 @@ Add code inside the function **custom_enqueue_files()** in the `plugin.php` file
 
 Go back to a single product page, there is a slider and some differences.
 
-![The product images have already turned into a slider.](https://i.imgur.com/QR1FF2Z.gif)
+![The product images have already turned into a slider.](https://imgur.elightup.com/QR1FF2Z.gif)
 
 ## 5. Styling the product page
 
 Back to page editor by Oxygen, go to **Manage > Stylesheets > Add Stylesheet** to have space to add CSS.
 
-![Go to Manage > Stylesheets > Add Stylesheet to have space to add CSS](https://i.imgur.com/bXom5pT.png)
+![Go to Manage > Stylesheets > Add Stylesheet to have space to add CSS](https://imgur.elightup.com/bXom5pT.png)
 
 Then add code into the box. All the code is uploaded into [Github](https://github.com/wpmetabox/tutorials/blob/master/display-product-variations-with-Oxygen/custom.css), so you can refer to it.
 
-![Add CSS to the box](https://i.imgur.com/fTmhDu0.png)
+![Add CSS to the box](https://imgur.elightup.com/fTmhDu0.png)
 
 Now, on the single product page, you’ll see a final result. When you select a color, the photo gallery will change to that color automatically. At the same time, the sizes and prices also change correspondingly.
 
-![The product variations turned into a new look.](https://i.imgur.com/TbbFLpa.gif)
+![The product variations turned into a new look.](https://imgur.elightup.com/TbbFLpa.gif)

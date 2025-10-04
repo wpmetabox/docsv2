@@ -12,11 +12,11 @@ To enable automatic updates, you need to have a valid license key. Go to [My Acc
 
 Then go to **Meta Box » License** and enter your license key and click **Save Changes** button.
 
-![entering meta box license key](https://i.imgur.com/vybVU36.png)
+![entering meta box license key](https://imgur.elightup.com/vybVU36.png)
 
 From now on, when WordPress checks new versions for plugins, it will also check for new versions of Meta Box extensions. If there is any new update, you'll see this:
 
-![New versions](https://i.imgur.com/Gul7JuL.png)
+![New versions](https://imgur.elightup.com/Gul7JuL.png)
 
 Then you can update the extensions the same way as for other plugins by clicking the **Update now** link.
 

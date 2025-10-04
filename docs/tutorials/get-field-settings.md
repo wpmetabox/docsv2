@@ -4,7 +4,7 @@ title: Getting field settings by field ID
 
 In case you want to refer to the field's name, field's options array (in a select field) or other settings later in your code, the `rwmb_get_field_settings()` function will help you do it as your desire.
 
-![Getting field settings by field ID](https://i.imgur.com/dZqo7d0.png)
+![Getting field settings by field ID](https://imgur.elightup.com/dZqo7d0.png)
 
 ## About the function
 
@@ -54,4 +54,4 @@ function prefix_show_meta_info($group){
 
 Using `rwmb_get_field_settings()`, you don't have to remember the field's name anymore. Your code will be minimal and clear.
 
-So, if you need to refer to the field settings, this function is all you need. 
+So, if you need to refer to the field settings, this function is all you need.

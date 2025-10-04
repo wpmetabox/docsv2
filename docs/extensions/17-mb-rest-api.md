@@ -51,7 +51,7 @@ Assuming you have a [custom post type](/custom-post-types/) called "Event" and y
 
 And then enter the data for an event:
 
-![Enter data for an event](https://i.imgur.com/lrZHeJw.png)
+![Enter data for an event](https://imgur.elightup.com/lrZHeJw.png)
 
 **Instead of creating extra Rest endpoints, which introduce a new API and syntax, MB Rest API extends the [existing WordPress endpoint for posts](https://developer.wordpress.org/rest-api/reference/posts/#retrieve-a-post) to add data for Meta Box's fields.**
 

@@ -9,7 +9,7 @@ We’re going to **create a recipe** page using MB Views. This page is a singula
 
 There is some information on the page like this:
 
-![The recipe on a food blog](https://i.imgur.com/INT35XD.png)
+![The recipe on a food blog](https://imgur.elightup.com/INT35XD.png)
 
 And, we’re creating a page with another style for demo only.
 
@@ -32,11 +32,11 @@ I use [eStar](https://gretathemes.com/wordpress-themes/estar/) in this tutorial.
 
 Use the quick action in the dashboard or go to **Meta Box > Post Types > New Post Types**.
 
-![Create the Recipe custom post type for posting recipes with Meta Box plugin.](https://i.imgur.com/GYpKmFA.png)
+![Create the Recipe custom post type for posting recipes with Meta Box plugin.](https://imgur.elightup.com/GYpKmFA.png)
 
 I created the Recipe post type with the following information:
 
-![Create the post type](https://i.imgur.com/fBqG9cp.png)
+![Create the post type](https://imgur.elightup.com/fBqG9cp.png)
 
 ## 2. Creating custom fields
 
@@ -44,21 +44,21 @@ Go to **Meta Box > Custom Fields > Add New**.
 
 Here are the custom fields that I created:
 
-![The custom fields for the recipe post type](https://i.imgur.com/eQqMYU2.png)
+![The custom fields for the recipe post type](https://imgur.elightup.com/eQqMYU2.png)
 
 After finishing creating the fields, move to the **Settings** tab. In the **Location** section, select **Post Types** as **Recipe** to apply these fields to the post type.
 
-![Choose the post type as recipe](https://i.imgur.com/57Ni4p8.png)
+![Choose the post type as recipe](https://imgur.elightup.com/57Ni4p8.png)
 
 Back to the post editor, you will see all of the newly created custom fields.
 
-![Newly created custom fields in the post editor](https://i.imgur.com/CW1s8Jk.png)
+![Newly created custom fields in the post editor](https://imgur.elightup.com/CW1s8Jk.png)
 
 ## 3. Displaying recipe information on frontend
 
 I’m going to display the recipe information saved in custom fields into this section on the singular post page.
 
-![Custom fields](https://i.imgur.com/Wp1BugZ.png)
+![Custom fields](https://imgur.elightup.com/Wp1BugZ.png)
 
 There are two methods to get and display the custom fields’ value on the front end:
 
@@ -171,29 +171,29 @@ function estar_child_recipe() {
 
 Go to **Meta Box > Views > Add New**.
 
-![Add MB views](https://i.imgur.com/NAnJJ7P.png)
+![Add MB views](https://imgur.elightup.com/NAnJJ7P.png)
 
 In the **Template** tab of the view, insert wanted fields to get the information by clicking the **Insert Field** button and choosing the corresponding fields from the list.
 
-![Insert the wanted fields](https://i.imgur.com/0vPuqpf.gif)
+![Insert the wanted fields](https://imgur.elightup.com/0vPuqpf.gif)
 
-![choose the corresponding fields from the list](https://i.imgur.com/t6TDfDz.png)
+![choose the corresponding fields from the list](https://imgur.elightup.com/t6TDfDz.png)
 
 After getting all the wanted fields, we should add some div tag and class for easier styling in the next step.
 
-![add some div tag](https://i.imgur.com/3VWd3TO.png)
+![add some div tag](https://imgur.elightup.com/3VWd3TO.png)
 
 I’ve uploaded all of these codes on [Github](https://github.com/wpmetabox/tutorials/blob/master/create-recipe-with-meta-box/template.php), you can refer to it.
 
 Next, scroll down to see the **Settings** section of the view:
 
-![Settings section of the view](https://i.imgur.com/eZYZtZn.png)
+![Settings section of the view](https://imgur.elightup.com/eZYZtZn.png)
 
 Set the **Type** of the template as **Singular**, then choose the **Location** as **Recipe** to apply this template to all the posts in the Recipe post type.
 
 Now, whichever method you choose, you’ll get the result like this:
 
-![Set loction for the custom fields](https://i.imgur.com/hHzqid1.jpg)
+![Set loction for the custom fields](https://imgur.elightup.com/hHzqid1.jpg)
 
 ## 3. Styling the recipe page
 
@@ -248,11 +248,11 @@ This is my example CSS:
 ```
 Otherwise, if you use the method 2 in the previous step, which means you’re using the MB Views, you can go back to the Views to edit the template and insert the above CSS code to the view.
 
-![Insert the CSS code](https://i.imgur.com/rS5NJ1Z.png)
+![Insert the CSS code](https://imgur.elightup.com/rS5NJ1Z.png)
 
 Now my pizza recipe looks much more delicious and beautiful.
 
-![The result](https://i.imgur.com/evpVQXw.jpg)
+![The result](https://imgur.elightup.com/evpVQXw.jpg)
 
 ------
 

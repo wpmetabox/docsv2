@@ -9,7 +9,7 @@ The color field allows you to select a color. This field uses the built-in WordP
 ## Screenshots
 
 <Screenshots name="color" col1={[
-    ['https://i.imgur.com/a8IFYvx.png', 'The color field interface']
+    ['https://imgur.elightup.com/a8IFYvx.png', 'The color field interface']
 ]} />
 
 ## Settings
@@ -61,4 +61,4 @@ If the field is cloneable, then the value is stored as a serialized array in a s
 
 which displays the color as a single dot like this:
 
-![display color](https://i.imgur.com/gLAVBYS.png)
+![display color](https://imgur.elightup.com/gLAVBYS.png)

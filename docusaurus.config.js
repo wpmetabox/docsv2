@@ -72,7 +72,7 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      image: 'https://i.imgur.com/wnJtgSC.jpg',
+      image: 'https://imgur.elightup.com/wnJtgSC.jpg',
       announcementBar: {
         content: '<b>Meta Box Lite</b>, a feature-rich free UI version of Meta Box. <a target="_blank" href="https://metabox.io/lite/">Learn more</a>',
         backgroundColor: '#fed7aa',

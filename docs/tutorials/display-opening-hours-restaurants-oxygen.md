@@ -9,7 +9,7 @@ In a website for booking restaurants, there will be a lot of different restauran
 
 This section will be the same as the last ones we created in the [previous tutorial](https://docs.metabox.io/tutorials/display-opening-hours-restaurant-mb-views/).
 
-![Example of opening hours section](https://i.imgur.com/NjSFCse.png)
+![Example of opening hours section](https://imgur.elightup.com/NjSFCse.png)
 
 ## Video vesion
 
@@ -33,7 +33,7 @@ If you read the previous tutorial in this series, you can skip this step. In the
 
 Go to **Meta Box > Post Types**.
 
-![Create a custom post type](https://i.imgur.com/Axbn3XD.png)
+![Create a custom post type](https://imgur.elightup.com/Axbn3XD.png)
 
 ## 2. Creating custom fields
 
@@ -69,21 +69,21 @@ Go to **Meta Box > Custom Fields > Add New** to create a new field group. Then, 
 
 As you saw in the table above, the first field is a **Select** field and there are 3 options that I filled in the **Choice** box as below.
 
-![Fill the information in the Choice box](https://i.imgur.com/cQKTi1W.png)
+![Fill the information in the Choice box](https://imgur.elightup.com/cQKTi1W.png)
 
 These 3 options will be used to set the display rule of other group fields.
 
 To set conditions to groups, for example, with the **All days have the same opening hours** group. Go to the **Advanced** tab, and then set the rule in the **Conditional Logic** section like this:
 
-![Set the rule in the Conditional Logic](https://i.imgur.com/LFwZofk.png)
+![Set the rule in the Conditional Logic](https://imgur.elightup.com/LFwZofk.png)
 
 This rule means this group will be displayed when the **Choose an Option** field is selected as **All days have the same opening hours** option which has the value is **all_days_are_the_same**.
 
 Similarly, if the **Choose an Option** field is chosen as the **Difference between weekdays and weekend** option, all the subfields of the **Weekdays** and **Weekend** group will be displayed. Or if the **Choose an Option** field is selected as the **Custom** option, the group fields for every day in a week will be shown up. That’s the concept of how to create fields.
 
-![Concept of how to create fields](https://i.imgur.com/giCpWKz.png)
+![Concept of how to create fields](https://imgur.elightup.com/giCpWKz.png)
 
-![All the subfields of the Weekdays and Weekend group will be displayed](https://i.imgur.com/jnj7F10.png)
+![All the subfields of the Weekdays and Weekend group will be displayed](https://imgur.elightup.com/jnj7F10.png)
 
 In each group field, I also have subfields with the same structure.
 
@@ -94,25 +94,25 @@ The **Type of Opening Hours** field is select field. I have 4 options in the Cho
 * By Appointment Only;
 * Enter Hours.
 
-![Fill in the information in the Choice box](https://i.imgur.com/qxDVyAH.png)
+![Fill in the information in the Choice box](https://imgur.elightup.com/qxDVyAH.png)
 
 The second subfield is a Group field named Choose Time Slots. Inside it, there are two subfields: **Start Time** and **End Time**.
 
 If the restaurant has multiple opening hours, you can choose **Enter Hours** to display the **Start Time** and **End Time** field in the **Choose Time Slots** group. So, I will set the rule for this group like this:
 
-![Set the rule for the group field](https://i.imgur.com/XmK1LWE.png)
+![Set the rule for the group field](https://imgur.elightup.com/XmK1LWE.png)
 
 In case the restaurant opens in multiple time slots, we’ll need this group to be cloneable. So, I tick this box as below:
 
-![Set the group to be cloneable](https://i.imgur.com/9JYVLp9.png)
+![Set the group to be cloneable](https://imgur.elightup.com/9JYVLp9.png)
 
 After creating all the fields, go to the **Settings** tab of the field group, choose **Location** as **Post Type**, and select **Restaurant** to apply these fields to this post type.
 
-![Set Location for the created fields](https://i.imgur.com/jpmKrvm.png)
+![Set Location for the created fields](https://imgur.elightup.com/jpmKrvm.png)
 
 Publish this field group and go to the post editor in **Restaurant**, you will see the custom fields here.
 
-![The created fields appear in the Post editor](https://i.imgur.com/E9vxsR5.gif)
+![The created fields appear in the Post editor](https://imgur.elightup.com/E9vxsR5.gif)
 
 They work exactly like the rule we set.
 
@@ -122,23 +122,23 @@ We’ll display the opening hours section using Oxygen. If you’ve had a templa
 
 In the event you haven't had one, go to **Oxygen > Template > Add New Template** to create a new one.
 
-![Create a new template](https://i.imgur.com/ESq9hMo.png)
+![Create a new template](https://imgur.elightup.com/ESq9hMo.png)
 
 Here, I’ve already had it. So, I just click **Edit with Oxygen**.
 
 Next, add a new **Div** component.
 
-![Add a new Div component](https://i.imgur.com/dZSFZnz.png)
+![Add a new Div component](https://imgur.elightup.com/dZSFZnz.png)
 
 In this practice, it includes some complex conditions to choose which fields will be got the value from. However, Oxygen hasn’t supported logic to choose which field yet, we need to use code in this practice. So, I will add a **Code Block** component.
 
-![Add a Code Block component](https://i.imgur.com/okuDlLE.png)
+![Add a Code Block component](https://imgur.elightup.com/okuDlLE.png)
 
 Then, choose the **PHP&HTML** and you will see a space to add code.
 
-![Choose the PHP&HTML](https://i.imgur.com/7JpbFqf.png)
+![Choose the PHP&HTML](https://imgur.elightup.com/7JpbFqf.png)
 
-![There will be a space to add code](https://i.imgur.com/XQMZTC7.png)
+![There will be a space to add code](https://imgur.elightup.com/XQMZTC7.png)
 
 The code is quite long, so I put it in my Github [here](https://github.com/wpmetabox/tutorials/blob/master/display-opening-hours-with-Oxygen/template.php). You can refer to it for more details. The code is divided into several parts to get corresponding group data. Because of the same concept in all parts, I’ll explain a typical part to be more clear about the logic.
 
@@ -230,13 +230,13 @@ The structure of those groups is the same as the **All days have the same openin
 
 This section on the page is now displayed like this because this code is for getting data from custom fields only.
 
-![The section of the page will displayed like this](https://i.imgur.com/Ky5uvnC.png)
+![The section of the page will displayed like this](https://imgur.elightup.com/Ky5uvnC.png)
 
 To have the display with some other texts as the demo, I’ll add some heading, div tags and class for easier styling later. I’ve uploaded the code on [Github](https://github.com/wpmetabox/tutorials/blob/master/display-opening-hours-with-Oxygen/template.php), you can refer to it.
 
 Now, all the time slots with some additional texts are shown in the section already.
 
-![All the time slots with some additional texts are shown](https://i.imgur.com/GAkDggx.png)
+![All the time slots with some additional texts are shown](https://imgur.elightup.com/GAkDggx.png)
 
 However, it doesn’t look as beautiful as I want. So, I will add some CSS to style this section in the next step.
 
@@ -245,7 +245,7 @@ However, it doesn’t look as beautiful as I want. So, I will add some CSS to st
 For styling, you can go back to the Oxygen visual builder and style each component if any.
 In this case, I‘ll add some CSS by going to **Manage > Stylesheet** and **Add Stylesheet**.
 
-![Style the Section](https://i.imgur.com/0y9yroz.gif)
+![Style the Section](https://imgur.elightup.com/0y9yroz.gif)
 
 This is the CSS that I’ve used:
 ```css
@@ -296,7 +296,7 @@ This is the CSS that I’ve used:
 
 Let’s see how the opening hour section displays on the frontend. It’s much more beautiful, isn't it?
 
-![The final result](https://i.imgur.com/NjSFCse.png)
+![The final result](https://imgur.elightup.com/NjSFCse.png)
 
 To refer to all the code that I used, you can visit here.
 

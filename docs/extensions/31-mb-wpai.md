@@ -4,7 +4,7 @@ title: MB WPAI Integration
 
 MB WPAI Integration integrates WP All Import with Meta Box which ported from ACF Integration. It creates a section in WP All Import plugin to map Meta Box's fields to import data. Allows you to handle more complex fields and settings.
 
-![MB WP-AI](https://i.imgur.com/eFByM8U.png)
+![MB WP-AI](https://imgur.elightup.com/eFByM8U.png)
 
 ## Before you start
 
@@ -23,7 +23,7 @@ Navigate to **All Import › New Import** and upload a valid import file. Our pl
 Next, choose from the drop-down list the post type that has the Advanced Custom Fields attached.
 
 In this example, we're importing Meta Box fields to **Posts**.
-![New Import](https://i.imgur.com/Mptx63n.png)
+![New Import](https://imgur.elightup.com/Mptx63n.png)
 
 Click **Continue to Step 2** to move on to the next step.
 
@@ -33,7 +33,7 @@ Keep in mind that your Meta Box fields need to be created and defined for posts 
 
 The **Review Import File** page appears next. Here, you can review and confirm that the import data looks correct:
 
-![Review Import File](https://i.imgur.com/7yGvA1C.png)
+![Review Import File](https://imgur.elightup.com/7yGvA1C.png)
 
 The import has detected 3 records to import. To make sure that the data is correct, you can review each record with the gray arrows at the top.
 
@@ -48,17 +48,17 @@ Once you confirm that the data looks good, click **Continue to Step 3**.
 This brings you to the Drag & Drop interface, which allows you to map the data elements to their respective target fields.
 
 To map the data, drag each desired data element from the panel on the right to its corresponding field on the left.
-![Drag & Drop](https://i.imgur.com/xy2pUGm.png)
+![Drag & Drop](https://imgur.elightup.com/xy2pUGm.png)
 
 The **Meta Box Add-On** section is where you define fields to import.
 
 Locate that section by scrolling down and then enable the group to import:
 
-![Meta Box Add-On](https://i.imgur.com/yJhMFkF.png)
+![Meta Box Add-On](https://imgur.elightup.com/yJhMFkF.png)
 
 You can map each individual Meta Box field as required:
 
-![MB WP-AI](https://i.imgur.com/eFByM8U.png)
+![MB WP-AI](https://imgur.elightup.com/eFByM8U.png)
 
 You can also concatenate multiple fields into one Meta Box field, or add any static text to the field.
 
@@ -74,7 +74,7 @@ Specifically, you need to define a **Unique Identifier** for the import. WP All 
 
 You can also define this unique identifier by manually dragging and dropping fields from the right.
 
-![Import Settings](https://i.imgur.com/jOy3pLT.png)
+![Import Settings](https://imgur.elightup.com/jOy3pLT.png)
 
 Here you can modify the import behavior if it is run again (to update, delete, or create new records found on the import file). You can set up **Scheduling Options** and **Configure Advanced Settings**. With most imports, there's no need to modify any of these settings.
 
@@ -84,12 +84,12 @@ Click the blue **Continue** button at the end to move to the next step.
 
 Next, you see the **Confirm & Run** interface. In the **Import Summary** section, you can review the import, what's in the import file, and other import settings.
 
-![Confirm & Run](https://i.imgur.com/U4gK4qK.png)
+![Confirm & Run](https://imgur.elightup.com/U4gK4qK.png)
 
 If everything looks good, click on **Confirm & Run Import** to start the import.
 When it completes, you will see the **Import Complete** screen:
 
-![Import Complete](https://i.imgur.com/EuV1GuY.png)
+![Import Complete](https://imgur.elightup.com/EuV1GuY.png)
 
 That's it! The import correctly processed the posts and Meta Box fields from this example.
 You can review the imported fields by checking any of the imported posts in **Posts › All Posts**.
@@ -103,7 +103,7 @@ You can concatenate multiple fields into one Meta Box field, or add any static t
 For example, you have 2 fields: `first_name` and `last_name` and you want to concatenate them into `full_name` field. You can do it by dragging and dropping the fields to the `full_name` field like this:
 Or if you have only file name in the import file, but you want to add the full URL to the field, you can do it like this:
 
-![Concatenate fields](https://i.imgur.com/7Ovqkoj.png)
+![Concatenate fields](https://imgur.elightup.com/7Ovqkoj.png)
 
 #### Concatenate cloneable fields
 
@@ -120,11 +120,11 @@ In this case, the plugin will loop through all photos and add the full URL to ea
 #### Using "+ Add more" button (Fixed Repeater Mode)
 
 The easiest way to import cloneable fields is using the "+ Add more" button. Simply like how you do in editing post, click the button to add more fields and map them to the import file. This way is suitable for small number of fields, or files with a fixed number of columns.
-![Using Add more button](https://i.imgur.com/Q9hYVzP.png)
+![Using Add more button](https://imgur.elightup.com/Q9hYVzP.png)
 
 #### Using selector "all" and "nth" in XPath (Variable Repeater Mode)
 
-If you have a large number of fields, or the number of columns in the import file is dynamic, you can leverage XPath syntax to import them. 
+If you have a large number of fields, or the number of columns in the import file is dynamic, you can leverage XPath syntax to import them.
 This applied for both cloneable and non-cloneable fields, groups and sub-fields.
 
 For example, you have an XML file with the following structure:
@@ -157,7 +157,7 @@ However, you can change the placement of the data by using the following syntax:
 ```
 Using the "dot" syntax will tell the plugin to move each item to the parent segment. In this case, it will import each photo to a new group.
 
-![Cloneable Data Placements](https://i.imgur.com/ZLEYpxE.png)
+![Cloneable Data Placements](https://imgur.elightup.com/ZLEYpxE.png)
 
 #### Concatenate cloneable fields
 
@@ -189,7 +189,7 @@ Cloneable group fields work the same as cloneable fields. You can simply the "+ 
 
 As mentioned above, the group fields is a container of other fields. So we need to tell the plugin how to import data to the group fields. This is done by using the "For each" syntax.
 
-![For each syntax](https://i.imgur.com/IZrykr1.png)
+![For each syntax](https://imgur.elightup.com/IZrykr1.png)
 
 For example, you have an XML file with the following structure:
 
@@ -248,10 +248,10 @@ URL: {.url} (same as {photos/photo/url} but scoped to the group)
 
 ## Known issues
 
-- When you clone a group, the later group xpath maybe override the previous group xpath when you save the first time. 
-You'll need to save the import again to fix it. This is due to group.js file currently doesn't work well outside of the post edit screen. 
+- When you clone a group, the later group xpath maybe override the previous group xpath when you save the first time.
+You'll need to save the import again to fix it. This is due to group.js file currently doesn't work well outside of the post edit screen.
 We'll fix it in the next version.
 
 ## FAQ
-**Does it work with WP All Import free edition?** 
+**Does it work with WP All Import free edition?**
 Yes, it does.

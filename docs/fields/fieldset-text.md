@@ -9,7 +9,7 @@ The fieldset text creates a set of text inputs. It's useful if you want to save 
 ## Screenshots
 
 <Screenshots name="fieldset-text" col1={[
-    ['https://i.imgur.com/qh3pfUd.png', 'The fieldset text field interface']
+    ['https://imgur.elightup.com/qh3pfUd.png', 'The fieldset text field interface']
 ]} />
 
 ## Settings

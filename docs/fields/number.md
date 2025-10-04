@@ -9,7 +9,7 @@ The number field creates a simple HTML5 number input. You can enter a number or 
 ## Screenshots
 
 <Screenshots name="number" col1={[
-    ['https://i.imgur.com/ioHgKyI.png', 'The number field interface']
+    ['https://imgur.elightup.com/ioHgKyI.png', 'The number field interface']
 ]} />
 
 ## Settings

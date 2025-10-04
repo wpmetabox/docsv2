@@ -8,7 +8,7 @@ If you want to display some on-sale products in a promotion campaign only, [this
 
 I did an archive page as an example. This page will display only the dishes which are on sale.
 
-![example of an archive page displays products on sale](https://i.imgur.com/LBrcxt1.png)
+![example of an archive page displays products on sale](https://imgur.elightup.com/LBrcxt1.png)
 
 ## Video Version
 
@@ -32,11 +32,11 @@ In this practice, we need these tools:
 
 Go to **Meta Box** > **Post Types** > **Add New** to create a new post type for your products. Here I name it **Cuisines**.
 
-![create a new custom post type in Meta Box](https://i.imgur.com/6BBVtyJ.png)
+![create a new custom post type in Meta Box](https://imgur.elightup.com/6BBVtyJ.png)
 
 Then you’ll see a menu like this. It’s your post type.
 
-![new custom post type for cuisine](https://i.imgur.com/R2aQTR2.png)
+![new custom post type for cuisine](https://imgur.elightup.com/R2aQTR2.png)
 
 ## 2. Creating custom fields
 
@@ -44,25 +44,25 @@ I’ll create 2 fields as an example. As I mentioned, the value stored in these 
 
 You also can add some other custom fields to save more information about your product, and display them on the page in the same way.
 
-![created fields](https://i.imgur.com/YRE2Nf9.png)
+![created fields](https://imgur.elightup.com/YRE2Nf9.png)
 
 If you want to clearly see which products are having promotion, you can set both these fields displayed as admin columns like this.
 
-![Show created fields as admin columns](https://i.imgur.com/l0c57yH.png)
+![Show created fields as admin columns](https://imgur.elightup.com/l0c57yH.png)
 
 Do it by checking this box in both fields’ settings.
 
-![Set the fields as show as admin column](https://i.imgur.com/qXWvQh2.png)
+![Set the fields as show as admin column](https://imgur.elightup.com/qXWvQh2.png)
 
 You’ll have this setting only when you enable the [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) extension.
 
 After creating all the fields, move to the **Settings** tab > set **Location** as **Post type** > select **Cuisines** to apply these fields to it.
 
-![Set the location for the created fields](https://i.imgur.com/aSmE2zE.png)
+![Set the location for the created fields](https://imgur.elightup.com/aSmE2zE.png)
 
 Now, you’ll see all the created custom fields when creating a new post in Cuisines post type.
 
-![all the created custom fields appear in the post editor](https://i.imgur.com/XI2IWH3.png)
+![all the created custom fields appear in the post editor](https://imgur.elightup.com/XI2IWH3.png)
 
 ## 3. Creating a global block
 
@@ -70,33 +70,33 @@ With Breakdance, you should create a global block to get and display wanted info
 
 Go to **Breakdance** > **Global Blocks** then create a new one.
 
-![create a new global block](https://i.imgur.com/ZQafBT9.png)
+![create a new global block](https://imgur.elightup.com/ZQafBT9.png)
 
 Remember to set a post for live preview in order to easily see how it will display.
 
-![set a post for live preview](https://i.imgur.com/TMrCbpd.png)
+![set a post for live preview](https://imgur.elightup.com/TMrCbpd.png)
 
 First, add a **Div** element to cover the block.
 
-![add a Div element to cover the block](https://i.imgur.com/if4mRLE.png)
+![add a Div element to cover the block](https://imgur.elightup.com/if4mRLE.png)
 
 ### 3.1. Setting the condition
 
 We should **create a condition** in this element to **choose which posts will be displayed**, in this case **which ones have promotion**. Go to the settings of the **Div** element, you will see the **Conditions** section to add a new one.
 
-![set the condition](https://i.imgur.com/FTuROGR.gif)
+![set the condition](https://imgur.elightup.com/FTuROGR.gif)
 
 In the setting of the **Conditions**, choose **Dynamic Data** from the list to set the condition based on the data saved in custom fields.
 
-![choose Dynamic Data to set the condition based on the data saved in custom fields](https://i.imgur.com/OO4gv4Q.png)
+![choose Dynamic Data to set the condition based on the data saved in custom fields](https://imgur.elightup.com/OO4gv4Q.png)
 
 Since just posts which have any value in the promotional price will be displayed, choose the field here.
 
-![Choose the field](https://i.imgur.com/WJRaSkZ.png)
+![Choose the field](https://imgur.elightup.com/WJRaSkZ.png)
 
 Then change the operation to **is not empty**. That’s all for the condition.
 
-![complete the condition](https://i.imgur.com/2Op4HWS.png)
+![complete the condition](https://imgur.elightup.com/2Op4HWS.png)
 
 ### 3.2 Displaying the products information
 
@@ -104,79 +104,79 @@ Just add some reasonable elements to get product information from the posts.
 
 Add the **Post Featured Image** element. It’ll display immediately.
 
-![Add the Post Featured Image element](https://i.imgur.com/GWwDE1U.png)
+![Add the Post Featured Image element](https://imgur.elightup.com/GWwDE1U.png)
 
 Next, I use a **Div** element to group all the rest information for easier styling.
 
-![add Div element to group all the rest information](https://i.imgur.com/ydWvvXv.png)
+![add Div element to group all the rest information](https://imgur.elightup.com/ydWvvXv.png)
 
 Add the **Post Title** element for the dish’s name.
 
-![Add the Post Title element for the product’s name](https://i.imgur.com/ez58wAM.png)
+![Add the Post Title element for the product’s name](https://imgur.elightup.com/ez58wAM.png)
 
 Then, add another **Div** the group of the original price and promotional price.
 
-![add Div the group of the original price and promotional price](https://i.imgur.com/oDVdiWD.png)
+![add Div the group of the original price and promotional price](https://imgur.elightup.com/oDVdiWD.png)
 
 For the original price, add a **Text** element, then insert dynamic data from the field to it.
 
-![add a Text element and insert dynamic data from the field](https://i.imgur.com/dDDZrad.gif)
+![add a Text element and insert dynamic data from the field](https://imgur.elightup.com/dDDZrad.gif)
 
 You also can add the prepend and append text for having the unit price in the **Advanced** tab.
 
-![add the prepend and append text in the Advanced tab](https://i.imgur.com/GmcG08Q.png)
+![add the prepend and append text in the Advanced tab](https://imgur.elightup.com/GmcG08Q.png)
 
 Next, add another **Text** element for the promotional price, then get data from the corresponding field in the same way as the original price.
 
-![Add Text element and get data for promotional price](https://i.imgur.com/vAhgEAO.gif)
+![Add Text element and get data for promotional price](https://imgur.elightup.com/vAhgEAO.gif)
 
 Finally, add the **Post Content** element for the description of the dish.
 
-![add the Post Content element for the product's description](https://i.imgur.com/SKKTV9K.png)
+![add the Post Content element for the product's description](https://imgur.elightup.com/SKKTV9K.png)
 
 That’s all the things I want to display in the block.
 
-![all of the product's information displayed](https://i.imgur.com/44uN5dC.png)
+![all of the product's information displayed](https://imgur.elightup.com/44uN5dC.png)
 
 ## 4. Creating the page
 
 Go to **Pages** > **Add New** to create a new page as usual.
 
-![create a new page](https://i.imgur.com/iNH1u2F.png)
+![create a new page](https://imgur.elightup.com/iNH1u2F.png)
 
 Then choose **Breakdance** > **Template** > **Add Template** to create a custom template for it.
 
-![create a custom template in breakdance](https://i.imgur.com/5q4vxz5.png)
+![create a custom template in breakdance](https://imgur.elightup.com/5q4vxz5.png)
 
 Set the **Location** of the template as **Single/Pages**, and add the condition as follows.
 
-https://i.imgur.com/EgCZB5r.gif
+https://imgur.elightup.com/EgCZB5r.gif
 
 In the template editor, add a **Section** element first to cover all the page content.
 
-![set the location for the page and add condition](https://i.imgur.com/hPQNRZc.png)
+![set the location for the page and add condition](https://imgur.elightup.com/hPQNRZc.png)
 
 For the page title, add the **Post Title** element.
 
-![add the Post Title element](https://i.imgur.com/jPK9hml.png)
+![add the Post Title element](https://imgur.elightup.com/jPK9hml.png)
 
 Next, to display the posts, we should use the **Post Loop Builder** element. It allows us to display multiple posts at once.
 
-![add the Post Loop Builder element to display the post](https://i.imgur.com/MlH7fkP.png)
+![add the Post Loop Builder element to display the post](https://imgur.elightup.com/MlH7fkP.png)
 
 Set the Global Block as the one we’ve just created.
 
-![Set the Global Block](https://i.imgur.com/aTdG2Dy.png)
+![Set the Global Block](https://imgur.elightup.com/aTdG2Dy.png)
 
 There'll be nothing displayed. Just go to the **Query** section, edit the query to set the post types that we want to get posts from as Cuisines.
 
-![Add the Query and set the source of post which we get](https://i.imgur.com/wQueyFi.gif)
+![Add the Query and set the source of post which we get](https://imgur.elightup.com/wQueyFi.gif)
 
 Now, there’re some posts displayed exactly as we set in the created global block.
 
 You may think that just the posts that have value in the promotional price are displayed in this page now because we set the condition in the global block to get them. But, it’s not like that. When changing the layout a little bit, you will see some blank blocks like this.
 
-![blank blocks](https://i.imgur.com/d8s52qa.png)
+![blank blocks](https://imgur.elightup.com/d8s52qa.png)
 
 It’s weird!
 
@@ -184,9 +184,9 @@ Even when you check the page on the frontend, they do not disappear. It simply i
 
 To remove them, add a **Code Block** to the template and input following JavaScript code into it.
 
-![add a Code Block to the template](https://i.imgur.com/489JOR3.png)
+![add a Code Block to the template](https://imgur.elightup.com/489JOR3.png)
 
-![input JavaScript code](https://i.imgur.com/EN8DIOP.png)
+![input JavaScript code](https://imgur.elightup.com/EN8DIOP.png)
 
 ```
 jQuery('.ee-post').filter(function() {
@@ -196,19 +196,19 @@ return jQuery(this).text().trim() == ""
 
 Now, the void disappears.
 
-![the void disappears](https://i.imgur.com/DXeNxsg.png)
+![the void disappears](https://imgur.elightup.com/DXeNxsg.png)
 
 ## 5. Styling the page
 
 If you want to style the display of the post information, go back to edit the global block. Change the settings of each element in the **Style** tab to get the wanted look.
 
-![style tab](https://i.imgur.com/hZ7ILR7.png)
+![style tab](https://imgur.elightup.com/hZ7ILR7.png)
 
 For the layout, go to the template editor and do the same.
 
 After styling, you’ll see the new appearance.
 
-![The final look](https://i.imgur.com/LBrcxt1.png)
+![The final look](https://imgur.elightup.com/LBrcxt1.png)
 
 
 

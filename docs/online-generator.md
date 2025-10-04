@@ -13,11 +13,11 @@ Before using **Online Generator**, make sure you [installed and activated Meta B
 
 To add fields, click **field types** on the left. Related fields are put into groups for a fast reference. You can also search for a field by typing in the search box.
 
-![select a field type](https://i.imgur.com/smn7Cd1.png)
+![select a field type](https://imgur.elightup.com/smn7Cd1.png)
 
 Once you add a new field, field settings panel will appear on the right, where you can enter field details such as ID, label or description.
 
-![edit field settings](https://i.imgur.com/JbpVTeK.png)
+![edit field settings](https://imgur.elightup.com/JbpVTeK.png)
 
 You can also toggle the field settings by clicking the field title bar.
 
@@ -25,13 +25,13 @@ You can also toggle the field settings by clicking the field title bar.
 
 On the title bar, there're 2 icons for removing and duplicated fields. When you hover the mouse over the field settings, you'll see move up and down buttons for reorder fields.
 
-![remove, duplicate, reorder fields](https://i.imgur.com/L3lpw58.png)
+![remove, duplicate, reorder fields](https://imgur.elightup.com/L3lpw58.png)
 
 ### Settings
 
 Once you complete adding fields, click the **Settings** tab to add settings for the **custom fields**.
 
-![settings tab](https://i.imgur.com/arWhycr.png)
+![settings tab](https://imgur.elightup.com/arWhycr.png)
 
 Parameter|Description
 ---|---

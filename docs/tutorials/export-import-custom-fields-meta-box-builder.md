@@ -23,7 +23,7 @@ We need the [Meta Box Lite](https://metabox.io/lite/) on both websites, the orig
 
 After activating two plugins, you’ll see a new **Meta Box** menu as below:
 
-![Meta Box dashboard menu](https://i.imgur.com/4k3OMlt.png)
+![Meta Box dashboard menu](https://imgur.elightup.com/4k3OMlt.png)
 
 ## Creating custom fields
 
@@ -31,7 +31,7 @@ On the original site, let’s create some fields. We have a tutorial on creating
 
 Here we’ll create a field group named **Author** and export/import its settings to other sites for example.
 
-![Created field group](https://i.imgur.com/W6y5utN.png)
+![Created field group](https://imgur.elightup.com/W6y5utN.png)
 
 ## Exporting field groups and custom fields
 
@@ -41,11 +41,11 @@ Next, there are two ways to export the field groups.
 
 If you choose one field group, simply click on its **Export** option like this:
 
-![Click on Export option](https://i.imgur.com/0nfoK7n.png)
+![Click on Export option](https://imgur.elightup.com/0nfoK7n.png)
 
 In case you export several field groups, press the **Bulk actions** dropdown, then select the **Export** option and **Apply**.
 
-![To choose several field groups, press the Bulk actions](https://i.imgur.com/3uSObWY.png)
+![To choose several field groups, press the Bulk actions](https://imgur.elightup.com/3uSObWY.png)
 
 After that, the file that contains the data of the selected field groups will be downloaded automatically.
 
@@ -55,12 +55,12 @@ In the dashboard of the targeted website you want to import the field group, go 
 
 Then click on **Choose File** and select the downloaded file to import the field group.
 
-![Click on Choose File and select downloaded file](https://i.imgur.com/9975GzX.png)
+![Click on Choose File and select downloaded file](https://imgur.elightup.com/9975GzX.png)
 
 Then go back to the field groups list in the **Custom Fields** menu on the targeted site, and you’ll see the imported field group is displayed as follows:
 
-![Imported field group is displayed](https://i.imgur.com/pUZ5i4f.png)
+![Imported field group is displayed](https://imgur.elightup.com/pUZ5i4f.png)
 
 To check whether the field group works well, you might create/edit a page or post where the custom fields are located, the fields will display similar to the original website.
 
-![Edit or created a page to check whether the field group works well](https://i.imgur.com/rLSvmBB.png)
+![Edit or created a page to check whether the field group works well](https://imgur.elightup.com/rLSvmBB.png)

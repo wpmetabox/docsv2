@@ -15,7 +15,7 @@ This extension helps you create custom post types and custom taxonomies with a u
 
 To create a new custom post type, go to **Meta Box » Post Types** and click **New Post Type**:
 
-![create a new custom post type](https://i.imgur.com/3GKvMnb.png)
+![create a new custom post type](https://imgur.elightup.com/3GKvMnb.png)
 
 There are several settings divided into tabs. In most cases, you only need to enter the plural name, singular name, and slug in the **General** tab and click the **Publish** button to register the post type.
 
@@ -32,7 +32,7 @@ From our experience, the most important settings are in the **Advanced** tab.
 <Tabs>
   <TabItem value="general" label="General" default>
 
-![creating a post type](https://i.imgur.com/GhMqEU4.png)
+![creating a post type](https://imgur.elightup.com/GhMqEU4.png)
 
 Name | Description
 ---|---
@@ -48,7 +48,7 @@ When entering a singular name for the post type, the slug is automatically gener
 
 Labels are automatically generated from the post type's plural and singular names.
 
-![label settings](https://i.imgur.com/h3pXR2Y.png)
+![label settings](https://imgur.elightup.com/h3pXR2Y.png)
 
 Name | Description
 ---|---
@@ -86,7 +86,7 @@ Item updated | Label used when an item is updated. Default is 'Post updated.' / 
 
   <TabItem value="advanced" label="Advanced">
 
-![advanced settings](https://i.imgur.com/AzdNBWH.png)
+![advanced settings](https://imgur.elightup.com/AzdNBWH.png)
 
 Name | Description
 ---|---
@@ -118,7 +118,7 @@ Delete with user | Whether to delete posts of this type when deleting a user.
 
 These are core features the post type supports.
 
-![supports settings](https://i.imgur.com/Fk9dp5w.png)
+![supports settings](https://imgur.elightup.com/Fk9dp5w.png)
 
 Name | Description
 ---|---
@@ -140,7 +140,7 @@ Post formats | Enable post format for posts
 
 This is the list of taxonomies that are registered for the post type. Select the taxonomies you want to use for the post type.
 
-![taxonomies settings](https://i.imgur.com/aggYlsw.png)
+![taxonomies settings](https://imgur.elightup.com/aggYlsw.png)
 
   </TabItem>
 
@@ -154,7 +154,7 @@ If you're familiar with PHP, you might want to get the PHP code to register the 
 
 To create a new custom taxonomy, go to **Meta Box » Taxonomies** and click **Add New**:
 
-![create a new taxonomy](https://i.imgur.com/zKK4f87.png)
+![create a new taxonomy](https://imgur.elightup.com/zKK4f87.png)
 
 There are several settings divided into tabs. In most cases, you only need to enter the plural name, singular name, and slug in the **General** tab and click the **Publish** button to register the taxonomy.
 
@@ -174,7 +174,7 @@ From our experience, the most important settings are in the **Advanced** tab.
 <Tabs>
   <TabItem value="general" label="General" default>
 
-![create taxonomies](https://i.imgur.com/yy7wy9w.png)
+![create taxonomies](https://imgur.elightup.com/yy7wy9w.png)
 
 Name | Description
 ---|---
@@ -190,7 +190,7 @@ When entering a singular name for the taxonomy, the slug is automatically genera
 
 Labels are automatically generated from the taxonomy's plural and singular names.
 
-![taxonomy label settings](https://i.imgur.com/LtuXkrh.png)
+![taxonomy label settings](https://imgur.elightup.com/LtuXkrh.png)
 
 Name | Description
 ---|---
@@ -220,7 +220,7 @@ Menu name | Label for the tab in the admin menu.
 
   <TabItem value="advanced" label="Advanced" default>
 
-![ taxonomy advanced settings](https://i.imgur.com/dOCcR5d.png)
+![ taxonomy advanced settings](https://imgur.elightup.com/dOCcR5d.png)
 
 Name | Description
 ---|---
@@ -249,7 +249,7 @@ Sort | Whether terms in this taxonomy should be sorted.
 
 This is the list of post types that are connected with the taxonomy. Select the post types you want to connect to the taxonomy.
 
-![post types settings](https://i.imgur.com/MQCmchM.png)
+![post types settings](https://imgur.elightup.com/MQCmchM.png)
 
   </TabItem>
 

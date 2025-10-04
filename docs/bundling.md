@@ -17,7 +17,7 @@ Meta Box and extensions can be used as standalone plugins or bundled within othe
 
 It's recommended to use the [TGM Plugin Activation](http://tgmpluginactivation.com) to declare Meta Box and free extensions as dependencies for your themes or plugins. This way, Meta Box and the extensions can be auto-updated to the latest version.
 
-![Using Meta Box in eStar theme](https://i.imgur.com/dS3a6pe.png)
+![Using Meta Box in eStar theme](https://imgur.elightup.com/dS3a6pe.png)
 
 To use the, follow these steps:
 

@@ -30,11 +30,11 @@ Thus, we're going to move the data of each post type to a separate custom table.
 
 We already have a post type named **Companies** with **Company name**, **Address**, and **Start day** fields. This is the field group of these fields in MB Builder:
 
-![Created field group](https://i.imgur.com/8lqOR5J.png)
+![Created field group](https://imgur.elightup.com/8lqOR5J.png)
 
 And the custom field's data is saved in the `wp_postmeta`:
 
-![Custom field's data is saved](https://i.imgur.com/gKgFnIH.png)
+![Custom field's data is saved](https://imgur.elightup.com/gKgFnIH.png)
 
 To move this custom field's data to a custom table, follow these steps:
 
@@ -42,15 +42,15 @@ To move this custom field's data to a custom table, follow these steps:
 
 Go to **Meta Box** &gt; **Custom Fields** and edit the field group I mentioned above. Go to the **Settings** tab and just tick the **Save data in a custom table** box.
 
-![Choose Save data in a custom table option](https://i.imgur.com/MkML1on.png)
+![Choose Save data in a custom table option](https://imgur.elightup.com/MkML1on.png)
 
 After that, some options will appear, and then you have to choose **Create table automatically** and enter the name of the custom table. I'll name it `wp_custom_company`
 
-![Enter the name of custom table](https://i.imgur.com/fk6gt7A.png)
+![Enter the name of custom table](https://imgur.elightup.com/fk6gt7A.png)
 
 So, you have just created a custom table automatically with **MB Builder.** And now, in your database, you will see a new table named `wp_custom_company`.
 
-![Create a custom table automatically with MB Builder](https://i.imgur.com/F6AI9Cv.png)
+![Create a custom table automatically with MB Builder](https://imgur.elightup.com/F6AI9Cv.png)
 
 From now on, the **new data will be automatically saved in the custom table** whenever you update.
 
@@ -150,11 +150,11 @@ This code queries 100 companies in each run. For each company, it gets the custo
 
 After adding code, go to this URL: *https://yourwebsite.com/wp-admin/?move-data-companies=1* to enable moving the custom fields' data to the custom table.
 
-![Enable moving the custom fields' data to the custom table](https://i.imgur.com/RlNZRFS.png)
+![Enable moving the custom fields' data to the custom table](https://imgur.elightup.com/RlNZRFS.png)
 
 After running the script, I go to the `wp_custom_company` custom table to check. And here is the result.
 
-![The result after running the scripts](https://i.imgur.com/5c1EPna.png)
+![The result after running the scripts](https://imgur.elightup.com/5c1EPna.png)
 
 As you can see, the custom fields' data of the **Companies** post type is now moved to the `wp_custom_company` table.
 

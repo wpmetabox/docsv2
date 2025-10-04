@@ -11,7 +11,7 @@ The divider field creates a simple horizontal line. It doesn't have any value an
 <Screenshots
     name="divider"
     col1={[
-        ['https://i.imgur.com/JTIlECL.png', 'The divider field default interface'],
+        ['https://imgur.elightup.com/JTIlECL.png', 'The divider field default interface'],
     ]}
 />
 

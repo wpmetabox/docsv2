@@ -28,11 +28,11 @@ Now, when you go to a post or page, the content in the custom fields hasn’t be
 
 Go to **Meta Box > Custom Fields** and create or configure some fields.
 
-![Configure custom fields](https://i.imgur.com/T3t0fpP.png)
+![Configure custom fields](https://imgur.elightup.com/T3t0fpP.png)
 
 Open the field that you want Yoast SEO to analyze its content. Then, move to the **Advanced** tab and add new **Custom settings** like this:
 
-![Add new custom settings](https://i.imgur.com/ptzcLIQ.png)
+![Add new custom settings](https://imgur.elightup.com/ptzcLIQ.png)
 
 No matter if the field is cloneable or not, you can add the custom settings as above. It always works.
 
@@ -40,10 +40,10 @@ No matter if the field is cloneable or not, you can add the custom settings as a
 
 Before configuring the fields as above, Yoast SEO just analyze the content in the Content field like this:
 
-![check the results in Yoast SEO](https://i.imgur.com/CucAdNM.png)
+![check the results in Yoast SEO](https://imgur.elightup.com/CucAdNM.png)
 
 After completing creating custom settings, you can see the content of the field displayed in the SEO Analysis. For example, Yoast SEO analyzes my content in the description field and displays the information about length, focus keyword, …
 
-![The final result](https://i.imgur.com/v4dOA0l.png)
+![The final result](https://imgur.elightup.com/v4dOA0l.png)
 
 The rest of your work now is writing SEO-optimized content.

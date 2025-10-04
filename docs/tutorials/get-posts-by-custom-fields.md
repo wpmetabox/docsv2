@@ -22,11 +22,11 @@ In addition to using [Meta Box](https://metabox.io/), make sure you already have
 
 Go to **Meta Box > Custom Fields** and click **Add New**.
 
-![Create custom fields](https://i.imgur.com/2t37zEE.png)
+![Create custom fields](https://imgur.elightup.com/2t37zEE.png)
 
 In this section, I will create two fields for each method. One is the **Price** field which I will use for method 1. And, the other field to use for method 2 will be the **Type** field.
 
-![Create 2 fields for each method](https://i.imgur.com/sSQ9y93.png)
+![Create 2 fields for each method](https://imgur.elightup.com/sSQ9y93.png)
 
 ## Method 1: Get posts using WP_Query
 
@@ -44,7 +44,7 @@ Create a page template and use a `WP_Query` to query posts and display them as t
 ```
 Go to **Pages > Add New** and create an **Advanced Search** page then assign the created template to it as shown in the following image:
 
-![Create Advanced Search](https://i.imgur.com/jK6wSJ3.png)
+![Create Advanced Search](https://imgur.elightup.com/jK6wSJ3.png)
 
 Now, we display the search form in the page template and edit the code of that page as below:
 
@@ -81,7 +81,7 @@ These lines of code create two input fields, the Min Price and Max Price, which 
 
 When you refresh the page, the search form will appear with minimum and maximum price fields, as shown below:
 
-![The search form will appear with minimum and maximum price fields](https://i.imgur.com/F2wEqcf.png)
+![The search form will appear with minimum and maximum price fields](https://imgur.elightup.com/F2wEqcf.png)
 
 ### 2. Creating a search function
 
@@ -177,7 +177,7 @@ There is a part about building parameters for the `$args` query based on the val
 
 Here is the result when someone clicks the Search button. It displays only the products with prices from 1 to 300.
 
-![How it displays](https://i.imgur.com/Qa17B8U.png)
+![How it displays](https://imgur.elightup.com/Qa17B8U.png)
 
 Furthermore, in addition to the = and >= operators, there are many other comparison conditions, such as =, !=, and IN. You can combine them with custom fields to build more complex queries. For example, finding products that have a green color, a production year >= 2012, etc. See more about these conditions [here](https://developer.wordpress.org/reference/classes/wp_query/#custom-field-post-meta-parameters).
 
@@ -187,7 +187,7 @@ The complete code for the file `advanced-search.php` can be found [here](https:/
 
 When you install the [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) extension of Meta Box, you’ll see the fields’ values displayed in the admin dashboard like this.
 
-![The fields' values display in the admin dashboard](https://i.imgur.com/FR2zPy9.png)
+![The fields' values display in the admin dashboard](https://imgur.elightup.com/FR2zPy9.png)
 
 Now, I will proceed to search for posts by these values.
 
@@ -254,6 +254,6 @@ Now, the new feature to search by custom field values is complete. Try to use th
 
 There are two separate posts in the search results that have the term "breakfast" in the **Type** custom field, except for one post with the phrase in its title (Lite breakfast with bread). It indicates that the advanced searching function was effective.
 
-![2 separate posts in the search results](https://i.imgur.com/shSvlBJ.png)
+![2 separate posts in the search results](https://imgur.elightup.com/shSvlBJ.png)
 
 

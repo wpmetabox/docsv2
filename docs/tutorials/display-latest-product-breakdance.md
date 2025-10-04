@@ -8,7 +8,7 @@ In today's practice, we're going to create the latest product section using Meta
 
 I take the restaurants as an example for the posts as well as for the products:
 
-![Each restaurant is a post in a custom post type](https://i.imgur.com/sTREMWQ.png)
+![Each restaurant is a post in a custom post type](https://imgur.elightup.com/sTREMWQ.png)
 
 ## Video version
 
@@ -18,7 +18,7 @@ I take the restaurants as an example for the posts as well as for the products:
 
 In this case, my products are restaurants. Each restaurant will be a post in a custom post type and displayed in a box as in the image below. It is created as a global block in Breakdance.
 
-![Each restaurant is a post in a custom post type](https://i.imgur.com/OFq9unJ.png)
+![Each restaurant is a post in a custom post type](https://imgur.elightup.com/OFq9unJ.png)
 
 In the block, the name of the restaurant and its image are the title and the featured image of the post. Further, you may want to add some extra information for your products, so I have something as a demo, such as logo, address, and voucher. This extra information will be saved in the custom fields created by Meta Box.
 
@@ -35,21 +35,21 @@ For this practice, we need these tools:
 
 Go to **Meta Box > Post Types > New Post Type** to create a new post type for the products.
 
-![Create a new custom post type](https://i.imgur.com/ZwkLvos.png)
+![Create a new custom post type](https://imgur.elightup.com/ZwkLvos.png)
 
 ## 2. Creating custom fields
 
 Each restaurant has extra information, so we’ll create custom fields to save them. Go to Meta Box > Custom Fields to create fields. Here are the fields that I’ll create:
 
-![The created custom fields](https://i.imgur.com/ZJ7E9r5.png)
+![The created custom fields](https://imgur.elightup.com/ZJ7E9r5.png)
 
 After creating all the fields, move to the **Settings** tab > **Location** > choose **Post Type** as the **Restaurants** post type to apply these fields to it.
 
-![Set location for the created fields as post type](https://i.imgur.com/c2WVoJv.png)
+![Set location for the created fields as post type](https://imgur.elightup.com/c2WVoJv.png)
 
 Go to the post editor, you will see all of the created custom fields.
 
-![All the created fields appear in the post editor](https://i.imgur.com/0by2k0P.png)
+![All the created fields appear in the post editor](https://imgur.elightup.com/0by2k0P.png)
 
 Just fill in the information.
 
@@ -57,35 +57,35 @@ Just fill in the information.
 
 Now, let’s create a global block to get the post information! Go to **Breakdance > Global Blocks** then create a new one.
 
-![Create a global block](https://i.imgur.com/yydOEph.png)
+![Create a global block](https://imgur.elightup.com/yydOEph.png)
 
 Remember to set the preview for the global block.
 
 My global block is to display the information of each post in a box like this.
 
-![The information of each post is displayed in the global block](https://i.imgur.com/upsbvVj.png)
+![The information of each post is displayed in the global block](https://imgur.elightup.com/upsbvVj.png)
 
 First, we'll add a div for this box.
 
-![Add a div element](https://i.imgur.com/EMwkovo.png)
+![Add a div element](https://imgur.elightup.com/EMwkovo.png)
 
 Next, add an **Image** element to display the featured image of the post. To insert dynamic data for this element, just click the icon in the image below and choose the **Featured Image** option in the **Post** section.
 
-![Add an Image element for the featured image](https://i.imgur.com/DGURTdQ.png)
+![Add an Image element for the featured image](https://imgur.elightup.com/DGURTdQ.png)
 
 For the restaurant’s name, select a **Text Link** element to display the name in link format. Then, choose the **Post Title** option. And, if you want to set the hyperlink, choose the Post Permalink option in the **Link** section.
 
-![Select a Text Link element for the restaurant's name](https://i.imgur.com/tstVynR.gif)
+![Select a Text Link element for the restaurant's name](https://imgur.elightup.com/tstVynR.gif)
 
 To display the restaurant’s address, add a **Text** element. As the address is saved in the custom field created by **Meta Box**, we’ll insert the dynamic data into this element. Also, click the icon as we did before and choose the corresponding field name in the **Meta Box** section. Then, the restaurant’s address will be obtained.
 
-![Do likewise with the voucher information](https://i.imgur.com/ZooOCEx.gif)
+![Do likewise with the voucher information](https://imgur.elightup.com/ZooOCEx.gif)
 
 For the voucher information, do likewise.
 
 For the last one - the logo of the restaurant, we’ll add an Image element for it. The logo is saved in the custom field as well, so we’ll also insert the dynamic data into this element.
 
-![Add an Image element for the logo of the restauran](https://i.imgur.com/lN1j9eg.gif)
+![Add an Image element for the logo of the restauran](https://imgur.elightup.com/lN1j9eg.gif)
 
 We have just displayed all the wanted information from the restaurant.
 
@@ -93,17 +93,17 @@ We have just displayed all the wanted information from the restaurant.
 
 Let’s edit the homepage with Breakdance. First, add a new section to the page to contain all the latest products.
 
-![Add a Section to the Homepage](https://i.imgur.com/7We9NeN.png)
+![Add a Section to the Homepage](https://imgur.elightup.com/7We9NeN.png)
 
 Then, add a heading to name it.
 
 For displaying the wanted posts, choose a **Post Loop Builder** element. In the **Global Block** section of this element's settings, choose the global block which has just been created.
 
-![Choose a Post Loop Builder element to display the wanted posts](https://i.imgur.com/zuKFTsx.png)
+![Choose a Post Loop Builder element to display the wanted posts](https://imgur.elightup.com/zuKFTsx.png)
 
 To stipulate the source of data and the products you want to display in the section, go to the **Query** section > **Custom** > then edit the query like this:
 
-![Go to Query section > Custom > then edit the query to stipulate the source of data](https://i.imgur.com/AgDuofT.png)
+![Go to Query section > Custom > then edit the query to stipulate the source of data](https://imgur.elightup.com/AgDuofT.png)
 
 **In there:**
 
@@ -119,10 +119,10 @@ Go back to the created global block. Then, customize each element, and also can 
 
 After styling the global block, back to the homepage, you’ll see the information of the posts will have a new look like this.
 
-![Style the section](https://i.imgur.com/eA4bAZd.png)
+![Style the section](https://imgur.elightup.com/eA4bAZd.png)
 
 Next, we’ll set the layout of the section for better display. Go to edit the homepage with Breakdance, and change the setting of each element.
 
 After that, you’ll see the new appearance.
 
-![The final result after styling](https://i.imgur.com/sTREMWQ.png)
+![The final result after styling](https://imgur.elightup.com/sTREMWQ.png)

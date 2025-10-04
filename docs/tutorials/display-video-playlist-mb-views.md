@@ -11,7 +11,7 @@ The video playlist will keep your visitors engaged for longer, and they will fin
 
 This is a video playlist I created as an example:
 
-![An example of the video playlist with the corresponding video appears when clicking on the title.](https://i.imgur.com/i77lwTq.gif)
+![An example of the video playlist with the corresponding video appears when clicking on the title.](https://imgur.elightup.com/i77lwTq.gif)
 
 ## Video version
 
@@ -23,7 +23,7 @@ In the playlist, there will be multiple videos. When you click on one from the l
 
 The playlist is created manually which allows you to flexibly add or remove any video. The video information includes the ID on Youtube and the title will be saved in custom fields with Meta Box. Then display them using MB Views.
 
-![The playlist includes several videos with their information as title and ID are saved in custom fields](https://i.imgur.com/5Lkjhaq.png)
+![The playlist includes several videos with their information as title and ID are saved in custom fields](https://imgur.elightup.com/5Lkjhaq.png)
 
 So, these are some tools are needed for this practice:
 
@@ -38,35 +38,35 @@ Let’s start now!
 
 As I mentioned, we will use custom fields to store video information. Here are the fields that I created for the playlist.
 
-![Structure of custom field to store video information.](https://i.imgur.com/pAdmKgC.png)
+![Structure of custom field to store video information.](https://imgur.elightup.com/pAdmKgC.png)
 
 Each video has a pair of two contents: one is the ID that helps to crawl the video from YouTube and display on the player; another is the title that you name the video yourselves. So, I put them into a group. A playlist also includes several videos, so this group field is made to be cloneable.
 
 Go to **Meta Box** > **Custom Fields** and create a new field group.
 
-![Go to Meta Box > Custom Fields and create a new field group](https://i.imgur.com/pbSqDbW.png)
+![Go to Meta Box > Custom Fields and create a new field group](https://imgur.elightup.com/pbSqDbW.png)
 
 First, add a **Group** field.
 
-![Add a group](https://i.imgur.com/S5C55zm.png)
+![Add a group](https://imgur.elightup.com/S5C55zm.png)
 
 Inside this group, add subfields into it.
 
 The ID is just a part shown on the URL of the video on YouTube, not a full URL. So we will add the **Text** field instead of the **URL** type.
 
-![Add a Text field for the video ID because it’s not a full URL](https://i.imgur.com/5YV194d.png)
+![Add a Text field for the video ID because it’s not a full URL](https://imgur.elightup.com/5YV194d.png)
 
 Also, add this field type for the title. There are no special settings for it.
 
-![Also add the Text field for the title with no special settings.](https://i.imgur.com/Ef0aQ5A.png)
+![Also add the Text field for the title with no special settings.](https://imgur.elightup.com/Ef0aQ5A.png)
 
 For the group settings, I set this group as collapsible to see all videos in a clear structure.
 
-![Set the group as collapsible to see all videos in a clear structure](https://i.imgur.com/HJGrBXq.png)
+![Set the group as collapsible to see all videos in a clear structure](https://imgur.elightup.com/HJGrBXq.png)
 
 To easily identify the video, you can set the title for the group. Click to the icon at the end of the **Group title** box.
 
-![Set the title for the group to easily identify the video](https://i.imgur.com/DOk3v2F.png)
+![Set the title for the group to easily identify the video](https://imgur.elightup.com/DOk3v2F.png)
 
 There will be some suggestions to choose from:
 
@@ -76,27 +76,27 @@ There will be some suggestions to choose from:
 
 In this practice, I choose the last one.
 
-![Choose the last one to set the name of the group based on the title of the video](https://i.imgur.com/CnQJbft.png)
+![Choose the last one to set the name of the group based on the title of the video](https://imgur.elightup.com/CnQJbft.png)
 
 Since we have several videos in the playlist, remember to set this group as cloneable. It’s an essential setting.
 
-![Set the group as cloneable](https://i.imgur.com/8IgiK7T.png)
+![Set the group as cloneable](https://imgur.elightup.com/8IgiK7T.png)
 
 You also should enable the **Sortable** option to rearrange the video. It also means that you can set the order of the video on the playlist manually.
 
-![Enable the Sortable option to rearrange the video](https://i.imgur.com/sXADjj8.png)
+![Enable the Sortable option to rearrange the video](https://imgur.elightup.com/sXADjj8.png)
 
 After having all of the reasonable settings for the fields, move to the **Settings** tab, and set the **Location** to apply the fields to any post type as you want. In this practice, I’ll assign it to the blog posts.
 
-![Move to the Settings tab, and set the Location to apply the fields to any post type as you want](https://i.imgur.com/RN8kJH7.png)
+![Move to the Settings tab, and set the Location to apply the fields to any post type as you want](https://imgur.elightup.com/RN8kJH7.png)
 
 Then, go to the post editor, you can see the custom fields displayed.
 
-![The custom fields display in the post editor](https://i.imgur.com/O96HDfu.png)
+![The custom fields display in the post editor](https://imgur.elightup.com/O96HDfu.png)
 
 Just input some videos and click on the **+ Add more** to add other videos.
 
-![Click on the Add more button to add more video](https://i.imgur.com/frgULTQ.png)
+![Click on the Add more button to add more video](https://imgur.elightup.com/frgULTQ.png)
 
 In the next step, we will display the videos as a playlist with the help of MB Views.
 
@@ -106,39 +106,39 @@ First, we should create a template for the section of the video playlist.
 
 Go to **Meta Box** > **Views** and create a new one as usual.
 
-![Go to Meta Box > Views and create a new template](https://i.imgur.com/poOuyOE.png)
+![Go to Meta Box > Views and create a new template](https://imgur.elightup.com/poOuyOE.png)
 
 ### 2.1. Getting information of the videos
 
 To get data from custom fields, click on the **Insert Field** button, and find the fields on the right sidebar.
 
-![To get data from custom fields, click on the Insert Field button, and find them on the right sidebar](https://i.imgur.com/OmII23W.png)
+![To get data from custom fields, click on the Insert Field button, and find them on the right sidebar](https://imgur.elightup.com/OmII23W.png)
 
 Since we applied custom fields on the post, you can see the group of fields that we created in the **Post** tab.
 
-![Since we applied custom fields on the post, you can see the group of fields that we created in the Post tab](https://i.imgur.com/v8sezzI.png)
+![Since we applied custom fields on the post, you can see the group of fields that we created in the Post tab](https://imgur.elightup.com/v8sezzI.png)
 
 Click on it and some lines of code will be generated in the **Template** section.
 
-![Click on the created field and some lines of code will be generated in the Template section](https://i.imgur.com/xu6vmYC.png)
+![Click on the created field and some lines of code will be generated in the Template section](https://imgur.elightup.com/xu6vmYC.png)
 
 In there, `video` is the ID of the group.
 
 Then, just choose the subfield from the list to insert them into the loop one by one.
 
-![Choose the subfield from the list to insert them into the loop one by one](https://i.imgur.com/4O9AVH0.gif)
+![Choose the subfield from the list to insert them into the loop one by one](https://imgur.elightup.com/4O9AVH0.gif)
 
 Move to the **Settings** section of the view, and set the **Type** as **Singular**, and the Location as the post type as you assigned the custom fields to. This setting helps to assign this template to all the singular pages of the post type.
 
-![Move to the Settings section of the view, and set the Type as Singular, and the Location as the post type](https://i.imgur.com/vQIo2Br.png)
+![Move to the Settings section of the view, and set the Type as Singular, and the Location as the post type](https://imgur.elightup.com/vQIo2Br.png)
 
 As well as, you can choose a suitable position for the playlist on the page.
 
-![You can choose a suitable position for the playlist on the page](https://i.imgur.com/TOCRVgo.png)
+![You can choose a suitable position for the playlist on the page](https://imgur.elightup.com/TOCRVgo.png)
 
 After publishing the view, go to a singular page, you can see the ID and title of the video displayed. But they are just in the text format.
 
-![The ID and title of the video are displayed on the singular page in the text format](https://i.imgur.com/p4NBiUP.png)
+![The ID and title of the video are displayed on the singular page in the text format](https://imgur.elightup.com/p4NBiUP.png)
 
 To have a section where you have a panel to show the video in the playlist, and another one for the video player, we should add some extra code to the created template.
 
@@ -148,7 +148,7 @@ Back to the view.
 
 Besides adding some **`div`** and classes to style the playlist easily later, I will add some other code as follows to set the added data displaying as thumbnail and title in the first column:
 
-![Add some div, classes and other code](https://i.imgur.com/eonYBMf.png)
+![Add some div, classes and other code](https://imgur.elightup.com/eonYBMf.png)
 
 **Explanation**:
 
@@ -159,7 +159,7 @@ Besides adding some **`div`** and classes to style the playlist easily later, I 
 
 Next, to display the iframe for the player, add the following lines of code:
 
-![Add some code to display the iframe for the player](https://i.imgur.com/LTc1lMI.png)
+![Add some code to display the iframe for the player](https://imgur.elightup.com/LTc1lMI.png)
 
 **Explanation**:
 
@@ -170,11 +170,11 @@ In the line 14:
 
 Finally, go to the **CSS** tab, and add some code to prettify the section. Notice that all the classes and IDs for the two areas in the section will be used in this code.
 
-![Add code to the CSS tab to style the playlist](https://i.imgur.com/cNeSGU1.png)
+![Add code to the CSS tab to style the playlist](https://imgur.elightup.com/cNeSGU1.png)
 
 Then, go to the page, the section has a new look already. However, nothing happens when you click on each title for now, because we haven’t made it.
 
-![The new look the the video playlist but nothing happens when you click on each title.](https://i.imgur.com/WqpyFjy.gif)
+![The new look the the video playlist but nothing happens when you click on each title.](https://imgur.elightup.com/WqpyFjy.gif)
 
 Let’s move to the next step.
 
@@ -182,7 +182,7 @@ Let’s move to the next step.
 
 Still in the created template of the playlist, we should add some extra things to the code.
 
-![Add an attribute to the title in the created template](https://i.imgur.com/q6yuxea.png)
+![Add an attribute to the title in the created template](https://imgur.elightup.com/q6yuxea.png)
 
 **In there**:
 
@@ -190,7 +190,7 @@ Still in the created template of the playlist, we should add some extra things t
 
 Then, go to the **JavaScript**, and add the following code:
 
-![Add some code to the JavaScript tab](https://i.imgur.com/3zEyCdJ.png)
+![Add some code to the JavaScript tab](https://imgur.elightup.com/3zEyCdJ.png)
 
 **Explanation**:
 
@@ -204,4 +204,4 @@ I uploaded all of these codes on [Github](https://github.com/wpmetabox/tutorials
 
 Now, go to the page, click on a video title. You will see the player play different videos. They are the ones corresponding to the titles in the left panel.
 
-![When you click on one from the left panel, its video player will appear immediately on the side](https://i.imgur.com/i77lwTq.gif)
+![When you click on one from the left panel, its video player will appear immediately on the side](https://imgur.elightup.com/i77lwTq.gif)

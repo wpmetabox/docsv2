@@ -63,7 +63,7 @@ This is the field settings array when creating this field with code:
 
 In the post/page editor, the checkbox list will display with options.
 
-![The field displays in the post/page editor](https://i.imgur.com/u9Wk4xH.png)
+![The field displays in the post/page editor](https://imgur.elightup.com/u9Wk4xH.png)
 
 ## Data
 
@@ -87,35 +87,35 @@ Note that this field stores the **values**, not labels.
 
 In the view, click on the **Insert Field** button.
 
-![Go to Views and click on the Insert Field button](https://i.imgur.com/J74Rkam.png)
+![Go to Views and click on the Insert Field button](https://imgur.elightup.com/J74Rkam.png)
 
 Find the name of the created field on the list on the right sidebar.
 
-![Find the name of the created field on the list on the right sidebar](https://i.imgur.com/rEK9Eqm.png)
+![Find the name of the created field on the list on the right sidebar](https://imgur.elightup.com/rEK9Eqm.png)
 
 There will be two options to output the data, they are the value and label of the choices that we input in the field.
 
 Just choose one to output only the values, or only the labels. In the event that you want to display both of them, just insert the field twice.
 
-![choose one option to output only the values, or only the labels](https://i.imgur.com/cI8asuN.png)
+![choose one option to output only the values, or only the labels](https://imgur.elightup.com/cI8asuN.png)
 
 Then the code will be like this:
 
-![The code to display selected values](https://i.imgur.com/Oaan9xt.png)
+![The code to display selected values](https://imgur.elightup.com/Oaan9xt.png)
 
 Display only the labels:
 
-![Display only the labels](https://i.imgur.com/QnDwhsM.gif)
+![Display only the labels](https://imgur.elightup.com/QnDwhsM.gif)
 
 Display both values and labels:
 
-![Display both values and labels](https://i.imgur.com/2dPnl1G.gif)
+![Display both values and labels](https://imgur.elightup.com/2dPnl1G.gif)
 
 **Displaying cloneable values:**
 
 No matter if the field is cloneable or not, the operation to display data from the field will be the same. The difference is just in the generated code.
 
-![Displaying cloneable values](https://i.imgur.com/mmnSFFj.gif)
+![Displaying cloneable values](https://imgur.elightup.com/mmnSFFj.gif)
 
 ### Using PHP
 

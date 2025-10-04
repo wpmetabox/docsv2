@@ -22,14 +22,14 @@ If the taxonomy is hierarchical, you can display the field as a select or checkb
 <Screenshots
     name="taxonomy"
     col1={[
-        ['https://i.imgur.com/PzPkqur.png', 'The taxonomy field default interface'],
-        ['https://i.imgur.com/Ook0RwT.png', 'The taxonomy field with checkbox list interface'],
-        ['https://i.imgur.com/iLMFVBY.png', 'The taxonomy field with checkbox tree interface'],
-        ['https://i.imgur.com/orDECYA.png', 'The taxonomy field with select tree interface'],
+        ['https://imgur.elightup.com/PzPkqur.png', 'The taxonomy field default interface'],
+        ['https://imgur.elightup.com/Ook0RwT.png', 'The taxonomy field with checkbox list interface'],
+        ['https://imgur.elightup.com/iLMFVBY.png', 'The taxonomy field with checkbox tree interface'],
+        ['https://imgur.elightup.com/orDECYA.png', 'The taxonomy field with select tree interface'],
     ]}
     col2={[
-        ['https://i.imgur.com/D7Q5mUA.png', 'The taxonomy field with radio list interface'],
-        ['https://i.imgur.com/XMhMjoN.png', 'The taxonomy field with radio list inline interface'],
+        ['https://imgur.elightup.com/D7Q5mUA.png', 'The taxonomy field with radio list interface'],
+        ['https://imgur.elightup.com/XMhMjoN.png', 'The taxonomy field with radio list inline interface'],
     ]}
 />
 

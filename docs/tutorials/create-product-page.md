@@ -4,7 +4,7 @@ title: Creating a product page - without builders
 
 I’ll create a detailed page about car rental as an example for a product page. It’s a singular page of a custom post type.
 
-![Example of a product page](https://i.imgur.com/dRktwaD.png)
+![Example of a product page](https://imgur.elightup.com/dRktwaD.png)
 
 ## Preparation
 
@@ -20,25 +20,25 @@ We need to install the following tools:
 
 In the admin dashboard, go to **Meta Box > Post Types > New post type**.
 
-![In the admin dashboard go to New post type](https://i.imgur.com/ULeXtVp.png)
+![In the admin dashboard go to New post type](https://imgur.elightup.com/ULeXtVp.png)
 
 After publishing, we’ll have a new menu named **Car Rentals** in the Admin Menu.
 
-![A new nemu appears in the Menu](https://i.imgur.com/CNMPsat.png)
+![A new nemu appears in the Menu](https://imgur.elightup.com/CNMPsat.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields** to create fields. Here is the fields that I created:
 
-![Create custom fields](https://i.imgur.com/RIwOiKG.png)
+![Create custom fields](https://imgur.elightup.com/RIwOiKG.png)
 
 After creating all the fields, move to the Settings tab. Set the Location as Post Type, and select your product’s post type to apply these fields to it.
 
-![Set location for the fields as post type](https://i.imgur.com/hEMfKpf.png)
+![Set location for the fields as post type](https://imgur.elightup.com/hEMfKpf.png)
 
 Back to the post editor, the custom fields will be there.
 
-![The custom fields in the post editor](https://i.imgur.com/8zhAekK.gif)
+![The custom fields in the post editor](https://imgur.elightup.com/8zhAekK.gif)
 
 ## 3. Displaying the product information on the page
 
@@ -93,6 +93,6 @@ After adding all the code, you can also add some CSS code then will see the prod
 
 Final result:
 
-![Final result after all steps](https://i.imgur.com/dRktwaD.png)
+![Final result after all steps](https://imgur.elightup.com/dRktwaD.png)
 
 You can refer to the total code including css and js  in this [Git link](https://github.com/wpmetabox/tutorials/blob/master/create-a-product-page-without-builders/single-car-rental.php).

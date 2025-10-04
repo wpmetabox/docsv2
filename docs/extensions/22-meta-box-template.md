@@ -4,7 +4,7 @@ title: MB Template
 
 MB Template helps you write configuration for custom fields in the YAML format, which is human-readable and easy to understand.
 
-![meta box template](https://i.imgur.com/UIKF04C.png)
+![meta box template](https://imgur.elightup.com/UIKF04C.png)
 
 After installing, please go to *Settings &rarr; MB Template* to add the template for custom meta boxes and custom fields.
 
@@ -56,7 +56,7 @@ The plugin will parse this content into a PHP array as follows:
 
 This array will be sent to Meta Box and Meta Box will register a field group with this settings array. The result looks like this:
 
-![meta box](https://i.imgur.com/C6W5MtS.png)
+![meta box](https://imgur.elightup.com/C6W5MtS.png)
 
 Now you understand how the plugin works. It's time to get familiar with YAML syntax.
 

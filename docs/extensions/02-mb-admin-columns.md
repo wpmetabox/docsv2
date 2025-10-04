@@ -6,7 +6,7 @@ title: MB Admin Columns
 
 Showing fields' values in the post table give users a better overview of the posts without going to edit each post. It saves you time verifying/viewing the data.
 
-![meta box admin columns](https://i.imgur.com/7joEGrL.png)
+![meta box admin columns](https://imgur.elightup.com/7joEGrL.png)
 
 ## Showing custom fields as admin columns
 

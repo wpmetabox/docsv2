@@ -9,7 +9,7 @@ Normally, when you use Yoast SEO on your site, there will be a section to fill i
 
 I'll get data from Meta Box custom fields, then add to Yoast SEO meta tags as title and description.
 
-![add content to Yoast SEO meta tags as title and description](https://i.imgur.com/9Kux9hY.png)
+![add content to Yoast SEO meta tags as title and description](https://imgur.elightup.com/9Kux9hY.png)
 
 ## Video version
 
@@ -32,19 +32,19 @@ To get started, you would have to use Yoast SEO on your site to use Yoast SEO me
 
 There is little difference between getting content from the normal field, group, cloneable field, and cloneable group. So I’ll have 4 kinds of them as an example.
 
-![4 kinds of custom fields as an example](https://i.imgur.com/hBqdgMy.png)
+![4 kinds of custom fields as an example](https://imgur.elightup.com/hBqdgMy.png)
 
 Go to **Meta Box** and create them.
 
-![Go to Meta Box and create custom fields](https://i.imgur.com/YhvfOb5.png)
+![Go to Meta Box and create custom fields](https://imgur.elightup.com/YhvfOb5.png)
 
 After creating all the fields, move to the **Settings tab**, choose **Location** as **Post type**, and select any post type you want to apply these fields for it.
 
-![Move to the Settings tab, choose Location as Post type, and select any post type you want to apply](https://i.imgur.com/DwkQXTA.png)
+![Move to the Settings tab, choose Location as Post type, and select any post type you want to apply](https://imgur.elightup.com/DwkQXTA.png)
 
 After publishing the custom fields, you will see the field in the post editor. Just input some data.
 
-![The field in the post editor](https://i.imgur.com/qP0wIXD.png)
+![The field in the post editor](https://imgur.elightup.com/qP0wIXD.png)
 
 ## 2. Outputing the custom fields values to be the meta tags
 
@@ -63,7 +63,7 @@ Yoast SEO provides [snippet variables](https://yoast.com/help/list-available-sni
 
 In the **Yoast SEO** section in the post/page editor, enter that variable to the Meta title box like this:
 
-![Enter that variable to the Meta title box](https://i.imgur.com/fPlhZg0.png)
+![Enter that variable to the Meta title box](https://imgur.elightup.com/fPlhZg0.png)
 
 In this case, I did input the variable as `%%cf_product_title%%`. In there, product_title is the ID of my custom field.
 
@@ -71,17 +71,17 @@ Please note that this way makes sense only when the field is non-clonable and NO
 
 When you add the variable, the preview will show the text immediately. It’ll be exactly the same with the content saved in the custom field.
 
-![When you add the variable, the preview will show the text immediately](https://i.imgur.com/MoFgzCT.png)
+![When you add the variable, the preview will show the text immediately](https://imgur.elightup.com/MoFgzCT.png)
 
 To double check if it is in the meta tag or not, just go to the post on the front end and inspect it.
 
-![Go to the post on the front end and inspect to double check if it is in the meta tag or not](https://i.imgur.com/ks1LXSz.png)
+![Go to the post on the front end and inspect to double check if it is in the meta tag or not](https://imgur.elightup.com/ks1LXSz.png)
 
 ## 2.2. Using Custom Snippet Variables
 
 To get data from some special custom fields, for example, group or cloneable ones, we should add code to the theme’s file to create custom snippet variables.
 
-![Add code to the theme’s file to create custom snippet variables](https://i.imgur.com/3ggMKzF.png)
+![Add code to the theme’s file to create custom snippet variables](https://imgur.elightup.com/3ggMKzF.png)
 
 ```php
 add_action( 'wpseo_register_extra_replacements', function() {
@@ -136,45 +136,45 @@ function my_promotions_function(){
 
 We will use the hook ` wpseo_register_extra_replacements ` to create the custom variables.
 
-![We will use this hook to create the custom variables.](https://i.imgur.com/hG6q0Y3.png)
+![We will use this hook to create the custom variables.](https://imgur.elightup.com/hG6q0Y3.png)
 
 I use the ` wpseo_register_var_replacement ` function from **Yoast SEO** to register that I will create three new variables since I have three fields for example.
 
-![I use this function from Yoast SEO to register that I will create three new variables since I have three fields for example.](https://i.imgur.com/fxCPTsS.png)
+![I use this function from Yoast SEO to register that I will create three new variables since I have three fields for example.](https://imgur.elightup.com/fxCPTsS.png)
 
 These are the names of the variables that you can name as you want.
 
-![The names of the variables](https://i.imgur.com/uWvFz3Y.png)
+![The names of the variables](https://imgur.elightup.com/uWvFz3Y.png)
 
 Notice that ` advanced and ` ` Some help text ` parameters follow **Yoast SEO** documentation, so you can look for a more detailed guide about these parameters in [there](https://yoast.com/help/list-available-snippet-variables-yoast-seo/).
 
 Corresponding to each variable, we will have a function to get data from custom fields. You also can name those functions.
 
-![Each variablewill have a function to get data from custom fields](https://i.imgur.com/vSXegRm.png)
+![Each variablewill have a function to get data from custom fields](https://imgur.elightup.com/vSXegRm.png)
 
 In these functions, you should use the [_rwmb_meta_ helper function](https://docs.metabox.io/filters/rwmb-meta/) to get data or settings of the custom fields no matter which kind of them.
 
-![Use the rwmb_meta helper function to get data or settings of the custom fields](https://i.imgur.com/Dlc2zFR.png)
+![Use the rwmb_meta helper function to get data or settings of the custom fields](https://imgur.elightup.com/Dlc2zFR.png)
 
 These lines of code to get data from a **group which is non-clonable**.
 
-![These lines of code to get data from a group which is non-clonable](https://i.imgur.com/eEy4I7e.png)
+![These lines of code to get data from a group which is non-clonable](https://imgur.elightup.com/eEy4I7e.png)
 
 In there, this is the **ID** of the group.
 
-![The ID of the group](https://i.imgur.com/ZPktVou.png)
+![The ID of the group](https://imgur.elightup.com/ZPktVou.png)
 
 These are the **IDs** of the subfields inside that group.
 
-![The IDs of the subfields inside that group](https://i.imgur.com/gsaCCgg.png)
+![The IDs of the subfields inside that group](https://imgur.elightup.com/gsaCCgg.png)
 
 This one is to get data from a **cloneable field** that has the ID as ` features `. Since it is cloneable, there’ll be a loop in the function.
 
-![A loop in the function to get data from a cloneable field](https://i.imgur.com/KYGITZp.png)
+![A loop in the function to get data from a cloneable field](https://imgur.elightup.com/KYGITZp.png)
 
 These are to get data from a **clonable group** (ID as ` promotions `) which has two subfields inside with the IDs are ` promotion_program ` and ` expired_date `.
 
-![Get data from a clonable group which has two subfields inside](https://i.imgur.com/VN7qXm6.png)
+![Get data from a clonable group which has two subfields inside](https://imgur.elightup.com/VN7qXm6.png)
 
 Since the group is cloneable, you can see there also is a loop in the above function.
 
@@ -182,8 +182,8 @@ Now, go to the post editor, and enter the created variables into the box with th
 
 `%%<your_custom_variable>%%`
 
-![Enter the created variables into the box with the structure](https://i.imgur.com/uVsX0TR.png)
+![Enter the created variables into the box with the structure](https://imgur.elightup.com/uVsX0TR.png)
 
 Although **Yoast SEO** does not render content from custom snippet variables in the snippet preview, you can inspect the post and see it.
 
-![Inspect the post and see the result](https://i.imgur.com/qXMMooB.png)
+![Inspect the post and see the result](https://imgur.elightup.com/qXMMooB.png)

@@ -9,7 +9,7 @@ The key-value field allows you to enter an unlimited group of "key-value" pairs.
 ## Screenshots
 
 <Screenshots name="key-value" col1={[
-    ['https://i.imgur.com/yA7rRDR.png', 'The key value field interface']
+    ['https://imgur.elightup.com/yA7rRDR.png', 'The key value field interface']
 ]} />
 
 ## Settings

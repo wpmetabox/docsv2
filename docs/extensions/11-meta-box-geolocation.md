@@ -203,7 +203,7 @@ Let's say we have a field with id `dummy_field`, this field ID is not in the *ad
 
 With MB Builder:
 
-![custom binding](https://i.imgur.com/DuvReWa.png)
+![custom binding](https://imgur.elightup.com/DuvReWa.png)
 
 or with code:
 
@@ -213,7 +213,7 @@ or with code:
 
 You can tell that field to use the short version by prepending the `short:` keyword:
 
-![custom binding short](https://i.imgur.com/Q3mXgMP.png)
+![custom binding short](https://imgur.elightup.com/Q3mXgMP.png)
 
 ```php
 'binding' => 'short:administrative_area_level_1', // returns 'QLD'
@@ -221,7 +221,7 @@ You can tell that field to use the short version by prepending the `short:` keyw
 
 You can also merge two fields, and add any character you want to bind to that field. Like so:
 
-![merge fields](https://i.imgur.com/iowxhWs.png)
+![merge fields](https://imgur.elightup.com/iowxhWs.png)
 
 ```php
 'binding' => 'city + " " + country', // returns QLD Australia
@@ -233,7 +233,7 @@ In case you have multiple "groups" of address fields, such as address details fo
 
 In this case, please set another attribute `'address_field' => 'address_id'` for *each* field in the group. See an example code below:
 
-![specify address field](https://i.imgur.com/azK52Y5.png)
+![specify address field](https://imgur.elightup.com/azK52Y5.png)
 
 If you do with code, then your field group looks like this:
 

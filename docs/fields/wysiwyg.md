@@ -15,7 +15,7 @@ The WYSIWYG field creates an editor to enter rich content. You can enter heading
 ## Screenshots
 
 <Screenshots name="wysiwyg" col1={[
-    ['https://i.imgur.com/Y72Bcvw.png', 'The WYSIWYG field interface'],
+    ['https://imgur.elightup.com/Y72Bcvw.png', 'The WYSIWYG field interface'],
 ]} />
 
 ## Settings

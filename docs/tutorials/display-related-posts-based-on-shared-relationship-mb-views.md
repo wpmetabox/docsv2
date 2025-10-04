@@ -9,7 +9,7 @@ This time, we’ll display related posts based on a shared relationship using th
 
 We will create a bi-directional relationship between events and artists using another extension from Meta Box - MB Relationships. Then, show events linked to the same artist on a single event page like this.
 
-![Show events linked to the same artist on a single event page](https://i.imgur.com/gCYnR7G.png)
+![Show events linked to the same artist on a single event page](https://imgur.elightup.com/gCYnR7G.png)
 
 ## Video version
 
@@ -31,11 +31,11 @@ Here are some needed extensions:
 
 Go to **Meta Box** > **Post Types** to create a new custom post type for the artists and another one for events.
 
-![Go to Meta Box to create new custom post types for the artists and events.](https://i.imgur.com/iFokCSM.png)
+![Go to Meta Box to create new custom post types for the artists and events.](https://imgur.elightup.com/iFokCSM.png)
 
 After publishing, you’ll see the created custom post types in the admin dashboard.
 
-![The created custom post types in the admin dashboard](https://i.imgur.com/llIikjc.png)
+![The created custom post types in the admin dashboard](https://imgur.elightup.com/llIikjc.png)
 
 Now, we can add some posts for each post type.
 
@@ -45,49 +45,49 @@ Then, let's create a relationship between the events and artists.
 
 Go to **Meta Box** > **Relationships** to create the relationships between the Events and Artists post types.
 
-![Create the relationships](https://i.imgur.com/unNtU2B.png)
+![Create the relationships](https://imgur.elightup.com/unNtU2B.png)
 
 You can enter all the settings for the relationship and each side of it in the **From** and **To** sections.
 
-![You can enter all the settings for the relationship and each side of it in the From and To sections.](https://i.imgur.com/QPj5TFc.png)
+![You can enter all the settings for the relationship and each side of it in the From and To sections.](https://imgur.elightup.com/QPj5TFc.png)
 
 Because we’re setting the relationship between two post types, set the **Object type** as **Post** in both sections.
 
-![Set the Object type as Post in both sections.](https://i.imgur.com/vlRK9Nx.png)
+![Set the Object type as Post in both sections.](https://imgur.elightup.com/vlRK9Nx.png)
 
 In the **Post type** option, choose the post type you want to create a relationship with. The relationship is bidirectional, so you can put the post types not in order. I set the **Events** in the **From** section, and the rest is **Artists**.
 
-![In the Post type option, choose the post type to create a relationship with](https://i.imgur.com/rB6V3ny.png)
+![In the Post type option, choose the post type to create a relationship with](https://imgur.elightup.com/rB6V3ny.png)
 
 Next, this setting is available when you activate the **MB Admin Columns** extension only.
 
-![The setting enables to show a columns in the dashboard](https://i.imgur.com/4oF5Bjv.png)
+![The setting enables to show a columns in the dashboard](https://imgur.elightup.com/4oF5Bjv.png)
 
 Once enabled, columns will appear in the dashboard showing related events and artists.
 
-![Columns will appear in the dashboard showing related events and artists.](https://i.imgur.com/ja5ibTu.png)
+![Columns will appear in the dashboard showing related events and artists.](https://imgur.elightup.com/ja5ibTu.png)
 
 In the **Field** tab, you can set the label for the relationship section that shows in the post editor.
 
-![In the Field tab, you can set the label for the relationship section.](https://i.imgur.com/KxQ7w1B.png)
+![In the Field tab, you can set the label for the relationship section.](https://imgur.elightup.com/KxQ7w1B.png)
 
 There’ll be a box at the right sidebar to choose **which Artists are related to the current post** in the **Events** post type, and vice versa.
 
-![A section allow you choose which Artists are related to the current post in the Events post type](https://i.imgur.com/f8o8pSf.png)
+![A section allow you choose which Artists are related to the current post in the Events post type](https://imgur.elightup.com/f8o8pSf.png)
 
 After publishing, go to a post editor; you can see a section like that allowing you to select several artists.
 
-![Select several artists](https://i.imgur.com/VbKVNKx.gif)
+![Select several artists](https://imgur.elightup.com/VbKVNKx.gif)
 
 Here is my example of filling out all relationship information for events and artists.
 
-![All relationship information for events and artists](https://i.imgur.com/1mTj4jm.png)
+![All relationship information for events and artists](https://imgur.elightup.com/1mTj4jm.png)
 
 ## 3. Showing related posts based on a shared relationship
 
 This is my single event page before this practice.
 
-![Single event page](https://i.imgur.com/rdefRcw.png)
+![Single event page](https://imgur.elightup.com/rdefRcw.png)
 
 Now, I will add other events that the artist of this event also participates in, like I showed at the beginning. I named this section as Related Events.
 
@@ -191,4 +191,4 @@ Now, just move to the **Settings** section of the view, set the **Type** as **Si
 
 Go to the frontend, related events appear under each single event post. It also works well when you check on another post.
 
-![There are some posts displayed in the related events section on each single event post](https://i.imgur.com/ldG9pph.gif)
+![There are some posts displayed in the related events section on each single event post](https://imgur.elightup.com/ldG9pph.gif)

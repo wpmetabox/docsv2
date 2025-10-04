@@ -8,11 +8,11 @@ You can move data from the <strong>CPT UI</strong> to the <strong>Meta Box</stro
 
 Here is my example. I have this <strong>Companies</strong> post type created by <strong>CPT UI</strong> with all the posts inside.
 
-<img src="https://i.imgur.com/vyTY90m.png" alt="Post typed created by CPU UI" width="1200" height="602" />
+<img src="https://imgur.elightup.com/vyTY90m.png" alt="Post typed created by CPU UI" width="1200" height="602" />
 
 As you can see in the <strong>Plugin</strong> menu, the <strong>CPT UI</strong> has already been activated.
 
-<img src="https://i.imgur.com/U4ZKxGf.png" alt="Activate the CPU UI" width="1560" height="636" />
+<img src="https://imgur.elightup.com/U4ZKxGf.png" alt="Activate the CPU UI" width="1560" height="636" />
 
 I will now proceed to transfer the data.
 
@@ -22,13 +22,13 @@ I'll install and activate <strong>MB Custom Post Types</strong> &amp; <strong>Cu
 
 After that, the new <strong>Post Types</strong> menu appears on the <strong>Dashboard</strong> along with the <strong>CPT UI Migration sub-menu</strong>.
 
-<img src="https://i.imgur.com/sxEKSlv.png" alt="New Post Type menu appears on the Dashboard" width="1200" height="606" />
+<img src="https://imgur.elightup.com/sxEKSlv.png" alt="New Post Type menu appears on the Dashboard" width="1200" height="606" />
 
 <h2>Step 3: Migrating the Data</h2>
 
 Go to the <strong>Post Types</strong> menu &gt; <strong>CPT UI Migration</strong> &gt; Click the <strong>Migrate</strong> button.
 
-<img src="https://i.imgur.com/FRk0drJ.png" alt="Click the Migrate button in the Post Types menu" width="1200" height="603" />
+<img src="https://imgur.elightup.com/FRk0drJ.png" alt="Click the Migrate button in the Post Types menu" width="1200" height="603" />
 
 When the process finishes, it will show a "Done" message.
 
@@ -38,10 +38,10 @@ When the process finishes, it will show a "Done" message.
 
 The Companies post type and all the terms in the Company Types taxonomy are still there. They are the new ones created by Meta Box. It also means that all the data was migrated successfully.
 
-<img src="https://i.imgur.com/x7i0sB9.png" alt="The Companies post type has successfully migrated." width="1200" height="606" />
+<img src="https://imgur.elightup.com/x7i0sB9.png" alt="The Companies post type has successfully migrated." width="1200" height="606" />
 
 And the <strong>CPT UI</strong> has already been deactivated.
 
-<img src="https://i.imgur.com/U4ZKxGf.png" alt="The CPT UI has already been deactivated" width="1560" height="636" />
+<img src="https://imgur.elightup.com/U4ZKxGf.png" alt="The CPT UI has already been deactivated" width="1560" height="636" />
 
 The migration has been done.

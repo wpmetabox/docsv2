@@ -11,7 +11,7 @@ The single image field allows users to select or upload one image via the WordPr
 <Screenshots
     name="single-image"
     col1={[
-        ['https://i.imgur.com/c7Pa4eH.png', 'The single image field interface'],
+        ['https://imgur.elightup.com/c7Pa4eH.png', 'The single image field interface'],
     ]}
 />
 

@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Today, we’ll create a submission form to input data, then the data will be automatically inserted into a table in a post.
 
-![Example of a submission form](https://i.imgur.com/l46BdPT.png)
+![Example of a submission form](https://imgur.elightup.com/l46BdPT.png)
 
 ## Video version
 
@@ -31,7 +31,7 @@ We’ll create a post type for the deals. Each of the deals will be a post of th
 
 Go to **Meta Box > Post Types > Add New**.
 
-![Create a new custom post type](https://i.imgur.com/zg4UN4f.png)
+![Create a new custom post type](https://imgur.elightup.com/zg4UN4f.png)
 
 ## 2. Creating fields for the submission form
 
@@ -82,15 +82,15 @@ Here I will use the `post_title` field to save product names as the title of the
 
 Now, go to **Meta Box > Custom Fields > Add New** to create fields. Here are the fields I have created.
 
-![Created fields](https://i.imgur.com/mQbZNFf.png)
+![Created fields](https://imgur.elightup.com/mQbZNFf.png)
 
 After creating the necessary fields, go to the **Settings** tab > **Location** >  choose **Post types** as **Deal** to apply these fields to it.
 
-![Set location for the created fields](https://i.imgur.com/Eb4XcL6.png)
+![Set location for the created fields](https://imgur.elightup.com/Eb4XcL6.png)
 
 In the post editor, you’ll see all the created custom fields.
 
-![The created fields in the post editor](https://i.imgur.com/FJEP7B6.png)
+![The created fields in the post editor](https://imgur.elightup.com/FJEP7B6.png)
 
 If you are in charge of importing data, you can import data directly from the backend. Otherwise, if you want other people to import data into your cheat sheet, you need to bring these fields to the frontend.
 
@@ -98,11 +98,11 @@ If you are in charge of importing data, you can import data directly from the ba
 
 Now, we need **MB Frontend Submission** to display the custom fields of this form to the frontend. It’ll automatically generate a shortcode for the field group like this:
 
-![Auto generated shortcode](https://i.imgur.com/vofBXWh.png)
+![Auto generated shortcode](https://imgur.elightup.com/vofBXWh.png)
 
 You just need to put the shortcode anywhere you want to display the submission form.
 
-![Put the shortcode anywhere to display submission form](https://i.imgur.com/Kb2OKhp.png)
+![Put the shortcode anywhere to display submission form](https://imgur.elightup.com/Kb2OKhp.png)
 
 However, here I want to add some more things to my form, so I add some attributes to my shortcode like this:
 
@@ -120,7 +120,7 @@ In there:
 
 And the custom fields of my submission form will show up on the frontend like this:
 
-![The created fields in the frontend](https://i.imgur.com/EDsxdKx.png)
+![The created fields in the frontend](https://imgur.elightup.com/EDsxdKx.png)
 
 If you want to add more things to the submission form, you can add other attributes to the shortcode. You can see a list of addable attributes and detailed instructions [here](https://docs.metabox.io/extensions/mb-frontend-submission/#shortcode-attributes).
 
@@ -165,7 +165,7 @@ Go to **Customizer > Additional CSS** and add some CSS:
 
 My submission form will turn to this appearance:
 
-![The created submission form](https://i.imgur.com/yGTzWlD.png)
+![The created submission form](https://imgur.elightup.com/yGTzWlD.png)
 
 ## 5. Displaying data into a table on frontend
 
@@ -206,14 +206,14 @@ In these lines of code, I use a custom query which is `get_posts`. The attribute
 
 After that, go to the **Settings** section of this view, and choose **Shortcode** as the **Type**, so that we can use a shortcode to add this table to the post.
 
-![Settings of this view](https://i.imgur.com/VTxQSES.png)
+![Settings of this view](https://imgur.elightup.com/VTxQSES.png)
 
 I place the shortcode into the content of the post like this:
 
-![Place the shortcode into the content of the post](https://i.imgur.com/2teYAb5.png)
+![Place the shortcode into the content of the post](https://imgur.elightup.com/2teYAb5.png)
 
 This is all of the post content on the frontend with a deal list:
 
-![The result in the front end](https://i.imgur.com/IghgQXM.png)
+![The result in the front end](https://imgur.elightup.com/IghgQXM.png)
 
 When someone imports data to the submission form, the data will be saved in a post having **Deal** post type and ‘draft’ status. If I review and approve this content, it will turn into ‘Published’. At this time, information about the deal will show up right in the table in my post.

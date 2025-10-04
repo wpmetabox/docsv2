@@ -25,7 +25,7 @@ To migrate, go to **Meta Box > Toolset Migration** and click the **Migrate** but
 
 The plugin will show the process of migrating. When it's done, you'll see the text "Done".
 
-![Migrate Toolset to Meta Box](https://i.imgur.com/2rxOfzu.png)
+![Migrate Toolset to Meta Box](https://imgur.elightup.com/2rxOfzu.png)
 
 ## How it works
 

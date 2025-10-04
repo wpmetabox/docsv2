@@ -17,7 +17,7 @@ In there, two of the most essential setup steps are the site languages and the m
 
 In the case that you skip the setup wizard, go to **Languages** > **Setup** to add the languages for your site. Then, you should define at least one language by choosing from a list of over 90 predefined languages or creating a custom one. The first language you add becomes the default language of your multilingual website.
 
-![Setup the languages](https://i.imgur.com/sSF8iW4.png)
+![Setup the languages](https://imgur.elightup.com/sSF8iW4.png)
 
 On this screen, you also can configure media, content, and homepage in the next steps. Click on the **Continue** button to set them up.
 
@@ -27,7 +27,7 @@ This focuses on displaying and customizing the switch language button on the fro
 
 Go to **Appearance** > **Menus**, then follow these steps:
 
-![Set up the language switcher menu](https://i.imgur.com/lIG0mgX.png)
+![Set up the language switcher menu](https://imgur.elightup.com/lIG0mgX.png)
 
 1. Click on the **Screen option** button to enable the **Language switcher** option.
 2. Select the position of the menu or create a new menu
@@ -44,7 +44,7 @@ Each Meta Box object includes the **value** (data) and **label** (configuration)
 
 In terms of labels, you can input translations directly without any additional configuration. They are strings in the **Translations** table already. For convenience, Meta Box provides filters based on objects along with their name, as you can see below:
 
-![Meta Box provides filters based on objects to translate labels easily](https://i.imgur.com/uXuszXC.png)
+![Meta Box provides filters based on objects to translate labels easily](https://imgur.elightup.com/uXuszXC.png)
 
 So, you can translate labels of post types, taxonomies, fields/field groups, and settings page. You should use them to avoid missing any labels instead of using the search bar.
 
@@ -70,11 +70,11 @@ For example, I [created a post type](https://docs.metabox.io/tutorials/create-cu
 
 Go to **Languages** > **Translations**. Then, find the **Meta Box Post Type** option with the name you want from the dropdown list, and click **Filter** to have all the labels of that post type. Simply enter the translations one by one.
 
-![Filter by Meta Box Post type to translate post type labels](https://i.imgur.com/VteWkxg.png)
+![Filter by Meta Box Post type to translate post type labels](https://imgur.elightup.com/VteWkxg.png)
 
 After saving the changes, the translation updated immediately.
 
-![The translations of post type labels are displayed](https://i.imgur.com/Wp55M8G.png)
+![The translations of post type labels are displayed](https://imgur.elightup.com/Wp55M8G.png)
 
 ### Post type values
 
@@ -82,19 +82,19 @@ First, you need to activate languages and translations for the custom post type.
 
 Go to **Languages** > **Settings**. Then, click on the **Settings** button in the **Custom post types and Taxonomies** option to activate the translations feature for it.
 
-![Activate languages and translations for the custom post type](https://i.imgur.com/1Y9GNLM.png)
+![Activate languages and translations for the custom post type](https://imgur.elightup.com/1Y9GNLM.png)
 
 After that, go to the post editor to enter the translation for posts. There is a section named **Languages** on the right panel. You can enter the title translation into the box, or click on the “**+**” button to switch to the post in the corresponding language and input the translation of the title and description of the post.
 
-![Click on the + button to input the translation for the posts](https://i.imgur.com/vjn0e4G.png)
+![Click on the + button to input the translation for the posts](https://imgur.elightup.com/vjn0e4G.png)
 
 The icon will be changed to Edit when that language has the translation version.
 
-![The icon is changed to edit](https://i.imgur.com/MJw5Ous.png)
+![The icon is changed to edit](https://imgur.elightup.com/MJw5Ous.png)
 
 Now, in the post type admin, that translation is displayed when you switch the language.
 
-![The translation of posts is displayed](https://i.imgur.com/Jy4uLuW.png)
+![The translation of posts is displayed](https://imgur.elightup.com/Jy4uLuW.png)
 
 ## Taxonomies
 
@@ -104,11 +104,11 @@ Translating custom taxonomy labels and values is the same as translating post ty
 
 In the **Translation** submenu, filter strings by **Meta Box Taxonomy**. Then, just switch the language in the top bar and enter translation for labels one by one.
 
-![Filter by Meta Box taxonomy to translate taxonomy labels](https://i.imgur.com/e7swwEM.png)
+![Filter by Meta Box taxonomy to translate taxonomy labels](https://imgur.elightup.com/e7swwEM.png)
 
 After saving translations, you can see they are output like this:
 
-![The translations of taxonomy labels are displayed](https://i.imgur.com/o172sjp.png)
+![The translations of taxonomy labels are displayed](https://imgur.elightup.com/o172sjp.png)
 
 ### Taxonomy values
 
@@ -116,11 +116,11 @@ To translate terms of taxonomy, you need to activate languages and translations 
 
 They are all located in the **Custom post types and Taxonomies** option.
 
-![Activate languages and translations for the custom post type and taxonomy](https://i.imgur.com/AL0oeiu.png)
+![Activate languages and translations for the custom post type and taxonomy](https://imgur.elightup.com/AL0oeiu.png)
 
 Then, in the taxonomy admin, you have two positions to add translations for the term like this:
 
-![Input translations for terms](https://i.imgur.com/exCEMLN.png)
+![Input translations for terms](https://imgur.elightup.com/exCEMLN.png)
 
 ## Custom fields
 
@@ -130,19 +130,19 @@ Meta Box - Polylang integration allows you to translate labels easily, including
 
 Assuming that we need to translate these labels:
 
-![The field labels need to translate](https://i.imgur.com/MC70T2x.png)
+![The field labels need to translate](https://imgur.elightup.com/MC70T2x.png)
 
 Navigate to **Languages** > **Translations**. In the list of filters, you can see **Meta Box Field Group**. In this case, I set the language as Show all languages to fill in the translations for all languages at the same time.
 
-![Filter by Meta Box Field group to translate field labels](https://i.imgur.com/B8Uqixa.png)
+![Filter by Meta Box Field group to translate field labels](https://imgur.elightup.com/B8Uqixa.png)
 
 Go to the post editor, you can see the translation of field labels.
 
-![The translations of field labels are displayed](https://i.imgur.com/03TVVw1.png)
+![The translations of field labels are displayed](https://imgur.elightup.com/03TVVw1.png)
 
 ### Field values
 
-Instead of editing the `wpml-config.xml` file manually as previously, you can now translate field values and manage translations directly with a user-friendly interface. Translating is easy for both developers and non-developers. 
+Instead of editing the `wpml-config.xml` file manually as previously, you can now translate field values and manage translations directly with a user-friendly interface. Translating is easy for both developers and non-developers.
 
 Right in the **Settings** tab of the field group, there is a new setting named **Translation**, along with 4 options:
 
@@ -151,7 +151,7 @@ Right in the **Settings** tab of the field group, there is a new setting named *
 * Synchronize values across languages
 * Set translation mode per field
 
-![The translation setting offers options to translate the field group](https://i.imgur.com/0u6oMI9.png)
+![The translation setting offers options to translate the field group](https://imgur.elightup.com/0u6oMI9.png)
 
 When you choose the fourth option, a pop-up includes all the fields and groups with three translation methods:
 
@@ -159,7 +159,7 @@ When you choose the fourth option, a pop-up includes all the fields and groups w
 * **Translate**: The field value will be copied to the new translation, and you can edit it without affecting the other translations
 * **Synchronize**: The field value will be synced to all translations whenever you make changes to any translation.
 
-![Choose the translation mode for each field](https://i.imgur.com/Ixa2BhO.png)
+![Choose the translation mode for each field](https://imgur.elightup.com/Ixa2BhO.png)
 
 :::note
 
@@ -177,11 +177,11 @@ If you use code, you can also translate the values of fields and field groups. J
 
 For example, to translate the `address` field, the code as below:
 
-![Translate field values using code](https://i.imgur.com/OTgSY8K.png)
+![Translate field values using code](https://imgur.elightup.com/OTgSY8K.png)
 
 Then, the field in the post editor is ready for enter the translation with the default value as the field value of the default language.
 
-![Enter the translation for the values](https://i.imgur.com/cslzgAq.png)
+![Enter the translation for the values](https://imgur.elightup.com/cslzgAq.png)
 
 ## Settings pages
 
@@ -191,25 +191,25 @@ Similar to translating labels of other objects, this integration helps you filte
 
 Go to the **Translation** submenu, then filter strings by **Meta Box Settings Page**:
 
-![Filter by Meta Box Settings Page to translate settings page labels](https://i.imgur.com/D8yMzvA.png)
+![Filter by Meta Box Settings Page to translate settings page labels](https://imgur.elightup.com/D8yMzvA.png)
 
 Even when you have custom fields on the settings page, the Meta Box - Polylang integration works well for translating field labels. Also, filter by **Meta Box Field Group** to enter translations for them.
 
-![Filter by Meta Box Field group to translate settings page field labels](https://i.imgur.com/Cv10qfd.png)
+![Filter by Meta Box Field group to translate settings page field labels](https://imgur.elightup.com/Cv10qfd.png)
 
 In the settings page, all the labels are switched to the corresponding language seamlessly.
 
-![The translations of setting page labels are displayed](https://i.imgur.com/5GGEM21.png)
+![The translations of setting page labels are displayed](https://imgur.elightup.com/5GGEM21.png)
 
 ### Settings page field values
 
-Translating field values in the settings page is simplest since you can enter the translation directly without any additional configuration. 
+Translating field values in the settings page is simplest since you can enter the translation directly without any additional configuration.
 
-![Translate values of settings page fields](https://i.imgur.com/NAevAVT.gif)
+![Translate values of settings page fields](https://imgur.elightup.com/NAevAVT.gif)
 
 Besides, you can still filter strings by **MB Settings Page** in the **Translation** table as other labels.
 
-![Filter by MB Settings Page to translate settings page field values](https://i.imgur.com/fLdiIZw.png)
+![Filter by MB Settings Page to translate settings page field values](https://imgur.elightup.com/fLdiIZw.png)
 
 :::caution
 
@@ -221,8 +221,8 @@ When you delete a value from one language on the settings page, the values from 
 
 In the Translations submenu, filter strings by **Meta Box Relationship** to input the translation for the relationship labels:
 
-![Translate relationship labels](https://i.imgur.com/q3UL2Qa.png)
+![Translate relationship labels](https://imgur.elightup.com/q3UL2Qa.png)
 
 Then, in the post editor, they transfer well when you change the language
 
-![The relationship labels are translated](https://i.imgur.com/4Dn6t9O.png)
+![The relationship labels are translated](https://imgur.elightup.com/4Dn6t9O.png)

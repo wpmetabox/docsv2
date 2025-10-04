@@ -6,11 +6,11 @@ The information such as title, tagline, button, image, … of the landing page w
 
 I chose a demo like this as an example:
 
-![Example of a llanding page](https://i.imgur.com/yOUXVUG.jpg)
+![Example of a llanding page](https://imgur.elightup.com/yOUXVUG.jpg)
 
-![Example of landing pages](https://i.imgur.com/k2BTT9a.jpg)
+![Example of landing pages](https://imgur.elightup.com/k2BTT9a.jpg)
 
-![Example of landing pages](https://i.imgur.com/QpyxYnG.jpg)
+![Example of landing pages](https://imgur.elightup.com/QpyxYnG.jpg)
 
 ## Preparation
 
@@ -25,9 +25,9 @@ So, we need these tools:
 
 Go to **Pages > Add New** to have a new landing page.
 
-![Create a page](https://i.imgur.com/ghISiI4.png)
+![Create a page](https://imgur.elightup.com/ghISiI4.png)
 
-![Choose landing page](https://i.imgur.com/D8YzLxh.png)
+![Choose landing page](https://imgur.elightup.com/D8YzLxh.png)
 
 ## 2. Creating custom fields
 
@@ -35,49 +35,49 @@ Since each section will have different data, I will create some field groups cor
 
 Go to **Meta Box > Custom Fields** to create new field groups.
 
-![Create new field group](https://i.imgur.com/DR8nzGG.png)
+![Create new field group](https://imgur.elightup.com/DR8nzGG.png)
 
 I create a field group for each section and have corresponding custom fields for them.
 
-![Create a field group for each section](https://i.imgur.com/5ACClAB.png)
+![Create a field group for each section](https://imgur.elightup.com/5ACClAB.png)
 
 For the **Hero** section, these are the fields for it.
 
-![The field for Hero section](https://i.imgur.com/2RURipn.png)
+![The field for Hero section](https://imgur.elightup.com/2RURipn.png)
 
 Here are the fields of the other sections:
 
-![The fields for other sections](https://i.imgur.com/hWMTPlv.png)
+![The fields for other sections](https://imgur.elightup.com/hWMTPlv.png)
 
 For the **Services** section, I created a **Group** field to easily create sub-fields to save information of each service as follows.
 
-![Create sub-field](https://i.imgur.com/cFAh11S.png)
+![Create sub-field](https://imgur.elightup.com/cFAh11S.png)
 
 Since there will be more than one service, I set this group as **Cloneable** and also set it as **Collapsible** to avoid being messy in the page editor.
 
-![Set group to be cloneable or collapsible](https://i.imgur.com/kBJNQt6.png)
+![Set group to be cloneable or collapsible](https://imgur.elightup.com/kBJNQt6.png)
 
 For the **Feature** section, I also have a **Group** field.
 
-![Create group field for the feature section](https://i.imgur.com/AQOJCb4.png)
+![Create group field for the feature section](https://imgur.elightup.com/AQOJCb4.png)
 
 This group field has the same settings as the **Section** field.
 
-![Settings the same with section field](https://i.imgur.com/M2Md0Uv.png)
+![Settings the same with section field](https://imgur.elightup.com/M2Md0Uv.png)
 
 These are the fields of the CTA section:
 
-![Fields of the CTA section](https://i.imgur.com/omwObY7.png)
+![Fields of the CTA section](https://imgur.elightup.com/omwObY7.png)
 
 After creating all the fields for each section, go to the **Settings** tab of each field group > choose **Location** as **Post Type** and select **Page**. Since we’ll apply these fields to the landing page, in the **Advanced location rules** options, choose **Landing Page**.
 
-![Set location for the fields](https://i.imgur.com/HHQjxXD.png)
+![Set location for the fields](https://imgur.elightup.com/HHQjxXD.png)
 
 These settings will apply to all the field groups.
 
 When you go to edit the landing page, you will see all the created field groups and its fields as below:
 
-![Created fields display in the post editor](https://i.imgur.com/vNRj2Gr.png)
+![Created fields display in the post editor](https://imgur.elightup.com/vNRj2Gr.png)
 
 ## 3. Creating template for the page
 
@@ -91,35 +91,35 @@ For this method, you will need another Meta Box extension -[ MB Views](https://m
 
 Go to **Meta Box > Views** to create a new template.
 
-![Create new template](https://i.imgur.com/U8nwKlY.png)
+![Create new template](https://imgur.elightup.com/U8nwKlY.png)
 
 Since all the content of the page is saved in custom fields, in the **Template** tab, you can easily insert fields through the **Insert Field** button to have all the created fields to get data from.
 
-![Insert fields through Insert field button](https://i.imgur.com/6sEx4ra.gif)
+![Insert fields through Insert field button](https://imgur.elightup.com/6sEx4ra.gif)
 
-![Insert fields](https://i.imgur.com/v4AP96u.png)
+![Insert fields](https://imgur.elightup.com/v4AP96u.png)
 
 For easier styling later, you can add some div tags and attributes like this:
 
-![Add some div tags](https://i.imgur.com/6olqare.png)
+![Add some div tags](https://imgur.elightup.com/6olqare.png)
 
 Then, scroll down to the **Settings** tab, choose **Type** as **Singular**. Since we created this template for the landing page, choose **Location** as **Page** and select **Landing Page**.
 
-![Set Location for the fields](https://i.imgur.com/UKkEEBf.png)
+![Set Location for the fields](https://imgur.elightup.com/UKkEEBf.png)
 
 To style the landing page, go to the CSS tab and add some CSS code to do it.
 
-![Go to CSS tab to style the page](https://i.imgur.com/uB7lGAL.png)
+![Go to CSS tab to style the page](https://imgur.elightup.com/uB7lGAL.png)
 
 Now, the landing page displays as I want.
 
-![The landing page displays as you want](https://i.imgur.com/ie3wJiE.jpg)
+![The landing page displays as you want](https://imgur.elightup.com/ie3wJiE.jpg)
 
 
-![The landing page displays as you want](https://i.imgur.com/i1FiLwM.jpg)
+![The landing page displays as you want](https://imgur.elightup.com/i1FiLwM.jpg)
 
 
-![The landing page displays as you want](https://i.imgur.com/THWKjSp.jpg)
+![The landing page displays as you want](https://imgur.elightup.com/THWKjSp.jpg)
 
 ### Method 2: Using PHP file
 

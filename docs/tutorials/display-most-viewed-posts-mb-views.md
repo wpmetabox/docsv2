@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 Today, we’ll showcase the most viewed posts on the homepage to attract customers. It’s so easy with **MB Views**. Let’s take the restaurants as a demo for this practice.
 
-![Example of this practice](https://i.imgur.com/4kOQh7l.png)
+![Example of this practice](https://imgur.elightup.com/4kOQh7l.png)
 
 ## Video version
 
@@ -33,31 +33,31 @@ Moreover, we’ll use Gutenberg only. But if you use any page builder, you can a
 
 Go to **Meta Box > Post Types** to create a new post type for the restaurants.
 
-![Create a new custom post type](https://i.imgur.com/9bSixyT.png)
+![Create a new custom post type](https://imgur.elightup.com/9bSixyT.png)
 
 ## 2. Creating custom fields
 
 Go to **Meta Box > Custom Fields > Add New** to create custom fields.
 
-![Create custom fields](https://i.imgur.com/JqG6idp.png)
+![Create custom fields](https://imgur.elightup.com/JqG6idp.png)
 
 After creating all the needed fields, go to the **Settings** tab > **Location** > choose **Post Type** as the **Restaurant** post type that we’ve just created to apply the custom fields to it.
 
-![Set Location for the created fields](https://i.imgur.com/XGY0Ch6.png)
+![Set Location for the created fields](https://imgur.elightup.com/XGY0Ch6.png)
 
 In the post editor, you will see all of the newly created custom fields.
 
-![Newly created custom fields in the post editor](https://i.imgur.com/0tzGv05.png)
+![Newly created custom fields in the post editor](https://imgur.elightup.com/0tzGv05.png)
 
 ## 3. Counting the posts view
 
 Normally, there is no information about the posts’ view available in WordPress as default. We must do it on our own. So, just install the **Post Views Counter** plugin, then go to **Settings > Post Views Counter** and tick the box of the post type you want to count the posts view.
 
-![Set up to count the post views](https://i.imgur.com/U9NGVTt.png)
+![Set up to count the post views](https://imgur.elightup.com/U9NGVTt.png)
 
 Right after that, you can see the view numbers of each restaurant appear. Based on these numbers, we’ll choose which restaurant has the most views and display it in the section.
 
-![Choose the most viewed restaurant and display it in the section](https://i.imgur.com/y4mB0Lj.png)
+![Choose the most viewed restaurant and display it in the section](https://imgur.elightup.com/y4mB0Lj.png)
 
 ## 4. Creating a template for the section
 
@@ -85,13 +85,13 @@ Then, insert fields that we want to get the data into the loop.
 
 To get the restaurant image, which is the featured image, choose the **Post thumbnail** option.
 
-![Choose Post Thumbnail option to get the restaurant image](https://i.imgur.com/E7XglfO.png)
+![Choose Post Thumbnail option to get the restaurant image](https://imgur.elightup.com/E7XglfO.png)
 
 We just need to insert each field in turn. It includes the default fields such as **Post thumbnail** like we just got above or **Post title**, or even custom fields like **Address, Logo**, and **Voucher**.
 
 After getting all the restaurant information, scroll down to the **Settings** section of the view, and set the type of this view as **Shortcode**.
 
-![Set the type of this view as Shortcode](https://i.imgur.com/V6q3uMT.png)
+![Set the type of this view as Shortcode](https://imgur.elightup.com/V6q3uMT.png)
 
 After publishing, a shortcode is generated. Just paste it anywhere you want to display this section.
 
@@ -101,11 +101,11 @@ As I said before, whether we use page builders like Elementor, Brick Builder, Zi
 
 With the page using Gutenberg for example, add the **Shortcode** block then paste the shortcode inside.
 
-![Add the shortcode block then paste the shortcode inside](https://i.imgur.com/nC9htNj.png)
+![Add the shortcode block then paste the shortcode inside](https://imgur.elightup.com/nC9htNj.png)
 
 Then, you’ll see the information of the most viewed restaurants.
 
-![The information of the most viewed restaurants is obtained](https://i.imgur.com/JiEpqgD.png)
+![The information of the most viewed restaurants is obtained](https://imgur.elightup.com/JiEpqgD.png)
 
 For other page builders, you do likewise and you’ll get the same result.
 
@@ -115,15 +115,15 @@ Back to the **Views**, let’s edit the template to style the section.
 
 First, add some **div** tags to this template.
 
-![Add some div tags into the template](https://i.imgur.com/zipEfKi.png)
+![Add some div tags into the template](https://imgur.elightup.com/zipEfKi.png)
 
 Then go to the **CSS** tab of the view and add some code.
 
-![Add some CSS code](https://i.imgur.com/YTJRyc7.png)
+![Add some CSS code](https://imgur.elightup.com/YTJRyc7.png)
 
 This code is available on [GitHub](https://github.com/wpmetabox/tutorials/blob/master/display-most-viewed-restaurant-with-mb-views/custom.css), so you can refer to it for more details.
 
 Then, you’ll see a new look of the section. No matter which page builder you use, you’ll see the new appearance.
 
-![The final result](https://i.imgur.com/4kOQh7l.png)
+![The final result](https://imgur.elightup.com/4kOQh7l.png)
 

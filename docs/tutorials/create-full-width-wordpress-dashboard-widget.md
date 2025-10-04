@@ -9,7 +9,7 @@ As a regular user of some classic WordPress themes, I often felt frustrated by t
 
 I sought a solution to **expand the widget area to full width** to improve that. After some experimentation, I found a straightforward way to achieve this. Right now, I’m excited to share this customization with you guys, helping you **create a more user-friendly and efficient WordPress admin dashboard**.
 
-![Expand the widget area to full width](https://i.imgur.com/NtkLlSx.png)
+![Expand the widget area to full width](https://imgur.elightup.com/NtkLlSx.png)
 
 ## Benefits of customizing full width widget
 
@@ -25,9 +25,9 @@ Let's dive into how you can easily implement this customization in your WordPres
 
 To get started, you can see the images below, which illustrate how the narrow widget area can impact your user experience compared to the improved full-width layout. The difference is striking, making it clear why this change is worthwhile.
 
-![The default narrow sidebar widget area can impact your user experience.](https://i.imgur.com/e53k2QK.png)
+![The default narrow sidebar widget area can impact your user experience.](https://imgur.elightup.com/e53k2QK.png)
 
-![The default narrow footer widget area can impact your user experience.](https://i.imgur.com/97lZOlk.png)
+![The default narrow footer widget area can impact your user experience.](https://imgur.elightup.com/97lZOlk.png)
 
 Now, simply add the following code to the `functions.php` file of your theme. This code will expand the widget area in the admin dashboard to nearly the full screen width, giving you more space for customization.
 
@@ -45,7 +45,7 @@ function custom_widgets() {
 add_action('admin_enqueue_scripts', 'custom_widgets');
 ```
 
-![Add code to customize full width widget in WordPress admin](https://i.imgur.com/p6Lk541.png)
+![Add code to customize full width widget in WordPress admin](https://imgur.elightup.com/p6Lk541.png)
 
 **In there**:
 
@@ -75,8 +75,8 @@ In practice, you could also adjust other factors like padding, margins, or even 
 
 After saving the file, revisit the widget area in your WordPress admin dashboard. You'll notice that the widget section is now expanded, making it easier to customize.
 
-![The full-width sidebar widget](https://i.imgur.com/e53k2QK.png)
+![The full-width sidebar widget](https://imgur.elightup.com/e53k2QK.png)
 
-![The full-width footer widget](https://i.imgur.com/xQxs2Hp.png)
+![The full-width footer widget](https://imgur.elightup.com/xQxs2Hp.png)
 
 If you're interested in exploring more ways to optimize your WordPress experience, be sure to check out the resources available on Meta Box with some useful tips, such as [tips for license keys](https://metabox.io/license-key-management-remotely/). These sites offer a wealth of tips and tricks to help you make the most of your WordPress dashboard.
