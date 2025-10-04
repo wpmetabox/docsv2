@@ -4,13 +4,17 @@ title: Open Street Map
 
 import Screenshots from '@site/src/components/Screenshots';
 
-This field creates a [Open Street Map](https://openstreetmap.org) where you can select a location. This field is very similar to the [Google Map](/fields/map/) field and provides an alternative solution for displaying maps, since [Google requires developers to enter credit card ](https://metabox.io/meta-box-weekly-updates-july-2018/) details.
+The **Open Street Map (OSM) field** lets you select and save a location using [OpenStreetMap](https://openstreetmap.org).
 
-This field supports all features that the Google Maps field has. It comes along with a text field for address input, which has the autocomplete feature. The data for address autocomplete is gotten from [Nominatum](https://wiki.openstreetmap.org/wiki/Nominatim) geocoding service.
+It's very similar to the [Google Maps field](/fields/map/), but it provides a free alternative since [Google now requires billing details](https://metabox.io/meta-box-weekly-updates-july-2018/) (such as a credit card) to use their maps.
 
-You also can pick a location by clicking on the map or dragging and dropping the marker. When you do that, the coordinates are saved in the field value.
+This field includes all the features of the Google Maps field. It comes with an address text field that supports **autocomplete**, powered by the [Nominatim](https://wiki.openstreetmap.org/wiki/Nominatim) geocoding service.
 
-This field uses [Leaflet](https://leafletjs.com) library to render the map.
+You can choose a location in two ways:
+- Type in an address and select from the autocomplete suggestions.
+- Click directly on the map or drag the marker - the field will automatically save the new coordinates.
+
+The map itself is rendered using the [Leaflet](https://leafletjs.com) library.
 
 ## Screenshots
 
@@ -20,53 +24,59 @@ This field uses [Leaflet](https://leafletjs.com) library to render the map.
 
 ## Settings
 
-Besides the [common settings](/field-settings/), this field has the following specific settings, the keys are for use with code:
+In addition to the [common field settings](/field-settings/), this field has the following options:
 
 Name | Key | Description
 --- | --- | ---
-Default location | `std` | Default location of the map when loaded. Format `'53.346881,-6.258860'` (latitude, longitude). If missing, the field will show Dublin, Ireland.
-Address field | `address_field` | The ID of the address field. For multiple address fields, enter field IDs separated by commas. Required.
-Language | `language` | Language for more accurate auto-complete results. See [list of language codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html). Optional.
-Region | `region` | Limit search results to a specific country (or a list of countries). Accepts [ISO 3166-1alpha2 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Optional.
+Default location | `std` | The map's default location when it loads. Format: `'53.346881,-6.258860'` (latitude, longitude). If not set, the map will default to Dublin, Ireland.
+Address field | `address_field` | The ID of the address field. For multiple fields, separate IDs with commas. **Required.**
+Language | `language` | Set the language for more accurate autocomplete results. See the [list of language codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html). Optional.
+Region | `region` | Restrict search results to one or more countries. Accepts [ISO 3166-1 alpha-2 codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Optional.
+Marker draggable | `marker_draggable` | Determines whether the marker can be moved. Boolean, default is `true`. When set to `false`, the marker cannot be dragged - the location can only be set by searching for an address.
 
-:::caution Address field
-
-You're required to create a [text field](/fields/text/) for entering an address and pass its ID to the map's "Address field".
-
+:::caution Address field required
+You must create a [text field](/fields/text/) for the address input, and pass its ID to the map's **Address field** setting.
 :::
 
-The address field can be also a list of field IDs, separated by commas like `street,city,state`. In this case, you can use both text and select fields. There will be no autocomplete for address. Instead of that, the field will automatically search for the address combined with the values of those fields and set the location for the map when any of the address field changes.
+The `address_field` can also be a list of multiple field IDs, separated by commas (e.g. `street,city,state`).
+In this case:
+- You can use both text and select fields.
+- Autocomplete will not work. Instead, the plugin will combine the values of these fields, search for the full address, and update the map whenever any of those fields changes.
 
-This is a sample field settings array when creating this field with code:
+Example field setup in code:
 
 ```php
-// Address field.
+// Address field
 [
-    // highlight-next-line
     'id'   => 'my_address',
     'name' => 'Address',
     'type' => 'text',
 ],
-// Map field.
+// Map field
 [
     'id'            => 'map',
     'name'          => 'Location',
     'type'          => 'osm',
     'std'           => '-6.233406,-35.049906,15',
-    // highlight-next-line
     'address_field' => 'my_address',
 ],
 ```
 
 ## Data
 
-This field saves the location in the following format `latitude,longitude,zoom`.
+The field saves the location as:
+
+```
+latitude,longitude,zoom
+```
+
+Example: `53.346881,-6.258860,14`
 
 ## Template usage
 
 ### Displaying the map
 
-To display the maps on the frontend, use the [rwmb_the_value()](/functions/rwmb-the-value/) function, but we need to add more parameters:
+To show the map on the frontend, use [`rwmb_the_value()`](/functions/rwmb-the-value/) with extra parameters:
 
 ```php
 <h2>Maps</h2>
@@ -84,16 +94,18 @@ rwmb_the_value( 'my_field_id', $args );
 ?>
 ```
 
-Parameter | Description
+Available parameters:
+
+Name | Description
 ---|---
-`width` | Map width, default is 640px. Can be '%' or 'px'.
-`height` | Map height, default is 480px. Can be '%' or 'px'.
-`zoom` | Map zoom, default is the value set in admin, and if it's omitted - 14.
-`marker` | Display marker? `true` (default) or `false`.
-`marker_icon` | URL to the marker icon. Optional.
-`marker_title` | Marker title when hover.
-`info_window` | Content for the info window displayed when click the marker. HTML allowed. This content will be passed to JavaScript, so it's better to **avoid quotes**.
-`js_options` | Additional map options. Map options are passed into the Leaflet library. See [here](https://leafletjs.com/reference-1.3.2.html#map-option).
+`width` | Map width. Default: `640px`. Accepts `%` or `px`.
+`height` | Map height. Default: `480px`. Accepts `%` or `px`.
+`zoom` | Map zoom level. Default: value set in the admin, or `14` if not set.
+`marker` | Show marker? `true` (default) or `false`.
+`marker_icon` | URL to a custom marker icon. Optional.
+`marker_title` | Marker tooltip (shown on hover).
+`info_window` | Content shown when clicking the marker. HTML allowed. Avoid using quotes inside to prevent JavaScript issues.
+`js_options` | Pass additional map options directly to the Leaflet library. See the [Leaflet map options](https://leafletjs.com/reference-1.3.2.html#map-option).
 
 The code below shows how to use `js_options` for advanced control how the map is displayed:
 
@@ -108,9 +120,9 @@ $args = [
 rwmb_the_value( 'my_field_id', $args );
 ```
 
-### Getting field value
+### Getting the raw field value
 
-In case you don't want to display the map, but get the location's latitude and longitude, use the code below:
+If you don't need to render the map but just want the coordinates:
 
 ```php
 $location = rwmb_get_value( $field_id );
@@ -119,11 +131,11 @@ echo $location['longitude'];
 echo $location['zoom'];
 ```
 
-Read more about [rwmb_get_value()](/functions/rwmb-get-value/).
+See more about [`rwmb_get_value()`](/functions/rwmb-get-value/).
 
-### Outputting a map in a group
+### Displaying a map inside a group
 
-If you have a map inside a group, then the helper functions above don't work. In that case, you can use a helper function in the plugin to show the map.
+If the map is part of a group field, the helper functions above won't work. Instead, use the built-in `RWMB_OSM_Field::render_map()` helper:
 
 ```php
 $args = [
@@ -131,15 +143,15 @@ $args = [
     'height' => '480px',
 ];
 $group_values = rwmb_meta( 'group_id' );
-// If group is cloneable
+// If the group is cloneable
 foreach ( $group_values as $group_value ) {
-    // highlight-next-line
     echo RWMB_OSM_Field::render_map( $group_value['map_id'], $args );
 }
 ```
 
-The helper function `RWMB_OSM_Field::render_map` accepts 2 parameters:
+The helper function accepts:
 
-Name|Description
-`$location`|The location of the map center / marker, in format `latitude,longitude[,zoom]` (zoom is optional). It's the same format as the map field value.
-`$args`|Additional parameters for the map. The same as for helper function `rwmb_the_value` above.
+Name | Description
+--- | ---
+`$location` | Map location in the format `latitude,longitude[,zoom]` (zoom is optional). Same as the map field value.
+`$args` | Additional display options. Same as in `rwmb_the_value()`.
