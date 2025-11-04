@@ -159,14 +159,14 @@ Then, use these following codes to create a search box where users can type keyw
 
 ```
 <div class="hotel-input-wrap">
-            <input type="text" id="location" placeholder="Enter location..." />
-            <ul id="suggestions" class="suggestions" style="display: none;"></ul>
-            <button class="filter-action">Search</button>
- </div>
+    <input type="text" id="location" placeholder="Enter location..." />
+    <ul id="suggestions" class="suggestions"></ul>
+    <button class="filter-action">Search</button>
+</div>
 ```
 Turn to the **CSS** tab and add styles to make the search section look cleaner.
 
-```
+```css
 /* filter */
 .hotel-filter {
     margin: 20px 0;
@@ -193,6 +193,11 @@ Turn to the **CSS** tab and add styles to make the search section look cleaner.
     border: 1px solid #646464;
     border-radius: 6px;
     max-width: 250px;
+}
+
+#suggestions,
+#location-data{
+    display:none;
 }
 
 .filter-action {
@@ -243,16 +248,16 @@ In the template again, add the line of code to create an empty array.
 This array will collect all location taxonomy names from the post, convert them to lowercase, and store them in that array.
 ```
 {% if post_terms %}
-                    {% for term in post_terms %}
-                        {% set term_names = term_names|merge( [ term.name|lower ] ) %}
-                    {% endfor %}
+    {% for term in post_terms %}
+        {% set term_names = term_names|merge( [ term.name|lower ] ) %}
+    {% endfor %}
 {% endif %}
 ```
 It’s later used to add a `data-location` attribute for easier JS filtering.
 The following code creates a hidden list of all locations, which is used for the autocomplete feature in the search box. When users start typing a location, JavaScript suggests matching ones.
 
 ```
-<ul id="location-data" style="display: none;">
+<ul id="location-data">
     {% for term in mb.get_terms( { taxonomy: 'location', hide_empty: false } ) %}
         <li data-id="{{ term.term_id }}">{{ term.name }}</li>
     {% endfor %}
@@ -265,15 +270,15 @@ Now, switch to the **JavaScript** tab, add the main script to handle the filteri
 
 Go through it in more detail.
 
-```
+```js
 const locations = $('#location-data li').map((_, li) => ({
-        id: $(li).data('id'),
-        name: $(li).text(),
- })).get();
+    id: $(li).data('id'),
+    name: $(li).text(),
+})).get();
 ```
 This part retrieves all the location items from the hidden HTML list and stores them as an array of location IDs and names.
 
-```
+```js
 const $input = $('#location');
 const $suggest = $('#suggestions');
 let selected = '';
@@ -281,47 +286,47 @@ let selected = '';
 
 We declare variables for the search input, the suggestion list, and the selected location.
 
-```
+```js
 const clearSuggest = function () {
-        $suggest.empty().hide();
+    $suggest.empty().hide();
 };
 ```
 This function clears all list items and hides the suggestion box.
 The following code checks if the user’s input has at least two characters. If not, it stops.
 Otherwise, it filters the locations whose names include the input text, shows up to 20 results, and displays them in the suggestion box.
 
-```
+```js
 const renderSuggestions = function (q) {
-        clearSuggest();
-        if (q.length < 2) {
-            return;
-        }
+    clearSuggest();
+    if (q.length < 2) {
+        return;
+    }
 
-        locations
-            .filter(function (l) {
-                return l.name.toLowerCase().includes(q);
-            })
-            .slice(0, 20)
-            .forEach(function (l) {
-                $suggest.append(
-                    '<li data-id="' + l.id + '" data-name="' + l.name + '">' + l.name + '</li>'
-                );
-            });
+    locations
+        .filter(function (l) {
+            return l.name.toLowerCase().includes(q);
+        })
+        .slice(0, 20)
+        .forEach(function (l) {
+            $suggest.append(
+                '<li data-id="' + l.id + '" data-name="' + l.name + '">' + l.name + '</li>'
+            );
+        });
 
-        if ($suggest.children().length) {
-            $suggest.show();
-        }
- };
+    if ($suggest.children().length) {
+        $suggest.show();
+    }
+};
 ```
 
 This function below goes through all elements with the `.hotel-item` class and gets their `data-location` attribute. If the text entered matches one of these locations, the hotel is shown; otherwise, it’s hidden.
 
-```
+```js
 const filterHotels = function (filter) {
-        $('.hotel-item').each(function (_, el) {
-            const loc = ($(el).data('location') || '').toLowerCase();
-            $(el).toggle(loc.includes(filter));
-        });
+    $('.hotel-item').each(function (_, el) {
+        const loc = ($(el).data('location') || '').toLowerCase();
+        $(el).toggle(loc.includes(filter));
+    });
 };
 ```
 
@@ -329,53 +334,53 @@ This is the main filtering logic; it controls which hotels are visible based on 
 
 As the user types, it clears the previous selection and refreshes the suggestions instantly.
 
-```
+```js
 $input.on('input', function () {
-        selected = '';
-        renderSuggestions($input.val().trim().toLowerCase());
+    selected = '';
+    renderSuggestions($input.val().trim().toLowerCase());
 });
 ```
 
 When a user clicks on one of the suggested locations, that location’s name is filled into the input box, and the suggestions list disappears.
 
-```
+```js
 $suggest.on('click', 'li', function (e) {
-        const name = $(e.currentTarget).data('name');
-        selected = name.toLowerCase();
-        $input.val(name);
-        clearSuggest();
+    const name = $(e.currentTarget).data('name');
+    selected = name.toLowerCase();
+    $input.val(name);
+    clearSuggest();
 });
 ```
 
 If the user clicks anywhere outside the input box or the suggestion list, the suggestion box is cleared and hidden.
 
-```
+```js
 $(document).on('click', function (e) {
-        if (!$(e.target).closest('#location, #suggestions').length) {
-            clearSuggest();
-        }
+    if (!$(e.target).closest('#location, #suggestions').length) {
+        clearSuggest();
+    }
 });
 ```
 
 After clicking the **Search** button, the code takes the selected location and shows matching hotels.
 
-```
+```js
 $(document).on('click', function (e) {
-        if (!$(e.target).closest('#location, #suggestions').length) {
-            clearSuggest();
-        }
+    if (!$(e.target).closest('#location, #suggestions').length) {
+        clearSuggest();
+    }
 });
 ```
 
 Finally, if the user presses Enter, it works the same as clicking the Search button. It stops the form from submitting and clears the suggestions.
 
-```
+```js
 $input.on('keydown', function (e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            $('.filter-action').trigger('click');
-            clearSuggest();
-        }
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        $('.filter-action').trigger('click');
+        clearSuggest();
+    }
 });
 ```
 That’s all for the code. You can refer to the [GitHub](https://github.com/wpmetabox/tutorials/tree/master/searching-posts-by-taxonomy-with-mb-views) repository for more details.
