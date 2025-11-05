@@ -282,35 +282,11 @@ Name|Description
 
 #### Step 2: Create a custom table for the model
 
-Creating a custom table is similar to the section above, with 2 extra parameters:
-- You must specify the 4th parameter as `true` to indicate this is a table for models.
-- If your model supports some features like `author`, `published_date`, `modified_date`, you need to add them as the 5th parameter. This parameter is optional.
+Creating a custom table is exactly the same to the section above. However, for models, the plugin automatically:
 
-```php
-// Step 2: Create a custom table for the model.
-add_action( 'init', function() {
-	MetaBox\CustomTable\API::create(
-		'transactions',                    // Table name.
-		[                                  // Table columns (without ID).
-			'created_at' => 'DATETIME',
-			'amount'     => 'BIGINT',
-			'email'      => 'VARCHAR(99)',
-			'gateway'    => 'TEXT',
-			'status'     => 'VARCHAR(20)',
-			'screenshot' => 'TEXT',
-		],
-		['email', 'status'],               // List of index keys.
-		// highlight-start
-		// Must be true for models.
-		true,
-		// List of features that the model supports, so the plugin can auto generate columns and keys.
-		['author', 'published_date', 'modified_date'],
-		// highlight-end
-	);
-} );
-```
-
-Do **NOT** create an ID column. It's automatically created (primary key, auto-increment).
+- Adds an `ID` column, and sets it as primary key and auto-increment.
+- Adds columns for supports (`author`, `published_date`, `modified_date`) if needed.
+- Adds a key for `author` if the model supports it.
 
 #### Step 3: Register fields for the model, corresponding to the custom table structure
 
