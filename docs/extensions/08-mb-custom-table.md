@@ -41,7 +41,7 @@ Use the plugin API to create a custom table as follows:
 
 ```php
 add_action( 'init', function () {
-	MB_Custom_Table_API::create(
+	MetaBox\CustomTable\API::create(
 		'my_custom_table',                // Custom table name.
 		[                                 // List of columns with data types.
 			'address' => 'TEXT NOT NULL',
@@ -82,7 +82,7 @@ C. The **table name doesn't need to include the WordPress table prefix**. The ex
 
 ```php
 global $wpdb;
-MB_Custom_Table_API::create( "{$wpdb->prefix}my_custom_table", [
+MetaBox\CustomTable\API::create( "{$wpdb->prefix}my_custom_table", [
 	'address' => 'TEXT NOT NULL',
 	'phone'   => 'TEXT NOT NULL',
 	'email'   => 'VARCHAR(20) NOT NULL',
@@ -93,7 +93,7 @@ D. The extension uses WordPress's recommended method to create a custom table, w
 
 ```php
 register_activation_hook( __FILE__, function() {
-	MB_Custom_Table_API::create( 'my_custom_table', [
+	MetaBox\CustomTable\API::create( 'my_custom_table', [
 		'address' => 'TEXT NOT NULL',
 		'phone'   => 'TEXT NOT NULL',
 		'email'   => 'VARCHAR(20) NOT NULL',
@@ -247,6 +247,7 @@ add_action( 'init', function() {
 			'singular_name' => 'Transaction',
 		],
 		'menu_icon' => 'dashicons-money-alt',
+		'supports' => ['author', 'published_date', 'modified_date'],
 	] );
 } );
 ```
@@ -260,6 +261,7 @@ Parameter | Description
 `menu_icon`|The URL to the icon to be used for this menu. Pass a base64-encoded SVG using a data URI, which will be colored to match the color scheme -- this should begin with 'data:image/svg+xml;base64,'. Pass the name of a Dashicons helper class to use a font icon, e.g. 'dashicons-chart-pie'. Pass 'none' to leave div.wp-menu-image empty so an icon can be added via CSS. Defaults to use the posts icon.
 `parent`|Menu parent, if you want to show the model as a sub-menu. Optional.
 `capability`|The capability to access the menu and create/edit/delete models. Default `edit_posts`.
+`supports`|Feature(s) the model supports. Array. Optional. Can be any of `author`, `published_date`, `modified_date`.
 
 List of labels:
 
@@ -280,7 +282,9 @@ Name|Description
 
 #### Step 2: Create a custom table for the model
 
-Creating a custom table is similar to the section above, except for one thing: you must specify the 4th parameter as `true` to indicate this is a table for models.
+Creating a custom table is similar to the section above, with 2 extra parameters:
+- You must specify the 4th parameter as `true` to indicate this is a table for models.
+- If your model supports some features like `author`, `published_date`, `modified_date`, you need to add them as the 5th parameter. This parameter is optional.
 
 ```php
 // Step 2: Create a custom table for the model.
@@ -296,8 +300,12 @@ add_action( 'init', function() {
 			'screenshot' => 'TEXT',
 		],
 		['email', 'status'],               // List of index keys.
-		// highlight-next-line
-		true                               // Must be true for models.
+		// highlight-start
+		// Must be true for models.
+		true,
+		// List of features that the model supports, so the plugin can auto generate columns and keys.
+		['author', 'published_date', 'modified_date'],
+		// highlight-end
 	);
 } );
 ```
@@ -424,7 +432,7 @@ $status = rwmb_meta( 'status', [
 
 ### Bulk actions
 
-### Add a custom bulk action
+#### Add a custom bulk action
 
 The plugin provides a way to handle bulk actions for custom models. By default, it supports only the `delete` action.
 
