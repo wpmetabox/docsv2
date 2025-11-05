@@ -94,6 +94,7 @@ The `admin_columns` settings can be in one of 3 following formats:
     'searchable' => true,
     'filterable' => false,
     'link'       => 'edit',
+	'width'      => '10%',
 ],
 ```
 
@@ -107,6 +108,7 @@ Key|Description
 `searchable`|Allow searching posts by meta value. Optional. Default `false`.
 `filterable`|Allow filtering posts by the custom taxonomy. Applied only if the field is the `taxonomy` field. Default `false`.
 `link`|Whether to link the value to the post edit screen (value `edit`) or post view on the front end (value `view`) or no link (`false`).
+`width`|The column width.
 
 Note that the `sort` parameter is used to sort displayed posts by altering the WordPress query. It works only with non-clonable and non-multiple fields.
 
