@@ -247,7 +247,7 @@ add_action( 'init', function() {
 			'singular_name' => 'Transaction',
 		],
 		'menu_icon' => 'dashicons-money-alt',
-		'supports' => ['author', 'published_date', 'modified_date'],
+		'supports' => [ 'author', 'published_date', 'modified_date' ],
 	] );
 } );
 ```
@@ -263,7 +263,7 @@ Parameter | Description
 `capability`|The capability to access the menu and create/edit/delete models. Default `edit_posts`.
 `supports`|Feature(s) the model supports. Array. Optional. Can be any of `author`, `published_date`, `modified_date`.
 
-List of labels:
+**List of labels:**
 
 Name|Description
 ---|---
@@ -279,6 +279,24 @@ Name|Description
 `item_updated`|Label used when an item is updated.
 `item_added`|Label used when an item is added.
 `item_deleted`|Label used when an item is deleted.
+
+**Supports:**
+
+Sometimes, you may want your model to automatically include metadata such as the author, published date, or modified date - without having to manually set them each time.
+
+To do this, you can use the `supports` parameter when defining your model. This parameter is **optional** and accepts an array of supported features:
+
+- `author` - Automatically assigns the current user as the author.
+- `published_date` - Automatically sets the date when the model is created.
+- `modified_date` - Automatically updates the date when the model is modified.
+
+For example:
+
+```php
+'supports' => [ 'author', 'published_date', 'modified_date' ],
+```
+
+By adding these options, your model will automatically handle common metadata fields, making your workflow simpler and more consistent.
 
 #### Step 2: Create a custom table for the model
 
