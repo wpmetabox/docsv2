@@ -54,15 +54,15 @@ There’ll be the **From** and **To** sections as follows. The relationship is b
 
 Since they are post types, remember to set the object type as **Post** in both sections.
 
-![Since they are post types, remember to set the object type as Post in both sections](img/filter-relationships-oxygen/object-type-min.png) 
+![Since they are post types, remember to set the object type as Post in both sections](img/filter-relationships-oxygen/object-type-edit-min.png) 
 
 Set the **Post type** in the **From** section as one that we want to be in the relationship. In this case I set **Posts**, so the rest one in the **To** section will be the **Departments**.
 
-![Set the Post type in the From section as one that we want to be in the relationship](img/filter-relationships-oxygen/from-post-to-department-min.png) 
+![Set the Post type in the From section as one that we want to be in the relationship](img/filter-relationships-oxygen/post-type-edit-min.png) 
 
 Enable this setting if you want to show them as an admin column. 
 
-![Enable this setting if you want to show them as an admin column](img/filter-relationships-oxygen/admin-column-relationship-min.png) 
+![Enable this setting if you want to show them as an admin column](img/filter-relationships-oxygen/admin-column-edit-min.png) 
 
 After publishing, go to the post editor, you will see the section for setting relationships. Just fill the post information and choose its departments. 
 
