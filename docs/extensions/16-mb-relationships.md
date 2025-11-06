@@ -27,7 +27,7 @@ Creating a relationship is done by either of the following methods:
 - **Using [MB Builder](/extensions/meta-box-builder/)**, which helps you create relationships with UI. This extension is a premium extension and is already bundled in Meta Box AIO/MB Core.
 - **Using code**.
 
-Before going into the detailed settings of a relationships, it's important to note that: when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). And inside that meta box, there'll be a cloneable field ([post](/fields/post/), [taxonomy_advanced](/fields/taxonomy-advanced/), or [user](/fields/user/) depending on the object type) for you to select connected items. So the settings of a relationships will be divided into 3 parts: settings for the relationship, for the meta box and for the field.
+Before going into the detailed settings of a relationships, it's important to note that: when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). And inside that meta box, there'll be a cloneable field ([`post`](/fields/post/), [`taxonomy_advanced`](/fields/taxonomy-advanced/), or [`user`](/fields/user/) depending on the object type) for you to select connected items. So the settings of a relationships will be divided into 3 parts: settings for the relationship, for the meta box and for the field.
 
 Now let's see how to create a relationship with MB Builder.
 
@@ -93,6 +93,14 @@ Custom CSS class | If you want to style your meta box, then enter a custom CSS c
   <TabItem value="field" label="Field">
 
 To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/) or [user](/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
+
+:::caution
+
+These settings apply to the field that is displayed **on the other side** of the relationship - where you can select items for this field.
+
+So, if you have a relationship from `post` to `user`, and you are configuring on the "From" side (which is for `post`), then the `post` field is showing only when you are editing a `user`, (e.g. the "To" side).
+
+:::
 
 ![field settings for a relationship side](img/relationships/field.png)
 
@@ -193,7 +201,13 @@ Name|Description
 -- `query_args`|Custom query arguments to get objects of `object_type`. These arguments will be passed to `WP_Query()`, `get_terms()` or `get_users()` depending what `object_type` is.
 -- `max_clone` | Maximum number of connections.
 
-The field settings apply from object `from` to object `to`. That means the custom field (relationship) shows on the object `from` get object type, post type, and field settings from object `to`.
+:::caution
+
+The field settings apply to the field that is displayed **on the other side** of the relationship - where you can select items for this field.
+
+So, if you have a relationship from `post` to `user`, and you are configuring on the "From" side (which is for `post`), then the `post` field is showing only when you are editing a `user`, (e.g. the "To" side).
+
+:::
 
 #### Admin column
 
