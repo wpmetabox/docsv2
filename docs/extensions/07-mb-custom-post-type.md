@@ -150,7 +150,7 @@ This is the list of taxonomies that are registered for the post type. Select the
 
 Name | Description
 ---|---
-Re-Order Posts | Order posts of that post type using a drag and drop interface.
+Re-Order Posts | Order posts of that post type using a drag and drop interface. [Learn more here](/reorder-posts-terms/).
 Add toggle status column | Add a column to quickly toggle post status between published and draft.
 
   </TabItem>
@@ -284,7 +284,7 @@ Assign terms | The capability required for assigning terms.
 
 Name | Description
 ---|---
-Re-Order Terms | Order terms of this taxonomy using a drag and drop interface.
+Re-Order Terms | Order terms of this taxonomy using a drag and drop interface. [Learn more here](/reorder-posts-terms/).
 
   </TabItem>
 

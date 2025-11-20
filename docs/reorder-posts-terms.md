@@ -1,56 +1,55 @@
 ---
-title: Reorder posts & terms
+title: Reorder Posts & Terms
 ---
 
-It allows you to **drag and drop** posts of a custom post type or terms of a custom taxonomy to rearrange them inside the WordPress admin. This is useful when you need a custom ordering that doesn’t follow the default publish date or alphabetical order.
+This feature lets you **drag and drop** posts (from any custom post type) or terms (from any custom taxonomy) to rearrange their order right inside the WordPress admin. It's perfect when you need a custom order that doesn't follow the default publish date or alphabetical sorting.
 
-This feature is added to the [MB Custom Post Types and Custom Taxonomies](https://docs.metabox.io/extensions/mb-custom-post-type/) extension, so it’s completely free.
+This functionality is included in the **[MB Custom Post Types & Custom Taxonomies](/extensions/mb-custom-post-type/)** extension - completely free to use.
 
-## Reordering posts of a custom post type
+## Reordering posts
 
-To enable this feature, when creating a custom post type, navigate to the **Features** tab, and simply enable the setting as below: 
+To enable this feature, open your custom post type settings, switch to the **Features** tab, and turn on the **Re-Order Posts** option:
 
-![Enable the reorder posts feature](./img/reorder-feature/enable-reorder-posts.png)
+![Enable the reorder posts feature](./img/reorder/enable-reorder-posts.png)
 
-If you use code to create the custom post type, just add this code:
+If you're registering the post type via code, simply add:
 
 ```php
-'order'  => true,
+'order' => true,
 ```
 
-After that, on the post type admin screen, there is a new tab named **Re-Order**; just go there to drag and drop posts as the order you want.
+Once enabled, you'll see a new **Re-Order** tab in the post type's admin menu. Click it and rearrange your posts using drag‑and‑drop.
 
-![Click on the Re-Order tab to rearrange posts](./img/reorder-feature/reorder-posts.gif)
+![Click on the Re-Order tab to rearrange posts](./img/reorder/reorder-posts.gif)
 
-### Hierarchical support
+### Hierarchical post type support
 
-The Reorder posts feature works well with the hierarchical structure (parent-child posts). When reordering, the child posts will follow along with the parent one. It is similar to subfields in a group.
+Reordering works smoothly with hierarchical post types. When you move a parent post, all of its child posts automatically follow - similar to how fields in a group move together.
 
-![Hierarchical support](./img/reorder-feature/hierarchical-posts.gif)
+![Hierarchical support](./img/reorder/hierarchical-posts.gif)
 
 ### Frontend display
 
-The custom ordering is applied automatically on archive pages or anywhere you query those posts.
+Your custom order is applied automatically on all archive pages or anywhere you query that post type.
 
-![Posts on the frontend](./img/reorder-feature/frontend.png)
+![Posts on the frontend](./img/reorder/frontend.png)
 
-## Reordering terms of a custom taxonomy
+## Reordering terms
 
-Similar to reordering posts, to enable the Reorder terms feature, go to **Meta Box** > **Taxonomies**, then navigate to the **Features** tab.
+To reorder taxonomy terms, go to **Meta Box → Taxonomies**, open your taxonomy settings, and enable the feature in the **Features** tab:
 
-![Enable the reorder terms feature](./img/reorder-feature/enable-reorder-terms.png)
+![Enable the reorder terms feature](./img/reorder/enable-reorder-terms.png)
 
-Or add this parameter when you create the custom taxonomy:
+Or enable it via code:
 
 ```php
-'order'  => true,
+'order' => true,
 ```
 
-Then, go to the term screen, click on the **Re-Order** button to drag and drop them as expected, including the **hierarchical terms**.
+After that, visit the taxonomy screen and click the **Re-Order** button to sort terms using drag‑and‑drop - including **hierarchical terms**.
 
-![Drag and drop terms to reorder](./img/reorder-feature/reorder-hierarchical-terms.gif)
+![Drag and drop terms to reorder](./img/reorder/reorder-hierarchical-terms.gif)
 
-In the post editor, the terms are displayed in the order exactly.
+Ordered terms also appear exactly in the same sequence in the post editor:
 
-![Ordered terms in the post editor](./img/reorder-feature/post-editor.png)
-
+![Ordered terms in the post editor](./img/reorder/post-editor.png)
