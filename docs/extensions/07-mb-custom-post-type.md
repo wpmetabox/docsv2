@@ -146,7 +146,7 @@ This is the list of taxonomies that are registered for the post type. Select the
 
   <TabItem value="features" label="Features" default>
 
-![The Features tab of MB CUstom Post Type](./img/cpt-features-tab.png)
+![The Features tab of MB Custom Post Type](./img/cpt-features-tab.png)
 
 Name | Description
 ---|---
@@ -277,7 +277,6 @@ Assign terms | The capability required for assigning terms.
 
   </TabItem>
 
-  </TabItem>
 
   <TabItem value="features" label="Features" default>
 

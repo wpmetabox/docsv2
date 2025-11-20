@@ -14,7 +14,7 @@ To enable this feature, when creating a custom post type, navigate to the **Feat
 
 If you use code to create the custom post type, just add this code:
 
-```
+```php
 'order'  => true,
 ```
 
@@ -42,7 +42,7 @@ Similar to reordering posts, to enable the Reorder terms feature, go to **Meta B
 
 Or add this parameter when you create the custom taxonomy:
 
-```
+```php
 'order'  => true,
 ```
 

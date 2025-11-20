@@ -75,6 +75,7 @@ const sidebars = {
 				'database',
 				'custom-attributes',
 				'local-json',
+				'reorder-posts-terms',
 			],
 		},
 		{
