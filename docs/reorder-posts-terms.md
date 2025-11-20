@@ -34,6 +34,19 @@ Your custom order is applied automatically on all archive pages or anywhere you 
 
 ![Posts on the frontend](./img/reorder/frontend.png)
 
+### Reorder posts of other post types
+
+By default, the plugin supports reordering posts of the post types created by Meta Box. If you want to apply this feature to other post types that are built-in WordPress (like `post` or `page`) or created by other plugins or themes, use this snippet:
+
+```php
+add_filter( 'mbcpt_post_type_reorderable', function( $enable, $post_type ) {
+	if ( $post_type = 'your-post-type' ) {
+		return true;
+	}
+	return $enable;
+}, 10, 2 );
+```
+
 ## Reordering terms
 
 To reorder taxonomy terms, go to **Meta Box → Taxonomies**, open your taxonomy settings, and enable the feature in the **Features** tab:
@@ -53,3 +66,16 @@ After that, visit the taxonomy screen and click the **Re-Order** button to sort 
 Ordered terms also appear exactly in the same sequence in the post editor:
 
 ![Ordered terms in the post editor](./img/reorder/post-editor.png)
+
+### Reorder terms of other taxonomies
+
+By default, the plugin supports reordering terms of the taxonomies created by Meta Box. If you want to apply this feature to other taxonomies that are built-in WordPress (like `category` or `tag`) or created by other plugins or themes, use this snippet:
+
+```php
+add_filter( 'mbcpt_taxonomy_reorderable', function( $enable, $taxonomy ) {
+	if ( $taxonomy = 'your-taxonomy' ) {
+		return true;
+	}
+	return $enable;
+}, 10, 2 );
+```
