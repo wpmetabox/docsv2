@@ -20,13 +20,13 @@ If you use code to create the custom post type, just add this code:
 
 After that, on the post type admin screen, there is a new tab named **Re-Order**; just go there to drag and drop posts as the order you want.
 
-![Click on the Re-Order tab to rearrange posts](./img/reorder-feature/reorder-posts.png)
+![Click on the Re-Order tab to rearrange posts](./img/reorder-feature/reorder-posts.gif)
 
 ### Hierarchical support
 
 The Reorder posts feature works well with the hierarchical structure (parent-child posts). When reordering, the child posts will follow along with the parent one. It is similar to subfields in a group.
 
-![Hierarchical support](./img/reorder-feature/hierarchical-posts.png)
+![Hierarchical support](./img/reorder-feature/hierarchical-posts.gif)
 
 ### Frontend display
 
@@ -48,7 +48,7 @@ Or add this parameter when you create the custom taxonomy:
 
 Then, go to the term screen, click on the **Re-Order** button to drag and drop them as expected, including the **hierarchical terms**.
 
-![Drag and drop terms to reorder](./img/reorder-feature/reorder-hierarchical-terms.png)
+![Drag and drop terms to reorder](./img/reorder-feature/reorder-hierarchical-terms.gif)
 
 In the post editor, the terms are displayed in the order exactly.
 
