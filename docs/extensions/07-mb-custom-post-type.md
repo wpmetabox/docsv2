@@ -144,6 +144,17 @@ This is the list of taxonomies that are registered for the post type. Select the
 
   </TabItem>
 
+  <TabItem value="features" label="Features" default>
+
+![The Features tab of MB CUstom Post Type](./img/cpt-features-tab.png)
+
+Name | Description
+---|---
+Re-Order Posts | Order posts of that post type using a drag and drop interface.
+Add toggle status column | Add a column to quickly toggle post status between published and draft.
+
+  </TabItem>
+
 </Tabs>
 
 ### Getting PHP code
@@ -250,6 +261,31 @@ Sort | Whether terms in this taxonomy should be sorted.
 This is the list of post types that are connected with the taxonomy. Select the post types you want to connect to the taxonomy.
 
 ![post types settings](https://imgur.elightup.com/MQCmchM.png)
+
+  </TabItem>
+
+  <TabItem value="permissions" label="Permissions" default>
+
+![Permissions tab](./img/taxonomy-permissions-tab.png)
+
+Name | Description
+---|---
+Manage terms | The capability required for managing terms.
+Edit terms | The capability required for editing terms.
+Delete terms | The capability required for deleting terms.
+Assign terms | The capability required for assigning terms.
+
+  </TabItem>
+
+  </TabItem>
+
+  <TabItem value="features" label="Features" default>
+
+![The Features tab of Custom Taxonomy](./img/taxonomy-features-tab.png)
+
+Name | Description
+---|---
+Re-Order Terms | Order terms of this taxonomy using a drag and drop interface.
 
   </TabItem>
 
