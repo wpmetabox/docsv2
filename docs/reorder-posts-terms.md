@@ -52,5 +52,5 @@ Then, go to the term screen, click on the **Re-Order** button to drag and drop t
 
 In the post editor, the terms are displayed in the order exactly.
 
-![Ordered terms in the post editor](./img/reorder-feature/reorder-hierarchical-terms.png)
+![Ordered terms in the post editor](./img/reorder-feature/post-editor.png)
 
