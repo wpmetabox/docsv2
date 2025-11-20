@@ -34,7 +34,7 @@ The custom ordering is applied automatically on archive pages or anywhere you qu
 
 ![Posts on the frontend](./img/reorder-feature/frontend.png)
 
-## Reorder terms of a custom taxonomy
+## Reordering terms of a custom taxonomy
 
 Similar to reordering posts, to enable the Reorder terms feature, go to **Meta Box** > **Taxonomies**, then navigate to the **Features** tab.
 
