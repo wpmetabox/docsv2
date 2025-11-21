@@ -23,7 +23,7 @@ MB Group introduces a new field type: `group`. Here are its available settings:
 | Name           | Description |
 |----------------|-------------|
 | `name`         | Field label. Works like other fields. Optional. |
-| `id`           | Field ID, used to store the group’s values (including all sub-fields). |
+| `id`           | Field ID, used to store the group's values (including all sub-fields). |
 | `type`         | Must be set to `group`. |
 | `fields`       | An array of sub-fields. Each sub-field is declared like a normal field. |
 | `clone`        | Makes the group clonable (repeater). |
@@ -75,7 +75,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
     return $meta_boxes;
 } );
 ```
-Here’s how it looks:
+Here's how it looks:
 
 ![clone group (repeater)](https://imgur.elightup.com/KVIJzSa.png)
 
@@ -202,7 +202,17 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 
 - Group values are saved as an array of sub-field values (including nested groups).
 - Data is stored in the database as a serialized array.
-- Sub-field data is saved “as is” (no extra sanitizing or transformation).
+- Sub-field data is saved "as is" (no extra sanitizing or transformation).
+
+:::caution
+
+It's important to understand that when a field is placed inside a **group**, **its value is saved exactly as it is**. The plugin **does not apply any sanitization or transformation** when saving or retrieving field values. This behavior helps avoid heavy processing, especially when working with complex structures or deeply nested groups.
+
+Example:
+
+If you add a `date` field inside a group and set a `save_format` that differs from the display format, the `save_format` will **not** be applied. In this case, the saved value will always match the **displayed value** - no formatting changes are made during saving.
+
+:::
 
 ## Getting sub-field values
 
