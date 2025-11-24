@@ -74,7 +74,7 @@ const config = {
       },
       image: 'https://imgur.elightup.com/wnJtgSC.jpg',
       announcementBar: {
-        content: '<b>Meta Box Lite</b>, a feature-rich free UI version of Meta Box. <a target="_blank" href="https://metabox.io/lite/">Learn more</a>',
+        content: '🔥 <b>Black Friday Sale</b> - Save up to 40% on all Meta Box annual plans. <a target="_blank" href="https://metabox.io/black-friday/"><b>Get it now</b></a>!',
         backgroundColor: '#fed7aa',
         textColor: '#7c2d12',
         isCloseable: false,
