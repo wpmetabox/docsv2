@@ -2,7 +2,7 @@
 title: 4 Database Cleaning Tools
 ---
 
-https://metabox.io/aio/ includes four tools that help you clean up and optimize your WordPress database. They focus on removing unused data, fixing field inconsistencies, and handling post types efficiently.
+[Meta Box AIO](https://metabox.io/aio/) includes four tools that help you clean up and optimize your WordPress database. They focus on removing unused data, fixing field inconsistencies, and handling post types efficiently.
 These tools let you:
 
 * Remove orphaned custom field entries 
@@ -30,7 +30,7 @@ This tool helps you **remove all data for a specific custom field key across pos
 
 The **Change Custom Field Key** tool helps you migrate all data from an old custom field key to a new one when you rename a custom field (for example, from location to address), ensuring nothing is lost and your content stays consistent.
 
-![Migrates all data from the old key to the new one](./img/database-cleaning-tools/change-custom-field-key.jpg )
+![Migrates all data from the old key to the new one](./img/database-cleaning-tools/change-custom-field-key.png )
 
 You’ll also get suggestions of existing field keys, making it easier to select and update.
 
@@ -40,7 +40,7 @@ This tool helps you move posts to a different post type when a post type is disa
 
 For example, if the **Restaurant** post type is disabled, its posts remain in the database but are inaccessible; using this tool, you can move them to **Post**, making them visible and usable again.
 
-![Change-post-type](./img/database-cleaning-tools/change-post-type.jpg )
+![Change-post-type](./img/database-cleaning-tools/change-post-type.png )
 
 As a result, the posts in the Restaurant post type will be moved to Post.
 
