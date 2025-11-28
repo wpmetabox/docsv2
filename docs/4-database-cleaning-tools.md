@@ -40,7 +40,7 @@ This tool helps you move posts to a different post type when a post type is disa
 
 For example, if the **Restaurant** post type is disabled, its posts remain in the database but are inaccessible; using this tool, you can move them to **Post**, making them visible and usable again.
 
-![Change-post-type](./img/database-cleaning-tools/change-post-type.png )
+![Change-post-type](./img/database-cleaning-tools/change-post-types.png)
 
 As a result, the posts in the Restaurant post type will be moved to Post.
 
