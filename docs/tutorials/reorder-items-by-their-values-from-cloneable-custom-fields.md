@@ -116,18 +116,18 @@ add_filter( 'bricks/query/run', function( $results, $query_obj ) use ( $target_f
   
 ```
 if ( $query_obj->object_type !== $expected_object_type ) {
-        	return $results;
-   	 }
+    return $results;
+}
 ```
 This part is to show that if the current query is not the query we want to intervene in, return the intact, unchanged result to avoid affecting other queries.
 
 * `if ( is_array( $results ) && ! empty( $results ) ) {`: is to check if the data is an empty array or not.
   
 ```
- usort( $results, function( $a, $b ) use ( $sort_field ) {
-            return ( $a[$sort_field] ) <=> ( $b[$sort_field] );
-        });
-    }
+    usort( $results, function( $a, $b ) use ( $sort_field ) {
+        return ( $a[$sort_field] ) <=> ( $b[$sort_field] );
+    });
+}
 ```
 This part is to sort the values ​​in the array of this subfield in ascending order.
 
@@ -162,7 +162,7 @@ First, add this code:
 {% for clone in post.services %}
     {{ clone.service_name }} <br/>      
     {{ clone.price }} <br/>    
-  {% endfor %}
+{% endfor %}
 ```
 
 ![First, add this code](img/order-cloneable-field/insert-code-min.png)
