@@ -165,7 +165,7 @@ First, add this code:
 {% endfor %}
 ```
 
-![First, add this code](img/order-cloneable-field/insert-code-min.png)
+![First, add this code](img/order-cloneable-field/insert-field-min.png)
 
 **In there**:
 
