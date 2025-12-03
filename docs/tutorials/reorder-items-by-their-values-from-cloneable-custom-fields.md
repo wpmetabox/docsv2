@@ -209,7 +209,7 @@ Don't forget to update the array you'll be querying for this loop.
 
 ![Don't forget to update the array you'll be querying for this loop](img/order-cloneable-field/update-code-min.png)
 
-That's all. It's so simple.
+That's all. It's so simple. All the code is updated on [GitHub](https://github.com/wpmetabox/tutorials/tree/master/ordering-cloneable-fields-by-value) for your reference.
 
 Now, let’s check the page on the frontend; these are our expected results. 
 
