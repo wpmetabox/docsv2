@@ -127,7 +127,6 @@ This part is to show that if the current query is not the query we want to inter
     usort( $results, function( $a, $b ) use ( $sort_field ) {
         return ( $a[$sort_field] ) <=> ( $b[$sort_field] );
     });
-}
 ```
 This part is to sort the values ​​in the array of this subfield in ascending order.
 
