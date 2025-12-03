@@ -5,7 +5,7 @@ title: Reordering items by their values from cloneable custom fields - Meta Box 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Today, we’ll **reorder items by their values from cloneable custom fields**. Imagine that you have a list of services, each with its own name and price, and you want to display them in order from the lowest to the highest. That’s exactly when this method comes in handy. In this video, we’ll walk through a simple case study to show you how it’s done.
+Today, we’ll **reorder items by their values from cloneable custom fields**. Imagine that you have a list of services, each with its own name and price, and you want to display them in order from the lowest to the highest. That’s exactly when this method comes in handy. In this tutotial, we’ll walk through a simple case study to show you how it’s done.
 
 I created a car services pricing as an example. As you can see, this page contains the services and its price is sorted in ascending order. All of this information will be saved in the custom fields. 
 
@@ -199,7 +199,11 @@ Now, it’s time to order them. Back to the created template to add code for thi
 
 **Specifically**:
 
-* `{% set sorted_services = post.services|sort((a, b) => a.price <=> b.price) %}`: This line is to declare that we’ll create a new array containing a list of services with their prices sorted from low to high. This value will be taken from the subfield with ID price.
+```
+{% set sorted_services = post.services|sort((a, b) => a.price <=> b.price) %}
+```
+
+This line is to declare that we’ll create a new array containing a list of services with their prices sorted from low to high. This value will be taken from the subfield with ID price.
 
 Don't forget to update the array you'll be querying for this loop.
 
