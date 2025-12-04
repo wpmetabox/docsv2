@@ -38,32 +38,12 @@ To store car services details, we need to create a group of custom fields. They 
 
 Now, go to **Meta Box** > **Custom Fields**, and create a new field group. Here I created fields with this structure:
 
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Types of Field</th>
-<th>ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Services</td>
-<td>Group</td>
-<td>services</td>
-</tr>
-<tr>
-<td>Service Name</td>
-<td>Text</td>
-<td>service_name</td>
-</tr>
-<tr>
-<td>Price</td>
-<td>Number</td>
-<td>price</td>
-</tr>
-</tbody>
-</table>
+| Field         | Types of Field | ID           |
+|--------------|----------------|--------------|
+| Services     | Group          | services     |
+| Service Name | Text           | service_name |
+| Price        | Number         | price        |
+
 
 This is a group with 2 subfields inside. I also set this group as cloneable to have more spaces to add different services information. 
 
@@ -124,9 +104,9 @@ This part is to show that if the current query is not the query we want to inter
 * `if ( is_array( $results ) && ! empty( $results ) ) {`: is to check if the data is an empty array or not.
   
 ```
-    usort( $results, function( $a, $b ) use ( $sort_field ) {
-        return ( $a[$sort_field] ) <=> ( $b[$sort_field] );
-    });
+usort( $results, function( $a, $b ) use ( $sort_field ) {
+	return ( $a[$sort_field] ) <=> ( $b[$sort_field] );
+});
 ```
 This part is to sort the values ​​in the array of this subfield in ascending order.
 
