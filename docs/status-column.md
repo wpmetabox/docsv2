@@ -19,5 +19,3 @@ To add status column into the table of the post list of a custom post type, when
 Then, you’ll see the Status column displayed. Just turn the button on to publish or turn it off to save the post to a draft.
 
 ![The status column of the posts](./img/status-column/status-posts.png)
-
-
