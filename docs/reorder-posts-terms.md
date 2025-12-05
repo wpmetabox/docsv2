@@ -1,5 +1,5 @@
 ---
-title: Reorder Posts & Terms
+title: Reorder posts & terms
 ---
 
 This feature lets you **drag and drop** posts (from any custom post type) or terms (from any custom taxonomy) to rearrange their order right inside the WordPress admin. It's perfect when you need a custom order that doesn't follow the default publish date or alphabetical sorting.
