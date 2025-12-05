@@ -77,7 +77,7 @@ const sidebars = {
 				'local-json',
 				'reorder-posts-terms',
 				'status-column',
-				'database-cleaning-tools',
+				'tools',
 			],
 		},
 		{
