@@ -4,7 +4,7 @@ title: Status Column
 
 The status column lets you quickly switch the status of field groups, custom post types, custom taxonomies, settings pages, and relationships between Publish and Draft without opening each item individually. You can enable this feature for posts of a custom post type as well.
 
-![The status column for the field groups](.img//status-column/status.png)
+![The status column for the field groups](.img/status-column/status.png)
 
 This feature adds a small toggle button directly to the management screen. Simply switch it **on** to publish, or **off** to save as a draft.
 
