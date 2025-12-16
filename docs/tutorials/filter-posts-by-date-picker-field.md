@@ -87,7 +87,6 @@ With **MB Views**, I get all movie posts by adding some code in the **Template**
 
 ```
 {% set args = { post_type: 'movie', posts_per_page: -1, orderby: 'date', order: 'ASC' } %}
-
 ```
 
 This whole line is used to query and display posts from a specific post type, sorted by publish date. Particularly, it declares that we’ll get posts from the post type with the `movie` slug. And, `posts_per_page: -1` helps fetch all posts in that post type. You can change the number to get the expected number of posts.
@@ -110,7 +109,7 @@ Back to the **Template** tab, add some div tags and classes for styling. And mod
 
 Move to the **CSS** tab to add some lines of code.
 
-```
+```css
 .movie-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -214,7 +213,7 @@ Now, the movie listings look much better. Let’s move on to creating the search
 
 Back to the template created by **MB Views**, let’s add some more code to display the search box and filter options for the movie listings.
 
-```
+```php
 <div class="filters">
     <div class="filter-inputs">
         <label>From Date: <input type="date" id="from-date"></label>
@@ -227,7 +226,7 @@ Back to the template created by **MB Views**, let’s add some more code to disp
 
 **In there**:
 
-```
+```php
 <label>From Date: <input type="date" id="from-date"></label>
 <label>To Date: <input type="date" id="to-date"></label>
 <label class="specific-date">Specific Date: <input type="date" id="specific-date"></label>
@@ -235,7 +234,7 @@ Back to the template created by **MB Views**, let’s add some more code to disp
 
 We add three date inputs: **From Date**, **To Date**, and **Specific Date**. They let users pick days directly from a calendar to filter the movies. For example, you can choose a range of days or just one specific day to see which movies are showing. Each input has an ID, so we can later handle them in JavaScript.
 
-```
+```php
 <button id="clear-filters" type="button">Clear All Filters</button>
 ```
 
@@ -243,7 +242,7 @@ This line of code is to add the **Clear All Filters** button to reset the date f
 
 Turn to the CSS tab and add styles to make the search section look cleaner.
 
-```
+```css
 .filters {
     border-radius: 12px;
     padding: 15px;
@@ -300,13 +299,13 @@ It looks nice now, but we still need to make it work.
 
 In the template again, add the line of code below to load the **jQuery** library to make it easier to write JavaScript for the filter later.
 
-```
+```php
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 ```
 
 And, I add the following code to assign the date field value in the ‘**Y-m-d**’ format to the data-date attribute. Since both the movie date and the date filter input return the same year-month-day format, it’s easy to compare them.
 
-```
+```php
 <div class="movie-item" data-date="{{ post.movie_schedule.date | date( 'Y-m-d' ) }}">
 ```
 
@@ -314,7 +313,7 @@ And, I add the following code to assign the date field value in the ‘**Y-m-d**
 
 Now, switch to the **JavaScript** tab, add the main script to handle the filtering of the posts.
 
-```
+```js
 jQuery(function ($) {
     var $from = $('#from-date');
     var $to = $('#to-date');
@@ -393,7 +392,7 @@ jQuery(function ($) {
 
 Go through it in more detail.
 
-```
+```js
 var $from = $('#from-date');
 var $to = $('#to-date');
 var $spec = $('#specific-date');
@@ -402,71 +401,71 @@ var $items = $('.movie-item');
 
 This part initializes variables for selecting the start date, end date, specific date, and all post items.
 
-```
+```js
 $from.on('change', function () {
-        $spec.val('');
+    $spec.val('');
 
-        if (this.value) {
-            $to.attr('min', this.value);
-        } else {
-            $to.removeAttr('min');
-        }
+    if (this.value) {
+        $to.attr('min', this.value);
+    } else {
+        $to.removeAttr('min');
+    }
 
-        applyFilter();
- });
+    applyFilter();
+});
 ```
 
 When the user picks a start date, the specific date field is automatically cleared. Then, the end date input is limited; you can’t choose a date earlier than the start date. If the start date is cleared, that restriction is removed. And finally, the script calls the `applyFilter()` function to update the filtered movie list.
 
 As the user picks a to-date, it does the same as before. Just the reverse of the from-date logic. It clears the specific date and adjusts the date limit.
 
-```
-   $to.on('change', function () {
-        $spec.val('');
-        if (this.value) {
-            $from.attr('max', this.value);
-        } else {
-            $from.removeAttr('max');
-        }
-        applyFilter();
-    });
+```js
+$to.on('change', function () {
+    $spec.val('');
+    if (this.value) {
+        $from.attr('max', this.value);
+    } else {
+        $from.removeAttr('max');
+    }
+    applyFilter();
+});
 ```
 
 If a specific date is chosen instead, it clears both the start and end dates, removes any date limits, and then calls the created function to update the results.
 
-```
-    $spec.on('change', function () {
-        $from.val('').removeAttr('max');
-        $to.val('').removeAttr('min');
-        applyFilter();
-    });
+```js
+$spec.on('change', function () {
+    $from.val('').removeAttr('max');
+    $to.val('').removeAttr('min');
+    applyFilter();
+});
 ```
 When the user clicks “Clear All Filters,” it resets all date selections to default, removes any date limits, and shows all posts again, just like before filtering.
 
-```
-    $('#clear-filters').on('click', function (e) {
-        e.preventDefault();
+```js
+$('#clear-filters').on('click', function (e) {
+    e.preventDefault();
 
-        $from.val('').removeAttr('max');
-        $to.val('').removeAttr('min');
-        $spec.val('');
-        $items.show();
-    });
+    $from.val('').removeAttr('max');
+    $to.val('').removeAttr('min');
+    $spec.val('');
+    $items.show();
+});
 ```
 
 At this point, the script below retrieves the current values of the start, end, and specific date fields so it knows which filters are active.
 
-```
-        var from = $from.val();
-        var to = $to.val();
-        var spec = $spec.val();
+```js
+var from = $from.val();
+var to = $to.val();
+var spec = $spec.val();
 ```
 We use `$items.each(function () {}` loops through each post item to check one by one whether the post should be visible based on the selected dates.
 
 We get the date value from the post’s data-date attribute.
 
-```
-   var d = $(this).data('date');
+```js
+var d = $(this).data('date');
 ```
 
 This gives JavaScript the exact date of each post to compare with the selected filters.
@@ -475,27 +474,27 @@ This gives JavaScript the exact date of each post to compare with the selected f
 
 If a specific date is chosen, only posts with the same date are shown. Otherwise, if the post’s date is earlier than the start date, it’s hidden. Similarly, if the post’s date is later than the end date, it’s also hidden.
 
-```
-            if (spec) {
-                show = (d === spec);
-            } else {
-                if (from) {
-                    if (d < from) {
-                        show = false;
-                    }
-                }
-                if (to) {
-                    if (d > to) {
-                        show = false;
-                    }
-                }
-            }
+```js
+if (spec) {
+    show = (d === spec);
+} else {
+    if (from) {
+        if (d < from) {
+            show = false;
+        }
+    }
+    if (to) {
+        if (d > to) {
+            show = false;
+        }
+    }
+}
 ```
 
 After these checks, the last script updates the display, showing posts that meet the filter conditions and hiding those that don’t.
 
-```
-   $(this).toggle(show);
+```js
+$(this).toggle(show);
 ```
 
 That's all for the code, you can refer it [here](https://github.com/wpmetabox/tutorials/tree/master/filter-posts-by-date-picker).
