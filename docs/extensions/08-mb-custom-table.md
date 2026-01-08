@@ -74,11 +74,9 @@ Parameter|Description
 
 ### Notes
 
-A. **Do not add ID column**. The ID column is automatically created and set as the primary key in the table. It's used to store the object ID for future reference. Object ID can be the post ID, user ID, or term ID depending on what meta type the table is used for.
+A. Use **only alphanumeric and underscore characters** for the table name. Do not use any special characters, dashes, or spaces.
 
-B. The **column names must match custom field IDs**, one column per custom field. If you create a column to store a group, then the column name must be the top-level group ID. Don't create columns for sub-fields.
-
-C. The **table name doesn't need to include the WordPress table prefix**. The extension does not put any constraints on you to define the table name. If you want to include the WordPress table prefix, do this:
+B. The **table name doesn't need to include the WordPress table prefix**. The extension does not put any constraints on you to define the table name. If you want to include the WordPress table prefix, do this:
 
 ```php
 global $wpdb;
@@ -89,7 +87,11 @@ MetaBox\CustomTable\API::create( "{$wpdb->prefix}my_custom_table", [
 ] );
 ```
 
-D. The extension uses WordPress's recommended method to create a custom table, which means if the table already exists, the code will do nothing. Although, **it's recommended to run the code that creates custom tables [only when activating your plugin](https://codex.wordpress.org/Creating_Tables_with_Plugins#Calling_the_functions)**, like this:
+C. **Do not add ID column**. The ID column is automatically created and set as the primary key in the table. It's used to store the object ID for future reference. Object ID can be the post ID, user ID, or term ID depending on what meta type the table is used for.
+
+D. The **column names must match custom field IDs**, one column per custom field. If you create a column to store a group, then the column name must be the top-level group ID. Don't create columns for sub-fields.
+
+E. The extension uses WordPress's recommended method to create a custom table, which means if the table already exists, the code will do nothing. Although, **it's recommended to run the code that creates custom tables [only when activating your plugin](https://developer.wordpress.org/plugins/creating-tables-with-plugins/)**, like this:
 
 ```php
 register_activation_hook( __FILE__, function() {
@@ -105,7 +107,7 @@ But if you can't run the code when activating your plugin, it's fine to run the 
 
 ### Using existing tables
 
-You can also use an existing table to store your data. The table can be [manually created](https://codex.wordpress.org/Creating_Tables_with_Plugins) by a plugin, a theme, or any tool like phpMyAdmin. To use it with Meta Box:
+You can also use an existing table to store your data. The table can be [manually created](https://developer.wordpress.org/plugins/creating-tables-with-plugins/) by a plugin, a theme, or any tool like phpMyAdmin. To use it with Meta Box:
 
 - **The custom table must have the ID column**. It's required to connect entries in the custom table with WordPress posts, terms, or users table.
 - **The columns in the custom table much match the field IDs in your meta box**.
