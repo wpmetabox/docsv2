@@ -26,6 +26,7 @@ export default () => (
           <div className="uppercase tracking-wider text-sm font-bold mb-2">Our products</div>
           <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="https://wpslimseo.com" target="_blank">Slim SEO</a></li>
+            <li><a className="text-inherit" href="https://wpfalcon.pro" target="_blank">Falcon</a></li>
             <li><a className="text-inherit" href="https://gretathemes.com" target="_blank">GretaThemes</a></li>
             <li><a className="text-inherit" href="https://wpautolistings.com" target="_blank">Auto Listings</a></li>
           </ul>
