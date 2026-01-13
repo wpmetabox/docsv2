@@ -6,6 +6,11 @@ import Screenshots from '@site/src/components/Screenshots';
 
 The block editor field creates a standalone Gutenberg block editor in meta boxes, settings pages, and other supported Meta Box objects.
 
+## Notes
+* Requires WordPress Block Editor (Gutenberg)
+* Media upload is enabled automatically for users with upload permissions
+* Each Block Editor field is fully isolated from the others
+
 ## Screenshots
 
 <Screenshots name="block-editor" col1={[
@@ -22,7 +27,7 @@ Allowed Blocks | `allowed_blocks` | List of allowed block types. Leave empty to 
 
 This is a sample field settings array when creating this field with code:
 
-```
+```php
 [
     'name'           => 'Content Blocks',
     'id'             => 'content_blocks',
@@ -43,7 +48,7 @@ This field saves data as Gutenberg block markup in the database, just like WordP
 
 Meta Box automatically applies `do_blocks()` when rendering the field value.
 
-```
+```php
 $content = rwmb_get_value( 'content_blocks' );
 echo do_blocks( $content );
 ```
