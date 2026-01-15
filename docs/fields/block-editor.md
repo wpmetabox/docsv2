@@ -4,12 +4,9 @@ title: Block Editor
 
 import Screenshots from '@site/src/components/Screenshots';
 
-The block editor field creates a standalone Gutenberg block editor in meta boxes, settings pages, and other supported Meta Box objects.
+The block editor field creates an isolated standalone Gutenberg block editor in meta boxes, settings pages, and other supported Meta Box objects. This is useful when you want to create a custom field for users to edit content with the same experience as the main WordPress block editor.
 
-## Notes
-* Requires WordPress Block Editor (Gutenberg)
-* Media upload is enabled automatically for users with upload permissions
-* Each Block Editor field is fully isolated from the others
+You can have multiple block editor fields on a same page, and they will not affect each other. Each editor can have a different set of allowed blocks, which is useful when you want to allow users to insert only certain blocks in a specific area of the page.
 
 ## Screenshots
 
@@ -49,9 +46,12 @@ This field saves data as Gutenberg block markup in the database, just like WordP
 Meta Box automatically applies `do_blocks()` when rendering the field value.
 
 ```php
+rwmb_the_value( 'content_blocks' );
+```
+
+If you want to get the value as a string, and apply `do_blocks()` to it, you can use:
+
+```php
 $content = rwmb_get_value( 'content_blocks' );
 echo do_blocks( $content );
 ```
-
-This ensures that all Gutenberg blocks are properly rendered on the front end.
-
