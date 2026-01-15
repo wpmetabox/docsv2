@@ -31,6 +31,8 @@ Learn about field types, what they are and when you should use them.
 
 [![background](/thumbs/background.png) <span className="thumb_text">Background</span>](/fields/background/)
 
+[![block editor](/thumbs/block-editor.png) <span className="thumb_text">Block Editor</span>](/fields/block-editor/)
+
 [![button](/thumbs/button.png) <span className="thumb_text">Button</span>](/fields/button/)
 
 [![button group](/thumbs/button-group.png) <span className="thumb_text">Button Group</span>](/fields/button-group/)
