@@ -5,7 +5,7 @@ title: Searching Posts on a Map - MB Views
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-Today, we are going to find out how to search posts on a map using MB Views. Imagine that you run a restaurant chain, coffee shop, store, or any business with locations in different cities. Displaying all of them on a single map helps users get a clear overview and explore what’s available at a glance.This is exactly where this method becomes useful. 
+Today, we are going to find out how to **search posts on a map** using **MB Views**. Imagine that you run a restaurant chain, coffee shop, store, or any business with locations in different cities. Displaying all of them on a single map helps users get a clear overview and explore what’s available at a glance. This is exactly where this method becomes useful. 
 
 I created a map like that for example. It allows users to filter restaurants by rating, type, price, distance in kilometers from the user’s current location, helping them quickly find exactly what they need. 
 
@@ -33,11 +33,11 @@ Now, let’s go step by step.
 
 ## 1. Creating a custom post type and custom fields
 
-Go to Meta Box and create a new post type for your listings. Here I’ve already set up a post type. 
+Go to **Meta Box** and create a new post type for your listings. Here I’ve already set up a post type. 
  
 ![Here I’ve already set up a post type](img/search-posts-on-map/post-type.png)
 
-And I’ve done the same for the custom fields as well. If you want to see the details, you can find it on this practice. 
+And I’ve done the same for the custom fields as well. If you want to see the details, you can find it on [this practice](https://docs.metabox.io/tutorials/create-download-preview-buttons-mb-views/). 
 
 ![And I’ve done the same for the custom fields as well](img/search-posts-on-map/custom-field.png)
 
@@ -51,17 +51,17 @@ Go to the post editor, you will see the created custom fields.
 
 ## 2. Showing restaurants on the map
 
-In this step, we’ll show all posts on the page using MB Views from Meta Box, which means displaying all restaurants. For filtering, I’ll do it later. We already have a case study that shows how to display listings on a map. You can find it on this site. 
+In this step, we’ll show all posts on the page using **MB Views** from **Meta Box**, which means displaying all restaurants. For filtering, I’ll do it later. We already have a case study that shows how to display listings on a map. You can find it on [this site](https://docs.metabox.io/tutorials/display-listings-on-map/). 
 
 First, create a new page for the restaurant listing. 
 
 ![First, create a new page for the restaurant listing](img/search-posts-on-map/new-page.png)
 
-Then, go to Meta Box > Views and add a new view.
+Then, go to **Meta Box** > **Views** and add a new view.
 
 ![Then, go to Meta Box > Views and add a new view](img/search-posts-on-map/add-new-view.png)
 
-In the Template tab, I’m going to add some code. You can use the Insert Field button to insert fields or add code directly. 
+In the **Template** tab, I’m going to add some code. You can use the **Insert Field** button to insert fields or add code directly. 
 ```
 {% set args = { post_type: 'restaurant', posts_per_page: -1 } %}
 {% set posts = mb.get_posts(args) %}
@@ -77,7 +77,7 @@ In the Template tab, I’m going to add some code. You can use the Insert Field 
 ```
 ![In the Template tab, I’m going to add some code](img/search-posts-on-map/code1-insert.png)
 
-In there:
+**In there**:
 
 * `{% set args = { post_type: 'restaurant', posts_per_page: -1 } %}`: is to declare that we’ll get posts from the restaurant post type. 
 * `mb.get_posts(args)`: is used as a function to get posts. 
@@ -89,7 +89,7 @@ In there:
 * `{{ post.price }}`:  is to get all values in post ​​with ID `price`
 * `{{ post.cuisine_types.value }}`:  is to get all values in post ​​with ID `cuisine_types`
 
-After inserting all the fields you need, scroll down to the Settings section, choose the type of the template as Singular, set the Location as Page, then select your page you created for the filter restaurants.
+After inserting all the fields you need, scroll down to the **Settings** section, choose the type of the template as **Singular**, set the **Location** as **Page**, then select your page you created for the filter restaurants.
 
 ![After inserting all the fields you need](img/search-posts-on-map/settingtab.png)
 
@@ -133,7 +133,7 @@ To improve the layout and show the restaurant information on a map instead of pl
 ```
 ![To improve the layout and show the restaurant information on a map instead of plain text from custom fields](img/search-posts-on-map/code2.png)
 
-Explanation: 
+**Explanation**: 
 ```
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>: is to download and declare the Leaflet JavaScript library.
@@ -170,11 +170,11 @@ This part is to create an array to get all data in each post about: ID, Name, Co
 
 We use the `id="restaurants-data"` as an HTML class, and all values from the array are passed to it.
 
-After that, I added the CSS code. 
+After that, I added the **CSS** code. 
 
 ![After that, I added the CSS code](img/search-posts-on-map/css1.png)
 
-Followed by the JavaScript tab to add code.
+Followed by the **JavaScript** tab to add code.
 ```
 jQuery(function ($) {
     let rawData = $('#restaurants-data').data('items');
@@ -239,7 +239,7 @@ jQuery(function ($) {
 
 ![Followed by the JavaScript code](img/search-posts-on-map/jvc1b.png)
 
-Specifically:
+**Specifically**:
 ```
 jQuery(function ($) {
     let rawData = $('#restaurants-data').data('items');
@@ -331,7 +331,7 @@ Now, it’s time to create filters for restaurants on the map. Back to the creat
  
 ![I will display all the filters first, then add functions for it later](img/search-posts-on-map/code3c1.png)
 
-Explanation: 
+**Explanation**: 
 ```
     {% set ratings = [] %}
     {% for post in posts %}
@@ -411,7 +411,7 @@ Next, a Search button is added to trigger the filtering process based on all sel
 ```
 Last but not least, an area is set up to display the results, where the total number of restaurants found is shown.
 
-Then, move to the CSS tab and add some code. 
+Then, move to the **CSS** tab and add some code. 
  
 ![Then, move to the CSS tab and add some code](img/search-posts-on-map/css2a.png)
  
@@ -423,7 +423,7 @@ After saving, go to the front-end page, you can see all the search filters displ
 
 ![The filters are showing now, but they're not working yet](img/search-posts-on-map/demo3a.gif)
 
-Go back to the page editor to add code for the JavaScript tab. This step will help the filters work properly.
+Go back to the page editor to add code for the **JavaScript** tab. This step will help the filters work properly.
 
 ![Go back to the page editor to add code for the JavaScript tab](img/search-posts-on-map/jvc2a.png)
  
