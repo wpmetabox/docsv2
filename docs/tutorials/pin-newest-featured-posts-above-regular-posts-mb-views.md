@@ -84,7 +84,7 @@ To make it look more visually appealing, add some div tags and classes in the **
 
 ![Add css](img/pin-newest-featured-posts/Add-css.png)
 
-```
+```css
 .restaurant-wrapper {
     padding: 20px 0;
     font-family: Arial, sans-serif;
@@ -175,7 +175,7 @@ Back to the template created with **MB Views**, we’ll add a small piece of log
 
 **In there**:
 
-```
+```php
 {% set trending_posts = [] %}
 {% set normal_posts = [] %}
 ```
@@ -184,18 +184,18 @@ Two empty arrays to categorize the tours: one for Hot Trend tours and one for re
 
 We loop through all the tours from the existing query to process them one by one.
 
-```
+```php
 {% for post in posts %}
 ```
 
 Inside the loop, we check the value of the **Trend of Month** field. If it’s set to 1, it means this tour is marked as a Hot Trend, so we add it to the trending posts array. Otherwise, the tour is treated as a normal one and pushed into the normal posts array.
 
-```
+```php
 {% if post.the_trend_of_month == '1' %}
-        {% set trending_posts = trending_posts | merge([post]) %}
-    {% else %}
-        {% set normal_posts = normal_posts | merge([post]) %}
-    {% endif %}
+    {% set trending_posts = trending_posts | merge([post]) %}
+{% else %}
+    {% set normal_posts = normal_posts | merge([post]) %}
+{% endif %}
 
 {% set top_trending = trending_posts[:3] %}
 {% set remaining_trending = trending_posts[3:] %}
@@ -205,46 +205,22 @@ This code is to split the Hot Trend posts into two groups. The first three lates
 
 This line below combines the two lists into one.
 
-```
+```php
 {% set normal_posts = remaining_trending | merge(normal_posts) %}
 ```
 We use the following code to display the featured tours at the top of the page. I did modify the code a bit so that the specified tour posts have a highlighted layout, with the number of columns adjusting dynamically based on how many featured items we have. Each featured tour is highlighted with a Hot Trend badge to make it stand out from the rest.
 
-```
-<div class="restaurant-wrapper">
-    <div class="featured-top-row columns-{{ top_trending|length }}">
-        {% if top_trending|length > 0 %}
-            {% for post in top_trending %}
-                <div class="featured-large-card">
-                    <a class="thumb" href="{{ post.link }}">
-                        <img src="{{ post.thumbnail.full.url }}" alt="{{ post.thumbnail.full.alt }}" loading="lazy">
-                    </a>
-                    <div class="info">
-                        <span class="badge">Hot Trend</span>
-                        <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                        <div class="tour-meta">
-                            <span class="duration">{{ post.duration.value }}</span>
-                            <span class="price">{{ post.price }}$</span>
-                        </div>
-                       
-                    </div>
-                </div>
-            {% endfor %}           
-        {% endif %}
-    </div>
-```
-
-And, this code below stays unchanged for displaying normal posts as we did before.
-
-```
-<div class="below-grid">
-        {% for post in normal_posts %}
-            <div class="card-grid-item">
+```php
+<div class="featured-top-row columns-{{ top_trending|length }}">
+    {% if top_trending|length > 0 %}
+        {% for post in top_trending %}
+            <div class="featured-large-card">
                 <a class="thumb" href="{{ post.link }}">
                     <img src="{{ post.thumbnail.full.url }}" alt="{{ post.thumbnail.full.alt }}" loading="lazy">
                 </a>
-                <div class="info">                    
-                    <h4 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                <div class="info">
+                    <span class="badge">Hot Trend</span>
+                    <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
                     <div class="tour-meta">
                         <span class="duration">{{ post.duration.value }}</span>
                         <span class="price">{{ post.price }}$</span>
@@ -252,12 +228,34 @@ And, this code below stays unchanged for displaying normal posts as we did befor
                 </div>
             </div>
         {% endfor %}
-    </div>
+    {% endif %}
+</div>
+```
+
+And, this code below stays unchanged for displaying normal posts as we did before.
+
+```php
+<div class="below-grid">
+    {% for post in normal_posts %}
+        <div class="card-grid-item">
+            <a class="thumb" href="{{ post.link }}">
+                <img src="{{ post.thumbnail.full.url }}" alt="{{ post.thumbnail.full.alt }}" loading="lazy">
+            </a>
+            <div class="info">                    
+                <h4 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                <div class="tour-meta">
+                    <span class="duration">{{ post.duration.value }}</span>
+                    <span class="price">{{ post.price }}$</span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
 ```
                               
 Turn to the **CSS** tab and add styles to make the highlight section look cleaner.
 
-```
+```css
 .featured-top-row {
     display: grid;
     gap: 20px;
