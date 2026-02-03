@@ -12,7 +12,8 @@ In the previous tut, we focused on [displaying only the featured posts](https://
 ## Video version
 
 <LiteYouTubeEmbed id='Oo1iwTXaKTg' />
-Preparation
+
+## Preparation
 
 In this tutorial, we’ll create a custom post type to manage all the tours on our travel website.
 Each tour will include essential information, such as price, duration, and whether it’s featured for the month. All details will be stored in custom fields created with Meta Box.
