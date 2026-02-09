@@ -25,9 +25,9 @@ In this practice, the information of each restaurant will be saved as a post of 
 
 So, I recommend that you should use [Meta Box AIO](https://metabox.io/aio/) to have the framework for creating a template, a custom post type and custom fields. As well as the Meta Box extensions inside it, provide you with advanced features, specifically:
 
-* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the restaurants.
+* [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the restaurants;
+* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields easily;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a page template for displaying the listings and filtering it on the map.
-* [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields easily.
 
 Now, let’s go step by step.
 
@@ -51,7 +51,7 @@ Go to the post editor, you will see the created custom fields.
 
 ## 2. Showing restaurants on the map
 
-In this step, we’ll show all posts on the page using **MB Views** from **Meta Box**, which means displaying all restaurants. For filtering, I’ll do it later. We already have a case study that shows how to display listings on a map. You can find it on [this site](https://docs.metabox.io/tutorials/display-listings-on-map/). 
+In this step, we’ll show all posts on the page using **MB Views** from **Meta Box**, which means displaying all restaurants. For filtering, I’ll do it later. We already have a case study that shows how to display listings on a map. You can find it on [this tutorial](https://docs.metabox.io/tutorials/display-listings-on-map/). 
 
 First, create a new page for the restaurant listing. 
 
@@ -131,13 +131,14 @@ To improve the layout and show the restaurant information on a map instead of pl
 
 <div id="restaurants-data" data-items='{{ restaurantsArray|json_encode()|raw }}' style="display:none;"></div>
 ```
-![To improve the layout and show the restaurant information on a map instead of plain text from custom fields](img/search-posts-on-map/code2.png)
+![To improve the layout and show the restaurant information on a map instead of plain text from custom fields](img/search-posts-on-map/template2.png)
 
 **Explanation**: 
 ```
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>: is to download and declare the Leaflet JavaScript library.
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 ```
+This code is to download and declare the Leaflet JavaScript library.
 `<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>`: is to add the jQuery library.
 
 `<div id="map"></div>`: is to display the map.
@@ -237,8 +238,6 @@ jQuery(function ($) {
 ```
 ![Followed by the JavaScript code](img/search-posts-on-map/jvc1a.png)
 
-![Followed by the JavaScript code](img/search-posts-on-map/jvc1b.png)
-
 **Specifically**:
 ```
 jQuery(function ($) {
@@ -327,10 +326,6 @@ Now, it’s time to create filters for restaurants on the map. Back to the creat
 
 ![Now, it’s time to create filters for restaurants on the map](img/search-posts-on-map/code3a.png)
 
-![Back to the created template to add code for this purpose](img/search-posts-on-map/code3b.png)
- 
-![I will display all the filters first, then add functions for it later](img/search-posts-on-map/code3c1.png)
-
 **Explanation**: 
 ```
     {% set ratings = [] %}
@@ -392,7 +387,7 @@ In the same way, another array is created to store all cuisine types from the po
         <span id="price-display">10 - 50$</span>
     </div>
 ```
-To handle price filtering, a min–max range bar is set up. At first, it only shows the default minimum and maximum values, then JavaScript updates them dynamically when the user drags the slider.
+To handle price filtering, a min–max range bar is set up. At first, it only shows the default minimum and maximum values, then **JavaScript** updates them dynamically when the user drags the slider.
 ```
     <button id="locate-btn" type="button">📍 My Location</button>
 ```
@@ -414,10 +409,6 @@ Last but not least, an area is set up to display the results, where the total nu
 Then, move to the **CSS** tab and add some code. 
  
 ![Then, move to the CSS tab and add some code](img/search-posts-on-map/css2a.png)
- 
-![Then, move to the CSS tab and add some code](img/search-posts-on-map/css2b.png)
- 
-![Then, move to the CSS tab and add some code](img/search-posts-on-map/css2c.png)
 
 After saving, go to the front-end page, you can see all the search filters displayed here. The filters are showing now, but they're not working yet.
 
@@ -425,9 +416,8 @@ After saving, go to the front-end page, you can see all the search filters displ
 
 Go back to the page editor to add code for the **JavaScript** tab. This step will help the filters work properly.
 
-![Go back to the page editor to add code for the JavaScript tab](img/search-posts-on-map/jvc2a.png)
+![Go back to the page editor to add code for the JavaScript tab](img/search-posts-on-map/jvc2.png)
  
-![This step will help the filters work properly](img/search-posts-on-map/jvc2b.png)
 ```
 $('#locate-btn').on('click', function () {
         let $btn = $(this);
@@ -496,13 +486,13 @@ In addition, this part updates the text from 10 to 100$ when the user drags the 
         $('#filter-info').text(`Result: ${filtered.length} Restaurants`);
     });
 ```
-Subsequently, this section creates the search button that filters results by rating, cuisine, price, and radius. If the user sets a radius but hasn’t gotten their location yet, it will ask for the location first. I use a helper function to calculate the distance in kilometers between two coordinates. When the radius is missing or set to 0, that filter is skipped. 
+Subsequently, this section above creates the search button that filters results by rating, cuisine, price, and radius. If the user sets a radius but hasn’t gotten their location yet, it will ask for the location first. I use a helper function to calculate the distance in kilometers between two coordinates. When the radius is missing or set to 0, that filter is skipped. 
 ```
     renderMarkers(Locations);
     $('#filter-info').text(`Show: ${Locations.length} Restaurants`);
 });
 ```
-After filtering, the updated results are rendered and the total number of matches is displayed.
+After filtering, the updated results are rendered and the total number of matches is displayed. That’s all for the code. I’ve put everything on **[Github](https://github.com/wpmetabox/tutorials/tree/master/searching-post-on-the-maps)**, so you can check it out there.
 
 Now, let’s check the page on the frontend, you can see the filters work well. 
 
