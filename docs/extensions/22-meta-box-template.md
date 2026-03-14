@@ -159,7 +159,7 @@ For more information about using YAML, the Symfony project wrote a [very good gu
 
 Each field group or custom field has a list of the settings which is written in `key: value` pairs (associated arrays). We use YAML mapping for these settings.
 
-:::caution
+:::warning
 
 Please refer to [field group settings](/creating-fields-with-code/) and [field settings](/field-settings/) when defining keys.
 

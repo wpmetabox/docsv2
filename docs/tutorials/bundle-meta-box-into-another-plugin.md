@@ -58,7 +58,7 @@ In the **project-demo** folder, we create a file named `composer.json` with the 
 * `extra`: this is declaring a path of where we want to store the libraries.
 * `autoload`: requires loading the libraries automatically when we activate the plugin.
 
-:::caution
+:::warning
 
 This code just bundles the free Meta Box plugin inside my plugin. If you want to add other Meta Box extensions to create advanced custom fields or settings pages, check out [this file](https://github.com/wpmetabox/library/blob/master/composer/composer.json).
 

@@ -28,7 +28,7 @@ With this method, you can change other CSS attributes of whatever category you w
 
 This method has many other applications as well. The main idea here is to create settings for the category, then get/use these settings for the posts in that category.
 
-:::caution
+:::warning
 
 If you already have had many different layouts and want to choose one for a post, or category, you can use this method. However, you’ll need to create a class to identify the post/category using which layout.
 

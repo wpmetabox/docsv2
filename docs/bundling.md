@@ -6,7 +6,7 @@ import FAQ from '@site/src/components/FAQ';
 
 Meta Box and extensions can be used as standalone plugins or bundled within other themes or plugins.
 
-:::caution Licensing
+:::warning Licensing
 
 1. If you want to bundle Meta Box into other products or services (plugins, themes, solutions, hosting providers, SASS companies, site maintenance providers, etc.) that sell to other people, please [contact us](https://metabox.io/contact/) for a custom pricing plan.
 2. You are **not allowed** to use premium extensions in your free products, like plugins and themes on WordPress.org.

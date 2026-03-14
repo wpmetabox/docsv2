@@ -287,7 +287,7 @@ The block title. It's used to display the block when you click the Block Inserte
 
 The block ID. Must be unique.
 
-:::caution No underscores
+:::warning No underscores
 
 A block ID can only contain lowercase alphanumeric characters and dashes and must begin with a letter. It doesn't accept underscores, i.e. `my_block` won't work, but `my-block` will work.
 
@@ -995,7 +995,7 @@ If you want to save the block fields into custom tables, you need to activate th
 ]
 ```
 
-:::caution Caveats
+:::warning Caveats
 
 When saving block data in post meta or custom tables, there is no attributes stored in the block itself.
 Automatic preparation of attributes is not available, helpers functions like `mb_get_block_field()` and `mb_the_block_field()` will not work.

@@ -62,7 +62,7 @@ If `raw` is `true`, this field saves exactly what you enter into the database. O
 <?php rwmb_the_value( 'my_field_id' ) ?>
 ```
 
-:::caution Content formatting
+:::warning Content formatting
 
 Note that the helper function doesn't format the value of this field nor run shortcodes in the content. In case you want to make it behaves similar to the post content (e.g. format and shortcodes), use this code:
 

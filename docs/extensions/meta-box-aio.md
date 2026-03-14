@@ -55,7 +55,7 @@ This set of tools is only available in **Meta Box AIO**. To use it, go to **Meta
 
 ![Interface of Meta Box tools](img/tools/tools.png)
 
-:::caution Important
+:::warning Important
 
 Please back up your database before using any of these tools. This can't be reversed.
 

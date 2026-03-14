@@ -6,7 +6,7 @@ If "Multiple" is set, this field saves multiple values in the database. Each val
 
 If the field is cloneable, the value is stored as a serialized array in a single row in the database.
 
-:::caution
+:::warning
 
 Note that this field stores the **values**, not labels.
 

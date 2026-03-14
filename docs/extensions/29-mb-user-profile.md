@@ -182,7 +182,7 @@ Comment shortcuts|`comment_shortcuts`
 Show the admin bar on the front|`admin_bar_front`
 User role|`role`
 
-:::caution
+:::warning
 
 These default fields do not work as sub-fields in a group.
 

@@ -6,7 +6,7 @@ You can move data from the **CPT UI** to the **Meta Box** with the help of the *
 
 ## 1. Backing up the data
 
-:::caution
+:::warning
 
 Remember to back up your data before migrating to avoid unexpected events.
 

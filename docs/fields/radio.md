@@ -43,7 +43,7 @@ This field saves a single selected value in the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
-:::caution
+:::warning
 
 Note that this field stores the **values**, not labels.
 

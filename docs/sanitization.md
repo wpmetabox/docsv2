@@ -14,7 +14,7 @@ We try to provide appropriate callbacks for built-in field types and use built-i
 
 To see the list of default sanitize callbacks, please [see the plugin source code](https://github.com/wpmetabox/meta-box/blob/master/inc/sanitizer.php#L50).
 
-:::caution
+:::warning
 
 - **Textarea field**: Meta Box **removes all scripts and iframes** from the value. If you want to enter scripts (like Google Analytics) or embed videos, then you need to disable sanitization. See below for details.
 - **Choice fields**: Meta Box validates the input to make sure it's in the field options.

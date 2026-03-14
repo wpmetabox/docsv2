@@ -10,7 +10,7 @@ Meta Box is created as a library to help WordPress users work with custom post t
 - It can be [used in other themes or plugins](/bundling/) to provide the functionality needed for the themes or plugins.
 - Extra functionality is provided by extensions, which can be installed as libraries as well.
 
-:::caution No admin menu?
+:::warning No admin menu?
 
 Because Meta Box is a library, the **free version** doesn't have admin pages for configuration or settings. Instead of that, it provides an API that you can use to speed up the process of creating meta boxes and custom fields. Developers need [use code](/creating-fields-with-code/) to create custom fields.
 

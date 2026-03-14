@@ -204,7 +204,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 - Data is stored in the database as a serialized array.
 - Sub-field data is saved "as is" (no extra sanitizing or transformation).
 
-:::caution
+:::warning
 
 It's important to understand that when a field is placed inside a **group**, **its value is saved exactly as it is**. The plugin **does not apply any sanitization or transformation** when saving or retrieving field values. This behavior helps avoid heavy processing, especially when working with complex structures or deeply nested groups.
 

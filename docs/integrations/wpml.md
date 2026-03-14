@@ -39,7 +39,7 @@ Your new language switcher will now appear next to your navigation menus.
 
 ![The language switcher on the frontend allows transform the language](https://imgur.elightup.com/Nsnkfx9.png)
 
-:::caution Notice
+:::warning Notice
 
 If you don’t set it up, there is nothing on the page to change the language to another one. So, the translation versions of all elements including the custom fields are not shown even when they are already existing.
 

@@ -89,7 +89,7 @@ jQuery( function( $ ){
 } );
 ```
 
-:::caution
+:::warning
 
 You need to use `setTimeout` to make sure your code runs after the uploader is initialized.
 

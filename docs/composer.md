@@ -6,7 +6,7 @@ import FAQ from '@site/src/components/FAQ';
 
 This docs shows you how to use [Composer](https://getcomposer.org/) to install and update Meta Box and its extensions.
 
-:::caution Licensing
+:::warning Licensing
 
 1. If you want to bundle **premium extensions** into other products or services (plugins, themes, solutions, hosting providers, SASS companies, site maintenance providers, etc.) that sell to other people, please [contact us](https://metabox.io/contact/) for a custom pricing plan.
 2. You are **not allowed** to use **premium extensions** in your free products, like plugins and themes on WordPress.org.
@@ -99,7 +99,7 @@ To make it easier for developers, I've created a composer.json file, which conta
 
 :::
 
-:::caution Can't update with Composer
+:::warning Can't update with Composer
 
 
 Because we use `dev-master` version, Composer can't load versions to check when running `composer update`. To fix this, please run the following command:

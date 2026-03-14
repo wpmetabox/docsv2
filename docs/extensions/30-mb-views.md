@@ -79,7 +79,7 @@ Group fields are marked with an arrow on the left, just like in the image above.
 
 To insert a sub-field, click on the sub-field title, like inserting a normal field. Depending on the field type, it will open a popup for additional options or not.
 
-:::caution Inserting sub-fields of cloneable groups
+:::warning Inserting sub-fields of cloneable groups
 
 If you have a cloneable group, before inserting sub-fields, you **must** insert the `for` loop for the group first. To insert the group, click on the group title. See the Cloneable Fields section above for details.
 

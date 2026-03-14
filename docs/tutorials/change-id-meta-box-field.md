@@ -6,7 +6,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 For any reason, you may want to change the ID of the custom field without having an effect on existing data. But, if you only change the ID of the field from the field group settings, the data in the field will be lost. So, how does the data remain intact when changing the field ID? Let’s find it out.
 
-:::caution
+:::warning
 
 Before going to update the field ID, make sure you [backup your database](https://deluxeblogtips.com/best-wordpress-backup-plugins/) first. The methods described here involve running SQL on your database, which can’t revert. Having backups might help you if there's something wrong.
 

@@ -71,7 +71,7 @@ const response = await request.json();
 console.log( response );
 ```
 
-:::caution Custom post type rest API support
+:::warning Custom post type rest API support
 
 If you use Rest API for a custom post type, make sure you enable Rest API support for it. You can do that with our [MB Custom Post Types & Custom Taxonomies](/extensions/mb-custom-post-type/) or with code according to the [WordPress docs](https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-rest-api-support-for-custom-content-types/). In this article, we're using the "Event" post type which has Rest API supports, and the Rest API base is `event`.
 

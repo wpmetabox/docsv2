@@ -190,7 +190,7 @@ For more complex fields, you can override additional methods from the `RWMB_Fiel
 
 :::
 
-:::caution Cloneable fields
+:::warning Cloneable fields
 
 If your field should support [cloning](/cloning-fields/), make sure your inputs have a CSS class starting with `rwmb`. The cloning script automatically detects these inputs and updates their `id` and `name` attributes correctly.
 

@@ -34,7 +34,7 @@ Language | `language` | Set the language for more accurate autocomplete results.
 Region | `region` | Restrict search results to one or more countries. Accepts [ISO 3166-1 alpha-2 codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Optional.
 Marker draggable | `marker_draggable` | Determines whether the marker can be moved. Boolean, default is `true`. When set to `false`, the marker cannot be dragged - the location can only be set by searching for an address.
 
-:::caution Address field required
+:::warning Address field required
 You must create a [text field](/fields/text/) for the address input, and pass its ID to the map's **Address field** setting.
 :::
 

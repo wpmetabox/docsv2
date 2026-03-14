@@ -35,7 +35,7 @@ MB ACF Migration tries to migrate all the following data from ACF to Meta Box. P
 
 ACF field groups are migrated to Meta Box's field groups, which requires [MB Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
 
-:::caution
+:::warning
 
 **We do not remove ACF field groups** after migration, for safety. Instead, we changed their status to 'Inactive'. You can remove them later after all the data is processed.
 

@@ -20,7 +20,7 @@ Parameter|Description
 `$value`|Value. Should be compatible with field value format. See [database](/database/).
 `$args`|Extra arguments for some object types or storages. It works similarly in [rwmb_meta](/functions/rwmb-meta/) function. Can be array or a string in format param1=value1&param2=value2. Optional.
 
-:::caution
+:::warning
 
 This function works only when the field is already registered. In Meta Box, fields are registered at hook `init` with priority 20. So, you need to run this function after that:
 

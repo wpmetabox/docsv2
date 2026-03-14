@@ -191,7 +191,7 @@ Let's say we have a country named 'Australia'. The long name is 'Australia' and 
 
 By default, MB Geolocation will populate the long name of the field. But you can use the short name by **adding `_short` at the end of field ID**. For example: `administrative_area_level_1_short`, `country_short`.
 
-:::caution
+:::warning
 
 This feature is available for **Google Maps** only.
 

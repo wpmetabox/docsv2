@@ -70,7 +70,7 @@ After syncing, you'll see the field group in the admin list like this:
 
 Then you can change the field group, add more fields or edit existing fields. You can save changes to the JSON file just by saving the field group in the WordPress admin. The JSON file will be updated automatically. Please note that deleting a field group in the admin will also delete the JSON file.
 
-:::caution Purpose
+:::warning Purpose
 
 Syncing from JSON to the database has only one purpose: to edit fields visually, and then sync back to JSON files (or export to JSON file to save somewhere else). Meta Box will **NOT** load fields from the database (to avoid making unnessary queries), and use JSON files only.
 

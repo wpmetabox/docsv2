@@ -94,7 +94,7 @@ Custom CSS class | If you want to style your meta box, then enter a custom CSS c
 
 To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/) or [user](/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
 
-:::caution
+:::warning
 
 These settings apply to the field that is displayed **on the other side** of the relationship - where you can select items for this field.
 
@@ -201,7 +201,7 @@ Name|Description
 -- `query_args`|Custom query arguments to get objects of `object_type`. These arguments will be passed to `WP_Query()`, `get_terms()` or `get_users()` depending what `object_type` is.
 -- `max_clone` | Maximum number of connections.
 
-:::caution
+:::warning
 
 The field settings apply to the field that is displayed **on the other side** of the relationship - where you can select items for this field.
 

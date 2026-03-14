@@ -28,7 +28,7 @@ This field saves the entered value into the database.
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database.
 
-:::caution
+:::warning
 
 Meta Box **removes all scripts and iframes** from the value. If you want to enter scripts (like Google Analytics) or embed videos, then you need to [disable sanitization](/sanitization/#bypass-the-sanitization).
 

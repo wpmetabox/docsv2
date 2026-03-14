@@ -24,7 +24,7 @@ Save value as timestamp | `timestamp` | Whether to save the date in the Unix tim
 Date picker options | `js_options`|Date and picker options. See [date picker options](http://api.jqueryui.com/datepicker) and [time picker options](http://trentrichardson.com/examples/timepicker/).
 Save format | `save_format`|Custom PHP format for the datetime saved in the custom fields. [See here](https://www.php.net/manual/en/function.date.php).
 
-:::caution Timezone and timestampt
+:::warning Timezone and timestampt
 
 This field gets the current time of your local computer and converts it to the timestamp value. So the Unix timestamp saved is the "timezone (UTC) + offset".
 

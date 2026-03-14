@@ -144,7 +144,7 @@ add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
 } );
 ```
 
-:::caution Column names and field IDs
+:::warning Column names and field IDs
 
 Again, column names have to match your custom fields' IDs, one column per custom field. If you create a column to store a group, then the column names must be the top-level group ID. No need to create columns for sub-fields.
 

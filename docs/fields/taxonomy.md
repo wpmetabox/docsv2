@@ -10,7 +10,7 @@ The taxonomy field allows you to select one or multiple taxonomy terms. This fie
 
 If the taxonomy is hierarchical, you can display the field as a select or checkbox tree, e.g. showing children terms when a parent term is selected.
 
-:::caution Taxonomy vs. taxonomy advanced
+:::warning Taxonomy vs. taxonomy advanced
 
 - Taxonomy field **doesn't store data**. It just sets post terms. Think about it like a replacement of the *Category* or *Tag* meta box of WordPress.
 - Taxonomy advanced **stores terms' IDs** and doesn't set post terms.
@@ -153,7 +153,7 @@ This parameter sets the minimum number of characters required to start a search.
 
 ## Data
 
-:::caution No value saved!
+:::warning No value saved!
 
 This field **does not save any value** in the database. Instead of that, it **sets the taxonomy terms for the current being edited post**. In short, it behaves exactly like the "Category" and "Tags" meta boxes.
 

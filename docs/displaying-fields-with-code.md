@@ -47,7 +47,7 @@ Now open your template file for the single event content. Usually, it's `templat
 </article>
 ```
 
-:::caution Block themes
+:::warning Block themes
 
 For block themes, everything is blocks and there's no PHP template files. In that case, please use the [MB Views](/extensions/mb-views/) extension.
 

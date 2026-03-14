@@ -121,7 +121,7 @@ To get the name of the dish saved in custom fields, click the **Dynamic Tags** b
 ![Use Dynamic Tags to get the data](https://imgur.elightup.com/5hFozpI.png)
 
 
-:::caution
+:::warning
 
 Since our custom fields are created for a post type, find the **Meta Box Field** in the **Post** section. In case the custom fields are for a settings page or something else, look for the **Meta Box Field** in the corresponding section in the list.
 

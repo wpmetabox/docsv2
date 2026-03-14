@@ -4,7 +4,7 @@ title: MB Pods Migration
 
 MB Pods Migration extension helps you to migrate field groups, custom field data, and relationships from Pods to Meta Box.
 
-:::caution
+:::warning
 
 This extension only migrates the data created by Pods within a site. It doesn't migrate your website from local to the development environment (you'll need another plugin for this) nor the way you use the data like getting the data and displaying it on the front end. After the migration, just go to the database and check how it changes.
 
@@ -32,7 +32,7 @@ MB Pods Migration tries to migrate all the following data from Pods to Meta Box.
 
 The plugin will migrate all custom post types and custom taxonomies created in Pods to Meta Box. This job requires the [MB Custom Post Type](/extensions/mb-custom-post-type/) extension. All the settings like labels and icons are migrated as well.
 
-:::caution
+:::warning
 
 **We must remove Pods post types and taxonomies** after migration, as we cannot change their status to 'Inactive'. Therefore, please ensure that all data is processed before proceeding with the deletion.
 
@@ -42,7 +42,7 @@ The plugin will migrate all custom post types and custom taxonomies created in P
 
 Pods field groups are migrated to Meta Box's field groups, which requires [MB Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
 
-:::caution
+:::warning
 
 **We must remove Pods field groups** after migration, as we cannot change their status to 'Inactive'. Therefore, please ensure that all data is processed before proceeding with the deletion.
 
@@ -73,7 +73,7 @@ Pods stores the field values in the database with the meta key = field ID, which
 
 The plugin also migrates all Settings Page from Pods to Meta Box. You'll need the [MB Builder](/extensions/meta-box-builder/) and [MB Settings Page](/extensions/mb-settings-page/) to do this. We'll migrate the settings and data of all Pods settings page to Meta Box.
 
-:::caution
+:::warning
 
 **We must remove Pods settings page** after migration, as we cannot change their status to 'Inactive'. Therefore, please ensure that all data is processed before proceeding with the deletion.
 
@@ -85,7 +85,7 @@ The plugin also migrates all relationships from Pods to Meta Box. You'll need th
 
 Of course, the data of relationships (the connections between items) are also migrated.
 
-:::caution
+:::warning
 
 **We must remove Pods relationships** after migration, as we cannot change their status to 'Inactive'. Therefore, please ensure that all data is processed before proceeding with the deletion.
 

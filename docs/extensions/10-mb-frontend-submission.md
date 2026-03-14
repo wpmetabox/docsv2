@@ -316,7 +316,7 @@ Actions column label|`label_actions`|The label for the actions column.
 Post Action Link|`title_link`|The link action when clicking post titles: `edit` or `view` (default).
 Add new button text|`add_new`|The add new button text.
 
-:::caution
+:::warning
 
 You **must** create a page for submitting posts first, then use its ID in the `edit_page` attribute.
 

@@ -71,7 +71,7 @@ This field saves multiple values in the database. Each value is stored in a sing
 
 If the field is cloneable, then the value is stored as a serialized array in a single row in the database. Each value of that array is an array of cloned values.
 
-:::caution
+:::warning
 
 Note that this field stores the **values**, not labels.
 

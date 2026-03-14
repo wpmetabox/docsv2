@@ -169,7 +169,7 @@ $args = [
     'meta_query' => []
 ];
 ```
-:::caution
+:::warning
 
 There is a part about building parameters for the `$args` query based on the values of the min price and max price. We use a comparison function `<=`, `>=` to ensure that the price of products is within the selected pricing range.
 

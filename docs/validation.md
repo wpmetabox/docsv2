@@ -10,7 +10,7 @@ There are 2 ways of doing validation: basic validation with input attributes and
 
 Meta Box supports [custom attributes](/custom-attributes/) for all input fields. You can use these attributes to validate the values of fields.
 
-:::caution
+:::warning
 
 This type of validation uses browser validation, thus the UI and the error message depend on the browser (like language).
 
@@ -133,7 +133,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-:::caution Fields with multiple inputs
+:::warning Fields with multiple inputs
 
 The jQuery validation library actually uses the **input name**, not the input ID. In most cases, they are the same. But for some cases where a field has multiple inputs like a checkbox list, then the checkboxes don't have IDs.
 

@@ -86,7 +86,7 @@ Name|Description
 `after_editor`|After the post content editor, but before `normal` section
 `before_permalink`|Before permalink
 
-:::caution Gutenberg
+:::warning Gutenberg
 
 Gutenberg editor only supports `normal` and `side` contexts. Other extra contexts are not supported.
 
@@ -159,7 +159,7 @@ Text list | `text_list` | Group of text inputs. Similar to Fieldset text, but ha
 
   <TabItem value="html5" label="HTML5">
 
-:::caution
+:::warning
 
 These are field types that use the built-in browser UI without extra libraries. The UI might be different across operating systems and browsers. Please use with care.
 

@@ -211,7 +211,7 @@ Besides, you can still filter strings by **MB Settings Page** in the **Translati
 
 ![Filter by MB Settings Page to translate settings page field values](https://imgur.elightup.com/fLdiIZw.png)
 
-:::caution
+:::warning
 
 When you delete a value from one language on the settings page, the values from other languages are auto-deleted. It happens with not only the Meta Box settings page but also WordPress settings (For instance, site title or site description in **General** settings)
 

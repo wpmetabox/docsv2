@@ -241,7 +241,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-:::caution
+:::warning
 
 When using tabs, you must define the `tab` parameter for all meta boxes to make them appear in corresponding tabs. Missing the `tab` parameter makes the meta boxes hidden.
 
@@ -314,7 +314,7 @@ This is a quick video that demonstrates how to use MB Settings Page to create cu
 
 Sometimes you don't want the top-level panel that creates too much hierarchy (panel → sections → fields). You just want top-level sections (sections → fields). That will help users to navigate to your settings in the Customizer faster and easier.
 
-:::caution
+:::warning
 
 This can be done with code only.
 
@@ -357,7 +357,7 @@ At the moment, all Meta Box fields are supported in the Customizer, except [file
 
 The good news is all the extensions such as [MB Conditional Logic](/extensions/meta-box-conditional-logic/), [MB Tabs](/extensions/meta-box-tabs/) are supported. That will help you create much better experiences for your users.
 
-:::caution postMessage transport
+:::warning postMessage transport
 
 The `postMessage` transport for the Customizer is not supported yet, which means changes are updated by refreshing the whole page instead of updating only the needed part of the page.
 
@@ -430,7 +430,7 @@ When you add it to your settings page, it will show all of your settings in JSON
 
 The backup field inherits from [`textarea`](/fields/textarea/) so you can customize it the way you want: change the field name, description, input size, etc. This field doesn't require an `ID`. And of course, you should have only one backup field on your settings page.
 
-:::caution
+:::warning
 
 The backup field only works if it is a top field. It does not work if it is a subfield in a group.
 
@@ -490,7 +490,7 @@ Notes:
 
 Other parameters are the same as for posts. Please see [this documentation](/displaying-fields-with-code/) for details.
 
-:::caution
+:::warning
 
 It requires the extension version 1.2+ to use the helper function. If you're using an older version, please [update now](/updates/).
 

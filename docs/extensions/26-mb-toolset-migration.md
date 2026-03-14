@@ -7,7 +7,7 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 MB Toolset Migration extension helps you to migrate field groups, custom field data, and relationships from Toolset to Meta Box.
 
-:::caution
+:::warning
 
 This extension only migrates the data created by Toolset within a site. It doesn't migrate your website from local to the development environment (you'll need another plugin for this) nor the way you use the data like getting the data and displaying it on the front end. After the migration, just go to the database and check how it changes.
 
@@ -35,7 +35,7 @@ MB Toolset Migration tries to migrate all the following data from Toolset to Met
 
 The plugin will migrate all custom post types and custom taxonomies created in Toolset to Meta Box. This job requires the [MB Custom Post Type](/extensions/mb-custom-post-type/) extension. All the settings like labels and icons are migrated as well.
 
-:::caution
+:::warning
 
 **We do not remove Toolset post types and taxonomies** after migration, for safety. Instead, we changed their status to 'Inactive'. You can remove them later after all the data is processed.
 
@@ -45,7 +45,7 @@ The plugin will migrate all custom post types and custom taxonomies created in T
 
 Toolset field groups are migrated to Meta Box's field groups, which requires [MB Builder](/extensions/meta-box-builder/). Most of the field group settings are the same as in Meta Box.
 
-:::caution
+:::warning
 
 **We do not remove Toolset field groups** after migration, for safety. Instead, we changed their status to 'Inactive'. You can remove them later after all the data is processed.
 
@@ -82,7 +82,7 @@ The plugin also migrates all relationships from Toolset to Meta Box. You'll need
 
 Of course, the data of relationships (the connections between items) are also migrated.
 
-:::caution Database tables
+:::warning Database tables
 
 For safety, we don't remove Toolset relationships tables (3) after the migration.
 

@@ -29,7 +29,7 @@ Language | `language` | Set the map language. See the [full list of language cod
 Region | `region` | A [country code top-level domain](https://en.wikipedia.org/wiki/Country_code_top-level_domain). This helps autocomplete suggest results based on a specific region. [Learn more](https://developers.google.com/maps/documentation/geocoding/intro#RegionCodes).
 Marker draggable | `marker_draggable` | Determines whether the marker can be dragged. Boolean, default is `true`. When set to `false`, the marker cannot be moved on the map — the location can only be set by searching for an address (Google will place the marker automatically).
 
-:::caution Address field required
+:::warning Address field required
 You must create a [text field](/fields/text/) for the address input, and pass its ID to the map's **Address field** setting.
 :::
 
@@ -38,7 +38,7 @@ The `address_field` can also be a list of multiple field IDs, separated by comma
 - You can use both text and select fields.
 - Autocomplete will not work. Instead, the plugin combines the values from those fields to search for the location and updates the map whenever any field changes.
 
-:::caution
+:::warning
 Don't forget to enable the **Geocoding API** in your Google Cloud project - it's required for the autocomplete feature!
 :::
 
