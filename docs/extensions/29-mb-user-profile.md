@@ -322,7 +322,7 @@ This filter is used to modify the submitted user data before it's passed to the 
 $data = apply_filters( 'rwmb_profile_insert_user_data', $data, $config );
 ```
 
-Please note that this filter works only for default user fields such as user email or password. For changing custom field data, please use [rwmb_{$field_id}_value](/filters/rwmb-value/) filter.
+Please note that this filter works only for default user fields such as user email or password. For changing custom field data, please use [`rwmb_{$field_id}_value`](/filters/rwmb-value/) filter.
 
 ### `rwmb_profile_update_user_data`
 
@@ -331,7 +331,8 @@ This filter is used to modify the submitted user data before it's passed to the 
 ```php
 $data = apply_filters( 'rwmb_profile_update_user_data', $data, $config );
 ```
-Please note that this filter works only for default user fields such as user email or password. For changing custom field data, please use [rwmb_{$field_id}_value](/filters/rwmb-value/) filter.
+
+Please note that this filter works only for default user fields such as user email or password. For changing custom field data, please use [`rwmb_{$field_id}_value`](/filters/rwmb-value/) filter.
 
 ### Default form fields
 
@@ -347,7 +348,7 @@ $fields = apply_filters( 'rwmb_profile_info_fields', $fields );
 
 This action fires before the user is created or updated.
 
-```
+```php
 do_action( 'rwmb_profile_before_save_user', $object );
 ```
 
@@ -360,7 +361,7 @@ The action accepts 1 parameter: the instance of the `MB_User_Profile_User` class
 
 This action fires after the user is created or updated. At that time, all the custom fields in the meta box are already saved into the user meta.
 
-```
+```php
 do_action( 'rwmb_profile_after_save_user', $object );
 ```
 

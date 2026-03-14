@@ -50,7 +50,7 @@ I’ll do them one by one, as follows:
 
 ### Creating a page for each series
 
-In your theme folder, create `taxonomy-{taxonomy}.php`. In this case, {taxonomy} is your custom taxonomy slug. Accordingly, my file is called `taxonomy-series.php`.
+In your theme folder, create `taxonomy-{taxonomy}.php`. In this case, `{taxonomy}` is your custom taxonomy slug. Accordingly, my file is called `taxonomy-series.php`.
 
 ![Create a page for each series](https://imgur.elightup.com/JJdnqoF.png)
 

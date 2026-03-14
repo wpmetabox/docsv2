@@ -4,6 +4,7 @@ title: Image
 
 import Image from '../_parts/_image.md';
 import Screenshots from '@site/src/components/Screenshots';
+import CustomUploadFolder from '../_parts/_custom-upload-folder.md';
 
 The image field creates a simple image upload with default UI like `<input type="file">`. Unlike other media fields, this field doesn't use Media Library UI to upload images.
 
