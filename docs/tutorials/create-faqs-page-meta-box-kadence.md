@@ -41,7 +41,7 @@ In addition, each question and answer may be too long to display on the post edi
 
 ![set FAQs group as Collapsible to collapse the information in the group field](https://imgur.elightup.com/IdHAhNH.png)
 
-You can also set the title for the group based on the content of the **Question** field for easier identification. The **{#}** variable is for numbering the questions, and the **{question}** variable is the ID of the question field to display the content of that question.
+You can also set the title for the group based on the content of the **Question** field for easier identification. The `{#}` variable is for numbering the questions, and the `{question}` variable is the ID of the question field to display the content of that question.
 
 ![Add titles for the group](https://imgur.elightup.com/fJTMAx0.png)
 

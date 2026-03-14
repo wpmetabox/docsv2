@@ -65,7 +65,7 @@ For the button, we’ll group the label and URL together, then we’ll have a bu
 
 You can set the group as collapsible to see buttons in a clear structure. And, you can name the title for the group as well. Here, I use `{#}` to number the button for management purposes only.
 
-![Set the title for the group using {#} to number the button](https://imgur.elightup.com/PGvd6r7.png)
+![Set the title for the group using `{#}` to number the button](https://imgur.elightup.com/PGvd6r7.png)
 
 If you want to add more than one button to the page, you should set this group as cloneable.
 

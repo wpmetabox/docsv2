@@ -56,7 +56,7 @@ In addition, in case you have many questions and answers, you can set this group
 
 ![Tick Collapsible option](https://imgur.elightup.com/JqD5lpX.png)
 
-Next, you can name the group’s title using some variables as follows. The **{#}** variable is for numbering the questions and the **{question}** variable is the ID of the question field to display the content of that question.
+Next, you can name the group’s title using some variables as follows. The `{#}` variable is for numbering the questions and the `{question}` variable is the ID of the question field to display the content of that question.
 
 ![Name the group’s title](https://imgur.elightup.com/q6FxvGc.png)
 

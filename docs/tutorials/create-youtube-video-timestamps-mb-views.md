@@ -126,7 +126,7 @@ Then, add these lines of code to pass the value from custom fields to the array.
 
 ` {{clone.timestamp}} ` and ` {{clone.description}} ` are the ones to get data from custom fields. So, move them to the 6th and 7th lines as follows.
 
-![Move {{clone.timestamp}} and {{clone.description}} to the 6th and 7th lines](https://imgur.elightup.com/XdazTng.png)
+![Move clone.timestamp and clone.description to the 6th and 7th lines](https://imgur.elightup.com/XdazTng.png)
 
 Also remove the `{{ }}` symbols.
 
@@ -151,7 +151,7 @@ I also have another array to store the video **ID** along with the timestamps an
 
 Also move ` {{ post.video_id }} ` to assign it to the array.
 
-![Move {{ post.video_id }} to assign it to the array](https://imgur.elightup.com/D0u0xj0.png)
+![Move post.video_id to assign it to the array](https://imgur.elightup.com/D0u0xj0.png)
 
 Fill in the name of the first array to the ` Timestamps ` key, then the timestamps and description from it will be get and pass to the new array as well.
 
@@ -261,9 +261,9 @@ function hmsToSecondsOnly(str) {
 }
 ```
 
-In the template, we had an attribute ` onclick="setCurrentTime({{loop.index0}})" ` to trigger which timestamp the user clicked on. So now, we have some lines to admit that moment and force the player to play from the clicked timestamp.
+In the template, we had an attribute `onclick="setCurrentTime({{loop.index0}})"` to trigger which timestamp the user clicked on. So now, we have some lines to admit that moment and force the player to play from the clicked timestamp.
 
-![The attribute onclick="setCurrentTime({{loop.index0}})" to trigger which timestamp the user clicked on](https://imgur.elightup.com/ZP32sFd.png)
+![Trigger which timestamp the user clicked on](https://imgur.elightup.com/ZP32sFd.png)
 
 ```
 function setCurrentTime(slideNum) {
@@ -291,9 +291,9 @@ As well as the return values will be converted to seconds format. And now, the a
 
 ![The return values will be converted to seconds format](https://imgur.elightup.com/67zlbu7.png)
 
-From those values in the array, ` [slideNum] ` is from the attribute ` onclick="setCurrentTime({{loop.index0}}) `, and will check it matches to which value in the array. Then, it will find out exactly the position on the timeline of the player that the user wants to jump to.
+From those values in the array, `[slideNum]` is from the attribute `onclick="setCurrentTime({{loop.index0}})`, and will check it matches to which value in the array. Then, it will find out exactly the position on the timeline of the player that the user wants to jump to.
 
-![[slideNum] is from the attribute onclick="setCurrentTime({{loop.index0}})](https://imgur.elightup.com/skWhrxr.png)
+![slideNum is from the attribute current time](https://imgur.elightup.com/skWhrxr.png)
 
 ` my_player.seekTo(Timeobject[slideNum]); ` will help to jump to that position.
 

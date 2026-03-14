@@ -207,7 +207,7 @@ After that, go to the settings of this template > **Page Settings** > **Custom C
 </script>
 ```
 
-In there,_** jQuery(".color-contain-group .color-group .color-name a").click(function (e) {**_ is to trigger when someone clicks on a product color. Then admit the name of the selected color by setting it active. Compare it with the value of the added attribute from other elements. If they are matched, the information from those elements will be displayed.
+In there, `jQuery(".color-contain-group .color-group .color-name a").click()` is to trigger when someone clicks on a product color. Then admit the name of the selected color by setting it active. Compare it with the value of the added attribute from other elements. If they are matched, the information from those elements will be displayed.
 
 Now, you can see the active status changing when choosing any color.
 

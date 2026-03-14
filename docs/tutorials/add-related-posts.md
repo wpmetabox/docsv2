@@ -109,7 +109,7 @@ After adding all the wanted post information, you should re-arrange the code to 
 
 You also can change the code to output the data as you want. I changed this `{{ item.content}}` variable into `{{ mb.wp_trim_words(item.content,20,'...') }}` variable to limit the number of displaying characters.
 
-![Change {{ item.content}} variable into {{ mb.wp_trim_words(item.content,20,'...') }} variable to limit the number of displaying characters.](https://imgur.elightup.com/iXuP9zR.png)
+![Change `{{ item.content}}` variable into `{{ mb.wp_trim_words(item.content,20,'...') }}` variable to limit the number of displaying characters.](https://imgur.elightup.com/iXuP9zR.png)
 
 #### 2.1.2. Setting the Action to Display Posts
 

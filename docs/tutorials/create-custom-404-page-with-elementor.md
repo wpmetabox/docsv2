@@ -72,7 +72,7 @@ I also want to add two buttons to the page, so make this group be cloneable.
 
 You also can set the title for the group. Here, I use `{#}` to number the button for the management purpose only.
 
-![Set the title for the group using {#} to number the button](https://imgur.elightup.com/5JoKeqv.png)
+![Set the title for the group using `{#}` to number the button](https://imgur.elightup.com/5JoKeqv.png)
 
 Inside the group, add two subfields: one for the label, and another for the URL, for the direction.
 

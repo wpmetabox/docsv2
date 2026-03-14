@@ -30,7 +30,7 @@ Name | Key | Description
 Post types | `post_type` | Post types to query. Can be a string (for a single post type) or array (for multiple post types). Required.
 Query args | `query_args` | Query arguments for getting post objects. Uses the same arguments as [WP_Query](https://developer.wordpress.org/reference/classes/wp_query/#parameters). Optional.
 Set as parent | `parent` | Whether or not to set the selected post as the parent for the current being edited post? `true` or `false` (default).
-Placeholder | `placeholder` | The placeholder for the select box. Default is "Select a {post label}". Applied only when the field type is a select field.
+Placeholder | `placeholder` | The placeholder for the select box. Default is "Select a `{post label}`". Applied only when the field type is a select field.
 Field type | `field_type` | How the posts are displayed? See below.
 
 This field inherits the look and field (and settings) from other fields, depending on the field type, which accepts the following value:

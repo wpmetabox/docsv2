@@ -45,53 +45,14 @@ Let’s create custom fields in the next step.
 
 Go to **Meta Box** > **Custom Fields** to create fields. This is the structure of the fields that I created:
 
-<table>
-<thead>
-<tr>
-<th> Name </th>
-<th> Field Type </th>
-<th> Settings </th>
-</tr>
-<tr>
-<th>Prep Time / Cooking Time / Resting Time / Total Time</th>
-<th>Text</th>
-<th>-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Instruction</td>
-<td>
-Group</td>
-<td>
-
-* Cloneable
-* Collapsible
-
-</td>
-</tr>
-<tr>
-<td> Step Number</td>
-<td>Text</td>
-<td>-</td>
-</tr>
-<tr>
-<td> Description</td>
-<td>Text</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Video</td>
-<td>oEmbed</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Ingredients / Notes / Nutrition / Equipment</td>
-<td>WYSIWYG</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
+Name |Field Type | Settings
+--- | --- | ---
+Prep Time / Cooking Time / Resting Time / Total Time | Text | -
+Instructions | Group | Cloneable, Collapsible
+| - Step Number | Text | -
+| - Description | Text | -
+Video | oEmbed | -
+Ingredients / Notes / Nutrition / Equipment | WYSIWYG | -
 
 Since there will be more than one step for the process of cooking, create a group for the instruction with two subfields as below. And, I also set this group to be cloneable to add more steps.
 

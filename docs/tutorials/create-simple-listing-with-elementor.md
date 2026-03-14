@@ -221,7 +221,7 @@ These lines of code are to regulate the shape:
 }
 ```
 
-`background:#26e126` and `background:#eee` are the different colors used for the `.restaurant-status.open{ class` and the .restaurant-status.close{ class, respectively.
+`background:#26e126` and `background:#eee` are the different colors used for the `.restaurant-status.open` class and the `.restaurant-status.close` class, respectively.
 
 As a result, there is a new dot in the image of each product. Some are green, and some are gray.
 

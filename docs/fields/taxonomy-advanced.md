@@ -41,7 +41,7 @@ Name | Key | Description
 --- | --- | ---
 Taxonomies | `taxonomy` | Taxonomy slug(s). Can be a string (for single taxonomy) or an array (for multiple taxonomies). Required.
 Query args | `query_args` | Query arguments for getting taxonomy terms. Uses same arguments as [get_terms()](https://developer.wordpress.org/reference/functions/get_terms/). Optional.
-Placeholder | `placeholder` | The placeholder for the select box. The default is "Select a {taxonomy label}". Applied only when the field type is a select field.
+Placeholder | `placeholder` | The placeholder for the select box. The default is "Select a `{taxonomy label}`". Applied only when the field type is a select field.
 Add new | `add_new` | Allow users to create a new term when submitting the post (`true` or `false`).
 Remove default meta box | `remove_default` | Remove the default WordPress taxonomy meta box. Only works with the classic editor.
 Field type | `field_type` | How the terms are displayed? See below.

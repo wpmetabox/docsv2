@@ -125,7 +125,7 @@ Moreover, if you update the custom field, the list will automatically refresh to
 
 Still in the created template, remove the `{{ loop.index }}` variable first.
 
-![Remove the {{ loop.index }} variable first](https://imgur.elightup.com/PfMnRDW.png)
+![Remove the `{{ loop.index }}` variable first](https://imgur.elightup.com/PfMnRDW.png)
 
 And, add a few lines of code.
 
