@@ -44,3 +44,9 @@ add_action( 'rwmb_event-details_before_save_post', function() {
     }
 } );
 ```
+
+:::info
+
+When modifying the global `$_POST` data, note that for a **cloneable field** with `'start_clone' => true`, the original value is an array where index `0` is empty and actual values start from index `1`. When you call `rwmb_request()->set_post_data()`, this empty value at index `0` is removed and will not be saved to the database.
+
+:::
