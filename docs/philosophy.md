@@ -14,9 +14,7 @@ Meta Box is created as a library to help WordPress users work with custom post t
 
 Because Meta Box is a library, the **free version** doesn't have admin pages for configuration or settings. Instead of that, it provides an API that you can use to speed up the process of creating meta boxes and custom fields. Developers need [use code](/creating-fields-with-code/) to create custom fields.
 
-For normal users and beginners, we recommend using the [Online Generator](https://metabox.io/online-generator/) to build custom fields and generate the needed code to include into your themes or plugins.
-
-**Important**: only the free version doesn't have UI, [premium users](https://metabox.io/pricing/) have powerful and friendly UI to create [custom post types](/custom-post-types/), [custom fields](/custom-fields/) and more.
+For normal users and beginners, we recommend using the [Meta Box Lite](https://metabox.io/lite/) which includes UI to build custom fields inside WordPress. Or if you're a premium user, you can use the [Meta Box AIO](https://metabox.io/aio/) which includes all the extensions and UI to build custom fields inside WordPress.
 :::
 
 ## Modular

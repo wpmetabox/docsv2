@@ -93,19 +93,16 @@ require 'vendor/autoload.php';
 
 Now you can start using Meta Box extensions in your products!
 
-:::tip Boilerplate
-
-To make it easier for developers, I've created a composer.json file, which contains a full list of extensions, free and premium. You can [grab it here](https://github.com/wpmetabox/library/blob/master/composer/composer.json) and remove the extensions you don't want to use.
-
-:::
-
-:::warning Can't update with Composer
-
+To make it easier for you, we've created a [`composer.json`](https://github.com/wpmetabox/library/blob/master/composer/composer.json) file, which contains a full list of extensions, free and premium. You can use it as a boilerplate and remove the extensions you don't want to use.
 
 Because we use `dev-master` version, Composer can't load versions to check when running `composer update`. To fix this, please run the following command:
 
 ```bash
 rm -rf vendor && composer clear-cache && composer install
 ```
+
+:::danger Not recommended
+
+This method disables the auto update mechanism and sometimes causes conflicts with the latest versions of WordPress, or with other plugins that use other versions of Meta Box and extensions. And you have to update extensions manually.
 
 :::
