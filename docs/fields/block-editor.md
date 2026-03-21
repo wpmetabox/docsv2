@@ -20,7 +20,9 @@ Besides the [common settings](/field-settings/), this field has a specific setti
 
 Name | Key | Description
 --- | --- | ---
-Allowed Blocks | `allowed_blocks` | List of allowed block types. Leave empty to allow all blocks.
+Allowed blocks | `allowed_blocks` | List of allowed block types. Leave empty to allow all blocks.
+Height | `height` | Height of the editor. Can be any CSS value. Default is `300px`.
+Toolbar position | `toolbar_position` | Position of the toolbar. Can be `top` (default, displayed fixed at the top) or `contextual` (displayed above the block).
 
 This is a sample field settings array when creating this field with code:
 
