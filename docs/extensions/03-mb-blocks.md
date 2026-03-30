@@ -569,6 +569,12 @@ In that case, use `enqueue_assets` to enqueue your assets. This parameter accept
 }
 ```
 
+:::info
+
+Because `enqueue_assets` callback is called at `enqueue_block_assets`, it will fire on the front end even when the block is not used. It's better to use `enqueue_style` and `enqueue_script` to load assets only when the block is used.
+
+:::
+
 #### `preview`
 
 This attribute allows you to set preview data for the block, which will show when you click on the plus icon (+) on the toolbar:
