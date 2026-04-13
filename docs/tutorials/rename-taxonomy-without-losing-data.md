@@ -73,7 +73,7 @@ So instead of reassigning everything manually, we’ll reconnect the data using 
 
 ![theme file editor](img/rename-taxonomy-without-losing-data/add-code-to-theme-file.png)
 
-```
+```php
 function rename_taxonomy_location_to_address() { 
 	global $wpdb;
 	$wpdb->query( "UPDATE $wpdb->term_taxonomy SET taxonomy = 'address' WHERE taxonomy = 'location'" );
@@ -91,12 +91,12 @@ The `global $wpdb` variable allows us to access the WordPress database.
 
 Most importantly, the following line finds all terms that belong to the location taxonomy and converts them to addresses.
 
-```
+```php
 $wpdb->query( "UPDATE $wpdb->term_taxonomy SET taxonomy = 'address' WHERE taxonomy = 'location'" );
 ```
 Finally, we run the function.
 
-```
+```php
 rename_taxonomy_location_to_address();
 ```
 That’s all for the code. Note that this code should run only once. After confirming that everything works correctly, remove the code immediately.
