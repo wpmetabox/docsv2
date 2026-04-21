@@ -159,7 +159,7 @@ That’s all for the code. You can find the full code on GitHub. After confirmin
 
 Refresh the post editor. You’ll see that the speaker names are back, this time inside the new Group structure.
 
-![Data return](img/https://i0.wp.com/images.elightup.com/meta-box/blog/migrate-cloneable-data-to-group/data-return.png)
+![Data return](img/migrate-cloneable-data-to-group/data-return.png)
 
 From here, you can safely add avatars or any additional subfields without losing your existing data.
 
