@@ -55,6 +55,8 @@ Learn about field types, what they are and when you should use them.
 
 [![key value](/thumbs/key-value.png) <span className="thumb_text">Key value</span>](/fields/key-value/)
 
+[![key value](/thumbs/link.png) <span className="thumb_text">Link</span>](/fields/link/)
+
 [![map](/thumbs/map.png) <span className="thumb_text">Google Maps</span>](/fields/map/)
 
 [![oembed](/thumbs/oembed.png) <span className="thumb_text">oEmbed</span>](/fields/oembed/)
