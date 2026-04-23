@@ -3,7 +3,7 @@ title: Link
 ---
 import Screenshots from '@site/src/components/Screenshots';
 
-The link field creates a group of inputs for inserting or editing a link, including a URL, optional link text, an option to open the link in a new tab, or selecting existing content.
+The link field allows you to insert or edit a link, which includes a URL, optional title text, an option to open the link in a new tab. You can also select an existing content (post, page, etc.).
 
 ## Screenshots
 
@@ -21,17 +21,19 @@ This is a sample field settings array when creating this field with code:
 [
     'name' => 'Social Links',
     'id'   => 'social_links',
-    'type' => 'link', // Required.
+    // highlight-next-line
+    'type' => 'link',
 ],
 ```
 
 ## Data
 
-This field saves the value as an associative array into the database with the following keys:
+This field saves the value as a serialized array in the database with the following keys:
 
 * `url`: The URL of the link.
-* `title`: The link text.
-* `target`: The link target (e.g. `_blank`).
+* `title`: The link title text.
+* `target`: The link target (empty or `_blank`).
+* `post_id`: The selected post ID (optional). This is useful when you want to get more details of a selected post.
 
 Example:
 
@@ -47,7 +49,7 @@ If the field is cloneable, then the value is stored as a serialized array in a s
 
 ## Template usage
 
-**Displaying the value:**
+**Displaying the link in an `<a>` tag:**
 
 ```php
 <p>Entered: <?php rwmb_the_value( 'my_field_id' ) ?></p>
