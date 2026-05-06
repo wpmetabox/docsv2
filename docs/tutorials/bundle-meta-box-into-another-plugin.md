@@ -8,7 +8,7 @@ I will create a new plugin then bundle Meta Box into it for example.
 
 ## 1. Creating a new plugin
 
-In the **wp-content** folder > **plugin**, create a new folder named `project-demo` with a `project-demo.php` file inside. The php file will have the following content:
+In the **wp-content/plugins** folder, create a new folder named `project-demo` with a `project-demo.php` file inside. The php file will have the following content:
 
 ```php
 <?php
@@ -22,7 +22,7 @@ In the **wp-content** folder > **plugin**, create a new folder named `project-de
 ```
 In the **Admin Dashboard > Plugins**, you’ll see a new plugin named **Project Demo**. Let's activate it.
 
-## 2. Bundling Meta Box using composer
+## 2. Bundling Meta Box using Composer
 
 We must download the necessary libraries from Meta Box into the plugin you've created.
 
@@ -30,23 +30,12 @@ In the **project-demo** folder, we create a file named `composer.json` with the 
 
 ```json
 {
-    "repositories":[
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        }
-    ],
     "require": {
-        "wpackagist-plugin/meta-box": "^5"
-    },
-    "extra": {
-        "installer-paths": {
-            "vendor/meta-box/meta-box": ["wpackagist-plugin/meta-box"]
-        }
+        "wpmetabox/meta-box": "^5"
     },
     "autoload": {
         "files": [
-            "vendor/meta-box/meta-box/meta-box.php"
+            "vendor/wpmetabox/meta-box/meta-box.php"
         ]
     }
 }
@@ -55,10 +44,9 @@ In the **project-demo** folder, we create a file named `composer.json` with the 
 **Explanation**:
 
 * `require`: this is the declaration of the libraries that you need to download. In this example, I declare the Meta Box library only. You can refer to other codes to declare the libraries of the extensions here.
-* `extra`: this is declaring a path of where we want to store the libraries.
 * `autoload`: requires loading the libraries automatically when we activate the plugin.
 
-:::warning
+:::caution
 
 This code just bundles the free Meta Box plugin inside my plugin. If you want to add other Meta Box extensions to create advanced custom fields or settings pages, check out [this file](https://github.com/wpmetabox/library/blob/master/composer/composer.json).
 
@@ -68,23 +56,15 @@ When bundling other extensions, especially the premium ones, you must enter the 
 
 In the `project-demo` folder, run **composer install** (make sure you installed Composer).
 
-![Run composer install](https://imgur.elightup.com/nh2Kpop.png)
-
-Then, the `project-demo` folder will include these folders and files as follows:
-
-![The project demo folder will include folders and files](https://imgur.elightup.com/NZRgGWT.png)
-
 Finally, run the following code in the `project-demo.php` file to download the libraries that you’ve declared:
 
 ```php
 require 'vendor/autoload.php';
 ```
 
-![The code](https://imgur.elightup.com/wD5bgNO.png)
-
 ## 3. Create custom post types and custom fields
 
-From now on, you can create custom post types and custom fields using the created plugin. This is quite similar to installing Meta Box on a website. The difference is that if you don’t bundle extensions providing UI (such as [MB Builder](https://metabox.io/plugins/meta-box-builder/), [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/)) into the plugin as I did, you have to code manually. Instead of writing code in the `functions.php` file, you must do it in the `.php` file of the created plugin (project-demo.php).
+From now on, you can create custom post types and custom fields using the created plugin. This is quite similar to installing Meta Box on a website. The difference is that if you don't bundle extensions providing UI (such as [MB Builder](https://metabox.io/plugins/meta-box-builder/), [MB Custom Post Type & Custom Taxonomy](https://metabox.io/plugins/custom-post-type/)) into the plugin, you have to code manually. Instead of writing code in the `functions.php` file, you must do it in the `.php` file of the created plugin (`project-demo.php`).
 
 I’ll use the created plugin, which includes Meta Box, to create a new post type named **Project**.
 
@@ -245,10 +225,6 @@ function prefix_project_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'prefix_project_styles' );
 ```
-
-The structure of the project-demo folder is now like this:
-
-![The structure of the folder](https://imgur.elightup.com/lxzpLEe.png)
 
 Depending on how you want to display the custom fields, you add the corresponding code to the `style.css` file. For example:
 
