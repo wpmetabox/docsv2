@@ -28,6 +28,7 @@ Meta Box has official support from these plugins:
 - SearchWP (via [MB SearchWP Integration](https://metabox.io/plugins/meta-box-searchwp-integrator/))
 - GridbuilderWP (official support from GridbuilderWP)
 - Piotnet Grid Builder (official support from Piotnet Grid Builder)
+- [Queryra](https://queryra.com/) - AI search platform - via [their official integration](https://queryra.com/docs/meta-box-integration).
 
 ### SEO plugins
 
