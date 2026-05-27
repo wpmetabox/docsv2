@@ -96,7 +96,7 @@ add_action( 'init', 'your_prefix_register_blocks' );
 
 Now you need to register block fields with Meta Box. The block fields must match the fields defined in the `block.json`'s `attributes` property above.
 
-Registering block fields is similar to [registering a field group](http://localhost:3000/creating-fields-with-code/) in Meta Box. The only difference is that you must set `type` to `block`:
+Registering block fields is similar to [registering a field group](/creating-fields-with-code/) in Meta Box. The only difference is that you must set `type` to `block`:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function( $meta_boxes ) {
@@ -229,7 +229,7 @@ The `block.json` allows you to add styles and scripts for blocks as follows. In 
 
 ## Block registration without block.json
 
-If you don't want to use `block.json` to register blocks, you can do that with pure PHP. The process is similar to [registering a field group](http://localhost:3000/creating-fields-with-code/) in Meta Box. The only difference is that you need to add some settings for the block.
+If you don't want to use `block.json` to register blocks, you can do that with pure PHP. The process is similar to [registering a field group](/creating-fields-with-code/) in Meta Box. The only difference is that you need to add some settings for the block.
 
 Assuming we're creating a hero content block with 3 fields: title, image, and content. Open your theme's `functions.php` file (or your plugin's PHP file) and add the following code:
 

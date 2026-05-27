@@ -39,4 +39,4 @@ Meta Box is lightweight, fast, clean, and will always stay that way.
 
 Built for both developers and normal WordPress users, we offer a powerful set of options to build and customize WordPress sites with custom post types and custom fields. People have choices to work with Meta Box via code or UI, from the back end to the front end, with or without other plugins like page builders.
 
-Everything in Meta Box can be customized with a comprehensive list of [actions](http://localhost:3000/category/actions/) and [filters](http://localhost:3000/category/filters/). Developers can also extend Meta Box to [create new field types](http://localhost:3000/creating-new-field-types/), build [plugins and awesome stuff](https://github.com/wpmetabox/awesome-meta-box).
+Everything in Meta Box can be customized with a comprehensive list of [actions](/category/actions/) and [filters](/category/filters/). Developers can also extend Meta Box to [create new field types](/creating-new-field-types/), build [plugins and awesome stuff](https://github.com/wpmetabox/awesome-meta-box).
