@@ -2,13 +2,63 @@
 title: Abilities API
 ---
 
-The Abilities API exposes a set of abilities that compatible AI agents, such as Cursor and OpenCode, can invoke to perform actions on supported WordPress objects.
+The Abilities API from Meta Box builds on the [WordPress Abilities API](https://developer.wordpress.org/apis/abilities-api/) to let AI agents - like Claude or Cursor - perform actions on your site's content. To handle the communication, Meta Box uses the official [MCP Adapter plugin](https://github.com/WordPress/mcp-adapter), which translates WordPress abilities into the Model Context Protocol (MCP) that AI agents understand.
 
-Depending on the enabled abilities, AI agents can retrieve, create, update, or delete custom post types, taxonomies, posts, terms, field groups, custom fields, and field values.
+Depending on the enabled abilities, AI agents can get, create, update, or delete custom post types, taxonomies, posts, terms, field groups, custom fields, and field values that Meta Box supports.
 
-Before using the Abilities API, make sure your WordPress site is connected to a compatible AI agent.
+## Connecting AI agents to WordPress
 
-Abilities are configured separately for each supported object, allowing you to control which operations AI agents can perform.
+First, connect WordPress to an AI agent via the [MCP Adapter plugin](https://github.com/WordPress/mcp-adapter). It exposes WordPress as an MCP server that AI agents understand.
+
+### 1. Install MCP Adapter plugin
+
+1. Download the [latest release of MCP Adapter](https://github.com/WordPress/mcp-adapter/releases) from GitHub
+2. Go to **Plugins &rarr; Add New &rarr; Upload Plugin**, select ZIP, install & activate
+
+### 2. Generate application password
+
+MCP Adapter uses Application Passwords for authentication (not your account password).
+
+1. Go to **Users &rarr; Profile**
+2. Scroll to the **Application Passwords** section
+3. Enter name (e.g. "MCP Agent"), click **Add New Application Password**
+4. Copy generated password - shown once only
+
+:::warning
+An app password grants the same capabilities as the current user. To restrict permissions, create a dedicated WordPress user with an appropriate role (e.g. Editor, Author) first, then generate an application password under that user.
+:::
+
+### 3. Configure MCP clients
+
+Configure MCP clients (Claude Desktop, Claude Code, Cursor, etc.) to connect to your WordPress MCP servers using HTTP Transport via proxy. Use `@automattic/mcp-wordpress-remote` to bridge local stdio to remote WordPress HTTP:
+
+```json
+{
+  "mcpServers": {
+    "wordpress-http": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@automattic/mcp-wordpress-remote@latest"
+      ],
+      "env": {
+        "WP_API_URL": "http://your-site.com/wp-json/mcp/mcp-adapter-default-server",
+        "LOG_FILE": "/path/to/logs/mcp-adapter.log",
+        "WP_API_USERNAME": "your-username",
+        "WP_API_PASSWORD": "your-application-password"
+      }
+    }
+  }
+}
+```
+
+Replace:
+- The domain in `WP_API_URL` with your site domain
+- `WP_API_USERNAME` with WordPress username
+- `WP_API_PASSWORD` with Application Password from Step 2
+- `LOG_FILE` with the path where logs are written
+
+For more details, follow the instructions in the [MCP Adapter plugin's GitHub repository](https://github.com/WordPress/mcp-adapter).
 
 ## Post type abilities
 
@@ -16,15 +66,19 @@ Abilities are configured separately for each supported object, allowing you to c
 
 To create a new custom post type, simply describe the structure you want in natural language. For example:
 
+> *Create a custom post type named Event, set the menu icon to "calendar", enable the "Enable abilities" option in the Features tab, and enable all abilities available under that option.*
+
 ![Prompt to create a new custom post type](./img/abilities-api/prompt-cpt.png)
 
 Within seconds, you have the expected post type:
 
 ![The created post type](./img/abilities-api/cpt.png)
 
+You can also ask your AI agents to update the post type settings if you want.
+
 ### Abilities for posts
 
-To enable abilities for posts of a custom post type, go to the Features tab when creating or editing a post type, then turn on Enable abilities. They include:
+To enable abilities for posts of a custom post type, go to the **Features** tab when creating or editing a post type, then turn on **Enable abilities**. They include:
 
 ![Enable abilities for posts](./img/abilities-api/cpt-abilities.png)
 
@@ -32,7 +86,7 @@ You can enable or disable each ability independently. Once enabled, compatible A
 
 For example, after creating an Event Post Type, you can ask the AI agent to generate posts for it:
 
-“Find 5 latest WordPress events in the world. They’re posts of the event post type”
+> *Find 5 latest WordPress events in the world. They're posts of the event post type*
 
 Then, you have 5 posts as expected without creating them manually:
 
