@@ -71,11 +71,11 @@ To create a new custom post type, describe the structure you want in natural lan
 
 > *Create a custom post type named Event, set the menu icon to "calendar", enable the "Enable abilities" option in the Features tab, and enable all abilities available under that option.*
 
-![Prompt to create a new custom post type](./img/abilities-api/cpt-prompt.png)
+![Prompt to create a new custom post type](./img/abilities-api/cpt-prompt.webp)
 
 Within seconds, you should have the post type you asked for:
 
-![The created post type](./img/abilities-api/cpt.png)
+![The created post type](./img/abilities-api/cpt.webp)
 
 You can also ask your AI agent to update post type settings, such as enabling a hierarchical structure or changing the menu icon.
 
@@ -86,7 +86,7 @@ To enable abilities for posts of a custom post type, go to the **Features** tab 
 - Getting post type data (the definition)
 - Getting, creating, updating, and deleting posts under that post type
 
-![Enable abilities for posts](./img/abilities-api/cpt-abilities.png)
+![Enable abilities for posts](./img/abilities-api/cpt-abilities.webp)
 
 You can enable or disable each ability independently. Once enabled, compatible AI agents can invoke these abilities through the Abilities API.
 
@@ -94,11 +94,11 @@ For example, after creating an Event post type, you can ask the AI agent to gene
 
 > *Find 5 latest WordPress events in the world. They're posts of the event post type*
 
-![Ask an AI agent to create posts](./img/abilities-api/post-prompt.png)
+![Ask an AI agent to create posts](./img/abilities-api/post-prompt.webp)
 
 The agent creates the posts without manual entry:
 
-![Posts created by an AI agent](./img/abilities-api/posts.png)
+![Posts created by an AI agent](./img/abilities-api/posts.webp)
 
 You can also update posts. For example:
 
@@ -120,9 +120,9 @@ Start by creating a new custom taxonomy:
 
 > *Create a custom taxonomy named "location" and assign it to the Event custom post type.*
 
-![Prompt to create a taxonomy with an AI agent](./img/abilities-api/tax-prompt.png)
+![Prompt to create a taxonomy with an AI agent](./img/abilities-api/tax-prompt.webp)
 
-![The created taxonomy](./img/abilities-api/tax.png)
+![The created taxonomy](./img/abilities-api/tax.webp)
 
 When you need to update the taxonomy, describe the change you want:
 
@@ -145,11 +145,11 @@ Or delete specific terms:
 
 > *Delete the locations in Asia.*
 
-![Prompt to update terms with an AI agent](./img/abilities-api/update-term-prompt.png)
+![Prompt to update terms with an AI agent](./img/abilities-api/update-term-prompt.webp)
 
 The result:
 
-![Updated terms](./img/abilities-api/updated-terms.png)
+![Updated terms](./img/abilities-api/updated-terms.webp)
 
 ## Field group abilities
 
@@ -168,7 +168,7 @@ For example, to create a field group for the `event` post type, use a prompt lik
 
 > *Create a field group Event Details for the event post type. That field group includes 2 fields: Address (type: text, ID: address); Date and Time (type: Datetime, ID: datetime).*
 
-![Prompt to create a field group with an AI agent](./img/abilities-api/field-prompt.png)
+![Prompt to create a field group with an AI agent](./img/abilities-api/field-prompt.webp)
 
 Result:
 
@@ -199,11 +199,11 @@ Here is an example of automatically finding information and filling in custom fi
 
 > *Search details for the 5 latest WordPress events you provided, then fill in all the custom fields of those events.*
 
-![Prompt to fill in custom field values](./img/abilities-api/field-value-prompt.png)
+![Prompt to fill in custom field values](./img/abilities-api/field-value-prompt.webp)
 
 In the post editor, the fields are populated:
 
-![Filled-in field values](./img/abilities-api/field-value.png)
+![Filled-in field values](./img/abilities-api/field-value.webp)
 
 You can also edit field values. For example:
 
