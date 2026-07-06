@@ -33,7 +33,7 @@ An app password grants the same capabilities as the current user. To restrict pe
 
 ### 3. Configure MCP clients
 
-Configure MCP clients (Claude Desktop, Claude Code, Cursor, etc.) to connect to your WordPress MCP servers using HTTP Transport via proxy. Use `@automattic/mcp-wordpress-remote` to bridge local stdio to remote WordPress HTTP:
+Configure MCP clients (Claude Desktop, Claude Code, Cursor, etc.) to connect to your WordPress MCP server using HTTP Transport via proxy. Use `@automattic/mcp-wordpress-remote` to bridge local stdio to remote WordPress HTTP:
 
 ```json
 {
@@ -83,6 +83,9 @@ You can also ask your AI agents to update the post type settings if you want suc
 
 To enable abilities for posts of a custom post type, go to the **Features** tab when creating or editing a post type, then turn on **Enable abilities**. They include:
 
+- Getting post type data (definition)
+- Get, create, update, delete posts under that post type
+
 ![Enable abilities for posts](./img/abilities-api/cpt-abilities.png)
 
 You can enable or disable each ability independently. Once enabled, compatible AI agents can invoke these abilities through the Abilities API.
@@ -127,11 +130,14 @@ Then, when you want to update the taxonomy, just describe your request like:
 
 ### Abilities for terms
 
-Taxonomy abilities are configured in the same way as post type abilities. 
+Taxonomy abilities are configured in the same way as post type abilities, which allows you to:
+
+- Get taxonomy data (definition)
+- Get, create, update, delete terms of that taxonomy
 
 ![Enable abilities for terms](./img/abilities-api/tax-abilities.png)
 
-Then, you can retrieve, create, edit, or delete terms. For example:
+Then you can give AI agents prompts like this:
 
 > *Update locations: Remove city, only keep the countries*
 
@@ -147,14 +153,14 @@ The result is:
 
 ## Field group abilities
 
-Field group abilities allow AI agents to manage field groups and custom fields. They are built into Meta Box and are available by default. You don't need to enable them before using them with compatible AI agents.
+Field group abilities allow AI agents to register and manage field groups and fields. They are built into Meta Box and are available by default. You don't need to enable them before using them with compatible AI agents.
 
 With these abilities, AI agents can:
 
 * Create field groups
 * Update (edit) field groups
 * Delete field groups
-* Add or remove custom fields
+* Add or remove fields
 * Update field settings, such as labels, IDs, types, etc.
 * Move the fields up/down
 
@@ -176,7 +182,7 @@ Or:
 
 > *Move the date and time field to the top of the field group.*
 
-If you're not sure which Custom Fields to add, AI agents can suggest suitable ones based on your requirements.
+If you're not sure which fields to add, AI agents can suggest suitable ones based on your requirements.
 
 ## Field value abilities
 
