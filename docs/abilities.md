@@ -1,11 +1,11 @@
 ---
-title: Abilities API
+title: Abilities
 ---
 
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-The Abilities API from Meta Box builds on the [WordPress Abilities API](https://developer.wordpress.org/apis/abilities-api/) to let AI agents - such as Claude or Cursor - perform actions on your site's content. To handle the communication, Meta Box uses the official [MCP Adapter plugin](https://github.com/WordPress/mcp-adapter), which translates WordPress abilities into the Model Context Protocol (MCP) that AI agents understand.
+The abilities from Meta Box are built on the [WordPress Abilities API](https://developer.wordpress.org/apis/abilities-api/) to let AI agents - such as Claude or Cursor - perform actions on your site's content. To handle the communication, Meta Box uses the official [MCP Adapter plugin](https://github.com/WordPress/mcp-adapter), which translates WordPress abilities into the Model Context Protocol (MCP) that AI agents understand.
 
 Depending on which abilities are enabled, AI agents can get, create, update, or delete custom post types, taxonomies, posts, terms, field groups, custom fields, and field values that Meta Box supports.
 
@@ -65,6 +65,12 @@ For more details, follow the instructions in the [MCP Adapter plugin's GitHub re
 
 ## Post type abilities
 
+:::info Technical information
+
+These abilities are available in the [MB Custom Post Types & Custom Taxonomies](/extensions/mb-custom-post-type/) extension, which is bundled in [Meta Box Lite](https://metabox.io/lite/) (free) and [Meta Box AIO](https://metabox.io/aio/) (paid) plugins.
+
+:::
+
 ### Creating and managing custom post types
 
 To create a new custom post type, describe the structure you want in natural language. For example:
@@ -112,9 +118,15 @@ The posts are updated or deleted according to your request.
 
 ## Taxonomy abilities
 
+:::info Technical information
+
+These abilities are available in the [MB Custom Post Types & Custom Taxonomies](/extensions/mb-custom-post-type/) extension, which is bundled in [Meta Box Lite](https://metabox.io/lite/) (free) and [Meta Box AIO](https://metabox.io/aio/) (paid) plugins.
+
+:::
+
 ### Creating and managing custom taxonomies
 
-The Abilities API also lets you create, update, and delete custom taxonomies, as well as manage the terms within them.
+The plugin also lets you create, update, and delete custom taxonomies, as well as manage the terms within them.
 
 Start by creating a new custom taxonomy:
 
@@ -153,6 +165,12 @@ The result:
 
 ## Field group abilities
 
+:::info Technical information
+
+These abilities are available in the [MB Builder](/extensions/meta-box-builder/) extension, which is bundled in [Meta Box Lite](https://metabox.io/lite/) (free) and [Meta Box AIO](https://metabox.io/aio/) (paid) plugins.
+
+:::
+
 Field group abilities let AI agents register and manage field groups and fields. They are built into Meta Box and available by default - you do not need to enable them before using them with compatible AI agents.
 
 With these abilities, AI agents can:
@@ -186,7 +204,14 @@ If you are not sure which fields to add, AI agents can suggest suitable ones bas
 
 ## Field value abilities
 
-Similar to other objects, the Abilities API lets you:
+
+:::info Technical information
+
+These abilities are available in the **Meta Box** plugin (free), which is bundled in [Meta Box Lite](https://metabox.io/lite/) (free) and [Meta Box AIO](https://metabox.io/aio/) (paid) plugins.
+
+:::
+
+Similar to other objects, the plugin lets you:
 
 * Get field values
 * Set values for custom fields
@@ -213,11 +238,10 @@ Or remove all stored values:
 
 > *Delete all data in the custom fields.*
 
-The Meta Box Abilities API performs the requested action.
+The Meta Box performs the requested action.
 
 ## Video tutorial
 
-The video below shows examples of using the Abilities API to create and manage custom post types, taxonomies, posts, terms, fields, and field values:
+The video below shows examples of using the Meta Box abilities to create and manage custom post types, taxonomies, posts, terms, fields, and field values:
 
 <LiteYouTubeEmbed id='TcfxmxDSvd0' />
-

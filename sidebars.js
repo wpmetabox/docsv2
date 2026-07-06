@@ -78,7 +78,7 @@ const sidebars = {
 				'reorder-posts-terms',
 				'status-column',
 				'tools',
-				'abilities-api',
+				'abilities',
 			],
 		},
 		{
