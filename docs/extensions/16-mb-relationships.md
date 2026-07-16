@@ -5,15 +5,15 @@ title: MB Relationships
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-MB Relationships helps you to create relationships between posts, terms, and users in WordPress. So when you edit an item (post, term, user), you can select other items to connect to. It works with all post types, and all custom taxonomies and users, and supports many-to-many, one-to-many, many-to-one, and one-to-one relationships.
+MB Relationships helps you create relationships between posts, terms, and users in WordPress. When you edit an item (post, term, or user), you can select other items to connect to. It works with all post types, custom taxonomies, and users, and supports many-to-many, one-to-many, many-to-one, and one-to-one relationships.
 
-This is an example of a many-to-many relationship between events (a custom post type) and speakers (user).
+This is an example of a many-to-many relationship between events (a custom post type) and speakers (users).
 
 ![Events to speakers relationship](https://i0.wp.com/images.elightup.com/meta-box/docs/relationships/events-to-speakers.png)
 
 The plugin uses a custom table for storing relationships and integrates with default WordPress queries to retrieve the connected items easily. Using a custom table has several benefits:
 
-- Bi-directional by its nature
+- Bidirectional by nature
 - Easier querying items in both directions (`from` and `to`) or querying sibling items
 - Not polluting the post/term/user meta tables
 - Better performance
@@ -22,12 +22,12 @@ The custom table is automatically created when the plugin is activated.
 
 ## Creating relationships
 
-Creating a relationship is done by either of the following methods:
+You can create a relationship in either of the following ways:
 
-- **Using [MB Builder](/extensions/meta-box-builder/)**, which helps you create relationships with UI. This extension is a premium extension and is already bundled in [Meta Box Lite](https://metabox.io/lite/) or [Meta Box AIO](https://metabox.io/aio/).
+- **Using [MB Builder](/extensions/meta-box-builder/)**, which provides a UI for creating relationships. This is a premium extension already bundled in [Meta Box Lite](https://metabox.io/lite/) or [Meta Box AIO](https://metabox.io/aio/).
 - **Using code**.
 
-Before going into the detailed settings of a relationships, it's important to note that: when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). And inside that meta box, there'll be a cloneable field ([`post`](/fields/post/), [`taxonomy_advanced`](/fields/taxonomy-advanced/), or [`user`](/fields/user/) depending on the object type) for you to select connected items. So the settings of a relationships will be divided into 3 parts: settings for the relationship, for the meta box and for the field.
+Before going into the detailed settings of a relationship, note that when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). Inside that meta box, there is a field ([`post`](/fields/post/), [`taxonomy_advanced`](/fields/taxonomy-advanced/), or [`user`](/fields/user/) depending on the object type) for selecting connected items. The field is cloneable by default, or a single-select dropdown when **Has one relationship** is enabled. The settings are divided into 3 parts: settings for the relationship, the meta box, and the field.
 
 Now let's see how to create a relationship with MB Builder.
 
@@ -43,10 +43,10 @@ Here you can enter all the settings for the relationship and each side of the re
 
 Name | Description
 ---|---
-Delete data in database? | Delete data in database when the relationship is deleted.
-Reciprocal relationship | Whether the relationship is reciprocal, e.g. a relationship between items of the same type. If you choose this, make sure you set the settings for the "From" and "To" sides the same.
+Delete data in database? | Whether to delete relationship data from the database when the relationship is deleted.
+Reciprocal relationship | Whether the relationship is reciprocal, e.g. a relationship between items of the same type. If you enable this, make sure the settings for the "From" and "To" sides are the same.
 
-When editing an item, the plugin will show a meta box for selecting connected items. In the case of reciprocal relationships, because it's set between items of the same type, without selecting this setting, the plugin will show 2 meta boxes for both "from" and "to" sides. Selecting this setting will ensure there's only 1 meta box that appears.
+When editing an item, the plugin shows a meta box for selecting connected items. For reciprocal relationships between items of the same type, the plugin shows 2 meta boxes (one for each "from" and "to" side) unless you enable this setting, which limits the UI to a single meta box.
 
 #### Side settings
 
@@ -63,16 +63,16 @@ For each side, there are 3 tabs of settings:
 
 Name | Description
 ---|---
-Object type | What type of object you want to set. If you choose "Term" or "User", make sure you already activate [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) extension.
-Post type | If you select object type = "Post", then the post type settings will appear to let you select the post type.
-Taxonomy | If you select object type = "Term", then the taxonomy settings will appear to let you select the taxonomy.
-Has one relationship | When enabled, each item on this side can connect to only one item on the other side. The field becomes a single-select dropdown, and the plugin enforces the limit when saving data. Items already connected on the other side are hidden from the dropdown when this side is the target.
-Empty message | The custom message is displayed when there are no connections. Leaving this setting blank will use the default message "No connections".
+Object type | The type of object for this side. If you choose "Term" or "User", make sure [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) is activated.
+Post type | If you select object type = "Post", the post type settings appear so you can select the post type.
+Taxonomy | If you select object type = "Term", the taxonomy settings appear so you can select the taxonomy.
+Has one relationship | When enabled, each item on this side can connect to only one item on the other side. The field becomes a single-select dropdown, and the plugin enforces the limit when saving data. When enabled on the other side, items that are already connected elsewhere are hidden from the dropdown.
+Empty message | The custom message displayed when there are no connections. Leave blank to use the default message "No connections".
 Show admin filter | Add a select dropdown to filter posts by this relationship. Works only for posts.
-Show as admin column | Show the connections in the admin list table of posts/terms or users. When you select this setting, the following settings will appear.
-Column position | Select the position of the admin column. You need to set it after/before or replace an existing column by selecting the option from the dropdown and selecting/entering the ID of the target column. Note that the plugin already prepares a list of common columns in WordPress, so you can just press the down arrow key to select them. If you create a [custom admin column](/extensions/mb-admin-columns/), enter the column ID here.
-Column title | Custom admin column title. Leaving this setting blank will show the default title from the relationship meta box.
-Item link type | For each connected item, you can set how it shows in the admin column: with a link to the edit page, with a link to the view it on the frontend, or without links.
+Show as admin column | Show the connections in the admin list table for posts, terms, or users. When enabled, additional settings appear below.
+Column position | The position of the admin column. Set it before, after, or in place of an existing column by choosing an option from the dropdown and selecting or entering the target column ID. The plugin provides a list of common WordPress columns - press the down arrow key to browse them. If you use a [custom admin column](/extensions/mb-admin-columns/), enter its column ID here.
+Column title | Custom admin column title. Leave blank to use the default title from the relationship meta box.
+Item link type | How each connected item appears in the admin column: linked to the edit screen, linked to view it on the frontend, or without links.
 
   </TabItem>
   <TabItem value="meta-box" label="Meta Box">
@@ -83,9 +83,9 @@ The plugin automatically creates meta boxes to let you select connected items. T
 
 Name | Description
 ---|---
-Title | The custom meta box title. Leaving this setting blank will set the title default to "Connected To" or "Connected From".
+Title | The custom meta box title. Leave blank to default to "Connected To" or "Connected From".
 Context | Where to show the meta box.
-Priority | The priority of the meta box. Meta boxes with a high priority will show first.
+Priority | The priority of the meta box. Meta boxes with higher priority appear first.
 Style | The meta box style: default (with wrapper) and seamless (no wrapper).
 Collapse by default | Whether to collapse the meta box when the edit page loads.
 Custom CSS class | If you want to style your meta box, then enter a custom CSS class here.
@@ -93,13 +93,13 @@ Custom CSS class | If you want to style your meta box, then enter a custom CSS c
   </TabItem>
   <TabItem value="field" label="Field">
 
-To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/) or [user](/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
+To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/), or [user](/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
 
 :::warning
 
-These settings apply to the field that is displayed **on the other side** of the relationship - where you can select items for this field.
+These settings apply to the field displayed **on the other side** of the relationship - where you select items for this side.
 
-So, if you have a relationship from `post` to `user`, and you are configuring on the "From" side (which is for `post`), then the `post` field is showing only when you are editing a `user`, (e.g. the "To" side).
+So, if you have a relationship from `post` to `user` and you are configuring the "From" side (for `post`), the `post` field appears only when you are editing a `user` (the "To" side).
 
 :::
 
@@ -107,15 +107,15 @@ So, if you have a relationship from `post` to `user`, and you are configuring on
 
 Name | Description
 ---|---
-Label | The field label. Leaving it empty to hide the field label.
-Label description | A description is displayed below the field label.
-Input description | A description is displayed below the field input.
-Placeholder | The custom placeholder for the select dropdown.
-Query args | Custom query args to get posts/terms/users to select from. It's a set of key-value pairs, which represent the arguments like in the `WP_Query` (for posts), `get_terms` (for terms) and `get_users` (for users).
+Label | The field label. Leave empty to hide the label.
+Label description | A description displayed below the field label.
+Input description | A description displayed below the field input.
+Placeholder | The placeholder text for the select dropdown.
+Query args | Custom query args to get posts, terms, or users to select from. A set of key-value pairs representing arguments for `WP_Query` (posts), `get_terms` (terms), or `get_users` (users).
 Max items | The maximum number of selected items. For one-to-one or one-to-many relationships, use **Has one relationship** in the General tab instead. `Max items` only limits how many rows appear in the field UI and does not enforce uniqueness on the other side.
-Add more text | The custom text for the add more button.
-Before | A custom HTML to output before the field.
-After | A custom HTML to output after the field.
+Add more text | The custom text for the "Add more" button.
+Before | Custom HTML to output before the field.
+After | Custom HTML to output after the field.
 Custom CSS class | If you want to style the field, then enter a custom CSS class here.
 
   </TabItem>
@@ -135,12 +135,12 @@ add_action( 'mb_relationships_init', function() {
 } );
 ```
 
-This code will show 2 meta boxes for posts and pages in the edit screens:
+This code shows 2 meta boxes on the post and page edit screens:
 
-- For posts: the meta box to select connected pages.
-- For pages: the meta box to show the posts that connect from.
+- For posts: a meta box to select connected pages.
+- For pages: a meta box showing posts connected to that page.
 
-If you wan to register a relationship **from categories to posts**, then use the following code:
+If you want to register a relationship **from categories to posts**, use the following code:
 
 ```php
 add_action( 'mb_relationships_init', function () {
@@ -172,7 +172,7 @@ add_action( 'mb_relationships_init', function () {
 } );
 ```
 
-To register a **one-to-many** relationship (each product has one brand, each brand has many products), enable `has_one_relationship` on the "many" side:
+To register a **one-to-many** relationship (each product has one brand, each brand has many products), enable `has_one_relationship` on the side where each item has only one partner (the product/From side in this example):
 
 ```php
 add_action( 'mb_relationships_init', function () {
@@ -199,15 +199,15 @@ The main API function `MB_Relationships_API::register` has the following paramet
 
 Name|Description
 ---|---
-`id`|The relationship ID (or type). It's used to identify a relationship with others. Required.
+`id`|The relationship ID (or type). Used to distinguish this relationship from others. Required.
 `from`|The "from" side of the relationship. Required. See below for details.
 `to`|The "to" side of the relationship. Required. See below for details.
 `reciprocal`|Whether the relationship is reciprocal (`true` or `false`). Optional.
 
 Both sides `from` or `to` accept various parameters for the connection and meta box:
 
-- If you pass **a string** to `from` or `to`, the plugin will understand that as the **post type**. So the relationship will be created from posts to posts with specific post types.
--  If you pass **an array** to `from` or `to`, then the array accepts the following parameters:
+- If you pass **a string** to `from` or `to`, the plugin treats it as the **post type**. The relationship is created between posts of the specified post types.
+- If you pass **an array** to `from` or `to`, the array accepts the following parameters:
 
 Name|Description
 ---|---
@@ -215,20 +215,20 @@ Name|Description
 `post_type`|The post type if the `object_type` is set to `post`. Default `post`. Optional.
 `taxonomy`|The taxonomy if the `object_type` is set to `term`.
 `has_one_relationship`|Whether each item on this side can connect to only one item on the other side (`true` or `false`). Default `false`. For one-to-one, set `true` on both `from` and `to`.
-`empty_message`|The message displayed when there's no connections.
+`empty_message`|The message displayed when there are no connections.
 `meta_box`|Meta box settings, has the [same settings as a normal meta box](/creating-fields-with-code/#field-group-settings). Below are common settings you might want to change:
 -- `title`|The meta box title. Default is "Connect To" for "from" side and "Connected From" for "to" side.
 `field`|Field settings, has the same settings as a [post](/fields/post/), [user](/fields/user/) or [taxonomy](/fields/taxonomy/) field according to the object type. Below are common settings you might want to change:
 -- `name` | Field title.
 -- `placeholder` | Placeholder text.
--- `query_args`|Custom query arguments to get objects of `object_type`. These arguments will be passed to `WP_Query()`, `get_terms()` or `get_users()` depending what `object_type` is.
+-- `query_args`|Custom query arguments to get objects of `object_type`. Passed to `WP_Query()`, `get_terms()`, or `get_users()` depending on `object_type`.
 -- `max_clone` | Maximum number of connections. Does not enforce uniqueness on the other side. Use `has_one_relationship` for one-to-one or one-to-many relationships.
 
 :::warning
 
-The field settings apply to the field that is displayed **on the other side** of the relationship - where you can select items for this field.
+The field settings apply to the field displayed **on the other side** of the relationship - where you select items for this side.
 
-So, if you have a relationship from `post` to `user`, and you are configuring on the "From" side (which is for `post`), then the `post` field is showing only when you are editing a `user`, (e.g. the "To" side).
+So, if you have a relationship from `post` to `user` and you are configuring the "From" side (for `post`), the `post` field appears only when you are editing a `user` (the "To" side).
 
 :::
 
@@ -255,9 +255,9 @@ MB_Relationships_API::register( [
 
 Similar to [MB Admin Columns](/extensions/mb-admin-columns/), the plugin supports 3 formats of the parameter:
 
-1. A boolean `true`: to simply display the admin column. The column will be added to the end of the list table. And the title of the column will be the title of the connection meta box (when you edit a post).
-1. A string "before title": to specify the column position. It accepts 2 words: the first one is the placement ("before", "after" or "replace") and the last one is the target existing column ID.
-1. An array of advanced configurations, as below:
+1. A boolean `true`: display the admin column at the end of the list table. The column title matches the connection meta box title.
+1. A string such as `"before title"`: specify the column position. The first word is the placement (`"before"`, `"after"`, or `"replace"`) and the second is the target column ID.
+1. An array of advanced settings, as below:
 
 ```php
 'admin_column' => [
@@ -271,14 +271,14 @@ Key|Description
 ---|---
 `position`|Specify where to insert the new column. It's the same as described in the #2 method above.
 `title`|Column title. Optional. Default is the meta box title.
-`link`|Config the link for the items displayed in the admin column. Can be `view` (click to view item on the front end - default), `edit` (click to edit item), or `false` (no link).
+`link`|Configure the link for items in the admin column. Can be `view` (link to the frontend - default), `edit` (link to the edit screen), or `false` (no link).
 
 
 ### Bi-directional relationships
 
-While the relationships are registered clearly with the term "from" and "to", the connections are bi-directional. You will be able to query back and forth without any problem. The query API is explained in the next section.
+While relationships are registered with distinct "from" and "to" sides, the connections themselves are bi-directional. You can query in either direction without issue. The query API is explained in the next section.
 
-The data is stored in the database as a pair of (from_id, to_id), thus making it independent from either side.
+The data is stored in the database as a pair of (from_id, to_id), making it independent of either side.
 
 ## Getting connected items
 
@@ -300,7 +300,7 @@ If you need more control over connected items (like sorting or limiting the numb
 
 ### Posts
 
-To get pages that are connected from a specific post (the *Basic Usage* example), use the following code:
+To get pages connected to a specific post, use the following code:
 
 ```php
 <?php
@@ -319,9 +319,9 @@ endwhile;
 wp_reset_postdata();
 ```
 
-To query for connected posts, just pass another parameter `relationship` to `WP_Query()`.
+To query connected posts, pass a `relationship` parameter to `WP_Query()`.
 
-If you want to display posts that connected to a specific page (the **backward query**), then just replace `from` by `to` in the code above:
+To display posts connected to a specific page (a **backward query**), replace `from` with `to` in the code above:
 
 ```php
 $connected = new WP_Query( [
@@ -335,15 +335,15 @@ $connected = new WP_Query( [
 
 That's all.
 
-**So, why WP_Query() you might ask?**
+**Why use `WP_Query()`?**
 
-There are 3 reasons that we want to use `WP_Query()`:
+There are 3 reasons to use `WP_Query()`:
 
-1. Using `WP_Query()` allows developers to create a **flexible** query to the database. Imagine you want to get related posts (which are set manually by the plugin) *and* in the same category. `WP_Query()` allows you to do that easily. Without it, you probably need to create 2 manual queries (1 from a relationship, and 1 from a category).
-1. `WP_Query()` is optimized for getting posts. It creates **only 1 query** to the database. Besides, in that single query, you'll be able to retrieve **full post objects**, not just post IDs. (You still can retrieve only post IDs if you set `'fields' => 'ids'` - how flexible it is!).
-1. `WP_Query()` is so familiar with WordPress developers. No need to introduce another API just for the same purpose.
+1. **Flexibility** - You can combine relationship queries with other criteria. For example, get related posts *and* filter by category in a single query. Without `WP_Query()`, you would need two separate queries.
+1. **Performance** - `WP_Query()` is optimized for posts and runs a single database query. It returns full post objects by default, or just IDs if you set `'fields' => 'ids'`.
+1. **Familiarity** - `WP_Query()` is standard in WordPress development. There is no need for a separate query API for the same purpose.
 
-Also note that, in the example above, we set `nopaging` to `true`, which disables pagination. So the query returns all the connected posts.
+Also note that in the example above, `nopaging` is set to `true`, which disables pagination so the query returns all connected posts.
 
 For the full list of supported parameters for `WP_Query()`, please see the [documentation](https://developer.wordpress.org/reference/classes/wp_query/).
 
@@ -365,7 +365,7 @@ foreach ( $terms as $term ) {
 }
 ```
 
-We use WordPress function `get_terms()` with an additional parameter `relationship` with the same reasons as for posts.
+We use the WordPress `get_terms()` function with an additional `relationship` parameter for the same reasons as posts.
 
 For the full list of supported parameters for `get_terms()`, please see the [documentation](https://developer.wordpress.org/reference/functions/get_terms/).
 
@@ -385,27 +385,27 @@ foreach ( $users as $user ) {
 }
 ```
 
-We use WordPress function `get_users()` with an additional parameter `relationship` with the same reasons as for posts.
+We use the WordPress `get_users()` function with an additional `relationship` parameter for the same reasons as posts.
 
 For the full list of supported parameters for `get_users()`, please see the [documentation](https://codex.wordpress.org/Function_Reference/get_users).
 
 ### Current item
 
-In the examples above, we use `get_the_ID()` to get the ID of the current post. But if we query for connected posts from a relationship `terms_to_posts`, then that function doesn't work.
+In the examples above, we use `get_the_ID()` to get the current post ID. That function does not work when querying connected posts from a relationship such as `categories_to_posts` on a term archive.
 
-In that case, we need to use the following functions:
+In those cases, use the following functions:
 
 Function|Description
 ---|---
-[`get_queried_object()`](https://codex.wordpress.org/Function_Reference/get_queried_object)|Get the current-queried object. If you're on a single post/page, it will return the post object. If you're on a category archive, it will return the category object and so on. Note that in the code above, `from` and `to` accepts both object ID and full object.
-[`get_queried_object_id()`](https://developer.wordpress.org/reference/functions/get_queried_object_id/)|Get the current-queried object ID. Similar to the above function but returns only object ID.
-[`get_current_user_id()`](https://developer.wordpress.org/reference/functions/get_current_user_id/)|Get current user ID.
+[`get_queried_object()`](https://codex.wordpress.org/Function_Reference/get_queried_object)|Returns the currently queried object. On a single post or page, it returns the post object. On a category archive, it returns the category object, and so on. Note that `from` and `to` accept both an object ID and a full object.
+[`get_queried_object_id()`](https://developer.wordpress.org/reference/functions/get_queried_object_id/)|Returns the ID of the currently queried object. Same as above, but returns only the ID.
+[`get_current_user_id()`](https://developer.wordpress.org/reference/functions/get_current_user_id/)|Returns the current user ID.
 
 ## Getting sibling items
 
-Assume you have 2 custom post types: student and class. Each student can join 1 or more classes (many-to-many relationship). Now how to get the classmates of the given student A?
+Assume you have 2 custom post types: `student` and `class`. Each student can join 1 or more classes (many-to-many relationship). How do you get the classmates of a given student?
 
-To get sibling of a post, add `'sibling' => true` to the query as follows:
+To get siblings of a post, add `'sibling' => true` to the query:
 
 ```php
 $siblings = new WP_Query( [
@@ -423,7 +423,7 @@ The code is similar to the above section, except for the extra `sibling` paramet
 
 ## Post archive
 
-All the examples above work well with a single post, term, or user. But if you want to display connected posts on the blog archive page, this method will create a dozen of queries for each post on the archive page. That's a lot of extra queries.
+All the examples above work well for a single post, term, or user. On a blog archive page, however, querying connected posts per item creates dozens of extra queries - one per post on the page.
 
 To solve this problem, we need to use the following code:
 
@@ -440,7 +440,7 @@ while ( have_posts() ) : the_post();
     // Display connected pages
     foreach ( $post->connected as $p ) :
         echo $p->post_title;
-        // More core here...
+        // More code here...
     endforeach;
 
 endwhile;
@@ -452,7 +452,7 @@ On each request, WordPress automatically runs a query that finds the appropriate
 
 The API function `MB_Relationships_API::each_connected()` will take a list of posts from `$wp_query->posts` and pull the related pages from the database (with a single database query) and assign them to each post via the `connected` property. So, you can loop through `$post->connected` and display connected pages.
 
-If you create a custom query than default WordPress query, just pass the array of objects to the function, like this:
+If you use a custom query instead of the default WordPress query, pass the array of post objects to the function:
 
 ```php
 $my_query = new WP_Query( [
@@ -475,11 +475,11 @@ while ( $my_query->have_posts() ) : $my_query->the_post();
 endwhile;
 ```
 
-The property name can be set to anything with an additional `'property' => 'your_property_name'`. See the below sections.
+The property name can be customized with `'property' => 'your_property_name'`. See the sections below.
 
 ### Multiple connections
 
-If you create multiple relationships between objects, you still can manipulate the query multiple times, like this:
+If you have multiple relationships between objects, you can call `each_connected()` multiple times:
 
 ```php
 // Get connected pages and assign them to property 'connected_pages'.
@@ -505,7 +505,7 @@ while ( have_posts() ) : the_post();
     endforeach;
     wp_reset_postdata(); // Set $post back to original post
 
-    // Displayin connected users
+    // Display connected users
     foreach ( $post->artists as $artist ) :
         echo $artist->display_name;
     endforeach;
@@ -515,7 +515,7 @@ endwhile;
 
 ### Nesting
 
-Since the `each_connected()` function accepts array of post objects, it's easy to create nested query like this:
+Since `each_connected()` accepts an array of post objects, nested queries are straightforward:
 
 ```php
 $my_query = new WP_Query( [
@@ -533,7 +533,7 @@ while ( $my_query->have_posts() ) : $my_query->the_post();
     MB_Relationships_API::each_connected( [
         'id'       => 'actors_to_producers',
         'from'     => $post->actors,
-        'property' => 'actors',
+        'property' => 'producers',
     ] );
 
     foreach ( $post->actors as $post ) : setup_postdata( $post );
@@ -552,7 +552,7 @@ endwhile;
 
 ## Query by multiple relationships
 
-For example, if you have event-to-band and event-to-artist relationships and you want to get all bands and artists that are connected from an event, then you can do the following:
+For example, if you have event-to-band and event-to-artist relationships and want to get all bands and artists connected to an event, use the following:
 
 ```php
 $query = new WP_Query( [
@@ -578,11 +578,11 @@ wp_reset_postdata();
 
 ## Managing connections programmatically
 
-The plugin has several public APIs that can help you create or delete connections between 2 items using code.
+The plugin provides public APIs to create or delete connections between two items in code.
 
 ### `has`
 
-This function checks if 2 objects have a specific relationship.
+This function checks whether two objects have a specific relationship.
 
 ```php
 $has_connection = MB_Relationships_API::has( $from, $to, $id );
@@ -601,15 +601,15 @@ Name|Description
 
 ### `add`
 
-This function adds a specific relationship between 2 objects.
+This function adds a relationship between two objects.
 
 ```php
 MB_Relationships_API::add( $from, $to, $id, $order_from = 1, $order_to = 1 );
 ```
 
-This function checks if the 2 objects already have a relationship and adds a new relationship only if they haven't. If the relationship has **has one relationship** enabled, the function also returns `false` when either side already has a connection.
+This function checks whether the two objects already have a relationship and adds one only if they do not. If **has one relationship** is enabled, it also returns `false` when either side already has a connection.
 
-When calling `add` function, the plugin fires a hook as follow:
+When the `add` function runs, the plugin fires the following hook:
 
 ```php
 do_action( 'mb_relationships_add', $from, $to, $id, $order_from, $order_to );
@@ -617,15 +617,15 @@ do_action( 'mb_relationships_add', $from, $to, $id, $order_from, $order_to );
 
 ### `delete`
 
-This function deletes a specific relationship between 2 objects.
+This function deletes a specific relationship between two objects.
 
 ```php
 MB_Relationships_API::delete( $from, $to, $id );
 ```
 
-This function checks if the 2 objects already have a relationship and delete that relationship only if they have.
+This function deletes a relationship between two objects only if one exists.
 
-When calling `delete` function, the plugin fires a hook as follow:
+When the `delete` function runs, the plugin fires the following hook:
 
 ```php
 do_action( 'mb_relationships_delete', $from, $to, $id );
@@ -644,14 +644,14 @@ It accepts the following parameters:
 Name|Description
 ---|---
 `id`|Relationship ID. Required.
-`items`|List of items for getting connected items from/to. Optional. If missed, the shortcode will get the current object ID.
-`direction`|Get connected items `from` (default) or `to`. Optional.
-`mode`|How to display connected items? `ul` (unordered list - default), `ol` (ordered list), `inline` (display items joined by commas), or `custom`.
+`items`|List of item IDs to get connected items from or to. Optional. If omitted, the shortcode uses the current object ID.
+`direction`|Direction to query: `from` (default) or `to`. Optional.
+`mode`|How to display connected items: `ul` (unordered list - default), `ol` (ordered list), `inline` (comma-separated), or `custom`.
 `separator`|The separator between connected items if `mode` is set to `custom`. Optional.
 
 ## Database
 
-The relationship data is stored in a single database `mb_relationships` with the following columns:
+The relationship data is stored in a custom table `mb_relationships` with the following columns:
 
 Column|Description
 ---|---
@@ -664,15 +664,15 @@ Column|Description
 
 This structure allows us to create simple and efficient queries. All columns are also indexed to optimize for speed.
 
-If you use the extension as a separated plugin, e.g. not bundle it within another, then the table is created during plugin activation. It's the ideal situation, where the plugin only checks for table existence only once.
+If you use the extension as a separate plugin (not bundled inside another), the table is created during plugin activation. This is ideal because the plugin checks for the table only once.
 
-If you bundle the extension within another plugin, then the table is checked and created when it's loaded. While the check is relatively fast, it's still an extra small query to the database.
+If you bundle the extension inside another plugin, the table is checked and created when the extension loads. The check is fast, but it still adds a small query on each request.
 
 ## REST API
 
 The plugin provides REST API endpoints so you can retrieve and update related items from external sources.
 
-Note: each relationship must first be created use [any of the supported methods](#creating-relationships).
+Note: each relationship must first be created using [any of the supported methods](#creating-relationships).
 
 ### Check for the existence of a connection
 
@@ -695,7 +695,7 @@ curl --request GET --url 'https://example.test/wp-json/mb-relationships/v1/posts
 }
 ```
 
-### Get all “to” objects for a specified “from” object
+### Get all "to" objects for a specified "from" object
 
 Send a `GET` request to `/wp-json/mb-relationships/v1/{id}/connected-from/{from ID}`.
 
@@ -719,7 +719,7 @@ curl --request GET --url 'https://example.test/wp-json/mb-relationships/v1/posts
 }
 ```
 
-### Get all “from” objects for a specified “to” object
+### Get all "from" objects for a specified "to" object
 
 Send a `GET` request to `/wp-json/mb-relationships/v1/{id}/connected-to/{to ID}`.
 
