@@ -5,7 +5,7 @@ title: MB Relationships
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-MB Relationships helps you to create relationships between posts, terms, and users in WordPress. So when you edit an item (post, term, user), you can select other items to connect to. It works with all post types, and all custom taxonomies and users, and supports many-to-many, one-to-many, or many-to-one relationships.
+MB Relationships helps you to create relationships between posts, terms, and users in WordPress. So when you edit an item (post, term, user), you can select other items to connect to. It works with all post types, and all custom taxonomies and users, and supports many-to-many, one-to-many, many-to-one, and one-to-one relationships.
 
 This is an example of a many-to-many relationship between events (a custom post type) and speakers (user).
 
@@ -24,7 +24,7 @@ The custom table is automatically created when the plugin is activated.
 
 Creating a relationship is done by either of the following methods:
 
-- **Using [MB Builder](/extensions/meta-box-builder/)**, which helps you create relationships with UI. This extension is a premium extension and is already bundled in Meta Box AIO/MB Core.
+- **Using [MB Builder](/extensions/meta-box-builder/)**, which helps you create relationships with UI. This extension is a premium extension and is already bundled in [Meta Box Lite](https://metabox.io/lite/) or [Meta Box AIO](https://metabox.io/aio/).
 - **Using code**.
 
 Before going into the detailed settings of a relationships, it's important to note that: when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). And inside that meta box, there'll be a cloneable field ([`post`](/fields/post/), [`taxonomy_advanced`](/fields/taxonomy-advanced/), or [`user`](/fields/user/) depending on the object type) for you to select connected items. So the settings of a relationships will be divided into 3 parts: settings for the relationship, for the meta box and for the field.
@@ -66,6 +66,7 @@ Name | Description
 Object type | What type of object you want to set. If you choose "Term" or "User", make sure you already activate [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) extension.
 Post type | If you select object type = "Post", then the post type settings will appear to let you select the post type.
 Taxonomy | If you select object type = "Term", then the taxonomy settings will appear to let you select the taxonomy.
+Has one relationship | When enabled, each item on this side can connect to only one item on the other side. The field becomes a single-select dropdown, and the plugin enforces the limit when saving data. Items already connected on the other side are hidden from the dropdown when this side is the target.
 Empty message | The custom message is displayed when there are no connections. Leaving this setting blank will use the default message "No connections".
 Show admin filter | Add a select dropdown to filter posts by this relationship. Works only for posts.
 Show as admin column | Show the connections in the admin list table of posts/terms or users. When you select this setting, the following settings will appear.
@@ -111,7 +112,7 @@ Label description | A description is displayed below the field label.
 Input description | A description is displayed below the field input.
 Placeholder | The custom placeholder for the select dropdown.
 Query args | Custom query args to get posts/terms/users to select from. It's a set of key-value pairs, which represent the arguments like in the `WP_Query` (for posts), `get_terms` (for terms) and `get_users` (for users).
-Max items | The maximum number of selected items. If you want to set the relationship 1:1 or 1:n, then set it 1 (for 1:1 make sure to set it on both the "From" and "To" sides).
+Max items | The maximum number of selected items. For one-to-one or one-to-many relationships, use **Has one relationship** in the General tab instead. `Max items` only limits how many rows appear in the field UI and does not enforce uniqueness on the other side.
 Add more text | The custom text for the add more button.
 Before | A custom HTML to output before the field.
 After | A custom HTML to output after the field.
@@ -171,6 +172,27 @@ add_action( 'mb_relationships_init', function () {
 } );
 ```
 
+To register a **one-to-many** relationship (each product has one brand, each brand has many products), enable `has_one_relationship` on the "many" side:
+
+```php
+add_action( 'mb_relationships_init', function () {
+    MB_Relationships_API::register( [
+        'id'   => 'products_to_brands',
+        'from' => [
+            'object_type'          => 'post',
+            'post_type'            => 'product',
+            'has_one_relationship' => true,
+        ],
+        'to'   => [
+            'object_type' => 'post',
+            'post_type'   => 'brand',
+        ],
+    ] );
+} );
+```
+
+For a **one-to-one** relationship, set `has_one_relationship` to `true` on both `from` and `to`.
+
 #### Syntax
 
 The main API function `MB_Relationships_API::register` has the following parameters:
@@ -192,6 +214,7 @@ Name|Description
 `object_type`|The object type the relationship is created from/to: `post` (default), `term` or `user`. Optional.
 `post_type`|The post type if the `object_type` is set to `post`. Default `post`. Optional.
 `taxonomy`|The taxonomy if the `object_type` is set to `term`.
+`has_one_relationship`|Whether each item on this side can connect to only one item on the other side (`true` or `false`). Default `false`. For one-to-one, set `true` on both `from` and `to`.
 `empty_message`|The message displayed when there's no connections.
 `meta_box`|Meta box settings, has the [same settings as a normal meta box](/creating-fields-with-code/#field-group-settings). Below are common settings you might want to change:
 -- `title`|The meta box title. Default is "Connect To" for "from" side and "Connected From" for "to" side.
@@ -199,7 +222,7 @@ Name|Description
 -- `name` | Field title.
 -- `placeholder` | Placeholder text.
 -- `query_args`|Custom query arguments to get objects of `object_type`. These arguments will be passed to `WP_Query()`, `get_terms()` or `get_users()` depending what `object_type` is.
--- `max_clone` | Maximum number of connections.
+-- `max_clone` | Maximum number of connections. Does not enforce uniqueness on the other side. Use `has_one_relationship` for one-to-one or one-to-many relationships.
 
 :::warning
 
@@ -584,7 +607,7 @@ This function adds a specific relationship between 2 objects.
 MB_Relationships_API::add( $from, $to, $id, $order_from = 1, $order_to = 1 );
 ```
 
-This function checks if the 2 objects already have a relationship and adds a new relationship only if they haven't.
+This function checks if the 2 objects already have a relationship and adds a new relationship only if they haven't. If the relationship has **has one relationship** enabled, the function also returns `false` when either side already has a connection.
 
 When calling `add` function, the plugin fires a hook as follow:
 
