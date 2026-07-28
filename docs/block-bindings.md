@@ -4,11 +4,11 @@ title: Block bindings
 
 Custom fields store structured data - event dates, subtitles, cover images, prices - but that data does not appear on the front end by itself. You still need a way to [display it](/custom-fields/#displaying-fields).
 
-[Block bindings](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-bindings/) do that in Gutenberg. Like **dynamic data** in page builders, they connect a Meta Box field to a core block - a Paragraph shows your subtitle, an Image block shows your cover photo. Meta Box registers a custom source, **Meta Box Field** (`meta-box/field`), so you can set this up without PHP templates or a custom block.
+[Block bindings](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-bindings/) do that in Gutenberg. Like **dynamic data** in page builders, they connect a Meta Box field to a core block - a Paragraph shows your subtitle, an Image block shows your cover photo. Meta Box registers your fields as block binding sources by default, so you can use them in Gutenberg without PHP templates or a custom block.
 
 ## Why use block bindings?
 
-Block bindings bring Meta Box field data into Gutenberg - connect any enabled post field to Paragraph, Heading, Image, Button, and other core blocks, right in the editor.
+Block bindings bring Meta Box field data into Gutenberg - connect fields from posts, terms, users, or settings pages to Paragraph, Heading, Image, Button, and other core blocks, right in the editor.
 
 - **Like dynamic data, but for Gutenberg** - pick a field, and the block shows its value on the front end.
 - **No extra code** - bind a Paragraph or Image block directly to a field.
@@ -19,17 +19,30 @@ They work in post content, block templates, and synced patterns - alongside [oth
 
 This feature requires **WordPress 6.5+**. The **Attributes** panel in the block editor (to pick a field visually) requires **WordPress 6.9+**.
 
-## Enabling block bindings for a field
+## Binding sources
 
-Block bindings are **opt-in**. Only fields you enable appear in the block editor bindings UI.
+Meta Box registers a separate source for each object type:
+
+Source | Label | Available with
+---|---|---
+`meta-box/post-field` | **Meta Box Post Field** | Meta Box (posts and custom post types)
+`meta-box/term-field` | **Meta Box Term Field** | [MB Term Meta](/extensions/mb-term-meta/)
+`meta-box/user-field` | **Meta Box User Field** | [MB User Meta](/extensions/mb-user-meta/)
+`meta-box/setting-field` | **Meta Box Setting Field** | [MB Settings Page](/extensions/mb-settings-page/)
+
+In the block editor, pick the source that matches where your field is stored, then choose the field (or a field property for structured fields).
+
+## Hiding a field from block bindings
+
+By default, Meta Box makes fields available for block bindings. If you do not want a field to appear in the block editor bindings UI, you can hide it.
 
 ### Using MB Builder
 
-1. Edit a field in [MB Builder](/extensions/meta-box-builder/).
-2. Open the **Advanced** tab in [field settings](/field-settings/).
-3. Turn on **Enable block bindings?**.
+1. Edit a field.
+2. Open the **Advanced** tab in field settings panel.
+3. Turn on **Hide from block bindings?**.
 
-![Enable block bindings for fields in the builder](img/enable-block-bindings.webp)
+![Hide a field from block bindings in the builder](img/hide-from-block-bindings.webp)
 
 :::info
 
@@ -39,7 +52,7 @@ The instruction above uses [MB Builder](/extensions/meta-box-builder/), an exten
 
 ### Using code
 
-Add `'block_bindings' => true` to the [field settings](/creating-fields-with-code/#fields):
+Add `'hide_from_block_bindings' => true` to the [field settings](/creating-fields-with-code/#fields):
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -48,14 +61,14 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 		'post_types' => 'movie',
 		'fields'     => [
 			[
-				'name'           => 'IMDB Rating',
-				'id'             => 'imdb_rating',
-				'type'           => 'number',
-				'min'            => 0,
-				'max'            => 10,
-				'step'           => 0.1,
+				'name'                     => 'IMDB Rating',
+				'id'                       => 'imdb_rating',
+				'type'                     => 'number',
+				'min'                      => 0,
+				'max'                      => 10,
+				'step'                     => 0.1,
 				// highlight-next-line
-				'block_bindings' => true,
+				'hide_from_block_bindings' => true,
 			],
 		],
 	];
@@ -66,26 +79,26 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 
 ## Binding a block to a field
 
-1. Edit a post (or a template that has post context) in the block editor.
+1. Edit a post, template, or pattern in the block editor.
 2. Select a block that supports bindings (for example Paragraph, Heading, Button, or Image).
 3. In the block settings sidebar, open the **Attributes** panel.
 4. Choose the attribute to bind (for example **Content** for a paragraph, or **URL** for an image).
-5. Select the **Meta Box Field** source, then pick your field (or a field property for structured fields).
+5. Select the Meta Box source for your field type (for example **Meta Box Post Field**), then pick your field (or a field property for structured fields).
 
-The bound attribute uses the field value when the post is rendered on the front end.
+The bound attribute uses the field value when the content is rendered on the front end.
 
-![Bind a block attribute to a Meta Box's custom field](img/block-bindings.webp)
+![Bind a block attribute to a Meta Box field](img/block-bindings.webp)
 
 :::tip Binding without the UI
 
-The **Attributes** panel is available from **WordPress 6.9** onward. On **WordPress 6.5 to 6.8**, you can still bind attributes in the **Code editor**. Example for a paragraph bound to an `imdb_rating` field:
+The **Attributes** panel is available from **WordPress 6.9** onward. On **WordPress 6.5 to 6.8**, you can still bind attributes in the **Code editor**. Example for a paragraph bound to an `imdb_rating` post field:
 
 ```html
 <!-- wp:paragraph {
   "metadata":{
     "bindings":{
       "content":{
-        "source":"meta-box/field",
+        "source":"meta-box/post-field",
         "args":{"id":"imdb_rating"}
       }
     }
@@ -94,6 +107,8 @@ The **Attributes** panel is available from **WordPress 6.9** onward. On **WordPr
 <p>Fallback text</p>
 <!-- /wp:paragraph -->
 ```
+
+Use `meta-box/term-field`, `meta-box/user-field`, or `meta-box/setting-field` for fields on terms, users, or settings pages.
 
 :::
 
@@ -108,11 +123,11 @@ Structured fields expose **properties** you can bind separately. In the UI they 
   "metadata":{
     "bindings":{
       "url":{
-        "source":"meta-box/field",
+        "source":"meta-box/post-field",
         "args":{"id":"poster","key":"url"}
       },
       "alt":{
-        "source":"meta-box/field",
+        "source":"meta-box/post-field",
         "args":{"id":"poster","key":"alt"}
       }
     }
@@ -141,6 +156,6 @@ If `key` is omitted, Meta Box falls back to the bound block attribute name (for 
 
 ## Limitations
 
-- **[Cloneable](/cloning-fields/) and multiple fields** use the **first** value only.
+- **One value only.** If a field is [cloneable](/cloning-fields/) or stores multiple values (for example a multi-select or checkbox list), the binding uses only the **first** value.
 - **Editor preview.** Bound attributes are resolved on the front end. The editor lists available fields for binding but does not show live field values in the canvas, and bound values are not editable from the block.
-- **Access.** Password-protected posts and posts the visitor cannot read do not expose bound values.
+- **Access.** Bound values are only returned when the visitor can view the related object. For posts, that means password-protected or private content stays hidden from unauthorized visitors. For non-public taxonomies, term fields follow the same idea.
