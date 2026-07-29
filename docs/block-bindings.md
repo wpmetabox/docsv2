@@ -8,7 +8,7 @@ Custom fields store structured data - event dates, subtitles, cover images, pric
 
 ## Why use block bindings?
 
-Block bindings bring Meta Box field data into Gutenberg - connect fields from posts, terms, users, or settings pages to Paragraph, Heading, Image, Button, and other core blocks, right in the editor.
+Block bindings bring Meta Box field data into Gutenberg - connect fields from posts, terms, authors, or settings pages to Paragraph, Heading, Image, Button, and other core blocks, right in the editor.
 
 - **Like dynamic data, but for Gutenberg** - pick a field, and the block shows its value on the front end.
 - **No extra code** - bind a Paragraph or Image block directly to a field.
@@ -27,7 +27,7 @@ Source | Label | Available with
 ---|---|---
 `meta-box/post-field` | **Meta Box Post Field** | Meta Box (posts and custom post types)
 `meta-box/term-field` | **Meta Box Term Field** | [MB Term Meta](/extensions/mb-term-meta/)
-`meta-box/user-field` | **Meta Box User Field** | [MB User Meta](/extensions/mb-user-meta/)
+`meta-box/author-field` | **Meta Box Author Field** | [MB User Meta](/extensions/mb-user-meta/)
 `meta-box/setting-field` | **Meta Box Setting Field** | [MB Settings Page](/extensions/mb-settings-page/)
 
 In the block editor, pick the source that matches where your field is stored, then choose the field (or a field property for structured fields).
@@ -108,7 +108,7 @@ The **Attributes** panel is available from **WordPress 6.9** onward. On **WordPr
 <!-- /wp:paragraph -->
 ```
 
-Use `meta-box/term-field`, `meta-box/user-field`, or `meta-box/setting-field` for fields on terms, users, or settings pages.
+Use `meta-box/term-field`, `meta-box/author-field`, or `meta-box/setting-field` for fields on terms, authors, or settings pages.
 
 :::
 
