@@ -156,6 +156,7 @@ If `key` is omitted, Meta Box falls back to the bound block attribute name (for 
 
 ## Limitations
 
+- **[Groups](/extensions/meta-box-group/) are not supported.** Block bindings map one block attribute to one value (a string, URL, and similar). A group stores nested fields as a structured set of values, so it cannot bind cleanly to a single Paragraph, Heading, or Image attribute. For group-based layouts, use [MB Views](/extensions/mb-views/) or [MB Blocks](/extensions/mb-blocks/) instead.
 - **One value only.** If a field is [cloneable](/cloning-fields/) or stores multiple values (for example a multi-select or checkbox list), the binding uses only the **first** value.
 - **Editor preview.** Bound attributes are resolved on the front end. The editor lists available fields for binding but does not show live field values in the canvas, and bound values are not editable from the block.
 - **Access.** Bound values are only returned when the visitor can view the related object. For posts, that means password-protected or private content stays hidden from unauthorized visitors. For non-public taxonomies, term fields follow the same idea.
