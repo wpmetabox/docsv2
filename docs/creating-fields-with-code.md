@@ -267,6 +267,7 @@ After | `after` | Custom HTML outputted after field's HTML.
 Custom CSS class | `class` | Custom CSS class, in case you want to customize the field. Optional.
 Custom sanitize callback | `sanitize_callback` | Custom PHP callback for sanitizing field value before saving into the database. Set it to `none` to bypass the sanitization. See [more details](/sanitization/).
 Save field value | `save_field` | Whether to save field value. Optional. Default `true`. This option doesn't work in the block editor (Gutenberg).
+Hide from block bindings? | `hide_from_block_bindings` | Hide this field from the block editor bindings UI. Optional. Default `false`. See [more details](/block-bindings/).
 Custom HTML5 attributes | `attributes` | Custom attributes for inputs. See [more details](/custom-attributes/).
 Validation | `validation` | Validation rules for fields. Optional. See [more details](/validation/).
 Custom settings | N/A | Custom field settings, useful when you want to add your settings to fields.

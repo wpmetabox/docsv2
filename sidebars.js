@@ -79,6 +79,7 @@ const sidebars = {
 				'status-column',
 				'tools',
 				'abilities',
+				'block-bindings',
 			],
 		},
 		{
