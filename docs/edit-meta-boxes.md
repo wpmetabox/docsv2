@@ -84,7 +84,7 @@ The code is quite straight as following (with all necessary comments):
 // Priority 20 makes sure all meta boxes are already registered
 add_filter( 'rwmb_meta_boxes', 'prefix_edit_meta_boxes', 20 );
 function prefix_edit_meta_boxes( $meta_boxes ) {
-    // Loop throught all meta boxes to find the ones we need
+    // Loop through all meta boxes to find the ones we need
     foreach ( $meta_boxes as $k => $meta_box ) {
         // Remove "Personal Information" meta box
         if ( isset( $meta_box['id'] ) && 'personal' == $meta_box['id'] ) {
@@ -124,6 +124,6 @@ Here is the result:
 
 :::tip
 
-It's recommended to set meta box ID to easier looping through all meta boxes.
+It is recommended to set meta box ID to make it easier to loop through all meta boxes.
 
 :::

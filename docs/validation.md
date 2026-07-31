@@ -20,7 +20,7 @@ When editing a field, switch to the **Advanced** tab, and scroll down to the **C
 
 ![validation with html5 attributes](https://imgur.elightup.com/Cewt9OG.png)
 
-In the **Key** input box, you can select any rule from the dropdown (if you don't see the dropdown, press the down arrow button), or enter the attribute name manually. And then enter the desired value in the **Value** input box.
+In the **Key** input box, you can select any rule from the dropdown (if you do not see the dropdown, press the down arrow button), or enter the attribute name manually. And then enter the desired value in the **Value** input box.
 
 :::info
 
@@ -72,7 +72,7 @@ Name|Description
 ---|---
 `required` | Makes the element required
 `minlength` | Makes the element require a given minimum length
-`maxlength` | Makes the element require a given maxmimum length
+`maxlength` | Makes the element require a given maximum length
 `rangelength` | Makes the element require a given value range. Array.
 `min` | Makes the element require a given minimum
 `max` | Makes the element require a given maximum
@@ -88,7 +88,7 @@ Name|Description
 `extension` | Makes the element require certain file extensions. For `file`, `image` fields only.
 `accept` | Makes a file upload accept only specified mime-types. For `file`, `image` fields only.
 `phoneUS` | Validate for valid US phone number
-`remote` | Requests a resource to check the element for validity. Value can be the URL of the resource to request for server-side validation (string) or options to fully customize the request, see [jQuery.ajax](https://api.jquery.com/jQuery.ajax). The server-side resource is called via jQuery.ajax and gets a key/value pair corresponding to the name of the validated element and its value as a GET parameter. The response is evaluated as JSON and must be `true` for valid elements, and can be any `false`, `undefined` or `null` for invalid elements, using the default message; or a string, eg. "That name is already taken, try peter123 instead" to display as the error message.
+`remote` | Requests a resource to check the element for validity. Value can be the URL of the resource to request for server-side validation (string) or options to fully customize the request, see [jQuery.ajax](https://api.jquery.com/jQuery.ajax). The server-side resource is called via jQuery.ajax and gets a key/value pair corresponding to the name of the validated element and its value as a GET parameter. The response is evaluated as JSON and must be `true` for valid elements, and can be any `false`, `undefined` or `null` for invalid elements, using the default message. Or it can be a string, e.g. "That name is already taken, try peter123 instead" to display as the error message.
 
 If you prefer code, you need to add a key `validation` to the [field group settings](/creating-fields-with-code/#field-group-settings). This key has a parameter `rules` for validation rules and `messages` for error messages.
 
@@ -135,7 +135,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 
 :::warning Fields with multiple inputs
 
-The jQuery validation library actually uses the **input name**, not the input ID. In most cases, they are the same. But for some cases where a field has multiple inputs like a checkbox list, then the checkboxes don't have IDs.
+The jQuery validation library actually uses the **input name**, not the input ID. In most cases, they are the same. But for some cases where a field has multiple inputs like a checkbox list, then the checkboxes do not have IDs.
 
 In this case, **you need to use input name for the rules**. For example, if you use a taxonomy field displayed as a checkbox list, you should set validation rules as follows:
 
@@ -186,7 +186,7 @@ For the field types "File" and "Image", the input name has the format `_file_fie
 
 ## Remote validation
 
-Remote validation is supported by the jQuery validation library, which is used by Meta Box. Using remote validation helps you use server data (such as from post or a settings) and return dynamic error messages.
+Remote validation is supported by the jQuery validation library, which is used by Meta Box. Using remote validation helps you use server data (such as from a post or a setting) and return dynamic error messages.
 
 To validate fields remotely with PHP, use the `remote` parameter for the validation rule array as follows:
 
@@ -207,7 +207,7 @@ To validate fields remotely with PHP, use the `remote` parameter for the validat
 ],
 ```
 
-Please note that remote validation is only triggered when the field is changed so it's recommended to set the `required` rule to `true` to make sure the field is not empty before sending the request.
+Please note that remote validation is only triggered when the field is changed so it is recommended to set the `required` rule to `true` to make sure the field is not empty before sending the request.
 
 The validation performs via an ajax request with action `my_action1`. In your theme's `functions.php` file or your plugin, you need to create a callback to handle this ajax request that outputs:
 
@@ -232,8 +232,7 @@ add_action( 'wp_ajax_my_action1', function () {
 ### Custom error message
 As mentioned above, you can return a custom error message instead of `'false'` to display it as the error message sent from the server.
 
-By default, the jQuery Validation library expects a JSON response from the server, any values that are not valid JSON will be ignored
- so you'll need to set the `dataType` parameter to `text` to return a custom error message.
+By default, the jQuery Validation library expects a JSON response from the server, any values that are not valid JSON will be ignored. So you will need to set the `dataType` parameter to `text` to return a custom error message.
 
 ```php
 // AJAX callback
@@ -271,3 +270,4 @@ add_action( 'wp_ajax_my_action1', function () {
 :::tip Other parameters
 
 The `remote` parameter also accepts an array of options to fully customize the request, see [jQuery.ajax](https://api.jquery.com/jQuery.ajax).
+:::

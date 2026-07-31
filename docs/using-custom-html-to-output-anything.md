@@ -5,7 +5,7 @@ displayed_sidebar: general
 
 `custom_html` is a very useful field in Meta Box, which helps you to _output anything_ in the post edit screen. It can be a warning box or an instruction for users to help them enter the correct data. But do you know that **you can use PHP** to render the HTML for the field?
 
-Using PHP, you can query the database, get WordPress information and show it. There's no limit with PHP. This guide helps you understand the field using a callback function to query the WordPress database and output the result. For the demo purpose: **I will setup a connection from a post to many pages (1 to many). And when editing a page, I need to know which posts refer to the current page**. So, creating a connection from a page to many posts is very simple with a field `post` like this:
+Using PHP, you can query the database, get WordPress information and show it. There is no limit with PHP. This guide helps you understand the field using a callback function to query the WordPress database and output the result. For the demo purpose: **I will set up a connection from a post to many pages (1 to many). And when editing a page, I need to know which posts refer to the current page**. So, creating a connection from a page to many posts is very simple with a field `post` like this:
 
 ```php
 array(
@@ -17,7 +17,7 @@ array(
 ),
 ```
 
-To get the list of posts refer to the current page, I will use a field `custom_html` like this:
+To get the list of posts that refer to the current page, I will use a field `custom_html` like this:
 
 ```php
 array(

@@ -2,7 +2,7 @@
 title: Reorder posts & terms
 ---
 
-This feature lets you **drag and drop** posts (from any custom post type) or terms (from any custom taxonomy) to rearrange their order right inside the WordPress admin. It's perfect when you need a custom order that doesn't follow the default publish date or alphabetical sorting.
+This feature lets you **drag and drop** posts (from any custom post type) or terms (from any custom taxonomy) to rearrange their order right inside the WordPress admin. It is perfect when you need a custom order that does not follow the default publish date or alphabetical sorting.
 
 This functionality is included in the **[MB Custom Post Types & Custom Taxonomies](/extensions/mb-custom-post-type/)** extension - completely free to use.
 
@@ -12,13 +12,13 @@ To enable this feature, open your custom post type settings, switch to the **Fea
 
 ![Enable the reorder posts feature](./img/reorder/enable-reorder-posts.png)
 
-If you're registering the post type via code, simply add:
+If you are registering the post type via code, simply add:
 
 ```php
 'order' => true,
 ```
 
-Once enabled, you'll see a new **Re-Order** tab in the post type's admin menu. Click it and rearrange your posts using drag‑and‑drop.
+Once enabled, you will see a new **Re-Order** tab in the post type's admin menu. Click it and rearrange your posts using drag-and-drop.
 
 ![Click on the Re-Order tab to rearrange posts](./img/reorder/reorder-posts.gif)
 
@@ -59,7 +59,7 @@ Or enable it via code:
 'order' => true,
 ```
 
-After that, visit the taxonomy screen and click the **Re-Order** button to sort terms using drag‑and‑drop - including **hierarchical terms**.
+After that, visit the taxonomy screen and click the **Re-Order** button to sort terms using drag-and-drop - including **hierarchical terms**.
 
 ![Drag and drop terms to reorder](./img/reorder/reorder-hierarchical-terms.gif)
 

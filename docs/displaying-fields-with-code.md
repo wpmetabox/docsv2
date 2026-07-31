@@ -4,7 +4,7 @@ title: Displaying fields with code
 
 import FAQ from '@site/src/components/FAQ';
 
-If you're a developer and familiar with changing template file with PHP code, you can use Meta Box helper functions to display fields:
+If you are a developer and familiar with changing template file with PHP code, you can use Meta Box helper functions to display fields:
 
 - [`rwmb_get_value()`](/functions/rwmb-get-value/): to get a field value as a variable
 - [`rwmb_the_value()`](/functions/rwmb-the-value/): to display a field
@@ -14,7 +14,7 @@ In addition, we also provide [`rwmb_meta()`](/functions/rwmb-meta/) function, wh
 - Returns the HTML output for rich-content fields: `map`, `osm`, and `oembed`, same as `rwmb_the_value()`,
 - Returns the same value as `rwmb_get_value()` for other field types.
 
-Now open your template file for the single event content. Usually, it's `template-parts/content.php`, `single-event.php` or `single.php` file, depending on your theme structure. Then add the following code below the content area:
+Now open your template file for the single event content. Usually, it is `template-parts/content.php`, `single-event.php` or `single.php` file, depending on your theme structure. Then add the following code below the content area:
 
 ```php
 <?php
@@ -49,7 +49,7 @@ Now open your template file for the single event content. Usually, it's `templat
 
 :::warning Block themes
 
-For block themes, everything is blocks and there's no PHP template files. In that case, please use the [MB Views](/extensions/mb-views/) extension.
+For block themes, everything is blocks and there are no PHP template files. In that case, please use the [MB Views](/extensions/mb-views/) extension.
 
 :::
 
@@ -66,9 +66,9 @@ Name|Description
 
 <FAQ question="Why does my site crash when I deactivate Meta Box?">
 
-If you're using our helper functions in your theme, then they become unavailable when Meta Box is deactivated. You can fix that by going to the admin area » Plugins and re-activate Meta Box.
+If you are using our helper functions in your theme, then they become unavailable when Meta Box is deactivated. You can fix that by going to the admin area » Plugins and re-activate Meta Box.
 
-Alternatively, you can add the following code into your theme's `functions.php` file to make the error go away, however, the custom fields won't display, either.
+Alternatively, you can add the following code into your theme's `functions.php` file to make the error go away. However, the custom fields will not display, either.
 
 ```php
 if ( ! function_exists( 'rwmb_the_value' ) ) {
@@ -96,7 +96,7 @@ Absolutely. Our helper function is just a wrapper of WordPress's `get_post_meta`
 
 </FAQ>
 
-<FAQ question="Why don't I see values of custom fields?">
+<FAQ question="Why do I not see values of custom fields?">
 
 There are some cases where you register custom fields conditionally or only for the back end like you wrap the code under `is_admin()`. In that case, make sure you remove the condition and register custom fields for both the back end and front end.
 

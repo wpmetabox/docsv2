@@ -3,11 +3,11 @@ title: Hide Tabs with Conditional Logic
 displayed_sidebar: general
 ---
 
-Conditional Logic works with any DOM elements. That means you can hide your tabs created by [MB Tabs](/extensions/meta-box-tabs/) extension with MB Conditional Logic. This guide show you how to do that.
+Conditional Logic works with any DOM elements. That means you can hide your tabs created by [MB Tabs](/extensions/meta-box-tabs/) extension with MB Conditional Logic. This guide shows you how to do that.
 
 ## Basic
 
-Because tabs aren't regular field or meta box so you have to use `rwmb_outside_conditions` filter to tell Conditional Logic to add this element. Imagine that you have created a meta box like this:
+Because tabs are not regular fields or meta boxes, you have to use `rwmb_outside_conditions` filter to tell Conditional Logic to add this element. Imagine that you have created a meta box like this:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function($meta_boxes) {
@@ -58,11 +58,11 @@ add_filter( 'rwmb_outside_conditions', function( $conditions ) {
 } );
 ```
 
-This will tell Conditional Logic hide `.rwmb-tab-interest` selector when `post_format` is `aside`
+This will tell Conditional Logic to hide `.rwmb-tab-interest` selector when `post_format` is `aside`
 
 ## Hide the first tab
 
-In case you want to hide the first tab, you have to hide its tab pane also and show the next tab pane, this example shows you how to do that:
+In case you want to hide the first tab, you have to hide its tab pane also and show the next tab pane. This example shows you how to do that:
 
 ```php
 add_filter( 'rwmb_outside_conditions', function( $conditions ) {

@@ -3,7 +3,7 @@ title: Online Generator
 displayed_sidebar: general
 ---
 
-[Online Generator](https://metabox.io/online-generator/) is a tool to help you create and set up **custom fields** using a simple, friendly user interface. With it, you can add fields, set options and generate needed code that's ready to copy and paste.
+[Online Generator](https://metabox.io/online-generator/) is a tool to help you create and set up **custom fields** using a simple, friendly user interface. With it, you can add fields, set options and generate needed code that is ready to copy and paste.
 
 Before using **Online Generator**, make sure you [installed and activated Meta Box plugin](/installation/).
 
@@ -15,7 +15,7 @@ To add fields, click **field types** on the left. Related fields are put into gr
 
 ![select a field type](https://imgur.elightup.com/smn7Cd1.png)
 
-Once you add a new field, field settings panel will appear on the right, where you can enter field details such as ID, label or description.
+Once you add a new field, the field settings panel will appear on the right, where you can enter field details such as ID, label or description.
 
 ![edit field settings](https://imgur.elightup.com/JbpVTeK.png)
 
@@ -23,7 +23,7 @@ You can also toggle the field settings by clicking the field title bar.
 
 ### Remove, duplicate, reorder fields
 
-On the title bar, there're 2 icons for removing and duplicated fields. When you hover the mouse over the field settings, you'll see move up and down buttons for reorder fields.
+On the title bar, there are 2 icons for removing and duplicating fields. When you hover the mouse over the field settings, you will see move up and down buttons for reorder fields.
 
 ![remove, duplicate, reorder fields](https://imgur.elightup.com/L3lpw58.png)
 
@@ -36,7 +36,7 @@ Once you complete adding fields, click the **Settings** tab to add settings for 
 Parameter|Description
 ---|---
 Field group title| Name the field group as you want (Required)
-Field group ID| Field group ID. If you didn’t type anything here, the field group ID would be automatically generated from the title (Optional)
+Field group ID| Field group ID. If you did not type anything here, the field group ID would be automatically generated from the title (Optional)
 Post types|Custom post types which the field group is for.
 Position|Where the field group is displayed.
 Priority|Priority within the context where the box is displayed
@@ -55,10 +55,10 @@ You might want to modify the code if needed. After copying to your theme's `func
 
 **Online Generator** is a great tool for WordPress beginners and developers to generate custom meta boxes and custom fields for the [Meta Box plugin](https://metabox.io/). It saves you a lot of time with a friendly UI and lets you build a bunch of fields without touching code.
 
-It works as a stand-alone tool, meaning that it can't be put inside your WordPress admin. Instead, you can copy the generated code and paste it into your theme's functions.php file.
+It works as a stand-alone tool, meaning that it cannot be put inside your WordPress admin. Instead, you can copy the generated code and paste it into your theme's functions.php file.
 
-In the case that you want to use it inside your WordPress admin and have extra settings for fields or [premium extensions](https://metabox.io/plugins/), don’t forget to try [MB Builder](https://docs.metabox.io/extensions/meta-box-builder/).
+In the case that you want to use it inside your WordPress admin and have extra settings for fields or [premium extensions](https://metabox.io/plugins/), do not forget to try [MB Builder](https://docs.metabox.io/extensions/meta-box-builder/).
 
-Beside using the generator for the custom fields, you may want to have custom post types and custom taxonomies. So, **Meta Box** also provides several WordPress generator tools such as [WordPress Custom Post Type Generator](https://metabox.io/post-type-generator/), and [WordPress Custom Taxonomy Generator](https://metabox.io/taxonomy-generator/). Or. you can use the [MB Custom Post Type plugin](https://metabox.io/plugins/custom-post-type/) to create custom post type and custom taxonomy inside your website. It is free and available on [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/).
+Besides using the generator for the custom fields, you may want to have custom post types and custom taxonomies. So, **Meta Box** also provides several WordPress generator tools such as [WordPress Custom Post Type Generator](https://metabox.io/post-type-generator/), and [WordPress Custom Taxonomy Generator](https://metabox.io/taxonomy-generator/). Or, you can use the [MB Custom Post Type plugin](https://metabox.io/plugins/custom-post-type/) to create custom post type and custom taxonomy inside your website. It is free and available on [wordpress.org](https://wordpress.org/plugins/mb-custom-post-type/).
 
-Let’s try and give us your feedback.
+Let us try it and give us your feedback.

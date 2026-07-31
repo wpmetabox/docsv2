@@ -9,7 +9,7 @@ We have 3 extensions that can help you control the visibility of a meta box for 
 - [MB Show Hide](/extensions/meta-box-show-hide/)
 - [MB Conditional Logic](/extensions/meta-box-conditional-logic/)
 
-That might be confused as you don't know which extension is the right choice for you. So the main difference between them is the following: **MB Include Exclude** hides meta boxes **by PHP**, meaning:
+That might be confusing as you do not know which extension is the right choice for you. So the main difference between them is the following: **MB Include Exclude** hides meta boxes **by PHP**, meaning:
 
 - Meta boxes are removed completely from the editing screen, no HTML markup is outputted at all
 - Since meta boxes are removed completely, there are no inputs at all and thus, there are no meta values are saved at all

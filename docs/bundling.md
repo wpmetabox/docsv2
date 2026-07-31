@@ -15,7 +15,7 @@ Meta Box and extensions can be used as standalone plugins or bundled within othe
 
 ## Using TGM Plugin Activation
 
-It's recommended to use the [TGM Plugin Activation](http://tgmpluginactivation.com) to declare Meta Box and free extensions as dependencies for your themes or plugins. This way, Meta Box and the extensions can be auto-updated to the latest version.
+It is recommended to use the [TGM Plugin Activation](http://tgmpluginactivation.com) to declare Meta Box and free extensions as dependencies for your themes or plugins. This way, Meta Box and the extensions can be auto-updated to the latest version.
 
 ![Using Meta Box in eStar theme](https://imgur.elightup.com/dS3a6pe.png)
 
@@ -53,11 +53,11 @@ Then, include the `example.php` file in your theme's `functions.php` or your plu
 
 :::danger Not recommended
 
-This method disables the auto update mechanism and sometimes causes conflicts with the latest versions of WordPress, or with other plugins that use other versions of Meta Box and extensions. And you have to update extensions manually. You should consider using TGMPA Activation class as described above first, and only use this method if you don't have another choice.
+This method disables the auto update mechanism and sometimes causes conflicts with the latest versions of WordPress, or with other plugins that use other versions of Meta Box and extensions. And you have to update extensions manually. You should consider using TGMPA Activation class as described above first, and only use this method if you have no other choice.
 
 :::
 
-Bundling extensions is that you include extensions directly in your products and use them as a library.
+Bundling extensions means you include extensions directly in your products and use them as a library.
 
 1. Copy the extension folder to your theme or plugin. You can put it in the theme root folder or a subfolder.
 1. Include the extension's main file in the `functions.php` of your theme or your plugin's file:

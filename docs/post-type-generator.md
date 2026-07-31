@@ -5,7 +5,7 @@ displayed_sidebar: general
 
 [Post Type Generator](https://metabox.io/post-type-generator/) is a free online tool to help you create and set up custom post types easily with a simple and intuitive user interface. With this tool, you can copy and paste PHP code for custom post types in a few clicks.
 
-One notable feature of this tool is that it can be used independently from Meta Box. Therefore, you don’t need to install the Meta Box to use Post Type Generator.
+One notable feature of this tool is that it can be used independently from Meta Box. Therefore, you do not need to install the Meta Box to use Post Type Generator.
 
 
 ## Set up a New Custom Post Type
@@ -31,8 +31,8 @@ In the **Advanced** tab, the description of each field will help you set up some
 Pay attention to some fields:
 
 - **Publicly queryable?** If you tick the box, it can query to take the data of your post type so that the content of it can be displayed on the front end.
-- Similarly, put a tick to the **Show UI?** and **Show in nav menus?** if you want to show your post type UI and show your post type in nav menus in the Dashboard. It’s recommended to enable them for easy management.
-- **Hierarchical?** If you want your post type to have a parent post type and sub post type in order to sort and manage it conveniently, enable this.
+- Similarly, put a tick to the **Show UI?** and **Show in nav menus?** if you want to show your post type UI and show your post type in nav menus in the Dashboard. It is recommended to enable them for easy management.
+- **Hierarchical?** If you want your post type to have a parent post type and sub post type to sort and manage it conveniently, enable this.
 
 For more details about all the fields in this tab, please read [this instruction](https://developer.wordpress.org/reference/functions/register_post_type/) from WordPress.
 
@@ -52,4 +52,4 @@ When you complete all the steps above, click the **Generate Code** button. Just 
 
 ![Meta Box Post Type Generator tool generates code to create your custom post type ](https://imgur.elightup.com/RIrSc7I.png)
 
-Copy the code and insert it to the `functions.php` file and it's all done.
+Copy the code and insert it to the `functions.php` file and it is all done.

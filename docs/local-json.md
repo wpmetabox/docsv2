@@ -2,18 +2,18 @@
 title: Local JSON
 ---
 
-Beside [creating fields with PHP](/creating-fields-with-code/), you can also register custom fields with JSON. This way is more convenient and easier to manage the fields since you can put them in a separate file, use version control (Git), leverage caching, and better code editor support with JSON schema.
+Besides [creating fields with PHP](/creating-fields-with-code/), you can also register custom fields with JSON. This way is more convenient and easier to manage the fields since you can put them in a separate file, use version control (Git), use caching, and get better code editor support with JSON schema.
 
 This feature is available in the [Meta Box Builder](https://metabox.io/plugins/meta-box-builder/) extension and is included in both [Meta Box Lite](https://metabox.io/lite/) and [Meta Box AIO](https://metabox.io/aio/).
 
 ## How it works
 
-To use local JSON to register custom fields, you need to create a new folder called `mb-json` field in your theme that is writable by the web server.
-After that, you can put the JSON files in the folder and Meta Box will automatically load the JSON files and register the fields, no more database queries.
+To use local JSON to register custom fields, you need to create a new folder called `mb-json` in your theme that is writable by the web server.
+After that, you can put the JSON files in the folder and Meta Box will automatically load the JSON files and register the fields, with no more database queries.
 
 ## JSON format
 
-The JSON format is the same as when you export a field group and is very similar to the [PHP version](/creating-fields-with-code/) when you creating a field group, except the `$schema` and `modified` attributes:
+The JSON format is the same as when you export a field group and is very similar to the [PHP version](/creating-fields-with-code/) when you create a field group, except the `$schema` and `modified` attributes:
 
 ```json
 {
@@ -64,7 +64,7 @@ When you change the content of a JSON file, and want Meta Box to detect the chan
 
 :::
 
-After syncing, you'll see the field group in the admin list like this:
+After syncing, you will see the field group in the admin list like this:
 
 ![After sync](./img/local-json-sync.png)
 
@@ -72,7 +72,7 @@ Then you can change the field group, add more fields or edit existing fields. Yo
 
 :::warning Purpose
 
-Syncing from JSON to the database has only one purpose: to edit fields visually, and then sync back to JSON files (or export to JSON file to save somewhere else). Meta Box will **NOT** load fields from the database (to avoid making unnessary queries), and use JSON files only.
+Syncing from JSON to the database has only one purpose: to edit fields visually, and then sync back to JSON files (or export to JSON file to save somewhere else). Meta Box will **NOT** load fields from the database (to avoid making unnecessary queries), and use JSON files only.
 
 :::
 
@@ -92,7 +92,7 @@ add_filter( 'mb_json_paths', function( $paths ) {
 
 ## Security
 
-It's a good practice to hide the JSON files from the public. The easiest way to do that is adding `index.php` file to the folder. This way, when people try to access the folder, they'll see a blank page.
+It is a good practice to hide the JSON files from the public. The easiest way to do that is adding an `index.php` file to the folder. This way, when people try to access the folder, they will see a blank page.
 
 ```php
 <?php

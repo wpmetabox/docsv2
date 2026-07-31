@@ -48,7 +48,7 @@ composer require meta-box/meta-box-group:dev-master
 
 Notes:
 
-- The version of premium extensions specified in `composer.json` **must be `dev-master`**. We don't support version constraints for premium extensions yet. You always use the latest version.
+- The version of premium extensions specified in `composer.json` **must be `dev-master`**. We do not support version constraints for premium extensions yet. You always use the latest version.
 - Extensions are **not autoloaded** by default. You can manually load them or autoload by adding extensions' main files to the `autoload` array in `composer.json`.
 - Extensions then will be installed in WordPress's `wp-content/plugins` folder thanks to [composer/installers](https://github.com/composer/installers). To move them to the traditional `vendor` folder, add `installer-paths` to your `composer.json` file as follows:
 
@@ -93,9 +93,9 @@ require 'vendor/autoload.php';
 
 Now you can start using Meta Box extensions in your products!
 
-To make it easier for you, we've created a [`composer.json`](https://github.com/wpmetabox/library/blob/master/composer/composer.json) file, which contains a full list of extensions, free and premium. You can use it as a boilerplate and remove the extensions you don't want to use.
+To make it easier for you, we have created a [`composer.json`](https://github.com/wpmetabox/library/blob/master/composer/composer.json) file, which contains a full list of extensions, free and premium. You can use it as a boilerplate and remove the extensions you do not want to use.
 
-Because we use `dev-master` version, Composer can't load versions to check when running `composer update`. To fix this, please run the following command:
+Because we use `dev-master` version, Composer cannot load versions to check when running `composer update`. To fix this, run the following command:
 
 ```bash
 rm -rf vendor && composer clear-cache && composer install

@@ -12,7 +12,7 @@ Block bindings bring Meta Box field data into Gutenberg - connect fields from po
 
 - **Like dynamic data, but for Gutenberg** - pick a field, and the block shows its value on the front end.
 - **No extra code** - bind a Paragraph or Image block directly to a field.
-- **Single source of truth** - update the field once; every bound block reflects the change.
+- **Single source of truth** - update the field once. Every bound block reflects the change.
 - **Native block styling** - use core blocks with full typography, spacing, and layout controls.
 
 They work in post content, block templates, and synced patterns - alongside [other ways to display fields](/custom-fields/#displaying-fields) when you need them.

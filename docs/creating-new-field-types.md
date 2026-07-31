@@ -2,7 +2,7 @@
 title: Creating new field types
 ---
 
-If the existing Meta Box field types don't quite fit your needs, you can create your own. In this guide, we'll walk through how to create a custom field type called `phone`, which only accepts phone numbers in the format `xxx-xxx-xxxx`.
+If the existing Meta Box field types do not quite fit your needs, you can create your own. In this guide, we will walk through how to create a custom field type called `phone`, which only accepts phone numbers in the format `xxx-xxx-xxxx`.
 
 ## 1. Create a new field class
 
@@ -10,7 +10,7 @@ All custom fields in Meta Box are defined as classes. To create a new field type
 
 ```php
 class RWMB_Phone_Field extends RWMB_Field {
-    // Code for the field goese here
+    // Code for the field goes here
 }
 ```
 
@@ -43,11 +43,11 @@ public static function html( $meta, $field ) {
 }
 ```
 
-Here we're using the `pattern` attribute to ensure that users enter a phone number in the format `xxx-xxx-xxxx`.
+Here we are using the `pattern` attribute to ensure that users enter a phone number in the format `xxx-xxx-xxxx`.
 
 :::info
 
-Good news: you don't need to handle saving, retrieving, or enqueueing scripts/styles manually. Meta Box takes care of that automatically.
+Good news: you do not need to handle saving, retrieving, or enqueueing scripts/styles manually. Meta Box takes care of that automatically.
 
 :::
 
@@ -123,9 +123,9 @@ When you click **+ Add field** in the builder, it will appear like this:
 
 **Field type parameters:**
 
-The `mbb_field_types` filter filter accepts a single parameter: an associative array of field types. Each type supports these parameters:
+The `mbb_field_types` filter accepts a single parameter: an associative array of field types. Each type supports these parameters:
 
-- `title`: The field type’s display title.
+- `title`: The field type's display title.
 - `icon`: The icon for the field (Dashicons only).
 - `category`: The inserter popup category (options: `basic`, `advanced`, `html5`, `wordpress`, `upload`, `layout`).
 - `controls`: The available controls in the builder. These can be:
@@ -180,7 +180,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-When you edit a post, you'll see the new field:
+When you edit a post, you will see the new field:
 
 ![new field type](https://imgur.elightup.com/lK8DRW7.png)
 
@@ -200,15 +200,15 @@ If your field should support [cloning](/cloning-fields/), make sure your inputs 
 
 All methods in `RWMB_Field` (and child classes) are **static**. This design improves performance by reusing the same code for all fields instead of creating new instances.
 
-Here's a quick overview of the most important methods:
+Here is a quick overview of the most important methods:
 
 ### `add_actions`
 
-This method allows a field to add custom hooks for its needs. For example: callbacks for ajax call ([like `file`](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/file.php#L36)), add hooks to output custom content in admin footer ([like `file_advanced`](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/media.php#L51)), etc. This method is called when the meta box is loaded. You can also add custom code to this method or calls to other functions which need to run when code is loaded. This method doesn't have any arguments.
+This method allows a field to add custom hooks for its needs. For example: callbacks for ajax call ([like `file`](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/file.php#L36)), add hooks to output custom content in admin footer ([like `file_advanced`](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/media.php#L51)), etc. This method is called when the meta box is loaded. You can also add custom code to this method or calls to other functions which need to run when code is loaded. This method does not have any arguments.
 
 ### `admin_enqueue_scripts`
 
-This method allows you to enqueue scripts and styles for a field. This method doesn't have any arguments.
+This method allows you to enqueue scripts and styles for a field. This method does not have any arguments.
 
 ### `show`
 
@@ -220,7 +220,7 @@ This method outputs the field's HTML markup. Fields should **not** overwrite thi
 
 ### `html`
 
-This method returns (not echoes, only returns) field's HTML markup. This is the input controls of the field and is put inside `.rwmb-input` CSS class. Each field **must** overwrite this method to returns its HTML for inputs. This method has 2 arguments:
+This method returns (not echoes, only returns) field's HTML markup. This is the input controls of the field and is put inside `.rwmb-input` CSS class. Each field **must** overwrite this method to return its HTML for inputs. This method has 2 arguments:
 
 - `$meta`: field meta value
 - `$field`: array of field arguments
@@ -236,7 +236,7 @@ This method returns the beginning HTML output of a field. The beginning HTML out
 <div class="rwmb-input">
 ```
 
-This method should **not** be overwritten by field's class, unless it's needed to do so ([like `heading` field](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/heading.php#L27)). This method has 2 arguments:
+This method should **not** be overwritten by field's class, unless it is needed to do so ([like `heading` field](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/heading.php#L27)). This method has 2 arguments:
 
 - `$meta`: field meta value
 - `$field`: array of field arguments
@@ -251,7 +251,7 @@ This method returns the ending HTML output of a field. The ending HTML output co
 </div> <!-- .rwmb-input -->
 ```
 
-This method should **not** be overwritten by field's class, unless it's needed to do so ([like `heading` field](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/heading.php#L40)). This method has 2 arguments:
+This method should **not** be overwritten by field's class, unless it is needed to do so ([like `heading` field](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/heading.php#L40)). This method has 2 arguments:
 
 - `$meta`: field meta value
 - `$field`: array of field arguments
@@ -266,7 +266,7 @@ This method retrieves meta value for a field. In most cases, this method does al
 
 ### `value`
 
-This method set field meta value before saving in database. By default it just returns the value from `$_POST`. Field class can overwrite this method to set meta value for more complicated logic ([like `taxonomy_advanced`](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/taxonomy-advanced.php#L22)). This method has 4 parameters:
+This method sets field meta value before saving in database. By default it just returns the value from `$_POST`. Field class can overwrite this method to set meta value for more complicated logic ([like `taxonomy_advanced`](https://github.com/wpmetabox/meta-box/blob/master/inc/fields/taxonomy-advanced.php#L22)). This method has 4 parameters:
 
 - `$new`: field meta value which will be saved in the database
 - `$old`: old meta value of field
@@ -284,6 +284,6 @@ This method saves field meta value in database. In most cases, this method does 
 
 ### `normalize_field`
 
-This method normalizes field arguments, add missing arguments, add default value for fields, etc. Depends on field type, each field class can overwrite this method to define its own defaults value. This method has 1 parameter:
+This method normalizes field arguments, adds missing arguments, adds default value for fields, etc. Depending on field type, each field class can overwrite this method to define its own default value. This method has 1 parameter:
 
 - `$field`: array of field arguments

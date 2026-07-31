@@ -32,13 +32,13 @@ The **Change Custom Field Key** tool helps you migrate all data from an old cust
 
 ![Migrates all data from the old key to the new one](./img/tools/change-custom-field-key.png)
 
-You'll also get suggestions of existing field keys, making it easier to select and update.
+You will also get suggestions of existing field keys, making it easier to select and update.
 
 ## Changing post type
 
 This tool helps you move posts to a different post type when a post type is disabled or removed.
 
-For example, if the **Restaurant** post type is disabled, its posts remain in the database but are inaccessible; using this tool, you can move them to **Post**, making them visible and usable again.
+For example, if the **Restaurant** post type is disabled, its posts remain in the database but are inaccessible. Using this tool, you can move them to **Post**, making them visible and usable again.
 
 ![Change-post-type](./img/tools/change-post-types.png)
 
@@ -46,4 +46,4 @@ As a result, the posts in the Restaurant post type will be moved to Post.
 
 ![Result of changing post types](./img/tools/change-post-dashboard.png)
 
-Each tool is easy to use, choose an option and click. Remember back up your database before running them.
+Each tool is easy to use. Choose an option and click. Remember to back up your database before running them.

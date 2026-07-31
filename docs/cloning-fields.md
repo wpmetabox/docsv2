@@ -6,7 +6,7 @@ The clone feature of Meta Box allows you to create multiple inputs from a text, 
 
 :::info Clone is a feature
 
-The difference between Meta Box and other plugins is that the clone feature can be applied to **all field types**. And **it's a feature, not a field type**. Then, every field or group can be cloneable or repeater. They are called cloneable fields or cloneable groups.
+The difference between Meta Box and other plugins is that the clone feature can be applied to **all field types**. And **it is a feature, not a field type**. Then, every field or group can be cloneable or repeater. They are called cloneable fields or cloneable groups.
 
 :::
 
@@ -16,7 +16,7 @@ When editing a field, turn on this **Cloneable** option in the settings of the f
 
 ![enable clone feature](https://imgur.elightup.com/KbnSFBe.png)
 
-After turning in the Cloneable option, other clone settings will appear.
+After turning on the Cloneable option, other clone settings will appear.
 
 ![other clone settings](https://imgur.elightup.com/uhhImkb.png)
 
@@ -39,11 +39,11 @@ Min number of clones|`min_clone`|Minimum number of clones. Optional.
 Add more text|`add_button`|The text for **Add more** clone button. Optional. Default "+ Add more".
 Clone empty start|`clone_empty_start`|Allows no fields except the **Add more** button to show up. `true` or `false` (default). Optional.
 
-After saving the field group, in the post editor, you'll see an **+ Add more** button below the field input. Clicking it allows you to enter more values:
+After saving the field group, in the post editor, you will see an **+ Add more** button below the field input. Clicking it allows you to enter more values:
 
 ![view clones in action](https://imgur.elightup.com/PM4Mbqb.png)
 
-If you're a developer and want to use code, then you need to add the clone settings into the [field settings](/creating-fields-with-code/#fields):
+If you are a developer and want to use code, then you need to add the clone settings into the [field settings](/creating-fields-with-code/#fields):
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -90,7 +90,7 @@ Using serialized data has some benefits:
 
 ## Query posts by cloneable fields
 
-By default, cloned values are stored as a serialized array, which doesn't allow you to query posts by these values. For example, if you have a cloneable field `start_date` for the `event` post type, and you want to query events in May 2019 like this:
+By default, cloned values are stored as a serialized array, which does not allow you to query posts by these values. For example, if you have a cloneable field `start_date` for the `event` post type, and you want to query events in May 2019 like this:
 
 ```php
 $args = [
@@ -108,7 +108,7 @@ $args = [
 $query = new WP_Query( $args );
 ```
 
-Then it doesn't work.
+Then it does not work.
 
 To solve this problem, you need to enable the **Clone as multiple** settings for the field.
 
@@ -118,7 +118,7 @@ With that, Meta Box will **save cloneable values in multiple rows in the databas
 
 ## Default values
 
-When making a field to be cloneable, its data is an array of cloned values. So, the `std` parameter (default value) should represent this structure, e.g. array of cloned values.
+When making a field cloneable, its data is an array of cloned values. So, the `std` parameter (default value) should represent this structure, e.g. an array of cloned values.
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {

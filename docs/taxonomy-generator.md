@@ -41,4 +41,4 @@ When you complete all steps above, click the **Generate Code** button. Just wait
 
 ![Meta Box Taxonomy Generator generates code](https://imgur.elightup.com/MudzzYG.png)
 
-Copy the code and insert it to the `functions.php` file and it's all done.
+Copy the code and insert it to the `functions.php` file and it is all done.

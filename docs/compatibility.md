@@ -38,7 +38,7 @@ Meta Box has official support from these plugins:
 
 ### Multilingual plugins
 
-Meta Box has a built-in integration for these multilingual plugins which allows you to translate values in custom fields.
+Meta Box has a built-in integration for these multilingual plugins, which allows you to translate values in custom fields.
 
 - WPML
 - Polylang

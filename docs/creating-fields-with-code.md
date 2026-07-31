@@ -12,7 +12,7 @@ Creating custom fields with code is suitable if you want to keep everything in y
 
 ## Registering custom fields with PHP
 
-To create custom fields, you'll need to use the filter `rwmb_meta_boxes` to register field groups. This filter accepts one parameter - the array of field groups:
+To create custom fields, you will need to use the filter `rwmb_meta_boxes` to register field groups. This filter accepts one parameter - the array of field groups:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -46,7 +46,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-Each field group has several settings and a list of fields, which we'll cover below.
+Each field group has several settings and a list of fields, which we will cover below.
 
 ## Field group settings
 
@@ -54,7 +54,7 @@ Each field group has several settings for the location or appearance. Please see
 
 Name|Description
 --|--
-`id`|ID, must be unique. Optional. If it's absent, it will be generated from the title.
+`id`|ID, must be unique. Optional. If it is absent, it will be generated from the title.
 `title`| The field group title. Required.
 `post_types`|Custom post types which the field group is for. It can be a string or an array of slugs. Must be in lowercase (like the slug). Optional. Default: `post`.
 `context`|Where the field group is displayed. See below for a list of field group contexts. Optional.
@@ -68,7 +68,7 @@ Name|Description
 
 :::info Media modal limitation
 
-Only simple fields such as text, select, radio, checkbox work in the media modal. Other fields that require custom JavaScript don't work.
+Only simple fields such as text, select, radio, checkbox work in the media modal. Other fields that require custom JavaScript do not work.
 
 :::
 
@@ -102,13 +102,13 @@ Meta Box supports more than 40 field types. They share some common settings but 
 
 When adding a field, you need to know what type it is and how it works. Understanding that helps you choose the right type of field and, therefore, the right type of data that you want to add to your posts.
 
-Below is the list of supported field types in alphabet order with a brief description. The field type key is used for reference in code. For how do they look like and how to use them, please see details in the [Field types](/fields/) menu.
+Below is the list of supported field types in alphabetical order with a brief description. The field type key is used for reference in code. For how they look like and how to use them, please see details in the [Field types](/fields/) menu.
 
 <Tabs>
 
   <TabItem value="basic" label="Basic" default>
 
-These are the basic and most used field types that don't require any extra library. The UI of these fields is WordPress-native.
+These are the basic and most used field types that do not require any extra library. The UI of these fields is WordPress-native.
 
 Type | Key | Description
 --- | --- | ---
@@ -182,8 +182,8 @@ Type | Key | Description
 --- | --- | ---
 Post | `post` | For selecting posts
 Sidebar | `sidebar` | For selecting sidebars
-Taxonomy | `taxonomy` | For selecting taxonomy terms. Doesn't save term IDs in post meta, but set post terms.
-Taxonomy advanced | `taxonomy_advanced` | For selecting taxonomy terms and saving term IDs in post meta as a comma-separated string. It doesn't set post terms.
+Taxonomy | `taxonomy` | For selecting taxonomy terms. Does not save term IDs in post meta, but sets post terms.
+Taxonomy advanced | `taxonomy_advanced` | For selecting taxonomy terms and saving term IDs in post meta as a comma-separated string. It does not set post terms.
 User | `user` | For selecting users
 
   </TabItem>
@@ -266,7 +266,7 @@ Before | `before` | Custom HTML outputted before field's HTML.
 After | `after` | Custom HTML outputted after field's HTML.
 Custom CSS class | `class` | Custom CSS class, in case you want to customize the field. Optional.
 Custom sanitize callback | `sanitize_callback` | Custom PHP callback for sanitizing field value before saving into the database. Set it to `none` to bypass the sanitization. See [more details](/sanitization/).
-Save field value | `save_field` | Whether to save field value. Optional. Default `true`. This option doesn't work in the block editor (Gutenberg).
+Save field value | `save_field` | Whether to save field value. Optional. Default `true`. This option does not work in the block editor (Gutenberg).
 Hide from block bindings? | `hide_from_block_bindings` | Hide this field from the block editor bindings UI. Optional. Default `false`. See [more details](/block-bindings/).
 Custom HTML5 attributes | `attributes` | Custom attributes for inputs. See [more details](/custom-attributes/).
 Validation | `validation` | Validation rules for fields. Optional. See [more details](/validation/).
@@ -278,7 +278,7 @@ Custom settings | N/A | Custom field settings, useful when you want to add your 
 
 :::tip Field ID prefix
 
-You can add a prefix to field IDs to prevent from using the same ID with other scripts. If you want to hide the fields in the default WordPress **Custom Fields** meta box, use underscore (`_`) as the prefix.
+You can add a prefix to field IDs to prevent using the same ID with other scripts. If you want to hide the fields in the default WordPress **Custom Fields** meta box, use underscore (`_`) as the prefix.
 
 :::
 
@@ -288,7 +288,7 @@ Besides all common settings, each field type can have its own settings. Please s
 
 :::tip Code examples
 
-To save time read and write settings for fields, we've already prepared some code examples that you can get from [Meta Box Code Snippet Library](https://github.com/wpmetabox/library/).
+To save time reading and writing settings for fields, we have already prepared some code examples that you can get from [Meta Box Code Snippet Library](https://github.com/wpmetabox/library/).
 
 :::
 
@@ -364,19 +364,19 @@ This video shows you all the field types and field settings:
 
 <FAQ question="Why does not my default value work?">
 
-The mechanism of `std` in Meta Box works only if the **field group has not been saved before**. It means all fields in that field group, not just the specific field that you set the `std` for. So if there's any field that already has value, then `std` won't work for other fields, even new fields you've just added.
+The mechanism of `std` in Meta Box works only if the **field group has not been saved before**. It means all fields in that field group, not just the specific field that you set the `std` for. So if there is any field that already has value, then `std` will not work for other fields, even new fields you have just added.
 
 Examples:
 
 When you create a new post, then no fields have values (of course), then `std` works for all fields.
 
-When you edit an existing post that has a field group, then some fields might have values. Therefore, `std` doesn't work for all fields. In this case, if you edit the field group and add a new field, `std` still doesn't work for that new field (even it has no value before), because the field group has been saved before.
+When you edit an existing post that has a field group, then some fields might have values. Therefore, `std` does not work for all fields. In this case, if you edit the field group and add a new field, `std` still does not work for that new field (even it has no value before), because the field group has been saved before.
 
 </FAQ>
 
 <FAQ question="Why does not my context work?">
 
-There are some situations that the context doesn't work as expected. That is probably because you have dragged and dropped the field groups to reorder them? If you have, then WordPress will save the position/location of them and use the saved position instead of the value in the `context` parameter. The order of field groups is saved in the user meta `meta-box-order_{screen id}` as follows:
+There are some situations where the context does not work as expected. That is probably because you have dragged and dropped the field groups to reorder them. If you have, then WordPress will save the position/location of them and use the saved position instead of the value in the `context` parameter. The order of field groups is saved in the user meta `meta-box-order_{screen id}` as follows:
 
 ![meta box order](https://imgur.elightup.com/A7bkxT9.png)
 

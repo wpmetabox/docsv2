@@ -184,7 +184,7 @@ With these abilities, AI agents can:
 
 For example, to create a field group for the `event` post type, use a prompt like this:
 
-> *Create a field group Event Details for the event post type. That field group includes 2 fields: Address (type: text, ID: address); Date and Time (type: Datetime, ID: datetime).*
+> *Create a field group Event Details for the event post type. That field group includes 2 fields: Address (type: text, ID: address). Date and Time (type: Datetime, ID: datetime).*
 
 ![Prompt to create a field group with an AI agent](./img/abilities-api/field-prompt.webp)
 

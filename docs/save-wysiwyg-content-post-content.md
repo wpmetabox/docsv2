@@ -11,14 +11,14 @@ Sometimes you want to move the traditional editor for the post to another locati
 - Description
 - Gallery
 
-Then keeping the description (which can be the post content) along with other fields make users easier to fill in the data. While this is impossible to do that with the default WordPress editor, we can do that with the [Meta Box](https://metabox.io) plugin. The steps to do that are describe below:
+Then keeping the description (which can be the post content) along with other fields makes it easier for users to fill in the data. While this is impossible to do with the default WordPress editor, we can do that with the [Meta Box](https://metabox.io) plugin. The steps to do that are described below:
 
-1. Remove the default editor (we don't want to display it at the top)
+1. Remove the default editor (we do not want to display it at the top)
 1. [Create a new wysiwyg field](/fields/wysiwyg/)
-1. Set that field take the post content as the value
+1. Set that field to take the post content as the value
 1. Save that field content into post content
 
-The code is quite straight forward as below:
+The code is quite straightforward as below:
 
 ```php
 // Remove the editor. Change 'post' to your custom post type.
@@ -66,6 +66,6 @@ add_filter( 'rwmb_content_field_meta', function() {
 There are 2 important things in the code above:
 
 1. To make Meta Box save the wysiwyg content to post content, we have to set it `'id' => 'content'`. This `id` is used to tell WordPress to get the submitted value and save it to post content.
-1. Because we use the WordPress's id for the field, some WordPress style is applied and makes the field look weird. We have to use a `custom_html` field to output some CSS to fix it. Note that you might want to enqueue another stylesheet to do the same job. Here we use the `custom_html` for the quick fix, it just works.
+1. Because we use the WordPress's id for the field, some WordPress styles are applied and make the field look weird. We have to use a `custom_html` field to output some CSS to fix it. Note that you might want to enqueue another stylesheet to do the same job. Here we use the `custom_html` for the quick fix, it just works.
 
-The code above works for `post`. If you want to make it work for another post type, don't forget to change the post type in the code above!
+The code above works for `post`. If you want to make it work for another post type, do not forget to change the post type in the code above!
