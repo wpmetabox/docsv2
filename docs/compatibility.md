@@ -43,6 +43,10 @@ Meta Box has a built-in integration for these multilingual plugins, which allows
 - WPML
 - Polylang
 
+### E-commerce plugins
+
+Meta Box has a built-in integration with [WooCommerce](/integrations/woocommerce/), which allows you to add custom fields to product pages and order screens (both legacy and HPOS modes).
+
 
 ### Optimization plugins
 
