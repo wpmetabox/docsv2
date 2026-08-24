@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(find docs -name \"*.md\" | xargs wc -l | sort -n | tail -20 && echo \"---\" && find docs -name \"*.md\" | wc -l)",
+      "Shell(for d in docs/*/; do echo \"$d: $(find \"$d\" -name '*.md' | wc -l | tr -d ' ') files, $(find \"$d\" -name '*.md' -exec cat {} + | wc -l | tr -d ' ') lines\"; done)",
+      "Shell(cd /Users/rilwis/sites/docsv2 && for f in docs/*.md; do cnt=$(grep -oE \"won't|can't|don't|doesn't|isn't|aren't|it's|you're|we're|they're|I'm|I'll|we'll|you'll|there's|that's|let's|didn't|haven't|hasn't|couldn't|shouldn't|wouldn't|what's|who's|he's|she's\" \"$f\" 2>/dev/null | wc -l | tr -d ' '); if [ \"$cnt\" != \"0\" ]; then echo \"$f: $cnt contractions\"; fi; done)",
+      "Shell(for:*)",
+      "Shell(do:*)",
+      "Shell(grep:*)",
+      "Shell(done:*)",
+      "Shell(cd /Users/rilwis/sites/docsv2 && for f in docs/*.md; do s=$(grep -nE \";$|; \" \"$f\" 2>/dev/null | grep -v \"```\" | grep -vE \"&amp;|&nbsp;|\\.\\.\\.\" | grep -vE \"^\\s*[0-9]+:.*;.*;.*;.*;\" | wc -l | tr -d ' '); if [ \"$s\" != \"0\" ]; then echo \"--- $f ($s lines with semicolon)\"; grep -nE \";$|; \" \"$f\" | head -5; fi; done 2>/dev/null)",
+      "Shell(sed:*)",
+      "Shell(cd /Users/rilwis/sites/docsv2 && for f in $(git diff --name-only docs/); do cnt=$(grep -oE \"utilize|leverage|ensure|prior to|subsequent to|regarding|concerning|additionally|furthermore|moreover|obtain|acquire|demonstrate|facilitate|initiate|commence|in order to|seamless|robust|cutting-edge|effortless|world-class\" \"$f\" 2>/dev/null | wc -l | tr -d ' '); if [ \"$cnt\" != \"0\" ]; then echo \"$f: $cnt\"; fi; done)",
+      "Shell(cd /Users/rilwis/sites/docsv2 && for f in $(git diff --name-only docs/); do e=$(grep -cE \"—|–\" \"$f\" 2>/dev/null | tr -d ' '); c=$(grep -cE \"’|‘|“|”\" \"$f\" 2>/dev/null | tr -d ' '); if [ \"$e\" != \"0\" ] || [ \"$c\" != \"0\" ]; then echo \"$f: emdash=$e curlyquote=$c\"; fi; done)",
+      "Shell(cd /Users/rilwis/sites/docsv2 && for f in $(git diff --name-only docs/); do cnt=$(grep -oE \"won't|can't|don't|doesn't|isn't|aren't|it's|you're|we're|they're|I'm|I'll|we'll|you'll|there's|that's|let's|didn't|haven't|hasn't|couldn't|shouldn't|wouldn't|what's|who's|he's|she's\" \"$f\" 2>/dev/null | wc -l | tr -d ' '); if [ \"$cnt\" != \"0\" ]; then echo \"$f: $cnt\"; fi; done; echo \"=== check diff summary ===\"; git diff --stat docs/ | tail -5)",
+      "Shell(git add docs/ && git commit -F - <<'EOF' Rewrite docs in Simplified Technical English Co-authored-by: CommandCodeBot <noreply@commandcode.ai> EOF)",
+      "Shell(git:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
