@@ -55,9 +55,11 @@
 /rwmb-get-field-settings/                                               /functions/rwmb-get-field-settings/
 /rwmb-get-registry/                                                     /functions/rwmb-get-registry/
 /create-columns-in-meta-box-builder/                                    /extensions/meta-box-builder/
-/compatible-themes/                                                     /compatibility/#themes
-/compatible-plugins/                                                    /compatibility/#plugins
-/compatible-hostings/                                                   /compatibility/#hostings
+/compatible-themes/                                                     /integrations/#themes
+/compatible-plugins/                                                    /integrations/#plugins
+/compatible-hostings/                                                   /integrations/#hostings
+/compatibility/                                                         /integrations/
+/compatibility/*                                                        /integrations/
 /using-two-date-formats/                                                /fields/date/
 /get-meta-value/                                                        /displaying-fields-with-code/
 
