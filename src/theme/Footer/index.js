@@ -14,12 +14,13 @@ export default () => (
           <div className="uppercase tracking-wider text-sm font-bold mb-2">About</div>
           <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="https://metabox.io/about/">About</a></li>
-            <li><a className="text-inherit" href="https://metabox.io/my-account/">My Account</a></li>
             <li><a className="text-inherit" href="https://metabox.io/affiliate/">Affiliate</a></li>
             <li><a className="text-inherit" href="https://metabox.io/faq/">FAQ</a></li>
             <li><a className="text-inherit" href="https://metabox.io/changelog/">Changelog</a></li>
             <li><a className="text-inherit" href="https://metabox.io/contact/">Contact</a></li>
-            <li><a className="text-inherit" href="https://metabox.io/graphics-logos/">Graphics &amp; Logos</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/graphics-logos/">Brand Assets</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/partners/">Partners</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/my-account/">My Account</a></li>
           </ul>
         </div>
         <div className="footer__products">
