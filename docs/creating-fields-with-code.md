@@ -8,11 +8,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import FAQ from '@site/src/components/FAQ';
 
-Creating custom fields with code is suitable if you want to keep everything in your themes or plugins. This way, you can re-use them in many websites and put them under a version control like Git.
+Use code to create custom fields if you want to keep everything in your themes or plugins. This lets you reuse them across websites and put them under version control like Git.
 
 ## Registering custom fields with PHP
 
-To create custom fields, you will need to use the filter `rwmb_meta_boxes` to register field groups. This filter accepts one parameter - the array of field groups:
+To create custom fields, use the `rwmb_meta_boxes` filter to register field groups. This filter accepts one parameter - the array of field groups:
 
 ```php
 add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
@@ -46,29 +46,29 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-Each field group has several settings and a list of fields, which we will cover below.
+Each field group has settings and a list of fields, covered below.
 
 ## Field group settings
 
-Each field group has several settings for the location or appearance. Please see the list below:
+Each field group has settings for location or appearance:
 
 Name|Description
 --|--
-`id`|ID, must be unique. Optional. If it is absent, it will be generated from the title.
+`id`|ID, must be unique. Optional. If it is absent, it will be generated from the title. We recommend specifying the ID explicitly to avoid issues when the title contains non-ASCII characters (e.g. Chinese, Japanese, Korean, or Vietnamese).
 `title`| The field group title. Required.
-`post_types`|Custom post types which the field group is for. It can be a string or an array of slugs. Must be in lowercase (like the slug). Optional. Default: `post`.
+`post_types`|Custom post types for the field group. Can be a string or an array of slugs. Must be in lowercase (like the slug). Optional. Default: `post`.
 `context`|Where the field group is displayed. See below for a list of field group contexts. Optional.
-`style`|Whether to keep the default WordPress field group style (`default`) or remove the wrapper box and display the fields seamlessly (`seamless`).
+`style`|Keep the default WordPress field group style (`default`) or remove the wrapper box and display fields without styling (`seamless`).
 `closed`|Whether to collapse the field group when the page loads? Optional. Default: `false`.
 `priority`|Priority within the context where the box is displayed (`high` or `low`). Optional. Default: `high`.
-`default_hidden`|Hide the field group by default (`true` or `false`)? The field group can be toggled using the checkbox option in screen Help (on the top right). Optional. Default `false`.
+`default_hidden`|Hide the field group by default (`true` or `false`)? Toggle this with the checkbox in screen Help (top right). Optional. Default `false`.
 `autosave`|Auto save the custom fields' values (like post content and title)? Optional. Default: `false`.
 `media_modal`|Add custom fields to media modal when viewing/editing an attachment. Works only when `post_types` is or contains `attachment`. Optional. Default `false`.
 `class`|Custom CSS class for the field group wrapper. Optional.
 
 :::info Media modal limitation
 
-Only simple fields such as text, select, radio, checkbox work in the media modal. Other fields that require custom JavaScript do not work.
+Only simple fields such as text, select, radio, and checkbox work in the media modal. Fields that require custom JavaScript do not work.
 
 :::
 
@@ -86,29 +86,29 @@ Name|Description
 `after_editor`|After the post content editor, but before `normal` section
 `before_permalink`|Before permalink
 
-:::warning Gutenberg
+:::warning Block editor
 
-Gutenberg editor only supports `normal` and `side` contexts. Other extra contexts are not supported.
+The block editor editor supports only `normal` and `side` contexts. Other contexts do not work.
 
 :::
 
 ## Fields
 
-Fields are added to a field group via the key `fields`. Each field is an array of settings.
+Add fields to a field group via the `fields` key. Each field is an array of settings.
 
 Meta Box supports more than 40 field types. They share some common settings but also offer unique settings per field type.
 
 ### Field types
 
-When adding a field, you need to know what type it is and how it works. Understanding that helps you choose the right type of field and, therefore, the right type of data that you want to add to your posts.
+Know the field type and how it works before adding a field. This helps you choose the right type for your data.
 
-Below is the list of supported field types in alphabetical order with a brief description. The field type key is used for reference in code. For how they look like and how to use them, please see details in the [Field types](/fields/) menu.
+The list below shows all supported field types in alphabetical order with a brief description. The field type key is used for code reference. See the [Field types](/fields/) menu for details on how they look and how to use them.
 
 <Tabs>
 
   <TabItem value="basic" label="Basic" default>
 
-These are the basic and most used field types that do not require any extra library. The UI of these fields is WordPress-native.
+These basic field types do not require an extra library. They use the WordPress UI.
 
 Type | Key | Description
 --- | --- | ---
@@ -123,7 +123,7 @@ Textarea | `textarea` | A paragraph text input
 
   <TabItem value="advanced" label="Advanced">
 
-These are the advanced field types that usually need an additional library to provide a user-friendly UI.
+These advanced field types need an additional library for the UI.
 
 Type | Key | Description
 --- | --- | ---
@@ -141,13 +141,13 @@ Google maps | `map` | Google Maps
 oEmbed | `oembed` | Input for media from Youtube, Vimeo, and all [supported sites](https://wordpress.org/support/article/embeds/) by WordPress
 Open Street Maps | `osm` | Open Street Maps
 Password | `password` | For entering a password
-Select advanced | `select_advanced` | Beautiful select dropdown using [select2](https://select2.github.io) library
+Select advanced | `select_advanced` | Select dropdown with search using [select2](https://select2.github.io) library
 Slider | `slider` | jQuery UI slider
 Switch | `switch` | On/off switch with iOS style
 Time picker | `time` | Time picker
 WYSIWYG editor | `wysiwyg` | WordPress editor
 
-Besides, some field types that are rarely used and we would not recommend using them because their UI is not as good and native as other fields.
+These field types are not recommended. Their UI is not as good as other fields.
 
 Type | Key | Description
 --- | --- | ---
@@ -161,7 +161,7 @@ Text list | `text_list` | Group of text inputs. Similar to Fieldset text, but ha
 
 :::warning
 
-These are field types that use the built-in browser UI without extra libraries. The UI might be different across operating systems and browsers. Please use with care.
+These field types use the built-in browser UI without extra libraries. The UI is different across operating systems and browsers. Use with care.
 
 :::
 
@@ -223,7 +223,7 @@ Tab | `tab` | For organizing fields in tabs. Requires [MB Tabs](/extensions/meta
 
 ### Field settings
 
-Each field contains settings to determine where and how data is loaded and saved. All fields share some common settings, but also offer unique settings per field type. There are also settings from extensions which are explained on each extension docs.
+Each field has settings for where and how data is loaded and saved. All fields share common settings. Each field type also has unique settings. Extension settings are explained in each extension docs.
 
 Below is the list of settings with a brief description. The keys are for reference in code.
 
@@ -236,7 +236,7 @@ Below is the list of settings with a brief description. The keys are for referen
 Name | Key | Description
 --- | --- | ---
 Label | `name` | Field label. Optional. If empty, the field input is 100% width.
-ID | `id` | Field ID. Required and must be unique. **It will be used as `meta_key` when saving to the database**. Use only numbers, letters, and underscores (and rarely dashes).
+ID | `id` | Field ID. Required and must be unique. The ID is used as `meta_key` when saving to the database. Use only numbers, letters, and underscores (and rarely dashes).
 Type | `type` | Field type. Required.
 Label description | `label_description` | Label description, displayed below the field label. Optional.
 Input description | `desc` | Field description, displayed below the field input. Optional.
@@ -262,10 +262,10 @@ Add more text | `add_button`|The text for **Add more** clone button. Optional. D
 
 Name | Key | Description
 --- | --- | ---
-Before | `before` | Custom HTML outputted before field's HTML.
-After | `after` | Custom HTML outputted after field's HTML.
+Before | `before` | Custom HTML output before the field HTML.
+After | `after` | Custom HTML output after the field HTML.
 Custom CSS class | `class` | Custom CSS class, in case you want to customize the field. Optional.
-Custom sanitize callback | `sanitize_callback` | Custom PHP callback for sanitizing field value before saving into the database. Set it to `none` to bypass the sanitization. See [more details](/sanitization/).
+Custom sanitize callback | `sanitize_callback` | Custom PHP callback for sanitizing field value before saving to the database. Set to `none` to bypass sanitization. See [more details](/sanitization/).
 Save field value | `save_field` | Whether to save field value. Optional. Default `true`. This option does not work in the block editor (Gutenberg).
 Hide from block bindings? | `hide_from_block_bindings` | Hide this field from the block editor bindings UI. Optional. Default `false`. See [more details](/block-bindings/).
 Custom HTML5 attributes | `attributes` | Custom attributes for inputs. See [more details](/custom-attributes/).
@@ -284,11 +284,11 @@ You can add a prefix to field IDs to prevent using the same ID with other script
 
 ### Field-specific settings
 
-Besides all common settings, each field type can have its own settings. Please see more details for each field type on the left menu.
+In addition to common settings, each field type has its own settings. See the left menu for details on each field type.
 
 :::tip Code examples
 
-To save time reading and writing settings for fields, we have already prepared some code examples that you can get from [Meta Box Code Snippet Library](https://github.com/wpmetabox/library/).
+To save time, we have prepared code examples in the [Meta Box Code Snippet Library](https://github.com/wpmetabox/library/).
 
 :::
 
@@ -356,7 +356,7 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 
 ## Video tutorial
 
-This video shows you all the field types and field settings:
+This video shows all field types and field settings:
 
 <LiteYouTubeEmbed id='WWeaM5vIAwM' />
 
@@ -364,22 +364,22 @@ This video shows you all the field types and field settings:
 
 <FAQ question="Why does not my default value work?">
 
-The mechanism of `std` in Meta Box works only if the **field group has not been saved before**. It means all fields in that field group, not just the specific field that you set the `std` for. So if there is any field that already has value, then `std` will not work for other fields, even new fields you have just added.
+The `std` value works only if the field group has not been saved before. This applies to all fields in the group, not just the field with `std`. If any field has a value, `std` does not work for other fields, even new ones you add.
 
 Examples:
 
-When you create a new post, then no fields have values (of course), then `std` works for all fields.
+When you create a new post, no fields have values. `std` works for all fields.
 
-When you edit an existing post that has a field group, then some fields might have values. Therefore, `std` does not work for all fields. In this case, if you edit the field group and add a new field, `std` still does not work for that new field (even it has no value before), because the field group has been saved before.
+When you edit an existing post with a field group, some fields may have values. Then `std` does not work for all fields. If you add a new field to the field group, `std` does not work for that field, even if it has no value. The field group was saved before.
 
 </FAQ>
 
 <FAQ question="Why does not my context work?">
 
-There are some situations where the context does not work as expected. That is probably because you have dragged and dropped the field groups to reorder them. If you have, then WordPress will save the position/location of them and use the saved position instead of the value in the `context` parameter. The order of field groups is saved in the user meta `meta-box-order_{screen id}` as follows:
+The context may not work if you dragged and dropped field groups to reorder them. WordPress saves the position and uses it instead of the `context` value. The order is saved in user meta `meta-box-order_{screen id}`:
 
 ![meta box order](https://imgur.elightup.com/A7bkxT9.png)
 
-In this case, deleting this user meta from the database will make the context work again.
+To fix this, delete the user meta from the database. The context will work again.
 
 </FAQ>
