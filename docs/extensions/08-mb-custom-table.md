@@ -23,19 +23,21 @@ When creating a field group with MB Builder, click on the settings button on the
 
 Turn on the **Custom table** option, and enter the **Table name**. By default, the table name contains the WordPress table prefix `wp_`. If you don't want to use it, disable the **Include table prefix** option.
 
-If you select the option **Auto create table**, the plugin will attempt to create the table for you. Once it's done, you'll see the custom table in your database, which has columns that match your custom field IDs, each column per field ID. To make the data compatible with the field data, the plugin uses the data type `TEXT` for all columns. You can change those types by clicking on **Edit Columns**.
+If you select **Auto create table**, the plugin creates the table. Each custom field ID becomes one column. Open **Edit columns** to set the SQL type and index. The builder suggests a type from the field type and settings. You can change the suggestion before you save the schema.
+
+If you save the field group without opening **Edit columns**, the plugin adds each missing column as `TEXT`.
 
 ![Edit columns for custom table](img/custom-model/edit-column.webp)
 
 Name|Description
 ---|---
 Name|The database column name. It usually matches the custom field ID.
-Type|The [MySQL data type](https://dev.mysql.com/doc/refman/8.0/en/data-types.html) used for the column. Select the type that matches the data stored in the field.
+Type|The [MySQL data type](https://dev.mysql.com/doc/refman/8.0/en/data-types.html). The builder suggests a type from the field. You can change it. See [Recommended SQL column types](#recommended-sql-column-types).
 Index|Adds a database index to the column.
-Status|Indicates whether the field matches its corresponding database column.
-Action|Remove a column from the table schema.
+Status|Shows whether the field matches the database column.
+Action|Removes a column from the table schema.
 
-When a field does not match its database column, Meta Box shows a notice so you can review the mismatch and update the table schema.
+When a field does not match its database column, Meta Box shows a notice so you can update the table schema.
 
 ![Notice when a field doesn't match schema](img/custom-model/notice-field-group.webp)
 
@@ -46,6 +48,91 @@ Now you can go to the edit post screen (or the edit user profile if you use the 
 :::info How does it work?
 
 The plugin will map custom table columns with custom field IDs, one column per custom field. If you have a group field, then the column name will be the top-level group ID, and it won't create columns for sub-fields. When you save a post, each custom field is stored in a corresponding column.
+
+:::
+
+## Recommended SQL column types
+
+Use this list in MB Builder (**Edit columns**) or in PHP with `MetaBox\CustomTable\API::create()`.
+
+### Available MySQL types in MB Builder
+
+The **Type** list in **Edit columns** shows these presets. Choose **Custom** for other MySQL types (for example `DECIMAL(12,4)` or `ENUM`).
+
+#### Numeric
+
+Type | Use for | Signed range
+---|---|---
+`TINYINT` | Small integers | `-128` to `127`
+`SMALLINT` | Small integers | `-32,768` to `32,767`
+`MEDIUMINT` | Medium integers | `-8,388,608` to `8,388,607`
+`INT` | Standard integers | `-2,147,483,648` to `2,147,483,647`
+`BIGINT` | Large integers, IDs, Unix timestamps | <code>-2<sup>63</sup></code> to <code>2<sup>63</sup> - 1</code>
+`DECIMAL(10,2)` | Exact decimals (money) | 10 digits total, 2 after the point
+`FLOAT` | Approximate decimals | About 7 decimal digits
+`DOUBLE` | Approximate decimals | About 15 decimal digits
+
+These integer ranges are the MySQL **signed** defaults. See [Integer Types (Exact Value)](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html). For a larger positive range, use `BIGINT` or a custom `UNSIGNED` type.
+
+#### Boolean
+
+Type | Use for | Notes
+---|---|---
+`TINYINT(1)` | Boolean `0` / `1` | Label in the builder: **BOOLEAN (TINYINT(1))**
+
+#### String
+
+Type | Use for | Max length
+---|---|---
+`CHAR(1)` | One character | 1 character
+`VARCHAR(255)` | Short strings (email, URL, slug, map `lat,long[,zoom]`) | 255 characters. Longer values are truncated.
+`TINYTEXT` | Short text | 255 bytes
+`TEXT` | Medium text, serialized arrays, choice values | 65,535 bytes
+`MEDIUMTEXT` | Long text | 16 MB
+`LONGTEXT` | Very long text (WYSIWYG, block editor) | 4 GB
+
+#### Date and time
+
+Type | Use for | Example
+---|---|---
+`DATE` | Date | `2024-03-28`
+`TIME` | Time | `09:20:00`
+`DATETIME` | Date and time | `2024-03-28 09:20:00`
+
+Do not put a normal index on `TEXT` or `LONGTEXT` without a prefix length. Use `VARCHAR` or an integer type when you need to index or sort the column.
+
+### Rules that force `TEXT`
+
+The builder uses `TEXT` when:
+
+- The field is cloneable (`clone`).
+- The field allows multiple values (`multiple`). Example: multi-select `post` or `taxonomy_advanced`. A single `taxonomy_advanced` value is a term ID (`BIGINT`). Multiple values are a comma-separated ID list (`TEXT`).
+- The field stores a serialized array or a string that does not fit a narrow type. See the `TEXT` rows below.
+
+### Suggestions by field type
+
+Field type | Suggested SQL type | Notes
+---|---|---
+`checkbox`, `switch` | `TINYINT(1)` | Stores `0` or `1`.
+`date` | `DATE` | Empty or MySQL `save_format` such as `Y-m-d`. Other formats use `VARCHAR(255)`.
+`date` with **Save value as timestamp** | `BIGINT` | Unix timestamp.
+`datetime` | `DATETIME` | Empty or MySQL `save_format` such as `Y-m-d H:i`. Other formats use `VARCHAR(255)`.
+`datetime` with **Save value as timestamp** | `BIGINT` | Unix timestamp.
+`time` | `TIME` | —
+`text`, `email`, `url`, `password`, `hidden`, `oembed`, `file_input`, `color`, `icon`, `sidebar`, `map`, `osm` | `VARCHAR(255)` | Short strings. `map` / `osm` store `lat,long[,zoom]`.
+`number`, `range`, `slider` | `INT` | Empty or integer `step`.
+`number`, `range`, `slider` | `FLOAT` | Decimal `step` or `any`. Use `DECIMAL(10,2)` for exact money.
+`post`, `user`, `single_image`, `taxonomy_advanced` | `BIGINT` | Single object or attachment ID. Use `TEXT` if the field is multiple or cloneable.
+`wysiwyg`, `block_editor` | `LONGTEXT` | Long HTML or block markup.
+`textarea`, `radio`, `select`, `select_advanced`, `button_group`, `image_select`, `checkbox_list`, `autocomplete`, `group`, `fieldset_text`, `text_list`, `key_value`, `link`, `background`, `file`, `file_advanced`, `file_upload`, `image`, `image_advanced`, `image_upload`, `video`, `taxonomy` | `TEXT` | Choice values can be any string. File lists and groups store serialized data.
+
+Layout fields (`heading`, `divider`, `button`, `custom_html`, `tab`) do not create columns.
+
+If you change a column type on a table that already has rows, check the data. A value that does not fit the new type can fail on save or be truncated.
+
+:::tip
+
+Open **Edit columns**, check the suggested types, then save the schema. Enable **Auto create table** so the next field group save updates the database.
 
 :::
 
