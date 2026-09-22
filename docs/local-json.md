@@ -13,7 +13,7 @@ After that, you can put the JSON files in the folder and Meta Box will automatic
 
 ## JSON format
 
-The JSON format is the same as when you export a field group and is very similar to the [PHP version](/creating-fields-with-code/) when you create a field group, except the `$schema` and `modified` attributes:
+The JSON format is the same as when you export a field group and is very similar to the [PHP version](/creating-fields-with-code/) when you create a field group, except the `$schema`, `modified`, and optional `private` attributes:
 
 ```json
 {
@@ -76,6 +76,31 @@ Syncing from JSON to the database has only one purpose: to edit fields visually,
 
 :::
 
+## Hiding files from Sync
+
+If you ship JSON files in a theme or plugin and do not want them in the **Sync available** list, set `"private": true` in the file:
+
+```json
+{
+  "$schema": "https://schemas.metabox.io/field-group.json",
+  // highlight-next-line
+  "private": true,
+  "title": "Theme fields",
+  "post_types": "post",
+  "fields": [
+    {
+      "name": "Subtitle",
+      "id": "subtitle",
+      "type": "text"
+    }
+  ],
+  "modified": 1739955432
+}
+```
+
+Meta Box still loads and registers the fields from that file. The Sync UI does not list it, so users cannot sync it to the database by mistake.
+
+The same `private` attribute works for settings pages, relationships, and custom models that use Local JSON.
 
 ## Adding custom folders
 
