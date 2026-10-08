@@ -35,7 +35,7 @@ Now let's see how to create a relationship with MB Builder.
 
 To create a relationship, go to **Meta Box > Relationships** and click **Add New**.
 
-![Create a relationship with MB Builder](img/relationships/create-relationship.png)
+![Create a relationship with MB Builder](img/relationships/create-relationship2.webp)
 
 Here you can enter all the settings for the relationship and each side of the relationship (**From** and **To**).
 
@@ -59,7 +59,7 @@ For each side, there are 3 tabs of settings:
 <Tabs>
   <TabItem value="general" label="General" default>
 
-![general settings for a relationship side](img/relationships/general.png)
+![general settings for a relationship side](img/relationships/general2.webp)
 
 Name | Description
 ---|---
