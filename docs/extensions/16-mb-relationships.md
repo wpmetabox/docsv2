@@ -5,7 +5,7 @@ title: MB Relationships
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-MB Relationships helps you create relationships between posts, terms, and users in WordPress. When you edit an item (post, term, or user), you can select other items to connect to. It works with all post types, custom taxonomies, and users, and supports many-to-many, one-to-many, many-to-one, and one-to-one relationships.
+MB Relationships helps you create relationships between posts, terms, users, and [custom models](/extensions/mb-custom-table/#custom-models) in WordPress. When you edit an item, you can select other items to connect to. It works with all post types, custom taxonomies, users, and custom models. It supports many-to-many, one-to-many, many-to-one, and one-to-one relationships.
 
 This is an example of a many-to-many relationship between events (a custom post type) and speakers (users).
 
@@ -27,7 +27,7 @@ You can create a relationship in either of the following ways:
 - **Using [MB Builder](/extensions/meta-box-builder/)**, which provides a UI for creating relationships. This is a premium extension already bundled in [Meta Box Lite](https://metabox.io/lite/) or [Meta Box AIO](https://metabox.io/aio/).
 - **Using code**.
 
-Before going into the detailed settings of a relationship, note that when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). Inside that meta box, there is a field ([`post`](/fields/post/), [`taxonomy_advanced`](/fields/taxonomy-advanced/), or [`user`](/fields/user/) depending on the object type) for selecting connected items. The field is cloneable by default, or a single-select dropdown when **Has one relationship** is enabled. The settings are divided into 3 parts: settings for the relationship, the meta box, and the field.
+Before going into the detailed settings of a relationship, note that when a relationship is created, you'll see a meta box (usually on the right side - this position can be changed). Inside that meta box, there is a field ([`post`](/fields/post/), [`taxonomy_advanced`](/fields/taxonomy-advanced/), [`user`](/fields/user/), or [`model`](/fields/model/) depending on the object type) for selecting connected items. The field is cloneable by default, or a single-select dropdown when **Has one relationship** is enabled. The settings are divided into 3 parts: settings for the relationship, the meta box, and the field.
 
 Now let's see how to create a relationship with MB Builder.
 
@@ -54,7 +54,7 @@ For each side, there are 3 tabs of settings:
 
 - **General**: for general settings such as object type and post type.
 - **Meta Box**: for extra meta box settings. These settings are the same as the field group settings when creating custom fields.
-- **Field**: for extra field settings. These settings are the same as the field settings ([post](/fields/post/), [taxonomy_advanced](/fields/taxonomy-advanced/), or [user](/fields/user/) depending on the object type).
+- **Field**: for extra field settings. These settings are the same as the field settings ([post](/fields/post/), [taxonomy_advanced](/fields/taxonomy-advanced/), [user](/fields/user/), or [model](/fields/model/) depending on the object type).
 
 <Tabs>
   <TabItem value="general" label="General" default>
@@ -63,13 +63,14 @@ For each side, there are 3 tabs of settings:
 
 Name | Description
 ---|---
-Object type | The type of object for this side. If you choose "Term" or "User", make sure [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) is activated.
+Object type | The type of object for this side: Post, Term, User, or Model. If you choose "Term" or "User", make sure [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) is activated. If you choose "Model", make sure [MB Custom Table](/extensions/mb-custom-table/) is activated and you have at least one [custom model](/extensions/mb-custom-table/#custom-models).
 Post type | If you select object type = "Post", the post type settings appear so you can select the post type.
 Taxonomy | If you select object type = "Term", the taxonomy settings appear so you can select the taxonomy.
+Model | If you select object type = "Model", the model settings appear so you can select the custom model.
 Has one relationship | When enabled, each item on this side can connect to only one item on the other side. The field becomes a single-select dropdown, and the plugin enforces the limit when saving data. When enabled on the other side, items that are already connected elsewhere are hidden from the dropdown.
 Empty message | The custom message displayed when there are no connections. Leave blank to use the default message "No connections".
 Show admin filter | Add a select dropdown to filter posts by this relationship. Works only for posts.
-Show as admin column | Show the connections in the admin list table for posts, terms, or users. When enabled, additional settings appear below.
+Show as admin column | Show the connections in the admin list table for posts, terms, users, or models. When enabled, additional settings appear below.
 Column position | The position of the admin column. Set it before, after, or in place of an existing column by choosing an option from the dropdown and selecting or entering the target column ID. The plugin provides a list of common WordPress columns - press the down arrow key to browse them. If you use a [custom admin column](/extensions/mb-admin-columns/), enter its column ID here.
 Column title | Custom admin column title. Leave blank to use the default title from the relationship meta box.
 Item link type | How each connected item appears in the admin column: linked to the edit screen, linked to view it on the frontend, or without links.
@@ -93,7 +94,7 @@ Custom CSS class | If you want to style your meta box, then enter a custom CSS c
   </TabItem>
   <TabItem value="field" label="Field">
 
-To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/), or [user](/fields/user/) field according to the object type of the relationship. This tab shows the settings for the field.
+To select connected items, the plugin uses Meta Box's [post](/fields/post/), [taxonomy advanced](/fields/taxonomy-advanced/), [user](/fields/user/), or [model](/fields/model/) field according to the object type of the relationship. This tab shows the settings for the field.
 
 :::warning
 
@@ -111,7 +112,7 @@ Label | The field label. Leave empty to hide the label.
 Label description | A description displayed below the field label.
 Input description | A description displayed below the field input.
 Placeholder | The placeholder text for the select dropdown.
-Query args | Custom query args to get posts, terms, or users to select from. A set of key-value pairs representing arguments for `WP_Query` (posts), `get_terms` (terms), or `get_users` (users).
+Query args | Custom query args to get posts, terms, users, or model items to select from. Use arguments for `WP_Query` (posts), `get_terms` (terms), or `get_users` (users). For models, use `limit`, `page`, `orderby`, `order`, `exclude`, and `s`. See the [model field](/fields/model/#query-args).
 Max items | The maximum number of selected items. For one-to-one or one-to-many relationships, use **Has one relationship** in the General tab instead. `Max items` only limits how many rows appear in the field UI and does not enforce uniqueness on the other side.
 Add more text | The custom text for the "Add more" button.
 Before | Custom HTML to output before the field.
@@ -172,6 +173,26 @@ add_action( 'mb_relationships_init', function () {
 } );
 ```
 
+Or register a relationship **from posts to a custom model** (for example, bookings):
+
+```php
+add_action( 'mb_relationships_init', function () {
+    MB_Relationships_API::register( [
+        'id'   => 'posts_to_bookings',
+        'from' => 'post',
+        'to'   => [
+            // highlight-start
+            'object_type' => 'model',
+            'model'       => 'booking',
+            'field'       => [
+                'item_title' => '{title} - {amount}',
+            ],
+            // highlight-end
+        ],
+    ] );
+} );
+```
+
 To register a **one-to-many** relationship (each product has one brand, each brand has many products), enable `has_one_relationship` on the side where each item has only one partner (the product/From side in this example):
 
 ```php
@@ -211,17 +232,18 @@ Both sides `from` or `to` accept various parameters for the connection and meta 
 
 Name|Description
 ---|---
-`object_type`|The object type the relationship is created from/to: `post` (default), `term` or `user`. Optional.
+`object_type`|The object type the relationship is created from/to: `post` (default), `term`, `user`, or `model`. Optional.
 `post_type`|The post type if the `object_type` is set to `post`. Default `post`. Optional.
 `taxonomy`|The taxonomy if the `object_type` is set to `term`.
+`model`|The model slug if the `object_type` is set to `model`.
 `has_one_relationship`|Whether each item on this side can connect to only one item on the other side (`true` or `false`). Default `false`. For one-to-one, set `true` on both `from` and `to`.
 `empty_message`|The message displayed when there are no connections.
 `meta_box`|Meta box settings, has the [same settings as a normal meta box](/creating-fields-with-code/#field-group-settings). Below are common settings you might want to change:
 -- `title`|The meta box title. Default is "Connect To" for "from" side and "Connected From" for "to" side.
-`field`|Field settings, has the same settings as a [post](/fields/post/), [user](/fields/user/) or [taxonomy](/fields/taxonomy/) field according to the object type. Below are common settings you might want to change:
+`field`|Field settings, has the same settings as a [post](/fields/post/), [user](/fields/user/), [taxonomy](/fields/taxonomy/), or [model](/fields/model/) field according to the object type. Below are common settings you might want to change:
 -- `name` | Field title.
 -- `placeholder` | Placeholder text.
--- `query_args`|Custom query arguments to get objects of `object_type`. Passed to `WP_Query()`, `get_terms()`, or `get_users()` depending on `object_type`.
+-- `query_args`|Custom query arguments to get objects of `object_type`. Passed to `WP_Query()`, `get_terms()`, or `get_users()` depending on `object_type`. For `model`, accepts `limit`, `page`, `orderby`, `order`, `exclude`, and `s`. See the [model field](/fields/model/#query-args).
 -- `max_clone` | Maximum number of connections. Does not enforce uniqueness on the other side. Use `has_one_relationship` for one-to-one or one-to-many relationships.
 
 :::warning
@@ -234,7 +256,7 @@ So, if you have a relationship from `post` to `user` and you are configuring the
 
 #### Admin column
 
-The plugin supports showing connected items in the admin list table of posts/terms or users. To enable this feature, add the `admin_column` parameter to the `from` or `to` relationship configuration:
+The plugin supports showing connected items in the admin list table of posts, terms, users, or models. To enable this feature, add the `admin_column` parameter to the `from` or `to` relationship configuration:
 
 ```php
 MB_Relationships_API::register( [
@@ -419,11 +441,11 @@ $siblings = new WP_Query( [
 ] );
 ```
 
-The code is similar to the above section, except for the extra `sibling` parameter. That parameter works for all post, term, or user queries.
+The code is similar to the above section, except for the extra `sibling` parameter. That parameter works for post, term, user, and model queries.
 
 ## Post archive
 
-All the examples above work well for a single post, term, or user. On a blog archive page, however, querying connected posts per item creates dozens of extra queries - one per post on the page.
+All the examples above work well for a single post, term, user, or model. On a blog archive page, however, querying connected posts per item creates dozens of extra queries - one per post on the page.
 
 To solve this problem, we need to use the following code:
 
