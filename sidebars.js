@@ -106,6 +106,7 @@ const sidebars = {
 				id: 'integrations/index',
 			},
 			items: [
+				'integrations/woocommerce',
 				'integrations/wpml',
 				'integrations/polylang',
 			],
