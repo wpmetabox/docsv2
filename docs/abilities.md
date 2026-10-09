@@ -5,18 +5,18 @@ title: Abilities
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
-The abilities from Meta Box are built on the [WordPress Abilities API](https://developer.wordpress.org/apis/abilities-api/) to let AI agents - such as Claude or Cursor - perform actions on your site's content. To handle the communication, Meta Box uses the official [MCP Adapter plugin](https://github.com/WordPress/mcp-adapter), which translates WordPress abilities into the Model Context Protocol (MCP) that AI agents understand.
+The abilities from Meta Box are built on the [WordPress Abilities API](https://developer.wordpress.org/apis/abilities-api/) to let AI agents - such as Claude or Cursor - perform actions on your site's content. To handle the communication, Meta Box uses the official [MCP Adapter plugin](https://wordpress.org/plugins/mcp-adapter/), which translates WordPress abilities into the Model Context Protocol (MCP) that AI agents understand.
 
 Depending on which abilities are enabled, AI agents can get, create, update, or delete custom post types, taxonomies, posts, terms, field groups, custom fields, and field values that Meta Box supports.
 
 ## Connecting AI agents to WordPress
 
-First, connect WordPress to an AI agent via the [MCP Adapter plugin](https://github.com/WordPress/mcp-adapter). It exposes WordPress as an MCP server that AI agents can connect to.
+First, connect WordPress to an AI agent via the [MCP Adapter plugin](https://wordpress.org/plugins/mcp-adapter/). It exposes WordPress as an MCP server that AI agents can connect to.
 
 ### 1. Install MCP Adapter plugin
 
-1. Download the [latest release of MCP Adapter](https://github.com/WordPress/mcp-adapter/releases) from GitHub
-2. Go to **Plugins → Add New → Upload Plugin**, select the ZIP file, then install and activate the plugin
+1. Go to **Plugins → Add New**, search for "MCP Adapter", then click **Install Now**
+2. Activate the plugin
 
 ### 2. Generate application password
 
@@ -61,7 +61,7 @@ Replace:
 - `WP_API_PASSWORD` with the Application Password from Step 2
 - `LOG_FILE` with the path where logs should be written
 
-For more details, follow the instructions in the [MCP Adapter plugin's GitHub repository](https://github.com/WordPress/mcp-adapter).
+For more details, see the [MCP Adapter plugin page](https://wordpress.org/plugins/mcp-adapter/) on WordPress.org.
 
 ## Post type abilities
 
