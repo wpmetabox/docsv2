@@ -2,6 +2,8 @@
 title: MB Custom Table
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
@@ -17,11 +19,29 @@ The easiest way to work with custom tables is using [MB Builder](/extensions/met
 
 When creating a field group with MB Builder, click on the settings button on the left sidebar and you'll see options to use a custom table as follows:
 
-![Create a custom table with MB Builder](img/save-data-custom-table.png)
+![Create a custom table with MB Builder](img/custom-model/edit-column-custom-table.webp)
 
-Turn on the option to **Custom table**, and enter the **Table name**. By default, the table name doesn't contain the WordPress table prefix. If you want to use the WordPress table prefix, enable the **Include table prefix** option (and don't enter the prefix manually).
+Turn on the **Custom table** option, and enter the **Table name**. By default, the table name contains the WordPress table prefix `wp_`. If you don't want to use it, disable the **Include table prefix** option.
 
-If you select the option **Auto create table**, the plugin will attempt to create the table for you. Once it's done, you'll see the custom table in your database, which has columns that match your custom field IDs, each column per field ID. To make the data compatible with the field data, the plugin uses the data type `TEXT` for all columns.
+If you select **Auto create table**, the plugin creates the table. Each custom field ID becomes one column. Open **Edit columns** to set the SQL type and index. The builder suggests a type from the field type and settings. You can change the suggestion before you save the schema.
+
+If you save the field group without opening **Edit columns**, the plugin adds each missing column as `TEXT`.
+
+![Edit columns for custom table](img/custom-model/edit-column.webp)
+
+Name|Description
+---|---
+Name|The database column name. It usually matches the custom field ID.
+Type|The [MySQL data type](https://dev.mysql.com/doc/refman/8.0/en/data-types.html). The builder suggests a type from the field. You can change it. See [Recommended SQL column types](#recommended-sql-column-types).
+Index|Adds a database index to the column.
+Status|Shows whether the field matches the database column.
+Action|Removes a column from the table schema.
+
+When a field does not match its database column, Meta Box shows a notice so you can update the table schema.
+
+![Notice when a field doesn't match schema](img/custom-model/notice-field-group.webp)
+
+![Update the schema](img/custom-model/missing.webp)
 
 Now you can go to the edit post screen (or the edit user profile if you use the meta box for users) and save the post. You'll see the data is saved in the new custom table instead of the post meta table.
 
@@ -31,9 +51,94 @@ The plugin will map custom table columns with custom field IDs, one column per c
 
 :::
 
+## Recommended SQL column types
+
+Use this list in MB Builder (**Edit columns**) or in PHP with `MetaBox\CustomTable\API::create()`.
+
+### Available MySQL types in MB Builder
+
+The **Type** list in **Edit columns** shows these presets. Choose **Custom** for other MySQL types (for example `DECIMAL(12,4)` or `ENUM`).
+
+#### Numeric
+
+Type | Use for | Signed range
+---|---|---
+`TINYINT` | Small integers | `-128` to `127`
+`SMALLINT` | Small integers | `-32,768` to `32,767`
+`MEDIUMINT` | Medium integers | `-8,388,608` to `8,388,607`
+`INT` | Standard integers | `-2,147,483,648` to `2,147,483,647`
+`BIGINT` | Large integers, IDs, Unix timestamps | <code>-2<sup>63</sup></code> to <code>2<sup>63</sup> - 1</code>
+`DECIMAL(10,2)` | Exact decimals (money) | 10 digits total, 2 after the point
+`FLOAT` | Approximate decimals | About 7 decimal digits
+`DOUBLE` | Approximate decimals | About 15 decimal digits
+
+These integer ranges are the MySQL **signed** defaults. See [Integer Types (Exact Value)](https://dev.mysql.com/doc/refman/8.0/en/integer-types.html). For a larger positive range, use `BIGINT` or a custom `UNSIGNED` type.
+
+#### Boolean
+
+Type | Use for | Notes
+---|---|---
+`TINYINT(1)` | Boolean `0` / `1` | Label in the builder: **BOOLEAN (TINYINT(1))**
+
+#### String
+
+Type | Use for | Max length
+---|---|---
+`CHAR(1)` | One character | 1 character
+`VARCHAR(255)` | Short strings (email, URL, slug, map `lat,long[,zoom]`) | 255 characters. Longer values are truncated.
+`TINYTEXT` | Short text | 255 bytes
+`TEXT` | Medium text, serialized arrays, choice values | 65,535 bytes
+`MEDIUMTEXT` | Long text | 16 MB
+`LONGTEXT` | Very long text (WYSIWYG, block editor) | 4 GB
+
+#### Date and time
+
+Type | Use for | Example
+---|---|---
+`DATE` | Date | `2024-03-28`
+`TIME` | Time | `09:20:00`
+`DATETIME` | Date and time | `2024-03-28 09:20:00`
+
+Do not put a normal index on `TEXT` or `LONGTEXT` without a prefix length. Use `VARCHAR` or an integer type when you need to index or sort the column.
+
+### Rules that force `TEXT`
+
+The builder uses `TEXT` when:
+
+- The field is cloneable (`clone`).
+- The field allows multiple values (`multiple`). Example: multi-select `post` or `taxonomy_advanced`. A single `taxonomy_advanced` value is a term ID (`BIGINT`). Multiple values are a comma-separated ID list (`TEXT`).
+- The field stores a serialized array or a string that does not fit a narrow type. See the `TEXT` rows below.
+
+### Suggestions by field type
+
+Field type | Suggested SQL type | Notes
+---|---|---
+`checkbox`, `switch` | `TINYINT(1)` | Stores `0` or `1`.
+`date` | `DATE` | Empty or MySQL `save_format` such as `Y-m-d`. Other formats use `VARCHAR(255)`.
+`date` with **Save value as timestamp** | `BIGINT` | Unix timestamp.
+`datetime` | `DATETIME` | Empty or MySQL `save_format` such as `Y-m-d H:i`. Other formats use `VARCHAR(255)`.
+`datetime` with **Save value as timestamp** | `BIGINT` | Unix timestamp.
+`time` | `TIME` | —
+`text`, `email`, `url`, `password`, `hidden`, `oembed`, `file_input`, `color`, `icon`, `sidebar`, `map`, `osm` | `VARCHAR(255)` | Short strings. `map` / `osm` store `lat,long[,zoom]`.
+`number`, `range`, `slider` | `INT` | Empty or integer `step`.
+`number`, `range`, `slider` | `FLOAT` | Decimal `step` or `any`. Use `DECIMAL(10,2)` for exact money.
+`post`, `user`, `single_image`, `taxonomy_advanced` | `BIGINT` | Single object or attachment ID. Use `TEXT` if the field is multiple or cloneable.
+`wysiwyg`, `block_editor` | `LONGTEXT` | Long HTML or block markup.
+`textarea`, `radio`, `select`, `select_advanced`, `button_group`, `image_select`, `checkbox_list`, `autocomplete`, `group`, `fieldset_text`, `text_list`, `key_value`, `link`, `background`, `file`, `file_advanced`, `file_upload`, `image`, `image_advanced`, `image_upload`, `video`, `taxonomy` | `TEXT` | Choice values can be any string. File lists and groups store serialized data.
+
+Layout fields (`heading`, `divider`, `button`, `custom_html`, `tab`) do not create columns.
+
+If you change a column type on a table that already has rows, check the data. A value that does not fit the new type can fail on save or be truncated.
+
+:::tip
+
+Open **Edit columns**, check the suggested types, then save the schema. Enable **Auto create table** so the next field group save updates the database.
+
+:::
+
 ## Using custom tables with code
 
-Using custom tables with code is suitable if you want to have more control over the data type or index key which can help improve the performance. It's recommended when you're a developer and you're familiar with MySQL.
+It's recommended when you're a developer and you're familiar with MySQL.
 
 ### Creating a custom table
 
@@ -231,11 +336,111 @@ Cons:
 - Models don't have front-end templates like posts. You won't have permalinks for each model and their archive. Models should be used for managing data. If you want to have the power of the templates, then you should use the normal custom tables above.
 - Limited compatibility with some extensions such as MB Relationships and MB Views.
 
-### Usage
+### Creating a custom model
 
-To create and use custom models, you need to follow 3 steps below:
+To create and use custom models, go to **Meta Box** > **Custom Models** > **Add New**.
 
-#### Step 1: Register a model
+![Go to Custom Models submenu to create a custom model](img/custom-model/create-custom-model.webp)
+
+:::info
+
+The instruction above uses [MB Builder](/extensions/meta-box-builder/), an extension providing the UI to create fields, and is already bundled in [Meta Box Lite](https://metabox.io/lite/) and [Meta Box AIO](/extensions/meta-box-aio/). If you prefer to use code, please see below.
+
+:::
+
+#### Custom model settings
+
+If you want to customize the model, such as changing the menu icon or configuring the model's database table and columns, please see the settings below.
+
+<Tabs>
+  <TabItem value="general" label="General" default>
+
+![General tab](img/custom-model/general.webp)
+
+Name | Description
+---|---
+Plural name | General name for the model, usually plural. Required.
+Singular name | Name for one object of this model. Required.
+Slug | Model key. Must not exceed 20 characters and may only contain lowercase alphanumeric characters, dashes, and underscores.
+Required capability | The required capability to access the menu and create/edit/delete models.
+Menu type | Whether to show the model as a top-level menu, a submenu of an existing menu, or not show it in the admin menu. Depending on the menu type, several settings below will appear.
+Show model menu after | Select the position of the menu. Available only when menu type is Top-level menu.
+Menu icon type | What type of menu icon. Available only when menu type is Top-level menu. Supports Dashicons, Font Awesome, SVG, and custom URL.
+Menu icon | The icon for the menu. Available only when the icon type is Dashicons or Font Awesome.
+Icon SVG | The custom SVG icon for the menu. Available only when the icon type is SVG.
+Icon URL | The URL for the custom icon. Available only when the icon type is Custom URL.
+Parent menu | If you select menu type "Submenu", then you can select the parent menu for this sub-menu here.
+
+When entering a singular name for the model, the slug is automatically generated. You can manually change the slug if necessary.
+
+  </TabItem>
+
+  <TabItem value="labels" label="Labels">
+
+Labels are automatically generated from the post type's plural and singular names.
+
+![Labels tab](img/custom-model/labels.webp)
+
+Name | Description
+---|---
+Add new | Label for adding a new singular item. Default is 'Add New'.
+Add new item | Label for adding a new singular item.
+Edit item | Label for editing a singular item.
+Search items | Label for searching items.
+Not found | Label used when no items are found.
+All items | Label to signify all items in a submenu link.
+Menu name | Label for the menu name. Default is the same as plural name.
+Item updated | Label used when an item is updated.
+Item added | Label used when an item is added.
+Item deleted | Label used when an item is deleted.
+
+  </TabItem>
+
+  <TabItem value="supports" label="Supports">
+
+![Supports tab](img/custom-model/supports.webp)
+
+These are core features the model supports.
+
+Name | Description
+---|---
+Author | Model author
+Published date | Published date of the model
+Modified date | Modified date of the model
+
+  </TabItem>
+
+  <TabItem value="table" label="Table">
+
+A custom model stores data in a custom database table instead of WordPress post meta. The **Table** tab lets you configure the database table for the custom model, including its name and columns.
+
+![Table tab](img/custom-model/table.webp)
+
+Name | Description
+---|---
+Table name | The name of the model database table. It can contain the WordPress table prefix or not. Use only lowercase letters, numbers, and underscores. Required.
+Column | Each column corresponds to a custom field, including the column name and its data type.
+Name | The database column name. It usually matches the custom field ID.
+Type | The MySQL data type used for the column. Select the type that matches the data stored in the field.
+Index | Adds a database index to the column.
+Action | Remove a column from the table schema.
+
+  </TabItem>
+</Tabs>
+
+When a field group is assigned to a custom model, you also have two ways to edit columns: the Settings panel or the notice:
+
+![Edit column for the model database table](img/custom-model/edit-column-model.webp)
+
+#### Getting PHP code
+
+If you're familiar with PHP, you might want to get the PHP code to register the model. To do that, click the Get PHP Code button and copy the generated code. Then can insert it into your theme's `functions.php` file (or your plugin's file).
+
+#### Creating custom model using code
+
+You need to follow 3 steps below:
+
+##### Step 1: Register a model
 
 Registering a model is very similar to a custom post type in WordPress, with fewer parameters. The code below registers a custom model `transaction`.
 
@@ -300,7 +505,7 @@ For example:
 
 By adding these options, your model will automatically handle common metadata fields, making your workflow simpler and more consistent.
 
-#### Step 2: Create a custom table for the model
+##### Step 2: Create a custom table for the model
 
 Creating a custom table is exactly the same to the section above. However, for models, the plugin automatically:
 
@@ -308,7 +513,7 @@ Creating a custom table is exactly the same to the section above. However, for m
 - Adds columns for supports (`author`, `published_date`, `modified_date`) if needed.
 - Adds a key for `author` if the model supports it.
 
-#### Step 3: Register fields for the model, corresponding to the custom table structure
+##### Step 3: Register fields for the model, corresponding to the custom table structure
 
 Registering fields for models is the same as for posts. You just need to specify which model the meta box is for.
 

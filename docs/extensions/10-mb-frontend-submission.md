@@ -4,7 +4,7 @@ title: MB Frontend Submission
 
 import FAQ from '@site/src/components/FAQ';
 
-MB Frontend Submission helps you create front-end forms for users to submit data to your website. It allows you to submit data for posts like post fields (title, content, etc.) and also custom fields created by Meta Box. It also support to custom table models and works with all extensions like [MB Group](/extensions/meta-box-group/) or [MB Conditional Logic](/extensions/meta-box-conditional-logic/).
+MB Frontend Submission helps you create front-end forms for users to submit data to your website. It allows you to submit data for posts like post fields (title, content, etc.) and custom fields created by Meta Box. It also supports custom table models and works with extensions such as [MB Group](/extensions/meta-box-group/) and [MB Conditional Logic](/extensions/meta-box-conditional-logic/).
 
 ![submission form](https://imgur.elightup.com/jfXHqSc.png)
 
@@ -38,32 +38,65 @@ Below is the list of the settings. The attribute is used for the shortcode.
 
 Name|Attribute|Description
 ---|---|---
-ID|`id`|Field group ID(s). If multiple field groups, enter their IDs separated by commas. Optional.
+ID|`id`|Field group ID(s). If you use multiple field groups, separate their IDs with commas. Optional.
 Ajax|`ajax`|Enable Ajax submission. `true` or `false` (default).
-Allow scroll|`allow_scroll`|Enable scroll to message after ajax submission. `false` or `true` (default).
-Edit|`edit`|Allow users to edit the post after submitting. `true` or `false` (default). If `true` then ajax submission will be disabled.
+Allow scroll|`allow_scroll`|Scroll to the message after Ajax submission. `false` or `true` (default).
+Edit|`edit`|Allow users to edit the post after submitting. `true` or `false` (default). If you set it to `true`, Ajax submission is disabled.
 Allow delete|`allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
-Force delete|`force_delete`|Whether to delete the submitted post permanently or temporarily (move to Trash).
-Show add more|`show_add_more`|Show add new button after submit. `true` or `false` (default).
-Object type|`object_type`|The object type for the submitted data. Can be either `post` or `model`. Default is `post`.
-Object ID|`object_id`| Optional. Used when you want to update an existing object. If you want to pass the ID of the current post, set it to `current`.
-Post type|`post_type`|The submitted post type. Optional. Default is the first post type defined in the meta box. If the meta box is made for multiple post types, you should set this attribute to the correct one.
-Post ID *(deprecated)*|`post_id`|The post ID. Optional. Used when you want to update an existing post. If you want to pass the ID of the current post, set it to `current`. This attribute is deprecated, use `object_id` instead.
-Post status|`post_status`|The status for submitted posts. See [the list here](https://wordpress.org/documentation/article/post-status/).
-Post fields|`post_fields`|List of post fields you want to show in the frontend, separated by commas. Supported the following fields: `title`, `content`, `excerpt`, `date`, and `thumbnail`.
-Title field label|`label_title`| Label for the post title field.
-Content field label|`label_content` | Label for the post content field.
-Excerpt field label|`label_excerpt`| Label for the post excerpt field.
-Date field label|`label_date` | Label for the post date field.
-Thumbnail field label|`label_thumbnail` | Label for the post thumbnail field.
-Submit button text|`submit_button`|The submit button text.
-Add new button text|`add_button`|The add new button text.
-Delete button text|`delete_button`|The delete button text.
+Force delete|`force_delete`|Delete the submitted post permanently or move it to Trash.
+Show add more|`show_add_more`|Show the Add New button after submit. `true` or `false` (default).
+Object type|`object_type`|Object type for the submitted data. Can be `post` or `model`. Default is `post`.
+Object ID|`object_id`|Optional. Use it when you want to update an existing object. Set it to `current` to use the current post ID.
+Post type|`post_type`|Submitted post type. Optional. By default, the plugin uses the first post type defined in the meta box. If the meta box is assigned to multiple post types, set this attribute to the correct one.
+Post ID *(deprecated)*|`post_id`|Optional. Use it when you want to update an existing post. Set it to `current` to use the current post ID. This attribute is deprecated. Use `object_id` instead.
+Post status|`post_status`|Status for submitted posts. See [the list of post statuses](https://wordpress.org/documentation/article/post-status/).
+Post fields|`post_fields`|List of post fields to show on the front end, separated by commas. Supported fields are `title`, `content`, `excerpt`, `date`, and `thumbnail`.
+Title field label|`label_title`|Label for the post title field.
+Content field label|`label_content`|Label for the post content field.
+Excerpt field label|`label_excerpt`|Label for the post excerpt field.
+Date field label|`label_date`|Label for the post date field.
+Thumbnail field label|`label_thumbnail`|Label for the post thumbnail field.
+Submit button text|`submit_button`|Text for the submit button.
+Add new button text|`add_button`|Text for the Add New button.
+Delete button text|`delete_button`|Text for the delete button.
 Custom redirect URL|`redirect`|Custom redirect URL.
-Confirmation text|`confirmation`|The text for the confirmation message when the form is successfully submitted.
-Delete confirmation text|`delete_confirmation`|The text for the confirmation message when the post is deleted.
-reCaptcha key|`recaptcha_key`|Google reCaptcha site key (version 3). Optional.
-reCaptcha secret|`recaptcha_secret`|Google reCaptcha secret key (version 3). Optional.
+Confirmation text|`confirmation`|Text for the confirmation message shown after a successful submission.
+Delete confirmation text|`delete_confirmation`|Text for the confirmation message shown after a post is deleted.
+Captcha provider|`captcha_provider`|Captcha provider for the form. Use `recaptcha` for Google reCAPTCHA v3 or `turnstile` for Cloudflare Turnstile. Optional.
+Site key|`recaptcha_key`|Site key for the selected captcha provider. Optional.
+Secret key|`recaptcha_secret`|Secret key for the selected captcha provider. Optional.
+
+### Spam protection
+
+MB Frontend Submission supports two captcha providers:
+
+- Google reCAPTCHA v3
+- Cloudflare Turnstile
+
+To enable captcha protection, set the `captcha_provider` attribute and then enter the matching site key (`captcha_key`) and secret key (`captcha_secret`) for that provider:
+
+Example with Google reCAPTCHA v3:
+
+```php
+[mb_frontend_form id="field-group-id" post_fields="title,content" captcha_provider="recaptcha" recaptcha_key="your_site_key" recaptcha_secret="your_secret_key"]
+```
+
+Example with Cloudflare Turnstile:
+
+```php
+[mb_frontend_form id="field-group-id" post_fields="title,content" captcha_provider="turnstile" recaptcha_key="your_site_key" recaptcha_secret="your_secret_key"]
+```
+
+:::info Backward Compatibility
+
+The old reCAPTCHA-specific keys have been migrated to the new provider-based key fields:
+
+- `recaptcha_key` is now the `captcha_key`
+- `recaptcha_secret` is now the `captcha_secret`
+
+These attribute names stay the same for backward compatibility.
+
+:::
 
 ### Hiding a field
 
