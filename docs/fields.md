@@ -99,6 +99,8 @@ Learn about field types, what they are and when you should use them.
 
 [![post](/thumbs/post.png) <span className="thumb_text">Post</span>](/fields/post/)
 
+[![custom model](/thumbs/model.png) <span className="thumb_text">Custom Model</span>](/fields/model/)
+
 [![sidebar](/thumbs/sidebar.png) <span className="thumb_text">Sidebar</span>](/fields/sidebar/)
 
 [![taxonomy](/thumbs/taxonomy.png) <span className="thumb_text">Taxonomy</span>](/fields/taxonomy/)
