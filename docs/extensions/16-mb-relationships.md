@@ -5,7 +5,7 @@ title: MB Relationships
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-MB Relationships helps you create relationships between posts, terms, users, and [custom models](/extensions/mb-custom-table/#custom-models) in WordPress. When you edit an item, you can select other items to connect to. It works with all post types, custom taxonomies, users, and custom models. It supports many-to-many, one-to-many, many-to-one, and one-to-one relationships.
+MB Relationships creates relationships between posts, terms, users, and [custom models](/extensions/mb-custom-table/#custom-models). When you edit an item, you can select other items to connect to. It works with all post types, custom taxonomies, users, and custom models. It supports many-to-many, one-to-many, many-to-one, and one-to-one relationships.
 
 This is an example of a many-to-many relationship between events (a custom post type) and speakers (users).
 
@@ -63,10 +63,10 @@ For each side, there are 3 tabs of settings:
 
 Name | Description
 ---|---
-Object type | The type of object for this side: Post, Term, User, or Model. If you choose "Term" or "User", make sure [MB Term Meta](/extensions/mb-term-meta/) or [MB User Meta](/extensions/mb-user-meta/) is activated. If you choose "Model", make sure [MB Custom Table](/extensions/mb-custom-table/) is activated and you have at least one [custom model](/extensions/mb-custom-table/#custom-models).
-Post type | If you select object type = "Post", the post type settings appear so you can select the post type.
-Taxonomy | If you select object type = "Term", the taxonomy settings appear so you can select the taxonomy.
-Model | If you select object type = "Model", the model settings appear so you can select the custom model.
+Object type | Object type for this side: Post, Term, User, or Model. For Term, activate [MB Term Meta](/extensions/mb-term-meta/). For User, activate [MB User Meta](/extensions/mb-user-meta/). For Model, activate [MB Custom Table](/extensions/mb-custom-table/) and create at least one [custom model](/extensions/mb-custom-table/#custom-models).
+Post type | Appears when object type is Post. Select the post type.
+Taxonomy | Appears when object type is Term. Select the taxonomy.
+Model | Appears when object type is Model. Select the custom model.
 Has one relationship | When enabled, each item on this side can connect to only one item on the other side. The field becomes a single-select dropdown, and the plugin enforces the limit when saving data. When enabled on the other side, items that are already connected elsewhere are hidden from the dropdown.
 Empty message | The custom message displayed when there are no connections. Leave blank to use the default message "No connections".
 Show admin filter | Add a select dropdown to filter posts by this relationship. Works only for posts.
@@ -112,7 +112,7 @@ Label | The field label. Leave empty to hide the label.
 Label description | A description displayed below the field label.
 Input description | A description displayed below the field input.
 Placeholder | The placeholder text for the select dropdown.
-Query args | Custom query args to get posts, terms, users, or model items to select from. Use arguments for `WP_Query` (posts), `get_terms` (terms), or `get_users` (users). For models, use `limit`, `page`, `orderby`, `order`, `exclude`, and `s`. See the [model field](/fields/model/#query-args).
+Query args | Query arguments for the items to select. For posts, use `WP_Query` args. For terms, use `get_terms` args. For users, use `get_users` args. For models, use `limit`, `page`, `orderby`, `order`, `exclude`, and `s`. See the [model field](/fields/model/#query-args).
 Max items | The maximum number of selected items. For one-to-one or one-to-many relationships, use **Has one relationship** in the General tab instead. `Max items` only limits how many rows appear in the field UI and does not enforce uniqueness on the other side.
 Add more text | The custom text for the "Add more" button.
 Before | Custom HTML to output before the field.
