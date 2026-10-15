@@ -15,14 +15,14 @@ Attribute|Description
 `id`|Field ID. Required.
 `object_id`|Object ID. Required when `object_type` is not `post`. For `post`, if you omit it, Meta Box uses the current post ID.
 `object_type`|Object type. Optional. Default: `post`. Allowed values: `post`, `term`, `user`, `comment`, `setting`, `network_setting`, `model`.
-`attribute`|One key from the field value when the value is an array (for example image URL or term slug). Meta Box reads the value with [rwmb_get_value()](/functions/rwmb-get-value/).
+`attribute`|One key from the field value when the value is an array, for example an image URL or a term slug. Meta Box reads the value with [rwmb_get_value()](/functions/rwmb-get-value/).
 `render_shortcodes`|Whether to run shortcodes inside the field value. Default: `true`.
 
 The shortcode uses the same parameters as [rwmb_the_value()](/functions/rwmb-the-value/).
 
 :::tip Other attributes
 
-You can pass extra attributes. Meta Box forwards them to [rwmb_the_value()](/functions/rwmb-the-value/) as the second argument. For `model`, pass `type` with the model name (same as `rwmb_meta()`).
+You can pass extra attributes. Meta Box forwards them to [rwmb_the_value()](/functions/rwmb-the-value/) as the second argument. For `model`, pass `type` with the model name. Use the same model name that `rwmb_meta()` uses.
 
 :::
 
@@ -32,7 +32,7 @@ If you set `object_id`, Meta Box checks whether the current user can read that o
 
 Object type|Rule
 ---|---
-`post`|Allow publicly viewable posts that are not password-protected. Other posts need the `read_post` capability.
+`post`|Allow publicly viewable posts. If the post has a password and the visitor has not entered it, require `read_post`. Other non-public posts also need `read_post`.
 `term`|Allow [publicly viewable](https://developer.wordpress.org/reference/functions/is_term_publicly_viewable/) terms. Other terms need `edit_term`.
 `comment`|Allow approved comments when the parent post is readable. Other comments need `edit_comment`.
 `user`|Need `edit_user` for that user.
@@ -79,18 +79,24 @@ Network settings value:
 [rwmb_meta id="phone" object_id="network_option" object_type="network_setting"]
 ```
 
-Custom table field:
+Custom table field for post meta:
 
 ```php
 [rwmb_meta id="area" object_id="15" storage_type="custom_table" table="properties"]
 ```
 
-## Bypass permission checks
-
-Use `rwmb_meta_shortcode_permission` to change or bypass the object check:
+Custom table model:
 
 ```php
-// Allow every object type. Use only when you trust the content authors.
+[rwmb_meta id="area" object_id="15" object_type="model" type="property"]
+```
+
+## Override permission checks
+
+When `object_id` is set, use `rwmb_meta_shortcode_permission` to allow or deny that object. The filter does not run when a non-`post` shortcode omits `object_id`. When that happens, the shortcode returns an empty string.
+
+```php
+// Allow every object that reaches the check. Use only when you trust the content authors.
 add_filter( 'rwmb_meta_shortcode_permission', '__return_true' );
 
 // Allow one settings page for everyone.
