@@ -22,7 +22,7 @@ The shortcode uses the same parameters as [rwmb_the_value()](/functions/rwmb-the
 
 :::tip Other attributes
 
-You can pass extra attributes. Meta Box forwards them to [rwmb_the_value()](/functions/rwmb-the-value/) as the second argument.
+You can pass extra attributes. Meta Box forwards them to [rwmb_the_value()](/functions/rwmb-the-value/) as the second argument. For `model`, pass `type` with the model name (same as `rwmb_meta()`).
 
 :::
 
@@ -32,17 +32,18 @@ If you set `object_id`, Meta Box checks whether the current user can read that o
 
 Object type|Rule
 ---|---
-`post`|Allow published posts with no password. Other posts need the `read_post` capability.
+`post`|Allow publicly viewable posts that are not password-protected. Other posts need the `read_post` capability.
 `term`|Allow [publicly viewable](https://developer.wordpress.org/reference/functions/is_term_publicly_viewable/) terms. Other terms need `edit_term`.
 `comment`|Allow approved comments when the parent post is readable. Other comments need `edit_comment`.
 `user`|Need `edit_user` for that user.
-`setting` / `network_setting`|Need the settings page capability. Meta Box matches the page by `option_name`, or by `id` when `option_name` is empty. Default capability: `edit_theme_options`.
-`model`|Need the model capability. Meta Box resolves the model from the `model` or `type` attribute, or from the field registry. Default capability: `edit_posts`.
+`setting`|Need the settings page capability. Meta Box matches a non-network page by `option_name`, or by `id` when `option_name` is empty. Default capability: `edit_theme_options`.
+`network_setting`|Need the network settings page capability. Meta Box matches a page with `network => true`. Default capability: `manage_network_options`.
+`model`|Need the model capability. Pass the model name in `type`. Default capability: `edit_posts`.
 Other values|Denied.
 
 Notes:
 
-- If `object_type` is not `post`, pass `object_id`. If you omit `object_id`, Meta Box sets `object_type` to `post` and uses the current post.
+- If `object_type` is not `post`, pass `object_id`. If you omit `object_id`, the shortcode returns an empty string.
 - Guests cannot read user meta through the shortcode. The current user must be able to edit that user. To show a public user field on the front end, use the filter below or print the value in PHP.
 - Unknown `object_type` values are denied. Use the filter below to allow them.
 
