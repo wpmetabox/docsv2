@@ -36,9 +36,9 @@ Object type|Rule
 `term`|Allow [publicly viewable](https://developer.wordpress.org/reference/functions/is_term_publicly_viewable/) terms. Other terms need `edit_term`.
 `comment`|Allow approved comments when the parent post is readable. Other comments need `edit_comment`.
 `user`|Need `edit_user` for that user.
-`setting`|Need the settings page capability. Meta Box matches a non-network page by `option_name`, or by `id` when `option_name` is empty. Default capability: `edit_theme_options`.
-`network_setting`|Need the network settings page capability. Meta Box matches a page with `network => true`. Default capability: `manage_network_options`.
-`model`|Need the model capability. Pass the model name in `type`. Default capability: `edit_posts`.
+`setting`|Allowed.
+`network_setting`|Allowed.
+`model`|Allowed. Pass the model name in `type`.
 Other values|Denied.
 
 Notes:
@@ -98,14 +98,6 @@ When `object_id` is set, use `rwmb_meta_shortcode_permission` to allow or deny t
 ```php
 // Allow every object that reaches the check. Use only when you trust the content authors.
 add_filter( 'rwmb_meta_shortcode_permission', '__return_true' );
-
-// Allow one settings page for everyone.
-add_filter( 'rwmb_meta_shortcode_permission', function ( $allowed, $object_type, $object_id, $atts, $field_id ) {
-	if ( 'setting' === $object_type && 'site_option' === $object_id ) {
-		return true;
-	}
-	return $allowed;
-}, 10, 5 );
 
 // Allow one public user field for everyone.
 add_filter( 'rwmb_meta_shortcode_permission', function ( $allowed, $object_type, $object_id, $atts, $field_id ) {
