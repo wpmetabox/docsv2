@@ -61,6 +61,7 @@ Meta Box has built-in integration for these multilingual plugins. Use them to tr
 - WP All Import/Export: official support from Soffly
 - [Auto Listings](https://wpautolistings.com/)
 - [WordPress Ultimate CSV, XML Importer Pro](https://www.smackcoders.com/wp-ultimate-csv-importer-pro.html/)
+- [FlowMattic](https://flowmattic.com/integration/metabox/): connects Meta Box and MB Custom Table with 900+ apps inside WordPress, with unlimited workflows for a flat price.
 
 ## Themes
 
