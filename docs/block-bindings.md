@@ -114,7 +114,7 @@ Use `meta-box/term-field`, `meta-box/author-field`, or `meta-box/setting-field` 
 
 ## Structured fields
 
-Scalar fields ([text](/fields/text/), [number](/fields/number/), [email](/fields/email/), and similar) expose a single binding option: the field value as a string.
+Scalar fields ([text](/fields/text/), [number](/fields/number/), email, and similar) expose a single binding option: the field value as a string.
 
 Structured fields expose **properties** you can bind separately. In the UI they appear as labels like `Poster Image: URL` or `Poster Image: Alt Text`. In code, pass a `key` in the binding args:
 

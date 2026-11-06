@@ -8,8 +8,13 @@ This docs shows you how to use [Composer](https://getcomposer.org/) to install a
 
 :::warning Licensing
 
-1. If you want to bundle **premium extensions** into other products or services (plugins, themes, solutions, hosting providers, SASS companies, site maintenance providers, etc.) that sell to other people, please [contact us](https://metabox.io/contact/) for a custom pricing plan.
-2. You are **not allowed** to use **premium extensions** in your free products, like plugins and themes on WordPress.org.
+You can bundle Meta Box and free extensions in all products. For **premium extensions**:
+
+1. You can use them on websites for you or your clients.
+2. You **cannot** use them in free products, such as plugins and themes on WordPress.org.
+3. To use them in products and services that you sell to other people, [contact us](https://metabox.io/contact/) for a custom pricing plan.
+
+For more information, see [Bundling Meta Box](/bundling/#licensing).
 
 :::
 
