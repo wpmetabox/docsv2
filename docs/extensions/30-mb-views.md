@@ -30,6 +30,35 @@ In the view screen, you'll see 2 areas:
 
 In the main editor, you can enter any HTML or *shortcodes* for the template. All shortcodes will be parsed automatically in the front end.
 
+## Preview
+
+The **Preview** tab shows the view before you save it. The tab is next to the **Template**, **CSS**, and **JavaScript** tabs.
+
+![Preview a view in the view editor](./img/view-preview-tab.webp)
+
+The preview shows the current template, CSS, and JavaScript with the styles of your theme. It uses the settings in the editor, also the settings that you did not save. When you change the location rules, the preview changes too.
+
+To preview a view:
+
+1. Open the view and click the **Preview** tab.
+2. In **Preview with**, select a page. To find a page, type a part of its title.
+3. To see the view on a smaller screen, click the tablet (768px) or mobile (375px) button.
+4. To show the preview again, click the **Refresh** button.
+
+The **Preview with** list shows the pages that match the type and the location rules of the view:
+
+- For singular views, the list shows posts.
+- For archive views, the list shows archives: post type archives, categories, tags, taxonomies, authors, dates, and search results.
+- For action, code, shortcode, and block views, the list shows the recent posts of all public post types.
+
+When the **Preview** tab is open, the preview updates about 1 second after you stop typing or change a setting. If the template has a Twig syntax error or another error, the preview shows the error.
+
+:::info
+
+The preview shows only the content of the view. It does not use the **Render for** and **Position** settings. Thus, the header and the footer of the theme can look different from the front end.
+
+:::
+
 ## Insert fields
 
 To insert a field, click the **Insert Field** button. It will open a panel on the right, where you can see all available fields.

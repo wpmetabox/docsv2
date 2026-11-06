@@ -45,7 +45,7 @@ Send confirmation email|`email_confirmation`|Send a confirmation email when regi
 Password strength|`password_strength`|Set the required password strength. Available options: `strong`, `medium`, `weak`, `very-weak`, or `false` to disable password strength meter.
 Use email for username|`email_as_username`|Use email for username. If this param is `true`, then the username field will disappear.
 Always show|`show_if_user_can`|Always show the form if the current user has the proper capability. Should be a [WordPress capability](https://wordpress.org/support/article/roles-and-capabilities/). Useful if admins want to register for other people.
-Role for the new user|`role`|Role for the new user. If `append_role` is set to `true`, then the new role is appended, so users will have 2 roles: the default roles set by WordPress and this role. Default empty.
+Role for the new user|`role`|Role for the new user. If `append_role` is set to `true`, then the new role is appended, so users will have 2 roles: the default roles set by WordPress and this role. Default empty. The role must be in the **Allowed registration roles** setting. If it is not, the new user gets the Subscriber role. See [Settings](#settings).
 Append role|`append_role`|Whether to append the role to users instead of setting only one role for users.
 Captcha provider|`captcha_provider`|Captcha provider for the form. Use `recaptcha` for Google reCAPTCHA v3 or `turnstile` for Cloudflare Turnstile. Optional.
 Site key|`captcha_key`|Site key for the selected captcha provider. Optional.
@@ -235,13 +235,60 @@ These old attribute names still work for backward compatibility.
 
 ## Settings
 
-MB User Profile has a settings page under **Meta Box > User Profile** that allows you to change some settings for the plugin.
+MB User Profile has a settings page at **Meta Box » User Profile**.
 
-![User profile settings](https://imgur.elightup.com/NSOCjiE.png)
+![User profile settings](./img/user-profile-settings.webp)
 
-- **Force password change**: force users to change their password after the first login.
-- **Email confirmation success page**: select a page to show when users successfully confirm their email. If no page is selected, a default message will be displayed.
-- **Email confirmation error page**: select a page to show when there are errors when users confirming their email. If no page is selected, a default message will be displayed.
+The settings page has these settings:
+
+- **Enable limit login attempts**: block an IP address for 1 hour after 3 failed login attempts. See [Limit login attempts](#limit-login-attempts).
+- **Force password change**: make new users change their password after their first login.
+- **Allowed registration roles**: the roles that the registration form can give to new users. The default role is Subscriber. See [Allowed registration roles](#allowed-registration-roles).
+- **Email confirmation success page**: the page that shows when a user confirms their email. If you do not select a page, the plugin shows a default message.
+- **Email confirmation error page**: the page that shows when the email confirmation fails. If you do not select a page, the plugin shows a default message.
+
+### Limit login attempts
+
+This setting protects your site from attacks that try many passwords. When the setting is on:
+
+- After 3 failed login attempts from an IP address, the plugin blocks that IP address for 1 hour.
+- The block applies to all login forms on the site, also to `wp-login.php`.
+- A blocked user sees the message "Too many failed login attempts. Please try again in 1 hour."
+- A successful login resets the count of failed attempts.
+
+To turn on the setting:
+
+1. Go to **Meta Box » User Profile**.
+2. Turn on **Enable limit login attempts**.
+3. Click **Save Settings**.
+
+:::info
+
+The plugin counts failed attempts for each IP address. If your site is behind a proxy or a CDN, all visitors can have the same IP address. In this case, make sure that your server gives the real IP address of the visitor to WordPress.
+
+:::
+
+### Allowed registration roles
+
+The `role` attribute of the registration form sets the role of new users. For security, the plugin gives a role to new users only if the role is in the **Allowed registration roles** setting. If the role is not in the setting, the new user gets the Subscriber role.
+
+To let the registration form give a role other than Subscriber:
+
+1. Go to **Meta Box » User Profile**.
+2. In **Allowed registration roles**, select the roles.
+3. Click **Save Settings**.
+
+For example, to register new users as authors, select **Author** in the setting and use this shortcode:
+
+```php
+[mb_user_profile_register role="author"]
+```
+
+:::caution
+
+Before version 2.7.0, the registration form accepted all roles. If your registration form uses the `role` attribute with a role other than Subscriber, add that role to the setting after you update the plugin.
+
+:::
 
 ## Email templates
 

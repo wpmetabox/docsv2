@@ -152,6 +152,7 @@ Name | Description
 ---|---
 Re-Order Posts | Order posts of that post type using a drag and drop interface. [Learn more here](/reorder-posts-terms/).
 Add toggle status column | Add a column to quickly toggle post status between published and draft.
+Remove post type slug from URL | Change single post URLs from `/post-type/post-name/` to `/post-name/`. [Learn more here](#removing-the-post-type-slug-from-urls).
 
   </TabItem>
 
@@ -293,6 +294,35 @@ Re-Order Terms | Order terms of this taxonomy using a drag and drop interface. [
 ### Getting PHP code​
 
 If you're familiar with PHP, you might want to get the PHP code to register the taxonomy. To do that, click the **Get PHP Code** button and copy the generated code. Then can insert it into your theme's `functions.php` file (or your plugin's file). After inserting, you can deactivate the extension to make your site a little bit faster.
+
+## Removing the post type slug from URLs
+
+WordPress adds the post type slug to the URL of each post, for example `https://example.com/book/the-hobbit/`. You can remove the slug to make the URL shorter, for example `https://example.com/the-hobbit/`.
+
+To remove the post type slug:
+
+1. Go to **Meta Box » Post Types** and edit the post type.
+2. Open the **Features** tab.
+3. Turn on **Remove post type slug from URL**.
+4. Click **Save Changes**.
+
+![Remove post type slug from URL](./img/cpt-remove-slug.webp)
+
+You do not need to save the permalink settings again.
+
+The option has these rules:
+
+- The option changes only the URLs of single posts. The post type archive keeps its URL, for example `https://example.com/book/`.
+- Hierarchical post types keep the parent path, for example `https://example.com/parent/child/`.
+- Only published posts open from the short URL.
+- If a page or a post has the same path as a custom post, WordPress shows the page or the post. Give each custom post a unique slug to prevent this.
+- The old URLs with the post type slug continue to work. Their canonical link points to the short URL.
+
+:::caution
+
+This option is experimental. Other plugins that change permalinks or redirect URLs can conflict with it. After you turn on the option, open some posts and make sure that they show correctly.
+
+:::
 
 ## Video tutorial
 
