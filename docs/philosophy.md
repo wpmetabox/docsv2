@@ -25,7 +25,7 @@ The modularity keeps all the extensions as minimal as possible and keeps Meta Bo
 
 :::tip
 
-If you are afraid of a long plugin list, use our Meta Box AIO or MB Core, which are available for premium users. They contain all extensions in one plugin and you can enable or disable each extension easily. This shortens the plugin list while still providing all the needed functionality.
+If you are afraid of a long plugin list, use our Meta Box AIO or Meta Box Basic, which are available for premium users. They contain all extensions in one plugin and you can enable or disable each extension easily. This shortens the plugin list while still providing all the needed functionality.
 
 :::
 

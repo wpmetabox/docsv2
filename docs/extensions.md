@@ -107,6 +107,6 @@ Learn about Meta Box extensions, what features they offer and how to use them.
 
 [![aio](/extensions/aio.png) <span className="thumb_text">Meta Box AIO</span>](/extensions/meta-box-aio/)
 
-<!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">MB Core</span>](/extensions/mb-core/) -->
+<!-- [![checkbox](/thumbs/checkbox.png) <span className="thumb_text">Meta Box Basic</span>](/extensions/mb-core/) -->
 
 </div>
