@@ -34,7 +34,7 @@ That’s why we highly recommend using views to render the block with the help o
 
 We should ensure have all of the following tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom blocks, and custom fields for the block if any. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom blocks, and custom fields for the block if any. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Blocks](https://metabox.io/plugins/mb-blocks/): to create custom Gutenberg blocks;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create the views for rendering the blocks;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have UI on the backend to register and configure the block visually.

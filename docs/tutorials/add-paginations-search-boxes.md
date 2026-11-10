@@ -23,7 +23,7 @@ In this post, we will focus on pagination and we'll build a search box that allo
 
 To get started, we need some tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create custom fields;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/) to have the UI, you can install this extension individually, or use **Meta Box AIO** to enable it.
 
 ## 1. Creating custom fields

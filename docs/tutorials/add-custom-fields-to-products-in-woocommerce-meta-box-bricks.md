@@ -23,7 +23,7 @@ Besides some information saved in the product data section that WooCommerce prov
 
 In this practice, we absolutely need **WooCommerce** to have some features for your products and shop.
 
-For custom fields, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create them. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
+For custom fields, we need the [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework to create them. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
 We also need some advanced features from Meta Box which are from some of its extensions:
 

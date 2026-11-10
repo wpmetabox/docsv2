@@ -21,7 +21,7 @@ Each e-book will be a post in a custom post type. There is some typical informat
 
 In this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the e-books;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * **Bricks**: to build the e-book page.

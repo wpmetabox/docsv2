@@ -20,7 +20,7 @@ Each member information is saved in a post of a custom post type and displayed a
 
 These are some tools we need in this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields for the members. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields for the members. You can install it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the team members;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to visually create custom fields;
 * The pro version of **Kadence** with some extra types of blocks to build the page.

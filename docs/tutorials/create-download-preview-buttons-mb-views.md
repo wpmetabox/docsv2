@@ -23,7 +23,7 @@ Each ebook will be a unique post of a custom post type. The name of the ebook an
 
 For this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields:
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type and custom fields:
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for ebooks;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create and style the template for the page without touching the theme files;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to provide a UI on the back end to create custom fields.

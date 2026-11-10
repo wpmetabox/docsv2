@@ -17,7 +17,7 @@ This is the example look.
 
 ## Preparation
 
-You’ll need to use the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) for this practice. You can download it directly from [wordpress.org.](https://wordpress.org/plugins/meta-box/)
+You’ll need to use the [Meta Box plugin](https://wordpress.org/plugins/meta-box/) for this practice. You can download it directly from [wordpress.org.](https://wordpress.org/plugins/meta-box/)
 
 We also need some Meta Box extensions to have some advanced features:
 

@@ -20,7 +20,7 @@ Take a look through the e-book page with two buttons that I created as an exampl
 Each e-book will be a post of a custom post type. The basic information of the e-book such as image, name, and description are respectively featured images, title, and description of the post. To store the PDF file, we'll use a custom field provided by Meta Box.
 
 So, these are some tool we need:
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the e-book;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create a custom field for storing the PDF files;
 * **Kadence** with some extra types of blocks to build the page.

@@ -20,7 +20,7 @@ We have two separate custom post types: **Courses** and **Instructors**. In this
 
 In this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the courses and instructors;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create relationships between these post types;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create the pages and their template for relationships;

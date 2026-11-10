@@ -31,7 +31,7 @@ The mindset will be like this:
 
 We need the following tools for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom fields. It’s free, and available on [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom fields. It’s free, and available on [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields easily;
 * [MB Testimonials](https://metabox.io/plugins/mb-testimonials/): a ready-to-use solution from Meta Box that helps to create a testimonial section with pre-built layouts;
 * [MB Group](https://metabox.io/plugins/meta-box-group/) and [MB Tabs](https://metabox.io/plugins/meta-box-tabs/) (optional): to organize custom fields into groups or tabs with a clearer structure;

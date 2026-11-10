@@ -21,7 +21,7 @@ This is an archive page that shows the product's detailed information along with
 
 So, in this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the e-books;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to store the PDF files;
 * **Oxygen**: to build the page.

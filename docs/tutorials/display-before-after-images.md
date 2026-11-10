@@ -26,7 +26,7 @@ Using custom fields allows you to set up and update images and content easily wi
 
 So, we need some of the following tools.
 
-* [The Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and set up a template for displaying images. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
+* [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and set up a template for displaying images. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for displaying before and after images;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save images and related content visually.
 

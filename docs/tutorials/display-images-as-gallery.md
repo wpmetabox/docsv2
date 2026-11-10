@@ -20,7 +20,7 @@ This task will be very easy-to-do with some **lines of code added to the theme�
 
 We’ll need some tools for this practice:
 
-First, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating the custom field. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
+First, we need the [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating the custom field. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
 Next, we may need some advanced features from the **Meta Box** extensions. You can download them individually or use **Meta Box AIO** to have them all.
 

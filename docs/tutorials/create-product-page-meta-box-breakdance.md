@@ -20,7 +20,7 @@ In this case, my product page is about car rental and it contains the product’
 
 So to get started, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from wordpress.org;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields. It’s free and you can download it directly from wordpress.org;
 * [MB Custom Post Types & Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the product named Car Rentals;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend for saving information about the products;
 * **Breakdance**: to create the page.

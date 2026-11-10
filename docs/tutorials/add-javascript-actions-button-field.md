@@ -17,7 +17,7 @@ You can see it clearer with these two Button fields to remove or input values in
 ## Preparation
 
 Here are the tools we need:
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create the fields.
 
 ## 1. Creating custom fields

@@ -22,7 +22,7 @@ These are some example landing pages which have the same structure and different
 
 We need the following tools for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom fields. It’s free, and you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom fields. It’s free, and you can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create the custom fields efficiently;
 * [MB Testimonials](https://metabox.io/plugins/mb-testimonials/): a ready-to-use solution from Meta Box that helps to create a testimonial section with pre-built layouts;
 * [MB Elementor Integration](https://metabox.io/plugins/mb-elementor-integrator/): to get dynamic data from custom fields and display them on the page easily;

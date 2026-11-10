@@ -23,7 +23,7 @@ To have each restaurant displayed in each place, we should save the information 
 
 Here are the tools that we will use in this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type for the listings and custom fields for the locations;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a custom post type for the listings and custom fields for the locations;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the listings;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the back end to create custom fields easily;
 * [MB Views](https://metabox.io/plugins/mb-views/) (optional): to create a page template for displaying the listings on the map. In another way, you can add code to the theme’s files instead of using this extension. You can choose one of these ways which I’m going to provide you in this practice.

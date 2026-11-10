@@ -21,7 +21,7 @@ I assume that each restaurant is a post of a custom post type along with some de
 In a real case, it can be the same or different between days of the week. Therefore, besides the custom fields to store timing information, we should set a rule for displaying the fields.
 
 So, we need these tools:
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields for the restaurants. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating the custom post type and custom fields for the restaurants. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for restaurants;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have UI in the backend to create the custom fields visually;
 * [MB Conditional Logic](https://metabox.io/plugins/meta-box-conditional-logic/): to create the rules for displaying or hiding the fields;

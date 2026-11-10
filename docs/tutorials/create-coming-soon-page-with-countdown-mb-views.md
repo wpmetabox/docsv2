@@ -21,7 +21,7 @@ I’ll show you how to **use custom fields to manage dynamic content** like imag
 
 Let’s look for the detailed list of tools we need for this practice.
 
-* [The Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a settings page and custom fields for the coming soon page content;
+* [The Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a settings page and custom fields for the coming soon page content;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): allows you to create a settings page to input all the information that we want to be on the coming soon page;
 * [MB Views](https://metabox.io/plugins/mb-views/): helps to create a template for displaying the coming soon page’s content;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields visually.

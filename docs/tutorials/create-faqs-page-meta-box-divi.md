@@ -19,7 +19,7 @@ This is an example of an FAQ page that I created.
 
 The FAQs page includes several pairs of questions and answers that are saved in custom fields.
 
-To get started, we need [the Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating custom fields. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
+To get started, we need [the Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have a framework for creating custom fields. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
 Besides, we’ll use some Meta Box extensions for more advanced features, as follows:
 

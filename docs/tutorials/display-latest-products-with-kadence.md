@@ -23,7 +23,7 @@ The name of the restaurant and its image are the title and featured image of the
 
 For this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the products;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * **Kadence**: to build the page and create a section to display the latest posts. In this practice, I also use the pro version of Kadence.

@@ -19,7 +19,7 @@ I have **Courses** and **Instructors** as two separate custom post types. I will
 
 Here are the tools that we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types, custom fields, and relationships.
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types, custom fields, and relationships.
 * [MB Custom Post Types](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the courses and instructors.
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields and relationships easily.
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create relationships between these post types.

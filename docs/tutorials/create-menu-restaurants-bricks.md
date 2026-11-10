@@ -20,7 +20,7 @@ Normally, we can create a new post type and each dish will be a post of that pos
 
 Here are the tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post type and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post type and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post type named Restaurant for the restaurants and menus;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to easily create custom fields that save the dishes’s information;
 * **Bricks Builder**: to create the singular page to display the menu.

@@ -24,7 +24,7 @@ We have two separate custom post types: **Courses** and **Instructors**. In this
 
 Here are some Meta Box extensions for the advanced features:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields, and relationships;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields, and relationships;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the courses and instructors;
 * [MB Relationships](https://metabox.io/plugins/mb-relationships/): to create relationships between these post types;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI on the backend to create custom fields and relationships;

@@ -19,7 +19,7 @@ I’ve built a car rental page as an example:
 The page contains the product's detailed information, even an image gallery. It’s a singular page of your product post type. The name and description of the product are the title, and content of the post. The remaining detailed information should be saved in the custom fields that allow you to flexibly style them.
 
 You will need some tools to create a capturing product page that converts.
-* [the Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields for the products;
+* [the Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have the framework for creating custom post types and custom fields for the products;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the products;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI in the backend to create custom fields easily;
 * [MB Divi Integrator](https://metabox.io/plugins/mb-divi-integrator/): helps Divi to get data from custom fields created by Meta Box easier.

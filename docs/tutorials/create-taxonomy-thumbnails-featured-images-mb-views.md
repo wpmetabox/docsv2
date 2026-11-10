@@ -24,7 +24,7 @@ The image used for the thumbnail also will be used to be the featured image of t
 
 In this practice, we need some tools from Meta Box:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to create custom post types, taxonomies as well as a custom field to store the images for the taxonomy;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to create custom post types, taxonomies as well as a custom field to store the images for the taxonomy;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type and custom taxonomy for the portfolio;
 * [MB Term Meta](https://metabox.io/plugins/mb-term-meta/): to add custom field created with Meta Box to categories, tags, or any custom taxonomies;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create templates to display the thumbnails and the featured images without touching the theme’s files;

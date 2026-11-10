@@ -21,7 +21,7 @@ In addition to the basic information about the restaurant, such as the name and 
 
 Here are some tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): create a custom post type for the restaurants;
 * [MB Box Builder](https://metabox.io/plugins/meta-box-builder/): create custom fields to save the restaurant information;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): helps to display the custom fields as an admin column to easily see the information. I use it to show you which restaurants will be featured to easily compare with the result.

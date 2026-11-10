@@ -21,7 +21,7 @@ We will create a section to show the featured products which are chosen manually
 
 These are some tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the products;
 * [MB Box Builder](https://metabox.io/plugins/meta-box-builder/): to create custom fields to save the products information, as well as the custom field to set the product to be featured or not;
 * [MB Admin Columns](https://metabox.io/plugins/mb-admin-columns/) (optional): to display the custom fields as an admin column to easily see the information. I use it to show you which products will be featured, so you can easily compare it with the results.

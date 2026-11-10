@@ -23,7 +23,7 @@ I will separate the list into pages, limit the number of users displayed on a pa
 
 These are the tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to [create custom fields with an intuitive user interface](https://docs.metabox.io/tutorials/create-custom-fields/) (UI) with easy drag-and-drop manipulations on the backend. If you can code to create a custom field, you can skip this extension. But there is another free tool if you still want to use UI, which is the [Online Genera-tor](https://metabox.io/online-generator/).
 * [DataTables](https://datatables.net/): It is a library that uses jQuery to add advanced features to tables in HTML. It helps you display and create functions (pagination and search) with tables more easily.
 

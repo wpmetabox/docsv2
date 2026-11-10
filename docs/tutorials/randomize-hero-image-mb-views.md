@@ -20,7 +20,7 @@ Each set of the hero section includes the image as the background, a tagline, an
 
 So, there are some tools we need to practice in this case:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a settings page and custom fields for the hero section. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/);
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create a settings page and custom fields for the hero section. It’s available on [wordpress.org](https://wordpress.org/plugins/meta-box/);
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input hero image and other information;
 * [MB Views](https://metabox.io/plugins/mb-views/): to get data from custom fields and display them on the homepage as the hero section;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.

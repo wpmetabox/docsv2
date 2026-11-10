@@ -21,7 +21,7 @@ The page shows a list of videos with some additional information. Each video’s
 
 In this practice, we need **Meta Box AIO**, including:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom post types and custom fields;
 * [MB Custom Post Type](https://wordpress.org/plugins/mb-custom-post-type/): to create a custom post type for videos;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have an intuitive UI to create custom fields in the backend;
 * [MB Views](https://metabox.io/plugins/mb-views/): helps us create the template for the video gallery page.

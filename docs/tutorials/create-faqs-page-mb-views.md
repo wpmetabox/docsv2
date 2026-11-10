@@ -20,7 +20,7 @@ The FAQs page contains questions and answers that are saved in the custom fields
 
 So, in this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create and style the template for the page without touching the theme files;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields;
 * [MB Group](https://metabox.io/plugins/meta-box-group/): to organize the fields for questions and answers into a group since they are in pairs.

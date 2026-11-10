@@ -20,7 +20,7 @@ This is a single page built with Kadence containing the product's detailed infor
 
 So, in this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and custom post types;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields and custom post types;
 * [MB Custom Post Types and Custom Taxonomies](https://metabox.io/plugins/custom-post-type/): to create a custom post type for the product;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields easily.
 * **Kadence**: to have some extra types of blocks to build the page.

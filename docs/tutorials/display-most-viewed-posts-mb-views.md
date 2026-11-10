@@ -21,7 +21,7 @@ Besides displaying the default information of posts like title and feature image
 
 Here are the tools we need for this practice:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework for creating a custom post type and custom fields;
 * [MB Custom Post Type](https://metabox.io/plugins/custom-post-type/): to create custom post types for the restaurants;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields to save the extra information of the restaurants;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the most viewed posts section.

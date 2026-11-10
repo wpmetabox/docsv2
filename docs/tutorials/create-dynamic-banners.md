@@ -20,7 +20,7 @@ I’ll create two banners with the same content but varying in size and position
 
 So, in this practice, we need these tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): to create a settings page to input banner information;
 * [MB Views](https://metabox.io/plugins/mb-views/): to create a template for the banner. It’s just optional;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the back end to create custom fields easily.

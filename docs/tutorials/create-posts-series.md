@@ -12,7 +12,7 @@ Creating a series of posts by Category or Tag has a few drawbacks, as follows:
 * If you set up the post permalink to include the category name, your links will be longer and more complicated with many types of links;
 * Category shows from newest to oldest. However, most people should start with the first post and scroll down to the new one. Using a series allows you to reverse the post's sequence. It makes posting easier.
 
-Using [Meta Box](https://metabox.io/) helps manipulate data easily by creating a new taxonomy. To do it, beside the Meta Box core plugin, we need to install the [MB Custom Taxonomy](https://metabox.io/plugins/custom-taxonomy/). It allows you to create and manage custom taxonomies with an intuitive interface.
+Using [Meta Box](https://metabox.io/) helps manipulate data easily by creating a new taxonomy. To do it, beside the Meta Box plugin, we need to install the [MB Custom Taxonomy](https://metabox.io/plugins/custom-taxonomy/). It allows you to create and manage custom taxonomies with an intuitive interface.
 
 ## 1. Creating a new custom taxonomy
 

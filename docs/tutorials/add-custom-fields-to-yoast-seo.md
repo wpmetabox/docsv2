@@ -23,7 +23,7 @@ In this practice, I will create both of these field types with all these methods
 
 To get started, you would have to use Yoast SEO on your site to use Yoast SEO meta tags. We also need some tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have a framework to create custom fields;
 * [MB Yoast SEO Integration](https://metabox.io/plugins/meta-box-yoast-seo/): to add the content of custom fields to Yoast SEO Content Analysis;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): to have a UI on the backend to create custom fields more easily;
 * [MB Group](https://metabox.io/plugins/meta-box-group/) (optional): to group fields together. I’m using it for demonstration and gives you some typical examples to see clearer how to do it with multiple types of fields.

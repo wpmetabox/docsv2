@@ -23,7 +23,7 @@ The image used for the thumbnail also will be used to be the featured image of t
 
 ## Preparation
 
-In this practice, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to create custom post types, taxonomies as well as a custom field to store the images for the taxonomy.
+In this practice, we need the [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to create custom post types, taxonomies as well as a custom field to store the images for the taxonomy.
 
 We also need some advanced features from **Meta Box** which is from some of its extensions:
 

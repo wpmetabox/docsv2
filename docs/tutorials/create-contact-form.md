@@ -17,7 +17,7 @@ I made an example with the most popular form as you can see in the Contact page:
 
 ## Preparation
 
-To get started, we need the [Meta Box core plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating a custom post type for the contacts and custom fields for the form. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
+To get started, we need the [Meta Box plugin](https://wordpress.org/plugins/meta-box/) to have the framework for creating a custom post type for the contacts and custom fields for the form. You can download it directly from [wordpress.org](https://wordpress.org/plugins/meta-box/).
 
 For the advanced features from Meta Box, we need some of its extensions:
 

@@ -21,7 +21,7 @@ Specifically, the banner background, text, color, text position, or any element 
 
 In this practice, we’ll use the following tools:
 
-* [Meta Box core plugin](https://wordpress.org/plugins/meta-box/): to have framework to create a settings page and custom fields for the banner;
+* [Meta Box plugin](https://wordpress.org/plugins/meta-box/): to have framework to create a settings page and custom fields for the banner;
 * [MB Settings Page](https://metabox.io/plugins/mb-settings-page/): allows you to create a settings page to input banner information;
 * [MB Builder](https://metabox.io/plugins/meta-box-builder/): provides a UI on the back end to easily create custom fields;
 * **Bricks Builder**: to build the page and display banners.
