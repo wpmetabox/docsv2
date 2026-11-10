@@ -96,6 +96,7 @@ const sidebars = {
 				'creating-new-field-types',
 				'bundling',
 				'composer',
+				'coding-with-ai',
 			],
 		},
 		{
