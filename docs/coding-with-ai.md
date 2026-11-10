@@ -2,7 +2,7 @@
 title: Coding with AI
 ---
 
-AI tools often write Meta Box code that does not work. This page tells AI tools how to write correct Meta Box code. It also lists the mistakes that AI tools make most often, with the wrong code and the correct code.
+AI tools often write Meta Box code that does not work. This page gives AI tools the rules for correct Meta Box code. It also lists the mistakes that AI tools make most often. Each mistake shows the wrong code and the correct code.
 
 To make your AI tool read this page, add this text to the rules file of your project (`AGENTS.md`, `CLAUDE.md`, or `.cursor/rules`):
 
@@ -11,7 +11,7 @@ This project uses Meta Box (https://metabox.io) for custom fields.
 Before you write Meta Box code, read https://docs.metabox.io/coding-with-ai/.
 ```
 
-For Claude Code, Cursor, and other agents, you can also install the [Meta Box skill](https://github.com/wpmetabox/skills).
+For Claude Code, Cursor, and other AI agents, you can also install the [Meta Box skill](https://github.com/wpmetabox/skills).
 
 ## How to write Meta Box code
 
@@ -19,9 +19,9 @@ For Claude Code, Cursor, and other agents, you can also install the [Meta Box sk
 
 Use one of these methods:
 
-- Create the field group in [MB Builder](/extensions/meta-box-builder/). To get the PHP code, click **Get PHP Code**.
 - Register the field group with the [`rwmb_meta_boxes`](/creating-fields-with-code/) filter.
 - Save the field group as a [JSON file](/local-json/). Use the [JSON schema](/tutorials/json-schema-autocomplete/) to check the settings.
+- Create the field group in [MB Builder](/extensions/meta-box-builder/). To get the PHP code, click **Get PHP Code**.
 
 Use a prefix for field IDs, for example `event_date`. Use only the [field types](/fields/) and [field settings](/field-settings/) in the docs.
 
@@ -50,8 +50,6 @@ Make templates without PHP | [MB Views](/extensions/mb-views/)
 
 - Escape output with `esc_html()`, `esc_url()`, or `esc_attr()`.
 - Use `$wpdb->prepare()` for SQL.
-- A filter callback must return the value.
-- Register custom models on `init` with priority 10.
 
 ### If you are not sure
 
@@ -140,7 +138,7 @@ $price   = rwmb_meta( 'price', [ 'storage_type' => 'custom_table', 'table' => 'p
 
 ### Relationships as fields
 
-[MB Relationships](/extensions/mb-relationships/) saves connections in its own table, not in meta.
+[MB Relationships](/extensions/mb-relationships/) saves connections in its own table, not in post meta.
 
 ```php
 // Wrong
@@ -193,7 +191,7 @@ add_action( 'init', function () {
 
 ### Hook signatures as code
 
-The docs show hooks as `apply_filters()` or `do_action()`. This is the signature. To use a hook, call `add_filter()` or `add_action()`. A filter callback must return the value. If the callback has more than 1 parameter, set the number of parameters.
+The docs show hooks as `apply_filters()` or `do_action()`. These are the hook signatures. To use a hook, call `add_filter()` or `add_action()`. A filter callback must return the value. If the callback has more than 1 parameter, set the number of parameters.
 
 ```php
 // Wrong
@@ -225,11 +223,9 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 } );
 ```
 
-To get correct code, create the field group in the builder and click **Get PHP Code**. For JSON files, use the [JSON schema](/tutorials/json-schema-autocomplete/).
-
 ### Views in the Query Loop block
 
-AI tools say that MB Views does not work in the Query Loop block, and tell you to use ACF. This is not correct. In MB Views 1.15.0 and later, `{{ post }}` is the current post of the loop.
+AI tools say that MB Views does not work in the Query Loop block. They tell you to use ACF. This is not correct. In MB Views 1.15.0 and later, `{{ post }}` is the current post of the loop.
 
 ```twig
 <a href="{{ post.url }}">{{ post.title }}</a>
