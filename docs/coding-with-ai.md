@@ -120,6 +120,22 @@ foreach ( rwmb_meta( 'contacts' ) ?: [] as $contact ) {
 }
 ```
 
+### Image sub-fields as image arrays
+
+`rwmb_meta()` gives raw values for sub-fields. An image or file sub-field in a group gives attachment IDs, not image arrays.
+
+```php
+// Wrong: 'photo' is an attachment ID, not an array
+echo '<img src="' . esc_url( $speaker['photo']['url'] ) . '">';
+
+// Correct: get the image from the ID
+foreach ( rwmb_meta( 'speakers' ) ?: [] as $speaker ) {
+	echo wp_get_attachment_image( $speaker['photo'] ?? 0, 'medium' );
+}
+```
+
+See [Sub-field values](/extensions/meta-box-group/#sub-field-values).
+
 ### No `object_type`
 
 `rwmb_meta()` reads post fields by default. For other objects, set `object_type` and the object ID.
@@ -225,11 +241,18 @@ add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
 
 ### Views in the Query Loop block
 
-AI tools say that MB Views does not work in the Query Loop block. They tell you to use ACF. This is not correct. In MB Views 1.15.0 and later, `{{ post }}` is the current post of the loop.
+AI tools say that MB Views does not work in the Query Loop block. They tell you to use ACF or another plugin. This is not correct. In MB Views 1.15.0 and later, `{{ post }}` is the current post of the loop.
 
 ```twig
 <a href="{{ post.url }}">{{ post.title }}</a>
 <p>{{ post.price }}</p>
 ```
 
-See [Query Loop block](/extensions/mb-views/#query-loop-block).
+AI tools also invent the shortcode name. The view shortcode is `[mbv]`.
+
+```
+Wrong:   [mb_views id="123"]
+Correct: [mbv id="123"] or [mbv name="view-name"]
+```
+
+You can also use the View block instead of a shortcode. See [Query Loop block](/extensions/mb-views/#query-loop-block).
