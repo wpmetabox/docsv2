@@ -408,6 +408,23 @@ $data = apply_filters( 'rwmb_profile_insert_user_data', $data, $config );
 
 Please note that this filter works only for default user fields such as user email or password. For changing custom field data, please use [`rwmb_{$field_id}_value`](/filters/rwmb-value/) filter.
 
+The array keys are the parameters of [`wp_insert_user()`](https://developer.wordpress.org/reference/functions/wp_insert_user/), for example `user_login`, `user_email`, and `first_name`. The array has only the fields that the user fills in.
+
+This example uses the email as the username, and the first and last name as the display name:
+
+```php
+add_filter( 'rwmb_profile_insert_user_data', function ( $data, $config ) {
+	if ( ! empty( $data['user_email'] ) ) {
+		$data['user_login'] = $data['user_email'];
+	}
+	$name = trim( ( $data['first_name'] ?? '' ) . ' ' . ( $data['last_name'] ?? '' ) );
+	if ( $name ) {
+		$data['display_name'] = $name;
+	}
+	return $data;
+}, 10, 2 );
+```
+
 ### `rwmb_profile_update_user_data`
 
 This filter is used to modify the submitted user data before it's passed to the `wp_update_user` function to **update an existing user**. It accepts 2 parameters: the array of user data and the shortcode parameters.
@@ -417,6 +434,17 @@ $data = apply_filters( 'rwmb_profile_update_user_data', $data, $config );
 ```
 
 Please note that this filter works only for default user fields such as user email or password. For changing custom field data, please use [`rwmb_{$field_id}_value`](/filters/rwmb-value/) filter.
+
+The array keys are the parameters of [`wp_update_user()`](https://developer.wordpress.org/reference/functions/wp_update_user/). The plugin adds the user ID (`ID`) after the filter.
+
+This example stops users from changing their email:
+
+```php
+add_filter( 'rwmb_profile_update_user_data', function ( $data, $config ) {
+	unset( $data['user_email'] );
+	return $data;
+}, 10, 2 );
+```
 
 ### Default form fields
 
@@ -441,6 +469,18 @@ The action accepts 1 parameter: the instance of the `MB_User_Profile_User` class
 - `$user_id`: The submitted user ID
 - `$config`: The configuration, taken from the shortcode attributes
 
+For a new user, `$user_id` is empty, because the plugin did not create the user yet.
+
+This example writes a log entry for each profile update:
+
+```php
+add_action( 'rwmb_profile_before_save_user', function ( $user ) {
+	if ( $user->user_id ) {
+		error_log( 'User ' . $user->user_id . ' is updating the profile.' );
+	}
+} );
+```
+
 ### `rwmb_profile_after_save_user`
 
 This action fires after the user is created or updated. At that time, all the custom fields in the meta box are already saved into the user meta.
@@ -453,6 +493,31 @@ The action accepts 1 parameter: the instance of the `MB_User_Profile_User` class
 
 - `$user_id`: The submitted user ID
 - `$config`: The configuration, taken from the shortcode attributes
+
+This action fires for the registration form and for the edit profile form. If an error stops the save, `$user_id` is empty.
+
+This example adds a member ID to each new user. A profile update does not change the member ID:
+
+```php
+add_action( 'rwmb_profile_after_save_user', function ( $user ) {
+	if ( ! $user->user_id || get_user_meta( $user->user_id, 'member_id', true ) ) {
+		return;
+	}
+	update_user_meta( $user->user_id, 'member_id', 'M-' . $user->user_id );
+} );
+```
+
+This example sends an email to the admin when a user registers with the form of the `member-info` meta box:
+
+```php
+add_action( 'rwmb_profile_after_save_user', function ( $user ) {
+	if ( ! $user->user_id || ! str_contains( $user->config['id'] ?? '', 'member-info' ) ) {
+		return;
+	}
+	$info = get_userdata( $user->user_id );
+	wp_mail( get_option( 'admin_email' ), 'New member', 'New member: ' . $info->user_email );
+} );
+```
 
 ## Known issues
 

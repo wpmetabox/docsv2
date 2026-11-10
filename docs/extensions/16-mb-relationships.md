@@ -634,7 +634,26 @@ This function checks whether the two objects already have a relationship and add
 When the `add` function runs, the plugin fires the following hook:
 
 ```php
-do_action( 'mb_relationships_add', $from, $to, $id, $order_from, $order_to );
+do_action( 'mb_relationships_add', $from, $to, $id, $order_from, $order_to, $result );
+```
+
+`$result` is `1` if the plugin adds the connection, or `false` if a database error occurs.
+
+:::caution
+
+This hook fires only when you call `MB_Relationships_API::add()`. It does not fire when you connect items on the edit screen.
+
+:::
+
+This example adds the event ID to a custom field of the speaker:
+
+```php
+add_action( 'mb_relationships_add', function ( $from, $to, $id ) {
+	if ( 'events_to_speakers' !== $id ) {
+		return;
+	}
+	add_post_meta( $to, 'event_ids', $from );
+}, 10, 3 );
 ```
 
 ### `delete`
@@ -650,7 +669,20 @@ This function deletes a relationship between two objects only if one exists.
 When the `delete` function runs, the plugin fires the following hook:
 
 ```php
-do_action( 'mb_relationships_delete', $from, $to, $id );
+do_action( 'mb_relationships_delete', $from, $to, $id, $result );
+```
+
+`$result` is the number of deleted connections, or `false` if a database error occurs. This hook fires only when you call `MB_Relationships_API::delete()`.
+
+This example removes the event ID from the speaker:
+
+```php
+add_action( 'mb_relationships_delete', function ( $from, $to, $id ) {
+	if ( 'events_to_speakers' !== $id ) {
+		return;
+	}
+	delete_post_meta( $to, 'event_ids', $from );
+}, 10, 3 );
 ```
 
 ## Shortcode

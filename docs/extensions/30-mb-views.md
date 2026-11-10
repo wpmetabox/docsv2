@@ -242,7 +242,7 @@ What type of page do you want to set the view for? Supports:
 - Archive pages
 - Action: the view will display when an action fires
 - Code: you can use PHP or [WordPress conditional tags](https://developer.wordpress.org/themes/basics/conditional-tags/) to set the rules where to show the view.
-- Shortcode: you need to use a shortcode to insert the view to the location you want. The shortcode is available *after* you save the view.
+- Shortcode: you need to use a shortcode or the [View block](#view-block) to insert the view to the location you want. The shortcode is available *after* you save the view.
 - Block: For [MB Blocks](/extensions/mb-blocks#using-mb-views), blocks can then use `render: "view:view-name"` to render the view.
 
 ### Location Rules
@@ -270,6 +270,40 @@ If you choose to render the view for the post content area, then you can set it 
 ### Order
 
 The order settings is used to set the loading order for views. If you have multiple views for the same page, then views with a lower order will render first.
+
+## View block
+
+Use the **View** block to add a view in the block editor. The block is in MB Views 1.14.0 and later.
+
+1. Create a view.
+2. Set **Type** to **Shortcode**. The view then shows only where you add it.
+3. In the block editor, add the **View** block.
+4. In the block settings, select the view.
+
+The block shows only published views.
+
+To send [custom data](#custom-data) to the view, use the **Shortcode** block with the view shortcode, for example `[mbv name="view-name" age="50"]`.
+
+## Query Loop block
+
+You can use a view in the **Query Loop** block. In the view, `{{ post }}` is the current post of the loop. This works in MB Views 1.15.0 and later.
+
+1. Create a view.
+2. Set **Type** to **Shortcode**.
+3. Write the template for one post. For example:
+	```twig
+	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+	<p>Price: {{ post.price }}</p>
+	<img src="{{ post.thumbnail.medium.url }}" alt="{{ post.thumbnail.medium.alt }}">
+	```
+4. Add a **Query Loop** block.
+5. In the **Post Template** block, add the [View block](#view-block) and select the view.
+
+The view shows one time for each post of the loop.
+
+In MB Views 1.14 and earlier, `{{ post }}` is the main post of the page. All posts in the loop then show the same data.
+
+To write the loop yourself, see [Custom query](#custom-query).
 
 ## Hooks
 
