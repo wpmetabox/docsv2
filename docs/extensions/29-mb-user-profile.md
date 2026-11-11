@@ -374,6 +374,16 @@ This action fires before the submit button is displayed. It accepts one paramete
 
 This action fires after the submit button is displayed. It accepts one parameter `$config` - the form configuration, taken from the shortcode attributes.
 
+### `rwmb_profile_info_submit_button` and `rwmb_profile_register_submit_button`
+
+These filters change the HTML of the submit button in the edit profile form and the register form. They accept 2 parameters: the button HTML and `$config` - the form configuration.
+
+```php
+add_filter( 'rwmb_profile_register_submit_button', function ( $button, $config ) {
+    return str_replace( 'class="rwmb-button"', 'class="rwmb-button my-button"', $button );
+}, 10, 2 );
+```
+
 ### `rwmb_profile_validate`
 
 This filter is used to check if the form is validated. You can use this filter to add a custom check for the data before it's processed.
@@ -454,6 +464,17 @@ To modify the default register, login, or edit profile form fields, please use t
 $fields = apply_filters( 'rwmb_profile_register_fields', $fields );
 $fields = apply_filters( 'rwmb_profile_login_fields', $fields );
 $fields = apply_filters( 'rwmb_profile_info_fields', $fields );
+$fields = apply_filters( 'rwmb_profile_lost_password_fields', $fields );
+$fields = apply_filters( 'rwmb_profile_reset_password_fields', $fields );
+```
+
+Example: change the label of the username field in the lost password form:
+
+```php
+add_filter( 'rwmb_profile_lost_password_fields', function ( $fields ) {
+    $fields['username']['name'] = 'Your email';
+    return $fields;
+} );
 ```
 
 ### `rwmb_profile_before_save_user`

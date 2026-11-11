@@ -657,6 +657,29 @@ This filter is used to change the title link of posts in the post table. It acce
 - `$title`: the post title link (in HTML)
 - `$post_id`: the post ID
 
+`rwmb_frontend_dashboard_status`
+
+This filter is used to change the post status in the post table. It accepts 2 parameters:
+
+- `$status`: the status label (escaped)
+- `$post_id`: the post ID
+
+```php
+add_filter( 'rwmb_frontend_dashboard_status', function( $status, $post_id ) {
+    return 'pending' === get_post_status( $post_id ) ? 'Waiting for review' : $status;
+}, 10, 2 );
+```
+
+`rwmb_frontend_dashboard_add_new_button`
+
+This filter is used to change the "Add new" button HTML in the dashboard. It accepts 2 parameters: the button HTML and the dashboard attributes.
+
+```php
+add_filter( 'rwmb_frontend_dashboard_add_new_button', function( $button, $atts ) {
+    return str_replace( 'class="mbfs-add-new-post"', 'class="mbfs-add-new-post button"', $button );
+}, 10, 2 );
+```
+
 `rwmb_frontend_dashboard_edit_action`
 
 This filter is used to change the edit link for posts in the dashboard. It has 2 parameters: the edit link HTML and the post ID.

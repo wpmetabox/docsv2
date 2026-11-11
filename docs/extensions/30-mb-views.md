@@ -379,6 +379,29 @@ add_filter( 'mbv_data', function( $data, $twig ) {
 }, 10, 2 );
 ```
 
+### `mbv_render_output`
+
+This filter lets you render views with another template engine, such as Timber. If any callback is added to this filter, MB Views does not render the view with Twig. It uses the value that the filter returns. It accepts 3 parameters:
+
+- `$output`: the output, an empty string by default
+- `$view`: the view to render: a post object, view ID or view name (slug)
+- `$data`: the data passed to the view
+
+```php
+add_filter( 'mbv_render_output', function( $output, $view, $data ) {
+    $view = is_a( $view, 'WP_Post' ) ? $view : get_page_by_path( $view, OBJECT, 'mb-views' );
+    return Timber::compile_string( $view->post_content, array_merge( Timber::context(), $data ) );
+}, 10, 3 );
+```
+
+### `mbv_admin_bar_show`
+
+MB Views adds a menu to the admin bar to edit the views on the current page. Return `false` to hide the menu. The filter accepts 2 parameters: `$show` (default `true`) and the `WP_Admin_Bar` object.
+
+```php
+add_filter( 'mbv_admin_bar_show', '__return_false' );
+```
+
 ## Twig
 
 When editing a template for views, you can use any HTML/CSS/JavaScript.

@@ -222,6 +222,34 @@ add_filter( 'rwmb_profile_insert_user_data', function ( $data, $config ) {
 
 For more examples, see [MB User Profile hooks](/extensions/mb-user-profile/#hooks) and [MB Relationships hooks](/extensions/mb-relationships/#add).
 
+### Hooks that do not exist
+
+AI tools make up hook names that look correct. Examples:
+
+- `meta_box_blocks`: there is no such filter. Register blocks with `rwmb_meta_boxes` and `'type' => 'block'`. See [MB Blocks](/extensions/mb-blocks/#block-registration-without-blockjson).
+- `rwmb_frontend_access`: there is no such filter. MB Frontend Submission lets the post author and users with the `edit_post` capability edit a post. To let other users edit, give them the capability with the WordPress `map_meta_cap` filter.
+
+```php
+// Wrong
+add_filter( 'meta_box_blocks', function ( $blocks ) { /* ... */ } );
+
+// Correct
+add_filter( 'rwmb_meta_boxes', function ( $meta_boxes ) {
+	$meta_boxes[] = [
+		'title'           => 'Hero',
+		'id'              => 'hero',
+		'type'            => 'block',
+		'render_template' => get_stylesheet_directory() . '/blocks/hero.php',
+		'fields'          => [
+			[ 'id' => 'heading', 'name' => 'Heading', 'type' => 'text' ],
+		],
+	];
+	return $meta_boxes;
+} );
+```
+
+All public hooks are in the docs: see [Actions](/category/actions/), [Filters](/category/filters/), [JavaScript API](/javascript-api/) and the "Hooks" section of each extension. If a hook is not in the docs or the source code, do not use it.
+
 ### No return in `rwmb_meta_boxes`
 
 If the `rwmb_meta_boxes` callback does not return `$meta_boxes`, all field groups disappear.

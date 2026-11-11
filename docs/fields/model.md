@@ -153,6 +153,10 @@ To delay Ajax requests until the user types in the search box, set `minimumInput
 
 Meta Box searches in the columns from `item_title`. For example, if `item_title` is `{title} - {amount}`, the search runs against the `title` and `amount` columns. If the search term is numeric, Meta Box also matches the row `ID`.
 
+### Filter the Ajax results
+
+Use the `rwmb_ajax_get_models` filter to change the items that the field gets via Ajax. It works the same as [`rwmb_ajax_get_posts`](/filters/rwmb-ajax-get-posts/) for the `post` field.
+
 ## Data
 
 This field saves one or more model item IDs in the database.

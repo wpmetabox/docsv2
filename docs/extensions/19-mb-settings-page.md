@@ -463,6 +463,32 @@ This action fires after outputting the page title. You can use it to output anyt
 
 This action fires after the submit button is rendered, which allows you to add more custom buttons next to the submit button.
 
+**`mbsp_page_title` filter**
+
+This filter changes the page title. Use it to add elements to the title, like a button or an icon. The output is not escaped. It accepts 2 parameters: the page title and the settings page arguments.
+
+```php
+add_filter( 'mbsp_page_title', function ( $title, $args ) {
+    if ( 'theme-options' === $args['id'] ) {
+        $title .= ' <a href="https://example.com/help" class="page-title-action">Help</a>';
+    }
+    return $title;
+}, 10, 2 );
+```
+
+**`mb_settings_pages_data` filter**
+
+This filter changes the option value after the settings page saves the submitted data. It accepts 2 parameters: the option value (an array) and the option name.
+
+```php
+add_filter( 'mb_settings_pages_data', function ( $data, $option_name ) {
+    if ( 'theme_options' === $option_name ) {
+        $data['last_saved'] = time();
+    }
+    return $data;
+}, 10, 2 );
+```
+
 ## Data
 
 By using Settings API, all the fields' values will be saved as an array in a single option in the WordPress options table with the option name is `option_name` in the settings page configuration. Each field is an element of the array with the corresponding key (field ID). It's the recommended way by WordPress that doesn't make your options table bloat.

@@ -185,6 +185,17 @@ add_filter( 'mb_json_paths', function( $paths ) {
 } );
 ```
 
+To add or remove JSON files one by one, use the `mbb_json_files` filter. It accepts the array of absolute file paths:
+
+```php
+add_filter( 'mbb_json_files', function( $files ) {
+    // Do not load the field groups for the staging site.
+    return array_filter( $files, function( $file ) {
+        return ! str_ends_with( $file, 'staging-fields.json' );
+    } );
+} );
+```
+
 ## Security
 
 Hide the JSON files from the public. Add an `index.php` file to the folder. Visitors who open the folder see a blank page.

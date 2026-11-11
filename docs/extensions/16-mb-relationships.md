@@ -685,6 +685,43 @@ add_action( 'mb_relationships_delete', function ( $from, $to, $id ) {
 }, 10, 3 );
 ```
 
+## Hooks
+
+**`mb_relationships_settings` filter**
+
+This filter changes the settings of a relationship before it is registered. It accepts 1 parameter: the relationship settings, after the plugin adds the default values.
+
+```php
+add_filter( 'mb_relationships_settings', function ( $settings ) {
+    if ( 'posts_to_pages' === $settings['id'] ) {
+        $settings['reciprocal'] = true;
+    }
+    return $settings;
+} );
+```
+
+**`mb_relationships_registered` action**
+
+This action fires after a relationship is registered. It accepts 1 parameter: the relationship settings.
+
+**`mb_relationships_add` and `mb_relationships_delete` actions**
+
+See [Managing connections programmatically](#managing-connections-programmatically).
+
+**`mb_relationships_facet_index_value` filter**
+
+This filter is for the [MB FacetWP Integration](https://metabox.io/plugins/meta-box-facetwp-integrator/) plugin. It changes the data that FacetWP indexes for each connected item. It accepts 2 parameters:
+
+- `$params`: the FacetWP index row. `facet_value` is the connected item ID, `facet_display_value` is the label.
+- `$connected_object`: the connected item: a `WP_Post`, `WP_Term` or `WP_User` object
+
+```php
+add_filter( 'mb_relationships_facet_index_value', function ( $params, $connected_object ) {
+    $params['facet_display_value'] = strtoupper( $params['facet_display_value'] );
+    return $params;
+}, 10, 2 );
+```
+
 ## Shortcode
 
 The plugin provides a single flexible shortcode to display connected items.

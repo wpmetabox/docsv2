@@ -94,6 +94,7 @@ const sidebars = {
 				'field-settings',
 				'displaying-fields-with-code',
 				'creating-new-field-types',
+				'javascript-api',
 				'bundling',
 				'composer',
 				'coding-with-ai',
