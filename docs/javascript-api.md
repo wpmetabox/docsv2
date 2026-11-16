@@ -16,6 +16,15 @@ add_action( 'rwmb_enqueue_scripts', function () {
 
 All events are jQuery events. Most of them bubble up to `document`, so you can listen on `document` and filter by a selector.
 
+### Naming convention
+
+Name an event `mb_{slug}_{timing}`, in lowercase snake case, where `{slug}` is the same slug as in the PHP hooks of the plugin (`rwmb_{slug}_*`) and `{timing}` says when the event fires.
+
+- Start `{timing}` with `before_` for an event that can be cancelled with `event.preventDefault()`, for example `mb_{slug}_before_save`.
+- Use the past tense for a completed action, for example `mb_{slug}_saved`, and `error` for a failure.
+- Fire the event on the root element of the plugin, so it bubbles up to `document`.
+- Pass one data object after the event, for example `( event, { element, response } )`.
+
 ### `mb_ready`
 
 Fires when the fields are ready. Use it instead of `$( document ).ready()` to initialize your code, because it also fires when fields are loaded later: in a block from [MB Blocks](/extensions/mb-blocks/) and in a form in the block editor.

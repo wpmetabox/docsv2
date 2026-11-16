@@ -707,6 +707,52 @@ This action fires before the delete button is displayed.
 
 This action fires after all action buttons are displayed.
 
+## JavaScript events
+
+The form fires jQuery events when users submit it. Use them to track conversions, show a custom message, or stop a submission.
+
+The events fire on the `<form>` element and bubble up to `document`, so you can listen on `document`. Each handler gets the event and a `data` object. If a handler throws an error, the submission still continues. See the [JavaScript API](/javascript-api/) for how to load your script and the naming convention of the events.
+
+Event|When it fires|`data`
+---|---|---
+`mb_frontend_before_submit`|After the form passes client-side validation, before the captcha check and sending. Fires for both Ajax and non-Ajax forms. Call `event.preventDefault()` to cancel the submission.|`{ form }`
+`mb_frontend_submitted`|After the server returns success. Fires before the confirmation message is shown and before any redirect. Only for Ajax forms.|`{ form, response }`
+`mb_frontend_error`|When the server returns an error, the request fails (`response` is `undefined`), or the captcha check fails (no `response`, even if Ajax is off).|`{ form, response }`
+
+`form` is the form DOM element. `response` is the JSON response from the server, and `response.data.message` is the message that the plugin shows to users.
+
+Deleting a post does not fire these events.
+
+### Cancel a submission
+
+```js
+jQuery( document ).on( 'mb_frontend_before_submit', function ( event, data ) {
+    if ( ! confirm( 'Submit this form?' ) ) {
+        event.preventDefault();
+    }
+} );
+```
+
+### Track submissions with Google Analytics
+
+This example sends a GA4 event with `gtag()` when a form is submitted or fails. The `data.form.id` is the form ID. Use it to separate forms if a page has more than one.
+
+```js
+jQuery( document ).on( 'mb_frontend_submitted', function ( event, data ) {
+    gtag( 'event', 'generate_lead', { form_id: data.form.id } );
+} );
+
+jQuery( document ).on( 'mb_frontend_error', function ( event, data ) {
+    gtag( 'event', 'form_error', { form_id: data.form.id } );
+} );
+```
+
+:::note
+
+If a form has no Ajax, no captcha, and a field with a `remote` validation rule, then `event.preventDefault()` in `mb_frontend_before_submit` doesn't stop the first click from submitting the form.
+
+:::
+
 ## FAQ
 
 <FAQ question="How to add more field groups (meta boxes) to the frontend submission form?">
