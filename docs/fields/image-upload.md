@@ -28,6 +28,7 @@ Show status | `max_status` | Display how many files uploaded/remaining. Applied 
 Image size | `image_size` | Image size displays in the edit page. Optional. Default "thumbnail". Image size is used to make sure images are not blurry. It’s not meant to display images with the exact width and height. Images are always displayed as a square.
 New image placement | `add_to` | Whether to add new images to the beginning or the end of the list. `beginning` or `end`. Default `end`. Optional.
 Max file size | `max_file_size` | Maximum file size that the user can upload, in bytes. Optionally supports b, kb, mb, gb, tb suffixes. e.g. "10mb" or "1gb".
+Custom upload folder | `upload_dir` | Full path to a folder inside the WordPress uploads directory. Uploaded files stay in the Media Library. Optional.
 
 This is a sample field settings array when creating this field with code:
 
@@ -46,6 +47,23 @@ This is a sample field settings array when creating this field with code:
 ## Data
 
 This field saves multiple attachment IDs in the database. Each value (attachment ID) is stored in a single row in the database with the same meta key (similar to what `add_post_meta` does with the last parameter `false`).
+
+## Custom upload folder
+
+Set `upload_dir` to the full path of a folder inside the WordPress uploads directory (`wp-content/uploads`, or the site's custom uploads path). Drag-and-drop uploads are stored there.
+
+Files are still attachments in the Media Library, and the field value is still an attachment ID. Thumbnails, the media modal, and the post parent keep working. A folder outside the uploads directory is rejected.
+
+`unique_filename_callback` sets the file name, the same way as for the [file](/fields/file/) field.
+
+```php
+[
+    'id'         => 'gallery',
+    'name'       => 'Gallery',
+    'type'       => 'image_upload',
+    'upload_dir' => WP_CONTENT_DIR . '/uploads/gallery',
+],
+```
 
 ## Template usage
 
