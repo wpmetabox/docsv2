@@ -37,6 +37,7 @@ export default () => (
           <ul className="list-none m-0 pl-0">
             <li><a className="text-inherit" href="https://metabox.io/meta-box-vs-acf/">Meta Box vs. ACF</a></li>
             <li><a className="text-inherit" href="https://metabox.io/meta-box-vs-toolset/">Meta Box vs. Toolset</a></li>
+            <li><a className="text-inherit" href="https://metabox.io/meta-box-vs-jetengine/">Meta Box vs. JetEngine</a></li>
           </ul>
         </div>
         <div className="footer__tools">
