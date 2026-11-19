@@ -27,7 +27,7 @@ Force delete | `force_delete` | Whether or not delete the files from Media Libra
 MIME types | `mime_type` | MIME type of files which we want to show in the Media Library. Note: this is a filter for items in the media popup, it doesn't restrict file types when uploading.
 Show status | `max_status` | Display how many files uploaded/remaining. Applied only when "Max number of files" is defined. `true` (default) or `false`. Optional.
 Max file size | `max_file_size` | Maximum file size that the user can upload, in bytes. Optionally supports b, kb, mb, gb, tb suffixes. e.g. "10mb" or "1gb".
-Custom upload folder | `upload_dir` | Full path to a folder inside the WordPress uploads directory. Uploaded files stay in the Media Library. Optional.
+Custom upload folder | `upload_dir` | Full path to a folder inside the WordPress uploads directory. The file stays public. Optional.
 
 This is a sample field settings array when creating this field with code:
 
@@ -49,9 +49,9 @@ This field saves multiple attachment IDs in the database. Each value (attachment
 
 ## Custom upload folder
 
-Set `upload_dir` to the full path of a folder inside the WordPress uploads directory (`wp-content/uploads`, or the site's custom uploads path). Drag-and-drop uploads are stored there.
+Set `upload_dir` to a full path inside the WordPress uploads directory. Use `wp_upload_dir()['basedir']` so the path follows a custom uploads location.
 
-Files are still attachments in the Media Library, and the field value is still an attachment ID. Thumbnails, the media modal, and the post parent keep working. A folder outside the uploads directory is rejected.
+`upload_dir` only chooses the folder. It does not protect the file. The file is still a public attachment: it has a URL and appears in the Media Library. The field value is still an attachment ID. Thumbnails, the media modal, and the post parent keep working. A folder outside the uploads directory is rejected.
 
 `unique_filename_callback` sets the file name, the same way as for the [file](/fields/file/) field.
 
@@ -60,7 +60,7 @@ Files are still attachments in the Media Library, and the field value is still a
     'id'         => 'docs',
     'name'       => 'Documents',
     'type'       => 'file_upload',
-    'upload_dir' => WP_CONTENT_DIR . '/uploads/docs',
+    'upload_dir' => wp_upload_dir()['basedir'] . '/docs',
 ],
 ```
 
