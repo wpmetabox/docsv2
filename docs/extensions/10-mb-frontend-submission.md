@@ -45,6 +45,7 @@ Edit|`edit`|Allow users to edit the post after submitting. `true` or `false` (de
 Allow delete|`allow_delete`|Allow users to delete the submitted post. `true` or `false` (default).
 Force delete|`force_delete`|Delete the submitted post permanently or move it to Trash.
 Show add more|`show_add_more`|Show the Add New button after submit. `true` or `false` (default).
+Reset form|`reset_form`|Reset the form fields after a successful Ajax submission. `true` or `false` (default). Only works when Ajax is enabled and `edit` is `false`.
 Object type|`object_type`|Object type for the submitted data. Can be `post` or `model`. Default is `post`.
 Object ID|`object_id`|Optional. Use it when you want to update an existing object. Set it to `current` to use the current post ID.
 Post type|`post_type`|Submitted post type. Optional. By default, the plugin uses the first post type defined in the meta box. If the meta box is assigned to multiple post types, set this attribute to the correct one.
