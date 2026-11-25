@@ -58,10 +58,10 @@ Date field label|`label_date`|Label for the post date field.
 Thumbnail field label|`label_thumbnail`|Label for the post thumbnail field.
 Submit button text|`submit_button`|Text for the submit button.
 Add new button text|`add_button`|Text for the Add New button.
-Delete button text|`delete_button`|Text for the delete button.
+Delete button text|`delete_button`|Text for the delete button. Plain text only (escaped). To add icons or HTML, use the `rwmb_frontend_delete_button` filter.
+Confirmation text|`confirmation`|Confirmation message after a successful submission. Safe HTML is allowed (filtered with `wp_kses_post`).
+Delete confirmation text|`delete_confirmation`|Confirmation message after a post is deleted. Safe HTML is allowed (filtered with `wp_kses_post`).
 Custom redirect URL|`redirect`|Custom redirect URL.
-Confirmation text|`confirmation`|Text for the confirmation message shown after a successful submission.
-Delete confirmation text|`delete_confirmation`|Text for the confirmation message shown after a post is deleted.
 Captcha provider|`captcha_provider`|Captcha provider for the form. Use `recaptcha` for Google reCAPTCHA v3 or `turnstile` for Cloudflare Turnstile. Optional.
 Site key|`recaptcha_key`|Site key for the selected captcha provider. Optional.
 Secret key|`recaptcha_secret`|Secret key for the selected captcha provider. Optional.
