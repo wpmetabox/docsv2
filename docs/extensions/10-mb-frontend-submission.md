@@ -58,10 +58,10 @@ Date field label|`label_date`|Label for the post date field.
 Thumbnail field label|`label_thumbnail`|Label for the post thumbnail field.
 Submit button text|`submit_button`|Text for the submit button.
 Add new button text|`add_button`|Text for the Add New button.
-Delete button text|`delete_button`|Text for the delete button.
+Delete button text|`delete_button`|Text for the delete button. Plain text only (escaped). To add icons or HTML, use the `rwmb_frontend_delete_button` filter.
+Confirmation text|`confirmation`|Confirmation message after a successful submission. Safe HTML is allowed (filtered with `wp_kses_post`).
+Delete confirmation text|`delete_confirmation`|Confirmation message after a post is deleted. Safe HTML is allowed (filtered with `wp_kses_post`).
 Custom redirect URL|`redirect`|Custom redirect URL.
-Confirmation text|`confirmation`|Text for the confirmation message shown after a successful submission.
-Delete confirmation text|`delete_confirmation`|Text for the confirmation message shown after a post is deleted.
 Captcha provider|`captcha_provider`|Captcha provider for the form. Use `recaptcha` for Google reCAPTCHA v3 or `turnstile` for Cloudflare Turnstile. Optional.
 Site key|`recaptcha_key`|Site key for the selected captcha provider. Optional.
 Secret key|`recaptcha_secret`|Secret key for the selected captcha provider. Optional.
@@ -499,6 +499,22 @@ This filter allows you to change the submit button HTML. It accepts 2 parameters
 
 This action fires after the submit button is displayed. It accepts one parameter `$config` - the form configuration, taken from the shortcode attributes.
 
+`rwmb_frontend_delete_button`
+
+This filter allows you to change the delete button HTML. It accepts 2 parameters:
+
+- `$html` - the delete button HTML
+- `$config` - the form configuration, taken from the shortcode attributes
+
+```php
+add_filter( 'rwmb_frontend_delete_button', function ( $html, $config ) {
+    return '<button type="submit" class="rwmb-button rwmb-button--delete" name="rwmb_delete" value="1">'
+        . '<img src="' . esc_url( get_stylesheet_directory_uri() . '/icons/trash.svg' ) . '" alt=""> '
+        . esc_html__( 'Remove', 'textdomain' )
+        . '</button>';
+}, 10, 2 );
+```
+
 `rwmb_frontend_before_delete`
 
 This action fires before the post is deleted. It accepts one parameter `$config` - the form configuration, taken from the shortcode attributes.
@@ -509,6 +525,48 @@ This action fires after the post is deleted. It accepts 2 parameters:
 
 - `$config` - the form configuration, taken from the shortcode attributes.
 - `$post_id` - the deleted post ID
+
+`rwmb_frontend_message`
+
+This filter allows you to change the messages that the plugin shows on the front end, such as error messages and the delete confirmation. It accepts 3 parameters:
+
+- `$message` - the message text.
+- `$key` - the message key. See the table below.
+- `$config` - the form configuration, taken from the shortcode attributes. Can be an empty array if the message is not related to a form.
+
+```php
+$message = apply_filters( 'rwmb_frontend_message', $message, $key, $config );
+```
+
+Key|Default message
+---|---
+`not_allowed_edit`|You are not allowed to edit this post.
+`not_allowed_delete`|You are not allowed to delete this post.
+`invalid_form`|Invalid form submission
+`invalid_request`|Invalid request. Please try again.
+`invalid_captcha`|Invalid captcha token.
+`captcha_failed`|Captcha verification failed. Please try again.
+`confirm_delete`|Are you sure to delete this post?
+`ajax_error`|Something went wrong. Please try again.
+`captcha_required`|Please complete the captcha.
+`captcha_execute_error`|Error trying to execute grecaptcha.
+
+Note that the messages `confirm_delete`, `ajax_error`, `captcha_required` and `captcha_execute_error` are passed to JavaScript, so HTML tags are stripped from them.
+
+```php
+add_filter( 'rwmb_frontend_message', function ( $message, $key, $config ) {
+    if ( 'confirm_delete' === $key ) {
+        return __( 'This action cannot be undone. Continue?', 'textdomain' );
+    }
+
+    // Change a message for a specific form only.
+    if ( 'not_allowed_edit' === $key && 'my-meta-box' === ( $config['id'] ?? '' ) ) {
+        return __( 'Please log in to edit this entry.', 'textdomain' );
+    }
+
+    return $message;
+}, 10, 3 );
+```
 
 ### Post data filters
 
