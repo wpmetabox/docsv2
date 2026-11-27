@@ -283,6 +283,30 @@ When you edit a post, you'll see this field like this:
 
 ![SVG icons](https://i0.wp.com/images.elightup.com/meta-box/docs/fields/icon/svg-icons.png)
 
+## Loading icons via Ajax
+
+An icon library can have thousands of icons. For example, Font Awesome Pro has one icon for each style (solid, regular, light, duotone, ...). If all icons are added to the edit page, the page becomes very large and slow.
+
+So the field adds only the selected icons to the page. When you open the dropdown or search for an icon, the field loads the other icons via Ajax, 50 icons at a time.
+
+This feature is enabled by default. To disable it, set `ajax` to `false`:
+
+```php
+[
+	'name' => 'Icon',
+	'id'   => 'icon',
+	'type' => 'icon',
+	// highlight-next-line
+	'ajax' => false,
+]
+```
+
+:::caution
+
+The Ajax requests use a [nonce](https://developer.wordpress.org/apis/security/nonces/), which expires after 12–24 hours. If you show the field in a front-end form on a page that is cached for longer than that, the dropdown can't load icons. In that case, set `ajax` to `false`, or exclude the page from the cache.
+
+:::
+
 ## Settings
 
 Let's see a brief description of them before going into the steps of using a custom icon library:
@@ -293,6 +317,7 @@ Icon set | `icon_set` | The name of your icon set.
 Icon file | `icon_file` | The full path to the icon file definition, which can be a text or JSON file.
 Icon CSS | `icon_css` | URL to the icon CSS file. It's required only when you use icons as an icon font (e.g. no SVG).
 Icon dir | `icon_dir` | Full path to the folder that contains all SVGs of icons.
+Ajax | `ajax` | Load icons via Ajax instead of adding all icons to the page. See [Loading icons via Ajax](#loading-icons-via-ajax). Optional. Default `true`.
 
 ## Data
 
